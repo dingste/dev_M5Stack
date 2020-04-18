@@ -1,0 +1,7 @@
+<map id="spiffsFormat" name="spiffsFormat">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a85de96c305e5b362975ef8dceebfd9e4" title="SPIFFS_format" alt="" coords="155,5,268,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a98b86b521e4e51790dac322618558441" title="SPIFFS_unmount" alt="" coords="148,56,275,83"/>
+<area shape="rect" id="node4" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#aec87c8def4575fa5f64e73166bdb0108" title="spiffsMount" alt="" coords="166,107,257,133"/>
+<area shape="rect" id="node6" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#ac93b72a27a2a5f47098491db8a6b4536" title="spiffsTryMount" alt="" coords="331,157,441,184"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a6796d3c00ddb94ec1e2fe2fde2bb292a" title="SPIFFS_mounted" alt="" coords="323,107,449,133"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="SPIFFS_rename" name="SPIFFS_rename">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a46fe490d99acc1d3d422d451b0c98d17" title="spiffs_fd_find_new" alt="" coords="181,5,311,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#ac920b55d407430310cfa0b02785453d1" title="spiffs_fd_return" alt="" coords="190,56,302,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#af7e7e76ceafdcaad9455a23eedbad768" title="spiffs_fd_temporal\l_cache_rehash" alt="" coords="181,107,311,149"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a31212be98ef82ec80a9211a5045ed435" title="spiffs_object_find\l_object_index_header\l_by_name" alt="" coords="172,173,320,229"/>
+<area shape="rect" id="node6" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#ae872b04dcd3d89548b13001b271aaef4" title="spiffs_object_open\l_by_page" alt="" coords="181,254,311,295"/>
+<area shape="rect" id="node7" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a548c33b05ccf120a3e191b42998c6d21" title="spiffs_object_update\l_index_hdr" alt="" coords="175,319,317,361"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="TFT_bmp_image" name="TFT_bmp_image">
+<area shape="rect" id="node2" href="$tftspi_8c.html#a587f1a092af94ef776be3adbc17f15f9" title="disp_deselect" alt="" coords="177,33,280,60"/>
+<area shape="rect" id="node3" href="$tftspi_8c.html#a7adad2e57540d150bb0cd9f99efa851f" title="wait_trans_finish" alt="" coords="357,33,477,60"/>
+<area shape="rect" id="node4" href="$spi__master__lobo_8c.html#af438dacab126c7341147bab887d3d017" title="De&#45;select spi device. " alt="" coords="332,109,503,136"/>
+<area shape="rect" id="node5" href="$tftspi_8c.html#a25abb90398c3327b065617e00d4e0e42" title="disp_select" alt="" coords="185,84,273,111"/>
+<area shape="rect" id="node6" href="$spi__master__lobo_8c.html#accb77c930dad6f5b48cd33f969ee7202" title="Select spi device for transmission. " alt="" coords="339,185,496,212"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html#af9fed9905d599ca0cfff9d6e7b5691f3" title="send_data" alt="" coords="187,236,270,263"/>
+<area shape="rect" id="node8" href="$tftspi_8c.html#a33970ffee50c51bf6cc902af1df0f06c" title="touch_get_data" alt="" coords="173,185,284,212"/>
+</map>

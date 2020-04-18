@@ -1,0 +1,6 @@
+<map id="SPIFFS_open_by_dirent" name="SPIFFS_open_by_dirent">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a46fe490d99acc1d3d422d451b0c98d17" title="spiffs_fd_find_new" alt="" coords="227,5,358,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#ac920b55d407430310cfa0b02785453d1" title="spiffs_fd_return" alt="" coords="237,56,349,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#ae872b04dcd3d89548b13001b271aaef4" title="spiffs_object_open\l_by_page" alt="" coords="227,107,358,149"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a64824b457c1664aa302736e79da6aa4b" title="spiffs_object_truncate" alt="" coords="217,173,368,200"/>
+</map>

@@ -1,0 +1,6 @@
+csrc/u8x8_fonts.o: \
+ /home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_fonts.c \
+ /home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8.h
+
+/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8.h:
+/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_fonts.c:

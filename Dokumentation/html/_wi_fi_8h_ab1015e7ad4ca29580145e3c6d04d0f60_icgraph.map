@@ -1,0 +1,4 @@
+<map id="wifi_manager_start" name="wifi_manager_start">
+<area shape="rect" id="node2" href="$class_wi_fi.html#abd37066e5200eb4e49d416d3d907ad6e" title="WiFi::monitoring_task" alt="" coords="185,5,335,32"/>
+<area shape="rect" id="node3" href="$class_wi_fi.html#a7c6a35adf5f81c473dadda1ee728a359" title="WiFi::listen" alt="" coords="383,5,471,32"/>
+</map>

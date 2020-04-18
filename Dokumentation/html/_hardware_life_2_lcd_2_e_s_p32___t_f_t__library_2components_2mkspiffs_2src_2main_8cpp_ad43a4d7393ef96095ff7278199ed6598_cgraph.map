@@ -1,0 +1,8 @@
+<map id="addFiles" name="addFiles">
+<area shape="rect" id="node2" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a3d7aac6eac74208f5aa2f4ff2703b715" title="addDir" alt="" coords="126,56,186,83"/>
+<area shape="rect" id="node6" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a62b976e8eb602c99ad393b60308133fc" title="addFile" alt="" coords="124,107,188,133"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a9a9babd221dab492856c5da4fa74bf88" title="SPIFFS_close" alt="" coords="258,5,365,32"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="259,56,363,83"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a894b333e481903d8ce15387f28842b67" title="SPIFFS_update_meta" alt="" coords="236,107,387,133"/>
+<area shape="rect" id="node7" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#af34f802723bd3a2e033b44c644483d39" title="SPIFFS_write" alt="" coords="259,157,363,184"/>
+</map>

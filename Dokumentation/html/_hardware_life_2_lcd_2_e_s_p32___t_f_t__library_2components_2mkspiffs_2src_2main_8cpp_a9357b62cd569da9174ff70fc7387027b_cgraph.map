@@ -1,0 +1,11 @@
+<map id="unpackFiles" name="unpackFiles">
+<area shape="rect" id="node2" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#ab35b9198c891ce8e504a044195656487" title="Create directory if it not exists. " alt="" coords="169,5,243,32"/>
+<area shape="rect" id="node3" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a1e39e609056197e88ccb4327fd7a07ba" title="Check if directory exists. " alt="" coords="331,31,405,57"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a88a4782ebf1c1d37c5c2352a7700a4cf" title="SPIFFS_closedir" alt="" coords="145,107,267,133"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a116271bb88503c16c860b805368c88be" title="SPIFFS_opendir" alt="" coords="147,157,265,184"/>
+<area shape="rect" id="node6" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#adb15aebc5a6add477b2f6dbf81756763" title="SPIFFS_readdir" alt="" coords="149,208,263,235"/>
+<area shape="rect" id="node7" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#af54c1049c7b85dd55077065951eb4d08" title="Unpack file from file system. " alt="" coords="163,259,249,285"/>
+<area shape="rect" id="node8" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a9a9babd221dab492856c5da4fa74bf88" title="SPIFFS_close" alt="" coords="315,208,421,235"/>
+<area shape="rect" id="node9" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="316,259,420,285"/>
+<area shape="rect" id="node10" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#abe8899197a8c5032f7dd85f3a9f9eec6" title="SPIFFS_read" alt="" coords="317,309,419,336"/>
+</map>

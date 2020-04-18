@@ -1,0 +1,2988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name=".vscode">
+      </df>
+      <df name="build">
+        <df name="app_trace">
+          <df name="gcov">
+          </df>
+          <in>app_trace.i</in>
+          <in>app_trace.s</in>
+          <in>app_trace_util.i</in>
+          <in>app_trace_util.s</in>
+          <in>gcov_rtio.i</in>
+          <in>gcov_rtio.s</in>
+          <in>heap_trace_tohost.i</in>
+          <in>heap_trace_tohost.s</in>
+          <in>host_file_io.i</in>
+          <in>host_file_io.s</in>
+        </df>
+        <df name="app_update">
+          <in>esp_app_desc.i</in>
+          <in>esp_app_desc.s</in>
+          <in>esp_ota_ops.i</in>
+          <in>esp_ota_ops.s</in>
+        </df>
+        <df name="asio">
+          <df name="asio">
+            <df name="asio">
+            </df>
+          </df>
+        </df>
+        <df name="bootloader">
+          <df name="bootloader_support">
+            <df name="src">
+              <df name="esp32">
+              </df>
+            </df>
+          </df>
+          <df name="efuse">
+            <df name="esp32">
+            </df>
+            <df name="src">
+              <df name="esp32">
+              </df>
+            </df>
+          </df>
+          <df name="esptool_py">
+          </df>
+          <df name="log">
+          </df>
+          <df name="main">
+          </df>
+          <df name="micro-ecc">
+            <df name="micro-ecc">
+            </df>
+          </df>
+          <df name="soc">
+            <df name="esp32">
+            </df>
+            <df name="src">
+              <df name="hal">
+              </df>
+            </df>
+          </df>
+          <df name="spi_flash">
+            <df name="esp32">
+            </df>
+          </df>
+        </df>
+        <df name="bootloader_support">
+          <df name="src">
+            <df name="idf">
+            </df>
+          </df>
+          <in>bootloader_clock.i</in>
+          <in>bootloader_clock.s</in>
+          <in>bootloader_common.i</in>
+          <in>bootloader_common.s</in>
+          <in>bootloader_efuse_esp32.i</in>
+          <in>bootloader_efuse_esp32.s</in>
+          <in>bootloader_flash.i</in>
+          <in>bootloader_flash.s</in>
+          <in>bootloader_flash_config.i</in>
+          <in>bootloader_flash_config.s</in>
+          <in>bootloader_flash_config_esp32.i</in>
+          <in>bootloader_flash_config_esp32.s</in>
+          <in>bootloader_random.i</in>
+          <in>bootloader_random.s</in>
+          <in>bootloader_sha.i</in>
+          <in>bootloader_sha.s</in>
+          <in>bootloader_utility.i</in>
+          <in>bootloader_utility.s</in>
+          <in>esp_image_format.i</in>
+          <in>esp_image_format.s</in>
+          <in>flash_encrypt.i</in>
+          <in>flash_encrypt.s</in>
+          <in>flash_partitions.i</in>
+          <in>flash_partitions.s</in>
+          <in>flash_qio_mode.i</in>
+          <in>flash_qio_mode.s</in>
+          <in>secure_boot_signatures.i</in>
+          <in>secure_boot_signatures.s</in>
+        </df>
+        <df name="bt">
+          <df name="common">
+            <df name="btc">
+              <df name="core">
+              </df>
+            </df>
+            <df name="osi">
+            </df>
+          </df>
+          <df name="controller">
+          </df>
+          <df name="esp_ble_mesh">
+            <df name="api">
+              <df name="core">
+              </df>
+              <df name="models">
+              </df>
+            </df>
+            <df name="btc">
+            </df>
+            <df name="mesh_core">
+              <df name="settings">
+              </df>
+            </df>
+            <df name="mesh_models">
+            </df>
+          </df>
+          <df name="host">
+            <df name="bluedroid">
+              <df name="api">
+              </df>
+              <df name="bta">
+              </df>
+              <df name="btc">
+              </df>
+              <df name="btif">
+              </df>
+              <df name="device">
+              </df>
+              <df name="external">
+              </df>
+              <df name="gki">
+              </df>
+              <df name="hci">
+              </df>
+              <df name="main">
+              </df>
+              <df name="stack">
+              </df>
+              <df name="utils">
+              </df>
+            </df>
+          </df>
+          <in>a2d_api.i</in>
+          <in>a2d_api.s</in>
+          <in>a2d_sbc.i</in>
+          <in>a2d_sbc.s</in>
+          <in>aes.i</in>
+          <in>aes.s</in>
+          <in>alarm.i</in>
+          <in>alarm.s</in>
+          <in>alloc.i</in>
+          <in>alloc.s</in>
+          <in>allocator.i</in>
+          <in>allocator.s</in>
+          <in>att_protocol.i</in>
+          <in>att_protocol.s</in>
+          <in>avct_api.i</in>
+          <in>avct_api.s</in>
+          <in>avct_ccb.i</in>
+          <in>avct_ccb.s</in>
+          <in>avct_l2c.i</in>
+          <in>avct_l2c.s</in>
+          <in>avct_lcb.i</in>
+          <in>avct_lcb.s</in>
+          <in>avct_lcb_act.i</in>
+          <in>avct_lcb_act.s</in>
+          <in>avdt_ad.i</in>
+          <in>avdt_ad.s</in>
+          <in>avdt_api.i</in>
+          <in>avdt_api.s</in>
+          <in>avdt_ccb.i</in>
+          <in>avdt_ccb.s</in>
+          <in>avdt_ccb_act.i</in>
+          <in>avdt_ccb_act.s</in>
+          <in>avdt_l2c.i</in>
+          <in>avdt_l2c.s</in>
+          <in>avdt_msg.i</in>
+          <in>avdt_msg.s</in>
+          <in>avdt_scb.i</in>
+          <in>avdt_scb.s</in>
+          <in>avdt_scb_act.i</in>
+          <in>avdt_scb_act.s</in>
+          <in>avrc_api.i</in>
+          <in>avrc_api.s</in>
+          <in>avrc_bld_ct.i</in>
+          <in>avrc_bld_ct.s</in>
+          <in>avrc_bld_tg.i</in>
+          <in>avrc_bld_tg.s</in>
+          <in>avrc_opt.i</in>
+          <in>avrc_opt.s</in>
+          <in>avrc_pars_ct.i</in>
+          <in>avrc_pars_ct.s</in>
+          <in>avrc_pars_tg.i</in>
+          <in>avrc_pars_tg.s</in>
+          <in>avrc_sdp.i</in>
+          <in>avrc_sdp.s</in>
+          <in>avrc_utils.i</in>
+          <in>avrc_utils.s</in>
+          <in>bdaddr.i</in>
+          <in>bdaddr.s</in>
+          <in>bitalloc-sbc.i</in>
+          <in>bitalloc-sbc.s</in>
+          <in>bitalloc.i</in>
+          <in>bitalloc.s</in>
+          <in>bitstream-decode.i</in>
+          <in>bitstream-decode.s</in>
+          <in>blufi_prf.i</in>
+          <in>blufi_prf.s</in>
+          <in>blufi_protocol.i</in>
+          <in>blufi_protocol.s</in>
+          <in>bt.i</in>
+          <in>bt.s</in>
+          <in>bta_ag_act.i</in>
+          <in>bta_ag_act.s</in>
+          <in>bta_ag_api.i</in>
+          <in>bta_ag_api.s</in>
+          <in>bta_ag_at.i</in>
+          <in>bta_ag_at.s</in>
+          <in>bta_ag_cfg.i</in>
+          <in>bta_ag_cfg.s</in>
+          <in>bta_ag_cmd.i</in>
+          <in>bta_ag_cmd.s</in>
+          <in>bta_ag_co.i</in>
+          <in>bta_ag_co.s</in>
+          <in>bta_ag_main.i</in>
+          <in>bta_ag_main.s</in>
+          <in>bta_ag_rfc.i</in>
+          <in>bta_ag_rfc.s</in>
+          <in>bta_ag_sco.i</in>
+          <in>bta_ag_sco.s</in>
+          <in>bta_ag_sdp.i</in>
+          <in>bta_ag_sdp.s</in>
+          <in>bta_ar.i</in>
+          <in>bta_ar.s</in>
+          <in>bta_av_aact.i</in>
+          <in>bta_av_aact.s</in>
+          <in>bta_av_act.i</in>
+          <in>bta_av_act.s</in>
+          <in>bta_av_api.i</in>
+          <in>bta_av_api.s</in>
+          <in>bta_av_cfg.i</in>
+          <in>bta_av_cfg.s</in>
+          <in>bta_av_ci.i</in>
+          <in>bta_av_ci.s</in>
+          <in>bta_av_co.i</in>
+          <in>bta_av_co.s</in>
+          <in>bta_av_main.i</in>
+          <in>bta_av_main.s</in>
+          <in>bta_av_sbc.i</in>
+          <in>bta_av_sbc.s</in>
+          <in>bta_av_ssm.i</in>
+          <in>bta_av_ssm.s</in>
+          <in>bta_avrc_co.i</in>
+          <in>bta_avrc_co.s</in>
+          <in>bta_dm_act.i</in>
+          <in>bta_dm_act.s</in>
+          <in>bta_dm_api.i</in>
+          <in>bta_dm_api.s</in>
+          <in>bta_dm_cfg.i</in>
+          <in>bta_dm_cfg.s</in>
+          <in>bta_dm_ci.i</in>
+          <in>bta_dm_ci.s</in>
+          <in>bta_dm_co.i</in>
+          <in>bta_dm_co.s</in>
+          <in>bta_dm_main.i</in>
+          <in>bta_dm_main.s</in>
+          <in>bta_dm_pm.i</in>
+          <in>bta_dm_pm.s</in>
+          <in>bta_dm_sco.i</in>
+          <in>bta_dm_sco.s</in>
+          <in>bta_gap_bt_co.i</in>
+          <in>bta_gap_bt_co.s</in>
+          <in>bta_gatt_common.i</in>
+          <in>bta_gatt_common.s</in>
+          <in>bta_gattc_act.i</in>
+          <in>bta_gattc_act.s</in>
+          <in>bta_gattc_api.i</in>
+          <in>bta_gattc_api.s</in>
+          <in>bta_gattc_cache.i</in>
+          <in>bta_gattc_cache.s</in>
+          <in>bta_gattc_ci.i</in>
+          <in>bta_gattc_ci.s</in>
+          <in>bta_gattc_co.i</in>
+          <in>bta_gattc_co.s</in>
+          <in>bta_gattc_main.i</in>
+          <in>bta_gattc_main.s</in>
+          <in>bta_gattc_utils.i</in>
+          <in>bta_gattc_utils.s</in>
+          <in>bta_gatts_act.i</in>
+          <in>bta_gatts_act.s</in>
+          <in>bta_gatts_api.i</in>
+          <in>bta_gatts_api.s</in>
+          <in>bta_gatts_co.i</in>
+          <in>bta_gatts_co.s</in>
+          <in>bta_gatts_main.i</in>
+          <in>bta_gatts_main.s</in>
+          <in>bta_gatts_utils.i</in>
+          <in>bta_gatts_utils.s</in>
+          <in>bta_hf_client_act.i</in>
+          <in>bta_hf_client_act.s</in>
+          <in>bta_hf_client_api.i</in>
+          <in>bta_hf_client_api.s</in>
+          <in>bta_hf_client_at.i</in>
+          <in>bta_hf_client_at.s</in>
+          <in>bta_hf_client_cmd.i</in>
+          <in>bta_hf_client_cmd.s</in>
+          <in>bta_hf_client_co.i</in>
+          <in>bta_hf_client_co.s</in>
+          <in>bta_hf_client_main.i</in>
+          <in>bta_hf_client_main.s</in>
+          <in>bta_hf_client_rfc.i</in>
+          <in>bta_hf_client_rfc.s</in>
+          <in>bta_hf_client_sco.i</in>
+          <in>bta_hf_client_sco.s</in>
+          <in>bta_hf_client_sdp.i</in>
+          <in>bta_hf_client_sdp.s</in>
+          <in>bta_hh_act.i</in>
+          <in>bta_hh_act.s</in>
+          <in>bta_hh_api.i</in>
+          <in>bta_hh_api.s</in>
+          <in>bta_hh_cfg.i</in>
+          <in>bta_hh_cfg.s</in>
+          <in>bta_hh_le.i</in>
+          <in>bta_hh_le.s</in>
+          <in>bta_hh_main.i</in>
+          <in>bta_hh_main.s</in>
+          <in>bta_hh_utils.i</in>
+          <in>bta_hh_utils.s</in>
+          <in>bta_jv_act.i</in>
+          <in>bta_jv_act.s</in>
+          <in>bta_jv_api.i</in>
+          <in>bta_jv_api.s</in>
+          <in>bta_jv_cfg.i</in>
+          <in>bta_jv_cfg.s</in>
+          <in>bta_jv_main.i</in>
+          <in>bta_jv_main.s</in>
+          <in>bta_sdp.i</in>
+          <in>bta_sdp.s</in>
+          <in>bta_sdp_act.i</in>
+          <in>bta_sdp_act.s</in>
+          <in>bta_sdp_api.i</in>
+          <in>bta_sdp_api.s</in>
+          <in>bta_sdp_cfg.i</in>
+          <in>bta_sdp_cfg.s</in>
+          <in>bta_sys_conn.i</in>
+          <in>bta_sys_conn.s</in>
+          <in>bta_sys_main.i</in>
+          <in>bta_sys_main.s</in>
+          <in>btc_a2dp.i</in>
+          <in>btc_a2dp.s</in>
+          <in>btc_a2dp_control.i</in>
+          <in>btc_a2dp_control.s</in>
+          <in>btc_a2dp_sink.i</in>
+          <in>btc_a2dp_sink.s</in>
+          <in>btc_a2dp_source.i</in>
+          <in>btc_a2dp_source.s</in>
+          <in>btc_alarm.i</in>
+          <in>btc_alarm.s</in>
+          <in>btc_av.i</in>
+          <in>btc_av.s</in>
+          <in>btc_avrc.i</in>
+          <in>btc_avrc.s</in>
+          <in>btc_ble_storage.i</in>
+          <in>btc_ble_storage.s</in>
+          <in>btc_config.i</in>
+          <in>btc_config.s</in>
+          <in>btc_dev.i</in>
+          <in>btc_dev.s</in>
+          <in>btc_dm.i</in>
+          <in>btc_dm.s</in>
+          <in>btc_gap_ble.i</in>
+          <in>btc_gap_ble.s</in>
+          <in>btc_gap_bt.i</in>
+          <in>btc_gap_bt.s</in>
+          <in>btc_gatt_common.i</in>
+          <in>btc_gatt_common.s</in>
+          <in>btc_gatt_util.i</in>
+          <in>btc_gatt_util.s</in>
+          <in>btc_gattc.i</in>
+          <in>btc_gattc.s</in>
+          <in>btc_gatts.i</in>
+          <in>btc_gatts.s</in>
+          <in>btc_hf_ag.i</in>
+          <in>btc_hf_ag.s</in>
+          <in>btc_hf_client.i</in>
+          <in>btc_hf_client.s</in>
+          <in>btc_main.i</in>
+          <in>btc_main.s</in>
+          <in>btc_manage.i</in>
+          <in>btc_manage.s</in>
+          <in>btc_profile_queue.i</in>
+          <in>btc_profile_queue.s</in>
+          <in>btc_sec.i</in>
+          <in>btc_sec.s</in>
+          <in>btc_sm.i</in>
+          <in>btc_sm.s</in>
+          <in>btc_spp.i</in>
+          <in>btc_spp.s</in>
+          <in>btc_storage.i</in>
+          <in>btc_storage.s</in>
+          <in>btc_task.i</in>
+          <in>btc_task.s</in>
+          <in>btc_util.i</in>
+          <in>btc_util.s</in>
+          <in>bte_init.i</in>
+          <in>bte_init.s</in>
+          <in>bte_main.i</in>
+          <in>bte_main.s</in>
+          <in>btm_acl.i</in>
+          <in>btm_acl.s</in>
+          <in>btm_ble.i</in>
+          <in>btm_ble.s</in>
+          <in>btm_ble_addr.i</in>
+          <in>btm_ble_addr.s</in>
+          <in>btm_ble_adv_filter.i</in>
+          <in>btm_ble_adv_filter.s</in>
+          <in>btm_ble_batchscan.i</in>
+          <in>btm_ble_batchscan.s</in>
+          <in>btm_ble_bgconn.i</in>
+          <in>btm_ble_bgconn.s</in>
+          <in>btm_ble_cont_energy.i</in>
+          <in>btm_ble_cont_energy.s</in>
+          <in>btm_ble_gap.i</in>
+          <in>btm_ble_gap.s</in>
+          <in>btm_ble_multi_adv.i</in>
+          <in>btm_ble_multi_adv.s</in>
+          <in>btm_ble_privacy.i</in>
+          <in>btm_ble_privacy.s</in>
+          <in>btm_dev.i</in>
+          <in>btm_dev.s</in>
+          <in>btm_devctl.i</in>
+          <in>btm_devctl.s</in>
+          <in>btm_inq.i</in>
+          <in>btm_inq.s</in>
+          <in>btm_main.i</in>
+          <in>btm_main.s</in>
+          <in>btm_pm.i</in>
+          <in>btm_pm.s</in>
+          <in>btm_sco.i</in>
+          <in>btm_sco.s</in>
+          <in>btm_sec.i</in>
+          <in>btm_sec.s</in>
+          <in>btu_hcif.i</in>
+          <in>btu_hcif.s</in>
+          <in>btu_init.i</in>
+          <in>btu_init.s</in>
+          <in>btu_task.i</in>
+          <in>btu_task.s</in>
+          <in>buffer.i</in>
+          <in>buffer.s</in>
+          <in>config.i</in>
+          <in>config.s</in>
+          <in>controller.i</in>
+          <in>controller.s</in>
+          <in>decoder-oina.i</in>
+          <in>decoder-oina.s</in>
+          <in>decoder-private.i</in>
+          <in>decoder-private.s</in>
+          <in>decoder-sbc.i</in>
+          <in>decoder-sbc.s</in>
+          <in>dequant.i</in>
+          <in>dequant.s</in>
+          <in>esp_a2dp_api.i</in>
+          <in>esp_a2dp_api.s</in>
+          <in>esp_avrc_api.i</in>
+          <in>esp_avrc_api.s</in>
+          <in>esp_blufi_api.i</in>
+          <in>esp_blufi_api.s</in>
+          <in>esp_bt_device.i</in>
+          <in>esp_bt_device.s</in>
+          <in>esp_bt_main.i</in>
+          <in>esp_bt_main.s</in>
+          <in>esp_gap_ble_api.i</in>
+          <in>esp_gap_ble_api.s</in>
+          <in>esp_gap_bt_api.i</in>
+          <in>esp_gap_bt_api.s</in>
+          <in>esp_gatt_common_api.i</in>
+          <in>esp_gatt_common_api.s</in>
+          <in>esp_gattc_api.i</in>
+          <in>esp_gattc_api.s</in>
+          <in>esp_gatts_api.i</in>
+          <in>esp_gatts_api.s</in>
+          <in>esp_hf_ag_api.i</in>
+          <in>esp_hf_ag_api.s</in>
+          <in>esp_hf_client_api.i</in>
+          <in>esp_hf_client_api.s</in>
+          <in>esp_spp_api.i</in>
+          <in>esp_spp_api.s</in>
+          <in>fixed_queue.i</in>
+          <in>fixed_queue.s</in>
+          <in>framing-sbc.i</in>
+          <in>framing-sbc.s</in>
+          <in>framing.i</in>
+          <in>framing.s</in>
+          <in>future.i</in>
+          <in>future.s</in>
+          <in>gap_api.i</in>
+          <in>gap_api.s</in>
+          <in>gap_ble.i</in>
+          <in>gap_ble.s</in>
+          <in>gap_conn.i</in>
+          <in>gap_conn.s</in>
+          <in>gap_utils.i</in>
+          <in>gap_utils.s</in>
+          <in>gatt_api.i</in>
+          <in>gatt_api.s</in>
+          <in>gatt_attr.i</in>
+          <in>gatt_attr.s</in>
+          <in>gatt_auth.i</in>
+          <in>gatt_auth.s</in>
+          <in>gatt_cl.i</in>
+          <in>gatt_cl.s</in>
+          <in>gatt_db.i</in>
+          <in>gatt_db.s</in>
+          <in>gatt_main.i</in>
+          <in>gatt_main.s</in>
+          <in>gatt_sr.i</in>
+          <in>gatt_sr.s</in>
+          <in>gatt_utils.i</in>
+          <in>gatt_utils.s</in>
+          <in>hash_functions.i</in>
+          <in>hash_functions.s</in>
+          <in>hash_map.i</in>
+          <in>hash_map.s</in>
+          <in>hci_audio.i</in>
+          <in>hci_audio.s</in>
+          <in>hci_hal_h4.i</in>
+          <in>hci_hal_h4.s</in>
+          <in>hci_layer.i</in>
+          <in>hci_layer.s</in>
+          <in>hci_packet_factory.i</in>
+          <in>hci_packet_factory.s</in>
+          <in>hci_packet_parser.i</in>
+          <in>hci_packet_parser.s</in>
+          <in>hciblecmds.i</in>
+          <in>hciblecmds.s</in>
+          <in>hcicmds.i</in>
+          <in>hcicmds.s</in>
+          <in>interop.i</in>
+          <in>interop.s</in>
+          <in>l2c_api.i</in>
+          <in>l2c_api.s</in>
+          <in>l2c_ble.i</in>
+          <in>l2c_ble.s</in>
+          <in>l2c_csm.i</in>
+          <in>l2c_csm.s</in>
+          <in>l2c_fcr.i</in>
+          <in>l2c_fcr.s</in>
+          <in>l2c_link.i</in>
+          <in>l2c_link.s</in>
+          <in>l2c_main.i</in>
+          <in>l2c_main.s</in>
+          <in>l2c_ucd.i</in>
+          <in>l2c_ucd.s</in>
+          <in>l2c_utils.i</in>
+          <in>l2c_utils.s</in>
+          <in>l2cap_client.i</in>
+          <in>l2cap_client.s</in>
+          <in>list.i</in>
+          <in>list.s</in>
+          <in>mutex.i</in>
+          <in>mutex.s</in>
+          <in>oi_codec_version.i</in>
+          <in>oi_codec_version.s</in>
+          <in>osi.i</in>
+          <in>osi.s</in>
+          <in>p_256_curvepara.i</in>
+          <in>p_256_curvepara.s</in>
+          <in>p_256_ecc_pp.i</in>
+          <in>p_256_ecc_pp.s</in>
+          <in>p_256_multprecision.i</in>
+          <in>p_256_multprecision.s</in>
+          <in>packet_fragmenter.i</in>
+          <in>packet_fragmenter.s</in>
+          <in>port_api.i</in>
+          <in>port_api.s</in>
+          <in>port_rfc.i</in>
+          <in>port_rfc.s</in>
+          <in>port_utils.i</in>
+          <in>port_utils.s</in>
+          <in>rfc_l2cap_if.i</in>
+          <in>rfc_l2cap_if.s</in>
+          <in>rfc_mx_fsm.i</in>
+          <in>rfc_mx_fsm.s</in>
+          <in>rfc_port_fsm.i</in>
+          <in>rfc_port_fsm.s</in>
+          <in>rfc_port_if.i</in>
+          <in>rfc_port_if.s</in>
+          <in>rfc_ts_frames.i</in>
+          <in>rfc_ts_frames.s</in>
+          <in>rfc_utils.i</in>
+          <in>rfc_utils.s</in>
+          <in>sbc_analysis.i</in>
+          <in>sbc_analysis.s</in>
+          <in>sbc_dct.i</in>
+          <in>sbc_dct.s</in>
+          <in>sbc_dct_coeffs.i</in>
+          <in>sbc_dct_coeffs.s</in>
+          <in>sbc_enc_bit_alloc_mono.i</in>
+          <in>sbc_enc_bit_alloc_mono.s</in>
+          <in>sbc_enc_bit_alloc_ste.i</in>
+          <in>sbc_enc_bit_alloc_ste.s</in>
+          <in>sbc_enc_coeffs.i</in>
+          <in>sbc_enc_coeffs.s</in>
+          <in>sbc_encoder.i</in>
+          <in>sbc_encoder.s</in>
+          <in>sbc_packing.i</in>
+          <in>sbc_packing.s</in>
+          <in>sbc_plc.i</in>
+          <in>sbc_plc.s</in>
+          <in>sdp_api.i</in>
+          <in>sdp_api.s</in>
+          <in>sdp_db.i</in>
+          <in>sdp_db.s</in>
+          <in>sdp_discovery.i</in>
+          <in>sdp_discovery.s</in>
+          <in>sdp_main.i</in>
+          <in>sdp_main.s</in>
+          <in>sdp_server.i</in>
+          <in>sdp_server.s</in>
+          <in>sdp_utils.i</in>
+          <in>sdp_utils.s</in>
+          <in>semaphore.i</in>
+          <in>semaphore.s</in>
+          <in>smp_act.i</in>
+          <in>smp_act.s</in>
+          <in>smp_api.i</in>
+          <in>smp_api.s</in>
+          <in>smp_br_main.i</in>
+          <in>smp_br_main.s</in>
+          <in>smp_cmac.i</in>
+          <in>smp_cmac.s</in>
+          <in>smp_keys.i</in>
+          <in>smp_keys.s</in>
+          <in>smp_l2c.i</in>
+          <in>smp_l2c.s</in>
+          <in>smp_main.i</in>
+          <in>smp_main.s</in>
+          <in>smp_utils.i</in>
+          <in>smp_utils.s</in>
+          <in>synthesis-8-generated.i</in>
+          <in>synthesis-8-generated.s</in>
+          <in>synthesis-dct8.i</in>
+          <in>synthesis-dct8.s</in>
+          <in>synthesis-sbc.i</in>
+          <in>synthesis-sbc.s</in>
+          <in>thread.i</in>
+          <in>thread.s</in>
+          <in>utl.i</in>
+          <in>utl.s</in>
+        </df>
+        <df name="cbor">
+          <df name="tinycbor">
+            <df name="src">
+            </df>
+          </df>
+          <in>cborencoder.i</in>
+          <in>cborencoder.s</in>
+          <in>cborencoder_close_container_checked.i</in>
+          <in>cborencoder_close_container_checked.s</in>
+          <in>cborerrorstrings.i</in>
+          <in>cborerrorstrings.s</in>
+          <in>cborparser.i</in>
+          <in>cborparser.s</in>
+          <in>cborparser_dup_string.i</in>
+          <in>cborparser_dup_string.s</in>
+          <in>cborpretty.i</in>
+          <in>cborpretty.s</in>
+          <in>cborpretty_stdio.i</in>
+          <in>cborpretty_stdio.s</in>
+          <in>cbortojson.i</in>
+          <in>cbortojson.s</in>
+          <in>cborvalidation.i</in>
+          <in>cborvalidation.s</in>
+          <in>open_memstream.i</in>
+          <in>open_memstream.s</in>
+        </df>
+        <df name="coap">
+          <df name="libcoap">
+            <df name="src">
+            </df>
+          </df>
+          <df name="port">
+          </df>
+          <in>address.i</in>
+          <in>address.s</in>
+          <in>async.i</in>
+          <in>async.s</in>
+          <in>block.i</in>
+          <in>block.s</in>
+          <in>coap_debug.i</in>
+          <in>coap_debug.s</in>
+          <in>coap_event.i</in>
+          <in>coap_event.s</in>
+          <in>coap_hashkey.i</in>
+          <in>coap_hashkey.s</in>
+          <in>coap_io.i</in>
+          <in>coap_io.s</in>
+          <in>coap_mbedtls.i</in>
+          <in>coap_mbedtls.s</in>
+          <in>coap_notls.i</in>
+          <in>coap_notls.s</in>
+          <in>coap_session.i</in>
+          <in>coap_session.s</in>
+          <in>coap_time.i</in>
+          <in>coap_time.s</in>
+          <in>encode.i</in>
+          <in>encode.s</in>
+          <in>mem.i</in>
+          <in>mem.s</in>
+          <in>net.i</in>
+          <in>net.s</in>
+          <in>option.i</in>
+          <in>option.s</in>
+          <in>pdu.i</in>
+          <in>pdu.s</in>
+          <in>resource.i</in>
+          <in>resource.s</in>
+          <in>str.i</in>
+          <in>str.s</in>
+          <in>subscribe.i</in>
+          <in>subscribe.s</in>
+          <in>uri.i</in>
+          <in>uri.s</in>
+        </df>
+        <df name="console">
+          <df name="argtable3">
+          </df>
+          <df name="linenoise">
+          </df>
+          <in>argtable3.i</in>
+          <in>argtable3.s</in>
+          <in>commands.i</in>
+          <in>commands.s</in>
+          <in>linenoise.i</in>
+          <in>linenoise.s</in>
+          <in>split_argv.i</in>
+          <in>split_argv.s</in>
+        </df>
+        <df name="cxx">
+        </df>
+        <df name="driver">
+          <df name="esp32">
+          </df>
+          <in>can.i</in>
+          <in>can.s</in>
+          <in>gpio.i</in>
+          <in>gpio.s</in>
+          <in>i2c.i</in>
+          <in>i2c.s</in>
+          <in>i2s.i</in>
+          <in>i2s.s</in>
+          <in>ledc.i</in>
+          <in>ledc.s</in>
+          <in>mcpwm.i</in>
+          <in>mcpwm.s</in>
+          <in>pcnt.i</in>
+          <in>pcnt.s</in>
+          <in>periph_ctrl.i</in>
+          <in>periph_ctrl.s</in>
+          <in>rmt.i</in>
+          <in>rmt.s</in>
+          <in>rtc_module.i</in>
+          <in>rtc_module.s</in>
+          <in>sdio_slave.i</in>
+          <in>sdio_slave.s</in>
+          <in>sdmmc_host.i</in>
+          <in>sdmmc_host.s</in>
+          <in>sdmmc_transaction.i</in>
+          <in>sdmmc_transaction.s</in>
+          <in>sdspi_crc.i</in>
+          <in>sdspi_crc.s</in>
+          <in>sdspi_host.i</in>
+          <in>sdspi_host.s</in>
+          <in>sdspi_transaction.i</in>
+          <in>sdspi_transaction.s</in>
+          <in>sigmadelta.i</in>
+          <in>sigmadelta.s</in>
+          <in>spi_common.i</in>
+          <in>spi_common.s</in>
+          <in>spi_master.i</in>
+          <in>spi_master.s</in>
+          <in>spi_slave.i</in>
+          <in>spi_slave.s</in>
+          <in>timer.i</in>
+          <in>timer.s</in>
+          <in>uart.i</in>
+          <in>uart.s</in>
+        </df>
+        <df name="efuse">
+          <df name="esp32">
+          </df>
+          <df name="src">
+            <df name="esp32">
+            </df>
+          </df>
+          <in>esp_efuse_api.i</in>
+          <in>esp_efuse_api.s</in>
+          <in>esp_efuse_fields.i</in>
+          <in>esp_efuse_fields.s</in>
+          <in>esp_efuse_table.i</in>
+          <in>esp_efuse_table.s</in>
+          <in>esp_efuse_utility.i</in>
+          <in>esp_efuse_utility.s</in>
+        </df>
+        <df name="esp-tls">
+          <in>esp_tls.i</in>
+          <in>esp_tls.s</in>
+          <in>esp_tls_mbedtls.i</in>
+          <in>esp_tls_mbedtls.s</in>
+        </df>
+        <df name="esp32">
+          <in>brownout.i</in>
+          <in>brownout.s</in>
+          <in>cache_err_int.i</in>
+          <in>cache_err_int.s</in>
+          <in>cache_sram_mmu.i</in>
+          <in>cache_sram_mmu.s</in>
+          <in>clk.i</in>
+          <in>clk.s</in>
+          <in>cpu_start.i</in>
+          <in>cpu_start.s</in>
+          <in>crosscore_int.i</in>
+          <in>crosscore_int.s</in>
+          <in>dport_access.i</in>
+          <in>dport_access.s</in>
+          <in>esp_adapter.i</in>
+          <in>esp_adapter.s</in>
+          <in>esp_himem.i</in>
+          <in>esp_himem.s</in>
+          <in>esp_timer_esp32.i</in>
+          <in>esp_timer_esp32.s</in>
+          <in>hw_random.i</in>
+          <in>hw_random.s</in>
+          <in>int_wdt.i</in>
+          <in>int_wdt.s</in>
+          <in>intr_alloc.i</in>
+          <in>intr_alloc.s</in>
+          <in>panic.i</in>
+          <in>panic.s</in>
+          <in>pm_esp32.i</in>
+          <in>pm_esp32.s</in>
+          <in>pm_trace.i</in>
+          <in>pm_trace.s</in>
+          <in>reset_reason.i</in>
+          <in>reset_reason.s</in>
+          <in>sleep_modes.i</in>
+          <in>sleep_modes.s</in>
+          <in>spiram.i</in>
+          <in>spiram.s</in>
+          <in>spiram_psram.i</in>
+          <in>spiram_psram.s</in>
+          <in>system_api.i</in>
+          <in>system_api.s</in>
+          <in>system_api_esp32.i</in>
+          <in>system_api_esp32.s</in>
+          <in>task_wdt.i</in>
+          <in>task_wdt.s</in>
+        </df>
+        <df name="esp32-wifi-manager">
+          <df name="embed_bin">
+          </df>
+          <df name="src">
+          </df>
+          <in>dns_server.i</in>
+          <in>dns_server.s</in>
+          <in>http_server.i</in>
+          <in>http_server.s</in>
+          <in>json.i</in>
+          <in>json.s</in>
+          <in>wifi_manager.i</in>
+          <in>wifi_manager.s</in>
+        </df>
+        <df name="esp32s2beta">
+        </df>
+        <df name="esp_adc_cal">
+          <in>esp_adc_cal.i</in>
+          <in>esp_adc_cal.s</in>
+        </df>
+        <df name="esp_common">
+          <df name="src">
+          </df>
+          <in>dbg_stubs.i</in>
+          <in>dbg_stubs.s</in>
+          <in>esp_err_to_name.i</in>
+          <in>esp_err_to_name.s</in>
+          <in>esp_timer.i</in>
+          <in>esp_timer.s</in>
+          <in>ets_timer_legacy.i</in>
+          <in>ets_timer_legacy.s</in>
+          <in>freertos_hooks.i</in>
+          <in>freertos_hooks.s</in>
+          <in>ipc.i</in>
+          <in>ipc.s</in>
+          <in>mac_addr.i</in>
+          <in>mac_addr.s</in>
+          <in>pm_locks.i</in>
+          <in>pm_locks.s</in>
+          <in>stack_check.i</in>
+          <in>stack_check.s</in>
+          <in>system_api.i</in>
+          <in>system_api.s</in>
+        </df>
+        <df name="esp_eth">
+          <df name="src">
+          </df>
+          <in>esp_eth.i</in>
+          <in>esp_eth.s</in>
+          <in>esp_eth_mac_dm9051.i</in>
+          <in>esp_eth_mac_dm9051.s</in>
+          <in>esp_eth_mac_esp32.i</in>
+          <in>esp_eth_mac_esp32.s</in>
+          <in>esp_eth_phy_dm9051.i</in>
+          <in>esp_eth_phy_dm9051.s</in>
+          <in>esp_eth_phy_dp83848.i</in>
+          <in>esp_eth_phy_dp83848.s</in>
+          <in>esp_eth_phy_ip101.i</in>
+          <in>esp_eth_phy_ip101.s</in>
+          <in>esp_eth_phy_lan8720.i</in>
+          <in>esp_eth_phy_lan8720.s</in>
+          <in>esp_eth_phy_rtl8201.i</in>
+          <in>esp_eth_phy_rtl8201.s</in>
+        </df>
+        <df name="esp_event">
+          <in>default_event_loop.i</in>
+          <in>default_event_loop.s</in>
+          <in>esp_event.i</in>
+          <in>esp_event.s</in>
+          <in>esp_event_private.i</in>
+          <in>esp_event_private.s</in>
+          <in>event_loop_legacy.i</in>
+          <in>event_loop_legacy.s</in>
+          <in>event_send.i</in>
+          <in>event_send.s</in>
+        </df>
+        <df name="esp_gdbstub">
+          <df name="esp32">
+          </df>
+          <df name="src">
+          </df>
+          <df name="xtensa">
+          </df>
+          <in>gdbstub.i</in>
+          <in>gdbstub.s</in>
+          <in>gdbstub_esp32.i</in>
+          <in>gdbstub_esp32.s</in>
+          <in>gdbstub_xtensa.i</in>
+          <in>gdbstub_xtensa.s</in>
+          <in>packet.i</in>
+          <in>packet.s</in>
+        </df>
+        <df name="esp_http_client">
+          <df name="lib">
+          </df>
+          <in>esp_http_client.i</in>
+          <in>esp_http_client.s</in>
+          <in>http_auth.i</in>
+          <in>http_auth.s</in>
+          <in>http_header.i</in>
+          <in>http_header.s</in>
+          <in>http_utils.i</in>
+          <in>http_utils.s</in>
+        </df>
+        <df name="esp_http_server">
+          <df name="src">
+            <df name="util">
+            </df>
+          </df>
+          <in>ctrl_sock.i</in>
+          <in>ctrl_sock.s</in>
+          <in>httpd_main.i</in>
+          <in>httpd_main.s</in>
+          <in>httpd_parse.i</in>
+          <in>httpd_parse.s</in>
+          <in>httpd_sess.i</in>
+          <in>httpd_sess.s</in>
+          <in>httpd_txrx.i</in>
+          <in>httpd_txrx.s</in>
+          <in>httpd_uri.i</in>
+          <in>httpd_uri.s</in>
+        </df>
+        <df name="esp_https_ota">
+          <df name="src">
+          </df>
+          <in>esp_https_ota.i</in>
+          <in>esp_https_ota.s</in>
+        </df>
+        <df name="esp_https_server">
+          <df name="src">
+          </df>
+          <in>https_server.i</in>
+          <in>https_server.s</in>
+        </df>
+        <df name="esp_local_ctrl">
+          <df name="proto-c">
+          </df>
+          <df name="src">
+          </df>
+          <in>esp_local_ctrl.i</in>
+          <in>esp_local_ctrl.pb-c.i</in>
+          <in>esp_local_ctrl.pb-c.s</in>
+          <in>esp_local_ctrl.s</in>
+          <in>esp_local_ctrl_handler.i</in>
+          <in>esp_local_ctrl_handler.s</in>
+          <in>esp_local_ctrl_transport_ble.i</in>
+          <in>esp_local_ctrl_transport_ble.s</in>
+          <in>esp_local_ctrl_transport_httpd.i</in>
+          <in>esp_local_ctrl_transport_httpd.s</in>
+        </df>
+        <df name="esp_netif">
+          <df name="loopback">
+          </df>
+          <df name="lwip">
+          </df>
+          <in>esp_netif_defaults.i</in>
+          <in>esp_netif_defaults.s</in>
+          <in>esp_netif_handlers.i</in>
+          <in>esp_netif_handlers.s</in>
+          <in>esp_netif_loopback.i</in>
+          <in>esp_netif_loopback.s</in>
+          <in>esp_netif_lwip.i</in>
+          <in>esp_netif_lwip.s</in>
+          <in>esp_netif_lwip_defaults.i</in>
+          <in>esp_netif_lwip_defaults.s</in>
+          <in>esp_netif_objects.i</in>
+          <in>esp_netif_objects.s</in>
+          <in>esp_netif_sta_list.i</in>
+          <in>esp_netif_sta_list.s</in>
+        </df>
+        <df name="esp_ringbuf">
+          <in>ringbuf.i</in>
+          <in>ringbuf.s</in>
+        </df>
+        <df name="esp_rom">
+          <in>esp_rom.i</in>
+          <in>esp_rom.s</in>
+        </df>
+        <df name="esp_websocket_client">
+          <in>esp_websocket_client.i</in>
+          <in>esp_websocket_client.s</in>
+        </df>
+        <df name="esp_wifi">
+          <df name="src">
+          </df>
+          <in>coexist.i</in>
+          <in>coexist.s</in>
+          <in>lib_printf.i</in>
+          <in>lib_printf.s</in>
+          <in>mesh_event.i</in>
+          <in>mesh_event.s</in>
+          <in>phy_init.i</in>
+          <in>phy_init.s</in>
+          <in>restore.i</in>
+          <in>restore.s</in>
+          <in>smartconfig.i</in>
+          <in>smartconfig.s</in>
+          <in>smartconfig_ack.i</in>
+          <in>smartconfig_ack.s</in>
+          <in>wifi_default.i</in>
+          <in>wifi_default.s</in>
+          <in>wifi_init.i</in>
+          <in>wifi_init.s</in>
+          <in>wifi_netif.i</in>
+          <in>wifi_netif.s</in>
+        </df>
+        <df name="espcoredump">
+          <df name="src">
+          </df>
+          <in>core_dump_common.i</in>
+          <in>core_dump_common.s</in>
+          <in>core_dump_flash.i</in>
+          <in>core_dump_flash.s</in>
+          <in>core_dump_port.i</in>
+          <in>core_dump_port.s</in>
+          <in>core_dump_uart.i</in>
+          <in>core_dump_uart.s</in>
+        </df>
+        <df name="esptool_py">
+        </df>
+        <df name="expat">
+          <df name="expat">
+            <df name="expat">
+              <df name="lib">
+              </df>
+            </df>
+          </df>
+          <df name="port">
+          </df>
+          <in>loadlibrary.i</in>
+          <in>loadlibrary.s</in>
+          <in>xmlparse.i</in>
+          <in>xmlparse.s</in>
+          <in>xmlrole.i</in>
+          <in>xmlrole.s</in>
+          <in>xmltok.i</in>
+          <in>xmltok.s</in>
+          <in>xmltok_impl.i</in>
+          <in>xmltok_impl.s</in>
+          <in>xmltok_ns.i</in>
+          <in>xmltok_ns.s</in>
+        </df>
+        <df name="fatfs">
+          <df name="diskio">
+          </df>
+          <df name="port">
+            <df name="freertos">
+            </df>
+          </df>
+          <df name="src">
+          </df>
+          <df name="vfs">
+          </df>
+          <in>diskio.i</in>
+          <in>diskio.s</in>
+          <in>diskio_rawflash.i</in>
+          <in>diskio_rawflash.s</in>
+          <in>diskio_sdmmc.i</in>
+          <in>diskio_sdmmc.s</in>
+          <in>diskio_wl.i</in>
+          <in>diskio_wl.s</in>
+          <in>ff.i</in>
+          <in>ff.s</in>
+          <in>ffsystem.i</in>
+          <in>ffsystem.s</in>
+          <in>ffunicode.i</in>
+          <in>ffunicode.s</in>
+          <in>vfs_fat.i</in>
+          <in>vfs_fat.s</in>
+          <in>vfs_fat_sdmmc.i</in>
+          <in>vfs_fat_sdmmc.s</in>
+          <in>vfs_fat_spiflash.i</in>
+          <in>vfs_fat_spiflash.s</in>
+        </df>
+        <df name="freemodbus">
+          <df name="common">
+          </df>
+          <df name="modbus">
+            <df name="ascii">
+            </df>
+            <df name="functions">
+            </df>
+            <df name="rtu">
+            </df>
+            <df name="tcp">
+            </df>
+          </df>
+          <df name="port">
+          </df>
+          <df name="serial_master">
+            <df name="modbus_controller">
+            </df>
+            <df name="port">
+            </df>
+          </df>
+          <df name="serial_slave">
+            <df name="modbus_controller">
+            </df>
+            <df name="port">
+            </df>
+          </df>
+          <in>esp_modbus_master.i</in>
+          <in>esp_modbus_master.s</in>
+          <in>esp_modbus_slave.i</in>
+          <in>esp_modbus_slave.s</in>
+          <in>mb.i</in>
+          <in>mb.s</in>
+          <in>mb_m.i</in>
+          <in>mb_m.s</in>
+          <in>mbascii.i</in>
+          <in>mbascii.s</in>
+          <in>mbc_serial_master.i</in>
+          <in>mbc_serial_master.s</in>
+          <in>mbc_serial_slave.i</in>
+          <in>mbc_serial_slave.s</in>
+          <in>mbcrc.i</in>
+          <in>mbcrc.s</in>
+          <in>mbfunccoils.i</in>
+          <in>mbfunccoils.s</in>
+          <in>mbfunccoils_m.i</in>
+          <in>mbfunccoils_m.s</in>
+          <in>mbfuncdiag.i</in>
+          <in>mbfuncdiag.s</in>
+          <in>mbfuncdisc.i</in>
+          <in>mbfuncdisc.s</in>
+          <in>mbfuncdisc_m.i</in>
+          <in>mbfuncdisc_m.s</in>
+          <in>mbfuncholding.i</in>
+          <in>mbfuncholding.s</in>
+          <in>mbfuncholding_m.i</in>
+          <in>mbfuncholding_m.s</in>
+          <in>mbfuncinput.i</in>
+          <in>mbfuncinput.s</in>
+          <in>mbfuncinput_m.i</in>
+          <in>mbfuncinput_m.s</in>
+          <in>mbfuncother.i</in>
+          <in>mbfuncother.s</in>
+          <in>mbrtu.i</in>
+          <in>mbrtu.s</in>
+          <in>mbrtu_m.i</in>
+          <in>mbrtu_m.s</in>
+          <in>mbtcp.i</in>
+          <in>mbtcp.s</in>
+          <in>mbutils.i</in>
+          <in>mbutils.s</in>
+          <in>port.i</in>
+          <in>port.s</in>
+          <in>portevent.i</in>
+          <in>portevent.s</in>
+          <in>portevent_m.i</in>
+          <in>portevent_m.s</in>
+          <in>portother.i</in>
+          <in>portother.s</in>
+          <in>portother_m.i</in>
+          <in>portother_m.s</in>
+          <in>portserial.i</in>
+          <in>portserial.s</in>
+          <in>portserial_m.i</in>
+          <in>portserial_m.s</in>
+          <in>porttimer.i</in>
+          <in>porttimer.s</in>
+          <in>porttimer_m.i</in>
+          <in>porttimer_m.s</in>
+        </df>
+        <df name="freertos">
+          <in>FreeRTOS-openocd.i</in>
+          <in>FreeRTOS-openocd.s</in>
+          <in>croutine.i</in>
+          <in>croutine.s</in>
+          <in>event_groups.i</in>
+          <in>event_groups.s</in>
+          <in>list.i</in>
+          <in>list.s</in>
+          <in>port.i</in>
+          <in>port.s</in>
+          <in>queue.i</in>
+          <in>queue.s</in>
+          <in>tasks.i</in>
+          <in>tasks.s</in>
+          <in>timers.i</in>
+          <in>timers.s</in>
+          <in>xtensa_init.i</in>
+          <in>xtensa_init.s</in>
+          <in>xtensa_intr.i</in>
+          <in>xtensa_intr.s</in>
+          <in>xtensa_overlay_os_hook.i</in>
+          <in>xtensa_overlay_os_hook.s</in>
+        </df>
+        <df name="heap">
+          <in>heap_caps.i</in>
+          <in>heap_caps.s</in>
+          <in>heap_caps_init.i</in>
+          <in>heap_caps_init.s</in>
+          <in>multi_heap.i</in>
+          <in>multi_heap.s</in>
+        </df>
+        <df name="idf_test">
+        </df>
+        <df name="include">
+          <df name="config">
+          </df>
+          <in>sdkconfig.h</in>
+        </df>
+        <df name="jsmn">
+          <df name="src">
+          </df>
+          <in>jsmn.i</in>
+          <in>jsmn.s</in>
+        </df>
+        <df name="json">
+          <df name="cJSON">
+          </df>
+          <in>cJSON.i</in>
+          <in>cJSON.s</in>
+          <in>cJSON_Utils.i</in>
+          <in>cJSON_Utils.s</in>
+        </df>
+        <df name="libsodium">
+          <df name="libsodium">
+            <df name="src">
+              <df name="libsodium">
+              </df>
+            </df>
+          </df>
+          <df name="port">
+            <df name="crypto_hash_mbedtls">
+            </df>
+          </df>
+          <in>aead_chacha20poly1305.i</in>
+          <in>aead_chacha20poly1305.s</in>
+          <in>aead_xchacha20poly1305.i</in>
+          <in>aead_xchacha20poly1305.s</in>
+          <in>argon2-core.i</in>
+          <in>argon2-core.s</in>
+          <in>argon2-encoding.i</in>
+          <in>argon2-encoding.s</in>
+          <in>argon2-fill-block-ref.i</in>
+          <in>argon2-fill-block-ref.s</in>
+          <in>argon2-fill-block-ssse3.i</in>
+          <in>argon2-fill-block-ssse3.s</in>
+          <in>argon2.i</in>
+          <in>argon2.s</in>
+          <in>auth_hmacsha256.i</in>
+          <in>auth_hmacsha256.s</in>
+          <in>auth_hmacsha512.i</in>
+          <in>auth_hmacsha512.s</in>
+          <in>auth_hmacsha512256.i</in>
+          <in>auth_hmacsha512256.s</in>
+          <in>blake2b-compress-avx2.i</in>
+          <in>blake2b-compress-avx2.s</in>
+          <in>blake2b-compress-ref.i</in>
+          <in>blake2b-compress-ref.s</in>
+          <in>blake2b-compress-sse41.i</in>
+          <in>blake2b-compress-sse41.s</in>
+          <in>blake2b-compress-ssse3.i</in>
+          <in>blake2b-compress-ssse3.s</in>
+          <in>blake2b-long.i</in>
+          <in>blake2b-long.s</in>
+          <in>blake2b-ref.i</in>
+          <in>blake2b-ref.s</in>
+          <in>box_curve25519xsalsa20poly1305.i</in>
+          <in>box_curve25519xsalsa20poly1305.s</in>
+          <in>chacha20_ref.i</in>
+          <in>chacha20_ref.s</in>
+          <in>core.i</in>
+          <in>core.s</in>
+          <in>core_hchacha20.i</in>
+          <in>core_hchacha20.s</in>
+          <in>core_hsalsa20.i</in>
+          <in>core_hsalsa20.s</in>
+          <in>core_hsalsa20_ref2.i</in>
+          <in>core_hsalsa20_ref2.s</in>
+          <in>core_salsa_ref.i</in>
+          <in>core_salsa_ref.s</in>
+          <in>crypto_auth.i</in>
+          <in>crypto_auth.s</in>
+          <in>crypto_box.i</in>
+          <in>crypto_box.s</in>
+          <in>crypto_box_easy.i</in>
+          <in>crypto_box_easy.s</in>
+          <in>crypto_box_seal.i</in>
+          <in>crypto_box_seal.s</in>
+          <in>crypto_generichash.i</in>
+          <in>crypto_generichash.s</in>
+          <in>crypto_hash.i</in>
+          <in>crypto_hash.s</in>
+          <in>crypto_hash_sha256_mbedtls.i</in>
+          <in>crypto_hash_sha256_mbedtls.s</in>
+          <in>crypto_hash_sha512_mbedtls.i</in>
+          <in>crypto_hash_sha512_mbedtls.s</in>
+          <in>crypto_kdf.i</in>
+          <in>crypto_kdf.s</in>
+          <in>crypto_kx.i</in>
+          <in>crypto_kx.s</in>
+          <in>crypto_onetimeauth.i</in>
+          <in>crypto_onetimeauth.s</in>
+          <in>crypto_pwhash.i</in>
+          <in>crypto_pwhash.s</in>
+          <in>crypto_scalarmult.i</in>
+          <in>crypto_scalarmult.s</in>
+          <in>crypto_scrypt-common.i</in>
+          <in>crypto_scrypt-common.s</in>
+          <in>crypto_secretbox.i</in>
+          <in>crypto_secretbox.s</in>
+          <in>crypto_secretbox_easy.i</in>
+          <in>crypto_secretbox_easy.s</in>
+          <in>crypto_shorthash.i</in>
+          <in>crypto_shorthash.s</in>
+          <in>crypto_sign.i</in>
+          <in>crypto_sign.s</in>
+          <in>crypto_stream.i</in>
+          <in>crypto_stream.s</in>
+          <in>curve25519_ref10.i</in>
+          <in>curve25519_ref10.s</in>
+          <in>generichash_blake2.i</in>
+          <in>generichash_blake2.s</in>
+          <in>generichash_blake2b.i</in>
+          <in>generichash_blake2b.s</in>
+          <in>hash_sha256.i</in>
+          <in>hash_sha256.s</in>
+          <in>hash_sha256_cp.i</in>
+          <in>hash_sha256_cp.s</in>
+          <in>hash_sha512.i</in>
+          <in>hash_sha512.s</in>
+          <in>hash_sha512_cp.i</in>
+          <in>hash_sha512_cp.s</in>
+          <in>kdf_blake2b.i</in>
+          <in>kdf_blake2b.s</in>
+          <in>keypair.i</in>
+          <in>keypair.s</in>
+          <in>obsolete.i</in>
+          <in>obsolete.s</in>
+          <in>onetimeauth_poly1305.i</in>
+          <in>onetimeauth_poly1305.s</in>
+          <in>open.i</in>
+          <in>open.s</in>
+          <in>pbkdf2-sha256.i</in>
+          <in>pbkdf2-sha256.s</in>
+          <in>poly1305_donna.i</in>
+          <in>poly1305_donna.s</in>
+          <in>pwhash_argon2i.i</in>
+          <in>pwhash_argon2i.s</in>
+          <in>pwhash_scryptsalsa208sha256.i</in>
+          <in>pwhash_scryptsalsa208sha256.s</in>
+          <in>pwhash_scryptsalsa208sha256_nosse.i</in>
+          <in>pwhash_scryptsalsa208sha256_nosse.s</in>
+          <in>randombytes.i</in>
+          <in>randombytes.s</in>
+          <in>randombytes_esp32.i</in>
+          <in>randombytes_esp32.s</in>
+          <in>runtime.i</in>
+          <in>runtime.s</in>
+          <in>salsa20_ref.i</in>
+          <in>salsa20_ref.s</in>
+          <in>scalarmult_curve25519.i</in>
+          <in>scalarmult_curve25519.s</in>
+          <in>scrypt_platform.i</in>
+          <in>scrypt_platform.s</in>
+          <in>secretbox_xsalsa20poly1305.i</in>
+          <in>secretbox_xsalsa20poly1305.s</in>
+          <in>shorthash_siphash24.i</in>
+          <in>shorthash_siphash24.s</in>
+          <in>shorthash_siphash24_ref.i</in>
+          <in>shorthash_siphash24_ref.s</in>
+          <in>shorthash_siphashx24.i</in>
+          <in>shorthash_siphashx24.s</in>
+          <in>shorthash_siphashx24_ref.i</in>
+          <in>shorthash_siphashx24_ref.s</in>
+          <in>sign.i</in>
+          <in>sign.s</in>
+          <in>sign_ed25519.i</in>
+          <in>sign_ed25519.s</in>
+          <in>stream_chacha20.i</in>
+          <in>stream_chacha20.s</in>
+          <in>stream_salsa20.i</in>
+          <in>stream_salsa20.s</in>
+          <in>stream_xsalsa20.i</in>
+          <in>stream_xsalsa20.s</in>
+          <in>utils.i</in>
+          <in>utils.s</in>
+          <in>verify.i</in>
+          <in>verify.s</in>
+          <in>version.i</in>
+          <in>version.s</in>
+          <in>x25519_ref10.i</in>
+          <in>x25519_ref10.s</in>
+        </df>
+        <df name="log">
+          <in>log.i</in>
+          <in>log.s</in>
+        </df>
+        <df name="lwip">
+          <df name="apps">
+            <df name="dhcpserver">
+            </df>
+            <df name="ping">
+            </df>
+            <df name="sntp">
+            </df>
+          </df>
+          <df name="lwip">
+            <df name="src">
+              <df name="api">
+              </df>
+              <df name="apps">
+              </df>
+              <df name="core">
+              </df>
+              <df name="netif">
+              </df>
+            </df>
+          </df>
+          <df name="port">
+            <df name="esp32">
+              <df name="debug">
+              </df>
+              <df name="freertos">
+              </df>
+              <df name="netif">
+              </df>
+            </df>
+          </df>
+          <in>altcp.i</in>
+          <in>altcp.s</in>
+          <in>altcp_alloc.i</in>
+          <in>altcp_alloc.s</in>
+          <in>altcp_tcp.i</in>
+          <in>altcp_tcp.s</in>
+          <in>api_lib.i</in>
+          <in>api_lib.s</in>
+          <in>api_msg.i</in>
+          <in>api_msg.s</in>
+          <in>autoip.i</in>
+          <in>autoip.s</in>
+          <in>bridgeif.i</in>
+          <in>bridgeif.s</in>
+          <in>bridgeif_fdb.i</in>
+          <in>bridgeif_fdb.s</in>
+          <in>def.i</in>
+          <in>def.s</in>
+          <in>dhcp.i</in>
+          <in>dhcp.s</in>
+          <in>dhcp6.i</in>
+          <in>dhcp6.s</in>
+          <in>dhcp_state.i</in>
+          <in>dhcp_state.s</in>
+          <in>dhcpserver.i</in>
+          <in>dhcpserver.s</in>
+          <in>dns.i</in>
+          <in>dns.s</in>
+          <in>err.i</in>
+          <in>err.s</in>
+          <in>esp_ping.i</in>
+          <in>esp_ping.s</in>
+          <in>etharp.i</in>
+          <in>etharp.s</in>
+          <in>ethernet.i</in>
+          <in>ethernet.s</in>
+          <in>ethernetif.i</in>
+          <in>ethernetif.s</in>
+          <in>ethip6.i</in>
+          <in>ethip6.s</in>
+          <in>icmp.i</in>
+          <in>icmp.s</in>
+          <in>icmp6.i</in>
+          <in>icmp6.s</in>
+          <in>if_api.i</in>
+          <in>if_api.s</in>
+          <in>igmp.i</in>
+          <in>igmp.s</in>
+          <in>inet6.i</in>
+          <in>inet6.s</in>
+          <in>inet_chksum.i</in>
+          <in>inet_chksum.s</in>
+          <in>init.i</in>
+          <in>init.s</in>
+          <in>ip.i</in>
+          <in>ip.s</in>
+          <in>ip4.i</in>
+          <in>ip4.s</in>
+          <in>ip4_addr.i</in>
+          <in>ip4_addr.s</in>
+          <in>ip4_frag.i</in>
+          <in>ip4_frag.s</in>
+          <in>ip6.i</in>
+          <in>ip6.s</in>
+          <in>ip6_addr.i</in>
+          <in>ip6_addr.s</in>
+          <in>ip6_frag.i</in>
+          <in>ip6_frag.s</in>
+          <in>lowpan6.i</in>
+          <in>lowpan6.s</in>
+          <in>lowpan6_ble.i</in>
+          <in>lowpan6_ble.s</in>
+          <in>lowpan6_common.i</in>
+          <in>lowpan6_common.s</in>
+          <in>lwip_debug.i</in>
+          <in>lwip_debug.s</in>
+          <in>mem.i</in>
+          <in>mem.s</in>
+          <in>memp.i</in>
+          <in>memp.s</in>
+          <in>mld6.i</in>
+          <in>mld6.s</in>
+          <in>nd6.i</in>
+          <in>nd6.s</in>
+          <in>netbiosns.i</in>
+          <in>netbiosns.s</in>
+          <in>netbuf.i</in>
+          <in>netbuf.s</in>
+          <in>netdb.i</in>
+          <in>netdb.s</in>
+          <in>netif.i</in>
+          <in>netif.s</in>
+          <in>netifapi.i</in>
+          <in>netifapi.s</in>
+          <in>nettestif.i</in>
+          <in>nettestif.s</in>
+          <in>pbuf.i</in>
+          <in>pbuf.s</in>
+          <in>ping.i</in>
+          <in>ping.s</in>
+          <in>ping_sock.i</in>
+          <in>ping_sock.s</in>
+          <in>raw.i</in>
+          <in>raw.s</in>
+          <in>slipif.i</in>
+          <in>slipif.s</in>
+          <in>sntp.i</in>
+          <in>sntp.s</in>
+          <in>sockets.i</in>
+          <in>sockets.s</in>
+          <in>stats.i</in>
+          <in>stats.s</in>
+          <in>sys.i</in>
+          <in>sys.s</in>
+          <in>sys_arch.i</in>
+          <in>sys_arch.s</in>
+          <in>tcp.i</in>
+          <in>tcp.s</in>
+          <in>tcp_in.i</in>
+          <in>tcp_in.s</in>
+          <in>tcp_out.i</in>
+          <in>tcp_out.s</in>
+          <in>tcpip.i</in>
+          <in>tcpip.s</in>
+          <in>timeouts.i</in>
+          <in>timeouts.s</in>
+          <in>udp.i</in>
+          <in>udp.s</in>
+          <in>vfs_lwip.i</in>
+          <in>vfs_lwip.s</in>
+          <in>wlanif.i</in>
+          <in>wlanif.s</in>
+          <in>zepif.i</in>
+          <in>zepif.s</in>
+        </df>
+        <df name="main">
+          <df name="DataLife">
+          </df>
+          <df name="HAL">
+            <df name="LCD">
+              <df name="ESP32_TFT_library">
+              </df>
+            </df>
+          </df>
+          <df name="HardwareLife">
+            <df name="Gpio">
+              <df name="Kiss">
+              </df>
+            </df>
+            <df name="Key">
+            </df>
+            <df name="Lcd">
+              <df name="Backlight">
+              </df>
+              <df name="Content">
+              </df>
+            </df>
+            <df name="OLED">
+            </df>
+            <df name="TransportAbstraction">
+            </df>
+            <df name="Uart">
+              <df name="SerialAbstraction">
+              </df>
+            </df>
+            <df name="WiFi">
+              <df name="Config">
+              </df>
+              <df name="esp32-wifi-manager">
+              </df>
+            </df>
+          </df>
+          <df name="IdLife">
+            <df name="Auth">
+            </df>
+          </df>
+          <df name="LifeCycle">
+          </df>
+          <df name="u8g2-esp-idf">
+          </df>
+          <in>TftDisplayBackend.i</in>
+          <in>TftDisplayBackend.s</in>
+          <in>dns_server.i</in>
+          <in>dns_server.s</in>
+          <in>http_server.i</in>
+          <in>http_server.s</in>
+          <in>json.i</in>
+          <in>json.s</in>
+          <in>wifi_manager.i</in>
+          <in>wifi_manager.s</in>
+        </df>
+        <df name="mbedtls">
+          <df name="mbedtls">
+            <df name="library">
+            </df>
+          </df>
+          <df name="port">
+            <df name="esp32">
+            </df>
+          </df>
+          <in>aes.i</in>
+          <in>aes.s</in>
+          <in>aesni.i</in>
+          <in>aesni.s</in>
+          <in>arc4.i</in>
+          <in>arc4.s</in>
+          <in>aria.i</in>
+          <in>aria.s</in>
+          <in>asn1parse.i</in>
+          <in>asn1parse.s</in>
+          <in>asn1write.i</in>
+          <in>asn1write.s</in>
+          <in>base64.i</in>
+          <in>base64.s</in>
+          <in>bignum.i</in>
+          <in>bignum.s</in>
+          <in>blowfish.i</in>
+          <in>blowfish.s</in>
+          <in>camellia.i</in>
+          <in>camellia.s</in>
+          <in>ccm.i</in>
+          <in>ccm.s</in>
+          <in>certs.i</in>
+          <in>certs.s</in>
+          <in>chacha20.i</in>
+          <in>chacha20.s</in>
+          <in>chachapoly.i</in>
+          <in>chachapoly.s</in>
+          <in>cipher.i</in>
+          <in>cipher.s</in>
+          <in>cipher_wrap.i</in>
+          <in>cipher_wrap.s</in>
+          <in>cmac.i</in>
+          <in>cmac.s</in>
+          <in>ctr_drbg.i</in>
+          <in>ctr_drbg.s</in>
+          <in>debug.i</in>
+          <in>debug.s</in>
+          <in>des.i</in>
+          <in>des.s</in>
+          <in>dhm.i</in>
+          <in>dhm.s</in>
+          <in>ecdh.i</in>
+          <in>ecdh.s</in>
+          <in>ecdsa.i</in>
+          <in>ecdsa.s</in>
+          <in>ecjpake.i</in>
+          <in>ecjpake.s</in>
+          <in>ecp.i</in>
+          <in>ecp.s</in>
+          <in>ecp_curves.i</in>
+          <in>ecp_curves.s</in>
+          <in>entropy.i</in>
+          <in>entropy.s</in>
+          <in>entropy_poll.i</in>
+          <in>entropy_poll.s</in>
+          <in>error.i</in>
+          <in>error.s</in>
+          <in>esp_bignum.i</in>
+          <in>esp_bignum.s</in>
+          <in>esp_hardware.i</in>
+          <in>esp_hardware.s</in>
+          <in>esp_mem.i</in>
+          <in>esp_mem.s</in>
+          <in>esp_sha.i</in>
+          <in>esp_sha.s</in>
+          <in>esp_sha1.i</in>
+          <in>esp_sha1.s</in>
+          <in>esp_sha256.i</in>
+          <in>esp_sha256.s</in>
+          <in>esp_sha512.i</in>
+          <in>esp_sha512.s</in>
+          <in>esp_timing.i</in>
+          <in>esp_timing.s</in>
+          <in>gcm.i</in>
+          <in>gcm.s</in>
+          <in>havege.i</in>
+          <in>havege.s</in>
+          <in>hkdf.i</in>
+          <in>hkdf.s</in>
+          <in>hmac_drbg.i</in>
+          <in>hmac_drbg.s</in>
+          <in>mbedtls_debug.i</in>
+          <in>mbedtls_debug.s</in>
+          <in>md.i</in>
+          <in>md.s</in>
+          <in>md2.i</in>
+          <in>md2.s</in>
+          <in>md4.i</in>
+          <in>md4.s</in>
+          <in>md5.i</in>
+          <in>md5.s</in>
+          <in>md_wrap.i</in>
+          <in>md_wrap.s</in>
+          <in>memory_buffer_alloc.i</in>
+          <in>memory_buffer_alloc.s</in>
+          <in>net_sockets.i</in>
+          <in>net_sockets.s</in>
+          <in>nist_kw.i</in>
+          <in>nist_kw.s</in>
+          <in>oid.i</in>
+          <in>oid.s</in>
+          <in>padlock.i</in>
+          <in>padlock.s</in>
+          <in>pem.i</in>
+          <in>pem.s</in>
+          <in>pk.i</in>
+          <in>pk.s</in>
+          <in>pk_wrap.i</in>
+          <in>pk_wrap.s</in>
+          <in>pkcs11.i</in>
+          <in>pkcs11.s</in>
+          <in>pkcs12.i</in>
+          <in>pkcs12.s</in>
+          <in>pkcs5.i</in>
+          <in>pkcs5.s</in>
+          <in>pkparse.i</in>
+          <in>pkparse.s</in>
+          <in>pkwrite.i</in>
+          <in>pkwrite.s</in>
+          <in>platform.i</in>
+          <in>platform.s</in>
+          <in>platform_util.i</in>
+          <in>platform_util.s</in>
+          <in>poly1305.i</in>
+          <in>poly1305.s</in>
+          <in>ripemd160.i</in>
+          <in>ripemd160.s</in>
+          <in>rsa.i</in>
+          <in>rsa.s</in>
+          <in>rsa_internal.i</in>
+          <in>rsa_internal.s</in>
+          <in>sha.i</in>
+          <in>sha.s</in>
+          <in>sha1.i</in>
+          <in>sha1.s</in>
+          <in>sha256.i</in>
+          <in>sha256.s</in>
+          <in>sha512.i</in>
+          <in>sha512.s</in>
+          <in>ssl_cache.i</in>
+          <in>ssl_cache.s</in>
+          <in>ssl_ciphersuites.i</in>
+          <in>ssl_ciphersuites.s</in>
+          <in>ssl_cli.i</in>
+          <in>ssl_cli.s</in>
+          <in>ssl_cookie.i</in>
+          <in>ssl_cookie.s</in>
+          <in>ssl_srv.i</in>
+          <in>ssl_srv.s</in>
+          <in>ssl_ticket.i</in>
+          <in>ssl_ticket.s</in>
+          <in>ssl_tls.i</in>
+          <in>ssl_tls.s</in>
+          <in>threading.i</in>
+          <in>threading.s</in>
+          <in>timing.i</in>
+          <in>timing.s</in>
+          <in>version.i</in>
+          <in>version.s</in>
+          <in>version_features.i</in>
+          <in>version_features.s</in>
+          <in>x509.i</in>
+          <in>x509.s</in>
+          <in>x509_create.i</in>
+          <in>x509_create.s</in>
+          <in>x509_crl.i</in>
+          <in>x509_crl.s</in>
+          <in>x509_crt.i</in>
+          <in>x509_crt.s</in>
+          <in>x509_csr.i</in>
+          <in>x509_csr.s</in>
+          <in>x509write_crt.i</in>
+          <in>x509write_crt.s</in>
+          <in>x509write_csr.i</in>
+          <in>x509write_csr.s</in>
+          <in>xtea.i</in>
+          <in>xtea.s</in>
+        </df>
+        <df name="mdns">
+          <in>mdns.i</in>
+          <in>mdns.s</in>
+          <in>mdns_console.i</in>
+          <in>mdns_console.s</in>
+          <in>mdns_networking.i</in>
+          <in>mdns_networking.s</in>
+        </df>
+        <df name="mkspiffs">
+        </df>
+        <df name="mqtt">
+          <df name="esp-mqtt">
+            <df name="lib">
+            </df>
+          </df>
+          <in>mqtt_client.i</in>
+          <in>mqtt_client.s</in>
+          <in>mqtt_msg.i</in>
+          <in>mqtt_msg.s</in>
+          <in>mqtt_outbox.i</in>
+          <in>mqtt_outbox.s</in>
+          <in>platform_esp32_idf.i</in>
+          <in>platform_esp32_idf.s</in>
+        </df>
+        <df name="newlib">
+          <in>heap.i</in>
+          <in>heap.s</in>
+          <in>locks.i</in>
+          <in>locks.s</in>
+          <in>poll.i</in>
+          <in>poll.s</in>
+          <in>pread.i</in>
+          <in>pread.s</in>
+          <in>pthread.i</in>
+          <in>pthread.s</in>
+          <in>pwrite.i</in>
+          <in>pwrite.s</in>
+          <in>random.i</in>
+          <in>random.s</in>
+          <in>reent_init.i</in>
+          <in>reent_init.s</in>
+          <in>select.i</in>
+          <in>select.s</in>
+          <in>syscall_table.i</in>
+          <in>syscall_table.s</in>
+          <in>syscalls.i</in>
+          <in>syscalls.s</in>
+          <in>termios.i</in>
+          <in>termios.s</in>
+          <in>time.i</in>
+          <in>time.s</in>
+          <in>utime.i</in>
+          <in>utime.s</in>
+        </df>
+        <df name="nghttp">
+          <df name="nghttp2">
+            <df name="lib">
+            </df>
+          </df>
+          <df name="port">
+          </df>
+          <in>http_parser.i</in>
+          <in>http_parser.s</in>
+          <in>nghttp2_buf.i</in>
+          <in>nghttp2_buf.s</in>
+          <in>nghttp2_callbacks.i</in>
+          <in>nghttp2_callbacks.s</in>
+          <in>nghttp2_debug.i</in>
+          <in>nghttp2_debug.s</in>
+          <in>nghttp2_frame.i</in>
+          <in>nghttp2_frame.s</in>
+          <in>nghttp2_hd.i</in>
+          <in>nghttp2_hd.s</in>
+          <in>nghttp2_hd_huffman.i</in>
+          <in>nghttp2_hd_huffman.s</in>
+          <in>nghttp2_hd_huffman_data.i</in>
+          <in>nghttp2_hd_huffman_data.s</in>
+          <in>nghttp2_helper.i</in>
+          <in>nghttp2_helper.s</in>
+          <in>nghttp2_http.i</in>
+          <in>nghttp2_http.s</in>
+          <in>nghttp2_map.i</in>
+          <in>nghttp2_map.s</in>
+          <in>nghttp2_mem.i</in>
+          <in>nghttp2_mem.s</in>
+          <in>nghttp2_npn.i</in>
+          <in>nghttp2_npn.s</in>
+          <in>nghttp2_option.i</in>
+          <in>nghttp2_option.s</in>
+          <in>nghttp2_outbound_item.i</in>
+          <in>nghttp2_outbound_item.s</in>
+          <in>nghttp2_pq.i</in>
+          <in>nghttp2_pq.s</in>
+          <in>nghttp2_priority_spec.i</in>
+          <in>nghttp2_priority_spec.s</in>
+          <in>nghttp2_queue.i</in>
+          <in>nghttp2_queue.s</in>
+          <in>nghttp2_rcbuf.i</in>
+          <in>nghttp2_rcbuf.s</in>
+          <in>nghttp2_session.i</in>
+          <in>nghttp2_session.s</in>
+          <in>nghttp2_stream.i</in>
+          <in>nghttp2_stream.s</in>
+          <in>nghttp2_submit.i</in>
+          <in>nghttp2_submit.s</in>
+          <in>nghttp2_version.i</in>
+          <in>nghttp2_version.s</in>
+        </df>
+        <df name="nvs_flash">
+          <df name="src">
+          </df>
+        </df>
+        <df name="openssl">
+          <df name="library">
+          </df>
+          <df name="platform">
+          </df>
+          <in>ssl_cert.i</in>
+          <in>ssl_cert.s</in>
+          <in>ssl_lib.i</in>
+          <in>ssl_lib.s</in>
+          <in>ssl_methods.i</in>
+          <in>ssl_methods.s</in>
+          <in>ssl_pkey.i</in>
+          <in>ssl_pkey.s</in>
+          <in>ssl_pm.i</in>
+          <in>ssl_pm.s</in>
+          <in>ssl_port.i</in>
+          <in>ssl_port.s</in>
+          <in>ssl_stack.i</in>
+          <in>ssl_stack.s</in>
+          <in>ssl_x509.i</in>
+          <in>ssl_x509.s</in>
+        </df>
+        <df name="partition_table">
+        </df>
+        <df name="perfmon">
+          <in>xtensa_perfmon_access.i</in>
+          <in>xtensa_perfmon_access.s</in>
+          <in>xtensa_perfmon_apis.i</in>
+          <in>xtensa_perfmon_apis.s</in>
+          <in>xtensa_perfmon_masks.i</in>
+          <in>xtensa_perfmon_masks.s</in>
+        </df>
+        <df name="protobuf-c">
+          <df name="protobuf-c">
+            <df name="protobuf-c">
+            </df>
+          </df>
+          <in>protobuf-c.i</in>
+          <in>protobuf-c.s</in>
+        </df>
+        <df name="protocomm">
+          <df name="proto-c">
+          </df>
+          <df name="src">
+            <df name="common">
+            </df>
+            <df name="security">
+            </df>
+            <df name="simple_ble">
+            </df>
+            <df name="transports">
+            </df>
+          </df>
+          <in>constants.pb-c.i</in>
+          <in>constants.pb-c.s</in>
+          <in>protocomm.i</in>
+          <in>protocomm.s</in>
+          <in>protocomm_ble.i</in>
+          <in>protocomm_ble.s</in>
+          <in>protocomm_console.i</in>
+          <in>protocomm_console.s</in>
+          <in>protocomm_httpd.i</in>
+          <in>protocomm_httpd.s</in>
+          <in>sec0.pb-c.i</in>
+          <in>sec0.pb-c.s</in>
+          <in>sec1.pb-c.i</in>
+          <in>sec1.pb-c.s</in>
+          <in>security0.i</in>
+          <in>security0.s</in>
+          <in>security1.i</in>
+          <in>security1.s</in>
+          <in>session.pb-c.i</in>
+          <in>session.pb-c.s</in>
+          <in>simple_ble.i</in>
+          <in>simple_ble.s</in>
+        </df>
+        <df name="pthread">
+          <in>pthread.i</in>
+          <in>pthread.s</in>
+          <in>pthread_cond_var.i</in>
+          <in>pthread_cond_var.s</in>
+          <in>pthread_local_storage.i</in>
+          <in>pthread_local_storage.s</in>
+        </df>
+        <df name="sdmmc">
+          <in>sdmmc_cmd.i</in>
+          <in>sdmmc_cmd.s</in>
+          <in>sdmmc_common.i</in>
+          <in>sdmmc_common.s</in>
+          <in>sdmmc_init.i</in>
+          <in>sdmmc_init.s</in>
+          <in>sdmmc_io.i</in>
+          <in>sdmmc_io.s</in>
+          <in>sdmmc_mmc.i</in>
+          <in>sdmmc_mmc.s</in>
+          <in>sdmmc_sd.i</in>
+          <in>sdmmc_sd.s</in>
+        </df>
+        <df name="smartconfig_ack">
+          <in>smartconfig_ack.i</in>
+          <in>smartconfig_ack.s</in>
+        </df>
+        <df name="soc">
+          <df name="esp32">
+          </df>
+          <df name="src">
+            <df name="hal">
+            </df>
+          </df>
+          <in>cpu_util.i</in>
+          <in>cpu_util.s</in>
+          <in>emac_hal.i</in>
+          <in>emac_hal.s</in>
+          <in>gpio_periph.i</in>
+          <in>gpio_periph.s</in>
+          <in>i2s_periph.i</in>
+          <in>i2s_periph.s</in>
+          <in>interrupts.i</in>
+          <in>interrupts.s</in>
+          <in>ledc_periph.i</in>
+          <in>ledc_periph.s</in>
+          <in>lldesc.i</in>
+          <in>lldesc.s</in>
+          <in>memory_layout_utils.i</in>
+          <in>memory_layout_utils.s</in>
+          <in>rtc_clk.i</in>
+          <in>rtc_clk.s</in>
+          <in>rtc_clk_init.i</in>
+          <in>rtc_clk_init.s</in>
+          <in>rtc_init.i</in>
+          <in>rtc_init.s</in>
+          <in>rtc_periph.i</in>
+          <in>rtc_periph.s</in>
+          <in>rtc_pm.i</in>
+          <in>rtc_pm.s</in>
+          <in>rtc_sleep.i</in>
+          <in>rtc_sleep.s</in>
+          <in>rtc_time.i</in>
+          <in>rtc_time.s</in>
+          <in>rtc_wdt.i</in>
+          <in>rtc_wdt.s</in>
+          <in>sdio_slave_periph.i</in>
+          <in>sdio_slave_periph.s</in>
+          <in>sdmmc_periph.i</in>
+          <in>sdmmc_periph.s</in>
+          <in>soc_include_legacy_warn.i</in>
+          <in>soc_include_legacy_warn.s</in>
+          <in>soc_memory_layout.i</in>
+          <in>soc_memory_layout.s</in>
+          <in>spi_flash_hal.i</in>
+          <in>spi_flash_hal.s</in>
+          <in>spi_flash_hal_iram.i</in>
+          <in>spi_flash_hal_iram.s</in>
+          <in>spi_hal.i</in>
+          <in>spi_hal.s</in>
+          <in>spi_hal_iram.i</in>
+          <in>spi_hal_iram.s</in>
+          <in>spi_periph.i</in>
+          <in>spi_periph.s</in>
+          <in>spi_slave_hal.i</in>
+          <in>spi_slave_hal.s</in>
+          <in>spi_slave_hal_iram.i</in>
+          <in>spi_slave_hal_iram.s</in>
+        </df>
+        <df name="spi_flash">
+          <df name="esp32">
+          </df>
+          <in>cache_utils.i</in>
+          <in>cache_utils.s</in>
+          <in>esp_flash_api.i</in>
+          <in>esp_flash_api.s</in>
+          <in>esp_flash_spi_init.i</in>
+          <in>esp_flash_spi_init.s</in>
+          <in>flash_mmap.i</in>
+          <in>flash_mmap.s</in>
+          <in>flash_ops.i</in>
+          <in>flash_ops.s</in>
+          <in>flash_ops_esp32.i</in>
+          <in>flash_ops_esp32.s</in>
+          <in>memspi_host_driver.i</in>
+          <in>memspi_host_driver.s</in>
+          <in>partition.i</in>
+          <in>partition.s</in>
+          <in>spi_flash_chip_drivers.i</in>
+          <in>spi_flash_chip_drivers.s</in>
+          <in>spi_flash_chip_gd.i</in>
+          <in>spi_flash_chip_gd.s</in>
+          <in>spi_flash_chip_generic.i</in>
+          <in>spi_flash_chip_generic.s</in>
+          <in>spi_flash_chip_issi.i</in>
+          <in>spi_flash_chip_issi.s</in>
+          <in>spi_flash_os_func_app.i</in>
+          <in>spi_flash_os_func_app.s</in>
+          <in>spi_flash_os_func_noos.i</in>
+          <in>spi_flash_os_func_noos.s</in>
+          <in>spi_flash_rom_patch.i</in>
+          <in>spi_flash_rom_patch.s</in>
+        </df>
+        <df name="spidriver">
+          <in>spi_master_lobo.i</in>
+          <in>spi_master_lobo.s</in>
+        </df>
+        <df name="spiffs">
+          <df name="spiffs">
+            <df name="src">
+            </df>
+          </df>
+          <in>esp_spiffs.i</in>
+          <in>esp_spiffs.s</in>
+          <in>list.i</in>
+          <in>list.s</in>
+          <in>mutex.i</in>
+          <in>mutex.s</in>
+          <in>spiffs_cache.i</in>
+          <in>spiffs_cache.s</in>
+          <in>spiffs_check.i</in>
+          <in>spiffs_check.s</in>
+          <in>spiffs_gc.i</in>
+          <in>spiffs_gc.s</in>
+          <in>spiffs_hydrogen.i</in>
+          <in>spiffs_hydrogen.s</in>
+          <in>spiffs_nucleus.i</in>
+          <in>spiffs_nucleus.s</in>
+          <in>spiffs_vfs.i</in>
+          <in>spiffs_vfs.s</in>
+        </df>
+        <df name="spiffs_image">
+        </df>
+        <df name="tcp_transport">
+          <in>transport.i</in>
+          <in>transport.s</in>
+          <in>transport_ssl.i</in>
+          <in>transport_ssl.s</in>
+          <in>transport_tcp.i</in>
+          <in>transport_tcp.s</in>
+          <in>transport_utils.i</in>
+          <in>transport_utils.s</in>
+          <in>transport_ws.i</in>
+          <in>transport_ws.s</in>
+        </df>
+        <df name="tcpip_adapter">
+          <in>event_handlers.i</in>
+          <in>event_handlers.s</in>
+          <in>tcpip_adapter_compat.i</in>
+          <in>tcpip_adapter_compat.s</in>
+          <in>tcpip_adapter_lwip.i</in>
+          <in>tcpip_adapter_lwip.s</in>
+        </df>
+        <df name="tft">
+          <in>DefaultFont.i</in>
+          <in>DefaultFont.s</in>
+          <in>DejaVuSans18.i</in>
+          <in>DejaVuSans18.s</in>
+          <in>DejaVuSans24.i</in>
+          <in>DejaVuSans24.s</in>
+          <in>SmallFont.i</in>
+          <in>SmallFont.s</in>
+          <in>Ubuntu16.i</in>
+          <in>Ubuntu16.s</in>
+          <in>comic24.i</in>
+          <in>comic24.s</in>
+          <in>def_small.i</in>
+          <in>def_small.s</in>
+          <in>minya24.i</in>
+          <in>minya24.s</in>
+          <in>tft.i</in>
+          <in>tft.s</in>
+          <in>tftspi.i</in>
+          <in>tftspi.s</in>
+          <in>tooney32.i</in>
+          <in>tooney32.s</in>
+        </df>
+        <df name="u8g2">
+          <df name="csrc">
+          </df>
+          <in>u8g2_bitmap.i</in>
+          <in>u8g2_bitmap.s</in>
+          <in>u8g2_box.i</in>
+          <in>u8g2_box.s</in>
+          <in>u8g2_buffer.i</in>
+          <in>u8g2_buffer.s</in>
+          <in>u8g2_circle.i</in>
+          <in>u8g2_circle.s</in>
+          <in>u8g2_cleardisplay.i</in>
+          <in>u8g2_cleardisplay.s</in>
+          <in>u8g2_d_memory.i</in>
+          <in>u8g2_d_memory.s</in>
+          <in>u8g2_d_setup.i</in>
+          <in>u8g2_d_setup.s</in>
+          <in>u8g2_font.i</in>
+          <in>u8g2_font.s</in>
+          <in>u8g2_fonts.i</in>
+          <in>u8g2_fonts.s</in>
+          <in>u8g2_hvline.i</in>
+          <in>u8g2_hvline.s</in>
+          <in>u8g2_input_value.i</in>
+          <in>u8g2_input_value.s</in>
+          <in>u8g2_intersection.i</in>
+          <in>u8g2_intersection.s</in>
+          <in>u8g2_kerning.i</in>
+          <in>u8g2_kerning.s</in>
+          <in>u8g2_line.i</in>
+          <in>u8g2_line.s</in>
+          <in>u8g2_ll_hvline.i</in>
+          <in>u8g2_ll_hvline.s</in>
+          <in>u8g2_message.i</in>
+          <in>u8g2_message.s</in>
+          <in>u8g2_polygon.i</in>
+          <in>u8g2_polygon.s</in>
+          <in>u8g2_selection_list.i</in>
+          <in>u8g2_selection_list.s</in>
+          <in>u8g2_setup.i</in>
+          <in>u8g2_setup.s</in>
+          <in>u8log.i</in>
+          <in>u8log.s</in>
+          <in>u8log_u8g2.i</in>
+          <in>u8log_u8g2.s</in>
+          <in>u8log_u8x8.i</in>
+          <in>u8log_u8x8.s</in>
+          <in>u8x8_8x8.i</in>
+          <in>u8x8_8x8.s</in>
+          <in>u8x8_byte.i</in>
+          <in>u8x8_byte.s</in>
+          <in>u8x8_cad.i</in>
+          <in>u8x8_cad.s</in>
+          <in>u8x8_capture.i</in>
+          <in>u8x8_capture.s</in>
+          <in>u8x8_d_a2printer.i</in>
+          <in>u8x8_d_a2printer.s</in>
+          <in>u8x8_d_il3820_296x128.i</in>
+          <in>u8x8_d_il3820_296x128.s</in>
+          <in>u8x8_d_ist3020.i</in>
+          <in>u8x8_d_ist3020.s</in>
+          <in>u8x8_d_ist7920.i</in>
+          <in>u8x8_d_ist7920.s</in>
+          <in>u8x8_d_ks0108.i</in>
+          <in>u8x8_d_ks0108.s</in>
+          <in>u8x8_d_lc7981.i</in>
+          <in>u8x8_d_lc7981.s</in>
+          <in>u8x8_d_ld7032_60x32.i</in>
+          <in>u8x8_d_ld7032_60x32.s</in>
+          <in>u8x8_d_ls013b7dh03.i</in>
+          <in>u8x8_d_ls013b7dh03.s</in>
+          <in>u8x8_d_max7219.i</in>
+          <in>u8x8_d_max7219.s</in>
+          <in>u8x8_d_pcd8544_84x48.i</in>
+          <in>u8x8_d_pcd8544_84x48.s</in>
+          <in>u8x8_d_pcf8812.i</in>
+          <in>u8x8_d_pcf8812.s</in>
+          <in>u8x8_d_pcf8814_hx1230.i</in>
+          <in>u8x8_d_pcf8814_hx1230.s</in>
+          <in>u8x8_d_sbn1661.i</in>
+          <in>u8x8_d_sbn1661.s</in>
+          <in>u8x8_d_sed1330.i</in>
+          <in>u8x8_d_sed1330.s</in>
+          <in>u8x8_d_sh1106_64x32.i</in>
+          <in>u8x8_d_sh1106_64x32.s</in>
+          <in>u8x8_d_sh1106_72x40.i</in>
+          <in>u8x8_d_sh1106_72x40.s</in>
+          <in>u8x8_d_sh1107.i</in>
+          <in>u8x8_d_sh1107.s</in>
+          <in>u8x8_d_sh1108.i</in>
+          <in>u8x8_d_sh1108.s</in>
+          <in>u8x8_d_sh1122.i</in>
+          <in>u8x8_d_sh1122.s</in>
+          <in>u8x8_d_ssd1305.i</in>
+          <in>u8x8_d_ssd1305.s</in>
+          <in>u8x8_d_ssd1306_128x32.i</in>
+          <in>u8x8_d_ssd1306_128x32.s</in>
+          <in>u8x8_d_ssd1306_128x64_noname.i</in>
+          <in>u8x8_d_ssd1306_128x64_noname.s</in>
+          <in>u8x8_d_ssd1306_48x64.i</in>
+          <in>u8x8_d_ssd1306_48x64.s</in>
+          <in>u8x8_d_ssd1306_64x32.i</in>
+          <in>u8x8_d_ssd1306_64x32.s</in>
+          <in>u8x8_d_ssd1306_64x48.i</in>
+          <in>u8x8_d_ssd1306_64x48.s</in>
+          <in>u8x8_d_ssd1306_72x40.i</in>
+          <in>u8x8_d_ssd1306_72x40.s</in>
+          <in>u8x8_d_ssd1306_96x16.i</in>
+          <in>u8x8_d_ssd1306_96x16.s</in>
+          <in>u8x8_d_ssd1309.i</in>
+          <in>u8x8_d_ssd1309.s</in>
+          <in>u8x8_d_ssd1316.i</in>
+          <in>u8x8_d_ssd1316.s</in>
+          <in>u8x8_d_ssd1317.i</in>
+          <in>u8x8_d_ssd1317.s</in>
+          <in>u8x8_d_ssd1318.i</in>
+          <in>u8x8_d_ssd1318.s</in>
+          <in>u8x8_d_ssd1322.i</in>
+          <in>u8x8_d_ssd1322.s</in>
+          <in>u8x8_d_ssd1325.i</in>
+          <in>u8x8_d_ssd1325.s</in>
+          <in>u8x8_d_ssd1326.i</in>
+          <in>u8x8_d_ssd1326.s</in>
+          <in>u8x8_d_ssd1327.i</in>
+          <in>u8x8_d_ssd1327.s</in>
+          <in>u8x8_d_ssd1329.i</in>
+          <in>u8x8_d_ssd1329.s</in>
+          <in>u8x8_d_ssd1606_172x72.i</in>
+          <in>u8x8_d_ssd1606_172x72.s</in>
+          <in>u8x8_d_ssd1607_200x200.i</in>
+          <in>u8x8_d_ssd1607_200x200.s</in>
+          <in>u8x8_d_st7511.i</in>
+          <in>u8x8_d_st7511.s</in>
+          <in>u8x8_d_st75256.i</in>
+          <in>u8x8_d_st75256.s</in>
+          <in>u8x8_d_st7528.i</in>
+          <in>u8x8_d_st7528.s</in>
+          <in>u8x8_d_st75320.i</in>
+          <in>u8x8_d_st75320.s</in>
+          <in>u8x8_d_st7565.i</in>
+          <in>u8x8_d_st7565.s</in>
+          <in>u8x8_d_st7567.i</in>
+          <in>u8x8_d_st7567.s</in>
+          <in>u8x8_d_st7586s_erc240160.i</in>
+          <in>u8x8_d_st7586s_erc240160.s</in>
+          <in>u8x8_d_st7586s_s028hn118a.i</in>
+          <in>u8x8_d_st7586s_s028hn118a.s</in>
+          <in>u8x8_d_st7588.i</in>
+          <in>u8x8_d_st7588.s</in>
+          <in>u8x8_d_st7920.i</in>
+          <in>u8x8_d_st7920.s</in>
+          <in>u8x8_d_stdio.i</in>
+          <in>u8x8_d_stdio.s</in>
+          <in>u8x8_d_t6963.i</in>
+          <in>u8x8_d_t6963.s</in>
+          <in>u8x8_d_uc1601.i</in>
+          <in>u8x8_d_uc1601.s</in>
+          <in>u8x8_d_uc1604.i</in>
+          <in>u8x8_d_uc1604.s</in>
+          <in>u8x8_d_uc1608.i</in>
+          <in>u8x8_d_uc1608.s</in>
+          <in>u8x8_d_uc1610.i</in>
+          <in>u8x8_d_uc1610.s</in>
+          <in>u8x8_d_uc1611.i</in>
+          <in>u8x8_d_uc1611.s</in>
+          <in>u8x8_d_uc1617.i</in>
+          <in>u8x8_d_uc1617.s</in>
+          <in>u8x8_d_uc1638.i</in>
+          <in>u8x8_d_uc1638.s</in>
+          <in>u8x8_d_uc1701_dogs102.i</in>
+          <in>u8x8_d_uc1701_dogs102.s</in>
+          <in>u8x8_d_uc1701_mini12864.i</in>
+          <in>u8x8_d_uc1701_mini12864.s</in>
+          <in>u8x8_debounce.i</in>
+          <in>u8x8_debounce.s</in>
+          <in>u8x8_display.i</in>
+          <in>u8x8_display.s</in>
+          <in>u8x8_fonts.i</in>
+          <in>u8x8_fonts.s</in>
+          <in>u8x8_gpio.i</in>
+          <in>u8x8_gpio.s</in>
+          <in>u8x8_input_value.i</in>
+          <in>u8x8_input_value.s</in>
+          <in>u8x8_message.i</in>
+          <in>u8x8_message.s</in>
+          <in>u8x8_selection_list.i</in>
+          <in>u8x8_selection_list.s</in>
+          <in>u8x8_setup.i</in>
+          <in>u8x8_setup.s</in>
+          <in>u8x8_string.i</in>
+          <in>u8x8_string.s</in>
+          <in>u8x8_u16toa.i</in>
+          <in>u8x8_u16toa.s</in>
+          <in>u8x8_u8toa.i</in>
+          <in>u8x8_u8toa.s</in>
+        </df>
+        <df name="ulp">
+          <in>ulp.i</in>
+          <in>ulp.s</in>
+          <in>ulp_macro.i</in>
+          <in>ulp_macro.s</in>
+        </df>
+        <df name="unity">
+          <df name="unity">
+            <df name="src">
+            </df>
+          </df>
+          <in>unity.i</in>
+          <in>unity.s</in>
+          <in>unity_port_esp32.i</in>
+          <in>unity_port_esp32.s</in>
+          <in>unity_runner.i</in>
+          <in>unity_runner.s</in>
+        </df>
+        <df name="vfs">
+          <in>vfs.i</in>
+          <in>vfs.s</in>
+          <in>vfs_semihost.i</in>
+          <in>vfs_semihost.s</in>
+          <in>vfs_uart.i</in>
+          <in>vfs_uart.s</in>
+        </df>
+        <df name="wear_levelling">
+        </df>
+        <df name="wifi_provisioning">
+          <df name="proto-c">
+          </df>
+          <df name="src">
+          </df>
+          <in>handlers.i</in>
+          <in>handlers.s</in>
+          <in>manager.i</in>
+          <in>manager.s</in>
+          <in>scheme_ble.i</in>
+          <in>scheme_ble.s</in>
+          <in>scheme_console.i</in>
+          <in>scheme_console.s</in>
+          <in>scheme_softap.i</in>
+          <in>scheme_softap.s</in>
+          <in>wifi_config.i</in>
+          <in>wifi_config.pb-c.i</in>
+          <in>wifi_config.pb-c.s</in>
+          <in>wifi_config.s</in>
+          <in>wifi_constants.pb-c.i</in>
+          <in>wifi_constants.pb-c.s</in>
+          <in>wifi_scan.i</in>
+          <in>wifi_scan.pb-c.i</in>
+          <in>wifi_scan.pb-c.s</in>
+          <in>wifi_scan.s</in>
+        </df>
+        <df name="wpa_supplicant">
+          <df name="port">
+          </df>
+          <df name="src">
+            <df name="ap">
+            </df>
+            <df name="common">
+            </df>
+            <df name="crypto">
+            </df>
+            <df name="eap_peer">
+            </df>
+            <df name="esp_supplicant">
+            </df>
+            <df name="rsn_supp">
+            </df>
+            <df name="tls">
+            </df>
+            <df name="utils">
+            </df>
+            <df name="wps">
+            </df>
+          </df>
+          <in>aes-cbc.i</in>
+          <in>aes-cbc.s</in>
+          <in>aes-internal-dec.i</in>
+          <in>aes-internal-dec.s</in>
+          <in>aes-internal-enc.i</in>
+          <in>aes-internal-enc.s</in>
+          <in>aes-internal.i</in>
+          <in>aes-internal.s</in>
+          <in>aes-unwrap.i</in>
+          <in>aes-unwrap.s</in>
+          <in>aes-wrap.i</in>
+          <in>aes-wrap.s</in>
+          <in>ap_config.i</in>
+          <in>ap_config.s</in>
+          <in>asn1.i</in>
+          <in>asn1.s</in>
+          <in>base64.i</in>
+          <in>base64.s</in>
+          <in>bignum.i</in>
+          <in>bignum.s</in>
+          <in>chap.i</in>
+          <in>chap.s</in>
+          <in>common.i</in>
+          <in>common.s</in>
+          <in>crypto_internal-cipher.i</in>
+          <in>crypto_internal-cipher.s</in>
+          <in>crypto_internal-modexp.i</in>
+          <in>crypto_internal-modexp.s</in>
+          <in>crypto_internal-rsa.i</in>
+          <in>crypto_internal-rsa.s</in>
+          <in>crypto_internal.i</in>
+          <in>crypto_internal.s</in>
+          <in>crypto_mbedtls.i</in>
+          <in>crypto_mbedtls.s</in>
+          <in>crypto_ops.i</in>
+          <in>crypto_ops.s</in>
+          <in>des-internal.i</in>
+          <in>des-internal.s</in>
+          <in>dh_group5.i</in>
+          <in>dh_group5.s</in>
+          <in>dh_groups.i</in>
+          <in>dh_groups.s</in>
+          <in>eap.i</in>
+          <in>eap.s</in>
+          <in>eap_common.i</in>
+          <in>eap_common.s</in>
+          <in>eap_mschapv2.i</in>
+          <in>eap_mschapv2.s</in>
+          <in>eap_peap.i</in>
+          <in>eap_peap.s</in>
+          <in>eap_peap_common.i</in>
+          <in>eap_peap_common.s</in>
+          <in>eap_tls.i</in>
+          <in>eap_tls.s</in>
+          <in>eap_tls_common.i</in>
+          <in>eap_tls_common.s</in>
+          <in>eap_ttls.i</in>
+          <in>eap_ttls.s</in>
+          <in>esp_hostap.i</in>
+          <in>esp_hostap.s</in>
+          <in>esp_wpa2.i</in>
+          <in>esp_wpa2.s</in>
+          <in>esp_wpa_main.i</in>
+          <in>esp_wpa_main.s</in>
+          <in>esp_wpas_glue.i</in>
+          <in>esp_wpas_glue.s</in>
+          <in>esp_wps.i</in>
+          <in>esp_wps.s</in>
+          <in>ext_password.i</in>
+          <in>ext_password.s</in>
+          <in>ieee802_1x.i</in>
+          <in>ieee802_1x.s</in>
+          <in>md4-internal.i</in>
+          <in>md4-internal.s</in>
+          <in>md5-internal.i</in>
+          <in>md5-internal.s</in>
+          <in>md5.i</in>
+          <in>md5.s</in>
+          <in>ms_funcs.i</in>
+          <in>ms_funcs.s</in>
+          <in>mschapv2.i</in>
+          <in>mschapv2.s</in>
+          <in>os_xtensa.i</in>
+          <in>os_xtensa.s</in>
+          <in>pkcs1.i</in>
+          <in>pkcs1.s</in>
+          <in>pkcs5.i</in>
+          <in>pkcs5.s</in>
+          <in>pkcs8.i</in>
+          <in>pkcs8.s</in>
+          <in>pmksa_cache.i</in>
+          <in>pmksa_cache.s</in>
+          <in>rc4.i</in>
+          <in>rc4.s</in>
+          <in>rsa.i</in>
+          <in>rsa.s</in>
+          <in>sha1-internal.i</in>
+          <in>sha1-internal.s</in>
+          <in>sha1-pbkdf2.i</in>
+          <in>sha1-pbkdf2.s</in>
+          <in>sha1.i</in>
+          <in>sha1.s</in>
+          <in>sha256-internal.i</in>
+          <in>sha256-internal.s</in>
+          <in>sha256.i</in>
+          <in>sha256.s</in>
+          <in>tls_internal.i</in>
+          <in>tls_internal.s</in>
+          <in>tlsv1_client.i</in>
+          <in>tlsv1_client.s</in>
+          <in>tlsv1_client_read.i</in>
+          <in>tlsv1_client_read.s</in>
+          <in>tlsv1_client_write.i</in>
+          <in>tlsv1_client_write.s</in>
+          <in>tlsv1_common.i</in>
+          <in>tlsv1_common.s</in>
+          <in>tlsv1_cred.i</in>
+          <in>tlsv1_cred.s</in>
+          <in>tlsv1_record.i</in>
+          <in>tlsv1_record.s</in>
+          <in>tlsv1_server.i</in>
+          <in>tlsv1_server.s</in>
+          <in>tlsv1_server_read.i</in>
+          <in>tlsv1_server_read.s</in>
+          <in>tlsv1_server_write.i</in>
+          <in>tlsv1_server_write.s</in>
+          <in>uuid.i</in>
+          <in>uuid.s</in>
+          <in>wpa.i</in>
+          <in>wpa.s</in>
+          <in>wpa_auth.i</in>
+          <in>wpa_auth.s</in>
+          <in>wpa_auth_ie.i</in>
+          <in>wpa_auth_ie.s</in>
+          <in>wpa_common.i</in>
+          <in>wpa_common.s</in>
+          <in>wpa_debug.i</in>
+          <in>wpa_debug.s</in>
+          <in>wpa_ie.i</in>
+          <in>wpa_ie.s</in>
+          <in>wpabuf.i</in>
+          <in>wpabuf.s</in>
+          <in>wps.i</in>
+          <in>wps.s</in>
+          <in>wps_attr_build.i</in>
+          <in>wps_attr_build.s</in>
+          <in>wps_attr_parse.i</in>
+          <in>wps_attr_parse.s</in>
+          <in>wps_attr_process.i</in>
+          <in>wps_attr_process.s</in>
+          <in>wps_common.i</in>
+          <in>wps_common.s</in>
+          <in>wps_dev_attr.i</in>
+          <in>wps_dev_attr.s</in>
+          <in>wps_enrollee.i</in>
+          <in>wps_enrollee.s</in>
+          <in>wps_registrar.i</in>
+          <in>wps_registrar.s</in>
+          <in>wps_validate.i</in>
+          <in>wps_validate.s</in>
+          <in>x509v3.i</in>
+          <in>x509v3.s</in>
+        </df>
+        <df name="xtensa">
+          <in>debug_helpers.i</in>
+          <in>debug_helpers.s</in>
+          <in>eri.i</in>
+          <in>eri.s</in>
+          <in>stdatomic.i</in>
+          <in>stdatomic.s</in>
+          <in>trax.i</in>
+          <in>trax.s</in>
+        </df>
+      </df>
+      <df name="CMakeFiles">
+        <df name="3.13.4">
+          <df name="CompilerIdC">
+            <df name="tmp">
+            </df>
+            <in>CMakeCCompilerId.c</in>
+          </df>
+          <df name="CompilerIdCXX">
+            <df name="tmp">
+            </df>
+            <in>CMakeCXXCompilerId.cpp</in>
+          </df>
+        </df>
+        <df name="CMakeTmp">
+        </df>
+      </df>
+      <df name="components">
+        <df name="esp32-wifi-manager">
+          <df name="src">
+            <in>dns_server.c</in>
+            <in>http_server.c</in>
+            <in>json.c</in>
+            <in>wifi_manager.c</in>
+          </df>
+        </df>
+        <df name="spidriver">
+          <in>spi_master_lobo.c</in>
+        </df>
+        <df name="spiffs">
+          <in>esp_spiffs.c</in>
+          <in>list.c</in>
+          <in>mutex.c</in>
+          <in>spiffs_cache.c</in>
+          <in>spiffs_check.c</in>
+          <in>spiffs_gc.c</in>
+          <in>spiffs_hydrogen.c</in>
+          <in>spiffs_nucleus.c</in>
+          <in>spiffs_vfs.c</in>
+        </df>
+        <df name="tft">
+          <in>DefaultFont.c</in>
+          <in>DejaVuSans18.c</in>
+          <in>DejaVuSans24.c</in>
+          <in>SmallFont.c</in>
+          <in>Ubuntu16.c</in>
+          <in>comic24.c</in>
+          <in>def_small.c</in>
+          <in>minya24.c</in>
+          <in>tft.c</in>
+          <in>tftspi.c</in>
+          <in>tooney32.c</in>
+        </df>
+        <df name="u8g2">
+          <df name="csrc">
+            <in>u8g2_bitmap.c</in>
+            <in>u8g2_box.c</in>
+            <in>u8g2_buffer.c</in>
+            <in>u8g2_circle.c</in>
+            <in>u8g2_cleardisplay.c</in>
+            <in>u8g2_d_memory.c</in>
+            <in>u8g2_d_setup.c</in>
+            <in>u8g2_font.c</in>
+            <in>u8g2_fonts.c</in>
+            <in>u8g2_hvline.c</in>
+            <in>u8g2_input_value.c</in>
+            <in>u8g2_intersection.c</in>
+            <in>u8g2_kerning.c</in>
+            <in>u8g2_line.c</in>
+            <in>u8g2_ll_hvline.c</in>
+            <in>u8g2_message.c</in>
+            <in>u8g2_polygon.c</in>
+            <in>u8g2_selection_list.c</in>
+            <in>u8g2_setup.c</in>
+            <in>u8log.c</in>
+            <in>u8log_u8g2.c</in>
+            <in>u8log_u8x8.c</in>
+            <in>u8x8_8x8.c</in>
+            <in>u8x8_byte.c</in>
+            <in>u8x8_cad.c</in>
+            <in>u8x8_capture.c</in>
+            <in>u8x8_d_a2printer.c</in>
+            <in>u8x8_d_il3820_296x128.c</in>
+            <in>u8x8_d_ist3020.c</in>
+            <in>u8x8_d_ist7920.c</in>
+            <in>u8x8_d_ks0108.c</in>
+            <in>u8x8_d_lc7981.c</in>
+            <in>u8x8_d_ld7032_60x32.c</in>
+            <in>u8x8_d_ls013b7dh03.c</in>
+            <in>u8x8_d_max7219.c</in>
+            <in>u8x8_d_pcd8544_84x48.c</in>
+            <in>u8x8_d_pcf8812.c</in>
+            <in>u8x8_d_pcf8814_hx1230.c</in>
+            <in>u8x8_d_sbn1661.c</in>
+            <in>u8x8_d_sed1330.c</in>
+            <in>u8x8_d_sh1106_64x32.c</in>
+            <in>u8x8_d_sh1106_72x40.c</in>
+            <in>u8x8_d_sh1107.c</in>
+            <in>u8x8_d_sh1108.c</in>
+            <in>u8x8_d_sh1122.c</in>
+            <in>u8x8_d_ssd1305.c</in>
+            <in>u8x8_d_ssd1306_128x32.c</in>
+            <in>u8x8_d_ssd1306_128x64_noname.c</in>
+            <in>u8x8_d_ssd1306_48x64.c</in>
+            <in>u8x8_d_ssd1306_64x32.c</in>
+            <in>u8x8_d_ssd1306_64x48.c</in>
+            <in>u8x8_d_ssd1306_72x40.c</in>
+            <in>u8x8_d_ssd1306_96x16.c</in>
+            <in>u8x8_d_ssd1309.c</in>
+            <in>u8x8_d_ssd1316.c</in>
+            <in>u8x8_d_ssd1317.c</in>
+            <in>u8x8_d_ssd1318.c</in>
+            <in>u8x8_d_ssd1322.c</in>
+            <in>u8x8_d_ssd1325.c</in>
+            <in>u8x8_d_ssd1326.c</in>
+            <in>u8x8_d_ssd1327.c</in>
+            <in>u8x8_d_ssd1329.c</in>
+            <in>u8x8_d_ssd1606_172x72.c</in>
+            <in>u8x8_d_ssd1607_200x200.c</in>
+            <in>u8x8_d_st7511.c</in>
+            <in>u8x8_d_st75256.c</in>
+            <in>u8x8_d_st7528.c</in>
+            <in>u8x8_d_st75320.c</in>
+            <in>u8x8_d_st7565.c</in>
+            <in>u8x8_d_st7567.c</in>
+            <in>u8x8_d_st7586s_erc240160.c</in>
+            <in>u8x8_d_st7586s_s028hn118a.c</in>
+            <in>u8x8_d_st7588.c</in>
+            <in>u8x8_d_st7920.c</in>
+            <in>u8x8_d_stdio.c</in>
+            <in>u8x8_d_t6963.c</in>
+            <in>u8x8_d_uc1601.c</in>
+            <in>u8x8_d_uc1604.c</in>
+            <in>u8x8_d_uc1608.c</in>
+            <in>u8x8_d_uc1610.c</in>
+            <in>u8x8_d_uc1611.c</in>
+            <in>u8x8_d_uc1617.c</in>
+            <in>u8x8_d_uc1638.c</in>
+            <in>u8x8_d_uc1701_dogs102.c</in>
+            <in>u8x8_d_uc1701_mini12864.c</in>
+            <in>u8x8_debounce.c</in>
+            <in>u8x8_display.c</in>
+            <in>u8x8_fonts.c</in>
+            <in>u8x8_gpio.c</in>
+            <in>u8x8_input_value.c</in>
+            <in>u8x8_message.c</in>
+            <in>u8x8_selection_list.c</in>
+            <in>u8x8_setup.c</in>
+            <in>u8x8_string.c</in>
+            <in>u8x8_u16toa.c</in>
+            <in>u8x8_u8toa.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="Dokumentation">
+        <df name="html">
+          <df name="search">
+          </df>
+        </df>
+      </df>
+      <df name="main">
+        <df name="DataLife">
+          <in>FileItem.cpp</in>
+        </df>
+        <df name="HardwareLife">
+          <df name="Gpio">
+            <df name="Kiss">
+              <in>Kiss.cpp</in>
+            </df>
+            <in>Gpio.cpp</in>
+          </df>
+          <df name="Key">
+            <in>Combinator.cpp</in>
+          </df>
+          <df name="Lcd">
+            <df name="Content">
+              <df name="Face">
+                <in>Face.cpp</in>
+                <in>ItemBits.cpp</in>
+              </df>
+              <df name="Line">
+                <df name="TopLine">
+                  <in>TopLine.cpp</in>
+                </df>
+              </df>
+              <in>Content.cpp</in>
+            </df>
+            <in>TftDisplayBackend.c</in>
+          </df>
+          <df name="TransportAbstraction">
+            <in>IPublisher.h</in>
+            <in>ISubscriber.h</in>
+          </df>
+          <df name="WiFi">
+            <df name="esp32-wifi-manager">
+              <df name="src">
+                <in>dns_server.c</in>
+                <in>http_server.c</in>
+                <in>json.c</in>
+                <in>wifi_manager.c</in>
+              </df>
+            </df>
+            <in>WiFi.cpp</in>
+          </df>
+          <in>TechDevice.cpp</in>
+        </df>
+        <df name="IdLife">
+          <df name="Auth">
+            <in>Authenticator.cpp</in>
+            <in>Prozessor.cpp</in>
+            <in>Requester.cpp</in>
+          </df>
+          <in>Id.cpp</in>
+        </df>
+        <df name="LifeCycle">
+          <in>LifeCycle.cpp</in>
+        </df>
+      </df>
+      <df name="ProjektEi_UML">
+        <in>cpp_includes</in>
+      </df>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+            <option name="gdb_init_file" value=""/>
+            <option name="gdb_source_dirs" value="."/>
+            <option name="debug_command" value="${OUTPUT_PATH}"/>
+            <option name="debug_dir" value="."/>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>${MAKE} flash</runcommandpicklistitem>
+          <runcommandpicklistitem>make flash</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/dieter/Development/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb ${OUTPUT_PATH}</runcommandpicklistitem>
+          <runcommandpicklistitem>/home/dieter/Development/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb "${OUTPUT_PATH}"</runcommandpicklistitem>
+          <runcommandpicklistitem></runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>true</buildfirst>
+        <console-type>2</console-type>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

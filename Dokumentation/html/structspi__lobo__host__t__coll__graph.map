@@ -1,0 +1,6 @@
+<map id="spi_lobo_host_t" name="spi_lobo_host_t">
+<area shape="rect" id="node3" href="$structspi__lobo__device__t.html" title="spi_lobo_device_t" alt="" coords="80,213,207,240"/>
+<area shape="rect" id="node2" href="$structspi__lobo__bus__config__t.html" title="This is a configuration structure for a SPI bus. " alt="" coords="44,5,195,32"/>
+<area shape="rect" id="node4" href="$structspi__lobo__device__interface__config__t.html" title="This is a configuration for a SPI slave device that is connected to one of the SPI buses..." alt="" coords="268,109,440,151"/>
+<area shape="rect" id="node5" href="$structspi__lobo__transaction__t.html" title="spi_lobo_transaction_t" alt="" coords="278,5,430,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="IId" name="IId">
+<area shape="rect" id="node2" href="$class_combinator.html" title="{Combinator\n||+ Combinator()\l+ Combinator()\l+ ~Combinator()\l# getKey()\l# getName()\l# setId()\l}" alt="" coords="5,197,123,347"/>
+<area shape="rect" id="node3" href="$class_file_item.html" title="{FileItem\n||+ FileItem()\l+ FileItem()\l+ ~FileItem()\l# setFileContent()\l# getFileContent()\l# setFileType()\l# getFileType()\l# setFileRights()\l# getFileRights()\l}" alt="" coords="147,175,274,369"/>
+<area shape="rect" id="node4" href="$class_id.html" title="{Id\n||+ Id()\l+ Id()\l+ ~Id()\l+ getName()\l+ getKey()\l+ setId()\l}" alt="" coords="298,197,393,347"/>
+</map>

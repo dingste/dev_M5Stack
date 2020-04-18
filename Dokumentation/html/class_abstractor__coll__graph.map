@@ -1,0 +1,5 @@
+<map id="Abstractor" name="Abstractor">
+<area shape="rect" id="node2" href="$class_i_abstractor.html" title="IAbstractor" alt="" coords="59,80,146,107"/>
+<area shape="rect" id="node3" href="$class_i_subscriber.html" title="ISubscriber" alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node4" href="$class_i_publisher.html" title="IPublisher" alt="" coords="117,5,197,32"/>
+</map>

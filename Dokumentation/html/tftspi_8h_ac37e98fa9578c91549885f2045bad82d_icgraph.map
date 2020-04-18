@@ -1,0 +1,5 @@
+<map id="disp_spi_transfer_cmd" name="disp_spi_transfer_cmd">
+<area shape="rect" id="node2" href="$tft_8h.html#a36dd5f280775c5019e1a966f0d5fa79d" title="TFT_invertDisplay" alt="" coords="207,5,336,32"/>
+<area shape="rect" id="node3" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="384,5,517,32"/>
+<area shape="rect" id="node4" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="565,5,688,32"/>
+</map>

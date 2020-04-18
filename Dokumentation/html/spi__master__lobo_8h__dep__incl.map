@@ -1,0 +1,8 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/spidriver/spi_master_lobo.h" name="HardwareLife/Lcd/ESP32_TFT_library/components/spidriver/spi_master_lobo.h">
+<area shape="rect" id="node2" href="$spi__master__lobo_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spidriver/spi_master_lobo.c" alt="" coords="5,109,191,165"/>
+<area shape="rect" id="node3" href="$tftspi_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.h" alt="" coords="215,109,386,165"/>
+<area shape="rect" id="node4" href="$tft_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.h" alt="" coords="154,213,325,269"/>
+<area shape="rect" id="node5" href="$tft_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.c" alt="" coords="57,317,227,373"/>
+<area shape="rect" id="node6" href="$tft__demo_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/main/tft\l_demo.c" alt="" coords="264,317,433,373"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.c" alt="" coords="399,213,570,269"/>
+</map>

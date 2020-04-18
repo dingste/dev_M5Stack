@@ -1,0 +1,5 @@
+<map id="vfs_spiffs_dir_t" name="vfs_spiffs_dir_t">
+<area shape="rect" id="node2" href="$spiffs_2spiffs_8h.html#structspiffs___d_i_r" title="{spiffs_DIR\n|+ block\l+ entry\l|}" alt="" coords="40,549,125,641"/>
+<area shape="rect" id="node3" href="$spiffs_2spiffs_8h.html#structspiffs__t" title="{spiffs_t\n|+ block_count\l+ free_cursor_block_ix\l+ free_cursor_obj_lu\l_entry\l+ cursor_block_ix\l+ cursor_obj_lu_entry\l+ lu_work\l+ work\l+ fd_space\l+ fd_count\l+ err_code\land 11 more...\l|}" alt="" coords="5,248,160,487"/>
+<area shape="rect" id="node4" href="$spiffs_2spiffs_8h.html#structspiffs__config" title="{spiffs_config\n|+ hal_read_f\l+ hal_write_f\l+ hal_erase_f\l+ phys_size\l+ phys_addr\l+ phys_erase_block\l+ log_block_size\l+ log_page_size\l|}" alt="" coords="13,5,152,185"/>
+</map>

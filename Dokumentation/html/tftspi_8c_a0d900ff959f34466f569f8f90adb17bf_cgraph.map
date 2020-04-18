@@ -1,0 +1,5 @@
+<map id="TFT_display_init" name="TFT_display_init">
+<area shape="rect" id="node2" href="$tftspi_8c.html#a25abb90398c3327b065617e00d4e0e42" title="disp_select" alt="" coords="172,31,260,57"/>
+<area shape="rect" id="node3" href="$spi__master__lobo_8c.html#accb77c930dad6f5b48cd33f969ee7202" title="Select spi device for transmission. " alt="" coords="308,5,465,32"/>
+<area shape="rect" id="node4" href="$tftspi_8c.html#a7adad2e57540d150bb0cd9f99efa851f" title="wait_trans_finish" alt="" coords="327,56,447,83"/>
+</map>

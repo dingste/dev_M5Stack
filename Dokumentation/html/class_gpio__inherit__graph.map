@@ -1,0 +1,4 @@
+<map id="Gpio" name="Gpio">
+<area shape="rect" id="node3" href="$class_kiss.html" title="{Kiss\n||+ Kiss()\l+ ~Kiss()\l# onKiss()\l# toKiss()\l}" alt="" coords="16,388,97,509"/>
+<area shape="rect" id="node2" href="$class_i_gpio.html" title="{IGpio\n||+ ~IGpio()\l+ pending()\l+ connected()\l+ duration()\l}" alt="" coords="5,5,108,127"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="SPIFFS_open" name="SPIFFS_open">
+<area shape="rect" id="node2" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a3d7aac6eac74208f5aa2f4ff2703b715" title="addDir" alt="" coords="170,5,230,32"/>
+<area shape="rect" id="node4" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a62b976e8eb602c99ad393b60308133fc" title="addFile" alt="" coords="168,56,232,83"/>
+<area shape="rect" id="node5" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#af54c1049c7b85dd55077065951eb4d08" title="Unpack file from file system. " alt="" coords="157,107,243,133"/>
+<area shape="rect" id="node3" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#ad43a4d7393ef96095ff7278199ed6598" title="addFiles" alt="" coords="301,31,372,57"/>
+<area shape="rect" id="node6" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html#a9357b62cd569da9174ff70fc7387027b" title="Unpack files from file system. " alt="" coords="291,107,383,133"/>
+</map>

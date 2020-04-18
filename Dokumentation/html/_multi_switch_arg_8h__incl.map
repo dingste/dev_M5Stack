@@ -1,0 +1,9 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/mkspiffs/src/tclap/MultiSwitchArg.h" name="HardwareLife/Lcd/ESP32_TFT_library/components/mkspiffs/src/tclap/MultiSwitchArg.h">
+<area shape="rect" id="node4" href="$_switch_arg_8h.html" title="SwitchArg.h" alt="" coords="572,109,665,136"/>
+<area shape="rect" id="node5" href="$_arg_8h.html" title="Arg.h" alt="" coords="592,184,645,211"/>
+<area shape="rect" id="node11" href="$_arg_exception_8h.html" title="ArgException.h" alt="" coords="709,259,819,285"/>
+<area shape="rect" id="node13" href="$_visitor_8h.html" title="Visitor.h" alt="" coords="98,259,169,285"/>
+<area shape="rect" id="node14" href="$_cmd_line_interface_8h.html" title="CmdLineInterface.h" alt="" coords="497,259,633,285"/>
+<area shape="rect" id="node16" href="$_arg_traits_8h.html" title="ArgTraits.h" alt="" coords="193,259,279,285"/>
+<area shape="rect" id="node17" href="$_standard_traits_8h.html" title="StandardTraits.h" alt="" coords="303,259,422,285"/>
+</map>

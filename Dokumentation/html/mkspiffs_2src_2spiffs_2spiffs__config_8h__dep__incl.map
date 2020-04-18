@@ -1,0 +1,11 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/mkspiffs/src/spiffs/spiffs_config.h" name="HardwareLife/Lcd/ESP32_TFT_library/components/mkspiffs/src/spiffs/spiffs_config.h">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs.h" alt="" coords="537,124,719,180"/>
+<area shape="rect" id="node3" href="$_hardware_life_2_lcd_2_e_s_p32___t_f_t__library_2components_2mkspiffs_2src_2main_8cpp.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/main.cpp" alt="" coords="5,235,176,291"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2esp__spiffs_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/esp\l_spiffs.h" alt="" coords="200,228,371,299"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2esp__spiffs_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/esp\l_spiffs.c" alt="" coords="261,347,432,417"/>
+<area shape="rect" id="node6" href="$mkspiffs_2src_2spiffs_2spiffs__cache_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs\l_cache.c" alt="" coords="445,228,616,299"/>
+<area shape="rect" id="node7" href="$mkspiffs_2src_2spiffs_2spiffs__check_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs\l_check.c" alt="" coords="640,228,811,299"/>
+<area shape="rect" id="node8" href="$mkspiffs_2src_2spiffs_2spiffs__gc_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs_gc.c" alt="" coords="835,235,1037,291"/>
+<area shape="rect" id="node9" href="$mkspiffs_2src_2spiffs_2spiffs__hydrogen_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs\l_hydrogen.c" alt="" coords="1061,228,1232,299"/>
+<area shape="rect" id="node10" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/mkspiffs/src/spiffs/spiffs\l_nucleus.c" alt="" coords="1256,228,1427,299"/>
+</map>

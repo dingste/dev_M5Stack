@@ -1,0 +1,7 @@
+<map id="send_data" name="send_data">
+<area shape="rect" id="node2" href="$tftspi_8h.html#a80ddf39857da193f67da800950e1a475" title="find_rd_speed" alt="" coords="145,31,247,57"/>
+<area shape="rect" id="node6" href="$tft_8h.html#a2fe1259ac56d938ba10215531aaffb22" title="TFT_bmp_image" alt="" coords="136,81,256,108"/>
+<area shape="rect" id="node3" href="$tft__demo_8c.html#abce06be17fc37d675118a678a8100a36" title="app_main" alt="" coords="331,5,410,32"/>
+<area shape="rect" id="node4" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="304,56,437,83"/>
+<area shape="rect" id="node5" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="485,56,608,83"/>
+</map>

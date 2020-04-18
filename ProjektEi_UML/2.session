@@ -1,0 +1,11 @@
+window_sizes 1575 887 393 1176 730 104
+cleanlooks_style
+show_stereotypes
+marked
+  component_ref 129538 // Admin
+end
+selected component_ref 129282 // Key
+open
+  componentview_ref 128130 // HardwareLife
+end
+end

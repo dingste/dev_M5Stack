@@ -1,0 +1,7 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/tft/stmpe610.h" name="HardwareLife/Lcd/ESP32_TFT_library/components/tft/stmpe610.h">
+<area shape="rect" id="node2" href="$tftspi_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.h" alt="" coords="164,109,335,165"/>
+<area shape="rect" id="node3" href="$tft_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.h" alt="" coords="103,213,273,269"/>
+<area shape="rect" id="node4" href="$tft_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.c" alt="" coords="5,317,176,373"/>
+<area shape="rect" id="node5" href="$tft__demo_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/main/tft\l_demo.c" alt="" coords="213,317,382,373"/>
+<area shape="rect" id="node6" href="$tftspi_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.c" alt="" coords="348,213,519,269"/>
+</map>

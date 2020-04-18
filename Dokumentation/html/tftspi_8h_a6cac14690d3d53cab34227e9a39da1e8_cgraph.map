@@ -1,0 +1,8 @@
+<map id="_tft_setRotation" name="_tft_setRotation">
+<area shape="rect" id="node2" href="$tftspi_8c.html#a587f1a092af94ef776be3adbc17f15f9" title="disp_deselect" alt="" coords="209,31,312,57"/>
+<area shape="rect" id="node5" href="$tftspi_8c.html#a25abb90398c3327b065617e00d4e0e42" title="disp_select" alt="" coords="217,81,305,108"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html#a859fd3473461f50af716060dc10525b9" title="disp_spi_transfer_cmd_data" alt="" coords="168,132,353,159"/>
+<area shape="rect" id="node3" href="$spi__master__lobo_8c.html#af438dacab126c7341147bab887d3d017" title="De&#45;select spi device. " alt="" coords="401,5,572,32"/>
+<area shape="rect" id="node4" href="$tftspi_8c.html#a7adad2e57540d150bb0cd9f99efa851f" title="wait_trans_finish" alt="" coords="427,56,547,83"/>
+<area shape="rect" id="node6" href="$spi__master__lobo_8c.html#accb77c930dad6f5b48cd33f969ee7202" title="Select spi device for transmission. " alt="" coords="408,107,565,133"/>
+</map>

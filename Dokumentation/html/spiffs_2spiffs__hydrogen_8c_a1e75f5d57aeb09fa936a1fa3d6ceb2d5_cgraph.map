@@ -1,0 +1,5 @@
+<map id="SPIFFS_fremove" name="SPIFFS_fremove">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__cache_8c.html#a72db226d9d669355899bf11b9f1bf54f" title="spiffs_cache_fd_release" alt="" coords="176,5,339,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a308e4c2ab049ad6e7c97848a1a59bfbc" title="spiffs_fd_get" alt="" coords="209,56,306,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a64824b457c1664aa302736e79da6aa4b" title="spiffs_object_truncate" alt="" coords="182,107,333,133"/>
+</map>

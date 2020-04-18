@@ -1,0 +1,11 @@
+<map id="find_rd_speed" name="find_rd_speed">
+<area shape="rect" id="node2" href="$tftspi_8c.html#a587f1a092af94ef776be3adbc17f15f9" title="disp_deselect" alt="" coords="304,5,407,32"/>
+<area shape="rect" id="node5" href="$tftspi_8c.html#a25abb90398c3327b065617e00d4e0e42" title="disp_select" alt="" coords="311,56,399,83"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html#a11839bf8d8d231b53b7e4601e0ed97ee" title="read_data" alt="" coords="158,81,237,108"/>
+<area shape="rect" id="node8" href="$spi__master__lobo_8c.html#aa854233c497b89be628679dfdc8f163e" title="Return the actuall SPI bus speed for the spi device in Hz. " alt="" coords="287,107,424,133"/>
+<area shape="rect" id="node9" href="$spi__master__lobo_8c.html#a7b9adfede36ff48e03fef4f4c7596bdb" title="Set the new clock speed for the device, return the actuall SPI bus speed set, in Hz This function can..." alt="" coords="287,157,424,184"/>
+<area shape="rect" id="node10" href="$tftspi_8c.html#af9fed9905d599ca0cfff9d6e7b5691f3" title="send_data" alt="" coords="156,233,239,260"/>
+<area shape="rect" id="node3" href="$spi__master__lobo_8c.html#af438dacab126c7341147bab887d3d017" title="De&#45;select spi device. " alt="" coords="472,81,643,108"/>
+<area shape="rect" id="node4" href="$tftspi_8c.html#a7adad2e57540d150bb0cd9f99efa851f" title="wait_trans_finish" alt="" coords="497,19,617,45"/>
+<area shape="rect" id="node6" href="$spi__master__lobo_8c.html#accb77c930dad6f5b48cd33f969ee7202" title="Select spi device for transmission. " alt="" coords="479,132,636,159"/>
+</map>

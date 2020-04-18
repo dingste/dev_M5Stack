@@ -1,0 +1,11 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/build/include/sdkconfig.h" name="HardwareLife/Lcd/ESP32_TFT_library/build/include/sdkconfig.h">
+<area shape="rect" id="node2" href="$spiffs__vfs_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_vfs.c" alt="" coords="63,109,233,165"/>
+<area shape="rect" id="node3" href="$tftspi_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.h" alt="" coords="257,109,428,165"/>
+<area shape="rect" id="node8" href="$_o_l_e_d_8h.html" title="HardwareLife/OLED/OLED.h" alt="" coords="558,124,749,151"/>
+<area shape="rect" id="node9" href="$_o_l_e_d_8cpp.html" title="HardwareLife/OLED/OLED.cpp" alt="" coords="543,228,747,255"/>
+<area shape="rect" id="node10" href="$main_8cpp.html" title="main.cpp" alt="" coords="772,228,847,255"/>
+<area shape="rect" id="node4" href="$tft_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.h" alt="" coords="103,213,273,269"/>
+<area shape="rect" id="node5" href="$tft_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tft.c" alt="" coords="5,317,176,373"/>
+<area shape="rect" id="node6" href="$tft__demo_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/main/tft\l_demo.c" alt="" coords="213,317,382,373"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/tft/tftspi.c" alt="" coords="348,213,519,269"/>
+</map>

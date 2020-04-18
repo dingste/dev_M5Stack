@@ -1,0 +1,4 @@
+<map id="IGpio" name="IGpio">
+<area shape="rect" id="node2" href="$class_gpio.html" title="{Gpio\n||+ Gpio()\l+ ~Gpio()\l+ duration()\l+ connected()\l+ pending()\l+ atPin()\l+ ping()\l}" alt="" coords="5,175,108,340"/>
+<area shape="rect" id="node3" href="$class_kiss.html" title="{Kiss\n||+ Kiss()\l+ ~Kiss()\l# onKiss()\l# toKiss()\l}" alt="" coords="16,388,97,509"/>
+</map>

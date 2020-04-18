@@ -1,0 +1,4 @@
+<map id="SPIFFS_write" name="SPIFFS_write">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__cache_8c.html#adae548c1ee3d7cb97937b6c9c8e7f1f3" title="spiffs_cache_page_get\l_by_fd" alt="" coords="157,5,313,47"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a308e4c2ab049ad6e7c97848a1a59bfbc" title="spiffs_fd_get" alt="" coords="187,71,284,98"/>
+</map>

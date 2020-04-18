@@ -1,0 +1,6 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/tft/tftspi.c" name="HardwareLife/Lcd/ESP32_TFT_library/components/tft/tftspi.c">
+<area shape="rect" id="node4" href="$tftspi_8h.html" title="tftspi.h" alt="" coords="663,109,725,136"/>
+<area shape="rect" id="node5" href="$spi__master__lobo_8h.html" title="spi_master_lobo.h" alt="" coords="417,184,545,211"/>
+<area shape="rect" id="node12" href="$sdkconfig_8h.html" title="sdkconfig.h" alt="" coords="649,184,739,211"/>
+<area shape="rect" id="node13" href="$stmpe610_8h.html" title="stmpe610.h" alt="" coords="803,184,894,211"/>
+</map>

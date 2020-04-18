@@ -1,0 +1,8 @@
+<map id="read_data" name="read_data">
+<area shape="rect" id="node2" href="$tftspi_8h.html#a80ddf39857da193f67da800950e1a475" title="find_rd_speed" alt="" coords="132,56,235,83"/>
+<area shape="rect" id="node6" href="$tftspi_8h.html#a20c1d0980fa142fe20c1e42d056f3581" title="readPixel" alt="" coords="145,107,221,133"/>
+<area shape="rect" id="node3" href="$tft__demo_8c.html#abce06be17fc37d675118a678a8100a36" title="app_main" alt="" coords="310,5,389,32"/>
+<area shape="rect" id="node4" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="283,56,416,83"/>
+<area shape="rect" id="node5" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="464,56,587,83"/>
+<area shape="rect" id="node7" href="$tft_8h.html#a19e34da8841ba77c1125143df95e8c8a" title="TFT_readPixel" alt="" coords="296,107,403,133"/>
+</map>

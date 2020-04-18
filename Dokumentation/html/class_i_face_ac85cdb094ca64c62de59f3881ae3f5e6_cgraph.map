@@ -1,0 +1,8 @@
+<map id="IFace::~IFace" name="IFace::~IFace">
+<area shape="rect" id="node2" href="$class_i_face.html#ad765b85db9e7c9ddd3d96a1944119c31" title="IFace::blink" alt="" coords="171,5,262,32"/>
+<area shape="rect" id="node3" href="$class_i_face.html#ad61b41056ff6982fd17b88ef653e713d" title="IFace::lookLeft" alt="" coords="162,56,271,83"/>
+<area shape="rect" id="node4" href="$class_i_face.html#aad0c6f0fc13c5da287a3d95986ca32cf" title="IFace::lookRight" alt="" coords="157,107,276,133"/>
+<area shape="rect" id="node5" href="$class_i_face.html#ad0c297a34d4edc3be6e0b53a8cdd3563" title="IFace::sad" alt="" coords="175,157,259,184"/>
+<area shape="rect" id="node6" href="$class_i_face.html#a5893c2fb744a5e64e7348e7e6bfe9709" title="IFace::sleep" alt="" coords="169,208,264,235"/>
+<area shape="rect" id="node7" href="$class_i_face.html#ad4de9be2f7aee5e30dfd69757fd17d48" title="IFace::smile" alt="" coords="169,259,264,285"/>
+</map>

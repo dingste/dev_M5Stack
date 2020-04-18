@@ -1,0 +1,43 @@
+format 222
+"IdLife" // ESP::IdLife
+  revision 1
+  modified_by 2 "dieter"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  componentview 128642 "IdLife"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 130434 "Setter"
+    end
+
+    component 130562 "Getter"
+    end
+  end
+end

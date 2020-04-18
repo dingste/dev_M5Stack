@@ -1,0 +1,5 @@
+<map id="list_destroy" name="list_destroy">
+<area shape="rect" id="node2" href="$mutex_8c.html#a9f48d6dde086beba1727b0d315ef39c3" title="mtx_destroy" alt="" coords="143,5,237,32"/>
+<area shape="rect" id="node3" href="$mutex_8c.html#ad0f76dbef126b700a98532c363be7c94" title="mtx_lock" alt="" coords="153,56,227,83"/>
+<area shape="rect" id="node4" href="$mutex_8c.html#aad320099ec72fcb3ef6870bc341daac7" title="mtx_unlock" alt="" coords="145,107,235,133"/>
+</map>

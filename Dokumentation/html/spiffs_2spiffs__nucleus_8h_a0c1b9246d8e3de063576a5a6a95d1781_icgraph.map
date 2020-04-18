@@ -1,0 +1,21 @@
+<map id="spiffs_obj_lu_find_free" name="spiffs_obj_lu_find_free">
+<area shape="rect" id="node2" href="$spiffs_2spiffs__nucleus_8h.html#af02f56832ef3b0eb65040f4c45bb0add" title="spiffs_object_create" alt="" coords="991,5,1130,32"/>
+<area shape="rect" id="node5" href="$spiffs_2spiffs__nucleus_8h.html#a7c2b33a8db528e8f6feebd6f40cc4208" title="spiffs_page_allocate_data" alt="" coords="205,56,379,83"/>
+<area shape="rect" id="node6" href="$spiffs_2spiffs__nucleus_8h.html#a4418c46c45673ca0bad11a9da6b4d006" title="spiffs_page_move" alt="" coords="228,107,356,133"/>
+<area shape="rect" id="node3" href="$spiffs_2spiffs_8h.html#ad653345a098d4933f63a95a1a64cb5fe" title="SPIFFS_creat" alt="" coords="1213,5,1319,32"/>
+<area shape="rect" id="node4" href="$spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="1214,56,1318,83"/>
+<area shape="rect" id="node7" href="$spiffs_2spiffs__nucleus_8h.html#a048c2333e7675c8f23d1916fb0f565b1" title="spiffs_gc_clean" alt="" coords="638,107,751,133"/>
+<area shape="rect" id="node17" href="$spiffs_2spiffs__nucleus_8h.html#a548c33b05ccf120a3e191b42998c6d21" title="spiffs_object_update\l_index_hdr" alt="" coords="427,179,569,221"/>
+<area shape="rect" id="node8" href="$spiffs_2spiffs__nucleus_8h.html#a48a3380fede0173843710398a9903f99" title="spiffs_gc_check" alt="" coords="820,107,937,133"/>
+<area shape="rect" id="node9" href="$spiffs_2spiffs_8h.html#a996713c9c86267523b1fcf14e1f59ba1" title="SPIFFS_gc" alt="" coords="1015,56,1106,83"/>
+<area shape="rect" id="node10" href="$spiffs_2spiffs__nucleus_8h.html#adc3eddb2989d45c22cf541648375010b" title="spiffs_object_append" alt="" coords="988,107,1133,133"/>
+<area shape="rect" id="node11" href="$spiffs_2spiffs__nucleus_8h.html#a2dac840a00c2fc3f00ee53e39f13023e" title="spiffs_object_modify" alt="" coords="989,208,1132,235"/>
+<area shape="rect" id="node12" href="$spiffs_2spiffs__nucleus_8h.html#ae932d49db814e31af543a33b359e45b4" title="spiffs_object_truncate" alt="" coords="985,157,1136,184"/>
+<area shape="rect" id="node13" href="$spiffs_2spiffs_8h.html#a5442ec7cf9973ef1bae26753f8715b8d" title="SPIFFS_open_by_dirent" alt="" coords="1184,107,1348,133"/>
+<area shape="rect" id="node14" href="$spiffs_2spiffs_8h.html#adc5848eb9323ebfbad6f1a94f34154f4" title="SPIFFS_open_by_page" alt="" coords="1186,157,1346,184"/>
+<area shape="rect" id="node15" href="$spiffs_2spiffs_8h.html#a962677491700668b80117a9e0f728b51" title="SPIFFS_remove" alt="" coords="1207,208,1325,235"/>
+<area shape="rect" id="node16" href="$spiffs_2spiffs_8h.html#a1e75f5d57aeb09fa936a1fa3d6ceb2d5" title="SPIFFS_fremove" alt="" coords="1205,259,1327,285"/>
+<area shape="rect" id="node18" href="$spiffs_2spiffs_8h.html#a20b3521d3794d9150f4116372ff7c4e9" title="SPIFFS_rename" alt="" coords="635,208,754,235"/>
+<area shape="rect" id="node19" href="$spiffs_2spiffs_8h.html#a894b333e481903d8ce15387f28842b67" title="SPIFFS_update_meta" alt="" coords="619,259,770,285"/>
+<area shape="rect" id="node20" href="$spiffs_2spiffs_8h.html#a15f38a85db654acb6d85a8d0311b7866" title="SPIFFS_fupdate_meta" alt="" coords="617,309,772,336"/>
+</map>

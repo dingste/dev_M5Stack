@@ -1,0 +1,4 @@
+<map id="IPublisher" name="IPublisher">
+<area shape="rect" id="node2" href="$class_i_abstractor.html" title="{IAbstractor\n||+ ~IAbstractor()\l}" alt="" coords="5,131,120,208"/>
+<area shape="rect" id="node3" href="$class_abstractor.html" title="{Abstractor\n||+ Abstractor()\l+ ~Abstractor()\l+ listen()\l# subscribe()\l# publish()\l}" alt="" coords="7,256,118,392"/>
+</map>

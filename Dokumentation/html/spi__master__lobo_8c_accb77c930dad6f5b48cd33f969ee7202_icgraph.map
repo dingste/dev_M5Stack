@@ -1,0 +1,24 @@
+<map id="spi_lobo_device_select" name="spi_lobo_device_select">
+<area shape="rect" id="node2" href="$tft__demo_8c.html#abce06be17fc37d675118a678a8100a36" title="app_main" alt="" coords="955,321,1034,348"/>
+<area shape="rect" id="node3" href="$tftspi_8h.html#a3bc44209686c6b9b178f12f4395c4f08" title="disp_select" alt="" coords="243,271,331,297"/>
+<area shape="rect" id="node6" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="928,448,1061,475"/>
+<area shape="rect" id="node8" href="$tft_8h.html#a2fe1259ac56d938ba10215531aaffb22" title="TFT_bmp_image" alt="" coords="421,676,541,703"/>
+<area shape="rect" id="node20" href="$spi__master__lobo_8h.html#aa854233c497b89be628679dfdc8f163e" title="Return the actuall SPI bus speed for the spi device in Hz. " alt="" coords="412,448,549,475"/>
+<area shape="rect" id="node21" href="$spi__master__lobo_8h.html#a7b9adfede36ff48e03fef4f4c7596bdb" title="Set the new clock speed for the device, return the actuall SPI bus speed set, in Hz This function can..." alt="" coords="412,575,549,601"/>
+<area shape="rect" id="node22" href="$spi__master__lobo_8h.html#af9e4e3ab6395f45cc506d72b2b0329d9" title="Transimit and receive data to/from spi device based on transaction data. " alt="" coords="211,777,364,804"/>
+<area shape="rect" id="node23" href="$tftspi_8h.html#a435be36d3feaa16e7ee4add7b9c7868c" title="touch_get_data" alt="" coords="232,727,343,753"/>
+<area shape="rect" id="node4" href="$tft_8h.html#a336858c5e533fb64deaf2f9277e3fe4e" title="TFT_drawCircle" alt="" coords="423,43,538,69"/>
+<area shape="rect" id="node5" href="$tft_8h.html#addb4a0075dc026df3dbddcae6700e154" title="TFT_setRotation" alt="" coords="760,245,880,272"/>
+<area shape="rect" id="node9" href="$tftspi_8h.html#ac97e2b06e9897ab7260743d234feed9f" title="drawPixel" alt="" coords="441,93,520,120"/>
+<area shape="rect" id="node10" href="$tftspi_8h.html#a05266092c0a2d4cff12229c3bc063465" title="TFT_pushColorRep" alt="" coords="413,144,549,171"/>
+<area shape="rect" id="node14" href="$tftspi_8h.html#a2252ee1cee494c40c068461b6e1515eb" title="read_data" alt="" coords="615,499,694,525"/>
+<area shape="rect" id="node17" href="$tftspi_8h.html#a80ddf39857da193f67da800950e1a475" title="find_rd_speed" alt="" coords="769,448,871,475"/>
+<area shape="rect" id="node18" href="$tftspi_8h.html#a6cac14690d3d53cab34227e9a39da1e8" title="_tft_setRotation" alt="" coords="597,195,712,221"/>
+<area shape="rect" id="node19" href="$tftspi_8h.html#a0d900ff959f34466f569f8f90adb17bf" title="TFT_display_init" alt="" coords="761,296,879,323"/>
+<area shape="rect" id="node7" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="1109,448,1232,475"/>
+<area shape="rect" id="node11" href="$tft_8h.html#ae90d2fd1147b3831df93728fe1652a98" title="TFT_fillScreen" alt="" coords="601,144,708,171"/>
+<area shape="rect" id="node12" href="$tft_8h.html#a8f236b3382c64b8a8388ce13b2b46845" title="TFT_fillWindow" alt="" coords="598,93,711,120"/>
+<area shape="rect" id="node13" href="$class_face.html#accc1c9be034165c0d5e748549422b729" title="Face::Face" alt="" coords="776,93,864,120"/>
+<area shape="rect" id="node15" href="$tftspi_8h.html#a20c1d0980fa142fe20c1e42d056f3581" title="readPixel" alt="" coords="782,752,858,779"/>
+<area shape="rect" id="node16" href="$tft_8h.html#a19e34da8841ba77c1125143df95e8c8a" title="TFT_readPixel" alt="" coords="941,752,1048,779"/>
+</map>

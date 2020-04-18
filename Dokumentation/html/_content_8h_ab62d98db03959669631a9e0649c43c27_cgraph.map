@@ -1,0 +1,24 @@
+<map id="TftDisplayBackend" name="TftDisplayBackend">
+<area shape="rect" id="node2" href="$tftspi_8c.html#a80ddf39857da193f67da800950e1a475" title="find_rd_speed" alt="" coords="221,296,323,323"/>
+<area shape="rect" id="node4" href="$spi__master__lobo_8c.html#accb77c930dad6f5b48cd33f969ee7202" title="Select spi device for transmission. " alt="" coords="1059,195,1216,221"/>
+<area shape="rect" id="node5" href="$spi__master__lobo_8c.html#af438dacab126c7341147bab887d3d017" title="De&#45;select spi device. " alt="" coords="840,195,1011,221"/>
+<area shape="rect" id="node6" href="$spi__master__lobo_8c.html#a7b9adfede36ff48e03fef4f4c7596bdb" title="Set the new clock speed for the device, return the actuall SPI bus speed set, in Hz This function can..." alt="" coords="631,144,768,171"/>
+<area shape="rect" id="node12" href="$spi__master__lobo_8c.html#a9cde37ee54e5cf2aeb84d9cf94fbb8f0" title="Add a device. This allocates a CS line for the device, allocates memory for the device structure and ..." alt="" coords="187,549,357,576"/>
+<area shape="rect" id="node13" href="$tftspi_8c.html#a0d900ff959f34466f569f8f90adb17bf" title="TFT_display_init" alt="" coords="423,448,541,475"/>
+<area shape="rect" id="node14" href="$tft_8c.html#a36dd5f280775c5019e1a966f0d5fa79d" title="TFT_invertDisplay" alt="" coords="207,600,337,627"/>
+<area shape="rect" id="node16" href="$tftspi_8c.html#a5fa2d8c993db5601cb17aa1042610087" title="TFT_PinsInit" alt="" coords="223,651,321,677"/>
+<area shape="rect" id="node17" href="$tft_8c.html#a3251b9b224e1b25354eb294c6b9d9b41" title="TFT_setFont" alt="" coords="223,701,321,728"/>
+<area shape="rect" id="node18" href="$tft_8c.html#addb4a0075dc026df3dbddcae6700e154" title="TFT_setRotation" alt="" coords="212,499,332,525"/>
+<area shape="rect" id="node23" href="$spiffs__vfs_8c.html#ac58a28bfa805499e4499051a3ca4b07d" title="vfs_spiffs_register" alt="" coords="207,752,337,779"/>
+<area shape="rect" id="node3" href="$spi__master__lobo_8c.html#aa854233c497b89be628679dfdc8f163e" title="Return the actuall SPI bus speed for the spi device in Hz. " alt="" coords="631,245,768,272"/>
+<area shape="rect" id="node7" href="$tftspi_8c.html#a25abb90398c3327b065617e00d4e0e42" title="disp_select" alt="" coords="881,423,969,449"/>
+<area shape="rect" id="node9" href="$tftspi_8c.html#af9fed9905d599ca0cfff9d6e7b5691f3" title="send_data" alt="" coords="441,195,523,221"/>
+<area shape="rect" id="node10" href="$tftspi_8c.html#a587f1a092af94ef776be3adbc17f15f9" title="disp_deselect" alt="" coords="648,347,751,373"/>
+<area shape="rect" id="node11" href="$tftspi_8c.html#a11839bf8d8d231b53b7e4601e0ed97ee" title="read_data" alt="" coords="443,296,521,323"/>
+<area shape="rect" id="node8" href="$tftspi_8c.html#a7adad2e57540d150bb0cd9f99efa851f" title="wait_trans_finish" alt="" coords="1077,396,1197,423"/>
+<area shape="rect" id="node15" href="$tftspi_8c.html#a4ea7baaca0cad9b2d4f85b34908a099a" title="disp_spi_transfer_cmd" alt="" coords="405,752,559,779"/>
+<area shape="rect" id="node19" href="$tftspi_8c.html#a859fd3473461f50af716060dc10525b9" title="disp_spi_transfer_cmd_data" alt="" coords="607,701,792,728"/>
+<area shape="rect" id="node20" href="$tftspi_8c.html#a6cac14690d3d53cab34227e9a39da1e8" title="_tft_setRotation" alt="" coords="425,651,539,677"/>
+<area shape="rect" id="node21" href="$tft_8c.html#ae90d2fd1147b3831df93728fe1652a98" title="TFT_fillScreen" alt="" coords="429,600,535,627"/>
+<area shape="rect" id="node22" href="$tftspi_8c.html#a4318c5189108af9794f1e2435cbb5596" title="TFT_pushColorRep" alt="" coords="631,600,767,627"/>
+</map>

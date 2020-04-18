@@ -1,0 +1,5 @@
+<map id="TFT_clearStringRect" name="TFT_clearStringRect">
+<area shape="rect" id="node2" href="$tft_8c.html#a72af78e4109f6b6535b7c19dfe0a24b1" title="TFT_fillRect" alt="" coords="218,5,313,32"/>
+<area shape="rect" id="node3" href="$tft_8c.html#aa99b92f237975f8defd1514b9cf564db" title="TFT_getfontheight" alt="" coords="201,56,329,83"/>
+<area shape="rect" id="node4" href="$tft_8c.html#a6be25975e1b7a86bf88bbfe45d1e676d" title="TFT_getStringWidth" alt="" coords="196,107,335,133"/>
+</map>

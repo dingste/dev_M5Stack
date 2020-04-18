@@ -1,0 +1,5 @@
+<map id="listFiles" name="listFiles">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a88a4782ebf1c1d37c5c2352a7700a4cf" title="SPIFFS_closedir" alt="" coords="120,5,241,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a116271bb88503c16c860b805368c88be" title="SPIFFS_opendir" alt="" coords="121,56,240,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#adb15aebc5a6add477b2f6dbf81756763" title="SPIFFS_readdir" alt="" coords="123,107,238,133"/>
+</map>

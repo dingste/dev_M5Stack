@@ -1,0 +1,5 @@
+<map id="Kiss" name="Kiss">
+<area shape="rect" id="node2" href="$class_i_kiss.html" title="IKiss" alt="" coords="5,80,57,107"/>
+<area shape="rect" id="node3" href="$class_gpio.html" title="Gpio" alt="" coords="81,80,131,107"/>
+<area shape="rect" id="node4" href="$class_i_gpio.html" title="IGpio" alt="" coords="79,5,133,32"/>
+</map>

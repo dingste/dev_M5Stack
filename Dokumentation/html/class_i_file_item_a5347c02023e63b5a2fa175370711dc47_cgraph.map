@@ -1,0 +1,8 @@
+<map id="IFileItem::~IFileItem" name="IFileItem::~IFileItem">
+<area shape="rect" id="node2" href="$class_i_file_item.html#a32c6e4f529a07583edc9fa9bd7eb683e" title="IFileItem::getFileContent" alt="" coords="193,5,360,32"/>
+<area shape="rect" id="node3" href="$class_i_file_item.html#a15ba3b7242e455fc34a1d91735b94760" title="IFileItem::getFileRights" alt="" coords="197,56,356,83"/>
+<area shape="rect" id="node4" href="$class_i_file_item.html#a9658865469c85ee8cf5296469aab127b" title="IFileItem::getFileType" alt="" coords="202,107,351,133"/>
+<area shape="rect" id="node5" href="$class_i_file_item.html#a7b46f16a33d6a1b0c56109ed672f798e" title="IFileItem::setFileContent" alt="" coords="193,157,360,184"/>
+<area shape="rect" id="node6" href="$class_i_file_item.html#a42cdc7afda4428a5e7e3777f27cd7af4" title="IFileItem::setFileRights" alt="" coords="197,208,356,235"/>
+<area shape="rect" id="node7" href="$class_i_file_item.html#ac96a45ce088d68c26d3e4dd4eeebb432" title="IFileItem::setFileType" alt="" coords="202,259,351,285"/>
+</map>

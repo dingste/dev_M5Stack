@@ -1,0 +1,19 @@
+<map id="disp_select" name="disp_select">
+<area shape="rect" id="node2" href="$tftspi_8h.html#a6cac14690d3d53cab34227e9a39da1e8" title="_tft_setRotation" alt="" coords="325,5,440,32"/>
+<area shape="rect" id="node3" href="$tft_8h.html#addb4a0075dc026df3dbddcae6700e154" title="TFT_setRotation" alt="" coords="488,107,608,133"/>
+<area shape="rect" id="node7" href="$tftspi_8h.html#ac97e2b06e9897ab7260743d234feed9f" title="drawPixel" alt="" coords="170,397,249,424"/>
+<area shape="rect" id="node8" href="$tftspi_8h.html#a80ddf39857da193f67da800950e1a475" title="find_rd_speed" alt="" coords="497,221,599,248"/>
+<area shape="rect" id="node9" href="$tftspi_8h.html#a2252ee1cee494c40c068461b6e1515eb" title="read_data" alt="" coords="170,271,249,297"/>
+<area shape="rect" id="node12" href="$tft_8h.html#a2fe1259ac56d938ba10215531aaffb22" title="TFT_bmp_image" alt="" coords="149,448,269,475"/>
+<area shape="rect" id="node13" href="$tftspi_8h.html#a0d900ff959f34466f569f8f90adb17bf" title="TFT_display_init" alt="" coords="489,348,607,375"/>
+<area shape="rect" id="node14" href="$tft_8h.html#a336858c5e533fb64deaf2f9277e3fe4e" title="TFT_drawCircle" alt="" coords="152,499,267,525"/>
+<area shape="rect" id="node15" href="$tftspi_8h.html#a05266092c0a2d4cff12229c3bc063465" title="TFT_pushColorRep" alt="" coords="141,157,277,184"/>
+<area shape="rect" id="node4" href="$tft__demo_8c.html#abce06be17fc37d675118a678a8100a36" title="app_main" alt="" coords="683,247,762,273"/>
+<area shape="rect" id="node5" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="656,196,789,223"/>
+<area shape="rect" id="node6" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="837,196,960,223"/>
+<area shape="rect" id="node10" href="$tftspi_8h.html#a20c1d0980fa142fe20c1e42d056f3581" title="readPixel" alt="" coords="345,309,421,336"/>
+<area shape="rect" id="node11" href="$tft_8h.html#a19e34da8841ba77c1125143df95e8c8a" title="TFT_readPixel" alt="" coords="495,297,601,324"/>
+<area shape="rect" id="node16" href="$tft_8h.html#ae90d2fd1147b3831df93728fe1652a98" title="TFT_fillScreen" alt="" coords="329,107,436,133"/>
+<area shape="rect" id="node17" href="$tft_8h.html#a8f236b3382c64b8a8388ce13b2b46845" title="TFT_fillWindow" alt="" coords="326,157,439,184"/>
+<area shape="rect" id="node18" href="$class_face.html#accc1c9be034165c0d5e748549422b729" title="Face::Face" alt="" coords="504,157,592,184"/>
+</map>

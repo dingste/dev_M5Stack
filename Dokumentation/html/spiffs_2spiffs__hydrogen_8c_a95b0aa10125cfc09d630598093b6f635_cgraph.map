@@ -1,0 +1,5 @@
+<map id="SPIFFS_ix_remap" name="SPIFFS_ix_remap">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#a308e4c2ab049ad6e7c97848a1a59bfbc" title="spiffs_fd_get" alt="" coords="213,5,311,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#aaae1591dc8da555c49ca83c49f2341ca" title="spiffs_populate_ix_map" alt="" coords="183,56,341,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs__nucleus_8c.html#aec3d4ab5d5b920deb4beb731ad9f0406" title="spiffs_obj_lu_find\l_entry_visitor" alt="" coords="389,49,512,90"/>
+</map>

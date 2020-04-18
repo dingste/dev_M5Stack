@@ -1,0 +1,43 @@
+format 222
+"VirtualLife" // ESP::VirtualLife
+  revision 1
+  modified_by 2 "dieter"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  componentview 128386 "VirtualLife"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 129666 "Use"
+    end
+
+    component 129794 "Admin"
+    end
+  end
+end

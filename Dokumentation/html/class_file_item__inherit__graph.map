@@ -1,0 +1,4 @@
+<map id="FileItem" name="FileItem">
+<area shape="rect" id="node2" href="$class_i_file_item.html" title="{IFileItem\n||+ ~IFileItem()\l+ getFileType()\l+ getFileContent()\l+ getFileRights()\l+ setFileContent()\l+ setFileType()\l+ setFileRights()\l}" alt="" coords="5,5,132,171"/>
+<area shape="rect" id="node3" href="$class_i_id.html" title="{IId\n|+ auth\l|+ ~IId()\l+ getName()\l+ getKey()\l+ setId()\l}" alt="" coords="156,27,251,149"/>
+</map>

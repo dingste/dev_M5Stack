@@ -1,0 +1,8 @@
+<map id="disp_spi_transfer_cmd_data" name="disp_spi_transfer_cmd_data">
+<area shape="rect" id="node2" href="$tftspi_8h.html#a6cac14690d3d53cab34227e9a39da1e8" title="_tft_setRotation" alt="" coords="239,5,353,32"/>
+<area shape="rect" id="node3" href="$tft_8h.html#addb4a0075dc026df3dbddcae6700e154" title="TFT_setRotation" alt="" coords="417,56,537,83"/>
+<area shape="rect" id="node7" href="$tft_8h.html#a1146beeb042100abd4cc56fa0b59c5a4" title="TFT_setGammaCurve" alt="" coords="401,107,553,133"/>
+<area shape="rect" id="node4" href="$tft__demo_8c.html#abce06be17fc37d675118a678a8100a36" title="app_main" alt="" coords="629,107,707,133"/>
+<area shape="rect" id="node5" href="$_tft_display_backend_8c.html#ac2d4c980b150da51c7e5f73af22a4b85" title="TftDisplayBackend" alt="" coords="601,56,735,83"/>
+<area shape="rect" id="node6" href="$class_content.html#af14b7b5ebc756686ecde73dc09b57c56" title="Content::Content" alt="" coords="783,56,905,83"/>
+</map>

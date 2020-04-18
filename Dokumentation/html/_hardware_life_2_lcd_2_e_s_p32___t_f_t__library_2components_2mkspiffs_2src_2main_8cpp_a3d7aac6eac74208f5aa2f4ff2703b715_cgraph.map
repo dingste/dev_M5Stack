@@ -1,0 +1,5 @@
+<map id="addDir" name="addDir">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a9a9babd221dab492856c5da4fa74bf88" title="SPIFFS_close" alt="" coords="135,5,242,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="137,56,241,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a894b333e481903d8ce15387f28842b67" title="SPIFFS_update_meta" alt="" coords="113,107,264,133"/>
+</map>

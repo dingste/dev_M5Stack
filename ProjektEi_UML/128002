@@ -1,0 +1,42 @@
+format 222
+"ESP" // ESP
+  revision 1
+  modified_by 2 "dieter"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  package_ref 128130 // HardwareLife
+
+  package_ref 128258 // RealLife
+
+  package_ref 128386 // VirtualLife
+
+  package_ref 128514 // DataLife
+
+  package_ref 128642 // IdLife
+end

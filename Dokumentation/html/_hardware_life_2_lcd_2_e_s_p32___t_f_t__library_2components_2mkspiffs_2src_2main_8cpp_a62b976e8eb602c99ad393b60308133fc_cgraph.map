@@ -1,0 +1,6 @@
+<map id="addFile" name="addFile">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a9a9babd221dab492856c5da4fa74bf88" title="SPIFFS_close" alt="" coords="139,5,246,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="141,56,245,83"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#a894b333e481903d8ce15387f28842b67" title="SPIFFS_update_meta" alt="" coords="117,107,268,133"/>
+<area shape="rect" id="node5" href="$mkspiffs_2src_2spiffs_2spiffs_8h.html#af34f802723bd3a2e033b44c644483d39" title="SPIFFS_write" alt="" coords="141,157,245,184"/>
+</map>

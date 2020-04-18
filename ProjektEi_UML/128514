@@ -1,0 +1,49 @@
+format 222
+"DataLife" // ESP::DataLife
+  revision 1
+  modified_by 2 "dieter"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  componentview 128514 "DataLife"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 129922 "Use"
+    end
+
+    component 130050 "Writer"
+    end
+
+    component 130178 "Reader"
+    end
+
+    component 130306 "Syncer"
+    end
+  end
+end

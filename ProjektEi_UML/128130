@@ -1,0 +1,55 @@
+format 222
+"HardwareLife" // ESP::HardwareLife
+  revision 1
+  modified_by 2 "dieter"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  componentview 128130 "HardwareLife"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    component 128642 "WiFi"
+    end
+
+    component 128770 "Uart"
+    end
+
+    component 128898 "Lcd"
+    end
+
+    component 129026 "Gpio"
+    end
+
+    component 129154 "Spiff"
+    end
+
+    component 129282 "Key"
+    end
+  end
+end

@@ -1,0 +1,6 @@
+csrc/u8x8_u16toa.o: \
+ /home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_u16toa.c \
+ /home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8.h
+
+/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8.h:
+/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_u16toa.c:

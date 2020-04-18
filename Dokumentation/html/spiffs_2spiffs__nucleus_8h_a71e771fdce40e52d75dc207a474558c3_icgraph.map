@@ -1,0 +1,17 @@
+<map id="spiffs_obj_lu_find_id_and_span" name="spiffs_obj_lu_find_id_and_span">
+<area shape="rect" id="node2" href="$spiffs_2spiffs__nucleus_8h.html#a048c2333e7675c8f23d1916fb0f565b1" title="spiffs_gc_clean" alt="" coords="185,107,298,133"/>
+<area shape="rect" id="node15" href="$spiffs_2spiffs__nucleus_8h.html#ac4d9a6b6d693e982efd9bbf60f1d9975" title="spiffs_object_open\l_by_id" alt="" coords="176,158,307,199"/>
+<area shape="rect" id="node16" href="$spiffs_2spiffs__nucleus_8h.html#ac880d8a477ca6a26de68d6372ca9c3ba" title="spiffs_object_read" alt="" coords="177,224,305,251"/>
+<area shape="rect" id="node3" href="$spiffs_2spiffs__nucleus_8h.html#a48a3380fede0173843710398a9903f99" title="spiffs_gc_check" alt="" coords="355,107,472,133"/>
+<area shape="rect" id="node4" href="$spiffs_2spiffs_8h.html#a996713c9c86267523b1fcf14e1f59ba1" title="SPIFFS_gc" alt="" coords="550,5,641,32"/>
+<area shape="rect" id="node5" href="$spiffs_2spiffs__nucleus_8h.html#adc3eddb2989d45c22cf541648375010b" title="spiffs_object_append" alt="" coords="523,56,668,83"/>
+<area shape="rect" id="node6" href="$spiffs_2spiffs__nucleus_8h.html#af02f56832ef3b0eb65040f4c45bb0add" title="spiffs_object_create" alt="" coords="526,107,665,133"/>
+<area shape="rect" id="node9" href="$spiffs_2spiffs__nucleus_8h.html#a2dac840a00c2fc3f00ee53e39f13023e" title="spiffs_object_modify" alt="" coords="524,157,667,184"/>
+<area shape="rect" id="node10" href="$spiffs_2spiffs__nucleus_8h.html#ae932d49db814e31af543a33b359e45b4" title="spiffs_object_truncate" alt="" coords="520,208,671,235"/>
+<area shape="rect" id="node7" href="$spiffs_2spiffs_8h.html#ad653345a098d4933f63a95a1a64cb5fe" title="SPIFFS_creat" alt="" coords="748,56,853,83"/>
+<area shape="rect" id="node8" href="$spiffs_2spiffs_8h.html#ad6449ab3ad1c07b9a8ca743af4b836fa" title="SPIFFS_open" alt="" coords="749,107,853,133"/>
+<area shape="rect" id="node11" href="$spiffs_2spiffs_8h.html#a5442ec7cf9973ef1bae26753f8715b8d" title="SPIFFS_open_by_dirent" alt="" coords="719,157,883,184"/>
+<area shape="rect" id="node12" href="$spiffs_2spiffs_8h.html#adc5848eb9323ebfbad6f1a94f34154f4" title="SPIFFS_open_by_page" alt="" coords="721,208,881,235"/>
+<area shape="rect" id="node13" href="$spiffs_2spiffs_8h.html#a962677491700668b80117a9e0f728b51" title="SPIFFS_remove" alt="" coords="741,259,860,285"/>
+<area shape="rect" id="node14" href="$spiffs_2spiffs_8h.html#a1e75f5d57aeb09fa936a1fa3d6ceb2d5" title="SPIFFS_fremove" alt="" coords="739,309,862,336"/>
+</map>

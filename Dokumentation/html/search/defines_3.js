@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['debugout',['DEBUGOUT',['../_log_8h.html#a498f82bfeff18b7d6ab7faf48a231e01',1,'Log.h']]],
+  ['def_5fsmall_5ffont',['DEF_SMALL_FONT',['../_defines___lcd_8h.html#a872c7c0dd0a697567427d8466ea2aacf',1,'DEF_SMALL_FONT():&#160;Defines_Lcd.h'],['../tft_8h.html#a872c7c0dd0a697567427d8466ea2aacf',1,'DEF_SMALL_FONT():&#160;tft.h']]],
+  ['default_5fangle_5foffset',['DEFAULT_ANGLE_OFFSET',['../tft_8h.html#adf5f340f4651f35a440707c3904ff37c',1,'tft.h']]],
+  ['default_5farc_5fangle_5fmax',['DEFAULT_ARC_ANGLE_MAX',['../tft_8h.html#a75433dda561d8ae36d33750392b6e1d6',1,'tft.h']]],
+  ['default_5fdisp_5ftype',['DEFAULT_DISP_TYPE',['../_defines___lcd_8h.html#a0c2e64ef06c620ae6bad41b74152c7d6',1,'DEFAULT_DISP_TYPE():&#160;Defines_Lcd.h'],['../tftspi_8h.html#a0c2e64ef06c620ae6bad41b74152c7d6',1,'DEFAULT_DISP_TYPE():&#160;tftspi.h']]],
+  ['default_5ffont',['DEFAULT_FONT',['../_defines___lcd_8h.html#a0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;Defines_Lcd.h'],['../tft_8h.html#a0502f8673f5b0a113d593b9a84f5f775',1,'DEFAULT_FONT():&#160;tft.h']]],
+  ['default_5fgamma_5fcurve',['DEFAULT_GAMMA_CURVE',['../_defines___lcd_8h.html#a649f244a370974fc60bf8b0c2c726d71',1,'DEFAULT_GAMMA_CURVE():&#160;Defines_Lcd.h'],['../tftspi_8h.html#a649f244a370974fc60bf8b0c2c726d71',1,'DEFAULT_GAMMA_CURVE():&#160;tftspi.h']]],
+  ['default_5fspi_5fclock',['DEFAULT_SPI_CLOCK',['../_defines___lcd_8h.html#a88bb86923203cd4dbfed07f384e73e57',1,'DEFAULT_SPI_CLOCK():&#160;Defines_Lcd.h'],['../tftspi_8h.html#a88bb86923203cd4dbfed07f384e73e57',1,'DEFAULT_SPI_CLOCK():&#160;tftspi.h']]],
+  ['default_5ftft_5fdisplay_5fheight',['DEFAULT_TFT_DISPLAY_HEIGHT',['../_defines___lcd_8h.html#a973a451aa3a7f354986b94bdfce6baba',1,'DEFAULT_TFT_DISPLAY_HEIGHT():&#160;Defines_Lcd.h'],['../tftspi_8h.html#a973a451aa3a7f354986b94bdfce6baba',1,'DEFAULT_TFT_DISPLAY_HEIGHT():&#160;tftspi.h']]],
+  ['default_5ftft_5fdisplay_5fwidth',['DEFAULT_TFT_DISPLAY_WIDTH',['../_defines___lcd_8h.html#a42571f29e76c29a7b55cb0de4faf92b7',1,'DEFAULT_TFT_DISPLAY_WIDTH():&#160;Defines_Lcd.h'],['../tftspi_8h.html#a42571f29e76c29a7b55cb0de4faf92b7',1,'DEFAULT_TFT_DISPLAY_WIDTH():&#160;tftspi.h']]],
+  ['deg_5fto_5frad',['DEG_TO_RAD',['../_defines___lcd_8h.html#a212460e743fecb084d717bb2180c5a56',1,'DEG_TO_RAD():&#160;Defines_Lcd.h'],['../tft_8c.html#a212460e743fecb084d717bb2180c5a56',1,'DEG_TO_RAD():&#160;tft.c'],['../_defines___lcd_8h.html#abf96ed1634a29c78e80e0c8dd29b7688',1,'deg_to_rad():&#160;Defines_Lcd.h'],['../tft_8c.html#abf96ed1634a29c78e80e0c8dd29b7688',1,'deg_to_rad():&#160;tft.c']]],
+  ['dejavu18_5ffont',['DEJAVU18_FONT',['../_defines___lcd_8h.html#ab9d680b58d28415d38720537949b5d2a',1,'DEJAVU18_FONT():&#160;Defines_Lcd.h'],['../tft_8h.html#ab9d680b58d28415d38720537949b5d2a',1,'DEJAVU18_FONT():&#160;tft.h']]],
+  ['dejavu24_5ffont',['DEJAVU24_FONT',['../_defines___lcd_8h.html#a6fd71126e08ae57aa207eb847bd51286',1,'DEJAVU24_FONT():&#160;Defines_Lcd.h'],['../tft_8h.html#a6fd71126e08ae57aa207eb847bd51286',1,'DEJAVU24_FONT():&#160;tft.h']]],
+  ['disp_5fcolor_5fbits_5f24',['DISP_COLOR_BITS_24',['../_defines___lcd_8h.html#abff60e8822072a9c29cdcac2e84862bc',1,'DISP_COLOR_BITS_24():&#160;Defines_Lcd.h'],['../tftspi_8h.html#abff60e8822072a9c29cdcac2e84862bc',1,'DISP_COLOR_BITS_24():&#160;tftspi.h']]],
+  ['disp_5ftype_5fili9341',['DISP_TYPE_ILI9341',['../_defines___lcd_8h.html#acffa43a10b26c216b58bb5a1198e6552',1,'DISP_TYPE_ILI9341():&#160;Defines_Lcd.h'],['../tftspi_8h.html#acffa43a10b26c216b58bb5a1198e6552',1,'DISP_TYPE_ILI9341():&#160;tftspi.h']]],
+  ['disp_5ftype_5fili9488',['DISP_TYPE_ILI9488',['../tftspi_8h.html#a6b13333e9a18fd71cb5313603d339943',1,'tftspi.h']]],
+  ['disp_5ftype_5fmax',['DISP_TYPE_MAX',['../tftspi_8h.html#a1f2cf7a51171cf5d0a83be6336f4b9c3',1,'tftspi.h']]],
+  ['disp_5ftype_5fst7735',['DISP_TYPE_ST7735',['../tftspi_8h.html#a5ae36925b62209cc517313396dcf13f8',1,'tftspi.h']]],
+  ['disp_5ftype_5fst7735b',['DISP_TYPE_ST7735B',['../tftspi_8h.html#a02c6df01f22369a11bd2089d7109615e',1,'tftspi.h']]],
+  ['disp_5ftype_5fst7735r',['DISP_TYPE_ST7735R',['../tftspi_8h.html#ae012003e4ac4edc5549225db26514a0e',1,'tftspi.h']]],
+  ['disp_5ftype_5fst7789v',['DISP_TYPE_ST7789V',['../tftspi_8h.html#a0e1a60ae878a5fff7aabb52b6184b809',1,'tftspi.h']]],
+  ['dma_5fchannel_5fenabled',['DMA_CHANNEL_ENABLED',['../spi__master__lobo_8c.html#af3eeaa139746fd4ce933803ce6679d2b',1,'spi_master_lobo.c']]]
+];

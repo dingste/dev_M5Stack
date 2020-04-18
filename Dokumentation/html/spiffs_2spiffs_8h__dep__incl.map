@@ -1,0 +1,10 @@
+<map id="HardwareLife/Lcd/ESP32_TFT_library/components/spiffs/spiffs.h" name="HardwareLife/Lcd/ESP32_TFT_library/components/spiffs/spiffs.h">
+<area shape="rect" id="node2" href="$spiffs_2esp__spiffs_8h.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/esp_spiffs.h" alt="" coords="116,109,287,165"/>
+<area shape="rect" id="node3" href="$spiffs_2esp__spiffs_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/esp_spiffs.c" alt="" coords="5,213,176,269"/>
+<area shape="rect" id="node4" href="$spiffs__vfs_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_vfs.c" alt="" coords="225,213,396,269"/>
+<area shape="rect" id="node5" href="$spiffs_2spiffs__cache_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_cache.c" alt="" coords="361,109,532,165"/>
+<area shape="rect" id="node6" href="$spiffs_2spiffs__check_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_check.c" alt="" coords="556,109,727,165"/>
+<area shape="rect" id="node7" href="$spiffs_2spiffs__gc_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_gc.c" alt="" coords="751,109,921,165"/>
+<area shape="rect" id="node8" href="$spiffs_2spiffs__hydrogen_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_hydrogen.c" alt="" coords="945,109,1116,165"/>
+<area shape="rect" id="node9" href="$spiffs_2spiffs__nucleus_8c.html" title="HardwareLife/Lcd/ESP32\l_TFT_library/components\l/spiffs/spiffs_nucleus.c" alt="" coords="1140,109,1311,165"/>
+</map>

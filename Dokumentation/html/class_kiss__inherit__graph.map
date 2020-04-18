@@ -1,0 +1,5 @@
+<map id="Kiss" name="Kiss">
+<area shape="rect" id="node2" href="$class_i_kiss.html" title="{IKiss\n||+ ~IKiss()\l+ toKiss()\l+ onKiss()\l}" alt="" coords="5,204,88,311"/>
+<area shape="rect" id="node3" href="$class_gpio.html" title="{Gpio\n||+ Gpio()\l+ ~Gpio()\l+ duration()\l+ connected()\l+ pending()\l+ atPin()\l+ ping()\l}" alt="" coords="113,175,215,340"/>
+<area shape="rect" id="node4" href="$class_i_gpio.html" title="{IGpio\n||+ ~IGpio()\l+ pending()\l+ connected()\l+ duration()\l}" alt="" coords="113,5,215,127"/>
+</map>

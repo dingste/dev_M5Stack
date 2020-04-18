@@ -1,0 +1,5 @@
+<map id="spiffs_gc_check" name="spiffs_gc_check">
+<area shape="rect" id="node2" href="$mkspiffs_2src_2spiffs_2spiffs__gc_8c.html#a048c2333e7675c8f23d1916fb0f565b1" title="spiffs_gc_clean" alt="" coords="197,5,311,32"/>
+<area shape="rect" id="node3" href="$mkspiffs_2src_2spiffs_2spiffs__gc_8c.html#aa5ac0f00dd87f3459b649b92ab1a72b8" title="spiffs_gc_erase_page\l_stats" alt="" coords="179,57,329,98"/>
+<area shape="rect" id="node4" href="$mkspiffs_2src_2spiffs_2spiffs__gc_8c.html#ad05fe249bcf36263e2acf16bafec3082" title="spiffs_gc_find_candidate" alt="" coords="171,123,337,149"/>
+</map>
