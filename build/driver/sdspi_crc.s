@@ -3,98 +3,80 @@
 .Ltext0:
 	.section	.text.sdspi_crc7,"ax",@progbits
 	.literal_position
-	.literal .LC0, crc7_table
+	.literal .LC2, crc7_table
 	.align	4
 	.global	sdspi_crc7
 	.type	sdspi_crc7, @function
 sdspi_crc7:
-.LVL0:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/driver/sdspi_crc.c"
-	.loc 1 41 1 view -0
-	.loc 1 41 1 is_stmt 0 view .LVU1
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_crc.c"
+	.loc 1 41 0
+.LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 42 5 is_stmt 1 view .LVU2
 .LVL1:
-	.loc 1 43 5 view .LVU3
-.LBB2:
-	.loc 1 43 10 view .LVU4
-	.loc 1 43 17 is_stmt 0 view .LVU5
-	movi.n	a9, 0
-.LBE2:
-	.loc 1 42 13 view .LVU6
-	mov.n	a8, a9
-.LBB3:
-	.loc 1 44 16 view .LVU7
-	l32r	a11, .LC0
-	.loc 1 43 5 view .LVU8
-	j	.L2
+	add.n	a3, a2, a3
 .LVL2:
-.L3:
-	.loc 1 44 9 is_stmt 1 discriminator 3 view .LVU9
-	.loc 1 44 49 is_stmt 0 discriminator 3 view .LVU10
-	add.n	a10, a2, a9
-	l8ui	a10, a10, 0
-	.loc 1 44 37 discriminator 3 view .LVU11
-	slli	a8, a8, 1
+	.loc 1 42 0
+	movi.n	a8, 0
+.LBB2:
+	.loc 1 44 0
+	l32r	a10, .LC2
+	.loc 1 43 0
+	j	.L2
 .LVL3:
-	.loc 1 44 43 discriminator 3 view .LVU12
-	xor	a8, a10, a8
-	.loc 1 44 16 discriminator 3 view .LVU13
-	add.n	a8, a11, a8
-	l8ui	a8, a8, 0
+.L3:
+	.loc 1 44 0 discriminator 3
+	l8ui	a9, a2, 0
+	slli	a8, a8, 1
 .LVL4:
-	.loc 1 43 34 discriminator 3 view .LVU14
-	addi.n	a9, a9, 1
+	xor	a8, a8, a9
+	add.n	a8, a10, a8
+	l8ui	a8, a8, 0
 .LVL5:
-.L2:
-	.loc 1 43 5 discriminator 1 view .LVU15
-	bne	a9, a3, .L3
-.LBE3:
-	.loc 1 46 5 is_stmt 1 view .LVU16
-	.loc 1 47 1 is_stmt 0 view .LVU17
-	mov.n	a2, a8
+	addi.n	a2, a2, 1
 .LVL6:
-	.loc 1 47 1 view .LVU18
+.L2:
+	.loc 1 43 0 discriminator 1
+	bne	a2, a3, .L3
+.LBE2:
+	.loc 1 47 0
+	mov.n	a2, a8
+.LVL7:
 	retw.n
 .LFE0:
 	.size	sdspi_crc7, .-sdspi_crc7
 	.section	.text.sdspi_crc16,"ax",@progbits
 	.literal_position
-	.literal .LC1, 65535
+	.literal .LC3, 65535
 	.align	4
 	.global	sdspi_crc16
 	.type	sdspi_crc16, @function
 sdspi_crc16:
-.LVL7:
 .LFB1:
-	.loc 1 51 1 is_stmt 1 view -0
-	.loc 1 51 1 is_stmt 0 view .LVU20
+	.loc 1 51 0
+.LVL8:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 52 5 is_stmt 1 view .LVU21
-	.loc 1 52 30 is_stmt 0 view .LVU22
-	l32r	a10, .LC1
+	.loc 1 52 0
+	l32r	a10, .LC3
 	mov.n	a11, a2
 	mov.n	a12, a3
 	call8	crc16_be
-.LVL8:
-	.loc 1 52 12 view .LVU23
+.LVL9:
 	movi.n	a8, -1
 	xor	a10, a8, a10
 	extui	a10, a10, 0, 16
 	slli	a2, a10, 8
-.LVL9:
-	.loc 1 52 12 view .LVU24
+.LVL10:
 	srli	a10, a10, 8
 	or	a2, a2, a10
-	.loc 1 53 1 view .LVU25
+	.loc 1 53 0
 	extui	a2, a2, 0, 16
 	retw.n
 .LFE1:
 	.size	sdspi_crc16, .-sdspi_crc16
-	.section	.rodata.crc7_table,"a"
+	.section	.rodata.crc7_table,"a",@progbits
 	.type	crc7_table, @object
 	.size	crc7_table, 256
 crc7_table:
@@ -395,22 +377,21 @@ crc7_table:
 .LEFDE2:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h"
-	.file 3 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h"
-	.file 4 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h"
-	.file 5 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/crc.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
+	.file 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/crc.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x197
+	.4byte	0x181
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF17
-	.byte	0xc
-	.4byte	.LASF18
 	.4byte	.LASF19
-	.4byte	.Ldebug_ranges0+0x18
+	.byte	0xc
+	.4byte	.LASF20
+	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
@@ -420,9 +401,8 @@ crc7_table:
 	.uleb128 0x3
 	.4byte	.LASF3
 	.byte	0x2
-	.byte	0x2b
-	.byte	0x17
-	.4byte	0x38
+	.byte	0x12
+	.4byte	0x33
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
@@ -434,9 +414,8 @@ crc7_table:
 	.uleb128 0x3
 	.4byte	.LASF4
 	.byte	0x2
-	.byte	0x39
-	.byte	0x1c
-	.4byte	0x52
+	.byte	0x16
+	.4byte	0x4c
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -460,84 +439,101 @@ crc7_table:
 	.uleb128 0x3
 	.4byte	.LASF9
 	.byte	0x3
-	.byte	0x18
-	.byte	0x13
-	.4byte	0x2c
-	.uleb128 0x5
-	.4byte	0x75
+	.byte	0x15
+	.4byte	0x28
 	.uleb128 0x3
 	.4byte	.LASF10
 	.byte	0x3
-	.byte	0x24
-	.byte	0x14
-	.4byte	0x46
+	.byte	0x21
+	.4byte	0x41
 	.uleb128 0x3
 	.4byte	.LASF11
 	.byte	0x4
 	.byte	0xd8
-	.byte	0x16
-	.4byte	0x60
-	.uleb128 0x6
-	.4byte	0x81
-	.4byte	0xae
-	.uleb128 0x7
-	.4byte	0x60
-	.byte	0xff
-	.byte	0
+	.4byte	0x5a
 	.uleb128 0x5
-	.4byte	0x9e
-	.uleb128 0x8
-	.4byte	.LASF20
+	.4byte	.LASF15
 	.byte	0x1
-	.byte	0x13
-	.byte	0x16
-	.4byte	0xae
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	crc7_table
-	.uleb128 0x9
+	.byte	0x28
+	.4byte	0x6f
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
+	.uleb128 0x1
+	.byte	0x9c
+	.4byte	0xee
+	.uleb128 0x6
 	.4byte	.LASF12
 	.byte	0x1
+	.byte	0x28
+	.4byte	0xee
+	.4byte	.LLST0
+	.uleb128 0x6
+	.4byte	.LASF13
+	.byte	0x1
+	.byte	0x28
+	.4byte	0x85
+	.4byte	.LLST1
+	.uleb128 0x7
+	.4byte	.LASF14
+	.byte	0x1
+	.byte	0x2a
+	.4byte	0x6f
+	.4byte	.LLST2
+	.uleb128 0x8
+	.4byte	.LBB2
+	.4byte	.LBE2-.LBB2
+	.uleb128 0x9
+	.string	"i"
+	.byte	0x1
+	.byte	0x2b
+	.4byte	0x85
+	.4byte	.LLST3
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.byte	0x4
+	.4byte	0xf4
+	.uleb128 0xb
+	.4byte	0x6f
+	.uleb128 0x5
+	.4byte	.LASF16
+	.byte	0x1
 	.byte	0x32
-	.byte	0xa
-	.4byte	0x86
+	.4byte	0x7a
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x11f
-	.uleb128 0xa
-	.4byte	.LASF14
+	.4byte	0x14c
+	.uleb128 0x6
+	.4byte	.LASF12
 	.byte	0x1
 	.byte	0x32
-	.byte	0x25
-	.4byte	0x11f
-	.4byte	.LLST3
-	.4byte	.LVUS3
-	.uleb128 0xb
-	.4byte	.LASF15
+	.4byte	0xee
+	.4byte	.LLST4
+	.uleb128 0xc
+	.4byte	.LASF13
 	.byte	0x1
 	.byte	0x32
-	.byte	0x32
-	.4byte	0x92
+	.4byte	0x85
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0xc
-	.4byte	.LVL8
-	.4byte	0x18e
 	.uleb128 0xd
+	.4byte	.LVL9
+	.4byte	0x179
+	.uleb128 0xe
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x3
 	.byte	0xa
 	.2byte	0xffff
-	.uleb128 0xd
+	.uleb128 0xe
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.uleb128 0xd
+	.uleb128 0xe
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x2
@@ -545,62 +541,32 @@ crc7_table:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0xe
-	.byte	0x4
-	.4byte	0x81
-	.uleb128 0x9
-	.4byte	.LASF13
-	.byte	0x1
-	.byte	0x28
-	.byte	0x9
-	.4byte	0x75
-	.4byte	.LFB0
-	.4byte	.LFE0-.LFB0
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x18e
-	.uleb128 0xa
-	.4byte	.LASF14
-	.byte	0x1
-	.byte	0x28
-	.byte	0x23
-	.4byte	0x11f
-	.4byte	.LLST0
-	.4byte	.LVUS0
-	.uleb128 0xb
-	.4byte	.LASF15
-	.byte	0x1
-	.byte	0x28
-	.byte	0x30
-	.4byte	0x92
-	.uleb128 0x1
-	.byte	0x53
 	.uleb128 0xf
-	.4byte	.LASF16
-	.byte	0x1
-	.byte	0x2a
-	.byte	0xd
-	.4byte	0x75
-	.4byte	.LLST1
-	.4byte	.LVUS1
+	.4byte	0x6f
+	.4byte	0x15c
 	.uleb128 0x10
-	.4byte	.Ldebug_ranges0+0
+	.4byte	0x15c
+	.byte	0xff
+	.byte	0
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF17
 	.uleb128 0x11
-	.string	"i"
+	.4byte	.LASF18
 	.byte	0x1
-	.byte	0x2b
-	.byte	0x11
-	.4byte	0x92
-	.4byte	.LLST2
-	.4byte	.LVUS2
-	.byte	0
-	.byte	0
+	.byte	0x13
+	.4byte	0x174
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	crc7_table
+	.uleb128 0xb
+	.4byte	0x14c
 	.uleb128 0x12
 	.4byte	.LASF21
 	.4byte	.LASF21
 	.byte	0x5
-	.byte	0x7b
-	.byte	0xa
+	.byte	0x5a
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -612,8 +578,6 @@ crc7_table:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -643,8 +607,6 @@ crc7_table:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -661,48 +623,6 @@ crc7_table:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x26
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x9
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -712,8 +632,6 @@ crc7_table:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
@@ -731,7 +649,7 @@ crc7_table:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0x6
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -740,61 +658,13 @@ crc7_table:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0xb
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x31
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x410a
-	.byte	0
-	.uleb128 0x2
-	.uleb128 0x18
-	.uleb128 0x2111
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xf
+	.uleb128 0x7
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -803,24 +673,22 @@ crc7_table:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x10
+	.uleb128 0x8
 	.uleb128 0xb
 	.byte	0x1
-	.uleb128 0x55
-	.uleb128 0x17
-	.byte	0
-	.byte	0
 	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.byte	0
+	.byte	0
+	.uleb128 0x9
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -829,14 +697,92 @@ crc7_table:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0xf
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xc
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x31
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x410a
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x18
+	.uleb128 0x2111
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xf
+	.uleb128 0x1
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x12
@@ -854,89 +800,107 @@ crc7_table:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.byte	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
-.LVUS3:
-	.uleb128 0
-	.uleb128 .LVU24
-	.uleb128 .LVU24
-	.uleb128 0
-.LLST3:
-	.4byte	.LVL7
-	.4byte	.LVL9
+.LLST0:
+	.4byte	.LVL0
+	.4byte	.LVL3
 	.2byte	0x1
 	.byte	0x52
-	.4byte	.LVL9
+	.4byte	.LVL3
+	.4byte	.LFE0
+	.2byte	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST1:
+	.4byte	.LVL0
+	.4byte	.LVL2
+	.2byte	0x1
+	.byte	0x53
+	.4byte	.LVL2
+	.4byte	.LFE0
+	.2byte	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x53
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST2:
+	.4byte	.LVL1
+	.4byte	.LVL3
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	.LVL3
+	.4byte	.LVL4
+	.2byte	0x1
+	.byte	0x58
+	.4byte	.LVL5
+	.4byte	.LFE0
+	.2byte	0x1
+	.byte	0x58
+	.4byte	0
+	.4byte	0
+.LLST3:
+	.4byte	.LVL1
+	.4byte	.LVL3
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	.LVL3
+	.4byte	.LVL5
+	.2byte	0x7
+	.byte	0x72
+	.sleb128 0
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x1c
+	.byte	0x9f
+	.4byte	.LVL5
+	.4byte	.LVL6
+	.2byte	0x9
+	.byte	0x72
+	.sleb128 0
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x1c
+	.byte	0x23
+	.uleb128 0x1
+	.byte	0x9f
+	.4byte	.LVL6
+	.4byte	.LVL7
+	.2byte	0x7
+	.byte	0x72
+	.sleb128 0
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x1c
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST4:
+	.4byte	.LVL8
+	.4byte	.LVL10
+	.2byte	0x1
+	.byte	0x52
+	.4byte	.LVL10
 	.4byte	.LFE1
 	.2byte	0x4
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LVUS0:
-	.uleb128 0
-	.uleb128 .LVU18
-	.uleb128 .LVU18
-	.uleb128 0
-.LLST0:
-	.4byte	.LVL0
-	.4byte	.LVL6
-	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL6
-	.4byte	.LFE0
-	.2byte	0x4
-	.byte	0xf3
-	.uleb128 0x1
-	.byte	0x52
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LVUS1:
-	.uleb128 .LVU3
-	.uleb128 .LVU9
-	.uleb128 .LVU9
-	.uleb128 .LVU12
-	.uleb128 .LVU14
-	.uleb128 0
-.LLST1:
-	.4byte	.LVL1
-	.4byte	.LVL2
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	.LVL2
-	.4byte	.LVL3
-	.2byte	0x1
-	.byte	0x58
-	.4byte	.LVL4
-	.4byte	.LFE0
-	.2byte	0x1
-	.byte	0x58
-	.4byte	0
-	.4byte	0
-.LVUS2:
-	.uleb128 .LVU5
-	.uleb128 .LVU9
-	.uleb128 .LVU9
-	.uleb128 0
-.LLST2:
-	.4byte	.LVL1
-	.4byte	.LVL2
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	.LVL2
-	.4byte	.LFE0
-	.2byte	0x1
-	.byte	0x59
 	.4byte	0
 	.4byte	0
 	.section	.debug_aranges,"",@progbits
@@ -955,12 +919,6 @@ crc7_table:
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LBB2
-	.4byte	.LBE2
-	.4byte	.LBB3
-	.4byte	.LBE3
-	.4byte	0
-	.4byte	0
 	.4byte	.LFB0
 	.4byte	.LFE0
 	.4byte	.LFB1
@@ -970,48 +928,48 @@ crc7_table:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF12:
+.LASF16:
 	.string	"sdspi_crc16"
 .LASF3:
 	.string	"__uint8_t"
 .LASF11:
 	.string	"size_t"
-.LASF14:
+.LASF12:
 	.string	"data"
+.LASF19:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF1:
 	.string	"unsigned char"
 .LASF5:
 	.string	"short unsigned int"
-.LASF18:
-	.string	"/home/dieter/Development/esp-idf/components/driver/sdspi_crc.c"
+.LASF4:
+	.string	"__uint16_t"
 .LASF6:
 	.string	"unsigned int"
 .LASF8:
 	.string	"long long unsigned int"
 .LASF9:
 	.string	"uint8_t"
-.LASF16:
+.LASF14:
 	.string	"result"
-.LASF20:
+.LASF17:
+	.string	"sizetype"
+.LASF18:
 	.string	"crc7_table"
 .LASF7:
 	.string	"long long int"
-.LASF17:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF20:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/sdspi_crc.c"
 .LASF2:
 	.string	"short int"
-.LASF4:
-	.string	"__uint16_t"
 .LASF10:
 	.string	"uint16_t"
 .LASF21:
 	.string	"crc16_be"
 .LASF0:
 	.string	"signed char"
-.LASF13:
-	.string	"sdspi_crc7"
 .LASF15:
+	.string	"sdspi_crc7"
+.LASF13:
 	.string	"size"
-.LASF19:
-	.string	"/home/dieter/Development/ProjektEi/build/driver"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

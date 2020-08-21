@@ -17,17 +17,25 @@
 
 Gpio::Gpio(gpio_num_t pin, gpio_mode_t io) : gpioNumber(pin) {
     durationTime = 0;
-
-
     pinconfig.pin_bit_mask = (1ULL << pin); /*!< GPIO pin: set with bit mask, each bit maps to a GPIO */
     pinconfig.mode = io; /*!< GPIO mode: set input/output mode                     */
-    pinconfig.pull_down_en = GPIO_PULLDOWN_ENABLE; /*!< GPIO pull-up                                         */
-    pinconfig.pull_up_en = GPIO_PULLUP_DISABLE; /*!< GPIO pull-down                                       */
+    pinconfig.pull_down_en = GPIO_PULLDOWN_DISABLE; /*!< GPIO pull-up                                         */
+    pinconfig.pull_up_en = GPIO_PULLUP_ENABLE; /*!< GPIO pull-down                                       */
     pinconfig.intr_type = GPIO_INTR_DISABLE; /*!< GPIO interrupt type                                  */
+    
     gpio_config(&pinconfig);
+    setONOFF(false);
 }
 
 Gpio::~Gpio() {
+}
+
+void Gpio::setONOFF(bool setto){
+            gpio_set_level(gpioNumber, setto);
+}
+
+int Gpio::getNumber() {
+    return (int) gpioNumber;
 }
 
 bool Gpio::connected() {

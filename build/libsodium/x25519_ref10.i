@@ -1,175 +1,77 @@
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
-# 1 "/home/dieter/Development/ProjektEi/build/libsodium//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/libsodium//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 3 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
+# 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 2
 
 
 
 
 
 
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 29 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 2 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 2 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+
+
+
+
+
+
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -180,8 +82,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -192,49 +106,64 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 4 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/../scalarmult_curve25519.h" 1
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/../scalarmult_curve25519.h" 1
 
 
 
 
-
-# 5 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/../scalarmult_curve25519.h"
 typedef struct crypto_scalarmult_curve25519_implementation {
     int (*mult)(unsigned char *q, const unsigned char *n,
                 const unsigned char *p);
     int (*mult_base)(unsigned char *q, const unsigned char *n);
 } crypto_scalarmult_curve25519_implementation;
-# 8 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h" 1
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 5 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h" 2
 
 
 
 typedef int32_t crypto_core_curve25519_ref10_fe[10];
-# 35 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
 extern void crypto_core_curve25519_ref10_fe_frombytes(crypto_core_curve25519_ref10_fe,const unsigned char *);
 extern void crypto_core_curve25519_ref10_fe_tobytes(unsigned char *,const crypto_core_curve25519_ref10_fe);
 
@@ -252,7 +181,7 @@ extern void crypto_core_curve25519_ref10_fe_sq(crypto_core_curve25519_ref10_fe,c
 extern void crypto_core_curve25519_ref10_fe_sq2(crypto_core_curve25519_ref10_fe,const crypto_core_curve25519_ref10_fe);
 extern void crypto_core_curve25519_ref10_fe_invert(crypto_core_curve25519_ref10_fe,const crypto_core_curve25519_ref10_fe);
 extern void crypto_core_curve25519_ref10_fe_pow22523(crypto_core_curve25519_ref10_fe,const crypto_core_curve25519_ref10_fe);
-# 68 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
 typedef struct {
     crypto_core_curve25519_ref10_fe X;
     crypto_core_curve25519_ref10_fe Y;
@@ -289,7 +218,7 @@ typedef struct {
     crypto_core_curve25519_ref10_fe Z;
     crypto_core_curve25519_ref10_fe T2d;
 } crypto_core_curve25519_ref10_ge_cached;
-# 127 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
 extern void crypto_core_curve25519_ref10_ge_tobytes(unsigned char *,const crypto_core_curve25519_ref10_ge_p2 *);
 extern void crypto_core_curve25519_ref10_ge_p3_tobytes(unsigned char *,const crypto_core_curve25519_ref10_ge_p3 *);
 extern int crypto_core_curve25519_ref10_ge_frombytes_negate_vartime(crypto_core_curve25519_ref10_ge_p3 *,const unsigned char *);
@@ -311,21 +240,21 @@ extern void crypto_core_curve25519_ref10_ge_sub(crypto_core_curve25519_ref10_ge_
 extern void crypto_core_curve25519_ref10_ge_scalarmult_base(crypto_core_curve25519_ref10_ge_p3 *,const unsigned char *);
 extern void crypto_core_curve25519_ref10_ge_double_scalarmult_vartime(crypto_core_curve25519_ref10_ge_p2 *,const unsigned char *,const crypto_core_curve25519_ref10_ge_p3 *,const unsigned char *);
 extern void crypto_core_curve25519_ref10_ge_scalarmult_vartime(crypto_core_curve25519_ref10_ge_p3 *,const unsigned char *,const crypto_core_curve25519_ref10_ge_p3 *);
-# 157 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/private/curve25519_ref10.h"
 extern void crypto_core_curve25519_ref10_sc_reduce(unsigned char *);
 extern void crypto_core_curve25519_ref10_sc_muladd(unsigned char *,const unsigned char *,const unsigned char *,const unsigned char *);
-# 9 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 1
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 6 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h" 1
-# 8 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 2
-# 21 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/export.h" 1
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h"
 __attribute__ ((visibility ("default")))
 void sodium_memzero(void * const pnt, const size_t len);
 
@@ -374,7 +303,7 @@ int sodium_mlock(void * const addr, const size_t len);
 
 __attribute__ ((visibility ("default")))
 int sodium_munlock(void * const addr, const size_t len);
-# 103 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/utils.h"
 __attribute__ ((visibility ("default")))
 void *sodium_malloc(const size_t size)
             __attribute__ ((malloc));
@@ -398,18 +327,18 @@ int sodium_mprotect_readwrite(void *ptr);
 
 
 int _sodium_alloc_init(void);
-# 10 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h" 1
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 5 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h" 2
-# 13 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_scalarmult_curve25519.h"
 __attribute__ ((visibility ("default")))
 size_t crypto_scalarmult_curve25519_bytes(void);
 
@@ -428,13 +357,13 @@ int crypto_scalarmult_curve25519_base(unsigned char *q, const unsigned char *n);
 
 
 int _crypto_scalarmult_curve25519_pick_best_implementation(void);
-# 5 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h" 2
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h" 2
 
 
 extern struct crypto_scalarmult_curve25519_implementation
         crypto_scalarmult_curve25519_ref10_implementation;
-# 11 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
-# 19 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
 static void
 fe_cswap(crypto_core_curve25519_ref10_fe f, crypto_core_curve25519_ref10_fe g, unsigned int b)
 {
@@ -501,7 +430,7 @@ fe_cswap(crypto_core_curve25519_ref10_fe f, crypto_core_curve25519_ref10_fe g, u
     g[8] = g8 ^ x8;
     g[9] = g9 ^ x9;
 }
-# 97 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.c"
 static void
 fe_mul121666(crypto_core_curve25519_ref10_fe h, const crypto_core_curve25519_ref10_fe f)
 {

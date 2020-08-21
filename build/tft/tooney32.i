@@ -1,13 +1,13 @@
-# 1 "/home/dieter/Development/ProjektEi/components/tft/tooney32.c"
-# 1 "/home/dieter/Development/ProjektEi/build/tft//"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/tooney32.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/tft//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/ProjektEi/components/tft/tooney32.c"
-# 24 "/home/dieter/Development/ProjektEi/components/tft/tooney32.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/tooney32.c"
+# 24 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/tooney32.c"
 unsigned char tft_tooney32[] =
 {
 0x00, 0x20, 0x00, 0x00,
-# 44 "/home/dieter/Development/ProjektEi/components/tft/tooney32.c"
+# 44 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/tooney32.c"
 0x20,0x1E,0x00,0x00,0x00,0x09,
 
 

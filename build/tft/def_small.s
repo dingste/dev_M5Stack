@@ -2,7 +2,7 @@
 	.text
 .Ltext0:
 	.global	tft_def_small
-	.section	.data.tft_def_small,"aw"
+	.section	.data.tft_def_small,"aw",@progbits
 	.type	tft_def_small, @object
 	.size	tft_def_small, 928
 tft_def_small:
@@ -936,10 +936,10 @@ tft_def_small:
 	.byte	-1
 	.text
 .Letext0:
-	.file 1 "/home/dieter/Development/ProjektEi/components/tft/def_small.c"
+	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/def_small.c"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x4b
+	.4byte	0x46
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -947,13 +947,12 @@ tft_def_small:
 	.4byte	.LASF2
 	.byte	0xc
 	.4byte	.LASF3
-	.4byte	.LASF4
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
-	.4byte	0x35
-	.4byte	0x2e
+	.4byte	0x31
+	.4byte	0x2a
 	.uleb128 0x3
-	.4byte	0x2e
+	.4byte	0x2a
 	.2byte	0x39f
 	.byte	0
 	.uleb128 0x4
@@ -965,11 +964,10 @@ tft_def_small:
 	.byte	0x8
 	.4byte	.LASF1
 	.uleb128 0x5
-	.4byte	.LASF5
+	.4byte	.LASF4
 	.byte	0x1
 	.byte	0x19
-	.byte	0xf
-	.4byte	0x1d
+	.4byte	0x19
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	tft_def_small
@@ -984,8 +982,6 @@ tft_def_small:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x10
 	.uleb128 0x17
@@ -1029,8 +1025,6 @@ tft_def_small:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3f
@@ -1055,14 +1049,12 @@ tft_def_small:
 	.section	.debug_str,"MS",@progbits,1
 .LASF1:
 	.string	"unsigned char"
-.LASF3:
-	.string	"/home/dieter/Development/ProjektEi/components/tft/def_small.c"
-.LASF4:
-	.string	"/home/dieter/Development/ProjektEi/build/tft"
 .LASF0:
-	.string	"unsigned int"
+	.string	"sizetype"
 .LASF2:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF5:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF3:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/def_small.c"
+.LASF4:
 	.string	"tft_def_small"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

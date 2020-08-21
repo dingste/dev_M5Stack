@@ -1,143 +1,120 @@
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-# 1 "/home/dieter/Development/ProjektEi/build/wifi_provisioning//"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wifi_provisioning//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-# 9 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 1
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 9 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
-# 199 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
+# 199 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -148,32 +125,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -188,35 +143,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -225,21 +152,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -258,44 +184,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -303,10 +192,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -357,12 +244,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -379,7 +266,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -396,13 +283,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -430,7 +317,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -441,7 +328,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -451,7 +338,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -497,12 +384,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -532,8 +419,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -542,29 +431,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -582,6 +463,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -592,18 +475,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -613,11 +491,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -646,21 +524,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -675,26 +544,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -709,54 +571,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -780,40 +630,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -825,150 +671,41 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
 
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 200 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 200 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/limits.h" 2
+# 201 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 202 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 201 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 202 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -979,8 +716,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -991,29 +740,44 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 203 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 212 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 203 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 212 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+# 241 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 extern const char protobuf_c_empty_string[];
-# 255 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 255 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_PACKED = (1 << 0),
@@ -1024,7 +788,7 @@ typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_ONEOF = (1 << 2),
 } ProtobufCFieldFlag;
-# 274 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 274 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_LABEL_REQUIRED,
@@ -1048,7 +812,7 @@ typedef enum {
 
  PROTOBUF_C_LABEL_NONE,
 } ProtobufCLabel;
-# 306 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 306 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_TYPE_INT32,
  PROTOBUF_C_TYPE_SINT32,
@@ -1068,7 +832,7 @@ typedef enum {
  PROTOBUF_C_TYPE_BYTES,
  PROTOBUF_C_TYPE_MESSAGE,
 } ProtobufCType;
-# 334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 334 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_WIRE_TYPE_VARINT = 0,
  PROTOBUF_C_WIRE_TYPE_64BIT = 1,
@@ -1129,19 +893,19 @@ struct ProtobufCAllocator {
 
  void *allocator_data;
 };
-# 402 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBinaryData {
  size_t len;
  uint8_t *data;
 };
-# 442 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 442 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBuffer {
 
  void (*append)(ProtobufCBuffer *buffer,
       size_t len,
       const uint8_t *data);
 };
-# 477 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 477 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBufferSimple {
 
  ProtobufCBuffer base;
@@ -1250,7 +1014,7 @@ struct ProtobufCFieldDescriptor {
 
 
  unsigned offset;
-# 597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 597 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
  const void *descriptor;
 
 
@@ -1269,7 +1033,7 @@ struct ProtobufCFieldDescriptor {
 
  void *reserved3;
 };
-# 624 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 624 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCIntRange {
  int start_value;
  unsigned orig_index;
@@ -1279,7 +1043,7 @@ struct ProtobufCIntRange {
 
 
 };
-# 649 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 649 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCMessage {
 
  const ProtobufCMessageDescriptor *descriptor;
@@ -1408,49 +1172,49 @@ struct ProtobufCServiceDescriptor {
 
 const char *
 protobuf_c_version(void);
-# 785 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 785 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 uint32_t
 protobuf_c_version_number(void);
-# 820 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 820 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value_by_name(
  const ProtobufCEnumDescriptor *desc,
  const char *name);
-# 841 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value(
  const ProtobufCEnumDescriptor *desc,
  int value);
-# 860 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 860 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field_by_name(
  const ProtobufCMessageDescriptor *desc,
  const char *name);
-# 879 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 879 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field(
  const ProtobufCMessageDescriptor *desc,
  unsigned value);
-# 893 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 893 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_get_packed_size(const ProtobufCMessage *message);
-# 913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 913 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out);
-# 930 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 930 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack_to_buffer(
  const ProtobufCMessage *message,
  ProtobufCBuffer *buffer);
-# 953 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 953 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 ProtobufCMessage *
 protobuf_c_message_unpack(
@@ -1458,17 +1222,17 @@ protobuf_c_message_unpack(
  ProtobufCAllocator *allocator,
  size_t len,
  const uint8_t *data);
-# 973 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 973 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_free_unpacked(
  ProtobufCMessage *message,
  ProtobufCAllocator *allocator);
-# 990 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 990 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 protobuf_c_boolean
 protobuf_c_message_check(const ProtobufCMessage *);
-# 1005 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1005 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_init(
@@ -1484,13 +1248,13 @@ protobuf_c_message_init(
 
 void
 protobuf_c_service_destroy(ProtobufCService *service);
-# 1034 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1034 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCMethodDescriptor *
 protobuf_c_service_descriptor_get_method_by_name(
  const ProtobufCServiceDescriptor *desc,
  const char *name);
-# 1079 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1079 "/home/dieter/SoftwareDevelop/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_buffer_simple_append(
@@ -1517,7 +1281,7 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 8 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
+# 8 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
 
 
 
@@ -1527,10 +1291,10 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
+# 9 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 26 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 typedef enum _Status {
   STATUS__Success = 0,
   STATUS__InvalidSecScheme = 1,
@@ -1542,15 +1306,15 @@ typedef enum _Status {
   STATUS__InvalidSession = 7
     , _STATUS_IS_INT_SIZE = 0x7fffffff
 } Status;
-# 48 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 extern const ProtobufCEnumDescriptor status__descriptor;
 
 
-# 18 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h" 1
+# 9 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
 
-# 18 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
 typedef struct _WifiConnectedState WifiConnectedState;
 
 
@@ -1630,7 +1394,7 @@ extern const ProtobufCEnumDescriptor wifi_auth_mode__descriptor;
 extern const ProtobufCMessageDescriptor wifi_connected_state__descriptor;
 
 
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.h" 2
 
 typedef struct _CmdScanStart CmdScanStart;
 typedef struct _RespScanStart RespScanStart;
@@ -1960,71 +1724,35 @@ extern const ProtobufCMessageDescriptor resp_scan_result__descriptor;
 extern const ProtobufCMessageDescriptor wi_fi_scan_payload__descriptor;
 
 
-# 10 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 2
+# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 2
 void cmd_scan_start__init
                      (CmdScanStart *message)
 {
   static const CmdScanStart init_value = { { &cmd_scan_start__descriptor, 0, 
-# 13 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                         ((void *)0) 
-# 13 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                         } , 0, 0, 0, 0 };
   *message = init_value;
 }
 size_t cmd_scan_start__get_packed_size
                      (const CmdScanStart *message)
 {
-  
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_start__descriptor
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 19, __func__, 
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_start__descriptor"
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 19, __func__, "message->base.descriptor == &cmd_scan_start__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_scan_start__pack
                      (const CmdScanStart *message,
                       uint8_t *out)
 {
-  
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_start__descriptor
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 26, __func__, 
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_start__descriptor"
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 26, __func__, "message->base.descriptor == &cmd_scan_start__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_scan_start__pack_to_buffer
                      (const CmdScanStart *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_start__descriptor
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 33, __func__, 
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_start__descriptor"
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 33, __func__, "message->base.descriptor == &cmd_scan_start__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdScanStart *
@@ -2043,85 +1771,37 @@ void cmd_scan_start__free_unpacked
 {
   if(!message)
     return;
-  
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_start__descriptor
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 52, __func__, 
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_start__descriptor"
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 52, __func__, "message->base.descriptor == &cmd_scan_start__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_scan_start__init
                      (RespScanStart *message)
 {
   static const RespScanStart init_value = { { &resp_scan_start__descriptor, 0, 
-# 58 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                          ((void *)0) 
-# 58 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                          } };
   *message = init_value;
 }
 size_t resp_scan_start__get_packed_size
                      (const RespScanStart *message)
 {
-  
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_start__descriptor
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 64, __func__, 
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_start__descriptor"
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 64, __func__, "message->base.descriptor == &resp_scan_start__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_scan_start__pack
                      (const RespScanStart *message,
                       uint8_t *out)
 {
-  
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_start__descriptor
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 71, __func__, 
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_start__descriptor"
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 71, __func__, "message->base.descriptor == &resp_scan_start__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_scan_start__pack_to_buffer
                      (const RespScanStart *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_start__descriptor
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 78, __func__, 
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_start__descriptor"
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 78, __func__, "message->base.descriptor == &resp_scan_start__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespScanStart *
@@ -2140,85 +1820,37 @@ void resp_scan_start__free_unpacked
 {
   if(!message)
     return;
-  
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_start__descriptor
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 97, __func__, 
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_start__descriptor"
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_scan_start__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 97, __func__, "message->base.descriptor == &resp_scan_start__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void cmd_scan_status__init
                      (CmdScanStatus *message)
 {
   static const CmdScanStatus init_value = { { &cmd_scan_status__descriptor, 0, 
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                          ((void *)0) 
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                          } };
   *message = init_value;
 }
 size_t cmd_scan_status__get_packed_size
                      (const CmdScanStatus *message)
 {
-  
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_status__descriptor
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 109, __func__, 
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_status__descriptor"
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 109, __func__, "message->base.descriptor == &cmd_scan_status__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_scan_status__pack
                      (const CmdScanStatus *message,
                       uint8_t *out)
 {
-  
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_status__descriptor
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 116, __func__, 
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_status__descriptor"
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 116, __func__, "message->base.descriptor == &cmd_scan_status__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_scan_status__pack_to_buffer
                      (const CmdScanStatus *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_status__descriptor
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 123, __func__, 
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_status__descriptor"
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 123, __func__, "message->base.descriptor == &cmd_scan_status__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdScanStatus *
@@ -2237,85 +1869,37 @@ void cmd_scan_status__free_unpacked
 {
   if(!message)
     return;
-  
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_status__descriptor
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 142, __func__, 
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_status__descriptor"
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 142, __func__, "message->base.descriptor == &cmd_scan_status__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_scan_status__init
                      (RespScanStatus *message)
 {
   static const RespScanStatus init_value = { { &resp_scan_status__descriptor, 0, 
-# 148 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0) 
-# 148 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 148 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           } , 0, 0 };
   *message = init_value;
 }
 size_t resp_scan_status__get_packed_size
                      (const RespScanStatus *message)
 {
-  
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_status__descriptor
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 154, __func__, 
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_status__descriptor"
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 154, __func__, "message->base.descriptor == &resp_scan_status__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_scan_status__pack
                      (const RespScanStatus *message,
                       uint8_t *out)
 {
-  
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_status__descriptor
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 161, __func__, 
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_status__descriptor"
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 161, __func__, "message->base.descriptor == &resp_scan_status__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_scan_status__pack_to_buffer
                      (const RespScanStatus *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_status__descriptor
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 168, __func__, 
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_status__descriptor"
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 168, __func__, "message->base.descriptor == &resp_scan_status__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespScanStatus *
@@ -2334,85 +1918,37 @@ void resp_scan_status__free_unpacked
 {
   if(!message)
     return;
-  
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_status__descriptor
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 187, __func__, 
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_status__descriptor"
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 187, __func__, "message->base.descriptor == &resp_scan_status__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void cmd_scan_result__init
                      (CmdScanResult *message)
 {
   static const CmdScanResult init_value = { { &cmd_scan_result__descriptor, 0, 
-# 193 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 193 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                          ((void *)0) 
-# 193 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 193 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                          } , 0, 0 };
   *message = init_value;
 }
 size_t cmd_scan_result__get_packed_size
                      (const CmdScanResult *message)
 {
-  
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_result__descriptor
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 199, __func__, 
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_result__descriptor"
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 199, __func__, "message->base.descriptor == &cmd_scan_result__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_scan_result__pack
                      (const CmdScanResult *message,
                       uint8_t *out)
 {
-  
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_result__descriptor
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 206, __func__, 
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_result__descriptor"
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 206, __func__, "message->base.descriptor == &cmd_scan_result__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_scan_result__pack_to_buffer
                      (const CmdScanResult *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_result__descriptor
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 213, __func__, 
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_result__descriptor"
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 213, __func__, "message->base.descriptor == &cmd_scan_result__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdScanResult *
@@ -2431,93 +1967,45 @@ void cmd_scan_result__free_unpacked
 {
   if(!message)
     return;
-  
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &cmd_scan_result__descriptor
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 232, __func__, 
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &cmd_scan_result__descriptor"
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &cmd_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 232, __func__, "message->base.descriptor == &cmd_scan_result__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void wi_fi_scan_result__init
                      (WiFiScanResult *message)
 {
   static const WiFiScanResult init_value = { { &wi_fi_scan_result__descriptor, 0, 
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0) 
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           } , {0,
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0)
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           }, 0, 0, {0,
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0)
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 238 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           }, WIFI_AUTH_MODE__Open };
   *message = init_value;
 }
 size_t wi_fi_scan_result__get_packed_size
                      (const WiFiScanResult *message)
 {
-  
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_result__descriptor
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 244, __func__, 
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_result__descriptor"
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &wi_fi_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 244, __func__, "message->base.descriptor == &wi_fi_scan_result__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t wi_fi_scan_result__pack
                      (const WiFiScanResult *message,
                       uint8_t *out)
 {
-  
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_result__descriptor
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 251, __func__, 
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_result__descriptor"
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &wi_fi_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 251, __func__, "message->base.descriptor == &wi_fi_scan_result__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t wi_fi_scan_result__pack_to_buffer
                      (const WiFiScanResult *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_result__descriptor
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 258, __func__, 
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_result__descriptor"
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &wi_fi_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 258, __func__, "message->base.descriptor == &wi_fi_scan_result__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 WiFiScanResult *
@@ -2536,89 +2024,41 @@ void wi_fi_scan_result__free_unpacked
 {
   if(!message)
     return;
-  
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_result__descriptor
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 277, __func__, 
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_result__descriptor"
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &wi_fi_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 277, __func__, "message->base.descriptor == &wi_fi_scan_result__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_scan_result__init
                      (RespScanResult *message)
 {
   static const RespScanResult init_value = { { &resp_scan_result__descriptor, 0, 
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 283 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0) 
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 283 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           } , 0,
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 283 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                           ((void *)0) 
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 283 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           };
   *message = init_value;
 }
 size_t resp_scan_result__get_packed_size
                      (const RespScanResult *message)
 {
-  
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_result__descriptor
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 289, __func__, 
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_result__descriptor"
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 289, __func__, "message->base.descriptor == &resp_scan_result__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_scan_result__pack
                      (const RespScanResult *message,
                       uint8_t *out)
 {
-  
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_result__descriptor
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 296, __func__, 
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_result__descriptor"
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 296, __func__, "message->base.descriptor == &resp_scan_result__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_scan_result__pack_to_buffer
                      (const RespScanResult *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_result__descriptor
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 303, __func__, 
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_result__descriptor"
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 303, __func__, "message->base.descriptor == &resp_scan_result__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespScanResult *
@@ -2637,85 +2077,37 @@ void resp_scan_result__free_unpacked
 {
   if(!message)
     return;
-  
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &resp_scan_result__descriptor
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 322, __func__, 
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &resp_scan_result__descriptor"
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &resp_scan_result__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 322, __func__, "message->base.descriptor == &resp_scan_result__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void wi_fi_scan_payload__init
                      (WiFiScanPayload *message)
 {
   static const WiFiScanPayload init_value = { { &wi_fi_scan_payload__descriptor, 0, 
-# 328 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 328 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                                            ((void *)0) 
-# 328 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 328 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                            } , WI_FI_SCAN_MSG_TYPE__TypeCmdScanStart, STATUS__Success, WI_FI_SCAN_PAYLOAD__PAYLOAD__NOT_SET, {0} };
   *message = init_value;
 }
 size_t wi_fi_scan_payload__get_packed_size
                      (const WiFiScanPayload *message)
 {
-  
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_payload__descriptor
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 334, __func__, 
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_payload__descriptor"
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 334 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                    ;
+  ((message->base.descriptor == &wi_fi_scan_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 334, __func__, "message->base.descriptor == &wi_fi_scan_payload__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t wi_fi_scan_payload__pack
                      (const WiFiScanPayload *message,
                       uint8_t *out)
 {
-  
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_payload__descriptor
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 341, __func__, 
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_payload__descriptor"
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                    ;
+  ((message->base.descriptor == &wi_fi_scan_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 341, __func__, "message->base.descriptor == &wi_fi_scan_payload__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t wi_fi_scan_payload__pack_to_buffer
                      (const WiFiScanPayload *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_payload__descriptor
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 348, __func__, 
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_payload__descriptor"
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 348 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                    ;
+  ((message->base.descriptor == &wi_fi_scan_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 348, __func__, "message->base.descriptor == &wi_fi_scan_payload__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 WiFiScanPayload *
@@ -2734,19 +2126,7 @@ void wi_fi_scan_payload__free_unpacked
 {
   if(!message)
     return;
-  
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ((
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- message->base.descriptor == &wi_fi_scan_payload__descriptor
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 367, __func__, 
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
- "message->base.descriptor == &wi_fi_scan_payload__descriptor"
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
- ))
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
-                                                                    ;
+  ((message->base.descriptor == &wi_fi_scan_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c", 367, __func__, "message->base.descriptor == &wi_fi_scan_payload__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 static const ProtobufCFieldDescriptor cmd_scan_start__field_descriptors[4] =
@@ -2758,38 +2138,38 @@ static const ProtobufCFieldDescriptor cmd_scan_start__field_descriptors[4] =
     PROTOBUF_C_TYPE_BOOL,
     0,
     
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanStart
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    blocking
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 378 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 378 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                    ,
     
-# 379 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 379 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 379 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 379 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 380 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 380 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 380 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 380 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 382 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 382 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 382 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 382 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 382 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 382 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 383 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 383 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "passive",
@@ -2798,38 +2178,38 @@ static const ProtobufCFieldDescriptor cmd_scan_start__field_descriptors[4] =
     PROTOBUF_C_TYPE_BOOL,
     0,
     
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanStart
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    passive
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 390 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 390 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                   ,
     
-# 391 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 391 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 391 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 391 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 392 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 392 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 392 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 392 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 394 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 394 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 394 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 394 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 394 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 394 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 395 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 395 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "group_channels",
@@ -2838,38 +2218,38 @@ static const ProtobufCFieldDescriptor cmd_scan_start__field_descriptors[4] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanStart
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    group_channels
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 402 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 402 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                          ,
     
-# 403 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 403 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 403 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 403 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 404 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 404 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 404 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 406 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 406 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 406 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 406 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 406 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 406 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 407 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 407 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "period_ms",
@@ -2878,38 +2258,38 @@ static const ProtobufCFieldDescriptor cmd_scan_start__field_descriptors[4] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanStart
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    period_ms
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 414 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 414 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                     ,
     
-# 415 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 415 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 415 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 415 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 416 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 416 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 416 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 416 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 418 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 418 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 418 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 418 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 418 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 418 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 419 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned cmd_scan_start__field_indices_by_name[] = {
@@ -2937,18 +2317,18 @@ const ProtobufCMessageDescriptor cmd_scan_start__descriptor =
   1, cmd_scan_start__number_ranges,
   (ProtobufCMessageInit) cmd_scan_start__init,
   
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 445 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 445 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 445 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 445 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 445 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 446 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 446 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 
 
@@ -2963,34 +2343,34 @@ const ProtobufCMessageDescriptor resp_scan_start__descriptor =
   sizeof(RespScanStart),
   0,
   
-# 459 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 459 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 459 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 459 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                    ,
   
-# 460 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 460 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 460 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 460 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                        ,
   0, 
-# 461 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 461 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 461 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 461 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                    ,
   (ProtobufCMessageInit) resp_scan_start__init,
   
-# 463 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 463 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 463 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 463 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 463 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 464 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 464 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 
 
@@ -3005,34 +2385,34 @@ const ProtobufCMessageDescriptor cmd_scan_status__descriptor =
   sizeof(CmdScanStatus),
   0,
   
-# 477 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 477 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 477 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 477 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                    ,
   
-# 478 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 478 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 478 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 478 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                        ,
   0, 
-# 479 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 479 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 479 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 479 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                    ,
   (ProtobufCMessageInit) cmd_scan_status__init,
   
-# 481 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 481 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 481 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 481 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 481 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 481 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 481 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 481 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 481 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 481 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 482 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 482 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCFieldDescriptor resp_scan_status__field_descriptors[2] =
 {
@@ -3043,38 +2423,38 @@ static const ProtobufCFieldDescriptor resp_scan_status__field_descriptors[2] =
     PROTOBUF_C_TYPE_BOOL,
     0,
     
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    RespScanStatus
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    scan_finished
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 491 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 491 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 492 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 492 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 492 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 492 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 493 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 493 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 493 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 493 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 495 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 495 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 495 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 495 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 495 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 495 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 496 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "result_count",
@@ -3083,38 +2463,38 @@ static const ProtobufCFieldDescriptor resp_scan_status__field_descriptors[2] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    RespScanStatus
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    result_count
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 503 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 503 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                          ,
     
-# 504 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 504 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 504 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 504 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 505 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 505 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 505 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 505 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 507 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 507 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 507 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 507 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 507 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 507 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 508 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 508 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned resp_scan_status__field_indices_by_name[] = {
@@ -3140,18 +2520,18 @@ const ProtobufCMessageDescriptor resp_scan_status__descriptor =
   1, resp_scan_status__number_ranges,
   (ProtobufCMessageInit) resp_scan_status__init,
   
-# 532 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 532 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 532 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 532 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 532 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 532 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 532 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 532 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 533 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 533 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCFieldDescriptor cmd_scan_result__field_descriptors[2] =
 {
@@ -3162,38 +2542,38 @@ static const ProtobufCFieldDescriptor cmd_scan_result__field_descriptors[2] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanResult
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    start_index
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 542 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 542 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                        ,
     
-# 543 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 543 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 543 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 543 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 544 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 544 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 544 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 544 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 546 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 546 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 546 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 546 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 546 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 546 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 547 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 547 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "count",
@@ -3202,38 +2582,38 @@ static const ProtobufCFieldDescriptor cmd_scan_result__field_descriptors[2] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    CmdScanResult
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    count
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 554 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 554 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                  ,
     
-# 555 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 555 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 555 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 555 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 556 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 556 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 556 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 556 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 558 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 558 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 558 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 558 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 558 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 558 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 559 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 559 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned cmd_scan_result__field_indices_by_name[] = {
@@ -3259,18 +2639,18 @@ const ProtobufCMessageDescriptor cmd_scan_result__descriptor =
   1, cmd_scan_result__number_ranges,
   (ProtobufCMessageInit) cmd_scan_result__init,
   
-# 583 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 583 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 583 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 583 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 583 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 583 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 583 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 583 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 583 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 583 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 584 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 584 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
 {
@@ -3281,38 +2661,38 @@ static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanResult
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    ssid
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 593 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 593 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                  ,
     
-# 594 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 594 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 594 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 594 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 595 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 595 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 595 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 595 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 597 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 597 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 597 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 597 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 597 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 597 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 598 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 598 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "channel",
@@ -3321,38 +2701,38 @@ static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
     PROTOBUF_C_TYPE_UINT32,
     0,
     
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanResult
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    channel
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 605 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                     ,
     
-# 606 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 606 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 606 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 606 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 607 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 607 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 607 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 607 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 609 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 609 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 609 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 609 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 609 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 609 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 610 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 610 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "rssi",
@@ -3361,38 +2741,38 @@ static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
     PROTOBUF_C_TYPE_INT32,
     0,
     
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanResult
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    rssi
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 617 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                  ,
     
-# 618 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 618 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 618 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 618 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 619 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 619 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 619 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 619 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 621 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 621 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 621 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 621 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 621 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 621 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 622 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 622 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "bssid",
@@ -3401,38 +2781,38 @@ static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanResult
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    bssid
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                   ,
     
-# 630 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 630 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     
-# 631 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 631 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 631 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 631 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 633 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 633 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 633 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 633 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 633 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 633 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 634 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 634 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "auth",
@@ -3441,34 +2821,34 @@ static const ProtobufCFieldDescriptor wi_fi_scan_result__field_descriptors[5] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanResult
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    auth
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 641 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                  ,
     &wifi_auth_mode__descriptor,
     
-# 643 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 643 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 645 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 645 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 645 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 645 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 645 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 645 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 646 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 646 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned wi_fi_scan_result__field_indices_by_name[] = {
@@ -3497,18 +2877,18 @@ const ProtobufCMessageDescriptor wi_fi_scan_result__descriptor =
   1, wi_fi_scan_result__number_ranges,
   (ProtobufCMessageInit) wi_fi_scan_result__init,
   
-# 673 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 673 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 673 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 673 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 673 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 673 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 673 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 673 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 673 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 673 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 674 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 674 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCFieldDescriptor resp_scan_result__field_descriptors[1] =
 {
@@ -3518,47 +2898,47 @@ static const ProtobufCFieldDescriptor resp_scan_result__field_descriptors[1] =
     PROTOBUF_C_LABEL_REPEATED,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    RespScanResult
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    n_entries
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 682 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 682 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                       ,
     
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    RespScanResult
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    entries
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 683 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 683 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                     ,
     &wi_fi_scan_result__descriptor,
     
-# 685 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 685 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 685 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 685 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 687 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 687 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 687 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 687 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 687 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 687 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 688 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 688 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned resp_scan_result__field_indices_by_name[] = {
@@ -3583,18 +2963,18 @@ const ProtobufCMessageDescriptor resp_scan_result__descriptor =
   1, resp_scan_result__number_ranges,
   (ProtobufCMessageInit) resp_scan_result__init,
   
-# 711 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 711 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 711 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 711 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 711 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 711 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 711 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 711 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 711 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 711 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 712 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 712 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
 {
@@ -3605,34 +2985,34 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    msg
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 721 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 721 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                  ,
     &wi_fi_scan_msg_type__descriptor,
     
-# 723 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 723 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 723 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 725 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 725 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 725 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 726 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 726 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "status",
@@ -3641,34 +3021,34 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    status
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 733 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 733 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                     ,
     &status__descriptor,
     
-# 735 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 735 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 735 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 735 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0,
     0,
-# 737 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 737 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 737 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 737 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 737 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 737 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 738 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 738 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "cmd_scan_start",
@@ -3676,47 +3056,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 744 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    cmd_scan_start
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 745 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 745 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                             ,
     &cmd_scan_start__descriptor,
     
-# 747 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 747 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 747 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 747 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 749 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 749 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 749 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 749 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 749 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 749 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 750 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 750 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "resp_scan_start",
@@ -3724,47 +3104,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 756 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 756 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    resp_scan_start
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 757 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 757 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                              ,
     &resp_scan_start__descriptor,
     
-# 759 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 759 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 759 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 759 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 761 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 761 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 761 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 761 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 761 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 761 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 762 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 762 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "cmd_scan_status",
@@ -3772,47 +3152,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 768 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 768 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    cmd_scan_status
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 769 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 769 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                              ,
     &cmd_scan_status__descriptor,
     
-# 771 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 771 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 773 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 773 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 773 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 773 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 773 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 773 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 774 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 774 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "resp_scan_status",
@@ -3820,47 +3200,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 780 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 780 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    resp_scan_status
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 781 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 781 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                               ,
     &resp_scan_status__descriptor,
     
-# 783 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 783 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 783 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 783 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 785 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 785 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 785 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 785 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 785 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 785 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 786 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 786 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "cmd_scan_result",
@@ -3868,47 +3248,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 792 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 792 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    cmd_scan_result
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 793 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 793 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                              ,
     &cmd_scan_result__descriptor,
     
-# 795 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 795 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 795 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 795 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 797 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 797 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 797 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 797 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 797 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 797 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 798 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 798 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
   {
     "resp_scan_result",
@@ -3916,47 +3296,47 @@ static const ProtobufCFieldDescriptor wi_fi_scan_payload__field_descriptors[8] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    payload_case
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 804 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 804 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                           ,
     
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    __builtin_offsetof (
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    WiFiScanPayload
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    , 
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
    resp_scan_result
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    )
-# 805 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 805 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                                               ,
     &resp_scan_result__descriptor,
     
-# 807 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 807 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
    ((void *)0)
-# 807 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 807 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 809 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 809 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
      ((void *)0)
-# 809 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 809 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
          ,
-# 809 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 809 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
           ((void *)0)
   
-# 810 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 810 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
  },
 };
 static const unsigned wi_fi_scan_payload__field_indices_by_name[] = {
@@ -3989,18 +3369,18 @@ const ProtobufCMessageDescriptor wi_fi_scan_payload__descriptor =
   2, wi_fi_scan_payload__number_ranges,
   (ProtobufCMessageInit) wi_fi_scan_payload__init,
   
-# 841 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 841 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 841 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 841 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 841 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 841 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
 
-# 842 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 842 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };
 static const ProtobufCEnumValue wi_fi_scan_msg_type__enum_values_by_number[6] =
 {
@@ -4037,20 +3417,20 @@ const ProtobufCEnumDescriptor wi_fi_scan_msg_type__descriptor =
   1,
   wi_fi_scan_msg_type__value_ranges,
   
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
  ((void *)0)
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
      ,
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
       ((void *)0)
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
           ,
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
            ((void *)0)
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
                ,
-# 877 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
+# 877 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c" 3 4
                 ((void *)0)
 
-# 878 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
+# 878 "/home/dieter/SoftwareDevelop/esp-idf/components/wifi_provisioning/proto-c/wifi_scan.pb-c.c"
 };

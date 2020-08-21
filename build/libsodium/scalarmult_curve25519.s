@@ -3,103 +3,79 @@
 .Ltext0:
 	.section	.text.crypto_scalarmult_curve25519,"ax",@progbits
 	.literal_position
-	.literal .LC0, implementation
+	.literal .LC2, implementation
 	.align	4
 	.global	crypto_scalarmult_curve25519
 	.type	crypto_scalarmult_curve25519, @function
 crypto_scalarmult_curve25519:
-.LVL0:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.c"
-	.loc 1 22 1 view -0
-	.loc 1 22 1 is_stmt 0 view .LVU1
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.c"
+	.loc 1 22 0
+.LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 23 5 is_stmt 1 view .LVU2
-	.loc 1 24 5 view .LVU3
 .LVL1:
-	.loc 1 26 5 view .LVU4
-	.loc 1 22 1 is_stmt 0 view .LVU5
-	mov.n	a5, a2
-	.loc 1 26 23 view .LVU6
-	l32r	a2, .LC0
-.LVL2:
-	.loc 1 26 9 view .LVU7
+	.loc 1 26 0
+	l32r	a8, .LC2
 	mov.n	a12, a4
-	.loc 1 26 23 view .LVU8
-	l32i.n	a2, a2, 0
-	.loc 1 26 9 view .LVU9
+	l32i.n	a8, a8, 0
 	mov.n	a11, a3
-	l32i.n	a2, a2, 0
-	mov.n	a10, a5
-	callx8	a2
-.LVL3:
-	.loc 1 27 16 view .LVU10
-	movi.n	a2, -1
-	.loc 1 26 8 view .LVU11
-	bnez.n	a10, .L1
-	.loc 1 29 12 view .LVU12
-	mov.n	a9, a10
+	l32i.n	a8, a8, 0
+	mov.n	a10, a2
+	callx8	a8
+.LVL2:
+	.loc 1 27 0
+	movi.n	a8, -1
+	.loc 1 26 0
+	bnez.n	a10, .L2
 	movi.n	a8, 0x20
 	loop	a8, .L3_LEND
-.LVL4:
+.LVL3:
 .L3:
-	.loc 1 30 9 is_stmt 1 discriminator 3 view .LVU13
-	.loc 1 30 15 is_stmt 0 discriminator 3 view .LVU14
-	add.n	a2, a5, a9
-	.loc 1 30 11 discriminator 3 view .LVU15
-	l8ui	a2, a2, 0
-	.loc 1 29 27 discriminator 3 view .LVU16
-	addi.n	a9, a9, 1
+	.loc 1 30 0 discriminator 3
+	l8ui	a9, a2, 0
+	addi.n	a2, a2, 1
+.LVL4:
+	or	a10, a10, a9
 .LVL5:
-	.loc 1 30 11 discriminator 3 view .LVU17
-	or	a10, a10, a2
+	extui	a10, a10, 0, 8
 .LVL6:
-	.loc 1 29 27 discriminator 3 view .LVU18
 	.L3_LEND:
-	.loc 1 32 5 is_stmt 1 view .LVU19
-	.loc 1 32 22 is_stmt 0 view .LVU20
+	.loc 1 32 0
 	addi.n	a10, a10, -1
 .LVL7:
-	.loc 1 32 16 view .LVU21
 	extui	a2, a10, 8, 1
-	.loc 1 32 12 view .LVU22
-	neg	a2, a2
+	neg	a8, a2
 .LVL8:
-.L1:
-	.loc 1 33 1 view .LVU23
+.L2:
+	.loc 1 33 0
+	mov.n	a2, a8
 	retw.n
 .LFE0:
 	.size	crypto_scalarmult_curve25519, .-crypto_scalarmult_curve25519
 	.section	.text.crypto_scalarmult_curve25519_base,"ax",@progbits
 	.literal_position
-	.literal .LC1, implementation
+	.literal .LC3, implementation
 	.align	4
 	.global	crypto_scalarmult_curve25519_base
 	.type	crypto_scalarmult_curve25519_base, @function
 crypto_scalarmult_curve25519_base:
-.LVL9:
 .LFB1:
-	.loc 1 37 1 is_stmt 1 view -0
-	.loc 1 37 1 is_stmt 0 view .LVU25
+	.loc 1 37 0
+.LVL9:
 	entry	sp, 32
 .LCFI1:
-	.loc 1 38 5 is_stmt 1 view .LVU26
-	.loc 1 38 26 is_stmt 0 view .LVU27
-	l32r	a8, .LC1
-	.loc 1 38 12 view .LVU28
+	.loc 1 38 0
+	l32r	a8, .LC3
 	mov.n	a11, a3
-	.loc 1 38 26 view .LVU29
 	l32i.n	a8, a8, 0
-	.loc 1 38 12 view .LVU30
 	mov.n	a10, a2
 	l32i.n	a8, a8, 4
 	callx8	a8
 .LVL10:
-	.loc 1 39 1 view .LVU31
+	.loc 1 39 0
 	mov.n	a2, a10
 .LVL11:
-	.loc 1 39 1 view .LVU32
 	retw.n
 .LFE1:
 	.size	crypto_scalarmult_curve25519_base, .-crypto_scalarmult_curve25519_base
@@ -108,55 +84,52 @@ crypto_scalarmult_curve25519_base:
 	.global	crypto_scalarmult_curve25519_bytes
 	.type	crypto_scalarmult_curve25519_bytes, @function
 crypto_scalarmult_curve25519_bytes:
-.LFB2:
-	.loc 1 43 1 is_stmt 1 view -0
+.LFB6:
 	entry	sp, 32
 .LCFI2:
-	.loc 1 44 5 view .LVU34
-	.loc 1 45 1 is_stmt 0 view .LVU35
 	movi.n	a2, 0x20
 	retw.n
-.LFE2:
+.LFE6:
 	.size	crypto_scalarmult_curve25519_bytes, .-crypto_scalarmult_curve25519_bytes
 	.section	.text.crypto_scalarmult_curve25519_scalarbytes,"ax",@progbits
 	.align	4
 	.global	crypto_scalarmult_curve25519_scalarbytes
 	.type	crypto_scalarmult_curve25519_scalarbytes, @function
 crypto_scalarmult_curve25519_scalarbytes:
-.LFB6:
+.LFB3:
+	.loc 1 49 0
+	.loc 1 49 0
 	entry	sp, 32
 .LCFI3:
+	.loc 1 51 0
 	movi.n	a2, 0x20
 	retw.n
-.LFE6:
+.LFE3:
 	.size	crypto_scalarmult_curve25519_scalarbytes, .-crypto_scalarmult_curve25519_scalarbytes
 	.section	.text._crypto_scalarmult_curve25519_pick_best_implementation,"ax",@progbits
 	.literal_position
-	.literal .LC2, implementation
-	.literal .LC3, crypto_scalarmult_curve25519_ref10_implementation
+	.literal .LC4, implementation
+	.literal .LC5, crypto_scalarmult_curve25519_ref10_implementation
 	.align	4
 	.global	_crypto_scalarmult_curve25519_pick_best_implementation
 	.type	_crypto_scalarmult_curve25519_pick_best_implementation, @function
 _crypto_scalarmult_curve25519_pick_best_implementation:
 .LFB4:
-	.loc 1 55 1 is_stmt 1 view -0
-	.loc 1 55 1 is_stmt 0 view .LVU37
+	.loc 1 55 0
 	entry	sp, 32
 .LCFI4:
-	.loc 1 59 5 is_stmt 1 view .LVU38
-	.loc 1 59 20 is_stmt 0 view .LVU39
-	l32r	a8, .LC2
-	l32r	a9, .LC3
-	.loc 1 67 1 view .LVU40
+	.loc 1 59 0
+	l32r	a9, .LC5
+	l32r	a8, .LC4
+	.loc 1 67 0
 	movi.n	a2, 0
-	.loc 1 59 20 view .LVU41
+	.loc 1 59 0
 	s32i.n	a9, a8, 0
-	.loc 1 66 5 is_stmt 1 view .LVU42
-	.loc 1 67 1 is_stmt 0 view .LVU43
+	.loc 1 67 0
 	retw.n
 .LFE4:
 	.size	_crypto_scalarmult_curve25519_pick_best_implementation, .-_crypto_scalarmult_curve25519_pick_best_implementation
-	.section	.data.implementation,"aw"
+	.section	.data.implementation,"aw",@progbits
 	.align	4
 	.type	implementation, @object
 	.size	implementation, 4
@@ -205,10 +178,10 @@ implementation:
 	.4byte	.LEFDE4-.LASFDE4
 .LASFDE4:
 	.4byte	.Lframe0
-	.4byte	.LFB2
-	.4byte	.LFE2-.LFB2
+	.4byte	.LFB6
+	.4byte	.LFE6-.LFB6
 	.byte	0x4
-	.4byte	.LCFI2-.LFB2
+	.4byte	.LCFI2-.LFB6
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -217,10 +190,10 @@ implementation:
 	.4byte	.LEFDE6-.LASFDE6
 .LASFDE6:
 	.4byte	.Lframe0
-	.4byte	.LFB6
-	.4byte	.LFE6-.LFB6
+	.4byte	.LFB3
+	.4byte	.LFE3-.LFB3
 	.byte	0x4
-	.4byte	.LCFI3-.LFB6
+	.4byte	.LCFI3-.LFB3
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -239,12 +212,12 @@ implementation:
 .LEFDE8:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.h"
-	.file 3 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h"
-	.file 4 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/ref10/x25519_ref10.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1fe
+	.4byte	0x1c9
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -252,7 +225,6 @@ implementation:
 	.4byte	.LASF10
 	.byte	0xc
 	.4byte	.LASF11
-	.4byte	.LASF12
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -264,8 +236,7 @@ implementation:
 	.4byte	.LASF5
 	.byte	0x3
 	.byte	0xd8
-	.byte	0x16
-	.4byte	0x38
+	.4byte	0x33
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x7
@@ -279,220 +250,118 @@ implementation:
 	.byte	0x8
 	.byte	0x2
 	.byte	0x5
-	.byte	0x10
-	.4byte	0x6e
+	.4byte	0x66
 	.uleb128 0x6
 	.4byte	.LASF2
 	.byte	0x2
 	.byte	0x6
-	.byte	0xb
-	.4byte	0x9f
+	.4byte	0x97
 	.byte	0
 	.uleb128 0x6
 	.4byte	.LASF3
 	.byte	0x2
 	.byte	0x8
-	.byte	0xb
-	.4byte	0xb9
+	.4byte	0xb1
 	.byte	0x4
 	.byte	0
 	.uleb128 0x7
-	.4byte	0x25
-	.4byte	0x87
+	.4byte	0x21
+	.4byte	0x7f
 	.uleb128 0x8
-	.4byte	0x87
+	.4byte	0x7f
 	.uleb128 0x8
-	.4byte	0x99
+	.4byte	0x8c
 	.uleb128 0x8
-	.4byte	0x99
+	.4byte	0x8c
 	.byte	0
 	.uleb128 0x9
 	.byte	0x4
-	.4byte	0x8d
+	.4byte	0x85
 	.uleb128 0x4
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF4
+	.uleb128 0x9
+	.byte	0x4
+	.4byte	0x92
 	.uleb128 0xa
-	.4byte	0x8d
+	.4byte	0x85
 	.uleb128 0x9
 	.byte	0x4
-	.4byte	0x94
-	.uleb128 0x9
-	.byte	0x4
-	.4byte	0x6e
+	.4byte	0x66
 	.uleb128 0x7
-	.4byte	0x25
-	.4byte	0xb9
+	.4byte	0x21
+	.4byte	0xb1
 	.uleb128 0x8
-	.4byte	0x87
+	.4byte	0x7f
 	.uleb128 0x8
-	.4byte	0x99
+	.4byte	0x8c
 	.byte	0
 	.uleb128 0x9
 	.byte	0x4
-	.4byte	0xa5
+	.4byte	0x9d
 	.uleb128 0x3
 	.4byte	.LASF6
 	.byte	0x2
 	.byte	0x9
-	.byte	0x3
-	.4byte	0x46
-	.uleb128 0xa
-	.4byte	0xbf
+	.4byte	0x41
 	.uleb128 0xb
-	.4byte	.LASF9
-	.byte	0x4
-	.byte	0x8
-	.byte	0x9
-	.4byte	0x46
-	.uleb128 0xc
-	.4byte	.LASF13
-	.byte	0x1
-	.byte	0xf
-	.byte	0x3b
-	.4byte	0xee
-	.uleb128 0x5
-	.byte	0x3
-	.4byte	implementation
-	.uleb128 0x9
-	.byte	0x4
-	.4byte	0xcb
-	.uleb128 0xd
-	.4byte	.LASF14
-	.byte	0x1
-	.byte	0x36
-	.byte	0x1
-	.4byte	0x25
-	.4byte	.LFB4
-	.4byte	.LFE4-.LFB4
-	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0xe
-	.4byte	.LASF15
-	.byte	0x1
-	.byte	0x30
-	.byte	0x1
-	.4byte	0x2c
-	.uleb128 0xf
-	.4byte	.LASF16
-	.byte	0x1
-	.byte	0x2a
-	.byte	0x1
-	.4byte	0x2c
-	.byte	0x1
-	.uleb128 0x10
 	.4byte	.LASF7
 	.byte	0x1
-	.byte	0x24
-	.byte	0x1
-	.4byte	0x25
-	.4byte	.LFB1
-	.4byte	.LFE1-.LFB1
-	.uleb128 0x1
-	.byte	0x9c
-	.4byte	0x16e
-	.uleb128 0x11
-	.string	"q"
-	.byte	0x1
-	.byte	0x24
-	.byte	0x32
-	.4byte	0x87
-	.4byte	.LLST3
-	.4byte	.LVUS3
-	.uleb128 0x12
-	.string	"n"
-	.byte	0x1
-	.byte	0x24
-	.byte	0x4a
-	.4byte	0x99
-	.uleb128 0x1
-	.byte	0x53
-	.uleb128 0x13
-	.4byte	.LVL10
-	.uleb128 0x14
-	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0x14
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x2
-	.byte	0x73
-	.sleb128 0
-	.byte	0
-	.byte	0
-	.uleb128 0x10
-	.4byte	.LASF8
-	.byte	0x1
 	.byte	0x14
-	.byte	0x1
-	.4byte	0x25
+	.4byte	0x21
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x1f2
-	.uleb128 0x11
+	.4byte	0x131
+	.uleb128 0xc
 	.string	"q"
 	.byte	0x1
 	.byte	0x14
-	.byte	0x2d
-	.4byte	0x87
+	.4byte	0x7f
 	.4byte	.LLST0
-	.4byte	.LVUS0
-	.uleb128 0x12
+	.uleb128 0xd
 	.string	"n"
 	.byte	0x1
 	.byte	0x14
-	.byte	0x45
-	.4byte	0x99
+	.4byte	0x8c
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0x12
+	.uleb128 0xd
 	.string	"p"
 	.byte	0x1
 	.byte	0x15
-	.byte	0x33
-	.4byte	0x99
+	.4byte	0x8c
 	.uleb128 0x1
 	.byte	0x54
-	.uleb128 0x15
+	.uleb128 0xe
 	.string	"i"
 	.byte	0x1
 	.byte	0x17
-	.byte	0xc
-	.4byte	0x2c
+	.4byte	0x28
 	.4byte	.LLST1
-	.4byte	.LVUS1
-	.uleb128 0x15
+	.uleb128 0xe
 	.string	"d"
 	.byte	0x1
 	.byte	0x18
-	.byte	0x13
-	.4byte	0x8d
+	.4byte	0x85
 	.4byte	.LLST2
-	.4byte	.LVUS2
-	.uleb128 0x16
-	.4byte	.LVL3
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0x14
+	.uleb128 0xf
+	.4byte	.LVL2
+	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
-	.byte	0x75
+	.byte	0x72
 	.sleb128 0
-	.uleb128 0x14
+	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.uleb128 0x14
+	.uleb128 0x10
 	.uleb128 0x1
 	.byte	0x5c
 	.uleb128 0x2
@@ -500,12 +369,84 @@ implementation:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x17
-	.4byte	0x116
-	.4byte	.LFB2
-	.4byte	.LFE2-.LFB2
+	.uleb128 0xb
+	.4byte	.LASF8
+	.byte	0x1
+	.byte	0x24
+	.4byte	0x21
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
+	.4byte	0x175
+	.uleb128 0xc
+	.string	"q"
+	.byte	0x1
+	.byte	0x24
+	.4byte	0x7f
+	.4byte	.LLST3
+	.uleb128 0xd
+	.string	"n"
+	.byte	0x1
+	.byte	0x24
+	.4byte	0x8c
+	.uleb128 0x1
+	.byte	0x53
+	.uleb128 0xf
+	.4byte	.LVL10
+	.uleb128 0x10
+	.uleb128 0x1
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0x10
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x2
+	.byte	0x73
+	.sleb128 0
+	.byte	0
+	.byte	0
+	.uleb128 0x11
+	.4byte	.LASF12
+	.byte	0x1
+	.byte	0x30
+	.4byte	0x28
+	.byte	0x1
+	.uleb128 0x12
+	.4byte	0x175
+	.4byte	.LFB3
+	.4byte	.LFE3-.LFB3
+	.uleb128 0x1
+	.byte	0x9c
+	.uleb128 0x13
+	.4byte	.LASF13
+	.byte	0x1
+	.byte	0x36
+	.4byte	0x21
+	.4byte	.LFB4
+	.4byte	.LFE4-.LFB4
+	.uleb128 0x1
+	.byte	0x9c
+	.uleb128 0x14
+	.4byte	.LASF9
+	.byte	0x1
+	.byte	0xf
+	.4byte	0x1b6
+	.uleb128 0x5
+	.byte	0x3
+	.4byte	implementation
+	.uleb128 0x9
+	.byte	0x4
+	.4byte	0x1bc
+	.uleb128 0xa
+	.4byte	0xb7
+	.uleb128 0x15
+	.4byte	.LASF14
+	.byte	0x4
+	.byte	0x8
+	.4byte	0x41
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -517,8 +458,6 @@ implementation:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -548,8 +487,6 @@ implementation:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -576,8 +513,6 @@ implementation:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
@@ -590,8 +525,6 @@ implementation:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
@@ -634,44 +567,8 @@ implementation:
 	.byte	0
 	.byte	0
 	.uleb128 0xb
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xd
 	.uleb128 0x2e
-	.byte	0
+	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0x19
 	.uleb128 0x3
@@ -679,8 +576,6 @@ implementation:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
@@ -694,28 +589,72 @@ implementation:
 	.uleb128 0x18
 	.uleb128 0x2117
 	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
+	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0xc
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0xd
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xe
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
 	.uleb128 0xf
+	.uleb128 0x4109
+	.byte	0x1
+	.uleb128 0x11
+	.uleb128 0x1
+	.byte	0
+	.byte	0
+	.uleb128 0x10
+	.uleb128 0x410a
+	.byte	0
+	.uleb128 0x2
+	.uleb128 0x18
+	.uleb128 0x2111
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x11
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -725,8 +664,6 @@ implementation:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
@@ -736,116 +673,7 @@ implementation:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x10
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
 	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x12
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x13
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.byte	0
-	.byte	0
-	.uleb128 0x14
-	.uleb128 0x410a
-	.byte	0
-	.uleb128 0x2
-	.uleb128 0x18
-	.uleb128 0x2111
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x15
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0x16
-	.uleb128 0x4109
-	.byte	0x1
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x2113
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x17
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x31
@@ -860,14 +688,126 @@ implementation:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
+	.uleb128 0x13
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x14
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x15
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
 	.byte	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
-.LVUS3:
-	.uleb128 0
-	.uleb128 .LVU32
-	.uleb128 .LVU32
-	.uleb128 0
+.LLST0:
+	.4byte	.LVL0
+	.4byte	.LVL3
+	.2byte	0x1
+	.byte	0x52
+	.4byte	.LVL3
+	.4byte	.LFE0
+	.2byte	0x4
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST1:
+	.4byte	.LVL3
+	.4byte	.LVL4
+	.2byte	0x7
+	.byte	0x72
+	.sleb128 0
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x1c
+	.byte	0x9f
+	.4byte	.LVL4
+	.4byte	.LVL6
+	.2byte	0x8
+	.byte	0xf3
+	.uleb128 0x1
+	.byte	0x52
+	.byte	0x20
+	.byte	0x72
+	.sleb128 0
+	.byte	0x22
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
+.LLST2:
+	.4byte	.LVL1
+	.4byte	.LVL3
+	.2byte	0x2
+	.byte	0x30
+	.byte	0x9f
+	.4byte	.LVL3
+	.4byte	.LVL5
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL6
+	.4byte	.LVL7
+	.2byte	0x1
+	.byte	0x5a
+	.4byte	.LVL7
+	.4byte	.LVL8
+	.2byte	0x3
+	.byte	0x7a
+	.sleb128 1
+	.byte	0x9f
+	.4byte	0
+	.4byte	0
 .LLST3:
 	.4byte	.LVL9
 	.4byte	.LVL11
@@ -879,71 +819,6 @@ implementation:
 	.byte	0xf3
 	.uleb128 0x1
 	.byte	0x52
-	.byte	0x9f
-	.4byte	0
-	.4byte	0
-.LVUS0:
-	.uleb128 0
-	.uleb128 .LVU7
-	.uleb128 .LVU7
-	.uleb128 0
-.LLST0:
-	.4byte	.LVL0
-	.4byte	.LVL2
-	.2byte	0x1
-	.byte	0x52
-	.4byte	.LVL2
-	.4byte	.LFE0
-	.2byte	0x1
-	.byte	0x55
-	.4byte	0
-	.4byte	0
-.LVUS1:
-	.uleb128 .LVU13
-	.uleb128 .LVU17
-	.uleb128 .LVU17
-	.uleb128 .LVU18
-	.uleb128 .LVU18
-	.uleb128 .LVU23
-.LLST1:
-	.4byte	.LVL4
-	.4byte	.LVL5
-	.2byte	0x1
-	.byte	0x59
-	.4byte	.LVL5
-	.4byte	.LVL6
-	.2byte	0x3
-	.byte	0x79
-	.sleb128 -1
-	.byte	0x9f
-	.4byte	.LVL6
-	.4byte	.LVL8
-	.2byte	0x1
-	.byte	0x59
-	.4byte	0
-	.4byte	0
-.LVUS2:
-	.uleb128 .LVU4
-	.uleb128 .LVU13
-	.uleb128 .LVU13
-	.uleb128 .LVU21
-	.uleb128 .LVU21
-	.uleb128 .LVU23
-.LLST2:
-	.4byte	.LVL1
-	.4byte	.LVL4
-	.2byte	0x2
-	.byte	0x30
-	.byte	0x9f
-	.4byte	.LVL4
-	.4byte	.LVL7
-	.2byte	0x1
-	.byte	0x5a
-	.4byte	.LVL7
-	.4byte	.LVL8
-	.2byte	0x3
-	.byte	0x7a
-	.sleb128 1
 	.byte	0x9f
 	.4byte	0
 	.4byte	0
@@ -959,8 +834,8 @@ implementation:
 	.4byte	.LFE0-.LFB0
 	.4byte	.LFB1
 	.4byte	.LFE1-.LFB1
-	.4byte	.LFB2
-	.4byte	.LFE2-.LFB2
+	.4byte	.LFB3
+	.4byte	.LFE3-.LFB3
 	.4byte	.LFB4
 	.4byte	.LFE4-.LFB4
 	.4byte	0
@@ -971,8 +846,8 @@ implementation:
 	.4byte	.LFE0
 	.4byte	.LFB1
 	.4byte	.LFE1
-	.4byte	.LFB2
-	.4byte	.LFE2
+	.4byte	.LFB3
+	.4byte	.LFE3
 	.4byte	.LFB4
 	.4byte	.LFE4
 	.4byte	0
@@ -980,38 +855,34 @@ implementation:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
+.LASF0:
+	.string	"unsigned int"
 .LASF5:
 	.string	"size_t"
 .LASF11:
-	.string	"/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.c"
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_scalarmult/curve25519/scalarmult_curve25519.c"
 .LASF13:
-	.string	"implementation"
-.LASF6:
-	.string	"crypto_scalarmult_curve25519_implementation"
+	.string	"_crypto_scalarmult_curve25519_pick_best_implementation"
 .LASF12:
-	.string	"/home/dieter/Development/ProjektEi/build/libsodium"
-.LASF8:
-	.string	"crypto_scalarmult_curve25519"
-.LASF4:
-	.string	"unsigned char"
-.LASF3:
-	.string	"mult_base"
-.LASF16:
-	.string	"crypto_scalarmult_curve25519_bytes"
-.LASF9:
-	.string	"crypto_scalarmult_curve25519_ref10_implementation"
-.LASF2:
-	.string	"mult"
-.LASF1:
-	.string	"short unsigned int"
-.LASF15:
 	.string	"crypto_scalarmult_curve25519_scalarbytes"
 .LASF10:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF2:
+	.string	"mult"
 .LASF7:
-	.string	"crypto_scalarmult_curve25519_base"
-.LASF0:
-	.string	"unsigned int"
+	.string	"crypto_scalarmult_curve25519"
 .LASF14:
-	.string	"_crypto_scalarmult_curve25519_pick_best_implementation"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.string	"crypto_scalarmult_curve25519_ref10_implementation"
+.LASF1:
+	.string	"short unsigned int"
+.LASF9:
+	.string	"implementation"
+.LASF4:
+	.string	"unsigned char"
+.LASF8:
+	.string	"crypto_scalarmult_curve25519_base"
+.LASF6:
+	.string	"crypto_scalarmult_curve25519_implementation"
+.LASF3:
+	.string	"mult_base"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

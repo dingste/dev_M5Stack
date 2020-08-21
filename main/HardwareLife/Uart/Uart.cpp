@@ -26,7 +26,7 @@ Uart::Uart(int rx, int tx,uart_port_t num) {
     uart_set_pin(nump /*UART_NUM_1*/, tx, rx, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
    // uart_set_pin(UART_NUM_1, GPIO_NUM_12, GPIO_NUM_13, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
     //uart_driver_install(UART_NUM_2, uart_buffer_size, uart_buffer_size, 10, &uart_queue, 0);
-   DEBUG << "UART init " << (int) uart_driver_install(nump /*UART_NUM_1*/, BUF_SIZE * 2, 0, 0, NULL, 0) << "\n";
+ //  DEBUG << "UART init " << (int) uart_driver_install(nump /*UART_NUM_1*/, BUF_SIZE * 2, 0, 0, NULL, 0) << "\n";
 }
 
 Uart::~Uart() {

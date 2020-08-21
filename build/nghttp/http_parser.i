@@ -1,131 +1,88 @@
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 1 "/home/dieter/Development/ProjektEi/build/nghttp//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/nghttp//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 24 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h" 1
-# 32 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h" 1
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 43 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
 
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
+
+
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef short unsigned int wchar_t;
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -136,32 +93,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -176,35 +111,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -213,21 +120,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -246,200 +152,34 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
 
 
 
 
 
 
-typedef unsigned long __clock_t;
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef short unsigned int wchar_t;
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
 
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
 
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-typedef __builtin_va_list __va_list;
-# 64 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
-typedef __int8_t int8_t ;
-
-
-
-typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 65 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef long time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -458,121 +198,109 @@ typedef unsigned long u_long;
 
 
 
-
-
 typedef unsigned short ushort;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 
 
 
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
 typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
 typedef long daddr_t;
 
 
 
 typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
 typedef __dev_t dev_t;
-
-
-
 typedef __uid_t uid_t;
-
-
-
 typedef __gid_t gid_t;
 
 
 
 
-typedef __pid_t pid_t;
+
+typedef int pid_t;
 
 
 
 
-typedef __key_t key_t;
 
 
 
+typedef long key_t;
 
 typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
 
 
 
 
 
-typedef __timer_t timer_t;
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
 
 
 
 
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
+typedef unsigned long timer_t;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -581,19 +309,20 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-
-
-
-
-
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
+
+
+
+
+
 } pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -602,15 +331,10 @@ typedef struct {
 
 
 
-
-
 typedef __uint32_t pthread_cond_t;
-
-
 
 typedef struct {
   int is_initialized;
-  clock_t clock;
 
 
 
@@ -624,36 +348,20 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h" 2
-# 46 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h" 2
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
+
+
+
+typedef __int8_t int8_t ;
+typedef __uint8_t uint8_t ;
 
 
 
@@ -664,8 +372,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -676,31 +396,46 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 47 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h" 2
-# 67 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 67 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h" 2
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 typedef struct http_parser http_parser;
 typedef struct http_parser_settings http_parser_settings;
-# 89 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 89 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 typedef int (*http_data_cb) (http_parser*, const char *at, size_t length);
 typedef int (*http_cb) (http_parser*);
-# 136 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 enum http_method
   {
 
@@ -723,7 +458,7 @@ enum flags
   , F_SKIPBODY = 1 << 6
   , F_CONTENTLENGTH = 1 << 7
   };
-# 212 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 enum http_errno {
   HPE_OK, HPE_CB_message_begin, HPE_CB_url, HPE_CB_header_field, HPE_CB_header_value, HPE_CB_headers_complete, HPE_CB_body, HPE_CB_message_complete, HPE_CB_status, HPE_CB_chunk_header, HPE_CB_chunk_complete, HPE_INVALID_EOF_STATE, HPE_HEADER_OVERFLOW, HPE_CLOSED_CONNECTION, HPE_INVALID_VERSION, HPE_INVALID_STATUS, HPE_INVALID_METHOD, HPE_INVALID_URL, HPE_INVALID_HOST, HPE_INVALID_PORT, HPE_INVALID_PATH, HPE_INVALID_QUERY_STRING, HPE_INVALID_FRAGMENT, HPE_LF_EXPECTED, HPE_INVALID_HEADER_TOKEN, HPE_INVALID_CONTENT_LENGTH, HPE_UNEXPECTED_CONTENT_LENGTH, HPE_INVALID_CHUNK_SIZE, HPE_INVALID_CONSTANT, HPE_INVALID_INTERNAL_STATE, HPE_STRICT, HPE_PAUSED, HPE_UNKNOWN,
 };
@@ -792,7 +527,7 @@ enum http_parser_url_fields
   , UF_USERINFO = 6
   , UF_MAX = 7
   };
-# 289 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 struct http_parser_url {
   uint16_t field_set;
   uint16_t port;
@@ -802,7 +537,7 @@ struct http_parser_url {
     uint16_t len;
   } field_data[UF_MAX];
 };
-# 310 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 unsigned long http_parser_version(void);
 
 void http_parser_init(http_parser *parser, enum http_parser_type type);
@@ -819,7 +554,7 @@ size_t http_parser_execute(http_parser *parser,
                            const http_parser_settings *settings,
                            const char *data,
                            size_t len);
-# 334 "/home/dieter/Development/esp-idf/components/nghttp/port/include/http_parser.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/http_parser.h"
 int http_should_keep_alive(const http_parser *parser);
 
 
@@ -844,34 +579,29 @@ void http_parser_pause(http_parser *parser, int paused);
 
 
 int http_body_is_final(const http_parser *parser);
-# 25 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -879,13 +609,9 @@ int http_body_is_final(const http_parser *parser);
 
 
 
-
-# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -936,12 +662,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -958,7 +684,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -975,13 +701,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -1009,7 +735,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -1020,7 +746,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -1030,7 +756,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -1076,12 +802,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -1111,8 +837,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -1121,25 +849,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -1157,6 +881,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -1167,18 +893,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -1188,11 +909,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -1221,21 +942,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -1250,26 +962,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -1284,54 +989,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -1355,40 +1048,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -1400,46 +1089,30 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/ctype.h" 1
 
 
 
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
 
 
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 27 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
 
 
 int isalnum (int __c);
@@ -1463,91 +1136,26 @@ int isblank (int __c);
 
 int isascii (int __c);
 int toascii (int __c);
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/ctype.h"
+const
 
-
-
-
-
-extern int isalnum_l (int __c, locale_t __l);
-extern int isalpha_l (int __c, locale_t __l);
-extern int isblank_l (int __c, locale_t __l);
-extern int iscntrl_l (int __c, locale_t __l);
-extern int isdigit_l (int __c, locale_t __l);
-extern int isgraph_l (int __c, locale_t __l);
-extern int islower_l (int __c, locale_t __l);
-extern int isprint_l (int __c, locale_t __l);
-extern int ispunct_l (int __c, locale_t __l);
-extern int isspace_l (int __c, locale_t __l);
-extern int isupper_l (int __c, locale_t __l);
-extern int isxdigit_l(int __c, locale_t __l);
-extern int tolower_l (int __c, locale_t __l);
-extern int toupper_l (int __c, locale_t __l);
-
-
-
-extern int isascii_l (int __c, locale_t __l);
-extern int toascii_l (int __c, locale_t __l);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-const char *__locale_ctype_ptr (void);
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
-const char *__locale_ctype_ptr_l (locale_t);
-# 165 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/ctype.h" 3 4
+extern char * const __ctype_ptr__;
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/ctype.h"
 extern const char _ctype_[];
 
 
-# 28 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -1571,55 +1179,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -1628,7 +1250,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -1638,49 +1261,25 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 30 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 31 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 2
-# 174 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-
-# 174 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 2
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static const char *method_strings[] =
   {
 
   "DELETE", "GET", "HEAD", "POST", "PUT", "CONNECT", "OPTIONS", "TRACE", "COPY", "LOCK", "MKCOL", "MOVE", "PROPFIND", "PROPPATCH", "SEARCH", "UNLOCK", "BIND", "REBIND", "UNBIND", "ACL", "REPORT", "MKACTIVITY", "CHECKOUT", "MERGE", "M-SEARCH", "NOTIFY", "SUBSCRIBE", "UNSUBSCRIBE", "PATCH", "PURGE", "MKCALENDAR", "LINK", "UNLINK",
 
   };
-# 189 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static const char tokens[256] = {
 
         0, 0, 0, 0, 0, 0, 0, 0,
@@ -1726,7 +1325,7 @@ static const int8_t unhex[256] =
   ,-1,10,11,12,13,14,15,-1,-1,-1,-1,-1,-1,-1,-1,-1
   ,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
   };
-# 243 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static const uint8_t normal_url_char[32] = {
 
         0 | 0 | 0 | 0 | 0 | 0 | 0 | 0,
@@ -1767,11 +1366,8 @@ enum state
   { s_dead = 1
 
   , s_start_req_or_res
-  , s_res_or_resp_I
   , s_res_or_resp_H
   , s_start_res
-  , s_res_I
-  , s_res_IC
   , s_res_H
   , s_res_HT
   , s_res_HTT
@@ -1895,7 +1491,7 @@ enum http_host_state
   , s_http_host_port_start
   , s_http_host_port
 };
-# 468 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static struct {
   const char *name;
   const char *description;
@@ -1905,7 +1501,7 @@ static struct {
 
 
 int http_message_needs_eof(const http_parser *parser);
-# 489 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
 static enum state
 parse_url_char(enum state s, const char ch)
 {
@@ -2081,19 +1677,7 @@ size_t http_parser_execute (http_parser *parser,
 
 
 
-        do { 
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 664, __func__, 
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 664 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 661, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
         return 0;
 
       case s_dead:
@@ -2159,43 +1743,15 @@ reexecute:
           break;
         parser->flags = 0;
         parser->content_length = 
-# 729 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 729 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         if (ch == 'H') {
           p_state = (enum state) (s_res_or_resp_H);;
 
-          do { 
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 734, __func__, 
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 734 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
-        } else if (ch == 'I') {
-          p_state = (enum state) (s_res_or_resp_I);;
-
-          do { 
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 738, __func__, 
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 738 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 731, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         } else {
           parser->type = HTTP_REQUEST;
           p_state = (enum state) (s_start_req);;
@@ -2204,13 +1760,6 @@ reexecute:
 
         break;
       }
-
-      case s_res_or_resp_I:
-        if (ch == 'C') {
-          parser->type = HTTP_RESPONSE;
-          p_state = (enum state) (s_res_IC);;
-        }
-        break;
 
       case s_res_or_resp_H:
         if (ch == 'T') {
@@ -2233,18 +1782,16 @@ reexecute:
       {
         parser->flags = 0;
         parser->content_length = 
-# 775 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 775 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         switch (ch) {
           case 'H':
             p_state = (enum state) (s_res_H);;
             break;
-          case 'I':
-            p_state = (enum state) (s_res_I);;
-            break;
+
           case '\r':
           case '\n':
             break;
@@ -2254,30 +1801,9 @@ reexecute:
             goto error;
         }
 
-        do { 
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 793, __func__, 
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 793 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 777, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
       }
-      case s_res_I:
-        do { if (ch != 'C') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
-        p_state = (enum state) (s_res_IC);;
-        break;
-
-      case s_res_IC:
-        do { if (ch != 'Y') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
-        p_state = (enum state) (s_res_http_minor);;
-        break;
 
       case s_res_H:
         do { if (ch != 'T') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
@@ -2435,44 +1961,20 @@ reexecute:
       case s_res_status:
         if (ch == '\r') {
           p_state = (enum state) (s_res_line_almost_done);;
-          do { 
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 962, __func__, 
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 937, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 962 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
 
         if (ch == '\n') {
           p_state = (enum state) (s_header_field_start);;
-          do { 
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 968, __func__, 
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 943, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } status_mark = 
+# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 968 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
@@ -2490,9 +1992,9 @@ reexecute:
           break;
         parser->flags = 0;
         parser->content_length = 
-# 984 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                 (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 984 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                           ;
 
         if (__builtin_expect(!!(!((unsigned char)(ch | 0x20) >= 'a' && (unsigned char)(ch | 0x20) <= 'z')), 0)) {
@@ -2526,19 +2028,7 @@ reexecute:
         }
         p_state = (enum state) (s_req_method);;
 
-        do { 
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1017, __func__, 
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 1017 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 992, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_begin), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_begin(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_begin); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
 
         break;
       }
@@ -2651,22 +2141,10 @@ reexecute:
         switch (ch) {
           case ' ':
             p_state = (enum state) (s_req_http_start);;
-            do { 
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ((
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1130, __func__, 
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ))
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ; if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1105, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
+# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1130 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           case '\r':
@@ -2676,22 +2154,10 @@ reexecute:
             p_state = (enum state) ((ch == '\r') ? s_req_line_almost_done : s_header_field_start);
 
                                    ;
-            do { 
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ((
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1139, __func__, 
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ))
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ; if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1114, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } url_mark = 
+# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1139 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1114 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           default:
@@ -2988,19 +2454,7 @@ reexecute:
               break;
 
             default:
-              
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ((
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             0 && "Unknown header_state"
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1435, __func__, 
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             "0 && \"Unknown header_state\""
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ))
-# 1435 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                ;
+              ((0 && "Unknown header_state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1410, __func__, "0 && \"Unknown header_state\""));
               break;
           }
         }
@@ -3014,22 +2468,10 @@ reexecute:
 
         if (ch == ':') {
           p_state = (enum state) (s_header_value_discard_ws);;
-          do { 
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1449, __func__, 
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_field_mark = 
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1424, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_field_mark = 
+# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1449 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           break;
         }
@@ -3120,22 +2562,10 @@ reexecute:
           if (ch == '\r') {
             p_state = (enum state) (s_header_almost_done);;
             parser->header_state = h_state;
-            do { 
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ((
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1539, __func__, 
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ))
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ; if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_value_mark = 
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1514, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } header_value_mark = 
+# 1514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1539 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             break;
           }
@@ -3144,22 +2574,10 @@ reexecute:
             p_state = (enum state) (s_header_almost_done);;
             do { parser->nread += (p - start); if (__builtin_expect(!!(parser->nread > ((80*1024))), 0)) { do { parser->http_errno = (HPE_HEADER_OVERFLOW); } while(0); goto error; } } while (0);
             parser->header_state = h_state;
-            do { 
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ((
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1547, __func__, 
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ))
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ; if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1522, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            ((void *)0)
-# 1547 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1522 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            ; } } while (0);
             goto reexecute;;
           }
@@ -3183,22 +2601,22 @@ reexecute:
               p_cr = (const char*) memchr(p, '\r', limit);
               p_lf = (const char*) memchr(p, '\n', limit);
               if (p_cr != 
-# 1569 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                          ((void *)0)
-# 1569 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                              ) {
                 if (p_lf != 
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                            ((void *)0) 
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                 && p_cr >= p_lf)
                   p = p_lf;
                 else
                   p = p_cr;
               } else if (__builtin_expect(!!(p_lf != 
-# 1574 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                         ((void *)0)
-# 1574 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                         ), 0)) {
                 p = p_lf;
               } else {
@@ -3211,19 +2629,7 @@ reexecute:
 
             case h_connection:
             case h_transfer_encoding:
-              
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ((
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             0 && "Shouldn't get here."
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1586, __func__, 
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             "0 && \"Shouldn't get here.\""
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ))
-# 1586 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                               ;
+              ((0 && "Shouldn't get here.") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1561, __func__, "0 && \"Shouldn't get here.\""));
               break;
 
             case h_content_length:
@@ -3244,9 +2650,9 @@ reexecute:
 
 
               if (__builtin_expect(!!((
-# 1606 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                  (0x7fffffffffffffffLL * 2ULL + 1ULL) 
-# 1606 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                  - 10) / 10 < parser->content_length), 0)) {
                 do { parser->http_errno = (HPE_INVALID_CONTENT_LENGTH); } while(0);
                 parser->header_state = h_state;
@@ -3435,22 +2841,10 @@ reexecute:
 
           do { if (!header_value_mark) { header_value_mark = p; } } while (0);
           p_state = (enum state) (s_header_field_start);;
-          do { 
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1794, __func__, 
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1769, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 1769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1794 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           goto reexecute;;
         }
@@ -3463,19 +2857,7 @@ reexecute:
         if (parser->flags & F_TRAILING) {
 
           p_state = (enum state) (s_message_done);;
-          do { 
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1806, __func__, 
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1806 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1781, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } } while (0);
           goto reexecute;;
         }
 
@@ -3494,7 +2876,7 @@ reexecute:
           ((parser->flags & (F_UPGRADE | F_CONNECTION_UPGRADE)) ==
            (F_UPGRADE | F_CONNECTION_UPGRADE) ||
            parser->method == HTTP_CONNECT);
-# 1835 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1810 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         if (settings->on_headers_complete) {
           switch (settings->on_headers_complete(parser)) {
             case 0:
@@ -3529,45 +2911,21 @@ reexecute:
 
         hasBody = parser->flags & F_CHUNKED ||
           (parser->content_length > 0 && parser->content_length != 
-# 1868 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                                   (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 1868 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1843 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                             );
         if (parser->upgrade && (parser->method == HTTP_CONNECT ||
                                 (parser->flags & F_SKIPBODY) || !hasBody)) {
 
           p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-          do { 
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1873, __func__, 
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1873 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1848, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
           do { parser->state = p_state; return ((p - data) + 1); } while (0);;
         }
 
         if (parser->flags & F_SKIPBODY) {
           p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-          do { 
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1879, __func__, 
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1879 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1854, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         } else if (parser->flags & F_CHUNKED) {
 
           p_state = (enum state) (s_chunk_size_start);;
@@ -3575,23 +2933,11 @@ reexecute:
           if (parser->content_length == 0) {
 
             p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-            do { 
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ((
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1887, __func__, 
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-           ))
-# 1887 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-           ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+            do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1862, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
           } else if (parser->content_length != 
-# 1888 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                               (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 1888 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1863 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                         ) {
 
             p_state = (enum state) (s_body_identity);;
@@ -3599,19 +2945,7 @@ reexecute:
             if (!http_message_needs_eof(parser)) {
 
               p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-              do { 
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ((
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1895, __func__, 
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-             ))
-# 1895 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-             ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+              do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1870, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
             } else {
 
               p_state = (enum state) (s_body_identity_eof);;
@@ -3627,26 +2961,18 @@ reexecute:
         uint64_t to_read = ((parser->content_length) < ((uint64_t) ((data + len) - p)) ? (parser->content_length) : ((uint64_t) ((data + len) - p)))
                                                              ;
 
-        
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->content_length != 0 && parser->content_length != 
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       (0x7fffffffffffffffLL * 2ULL + 1ULL)) ? (void)0 : __assert_func (
-                                                   "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+        ((parser->content_length != 0 && parser->content_length != 
+# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+       (0x7fffffffffffffffLL * 2ULL + 1ULL)
+# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+       ) ? (void)0 : __assert_func (
+                                                   "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         ,
-                                                   1912
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-        , __func__, 
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->content_length != 0 && parser->content_length != ULLONG_MAX"
-# 1911 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-                                                    
-# 1912 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                   ;
+                                                   1887
+# 1886 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+        , __func__, "parser->content_length != 0 && parser->content_length != ULLONG_MAX"))
+                                                    ;
 
 
 
@@ -3659,23 +2985,11 @@ reexecute:
 
         if (parser->content_length == 0) {
           p_state = (enum state) (s_message_done);;
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-          do { 
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ((
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1935, __func__, 
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-         ))
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-         ; if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark + 1))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+          do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1910, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark + 1))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
+# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
          ((void *)0)
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
          ; } } while (0);
           goto reexecute;;
         }
@@ -3692,19 +3006,7 @@ reexecute:
 
       case s_message_done:
         p_state = (enum state) ((http_should_keep_alive(parser) ? (parser->type == HTTP_REQUEST ? s_start_req : s_start_res) : s_dead));;
-        do { 
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1951, __func__, 
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 1951 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1926, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_message_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_message_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_message_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         if (parser->upgrade) {
 
           do { parser->state = p_state; return ((p - data) + 1); } while (0);;
@@ -3713,32 +3015,8 @@ reexecute:
 
       case s_chunk_size_start:
       {
-        
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->nread == 1
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1960, __func__, 
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->nread == 1"
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 1960 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                 ;
-        
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1961, __func__, 
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 1961 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
+        ((parser->nread == 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1935, __func__, "parser->nread == 1"));
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1936, __func__, "parser->flags & F_CHUNKED"));
 
         unhex_val = unhex[(unsigned char)ch];
         if (__builtin_expect(!!(unhex_val == -1), 0)) {
@@ -3755,19 +3033,7 @@ reexecute:
       {
         uint64_t t;
 
-        
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 1978, __func__, 
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 1978 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1953, __func__, "parser->flags & F_CHUNKED"));
 
         if (ch == '\r') {
           p_state = (enum state) (s_chunk_size_almost_done);;
@@ -3792,9 +3058,9 @@ reexecute:
 
 
         if (__builtin_expect(!!((
-# 2002 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
            (0x7fffffffffffffffLL * 2ULL + 1ULL) 
-# 2002 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 1977 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
            - 16) / 16 < parser->content_length), 0)) {
           do { parser->http_errno = (HPE_INVALID_CONTENT_LENGTH); } while(0);
           goto error;
@@ -3806,19 +3072,7 @@ reexecute:
 
       case s_chunk_parameters:
       {
-        
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2013, __func__, 
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2013 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1988, __func__, "parser->flags & F_CHUNKED"));
 
         if (ch == '\r') {
           p_state = (enum state) (s_chunk_size_almost_done);;
@@ -3829,19 +3083,7 @@ reexecute:
 
       case s_chunk_size_almost_done:
       {
-        
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2024, __func__, 
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 1999, __func__, "parser->flags & F_CHUNKED"));
         do { if (ch != '\n') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
 
         parser->nread = 0;
@@ -3852,19 +3094,7 @@ reexecute:
         } else {
           p_state = (enum state) (s_chunk_data);;
         }
-        do { 
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2035, __func__, 
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2035 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_chunk_header), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_header(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_header); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2010, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_header), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_header(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_header); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
       }
 
@@ -3873,39 +3103,19 @@ reexecute:
         uint64_t to_read = ((parser->content_length) < ((uint64_t) ((data + len) - p)) ? (parser->content_length) : ((uint64_t) ((data + len) - p)))
                                                              ;
 
-        
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2044, __func__, 
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
-        
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->content_length != 0 && parser->content_length != 
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       (0x7fffffffffffffffLL * 2ULL + 1ULL)) ? (void)0 : __assert_func (
-                                                   "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2019, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->content_length != 0 && parser->content_length != 
+# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
+       (0x7fffffffffffffffLL * 2ULL + 1ULL)
+# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+       ) ? (void)0 : __assert_func (
+                                                   "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
         ,
-                                                   2046
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-        , __func__, 
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->content_length != 0 && parser->content_length != ULLONG_MAX"
-# 2045 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-                                                    
-# 2046 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                   ;
+                                                   2021
+# 2020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+        , __func__, "parser->content_length != 0 && parser->content_length != ULLONG_MAX"))
+                                                    ;
 
 
 
@@ -3922,218 +3132,74 @@ reexecute:
       }
 
       case s_chunk_data_almost_done:
-        
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2063, __func__, 
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2063 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
-        
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->content_length == 0
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2064, __func__, 
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->content_length == 0"
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2064 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                          ;
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2038, __func__, "parser->flags & F_CHUNKED"));
+        ((parser->content_length == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2039, __func__, "parser->content_length == 0"));
         do { if (ch != '\r') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
         p_state = (enum state) (s_chunk_data_done);;
-        do { 
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2067, __func__, 
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } body_mark = 
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2042, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } body_mark = 
+# 2042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
        ((void *)0)
-# 2067 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
        ; } } while (0);
         break;
 
       case s_chunk_data_done:
-        
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       parser->flags & F_CHUNKED
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2071, __func__, 
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "parser->flags & F_CHUNKED"
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2071 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                        ;
+        ((parser->flags & F_CHUNKED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2046, __func__, "parser->flags & F_CHUNKED"));
         do { if (ch != '\n') { do { parser->http_errno = (HPE_STRICT); } while(0); goto error; } } while (0);
         parser->nread = 0;
         p_state = (enum state) (s_chunk_size_start);;
-        do { 
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2075, __func__, 
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       ; if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
+        do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2050, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (__builtin_expect(!!(settings->on_chunk_complete), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_chunk_complete(parser)), 0)) { do { parser->http_errno = (HPE_CB_chunk_complete); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data + 1); } } } while (0);
         break;
 
       default:
-        
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       0 && "unhandled state"
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2079, __func__, 
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "0 && \"unhandled state\""
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2079 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                     ;
+        ((0 && "unhandled state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2054, __func__, "0 && \"unhandled state\""));
         do { parser->http_errno = (HPE_INVALID_INTERNAL_STATE); } while(0);
         goto error;
     }
   }
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-  
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func (
+# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+  ((((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1) ? (void)0 : __assert_func (
 
 
 
-                                     "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+                                     "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
   ,
 
 
 
-                                     2099
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-  , __func__, 
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1"
-# 2095 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
+                                     2074
+# 2070 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
+  , __func__, "((header_field_mark ? 1 : 0) + (header_value_mark ? 1 : 0) + (url_mark ? 1 : 0) + (body_mark ? 1 : 0) + (status_mark ? 1 : 0)) <= 1"))
 
 
 
-                                      
-# 2099 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                     ;
+                                      ;
 
-  do { 
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2101, __func__, 
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ; if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_field_mark = 
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2076, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_field_mark) { if (__builtin_expect(!!(settings->on_header_field), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_field(parser, header_field_mark, (p - header_field_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_field); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_field_mark = 
+# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2101 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { 
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2102, __func__, 
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ; if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2077, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (header_value_mark) { if (__builtin_expect(!!(settings->on_header_value), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_header_value(parser, header_value_mark, (p - header_value_mark))), 0)) { do { parser->http_errno = (HPE_CB_header_value); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } header_value_mark = 
+# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2102 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { 
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2103, __func__, 
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ; if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } url_mark = 
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2078, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (url_mark) { if (__builtin_expect(!!(settings->on_url), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_url(parser, url_mark, (p - url_mark))), 0)) { do { parser->http_errno = (HPE_CB_url); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } url_mark = 
+# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2103 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { 
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2104, __func__, 
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ; if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2079, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (body_mark) { if (__builtin_expect(!!(settings->on_body), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_body(parser, body_mark, (p - body_mark))), 0)) { do { parser->http_errno = (HPE_CB_body); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } body_mark = 
+# 2079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2104 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
-  do { 
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((enum http_errno) (parser)->http_errno) == HPE_OK
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2105, __func__, 
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "HTTP_PARSER_ERRNO(parser) == HPE_OK"
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ; if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } status_mark = 
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+  do { ((((enum http_errno) (parser)->http_errno) == HPE_OK) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2080, __func__, "HTTP_PARSER_ERRNO(parser) == HPE_OK")); if (status_mark) { if (__builtin_expect(!!(settings->on_status), 1)) { parser->state = p_state; if (__builtin_expect(!!(0 != settings->on_status(parser, status_mark, (p - status_mark))), 0)) { do { parser->http_errno = (HPE_CB_status); } while(0); } p_state = (enum state) (parser->state);; if (__builtin_expect(!!(((enum http_errno) (parser)->http_errno) != HPE_OK), 0)) { return (p - data); } } status_mark = 
+# 2080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
  ((void *)0)
-# 2105 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2080 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
  ; } } while (0);
 
   do { parser->state = p_state; return (len); } while (0);;
@@ -4164,9 +3230,9 @@ http_message_needs_eof (const http_parser *parser)
   }
 
   if ((parser->flags & F_CHUNKED) || parser->content_length != 
-# 2134 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                               (0x7fffffffffffffffLL * 2ULL + 1ULL)
-# 2134 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                         ) {
     return 0;
   }
@@ -4220,37 +3286,13 @@ http_parser_settings_init(http_parser_settings *settings)
 
 const char *
 http_errno_name(enum http_errno err) {
-  
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2187, __func__, 
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2187 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                       ;
+  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2162, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
   return http_strerror_tab[err].name;
 }
 
 const char *
 http_errno_description(enum http_errno err) {
-  
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- ((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2193, __func__, 
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2193 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                       ;
+  ((((size_t) err) < (sizeof(http_strerror_tab) / sizeof((http_strerror_tab)[0]))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2168, __func__, "((size_t) err) < ARRAY_SIZE(http_strerror_tab)"));
   return http_strerror_tab[err].description;
 }
 
@@ -4343,19 +3385,7 @@ http_parse_host(const char * buf, struct http_parser_url *u, int found_at) {
   const char *p;
   size_t buflen = u->field_data[UF_HOST].off + u->field_data[UF_HOST].len;
 
-  
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ((
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- u->field_set & (1 << UF_HOST)
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2286, __func__, 
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
- "u->field_set & (1 << UF_HOST)"
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
- ))
-# 2286 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                      ;
+  ((u->field_set & (1 << UF_HOST)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2261, __func__, "u->field_set & (1 << UF_HOST)"));
 
   u->field_data[UF_HOST].len = 0;
 
@@ -4489,19 +3519,7 @@ http_parser_parse_url(const char *buf, size_t buflen, int is_connect,
         break;
 
       default:
-        
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ((
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       !"Unexpected state"
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2420, __func__, 
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-       "!\"Unexpected state\""
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-       ))
-# 2420 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                  ;
+        ((!"Unexpected state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2395, __func__, "!\"Unexpected state\""));
         return 1;
     }
 
@@ -4539,9 +3557,9 @@ http_parser_parse_url(const char *buf, size_t buflen, int is_connect,
   if (u->field_set & (1 << UF_PORT)) {
 
     unsigned long v = strtoul(buf + u->field_data[UF_PORT].off, 
-# 2457 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
+# 2432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c" 3 4
                                                                ((void *)0)
-# 2457 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
+# 2432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c"
                                                                    , 10);
 
 
@@ -4565,19 +3583,7 @@ http_parser_pause(http_parser *parser, int paused) {
       ((enum http_errno) (parser)->http_errno) == HPE_PAUSED) {
     do { parser->http_errno = ((paused) ? HPE_PAUSED : HPE_OK); } while(0);
   } else {
-    
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-   ((
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-   0 && "Attempting to pause parser in error state"
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c", 2480, __func__, 
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-   "0 && \"Attempting to pause parser in error state\""
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c" 3 4
-   ))
-# 2480 "/home/dieter/Development/esp-idf/components/nghttp/port/http_parser.c"
-                                                           ;
+    ((0 && "Attempting to pause parser in error state") ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/http_parser.c", 2455, __func__, "0 && \"Attempting to pause parser in error state\""));
   }
 }
 

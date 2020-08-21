@@ -6,15 +6,12 @@
 	.global	set_audio_state
 	.type	set_audio_state, @function
 set_audio_state:
-.LVL0:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/hci_audio.c"
-	.loc 1 4 1 view -0
-	.loc 1 4 1 is_stmt 0 view .LVU1
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/hci_audio.c"
+	.loc 1 4 0
+.LVL0:
 	entry	sp, 32
 .LCFI0:
-	.loc 1 6 5 is_stmt 1 view .LVU2
-	.loc 1 7 1 is_stmt 0 view .LVU3
 	retw.n
 .LFE0:
 	.size	set_audio_state, .-set_audio_state
@@ -47,12 +44,12 @@ set_audio_state:
 .LEFDE0:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h"
-	.file 3 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h"
-	.file 4 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/include/hci/hci_audio.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/include/hci/hci_audio.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x10f
+	.4byte	0xff
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -60,7 +57,6 @@ set_audio_state:
 	.4byte	.LASF21
 	.byte	0xc
 	.4byte	.LASF22
-	.4byte	.LASF23
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -79,9 +75,8 @@ set_audio_state:
 	.uleb128 0x3
 	.4byte	.LASF7
 	.byte	0x2
-	.byte	0x39
-	.byte	0x1c
-	.4byte	0x46
+	.byte	0x16
+	.4byte	0x41
 	.uleb128 0x2
 	.byte	0x2
 	.byte	0x7
@@ -105,17 +100,14 @@ set_audio_state:
 	.uleb128 0x3
 	.4byte	.LASF8
 	.byte	0x3
-	.byte	0x24
-	.byte	0x14
-	.4byte	0x3a
+	.byte	0x21
+	.4byte	0x36
 	.uleb128 0x5
-	.byte	0x7
 	.byte	0x4
-	.4byte	0x54
+	.4byte	0x4f
 	.byte	0x4
 	.byte	0x18
-	.byte	0xe
-	.4byte	0x9c
+	.4byte	0x94
 	.uleb128 0x6
 	.4byte	.LASF9
 	.byte	0
@@ -133,16 +125,13 @@ set_audio_state:
 	.4byte	.LASF13
 	.byte	0x4
 	.byte	0x1d
-	.byte	0x3
-	.4byte	0x75
+	.4byte	0x6f
 	.uleb128 0x5
-	.byte	0x7
 	.byte	0x4
-	.4byte	0x54
+	.4byte	0x4f
 	.byte	0x4
 	.byte	0x20
-	.byte	0xe
-	.4byte	0xc9
+	.4byte	0xbe
 	.uleb128 0x6
 	.4byte	.LASF14
 	.byte	0
@@ -157,13 +146,11 @@ set_audio_state:
 	.4byte	.LASF17
 	.byte	0x4
 	.byte	0x24
-	.byte	0x3
-	.4byte	0xa8
+	.4byte	0x9f
 	.uleb128 0x7
-	.4byte	.LASF24
+	.4byte	.LASF23
 	.byte	0x1
 	.byte	0x3
-	.byte	0x6
 	.4byte	.LFB0
 	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
@@ -172,24 +159,21 @@ set_audio_state:
 	.4byte	.LASF18
 	.byte	0x1
 	.byte	0x3
-	.byte	0x1f
-	.4byte	0x69
+	.4byte	0x64
 	.uleb128 0x1
 	.byte	0x52
 	.uleb128 0x8
 	.4byte	.LASF19
 	.byte	0x1
 	.byte	0x3
-	.byte	0x33
-	.4byte	0xc9
+	.4byte	0xbe
 	.uleb128 0x1
 	.byte	0x53
 	.uleb128 0x8
 	.4byte	.LASF20
 	.byte	0x1
 	.byte	0x3
-	.byte	0x46
-	.4byte	0x9c
+	.4byte	0x94
 	.uleb128 0x1
 	.byte	0x54
 	.byte	0
@@ -204,8 +188,6 @@ set_audio_state:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -235,8 +217,6 @@ set_audio_state:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -255,8 +235,6 @@ set_audio_state:
 	.uleb128 0x5
 	.uleb128 0x4
 	.byte	0x1
-	.uleb128 0x3e
-	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0xb
 	.uleb128 0x49
@@ -264,8 +242,6 @@ set_audio_state:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
@@ -291,8 +267,6 @@ set_audio_state:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
 	.uleb128 0x11
@@ -313,8 +287,6 @@ set_audio_state:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
@@ -349,15 +321,15 @@ set_audio_state:
 .LASF17:
 	.string	"sco_codec_t"
 .LASF22:
-	.string	"/home/dieter/Development/esp-idf/components/bt/host/bluedroid/hci/hci_audio.c"
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/hci/hci_audio.c"
 .LASF12:
 	.string	"SCO_STATE_SETUP"
 .LASF14:
 	.string	"SCO_CODEC_NONE"
-.LASF23:
-	.string	"/home/dieter/Development/ProjektEi/build/bt"
 .LASF13:
 	.string	"sco_state_t"
+.LASF21:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF1:
 	.string	"unsigned char"
 .LASF19:
@@ -376,13 +348,11 @@ set_audio_state:
 	.string	"long long unsigned int"
 .LASF5:
 	.string	"long long int"
-.LASF21:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF11:
 	.string	"SCO_STATE_ON"
 .LASF2:
 	.string	"short int"
-.LASF24:
+.LASF23:
 	.string	"set_audio_state"
 .LASF8:
 	.string	"uint16_t"
@@ -394,4 +364,4 @@ set_audio_state:
 	.string	"SCO_CODEC_CVSD"
 .LASF16:
 	.string	"SCO_CODEC_MSBC"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

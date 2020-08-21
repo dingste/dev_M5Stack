@@ -1,117 +1,99 @@
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/ProjektEi/build/expat//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/expat//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -122,32 +104,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -162,35 +122,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -199,21 +131,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -232,44 +163,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -277,10 +171,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -331,12 +223,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -353,7 +245,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -370,13 +262,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -404,7 +296,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -415,7 +307,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -425,7 +317,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -471,12 +363,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -506,8 +398,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -516,69 +410,24 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -602,55 +451,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -659,7 +522,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -669,6 +533,12 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+
+
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
 
 
@@ -676,16 +546,8 @@ char *strsignal (int __signo);
 
 
 
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 35 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
 
 
@@ -693,37 +555,26 @@ char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 43 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/port/include/expat_config.h" 1
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
 
 
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/expat/port/include/expat_config.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
-# 141 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
-
-# 141 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef char XML_Char;
 typedef char XML_LChar;
-# 154 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef long XML_Index;
 typedef unsigned long XML_Size;
-# 55 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/internal.h" 1
-# 118 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/internal.h"
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h" 1
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
 void
 _INTERNAL_trim_to_complete_utf8_characters(const char * from, const char ** fromLimRef);
-# 56 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
-# 140 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct position {
 
   XML_Size lineNumber;
@@ -790,7 +641,7 @@ struct encoding {
   char isUtf8;
   char isUtf16;
 };
-# 290 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct {
   ENCODING initEnc;
   const ENCODING **encPtr;
@@ -842,9 +693,9 @@ XmlInitUnknownEncodingNS(void *mem,
                          int *table,
                          CONVERTER convert,
                          void *userData);
-# 57 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/nametab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/nametab.h"
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/nametab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/nametab.h"
 static const unsigned namingBitmap[] = {
 0x00000000, 0x00000000, 0x00000000, 0x00000000,
 0x00000000, 0x00000000, 0x00000000, 0x00000000,
@@ -995,8 +846,8 @@ static const unsigned char namePages[] = {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
-# 58 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 156 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static int
 isNever(const ENCODING *UNUSED_enc __attribute__((__unused__)), const char *UNUSED_p __attribute__((__unused__)))
 {
@@ -1069,11 +920,11 @@ struct normal_encoding {
   int ( *isInvalid3)(const ENCODING *, const char *);
   int ( *isInvalid4)(const ENCODING *, const char *);
 };
-# 268 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 268 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static int checkCharRefNumber(int);
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h"
 enum {
   BT_NONXML,
   BT_MALFORM,
@@ -1114,14 +965,14 @@ enum {
   BT_VERBAR
 };
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 73 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h" 2
-# 271 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
-# 272 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 344 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
-# 137 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.h" 2
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
 static int
 normal_scanComment(const ENCODING *enc, const char *ptr,
                     const char *end, const char **nextTokPtr)
@@ -1374,7 +1225,7 @@ normal_cdataSectionTok(const ENCODING *enc, const char *ptr,
   }
   while ((end - ptr >= 1 * 1)) {
     switch ((((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)])) {
-# 397 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (((const struct normal_encoding *) (enc))->isInvalid2(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (((const struct normal_encoding *) (enc))->isInvalid3(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (((const struct normal_encoding *) (enc))->isInvalid4(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_NONXML:
@@ -1839,7 +1690,7 @@ normal_contentTok(const ENCODING *enc, const char *ptr, const char *end,
   }
   while ((end - ptr >= 1 * 1)) {
     switch ((((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)])) {
-# 869 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (((const struct normal_encoding *) (enc))->isInvalid2(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (((const struct normal_encoding *) (enc))->isInvalid3(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (((const struct normal_encoding *) (enc))->isInvalid4(enc, ptr))) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_RSQB:
@@ -2087,7 +1938,7 @@ normal_prologTok(const ENCODING *enc, const char *ptr, const char *end,
     return 17;
   case BT_NUM:
     return normal_scanPoundName(enc, ptr + 1, end, nextTokPtr);
-# 1132 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2) return -2; if ((((const struct normal_encoding *) (enc))->isNmstrt2(enc, ptr))) { ptr += 2; tok = 18; break; } if ((((const struct normal_encoding *) (enc))->isName2(enc, ptr))) { ptr += 2; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD3: if (end - ptr < 3) return -2; if ((((const struct normal_encoding *) (enc))->isNmstrt3(enc, ptr))) { ptr += 3; tok = 18; break; } if ((((const struct normal_encoding *) (enc))->isName3(enc, ptr))) { ptr += 3; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD4: if (end - ptr < 4) return -2; if ((((const struct normal_encoding *) (enc))->isNmstrt4(enc, ptr))) { ptr += 4; tok = 18; break; } if ((((const struct normal_encoding *) (enc))->isName4(enc, ptr))) { ptr += 4; tok = 19; break; } *nextTokPtr = ptr; return 0;
 
   case BT_NMSTRT:
@@ -2432,7 +2283,7 @@ normal_getAtts(const ENCODING *enc, const char *ptr,
 
   for (ptr += 1;; ptr += 1) {
     switch ((((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)])) {
-# 1486 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (2 - 1); break; case BT_LEAD3: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (3 - 1); break; case BT_LEAD4: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (4 - 1); break;
 
     case BT_NONASCII:
@@ -2698,8 +2549,8 @@ normal_updatePosition(const ENCODING *enc,
     pos->columnNumber++;
   }
 }
-# 345 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 357 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 enum {
   UTF8_cval1 = 0x00,
   UTF8_cval2 = 0xc0,
@@ -2748,22 +2599,22 @@ utf8_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)),
             char **toP, const char *toLim)
 {
   
-# 404 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
  _Bool 
-# 404 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
       input_incomplete = 
-# 404 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                          0
-# 404 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                               ;
   
-# 405 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
  _Bool 
-# 405 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
       output_exhausted = 
-# 405 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                          0
-# 405 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                               ;
 
 
@@ -2772,9 +2623,9 @@ utf8_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)),
   if (bytesAvailable > bytesStorable) {
     fromLim = *fromP + bytesStorable;
     output_exhausted = 
-# 412 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       1
-# 412 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                           ;
   }
 
@@ -2784,9 +2635,9 @@ utf8_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)),
     _INTERNAL_trim_to_complete_utf8_characters(*fromP, &fromLim);
     if (fromLim < fromLimBefore) {
       input_incomplete = 
-# 420 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         1
-# 420 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                             ;
     }
   }
@@ -2870,8 +2721,8 @@ after:
 static const struct normal_encoding utf8_encoding_ns = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, utf8_toUtf8, utf8_toUtf16, 1, 1, 0 },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -2904,9 +2755,9 @@ static const struct normal_encoding utf8_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 504 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
+# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
@@ -2939,7 +2790,7 @@ static const struct normal_encoding utf8_encoding_ns = {
            BT_LEAD4, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_MALFORM, BT_MALFORM,
-# 505 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   utf8_isName2, utf8_isName3, isNever, utf8_isNmstrt2, utf8_isNmstrt3, isNever, utf8_isInvalid2, utf8_isInvalid3, utf8_isInvalid4
 };
@@ -2949,8 +2800,8 @@ static const struct normal_encoding utf8_encoding = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, utf8_toUtf8, utf8_toUtf16, 1, 1, 0 },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -2983,10 +2834,10 @@ static const struct normal_encoding utf8_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 515 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
@@ -3019,7 +2870,7 @@ static const struct normal_encoding utf8_encoding = {
            BT_LEAD4, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_MALFORM, BT_MALFORM,
-# 517 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   utf8_isName2, utf8_isName3, isNever, utf8_isNmstrt2, utf8_isNmstrt3, isNever, utf8_isInvalid2, utf8_isInvalid3, utf8_isInvalid4
 };
@@ -3029,8 +2880,8 @@ static const struct normal_encoding utf8_encoding = {
 static const struct normal_encoding internal_utf8_encoding_ns = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, utf8_toUtf8, utf8_toUtf16, 1, 1, 0 },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3063,9 +2914,9 @@ static const struct normal_encoding internal_utf8_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 527 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
+# 527 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
@@ -3098,7 +2949,7 @@ static const struct normal_encoding internal_utf8_encoding_ns = {
            BT_LEAD4, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_MALFORM, BT_MALFORM,
-# 528 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   utf8_isName2, utf8_isName3, isNever, utf8_isNmstrt2, utf8_isNmstrt3, isNever, utf8_isInvalid2, utf8_isInvalid3, utf8_isInvalid4
 };
@@ -3109,8 +2960,8 @@ static const struct normal_encoding internal_utf8_encoding = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, utf8_toUtf8, utf8_toUtf16, 1, 1, 0 },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3143,10 +2994,10 @@ static const struct normal_encoding internal_utf8_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 539 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/utf8tab.h"
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
            BT_TRAIL, BT_TRAIL, BT_TRAIL, BT_TRAIL,
@@ -3179,7 +3030,7 @@ static const struct normal_encoding internal_utf8_encoding = {
            BT_LEAD4, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_MALFORM, BT_MALFORM,
-# 541 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   utf8_isName2, utf8_isName3, isNever, utf8_isNmstrt2, utf8_isNmstrt3, isNever, utf8_isInvalid2, utf8_isInvalid3, utf8_isInvalid4
 };
@@ -3228,8 +3079,8 @@ latin1_toUtf16(const ENCODING *UNUSED_enc __attribute__((__unused__)),
 static const struct normal_encoding latin1_encoding_ns = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, latin1_toUtf8, latin1_toUtf16, 1, 0, 0 },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3262,9 +3113,9 @@ static const struct normal_encoding latin1_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 590 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -3297,45 +3148,45 @@ static const struct normal_encoding latin1_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 591 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 592 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
 
-# 593 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -3344,8 +3195,8 @@ static const struct normal_encoding latin1_encoding = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, latin1_toUtf8, latin1_toUtf16, 1, 0, 0 },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3378,10 +3229,10 @@ static const struct normal_encoding latin1_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 602 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -3414,45 +3265,45 @@ static const struct normal_encoding latin1_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 604 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 605 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
 
-# 606 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 static enum XML_Convert_Result
@@ -3474,8 +3325,8 @@ ascii_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)),
 static const struct normal_encoding ascii_encoding_ns = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, ascii_toUtf8, latin1_toUtf16, 1, 1, 0 },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3508,46 +3359,46 @@ static const struct normal_encoding ascii_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 628 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
   },
   
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 630 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
 
-# 631 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 631 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -3556,8 +3407,8 @@ static const struct normal_encoding ascii_encoding = {
   { { normal_prologTok, normal_contentTok, normal_cdataSectionTok , normal_ignoreSectionTok }, { normal_attributeValueTok, normal_entityValueTok }, normal_nameMatchesAscii, normal_nameLength, normal_skipS, normal_getAtts, normal_charRefNumber, normal_predefinedEntityName, normal_updatePosition, normal_isPublicId, ascii_toUtf8, latin1_toUtf16, 1, 1, 0 },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -3590,47 +3441,47 @@ static const struct normal_encoding ascii_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 640 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
 
   },
   
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                       , 
-# 643 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                       ((void *)0)
 
-# 644 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 static int
@@ -3651,15 +3502,15 @@ unicode_byte_type(char hi, char lo)
   }
   return BT_NONASCII;
 }
-# 764 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static enum XML_Convert_Result little2_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)), const char **fromP, const char *fromLim, char **toP, const char *toLim) { const char *from = *fromP; fromLim = from + (((fromLim - from) >> 1) << 1); for (; from < fromLim; from += 2) { int plane; unsigned char lo2; unsigned char lo = ((unsigned char)(from)[0]); unsigned char hi = ((unsigned char)(from)[1]); switch (hi) { case 0: if (lo < 0x80) { if (*toP == toLim) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = lo; break; } case 0x1: case 0x2: case 0x3: case 0x4: case 0x5: case 0x6: case 0x7: if (toLim - *toP < 2) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = ((lo >> 6) | (hi << 2) | UTF8_cval2); *(*toP)++ = ((lo & 0x3f) | 0x80); break; default: if (toLim - *toP < 3) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = ((hi >> 4) | UTF8_cval3); *(*toP)++ = (((hi & 0xf) << 2) | (lo >> 6) | 0x80); *(*toP)++ = ((lo & 0x3f) | 0x80); break; case 0xD8: case 0xD9: case 0xDA: case 0xDB: if (toLim - *toP < 4) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } if (fromLim - from < 4) { *fromP = from; return XML_CONVERT_INPUT_INCOMPLETE; } plane = (((hi & 0x3) << 2) | ((lo >> 6) & 0x3)) + 1; *(*toP)++ = ((plane >> 2) | UTF8_cval4); *(*toP)++ = (((lo >> 2) & 0xF) | ((plane & 0x3) << 4) | 0x80); from += 2; lo2 = ((unsigned char)(from)[0]); *(*toP)++ = (((lo & 0x3) << 4) | ((((unsigned char)(from)[1]) & 0x3) << 2) | (lo2 >> 6) | 0x80); *(*toP)++ = ((lo2 & 0x3f) | 0x80); break; } } *fromP = from; if (from < fromLim) return XML_CONVERT_INPUT_INCOMPLETE; else return XML_CONVERT_COMPLETED; }
 static enum XML_Convert_Result little2_toUtf16(const ENCODING *UNUSED_enc __attribute__((__unused__)), const char **fromP, const char *fromLim, unsigned short **toP, const unsigned short *toLim) { enum XML_Convert_Result res = XML_CONVERT_COMPLETED; fromLim = *fromP + (((fromLim - *fromP) >> 1) << 1); if (fromLim - *fromP > ((toLim - *toP) << 1) && (((unsigned char)(fromLim - 2)[1]) & 0xF8) == 0xD8) { fromLim -= 2; res = XML_CONVERT_INPUT_INCOMPLETE; } for (; *fromP < fromLim && *toP < toLim; *fromP += 2) *(*toP)++ = (((unsigned char)(*fromP)[1]) << 8) | ((unsigned char)(*fromP)[0]); if ((*toP == toLim) && (*fromP < fromLim)) return XML_CONVERT_OUTPUT_EXHAUSTED; else return res; }
-# 776 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static enum XML_Convert_Result big2_toUtf8(const ENCODING *UNUSED_enc __attribute__((__unused__)), const char **fromP, const char *fromLim, char **toP, const char *toLim) { const char *from = *fromP; fromLim = from + (((fromLim - from) >> 1) << 1); for (; from < fromLim; from += 2) { int plane; unsigned char lo2; unsigned char lo = ((unsigned char)(from)[1]); unsigned char hi = ((unsigned char)(from)[0]); switch (hi) { case 0: if (lo < 0x80) { if (*toP == toLim) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = lo; break; } case 0x1: case 0x2: case 0x3: case 0x4: case 0x5: case 0x6: case 0x7: if (toLim - *toP < 2) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = ((lo >> 6) | (hi << 2) | UTF8_cval2); *(*toP)++ = ((lo & 0x3f) | 0x80); break; default: if (toLim - *toP < 3) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } *(*toP)++ = ((hi >> 4) | UTF8_cval3); *(*toP)++ = (((hi & 0xf) << 2) | (lo >> 6) | 0x80); *(*toP)++ = ((lo & 0x3f) | 0x80); break; case 0xD8: case 0xD9: case 0xDA: case 0xDB: if (toLim - *toP < 4) { *fromP = from; return XML_CONVERT_OUTPUT_EXHAUSTED; } if (fromLim - from < 4) { *fromP = from; return XML_CONVERT_INPUT_INCOMPLETE; } plane = (((hi & 0x3) << 2) | ((lo >> 6) & 0x3)) + 1; *(*toP)++ = ((plane >> 2) | UTF8_cval4); *(*toP)++ = (((lo >> 2) & 0xF) | ((plane & 0x3) << 4) | 0x80); from += 2; lo2 = ((unsigned char)(from)[1]); *(*toP)++ = (((lo & 0x3) << 4) | ((((unsigned char)(from)[0]) & 0x3) << 2) | (lo2 >> 6) | 0x80); *(*toP)++ = ((lo2 & 0x3f) | 0x80); break; } } *fromP = from; if (from < fromLim) return XML_CONVERT_INPUT_INCOMPLETE; else return XML_CONVERT_COMPLETED; }
 static enum XML_Convert_Result big2_toUtf16(const ENCODING *UNUSED_enc __attribute__((__unused__)), const char **fromP, const char *fromLim, unsigned short **toP, const unsigned short *toLim) { enum XML_Convert_Result res = XML_CONVERT_COMPLETED; fromLim = *fromP + (((fromLim - *fromP) >> 1) << 1); if (fromLim - *fromP > ((toLim - *toP) << 1) && (((unsigned char)(fromLim - 2)[0]) & 0xF8) == 0xD8) { fromLim -= 2; res = XML_CONVERT_INPUT_INCOMPLETE; } for (; *fromP < fromLim && *toP < toLim; *fromP += 2) *(*toP)++ = (((unsigned char)(*fromP)[0]) << 8) | ((unsigned char)(*fromP)[1]); if ((*toP == toLim) && (*fromP < fromLim)) return XML_CONVERT_OUTPUT_EXHAUSTED; else return res; }
-# 844 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
-# 137 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
 static int
 little2_scanComment(const ENCODING *enc, const char *ptr,
                     const char *end, const char **nextTokPtr)
@@ -3912,7 +3763,7 @@ little2_cdataSectionTok(const ENCODING *enc, const char *ptr,
   }
   while ((end - ptr >= 1 * 2)) {
     switch (((ptr)[1] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)] : unicode_byte_type((ptr)[1], (ptr)[0]))) {
-# 397 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_NONXML:
@@ -4377,7 +4228,7 @@ little2_contentTok(const ENCODING *enc, const char *ptr, const char *end,
   }
   while ((end - ptr >= 1 * 2)) {
     switch (((ptr)[1] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)] : unicode_byte_type((ptr)[1], (ptr)[0]))) {
-# 869 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_RSQB:
@@ -4625,7 +4476,7 @@ little2_prologTok(const ENCODING *enc, const char *ptr, const char *end,
     return 17;
   case BT_NUM:
     return little2_scanPoundName(enc, ptr + 2, end, nextTokPtr);
-# 1132 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2) return -2; if ((0)) { ptr += 2; tok = 18; break; } if (0) { ptr += 2; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD3: if (end - ptr < 3) return -2; if ((0)) { ptr += 3; tok = 18; break; } if (0) { ptr += 3; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD4: if (end - ptr < 4) return -2; if ((0)) { ptr += 4; tok = 18; break; } if (0) { ptr += 4; tok = 19; break; } *nextTokPtr = ptr; return 0;
 
   case BT_NMSTRT:
@@ -4970,7 +4821,7 @@ little2_getAtts(const ENCODING *enc, const char *ptr,
 
   for (ptr += 2;; ptr += 2) {
     switch (((ptr)[1] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)*(ptr)] : unicode_byte_type((ptr)[1], (ptr)[0]))) {
-# 1486 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (2 - 2); break; case BT_LEAD3: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (3 - 2); break; case BT_LEAD4: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (4 - 2); break;
 
     case BT_NONASCII:
@@ -5236,8 +5087,8 @@ little2_updatePosition(const ENCODING *enc,
     pos->columnNumber++;
   }
 }
-# 845 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 861 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 845 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static const struct normal_encoding little2_encoding_ns = {
   { { little2_prologTok, little2_contentTok, little2_cdataSectionTok , little2_ignoreSectionTok }, { little2_attributeValueTok, little2_entityValueTok }, little2_nameMatchesAscii, little2_nameLength, little2_skipS, little2_getAtts, little2_charRefNumber, little2_predefinedEntityName, little2_updatePosition, little2_isPublicId, little2_toUtf8, little2_toUtf16, 2, 0,
 
@@ -5247,8 +5098,8 @@ static const struct normal_encoding little2_encoding_ns = {
 
   },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -5281,9 +5132,9 @@ static const struct normal_encoding little2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 871 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 871 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -5316,45 +5167,45 @@ static const struct normal_encoding little2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 872 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 873 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
 
-# 874 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -5369,8 +5220,8 @@ static const struct normal_encoding little2_encoding = {
   },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -5403,10 +5254,10 @@ static const struct normal_encoding little2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 889 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 889 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -5439,45 +5290,45 @@ static const struct normal_encoding little2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 891 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 892 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 892 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
 
-# 893 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -5487,8 +5338,8 @@ static const struct normal_encoding little2_encoding = {
 static const struct normal_encoding internal_little2_encoding_ns = {
   { { little2_prologTok, little2_contentTok, little2_cdataSectionTok , little2_ignoreSectionTok }, { little2_attributeValueTok, little2_entityValueTok }, little2_nameMatchesAscii, little2_nameLength, little2_skipS, little2_getAtts, little2_charRefNumber, little2_predefinedEntityName, little2_updatePosition, little2_isPublicId, little2_toUtf8, little2_toUtf16, 2, 0, 1 },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -5521,9 +5372,9 @@ static const struct normal_encoding internal_little2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 903 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -5556,45 +5407,45 @@ static const struct normal_encoding internal_little2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 904 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 904 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 905 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 905 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
 
-# 906 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -5603,8 +5454,8 @@ static const struct normal_encoding internal_little2_encoding = {
   { { little2_prologTok, little2_contentTok, little2_cdataSectionTok , little2_ignoreSectionTok }, { little2_attributeValueTok, little2_entityValueTok }, little2_nameMatchesAscii, little2_nameLength, little2_skipS, little2_getAtts, little2_charRefNumber, little2_predefinedEntityName, little2_updatePosition, little2_isPublicId, little2_toUtf8, little2_toUtf16, 2, 0, 1 },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/iasciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -5637,10 +5488,10 @@ static const struct normal_encoding internal_little2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 915 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -5673,49 +5524,49 @@ static const struct normal_encoding internal_little2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 917 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            , 
-# 918 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                            ((void *)0)
 
-# 919 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 919 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
-# 985 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
-# 137 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 985 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c" 1
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
 static int
 big2_scanComment(const ENCODING *enc, const char *ptr,
                     const char *end, const char **nextTokPtr)
@@ -5968,7 +5819,7 @@ big2_cdataSectionTok(const ENCODING *enc, const char *ptr,
   }
   while ((end - ptr >= 1 * 2)) {
     switch (((ptr)[0] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)(ptr)[1]] : unicode_byte_type((ptr)[0], (ptr)[1]))) {
-# 397 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_NONXML:
@@ -6433,7 +6284,7 @@ big2_contentTok(const ENCODING *enc, const char *ptr, const char *end,
   }
   while ((end - ptr >= 1 * 2)) {
     switch (((ptr)[0] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)(ptr)[1]] : unicode_byte_type((ptr)[0], (ptr)[1]))) {
-# 869 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 869 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 2; break; case BT_LEAD3: if (end - ptr < 3 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 3; break; case BT_LEAD4: if (end - ptr < 4 || (0)) { *nextTokPtr = ptr; return 6; } ptr += 4; break;
 
     case BT_RSQB:
@@ -6681,7 +6532,7 @@ big2_prologTok(const ENCODING *enc, const char *ptr, const char *end,
     return 17;
   case BT_NUM:
     return big2_scanPoundName(enc, ptr + 2, end, nextTokPtr);
-# 1132 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (end - ptr < 2) return -2; if ((0)) { ptr += 2; tok = 18; break; } if (0) { ptr += 2; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD3: if (end - ptr < 3) return -2; if ((0)) { ptr += 3; tok = 18; break; } if (0) { ptr += 3; tok = 19; break; } *nextTokPtr = ptr; return 0; case BT_LEAD4: if (end - ptr < 4) return -2; if ((0)) { ptr += 4; tok = 18; break; } if (0) { ptr += 4; tok = 19; break; } *nextTokPtr = ptr; return 0;
 
   case BT_NMSTRT:
@@ -7026,7 +6877,7 @@ big2_getAtts(const ENCODING *enc, const char *ptr,
 
   for (ptr += 2;; ptr += 2) {
     switch (((ptr)[0] == 0 ? ((struct normal_encoding *)(enc))->type[(unsigned char)(ptr)[1]] : unicode_byte_type((ptr)[0], (ptr)[1]))) {
-# 1486 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
+# 1486 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_impl.c"
     case BT_LEAD2: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (2 - 2); break; case BT_LEAD3: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (3 - 2); break; case BT_LEAD4: if (state == other) { if (nAtts < attsMax) { atts[nAtts].name = ptr; atts[nAtts].normalized = 1; } state = inName; } ptr += (4 - 2); break;
 
     case BT_NONASCII:
@@ -7292,8 +7143,8 @@ big2_updatePosition(const ENCODING *enc,
     pos->columnNumber++;
   }
 }
-# 986 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1002 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 986 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static const struct normal_encoding big2_encoding_ns = {
   { { big2_prologTok, big2_contentTok, big2_cdataSectionTok , big2_ignoreSectionTok }, { big2_attributeValueTok, big2_entityValueTok }, big2_nameMatchesAscii, big2_nameLength, big2_skipS, big2_getAtts, big2_charRefNumber, big2_predefinedEntityName, big2_updatePosition, big2_isPublicId, big2_toUtf8, big2_toUtf16, 2, 0,
 
@@ -7303,8 +7154,8 @@ static const struct normal_encoding big2_encoding_ns = {
 
   },
   {
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -7337,9 +7188,9 @@ static const struct normal_encoding big2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 1012 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 1012 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -7372,45 +7223,45 @@ static const struct normal_encoding big2_encoding_ns = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 1013 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1014 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
 
-# 1015 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
 
 
@@ -7425,8 +7276,8 @@ static const struct normal_encoding big2_encoding = {
   },
   {
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/asciitab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/asciitab.h"
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_NONXML, BT_NONXML, BT_NONXML,
            BT_NONXML, BT_S, BT_LF, BT_NONXML,
@@ -7459,10 +7310,10 @@ static const struct normal_encoding big2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_VERBAR, BT_OTHER, BT_OTHER, BT_OTHER,
-# 1030 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1030 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/latin1tab.h"
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
            BT_OTHER, BT_OTHER, BT_OTHER, BT_OTHER,
@@ -7495,47 +7346,47 @@ static const struct normal_encoding big2_encoding = {
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_OTHER,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
            BT_NMSTRT, BT_NMSTRT, BT_NMSTRT, BT_NMSTRT,
-# 1032 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
   },
   
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         , 
-# 1033 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1033 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                         ((void *)0)
 
-# 1034 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 };
-# 1066 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static int
 streqci(const char *s1, const char *s2)
 {
@@ -7606,9 +7457,9 @@ parsePseudoAttribute(const ENCODING *enc,
   char open;
   if (ptr == end) {
     *namePtr = 
-# 1135 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
               ((void *)0)
-# 1135 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                   ;
     return 1;
   }
@@ -7621,9 +7472,9 @@ parsePseudoAttribute(const ENCODING *enc,
   } while (isSpace(toAscii(enc, ptr, end)));
   if (ptr == end) {
     *namePtr = 
-# 1146 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
               ((void *)0)
-# 1146 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                   ;
     return 1;
   }
@@ -7723,19 +7574,19 @@ doParseXmlDecl(const ENCODING *(*encodingFinder)(const ENCODING *,
                int *standalone)
 {
   const char *val = 
-# 1244 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                    ((void *)0)
-# 1244 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                        ;
   const char *name = 
-# 1245 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                     ((void *)0)
-# 1245 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                         ;
   const char *nameEnd = 
-# 1246 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
                        ((void *)0)
-# 1246 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                            ;
   ptr += 5 * enc->minBytesPerChar;
   end -= 2 * enc->minBytesPerChar;
@@ -8119,9 +7970,9 @@ getEncodingIndex(const char *name)
   };
   int i;
   if (name == 
-# 1628 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
+# 1628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 3 4
              ((void *)0)
-# 1628 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
                  )
     return NO_ENC;
   for (i = 0; i < (int)(sizeof(encodingNames)/sizeof(encodingNames[0])); i++)
@@ -8129,7 +7980,7 @@ getEncodingIndex(const char *name)
       return i;
   return UNKNOWN_ENC;
 }
-# 1651 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
 static int
 initScan(const ENCODING * const *encodingTable,
          const INIT_ENCODING *enc,
@@ -8144,7 +7995,7 @@ initScan(const ENCODING * const *encodingTable,
     return -4;
   encPtr = enc->encPtr;
   if (ptr + 1 == end) {
-# 1673 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
     switch (((int)(enc)->initEnc.isUtf16)) {
     case UTF_16_ENC:
     case UTF_16LE_ENC:
@@ -8224,7 +8075,7 @@ initScan(const ENCODING * const *encodingTable,
         return (((*encPtr)->scanners[state])(*encPtr, ptr, end, nextTokPtr));
       }
       else if (ptr[1] == '\0') {
-# 1761 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
         if (state == 1)
           break;
         *encPtr = encodingTable[UTF_16LE_ENC];
@@ -8241,8 +8092,8 @@ initScan(const ENCODING * const *encodingTable,
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c" 1
-# 35 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
 const ENCODING *
 XmlGetUtf8InternalEncoding(void)
 {
@@ -8254,7 +8105,7 @@ XmlGetUtf16InternalEncoding(void)
 {
 
   return &internal_little2_encoding.enc;
-# 54 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
 }
 
 static const ENCODING * const encodings[] = {
@@ -8342,10 +8193,10 @@ XmlParseXmlDecl(int isGeneralTextEntity,
                         encoding,
                         standalone);
 }
-# 1778 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
-# 1788 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c" 1
-# 35 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
+# 1778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1788 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
 const ENCODING *
 XmlGetUtf8InternalEncodingNS(void)
 {
@@ -8357,7 +8208,7 @@ XmlGetUtf16InternalEncodingNS(void)
 {
 
   return &internal_little2_encoding_ns.enc;
-# 54 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok_ns.c"
 }
 
 static const ENCODING * const encodingsNS[] = {
@@ -8445,7 +8296,7 @@ XmlParseXmlDeclNS(int isGeneralTextEntity,
                         encoding,
                         standalone);
 }
-# 1789 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
+# 1789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.c" 2
 
 
 

@@ -4,23 +4,30 @@
 # (Uses default behaviour of compiling all source files in directory, adding 'include' to include path.)
 
 COMPONENT_SRCDIRS := . \
-	HardwareLife/TransportAbstraction \
 	HardwareLife/Uart \
-        u8g2-esp-idf \
 	HardwareLife/OLED \
-	HardwareLife/Gpio/Kiss \
+	HardwareLife/Lcd/Content/Screens \
+	HardwareLife/Lcd/Content/Widgets \
+	HardwareLife/Lcd/Content \
+	HardwareLife/Lcd \
+	HardwareLife/Gpio/Pwm \
 	HardwareLife/Gpio \
-	HardwareLife/WiFi/esp32-wifi-manager/src \
 	HardwareLife/WiFi \
-	HardwareLife/Key \
+	HardwareLife/I2C \
+	HardwareLife/IMU \
+	HardwareLife/Clock \
 	HardwareLife \
-	LifeCycle \
-	IdLife/Auth \
-	IdLife \
-	DataLife
+	Logic/Drive \
+	Logic/Picture \
+	Logic/Atomar \
+	Logic \
+	Physics/Motor \
+	Physics/Pen \
+	Physics/Screen \
+	Physics
 
 #COMPONENT_SRCDIRS := . \
-#		HardwareLife/OLED \
+#		
 #	HardwareLife/Lcd/Backlight \
 #	HardwareLife/Lcd/Content/Face \
 #	HardwareLife/Lcd/Content/Line/TopLine \

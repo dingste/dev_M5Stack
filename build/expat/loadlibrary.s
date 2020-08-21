@@ -4,7 +4,7 @@
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x21
+	.4byte	0x1d
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -12,7 +12,6 @@
 	.4byte	.LASF0
 	.byte	0xc
 	.4byte	.LASF1
-	.4byte	.LASF2
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
 	.byte	0x4
@@ -29,8 +28,6 @@
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x10
 	.uleb128 0x17
@@ -61,10 +58,8 @@
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF1:
-	.string	"/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/loadlibrary.c"
-.LASF2:
-	.string	"/home/dieter/Development/ProjektEi/build/expat"
 .LASF0:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF1:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/loadlibrary.c"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

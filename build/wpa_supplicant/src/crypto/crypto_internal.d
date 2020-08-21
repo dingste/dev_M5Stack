@@ -1,84 +1,126 @@
 src/crypto/crypto_internal.o: \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto_internal.c \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h \
- /home/dieter/Development/ProjektEi/build/include/sdkconfig.h \
- /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h \
- /home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h \
- /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
- /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/sha1_i.h \
- /home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/md5_i.h \
- /home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h \
- /home/dieter/Development/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h \
- /home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h \
- /home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /home/dieter/Development/esp-idf/components/mbedtls/port/include/esp_mem.h \
- /home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h \
- /home/dieter/Development/esp-idf/components/mbedtls/port/include/sha256_alt.h
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_internal.c \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/includes.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h \
+ /home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/common.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/common.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/sha1_i.h \
+ /home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/md5_i.h
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/includes.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/dieter/Development/ProjektEi/build/include/sdkconfig.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h:
 
-/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h:
 
-/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
+/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h:
 
-/home/dieter/Development/esp-idf/components/log/include/esp_log.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h:
 
-/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/sha1_i.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h:
 
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/md5_i.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/sha256.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/port/include/mbedtls/esp_config.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/config.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/port/include/esp_mem.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/mbedtls/include/mbedtls/check_config.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/common.h:
 
-/home/dieter/Development/esp-idf/components/mbedtls/port/include/sha256_alt.h:
-/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto_internal.c:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/common.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/sha1_i.h:
+
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/md5_i.h:
+/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/crypto/crypto_internal.c:

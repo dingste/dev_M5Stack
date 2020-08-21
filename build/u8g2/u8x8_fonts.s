@@ -2,7 +2,7 @@
 	.text
 .Ltext0:
 	.global	u8x8_font_px437wyse700b_2x2_n
-	.section	.rodata.u8x8_font_px437wyse700b_2x2_n,"a"
+	.section	.rodata.u8x8_font_px437wyse700b_2x2_n,"a",@progbits
 	.type	u8x8_font_px437wyse700b_2x2_n, @object
 	.size	u8x8_font_px437wyse700b_2x2_n, 868
 u8x8_font_px437wyse700b_2x2_n:
@@ -572,7 +572,7 @@ u8x8_font_px437wyse700b_2x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_px437wyse700b_2x2_r
-	.section	.rodata.u8x8_font_px437wyse700b_2x2_r,"a"
+	.section	.rodata.u8x8_font_px437wyse700b_2x2_r,"a",@progbits
 	.type	u8x8_font_px437wyse700b_2x2_r, @object
 	.size	u8x8_font_px437wyse700b_2x2_r, 3077
 u8x8_font_px437wyse700b_2x2_r:
@@ -1899,7 +1899,7 @@ u8x8_font_px437wyse700b_2x2_r:
 	.string	"\200\200\300@` 0\0200 `@\300\200\200"
 	.string	"\003\003\003\002\002\002\002\002\002\002\002\002\003\003\003"
 	.global	u8x8_font_px437wyse700b_2x2_f
-	.section	.rodata.u8x8_font_px437wyse700b_2x2_f,"a"
+	.section	.rodata.u8x8_font_px437wyse700b_2x2_f,"a",@progbits
 	.type	u8x8_font_px437wyse700b_2x2_f, @object
 	.size	u8x8_font_px437wyse700b_2x2_f, 7172
 u8x8_font_px437wyse700b_2x2_f:
@@ -6192,7 +6192,7 @@ u8x8_font_px437wyse700b_2x2_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_px437wyse700a_2x2_n
-	.section	.rodata.u8x8_font_px437wyse700a_2x2_n,"a"
+	.section	.rodata.u8x8_font_px437wyse700a_2x2_n,"a",@progbits
 	.type	u8x8_font_px437wyse700a_2x2_n, @object
 	.size	u8x8_font_px437wyse700a_2x2_n, 868
 u8x8_font_px437wyse700a_2x2_n:
@@ -6740,7 +6740,7 @@ u8x8_font_px437wyse700a_2x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_px437wyse700a_2x2_r
-	.section	.rodata.u8x8_font_px437wyse700a_2x2_r,"a"
+	.section	.rodata.u8x8_font_px437wyse700a_2x2_r,"a",@progbits
 	.type	u8x8_font_px437wyse700a_2x2_r, @object
 	.size	u8x8_font_px437wyse700a_2x2_r, 3077
 u8x8_font_px437wyse700a_2x2_r:
@@ -7866,7 +7866,7 @@ u8x8_font_px437wyse700a_2x2_r:
 	.string	""
 	.string	"\003\003\003\003\002\002\002\002\002\002\003\003\003\003"
 	.global	u8x8_font_px437wyse700a_2x2_f
-	.section	.rodata.u8x8_font_px437wyse700a_2x2_f,"a"
+	.section	.rodata.u8x8_font_px437wyse700a_2x2_f,"a",@progbits
 	.type	u8x8_font_px437wyse700a_2x2_f, @object
 	.size	u8x8_font_px437wyse700a_2x2_f, 7172
 u8x8_font_px437wyse700a_2x2_f:
@@ -11839,7 +11839,7 @@ u8x8_font_px437wyse700a_2x2_f:
 	.string	""
 	.string	"\003\007GOLHHHh\177??\037"
 	.global	u8x8_font_pxplustandynewtv_u
-	.section	.rodata.u8x8_font_pxplustandynewtv_u,"a"
+	.section	.rodata.u8x8_font_pxplustandynewtv_u,"a",@progbits
 	.type	u8x8_font_pxplustandynewtv_u, @object
 	.size	u8x8_font_pxplustandynewtv_u, 517
 u8x8_font_pxplustandynewtv_u:
@@ -11969,7 +11969,7 @@ u8x8_font_pxplustandynewtv_u:
 	.string	"\b\f\006\003\006\f\b"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_pxplustandynewtv_n
-	.section	.rodata.u8x8_font_pxplustandynewtv_n,"a"
+	.section	.rodata.u8x8_font_pxplustandynewtv_n,"a",@progbits
 	.type	u8x8_font_pxplustandynewtv_n, @object
 	.size	u8x8_font_pxplustandynewtv_n, 220
 u8x8_font_pxplustandynewtv_n:
@@ -12087,7 +12087,7 @@ u8x8_font_pxplustandynewtv_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_pxplustandynewtv_r
-	.section	.rodata.u8x8_font_pxplustandynewtv_r,"a"
+	.section	.rodata.u8x8_font_pxplustandynewtv_r,"a",@progbits
 	.type	u8x8_font_pxplustandynewtv_r, @object
 	.size	u8x8_font_pxplustandynewtv_r, 772
 u8x8_font_pxplustandynewtv_r:
@@ -12266,7 +12266,7 @@ u8x8_font_pxplustandynewtv_r:
 	.string	"\002\003\001\003\002\003\001"
 	.string	"pxLFLxp"
 	.global	u8x8_font_pxplustandynewtv_f
-	.section	.rodata.u8x8_font_pxplustandynewtv_f,"a"
+	.section	.rodata.u8x8_font_pxplustandynewtv_f,"a",@progbits
 	.type	u8x8_font_pxplustandynewtv_f, @object
 	.size	u8x8_font_pxplustandynewtv_f, 1796
 u8x8_font_pxplustandynewtv_f:
@@ -12851,7 +12851,7 @@ u8x8_font_pxplustandynewtv_f:
 	.string	"\201\377\377\244$<\030"
 	.string	"\235\275\240\240\240\375}"
 	.global	u8x8_font_pxplusibmcga_u
-	.section	.rodata.u8x8_font_pxplusibmcga_u,"a"
+	.section	.rodata.u8x8_font_pxplusibmcga_u,"a",@progbits
 	.type	u8x8_font_pxplusibmcga_u, @object
 	.size	u8x8_font_pxplusibmcga_u, 517
 u8x8_font_pxplusibmcga_u:
@@ -12994,7 +12994,7 @@ u8x8_font_pxplusibmcga_u:
 	.string	"\b\f\006\003\006\f\b"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_pxplusibmcga_n
-	.section	.rodata.u8x8_font_pxplusibmcga_n,"a"
+	.section	.rodata.u8x8_font_pxplusibmcga_n,"a",@progbits
 	.type	u8x8_font_pxplusibmcga_n, @object
 	.size	u8x8_font_pxplusibmcga_n, 220
 u8x8_font_pxplusibmcga_n:
@@ -13119,7 +13119,7 @@ u8x8_font_pxplusibmcga_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_pxplusibmcga_r
-	.section	.rodata.u8x8_font_pxplusibmcga_r,"a"
+	.section	.rodata.u8x8_font_pxplusibmcga_r,"a",@progbits
 	.type	u8x8_font_pxplusibmcga_r, @object
 	.size	u8x8_font_pxplusibmcga_r, 772
 u8x8_font_pxplusibmcga_r:
@@ -13322,7 +13322,7 @@ u8x8_font_pxplusibmcga_r:
 	.string	"\002\003\001\003\002\003\001"
 	.string	"pxLFLxp"
 	.global	u8x8_font_pxplusibmcga_f
-	.section	.rodata.u8x8_font_pxplusibmcga_f,"a"
+	.section	.rodata.u8x8_font_pxplusibmcga_f,"a",@progbits
 	.type	u8x8_font_pxplusibmcga_f, @object
 	.size	u8x8_font_pxplusibmcga_f, 1796
 u8x8_font_pxplusibmcga_f:
@@ -13955,7 +13955,7 @@ u8x8_font_pxplusibmcga_f:
 	.string	"\232\272\240\240\372z"
 	.string	""
 	.global	u8x8_font_pxplusibmcgathin_u
-	.section	.rodata.u8x8_font_pxplusibmcgathin_u,"a"
+	.section	.rodata.u8x8_font_pxplusibmcgathin_u,"a",@progbits
 	.type	u8x8_font_pxplusibmcgathin_u, @object
 	.size	u8x8_font_pxplusibmcgathin_u, 517
 u8x8_font_pxplusibmcgathin_u:
@@ -14127,7 +14127,7 @@ u8x8_font_pxplusibmcgathin_u:
 	.string	"\b\004\002\001\002\004\b"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_pxplusibmcgathin_n
-	.section	.rodata.u8x8_font_pxplusibmcgathin_n,"a"
+	.section	.rodata.u8x8_font_pxplusibmcgathin_n,"a",@progbits
 	.type	u8x8_font_pxplusibmcgathin_n, @object
 	.size	u8x8_font_pxplusibmcgathin_n, 220
 u8x8_font_pxplusibmcgathin_n:
@@ -14260,7 +14260,7 @@ u8x8_font_pxplusibmcgathin_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_pxplusibmcgathin_r
-	.section	.rodata.u8x8_font_pxplusibmcgathin_r,"a"
+	.section	.rodata.u8x8_font_pxplusibmcgathin_r,"a",@progbits
 	.type	u8x8_font_pxplusibmcgathin_r, @object
 	.size	u8x8_font_pxplusibmcgathin_r, 773
 u8x8_font_pxplusibmcgathin_r:
@@ -14508,7 +14508,7 @@ u8x8_font_pxplusibmcgathin_r:
 	.string	""
 	.string	"pHDBDHp"
 	.global	u8x8_font_pxplusibmcgathin_f
-	.section	.rodata.u8x8_font_pxplusibmcgathin_f,"a"
+	.section	.rodata.u8x8_font_pxplusibmcgathin_f,"a",@progbits
 	.type	u8x8_font_pxplusibmcgathin_f, @object
 	.size	u8x8_font_pxplusibmcgathin_f, 1796
 u8x8_font_pxplusibmcgathin_f:
@@ -15232,7 +15232,7 @@ u8x8_font_pxplusibmcgathin_f:
 	.string	""
 	.string	"\032\240\240\240\240z"
 	.global	u8x8_font_pcsenior_u
-	.section	.rodata.u8x8_font_pcsenior_u,"a"
+	.section	.rodata.u8x8_font_pcsenior_u,"a",@progbits
 	.type	u8x8_font_pcsenior_u, @object
 	.size	u8x8_font_pcsenior_u, 517
 u8x8_font_pcsenior_u:
@@ -15375,7 +15375,7 @@ u8x8_font_pcsenior_u:
 	.string	"\b\f\006\003\006\f\b"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_pcsenior_n
-	.section	.rodata.u8x8_font_pcsenior_n,"a"
+	.section	.rodata.u8x8_font_pcsenior_n,"a",@progbits
 	.type	u8x8_font_pcsenior_n, @object
 	.size	u8x8_font_pcsenior_n, 220
 u8x8_font_pcsenior_n:
@@ -15500,7 +15500,7 @@ u8x8_font_pcsenior_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_pcsenior_r
-	.section	.rodata.u8x8_font_pcsenior_r,"a"
+	.section	.rodata.u8x8_font_pcsenior_r,"a",@progbits
 	.type	u8x8_font_pcsenior_r, @object
 	.size	u8x8_font_pcsenior_r, 772
 u8x8_font_pcsenior_r:
@@ -15703,7 +15703,7 @@ u8x8_font_pcsenior_r:
 	.string	"\002\003\001\003\002\003\001"
 	.string	"pxLFLxp"
 	.global	u8x8_font_pcsenior_f
-	.section	.rodata.u8x8_font_pcsenior_f,"a"
+	.section	.rodata.u8x8_font_pcsenior_f,"a",@progbits
 	.type	u8x8_font_pcsenior_f, @object
 	.size	u8x8_font_pcsenior_f, 1796
 u8x8_font_pcsenior_f:
@@ -16556,7 +16556,7 @@ u8x8_font_pcsenior_f:
 	.string	"\232\272\240\240\372z"
 	.string	""
 	.global	u8x8_font_pressstart2p_u
-	.section	.rodata.u8x8_font_pressstart2p_u,"a"
+	.section	.rodata.u8x8_font_pressstart2p_u,"a",@progbits
 	.type	u8x8_font_pressstart2p_u, @object
 	.size	u8x8_font_pressstart2p_u, 516
 u8x8_font_pressstart2p_u:
@@ -16687,7 +16687,7 @@ u8x8_font_pressstart2p_u:
 	.string	""
 	.string	"\200\200\200\200\200\200\200"
 	.global	u8x8_font_pressstart2p_n
-	.section	.rodata.u8x8_font_pressstart2p_n,"a"
+	.section	.rodata.u8x8_font_pressstart2p_n,"a",@progbits
 	.type	u8x8_font_pressstart2p_n, @object
 	.size	u8x8_font_pressstart2p_n, 220
 u8x8_font_pressstart2p_n:
@@ -16806,7 +16806,7 @@ u8x8_font_pressstart2p_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_pressstart2p_r
-	.section	.rodata.u8x8_font_pressstart2p_r,"a"
+	.section	.rodata.u8x8_font_pressstart2p_r,"a",@progbits
 	.type	u8x8_font_pressstart2p_r, @object
 	.size	u8x8_font_pressstart2p_r, 772
 u8x8_font_pressstart2p_r:
@@ -16996,7 +16996,7 @@ u8x8_font_pressstart2p_r:
 	.string	"``"
 	.string	""
 	.global	u8x8_font_pressstart2p_f
-	.section	.rodata.u8x8_font_pressstart2p_f,"a"
+	.section	.rodata.u8x8_font_pressstart2p_f,"a",@progbits
 	.type	u8x8_font_pressstart2p_f, @object
 	.size	u8x8_font_pressstart2p_f, 1796
 u8x8_font_pressstart2p_f:
@@ -17608,7 +17608,7 @@ u8x8_font_pressstart2p_f:
 	.string	"\377\377$$$<\030"
 	.string	"\034\275\241\240\241\375|"
 	.global	u8x8_font_inb46_4x8_n
-	.section	.rodata.u8x8_font_inb46_4x8_n,"a"
+	.section	.rodata.u8x8_font_inb46_4x8_n,"a",@progbits
 	.type	u8x8_font_inb46_4x8_n, @object
 	.size	u8x8_font_inb46_4x8_n, 6916
 u8x8_font_inb46_4x8_n:
@@ -22894,7 +22894,7 @@ u8x8_font_inb46_4x8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb46_4x8_r
-	.section	.rodata.u8x8_font_inb46_4x8_r,"a"
+	.section	.rodata.u8x8_font_inb46_4x8_r,"a",@progbits
 	.type	u8x8_font_inb46_4x8_r, @object
 	.size	u8x8_font_inb46_4x8_r, 24324
 u8x8_font_inb46_4x8_r:
@@ -37150,7 +37150,7 @@ u8x8_font_inb46_4x8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb33_3x6_n
-	.section	.rodata.u8x8_font_inb33_3x6_n,"a"
+	.section	.rodata.u8x8_font_inb33_3x6_n,"a",@progbits
 	.type	u8x8_font_inb33_3x6_n, @object
 	.size	u8x8_font_inb33_3x6_n, 3892
 u8x8_font_inb33_3x6_n:
@@ -40144,7 +40144,7 @@ u8x8_font_inb33_3x6_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb33_3x6_r
-	.section	.rodata.u8x8_font_inb33_3x6_r,"a"
+	.section	.rodata.u8x8_font_inb33_3x6_r,"a",@progbits
 	.type	u8x8_font_inb33_3x6_r, @object
 	.size	u8x8_font_inb33_3x6_r, 13684
 u8x8_font_inb33_3x6_r:
@@ -48012,7 +48012,7 @@ u8x8_font_inb33_3x6_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb33_3x6_f
-	.section	.rodata.u8x8_font_inb33_3x6_f,"a"
+	.section	.rodata.u8x8_font_inb33_3x6_f,"a",@progbits
 	.type	u8x8_font_inb33_3x6_f, @object
 	.size	u8x8_font_inb33_3x6_f, 32260
 u8x8_font_inb33_3x6_f:
@@ -67934,7 +67934,7 @@ u8x8_font_inb33_3x6_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb21_2x4_n
-	.section	.rodata.u8x8_font_inb21_2x4_n,"a"
+	.section	.rodata.u8x8_font_inb21_2x4_n,"a",@progbits
 	.type	u8x8_font_inb21_2x4_n, @object
 	.size	u8x8_font_inb21_2x4_n, 1732
 u8x8_font_inb21_2x4_n:
@@ -69128,7 +69128,7 @@ u8x8_font_inb21_2x4_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb21_2x4_r
-	.section	.rodata.u8x8_font_inb21_2x4_r,"a"
+	.section	.rodata.u8x8_font_inb21_2x4_r,"a",@progbits
 	.type	u8x8_font_inb21_2x4_r, @object
 	.size	u8x8_font_inb21_2x4_r, 6084
 u8x8_font_inb21_2x4_r:
@@ -72091,7 +72091,7 @@ u8x8_font_inb21_2x4_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inb21_2x4_f
-	.section	.rodata.u8x8_font_inb21_2x4_f,"a"
+	.section	.rodata.u8x8_font_inb21_2x4_f,"a",@progbits
 	.type	u8x8_font_inb21_2x4_f, @object
 	.size	u8x8_font_inb21_2x4_f, 14340
 u8x8_font_inb21_2x4_f:
@@ -79815,7 +79815,7 @@ u8x8_font_inb21_2x4_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr46_4x8_n
-	.section	.rodata.u8x8_font_inr46_4x8_n,"a"
+	.section	.rodata.u8x8_font_inr46_4x8_n,"a",@progbits
 	.type	u8x8_font_inr46_4x8_n, @object
 	.size	u8x8_font_inr46_4x8_n, 6916
 u8x8_font_inr46_4x8_n:
@@ -85311,7 +85311,7 @@ u8x8_font_inr46_4x8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr46_4x8_r
-	.section	.rodata.u8x8_font_inr46_4x8_r,"a"
+	.section	.rodata.u8x8_font_inr46_4x8_r,"a",@progbits
 	.type	u8x8_font_inr46_4x8_r, @object
 	.size	u8x8_font_inr46_4x8_r, 24324
 u8x8_font_inr46_4x8_r:
@@ -101072,7 +101072,7 @@ u8x8_font_inr46_4x8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr33_3x6_n
-	.section	.rodata.u8x8_font_inr33_3x6_n,"a"
+	.section	.rodata.u8x8_font_inr33_3x6_n,"a",@progbits
 	.type	u8x8_font_inr33_3x6_n, @object
 	.size	u8x8_font_inr33_3x6_n, 3892
 u8x8_font_inr33_3x6_n:
@@ -104171,7 +104171,7 @@ u8x8_font_inr33_3x6_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr33_3x6_r
-	.section	.rodata.u8x8_font_inr33_3x6_r,"a"
+	.section	.rodata.u8x8_font_inr33_3x6_r,"a",@progbits
 	.type	u8x8_font_inr33_3x6_r, @object
 	.size	u8x8_font_inr33_3x6_r, 13684
 u8x8_font_inr33_3x6_r:
@@ -112765,7 +112765,7 @@ u8x8_font_inr33_3x6_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr33_3x6_f
-	.section	.rodata.u8x8_font_inr33_3x6_f,"a"
+	.section	.rodata.u8x8_font_inr33_3x6_f,"a",@progbits
 	.type	u8x8_font_inr33_3x6_f, @object
 	.size	u8x8_font_inr33_3x6_f, 32260
 u8x8_font_inr33_3x6_f:
@@ -134295,7 +134295,7 @@ u8x8_font_inr33_3x6_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr21_2x4_n
-	.section	.rodata.u8x8_font_inr21_2x4_n,"a"
+	.section	.rodata.u8x8_font_inr21_2x4_n,"a",@progbits
 	.type	u8x8_font_inr21_2x4_n, @object
 	.size	u8x8_font_inr21_2x4_n, 1732
 u8x8_font_inr21_2x4_n:
@@ -135570,7 +135570,7 @@ u8x8_font_inr21_2x4_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr21_2x4_r
-	.section	.rodata.u8x8_font_inr21_2x4_r,"a"
+	.section	.rodata.u8x8_font_inr21_2x4_r,"a",@progbits
 	.type	u8x8_font_inr21_2x4_r, @object
 	.size	u8x8_font_inr21_2x4_r, 6084
 u8x8_font_inr21_2x4_r:
@@ -138801,7 +138801,7 @@ u8x8_font_inr21_2x4_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_inr21_2x4_f
-	.section	.rodata.u8x8_font_inr21_2x4_f,"a"
+	.section	.rodata.u8x8_font_inr21_2x4_f,"a",@progbits
 	.type	u8x8_font_inr21_2x4_f, @object
 	.size	u8x8_font_inr21_2x4_f, 14340
 u8x8_font_inr21_2x4_f:
@@ -147098,7 +147098,7 @@ u8x8_font_inr21_2x4_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_r_2x2_n
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_n,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_n,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_r_2x2_n, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_r_2x2_n, 868
 u8x8_font_lucasarts_scumm_subtitle_r_2x2_n:
@@ -147772,7 +147772,7 @@ u8x8_font_lucasarts_scumm_subtitle_r_2x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_r_2x2_r
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_r,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_r,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_r_2x2_r, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_r_2x2_r, 2916
 u8x8_font_lucasarts_scumm_subtitle_r_2x2_r:
@@ -149621,7 +149621,7 @@ u8x8_font_lucasarts_scumm_subtitle_r_2x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_r_2x2_f
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_f,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_r_2x2_f,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_r_2x2_f, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_r_2x2_f, 7076
 u8x8_font_lucasarts_scumm_subtitle_r_2x2_f:
@@ -155405,7 +155405,7 @@ u8x8_font_lucasarts_scumm_subtitle_r_2x2_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_o_2x2_n
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_n,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_n,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_o_2x2_n, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_o_2x2_n, 868
 u8x8_font_lucasarts_scumm_subtitle_o_2x2_n:
@@ -156013,7 +156013,7 @@ u8x8_font_lucasarts_scumm_subtitle_o_2x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_o_2x2_r
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_r,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_r,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_o_2x2_r, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_o_2x2_r, 2916
 u8x8_font_lucasarts_scumm_subtitle_o_2x2_r:
@@ -157508,7 +157508,7 @@ u8x8_font_lucasarts_scumm_subtitle_o_2x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_lucasarts_scumm_subtitle_o_2x2_f
-	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_f,"a"
+	.section	.rodata.u8x8_font_lucasarts_scumm_subtitle_o_2x2_f,"a",@progbits
 	.type	u8x8_font_lucasarts_scumm_subtitle_o_2x2_f, @object
 	.size	u8x8_font_lucasarts_scumm_subtitle_o_2x2_f, 7076
 u8x8_font_lucasarts_scumm_subtitle_o_2x2_f:
@@ -162870,7 +162870,7 @@ u8x8_font_lucasarts_scumm_subtitle_o_2x2_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR24_3x4_n
-	.section	.rodata.u8x8_font_courR24_3x4_n,"a"
+	.section	.rodata.u8x8_font_courR24_3x4_n,"a",@progbits
 	.type	u8x8_font_courR24_3x4_n, @object
 	.size	u8x8_font_courR24_3x4_n, 2596
 u8x8_font_courR24_3x4_n:
@@ -165066,7 +165066,7 @@ u8x8_font_courR24_3x4_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR24_3x4_r
-	.section	.rodata.u8x8_font_courR24_3x4_r,"a"
+	.section	.rodata.u8x8_font_courR24_3x4_r,"a",@progbits
 	.type	u8x8_font_courR24_3x4_r, @object
 	.size	u8x8_font_courR24_3x4_r, 9124
 u8x8_font_courR24_3x4_r:
@@ -171802,7 +171802,7 @@ u8x8_font_courR24_3x4_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR24_3x4_f
-	.section	.rodata.u8x8_font_courR24_3x4_f,"a"
+	.section	.rodata.u8x8_font_courR24_3x4_f,"a",@progbits
 	.type	u8x8_font_courR24_3x4_f, @object
 	.size	u8x8_font_courR24_3x4_f, 21508
 u8x8_font_courR24_3x4_f:
@@ -188079,7 +188079,7 @@ u8x8_font_courR24_3x4_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB24_3x4_n
-	.section	.rodata.u8x8_font_courB24_3x4_n,"a"
+	.section	.rodata.u8x8_font_courB24_3x4_n,"a",@progbits
 	.type	u8x8_font_courB24_3x4_n, @object
 	.size	u8x8_font_courB24_3x4_n, 2596
 u8x8_font_courB24_3x4_n:
@@ -190102,7 +190102,7 @@ u8x8_font_courB24_3x4_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB24_3x4_r
-	.section	.rodata.u8x8_font_courB24_3x4_r,"a"
+	.section	.rodata.u8x8_font_courB24_3x4_r,"a",@progbits
 	.type	u8x8_font_courB24_3x4_r, @object
 	.size	u8x8_font_courB24_3x4_r, 9124
 u8x8_font_courB24_3x4_r:
@@ -196187,7 +196187,7 @@ u8x8_font_courB24_3x4_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB24_3x4_f
-	.section	.rodata.u8x8_font_courB24_3x4_f,"a"
+	.section	.rodata.u8x8_font_courB24_3x4_f,"a",@progbits
 	.type	u8x8_font_courB24_3x4_f, @object
 	.size	u8x8_font_courB24_3x4_f, 21508
 u8x8_font_courB24_3x4_f:
@@ -211255,7 +211255,7 @@ u8x8_font_courB24_3x4_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR18_2x3_n
-	.section	.rodata.u8x8_font_courR18_2x3_n,"a"
+	.section	.rodata.u8x8_font_courR18_2x3_n,"a",@progbits
 	.type	u8x8_font_courR18_2x3_n, @object
 	.size	u8x8_font_courR18_2x3_n, 1300
 u8x8_font_courR18_2x3_n:
@@ -212272,7 +212272,7 @@ u8x8_font_courR18_2x3_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR18_2x3_r
-	.section	.rodata.u8x8_font_courR18_2x3_r,"a"
+	.section	.rodata.u8x8_font_courR18_2x3_r,"a",@progbits
 	.type	u8x8_font_courR18_2x3_r, @object
 	.size	u8x8_font_courR18_2x3_r, 4564
 u8x8_font_courR18_2x3_r:
@@ -215025,7 +215025,7 @@ u8x8_font_courR18_2x3_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_courR18_2x3_f
-	.section	.rodata.u8x8_font_courR18_2x3_f,"a"
+	.section	.rodata.u8x8_font_courR18_2x3_f,"a",@progbits
 	.type	u8x8_font_courR18_2x3_f, @object
 	.size	u8x8_font_courR18_2x3_f, 10756
 u8x8_font_courR18_2x3_f:
@@ -221919,7 +221919,7 @@ u8x8_font_courR18_2x3_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB18_2x3_n
-	.section	.rodata.u8x8_font_courB18_2x3_n,"a"
+	.section	.rodata.u8x8_font_courB18_2x3_n,"a",@progbits
 	.type	u8x8_font_courB18_2x3_n, @object
 	.size	u8x8_font_courB18_2x3_n, 1300
 u8x8_font_courB18_2x3_n:
@@ -222889,7 +222889,7 @@ u8x8_font_courB18_2x3_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB18_2x3_r
-	.section	.rodata.u8x8_font_courB18_2x3_r,"a"
+	.section	.rodata.u8x8_font_courB18_2x3_r,"a",@progbits
 	.type	u8x8_font_courB18_2x3_r, @object
 	.size	u8x8_font_courB18_2x3_r, 4564
 u8x8_font_courB18_2x3_r:
@@ -225199,7 +225199,7 @@ u8x8_font_courB18_2x3_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_courB18_2x3_f
-	.section	.rodata.u8x8_font_courB18_2x3_f,"a"
+	.section	.rodata.u8x8_font_courB18_2x3_f,"a",@progbits
 	.type	u8x8_font_courB18_2x3_f, @object
 	.size	u8x8_font_courB18_2x3_f, 10756
 u8x8_font_courB18_2x3_f:
@@ -231237,7 +231237,7 @@ u8x8_font_courB18_2x3_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_victoriamedium8_u
-	.section	.rodata.u8x8_font_victoriamedium8_u,"a"
+	.section	.rodata.u8x8_font_victoriamedium8_u,"a",@progbits
 	.type	u8x8_font_victoriamedium8_u, @object
 	.size	u8x8_font_victoriamedium8_u, 517
 u8x8_font_victoriamedium8_u:
@@ -231463,7 +231463,7 @@ u8x8_font_victoriamedium8_u:
 	.string	"\004\002\001\002\004"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_victoriamedium8_n
-	.section	.rodata.u8x8_font_victoriamedium8_n,"a"
+	.section	.rodata.u8x8_font_victoriamedium8_n,"a",@progbits
 	.type	u8x8_font_victoriamedium8_n, @object
 	.size	u8x8_font_victoriamedium8_n, 220
 u8x8_font_victoriamedium8_n:
@@ -231607,7 +231607,7 @@ u8x8_font_victoriamedium8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_victoriamedium8_r
-	.section	.rodata.u8x8_font_victoriamedium8_r,"a"
+	.section	.rodata.u8x8_font_victoriamedium8_r,"a",@progbits
 	.type	u8x8_font_victoriamedium8_r, @object
 	.size	u8x8_font_victoriamedium8_r, 772
 u8x8_font_victoriamedium8_r:
@@ -231949,7 +231949,7 @@ u8x8_font_victoriamedium8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_victoriabold8_u
-	.section	.rodata.u8x8_font_victoriabold8_u,"a"
+	.section	.rodata.u8x8_font_victoriabold8_u,"a",@progbits
 	.type	u8x8_font_victoriabold8_u, @object
 	.size	u8x8_font_victoriabold8_u, 517
 u8x8_font_victoriabold8_u:
@@ -232119,7 +232119,7 @@ u8x8_font_victoriabold8_u:
 	.string	"\f\006\003\006\f"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_victoriabold8_n
-	.section	.rodata.u8x8_font_victoriabold8_n,"a"
+	.section	.rodata.u8x8_font_victoriabold8_n,"a",@progbits
 	.type	u8x8_font_victoriabold8_n, @object
 	.size	u8x8_font_victoriabold8_n, 220
 u8x8_font_victoriabold8_n:
@@ -232249,7 +232249,7 @@ u8x8_font_victoriabold8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_victoriabold8_r
-	.section	.rodata.u8x8_font_victoriabold8_r,"a"
+	.section	.rodata.u8x8_font_victoriabold8_r,"a",@progbits
 	.type	u8x8_font_victoriabold8_r, @object
 	.size	u8x8_font_victoriabold8_r, 772
 u8x8_font_victoriabold8_r:
@@ -232503,7 +232503,7 @@ u8x8_font_victoriabold8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_torussansbold8_u
-	.section	.rodata.u8x8_font_torussansbold8_u,"a"
+	.section	.rodata.u8x8_font_torussansbold8_u,"a",@progbits
 	.type	u8x8_font_torussansbold8_u, @object
 	.size	u8x8_font_torussansbold8_u, 517
 u8x8_font_torussansbold8_u:
@@ -232674,7 +232674,7 @@ u8x8_font_torussansbold8_u:
 	.string	"\f\006\003\006\f"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_torussansbold8_n
-	.section	.rodata.u8x8_font_torussansbold8_n,"a"
+	.section	.rodata.u8x8_font_torussansbold8_n,"a",@progbits
 	.type	u8x8_font_torussansbold8_n, @object
 	.size	u8x8_font_torussansbold8_n, 220
 u8x8_font_torussansbold8_n:
@@ -232807,7 +232807,7 @@ u8x8_font_torussansbold8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_torussansbold8_r
-	.section	.rodata.u8x8_font_torussansbold8_r,"a"
+	.section	.rodata.u8x8_font_torussansbold8_r,"a",@progbits
 	.type	u8x8_font_torussansbold8_r, @object
 	.size	u8x8_font_torussansbold8_r, 772
 u8x8_font_torussansbold8_r:
@@ -233064,7 +233064,7 @@ u8x8_font_torussansbold8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_saikyosansbold8_u
-	.section	.rodata.u8x8_font_saikyosansbold8_u,"a"
+	.section	.rodata.u8x8_font_saikyosansbold8_u,"a",@progbits
 	.type	u8x8_font_saikyosansbold8_u, @object
 	.size	u8x8_font_saikyosansbold8_u, 517
 u8x8_font_saikyosansbold8_u:
@@ -233202,7 +233202,7 @@ u8x8_font_saikyosansbold8_u:
 	.string	"\f\006\003\006\f"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_saikyosansbold8_n
-	.section	.rodata.u8x8_font_saikyosansbold8_n,"a"
+	.section	.rodata.u8x8_font_saikyosansbold8_n,"a",@progbits
 	.type	u8x8_font_saikyosansbold8_n, @object
 	.size	u8x8_font_saikyosansbold8_n, 220
 u8x8_font_saikyosansbold8_n:
@@ -233322,7 +233322,7 @@ u8x8_font_saikyosansbold8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_chroma48medium8_u
-	.section	.rodata.u8x8_font_chroma48medium8_u,"a"
+	.section	.rodata.u8x8_font_chroma48medium8_u,"a",@progbits
 	.type	u8x8_font_chroma48medium8_u, @object
 	.size	u8x8_font_chroma48medium8_u, 517
 u8x8_font_chroma48medium8_u:
@@ -233524,7 +233524,7 @@ u8x8_font_chroma48medium8_u:
 	.string	""
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_chroma48medium8_n
-	.section	.rodata.u8x8_font_chroma48medium8_n,"a"
+	.section	.rodata.u8x8_font_chroma48medium8_n,"a",@progbits
 	.type	u8x8_font_chroma48medium8_n, @object
 	.size	u8x8_font_chroma48medium8_n, 220
 u8x8_font_chroma48medium8_n:
@@ -233660,7 +233660,7 @@ u8x8_font_chroma48medium8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_chroma48medium8_r
-	.section	.rodata.u8x8_font_chroma48medium8_r,"a"
+	.section	.rodata.u8x8_font_chroma48medium8_r,"a",@progbits
 	.type	u8x8_font_chroma48medium8_r, @object
 	.size	u8x8_font_chroma48medium8_r, 772
 u8x8_font_chroma48medium8_r:
@@ -233978,7 +233978,7 @@ u8x8_font_chroma48medium8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_artosserif8_u
-	.section	.rodata.u8x8_font_artosserif8_u,"a"
+	.section	.rodata.u8x8_font_artosserif8_u,"a",@progbits
 	.type	u8x8_font_artosserif8_u, @object
 	.size	u8x8_font_artosserif8_u, 517
 u8x8_font_artosserif8_u:
@@ -234152,7 +234152,7 @@ u8x8_font_artosserif8_u:
 	.string	""
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_artosserif8_n
-	.section	.rodata.u8x8_font_artosserif8_n,"a"
+	.section	.rodata.u8x8_font_artosserif8_n,"a",@progbits
 	.type	u8x8_font_artosserif8_n, @object
 	.size	u8x8_font_artosserif8_n, 220
 u8x8_font_artosserif8_n:
@@ -234296,7 +234296,7 @@ u8x8_font_artosserif8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_artosserif8_r
-	.section	.rodata.u8x8_font_artosserif8_r,"a"
+	.section	.rodata.u8x8_font_artosserif8_r,"a",@progbits
 	.type	u8x8_font_artosserif8_r, @object
 	.size	u8x8_font_artosserif8_r, 764
 u8x8_font_artosserif8_r:
@@ -234577,7 +234577,7 @@ u8x8_font_artosserif8_r:
 	.string	""
 	.string	"\b\004\004\b\020\020\b"
 	.global	u8x8_font_artossans8_u
-	.section	.rodata.u8x8_font_artossans8_u,"a"
+	.section	.rodata.u8x8_font_artossans8_u,"a",@progbits
 	.type	u8x8_font_artossans8_u, @object
 	.size	u8x8_font_artossans8_u, 517
 u8x8_font_artossans8_u:
@@ -234748,7 +234748,7 @@ u8x8_font_artossans8_u:
 	.string	""
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_artossans8_n
-	.section	.rodata.u8x8_font_artossans8_n,"a"
+	.section	.rodata.u8x8_font_artossans8_n,"a",@progbits
 	.type	u8x8_font_artossans8_n, @object
 	.size	u8x8_font_artossans8_n, 220
 u8x8_font_artossans8_n:
@@ -234892,7 +234892,7 @@ u8x8_font_artossans8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_artossans8_r
-	.section	.rodata.u8x8_font_artossans8_r,"a"
+	.section	.rodata.u8x8_font_artossans8_r,"a",@progbits
 	.type	u8x8_font_artossans8_r, @object
 	.size	u8x8_font_artossans8_r, 772
 u8x8_font_artossans8_r:
@@ -235158,7 +235158,7 @@ u8x8_font_artossans8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_profont29_2x3_n
-	.section	.rodata.u8x8_font_profont29_2x3_n,"a"
+	.section	.rodata.u8x8_font_profont29_2x3_n,"a",@progbits
 	.type	u8x8_font_profont29_2x3_n, @object
 	.size	u8x8_font_profont29_2x3_n, 1300
 u8x8_font_profont29_2x3_n:
@@ -236013,7 +236013,7 @@ u8x8_font_profont29_2x3_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_profont29_2x3_r
-	.section	.rodata.u8x8_font_profont29_2x3_r,"a"
+	.section	.rodata.u8x8_font_profont29_2x3_r,"a",@progbits
 	.type	u8x8_font_profont29_2x3_r, @object
 	.size	u8x8_font_profont29_2x3_r, 4612
 u8x8_font_profont29_2x3_r:
@@ -238122,7 +238122,7 @@ u8x8_font_profont29_2x3_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_profont29_2x3_f
-	.section	.rodata.u8x8_font_profont29_2x3_f,"a"
+	.section	.rodata.u8x8_font_profont29_2x3_f,"a",@progbits
 	.type	u8x8_font_profont29_2x3_f, @object
 	.size	u8x8_font_profont29_2x3_f, 10756
 u8x8_font_profont29_2x3_f:
@@ -243233,7 +243233,7 @@ u8x8_font_profont29_2x3_f:
 	.string	"\001\003\347\347\347\347\347\347\347\367\177?\017"
 	.string	""
 	.global	u8x8_font_open_iconic_weather_8x8
-	.section	.rodata.u8x8_font_open_iconic_weather_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_weather_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_weather_8x8, @object
 	.size	u8x8_font_open_iconic_weather_8x8, 3076
 u8x8_font_open_iconic_weather_8x8:
@@ -244596,7 +244596,7 @@ u8x8_font_open_iconic_weather_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_thing_8x8
-	.section	.rodata.u8x8_font_open_iconic_thing_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_thing_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_thing_8x8, @object
 	.size	u8x8_font_open_iconic_thing_8x8, 9732
 u8x8_font_open_iconic_thing_8x8:
@@ -249341,7 +249341,7 @@ u8x8_font_open_iconic_thing_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_play_8x8
-	.section	.rodata.u8x8_font_open_iconic_play_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_play_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_play_8x8, @object
 	.size	u8x8_font_open_iconic_play_8x8, 9220
 u8x8_font_open_iconic_play_8x8:
@@ -254169,7 +254169,7 @@ u8x8_font_open_iconic_play_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_embedded_8x8
-	.section	.rodata.u8x8_font_open_iconic_embedded_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_embedded_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_embedded_8x8, @object
 	.size	u8x8_font_open_iconic_embedded_8x8, 8708
 u8x8_font_open_iconic_embedded_8x8:
@@ -258530,7 +258530,7 @@ u8x8_font_open_iconic_embedded_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_check_8x8
-	.section	.rodata.u8x8_font_open_iconic_check_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_check_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_check_8x8, @object
 	.size	u8x8_font_open_iconic_check_8x8, 2564
 u8x8_font_open_iconic_check_8x8:
@@ -259436,7 +259436,7 @@ u8x8_font_open_iconic_check_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_arrow_8x8
-	.section	.rodata.u8x8_font_open_iconic_arrow_8x8,"a"
+	.section	.rodata.u8x8_font_open_iconic_arrow_8x8,"a",@progbits
 	.type	u8x8_font_open_iconic_arrow_8x8, @object
 	.size	u8x8_font_open_iconic_arrow_8x8, 14340
 u8x8_font_open_iconic_arrow_8x8:
@@ -268200,7 +268200,7 @@ u8x8_font_open_iconic_arrow_8x8:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_weather_4x4
-	.section	.rodata.u8x8_font_open_iconic_weather_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_weather_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_weather_4x4, @object
 	.size	u8x8_font_open_iconic_weather_4x4, 772
 u8x8_font_open_iconic_weather_4x4:
@@ -268441,7 +268441,7 @@ u8x8_font_open_iconic_weather_4x4:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_thing_4x4
-	.section	.rodata.u8x8_font_open_iconic_thing_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_thing_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_thing_4x4, @object
 	.size	u8x8_font_open_iconic_thing_4x4, 2436
 u8x8_font_open_iconic_thing_4x4:
@@ -269327,7 +269327,7 @@ u8x8_font_open_iconic_thing_4x4:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_play_4x4
-	.section	.rodata.u8x8_font_open_iconic_play_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_play_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_play_4x4, @object
 	.size	u8x8_font_open_iconic_play_4x4, 2308
 u8x8_font_open_iconic_play_4x4:
@@ -270278,7 +270278,7 @@ u8x8_font_open_iconic_play_4x4:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_embedded_4x4
-	.section	.rodata.u8x8_font_open_iconic_embedded_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_embedded_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_embedded_4x4, @object
 	.size	u8x8_font_open_iconic_embedded_4x4, 2180
 u8x8_font_open_iconic_embedded_4x4:
@@ -271080,7 +271080,7 @@ u8x8_font_open_iconic_embedded_4x4:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_check_4x4
-	.section	.rodata.u8x8_font_open_iconic_check_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_check_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_check_4x4, @object
 	.size	u8x8_font_open_iconic_check_4x4, 644
 u8x8_font_open_iconic_check_4x4:
@@ -271219,7 +271219,7 @@ u8x8_font_open_iconic_check_4x4:
 	.string	""
 	.string	"\001\003\007\017\037?\177\177?\037\017\006"
 	.global	u8x8_font_open_iconic_arrow_4x4
-	.section	.rodata.u8x8_font_open_iconic_arrow_4x4,"a"
+	.section	.rodata.u8x8_font_open_iconic_arrow_4x4,"a",@progbits
 	.type	u8x8_font_open_iconic_arrow_4x4, @object
 	.size	u8x8_font_open_iconic_arrow_4x4, 3588
 u8x8_font_open_iconic_arrow_4x4:
@@ -272945,7 +272945,7 @@ u8x8_font_open_iconic_arrow_4x4:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_weather_2x2
-	.section	.rodata.u8x8_font_open_iconic_weather_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_weather_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_weather_2x2, @object
 	.size	u8x8_font_open_iconic_weather_2x2, 197
 u8x8_font_open_iconic_weather_2x2:
@@ -272976,7 +272976,7 @@ u8x8_font_open_iconic_weather_2x2:
 	.string	""
 	.string	"\200\200\f\f\300\340\360\363\363\360\340\300\f\f\200\200\001\00100\003\007\017\317\317\017\007\00300\001\001"
 	.global	u8x8_font_open_iconic_thing_2x2
-	.section	.rodata.u8x8_font_open_iconic_thing_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_thing_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_thing_2x2, @object
 	.size	u8x8_font_open_iconic_thing_2x2, 612
 u8x8_font_open_iconic_thing_2x2:
@@ -273117,7 +273117,7 @@ u8x8_font_open_iconic_thing_2x2:
 	.string	"\377\377\360\360\360\360\220\220\360\360\360\360\377\377"
 	.string	""
 	.global	u8x8_font_open_iconic_play_2x2
-	.section	.rodata.u8x8_font_open_iconic_play_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_play_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_play_2x2, @object
 	.size	u8x8_font_open_iconic_play_2x2, 580
 u8x8_font_open_iconic_play_2x2:
@@ -273280,7 +273280,7 @@ u8x8_font_open_iconic_play_2x2:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_embedded_2x2
-	.section	.rodata.u8x8_font_open_iconic_embedded_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_embedded_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_embedded_2x2, @object
 	.size	u8x8_font_open_iconic_embedded_2x2, 548
 u8x8_font_open_iconic_embedded_2x2:
@@ -273396,7 +273396,7 @@ u8x8_font_open_iconic_embedded_2x2:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_check_2x2
-	.section	.rodata.u8x8_font_open_iconic_check_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_check_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_check_2x2, @object
 	.size	u8x8_font_open_iconic_check_2x2, 164
 u8x8_font_open_iconic_check_2x2:
@@ -273415,7 +273415,7 @@ u8x8_font_open_iconic_check_2x2:
 	.string	"\004\016\037>|\370\360\340\360\370\374~?\036\f"
 	.string	"\0208|~?\037\017\007\007\017\037>|x0"
 	.global	u8x8_font_open_iconic_arrow_2x2
-	.section	.rodata.u8x8_font_open_iconic_arrow_2x2,"a"
+	.section	.rodata.u8x8_font_open_iconic_arrow_2x2,"a",@progbits
 	.type	u8x8_font_open_iconic_arrow_2x2, @object
 	.size	u8x8_font_open_iconic_arrow_2x2, 900
 u8x8_font_open_iconic_arrow_2x2:
@@ -273673,7 +273673,7 @@ u8x8_font_open_iconic_arrow_2x2:
 	.string	""
 	.string	""
 	.global	u8x8_font_open_iconic_weather_1x1
-	.section	.rodata.u8x8_font_open_iconic_weather_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_weather_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_weather_1x1, @object
 	.size	u8x8_font_open_iconic_weather_1x1, 52
 u8x8_font_open_iconic_weather_1x1:
@@ -273683,7 +273683,7 @@ u8x8_font_open_iconic_weather_1x1:
 	.string	""
 	.string	"B\030<<\030B"
 	.global	u8x8_font_open_iconic_thing_1x1
-	.section	.rodata.u8x8_font_open_iconic_thing_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_thing_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_thing_1x1, @object
 	.size	u8x8_font_open_iconic_thing_1x1, 156
 u8x8_font_open_iconic_thing_1x1:
@@ -273705,7 +273705,7 @@ u8x8_font_open_iconic_thing_1x1:
 	.string	"?\241\241\341\341\241\241?\b\t\017\177\017\t\b"
 	.string	"\377\301\301\301\301\301\377"
 	.global	u8x8_font_open_iconic_play_1x1
-	.section	.rodata.u8x8_font_open_iconic_play_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_play_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_play_1x1, @object
 	.size	u8x8_font_open_iconic_play_1x1, 148
 u8x8_font_open_iconic_play_1x1:
@@ -273745,7 +273745,7 @@ u8x8_font_open_iconic_play_1x1:
 	.string	"<<~\377"
 	.string	""
 	.global	u8x8_font_open_iconic_embedded_1x1
-	.section	.rodata.u8x8_font_open_iconic_embedded_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_embedded_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_embedded_1x1, @object
 	.size	u8x8_font_open_iconic_embedded_1x1, 140
 u8x8_font_open_iconic_embedded_1x1:
@@ -273768,14 +273768,14 @@ u8x8_font_open_iconic_embedded_1x1:
 	.string	"8D\200\217\200D8"
 	.string	"<B\201\201\201\205\006\006\002\001\t\311\311\001\002"
 	.global	u8x8_font_open_iconic_check_1x1
-	.section	.rodata.u8x8_font_open_iconic_check_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_check_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_check_1x1, @object
 	.size	u8x8_font_open_iconic_check_1x1, 45
 u8x8_font_open_iconic_check_1x1:
 	.string	"@D\001\001\0208pp8\034\016\004<~\357\357\347\363~<<~\333\347\347\333~<\177AAIIDr"
 	.string	"B\347~<<~\347B"
 	.global	u8x8_font_open_iconic_arrow_1x1
-	.section	.rodata.u8x8_font_open_iconic_arrow_1x1,"a"
+	.section	.rodata.u8x8_font_open_iconic_arrow_1x1,"a",@progbits
 	.type	u8x8_font_open_iconic_arrow_1x1, @object
 	.size	u8x8_font_open_iconic_arrow_1x1, 229
 u8x8_font_open_iconic_arrow_1x1:
@@ -273818,7 +273818,7 @@ u8x8_font_open_iconic_arrow_1x1:
 	.string	"0\030\f\f\0300"
 	.string	"\200\200\210\237\237\210\200\200\001\001\021\371\371\021\001\001&r\"\"\"\"'2\020<\026\002@h<\b\020\373\221\201\201\211\337\bBf<\030$B\347B0\030\f\f\f\037\016\004\177AADFf\006\002"
 	.global	u8x8_font_7x14B_1x2_n
-	.section	.rodata.u8x8_font_7x14B_1x2_n,"a"
+	.section	.rodata.u8x8_font_7x14B_1x2_n,"a",@progbits
 	.type	u8x8_font_7x14B_1x2_n, @object
 	.size	u8x8_font_7x14B_1x2_n, 436
 u8x8_font_7x14B_1x2_n:
@@ -274102,7 +274102,7 @@ u8x8_font_7x14B_1x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_7x14B_1x2_r
-	.section	.rodata.u8x8_font_7x14B_1x2_r,"a"
+	.section	.rodata.u8x8_font_7x14B_1x2_r,"a",@progbits
 	.type	u8x8_font_7x14B_1x2_r, @object
 	.size	u8x8_font_7x14B_1x2_r, 1524
 u8x8_font_7x14B_1x2_r:
@@ -274721,7 +274721,7 @@ u8x8_font_7x14B_1x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_7x14B_1x2_f
-	.section	.rodata.u8x8_font_7x14B_1x2_f,"a"
+	.section	.rodata.u8x8_font_7x14B_1x2_f,"a",@progbits
 	.type	u8x8_font_7x14B_1x2_f, @object
 	.size	u8x8_font_7x14B_1x2_f, 3588
 u8x8_font_7x14B_1x2_f:
@@ -276410,7 +276410,7 @@ u8x8_font_7x14B_1x2_f:
 	.string	""
 	.string	"!c~>\017\001"
 	.global	u8x8_font_7x14_1x2_n
-	.section	.rodata.u8x8_font_7x14_1x2_n,"a"
+	.section	.rodata.u8x8_font_7x14_1x2_n,"a",@progbits
 	.type	u8x8_font_7x14_1x2_n, @object
 	.size	u8x8_font_7x14_1x2_n, 436
 u8x8_font_7x14_1x2_n:
@@ -276698,7 +276698,7 @@ u8x8_font_7x14_1x2_n:
 	.string	"\b\034\b"
 	.string	""
 	.global	u8x8_font_7x14_1x2_r
-	.section	.rodata.u8x8_font_7x14_1x2_r,"a"
+	.section	.rodata.u8x8_font_7x14_1x2_r,"a",@progbits
 	.type	u8x8_font_7x14_1x2_r, @object
 	.size	u8x8_font_7x14_1x2_r, 1524
 u8x8_font_7x14_1x2_r:
@@ -277390,7 +277390,7 @@ u8x8_font_7x14_1x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_7x14_1x2_f
-	.section	.rodata.u8x8_font_7x14_1x2_f,"a"
+	.section	.rodata.u8x8_font_7x14_1x2_f,"a",@progbits
 	.type	u8x8_font_7x14_1x2_f, @object
 	.size	u8x8_font_7x14_1x2_f, 3588
 u8x8_font_7x14_1x2_f:
@@ -279211,7 +279211,7 @@ u8x8_font_7x14_1x2_f:
 	.string	""
 	.string	" CL8\016\001"
 	.global	u8x8_font_8x13B_1x2_n
-	.section	.rodata.u8x8_font_8x13B_1x2_n,"a"
+	.section	.rodata.u8x8_font_8x13B_1x2_n,"a",@progbits
 	.type	u8x8_font_8x13B_1x2_n, @object
 	.size	u8x8_font_8x13B_1x2_n, 436
 u8x8_font_8x13B_1x2_n:
@@ -279465,7 +279465,7 @@ u8x8_font_8x13B_1x2_n:
 	.string	"\b\034\034\b"
 	.string	""
 	.global	u8x8_font_8x13B_1x2_r
-	.section	.rodata.u8x8_font_8x13B_1x2_r,"a"
+	.section	.rodata.u8x8_font_8x13B_1x2_r,"a",@progbits
 	.type	u8x8_font_8x13B_1x2_r, @object
 	.size	u8x8_font_8x13B_1x2_r, 1524
 u8x8_font_8x13B_1x2_r:
@@ -279968,7 +279968,7 @@ u8x8_font_8x13B_1x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_8x13B_1x2_f
-	.section	.rodata.u8x8_font_8x13B_1x2_f,"a"
+	.section	.rodata.u8x8_font_8x13B_1x2_f,"a",@progbits
 	.type	u8x8_font_8x13B_1x2_f, @object
 	.size	u8x8_font_8x13B_1x2_f, 3588
 u8x8_font_8x13B_1x2_f:
@@ -281441,7 +281441,7 @@ u8x8_font_8x13B_1x2_f:
 	.string	"\f\354\340"
 	.string	"\0237$$\"?\037"
 	.global	u8x8_font_8x13_1x2_n
-	.section	.rodata.u8x8_font_8x13_1x2_n,"a"
+	.section	.rodata.u8x8_font_8x13_1x2_n,"a",@progbits
 	.type	u8x8_font_8x13_1x2_n, @object
 	.size	u8x8_font_8x13_1x2_n, 436
 u8x8_font_8x13_1x2_n:
@@ -281730,7 +281730,7 @@ u8x8_font_8x13_1x2_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_8x13_1x2_r
-	.section	.rodata.u8x8_font_8x13_1x2_r,"a"
+	.section	.rodata.u8x8_font_8x13_1x2_r,"a",@progbits
 	.type	u8x8_font_8x13_1x2_r, @object
 	.size	u8x8_font_8x13_1x2_r, 1524
 u8x8_font_8x13_1x2_r:
@@ -282414,7 +282414,7 @@ u8x8_font_8x13_1x2_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_8x13_1x2_f
-	.section	.rodata.u8x8_font_8x13_1x2_f,"a"
+	.section	.rodata.u8x8_font_8x13_1x2_f,"a",@progbits
 	.type	u8x8_font_8x13_1x2_f, @object
 	.size	u8x8_font_8x13_1x2_f, 3588
 u8x8_font_8x13_1x2_f:
@@ -284210,7 +284210,7 @@ u8x8_font_8x13_1x2_f:
 	.string	""
 	.string	"\023$$$\"\037"
 	.global	u8x8_font_5x8_n
-	.section	.rodata.u8x8_font_5x8_n,"a"
+	.section	.rodata.u8x8_font_5x8_n,"a",@progbits
 	.type	u8x8_font_5x8_n, @object
 	.size	u8x8_font_5x8_n, 220
 u8x8_font_5x8_n:
@@ -284368,7 +284368,7 @@ u8x8_font_5x8_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_5x8_r
-	.section	.rodata.u8x8_font_5x8_r,"a"
+	.section	.rodata.u8x8_font_5x8_r,"a",@progbits
 	.type	u8x8_font_5x8_r, @object
 	.size	u8x8_font_5x8_r, 764
 u8x8_font_5x8_r:
@@ -284789,7 +284789,7 @@ u8x8_font_5x8_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_5x8_f
-	.section	.rodata.u8x8_font_5x8_f,"a"
+	.section	.rodata.u8x8_font_5x8_f,"a",@progbits
 	.type	u8x8_font_5x8_f, @object
 	.size	u8x8_font_5x8_f, 1796
 u8x8_font_5x8_f:
@@ -285891,7 +285891,7 @@ u8x8_font_5x8_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_5x7_n
-	.section	.rodata.u8x8_font_5x7_n,"a"
+	.section	.rodata.u8x8_font_5x7_n,"a",@progbits
 	.type	u8x8_font_5x7_n, @object
 	.size	u8x8_font_5x7_n, 220
 u8x8_font_5x7_n:
@@ -286051,7 +286051,7 @@ u8x8_font_5x7_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_5x7_r
-	.section	.rodata.u8x8_font_5x7_r,"a"
+	.section	.rodata.u8x8_font_5x7_r,"a",@progbits
 	.type	u8x8_font_5x7_r, @object
 	.size	u8x8_font_5x7_r, 764
 u8x8_font_5x7_r:
@@ -286479,7 +286479,7 @@ u8x8_font_5x7_r:
 	.string	""
 	.string	""
 	.global	u8x8_font_5x7_f
-	.section	.rodata.u8x8_font_5x7_f,"a"
+	.section	.rodata.u8x8_font_5x7_f,"a",@progbits
 	.type	u8x8_font_5x7_f, @object
 	.size	u8x8_font_5x7_f, 1796
 u8x8_font_5x7_f:
@@ -287592,7 +287592,7 @@ u8x8_font_5x7_f:
 	.string	""
 	.string	""
 	.global	u8x8_font_amstrad_cpc_extended_u
-	.section	.rodata.u8x8_font_amstrad_cpc_extended_u,"a"
+	.section	.rodata.u8x8_font_amstrad_cpc_extended_u,"a",@progbits
 	.type	u8x8_font_amstrad_cpc_extended_u, @object
 	.size	u8x8_font_amstrad_cpc_extended_u, 517
 u8x8_font_amstrad_cpc_extended_u:
@@ -287735,7 +287735,7 @@ u8x8_font_amstrad_cpc_extended_u:
 	.string	"\b\f\006\003\006\f\b"
 	.string	"\200\200\200\200\200\200\200\200"
 	.global	u8x8_font_amstrad_cpc_extended_n
-	.section	.rodata.u8x8_font_amstrad_cpc_extended_n,"a"
+	.section	.rodata.u8x8_font_amstrad_cpc_extended_n,"a",@progbits
 	.type	u8x8_font_amstrad_cpc_extended_n, @object
 	.size	u8x8_font_amstrad_cpc_extended_n, 220
 u8x8_font_amstrad_cpc_extended_n:
@@ -287860,7 +287860,7 @@ u8x8_font_amstrad_cpc_extended_n:
 	.string	""
 	.string	""
 	.global	u8x8_font_amstrad_cpc_extended_r
-	.section	.rodata.u8x8_font_amstrad_cpc_extended_r,"a"
+	.section	.rodata.u8x8_font_amstrad_cpc_extended_r,"a",@progbits
 	.type	u8x8_font_amstrad_cpc_extended_r, @object
 	.size	u8x8_font_amstrad_cpc_extended_r, 764
 u8x8_font_amstrad_cpc_extended_r:
@@ -288062,7 +288062,7 @@ u8x8_font_amstrad_cpc_extended_r:
 	.string	"\b\b>wAA"
 	.string	"\002\003\001\003\002\001\001"
 	.global	u8x8_font_amstrad_cpc_extended_f
-	.section	.rodata.u8x8_font_amstrad_cpc_extended_f,"a"
+	.section	.rodata.u8x8_font_amstrad_cpc_extended_f,"a",@progbits
 	.type	u8x8_font_amstrad_cpc_extended_f, @object
 	.size	u8x8_font_amstrad_cpc_extended_f, 1796
 u8x8_font_amstrad_cpc_extended_f:
@@ -288531,21 +288531,20 @@ u8x8_font_amstrad_cpc_extended_f:
 	.string	"\232\272\240\240\372z"
 	.text
 .Letext0:
-	.file 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h"
-	.file 2 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h"
-	.file 3 "/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8.h"
-	.file 4 "/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_fonts.c"
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+	.file 3 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/u8g2/csrc/u8x8_fonts.c"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0xead
+	.4byte	0xf58
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF140
+	.4byte	.LASF139
 	.byte	0xc
+	.4byte	.LASF140
 	.4byte	.LASF141
-	.4byte	.LASF142
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
 	.byte	0x1
@@ -288554,9 +288553,8 @@ u8x8_font_amstrad_cpc_extended_f:
 	.uleb128 0x3
 	.4byte	.LASF7
 	.byte	0x1
-	.byte	0x2b
-	.byte	0x17
-	.4byte	0x30
+	.byte	0x12
+	.4byte	0x2f
 	.uleb128 0x2
 	.byte	0x1
 	.byte	0x8
@@ -288588,1836 +288586,1659 @@ u8x8_font_amstrad_cpc_extended_f:
 	.uleb128 0x3
 	.4byte	.LASF8
 	.byte	0x2
-	.byte	0x18
-	.byte	0x13
+	.byte	0x15
 	.4byte	0x24
 	.uleb128 0x5
-	.4byte	0x61
+	.4byte	0x60
+	.4byte	0x7c
 	.uleb128 0x6
-	.4byte	0x6d
-	.4byte	0x7d
-	.uleb128 0x7
+	.4byte	0x7c
+	.2byte	0x703
 	.byte	0
-	.uleb128 0x5
-	.4byte	0x72
-	.uleb128 0x8
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
 	.4byte	.LASF9
-	.byte	0x3
-	.2byte	0x420
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
+	.uleb128 0x7
 	.4byte	.LASF10
 	.byte	0x3
-	.2byte	0x421
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF11
-	.byte	0x3
-	.2byte	0x422
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF12
-	.byte	0x3
-	.2byte	0x423
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF13
-	.byte	0x3
-	.2byte	0x424
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF14
-	.byte	0x3
-	.2byte	0x425
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF15
-	.byte	0x3
-	.2byte	0x426
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF16
-	.byte	0x3
-	.2byte	0x427
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF17
-	.byte	0x3
-	.2byte	0x428
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF18
-	.byte	0x3
-	.2byte	0x429
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF19
-	.byte	0x3
-	.2byte	0x42a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF20
-	.byte	0x3
-	.2byte	0x42b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF21
-	.byte	0x3
-	.2byte	0x42c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF22
-	.byte	0x3
-	.2byte	0x42d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF23
-	.byte	0x3
-	.2byte	0x42e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF24
-	.byte	0x3
-	.2byte	0x42f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF25
-	.byte	0x3
-	.2byte	0x430
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF26
-	.byte	0x3
-	.2byte	0x431
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF27
-	.byte	0x3
-	.2byte	0x432
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF28
-	.byte	0x3
-	.2byte	0x433
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF29
-	.byte	0x3
-	.2byte	0x434
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF30
-	.byte	0x3
-	.2byte	0x435
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF31
-	.byte	0x3
-	.2byte	0x436
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF32
-	.byte	0x3
-	.2byte	0x437
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF33
-	.byte	0x3
-	.2byte	0x438
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF34
-	.byte	0x3
-	.2byte	0x439
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF35
-	.byte	0x3
-	.2byte	0x43a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF36
-	.byte	0x3
-	.2byte	0x43b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF37
-	.byte	0x3
-	.2byte	0x43c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF38
-	.byte	0x3
-	.2byte	0x43d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF39
-	.byte	0x3
-	.2byte	0x43e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF40
-	.byte	0x3
-	.2byte	0x43f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF41
-	.byte	0x3
-	.2byte	0x440
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF42
-	.byte	0x3
-	.2byte	0x441
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF43
-	.byte	0x3
-	.2byte	0x442
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF44
-	.byte	0x3
-	.2byte	0x443
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF45
-	.byte	0x3
-	.2byte	0x444
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF46
-	.byte	0x3
-	.2byte	0x445
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF47
-	.byte	0x3
-	.2byte	0x446
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF48
-	.byte	0x3
-	.2byte	0x447
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF49
-	.byte	0x3
-	.2byte	0x448
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF50
-	.byte	0x3
-	.2byte	0x449
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF51
-	.byte	0x3
-	.2byte	0x44a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF52
-	.byte	0x3
-	.2byte	0x44b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF53
-	.byte	0x3
-	.2byte	0x44c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF54
-	.byte	0x3
-	.2byte	0x44d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF55
-	.byte	0x3
-	.2byte	0x44e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF56
-	.byte	0x3
-	.2byte	0x44f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF57
-	.byte	0x3
-	.2byte	0x450
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF58
-	.byte	0x3
-	.2byte	0x451
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF59
-	.byte	0x3
-	.2byte	0x452
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF60
-	.byte	0x3
-	.2byte	0x453
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF61
-	.byte	0x3
-	.2byte	0x454
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF62
-	.byte	0x3
-	.2byte	0x455
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF63
-	.byte	0x3
-	.2byte	0x456
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF64
-	.byte	0x3
-	.2byte	0x457
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF65
-	.byte	0x3
-	.2byte	0x458
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF66
-	.byte	0x3
-	.2byte	0x459
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF67
-	.byte	0x3
-	.2byte	0x45a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF68
-	.byte	0x3
-	.2byte	0x45b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF69
-	.byte	0x3
-	.2byte	0x45c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF70
-	.byte	0x3
-	.2byte	0x45d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF71
-	.byte	0x3
-	.2byte	0x45e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF72
-	.byte	0x3
-	.2byte	0x45f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF73
-	.byte	0x3
-	.2byte	0x460
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF74
-	.byte	0x3
-	.2byte	0x461
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF75
-	.byte	0x3
-	.2byte	0x462
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF76
-	.byte	0x3
-	.2byte	0x463
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF77
-	.byte	0x3
-	.2byte	0x464
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF78
-	.byte	0x3
-	.2byte	0x465
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF79
-	.byte	0x3
-	.2byte	0x466
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF80
-	.byte	0x3
-	.2byte	0x467
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF81
-	.byte	0x3
-	.2byte	0x468
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF82
-	.byte	0x3
-	.2byte	0x469
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF83
-	.byte	0x3
-	.2byte	0x46a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF84
-	.byte	0x3
-	.2byte	0x46b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF85
-	.byte	0x3
-	.2byte	0x46c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF86
-	.byte	0x3
-	.2byte	0x46d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF87
-	.byte	0x3
-	.2byte	0x46e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF88
-	.byte	0x3
-	.2byte	0x46f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF89
-	.byte	0x3
-	.2byte	0x470
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF90
-	.byte	0x3
-	.2byte	0x471
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF91
-	.byte	0x3
-	.2byte	0x472
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF92
-	.byte	0x3
-	.2byte	0x473
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF93
-	.byte	0x3
-	.2byte	0x474
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF94
-	.byte	0x3
-	.2byte	0x475
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF95
-	.byte	0x3
-	.2byte	0x476
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF96
-	.byte	0x3
-	.2byte	0x477
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF97
-	.byte	0x3
-	.2byte	0x478
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF98
-	.byte	0x3
-	.2byte	0x479
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF99
-	.byte	0x3
-	.2byte	0x47a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF100
-	.byte	0x3
-	.2byte	0x47b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF101
-	.byte	0x3
-	.2byte	0x47c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF102
-	.byte	0x3
-	.2byte	0x47d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF103
-	.byte	0x3
-	.2byte	0x47e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF104
-	.byte	0x3
-	.2byte	0x47f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF105
-	.byte	0x3
-	.2byte	0x480
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF106
-	.byte	0x3
-	.2byte	0x481
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF107
-	.byte	0x3
-	.2byte	0x482
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF108
-	.byte	0x3
-	.2byte	0x483
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF109
-	.byte	0x3
-	.2byte	0x484
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF110
-	.byte	0x3
-	.2byte	0x485
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF111
-	.byte	0x3
-	.2byte	0x486
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF112
-	.byte	0x3
-	.2byte	0x487
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF113
-	.byte	0x3
-	.2byte	0x488
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF114
-	.byte	0x3
-	.2byte	0x489
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF115
-	.byte	0x3
-	.2byte	0x48a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF116
-	.byte	0x3
-	.2byte	0x48b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF117
-	.byte	0x3
-	.2byte	0x48c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF118
-	.byte	0x3
-	.2byte	0x48d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF119
-	.byte	0x3
-	.2byte	0x48e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF120
-	.byte	0x3
-	.2byte	0x48f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF121
-	.byte	0x3
-	.2byte	0x490
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF122
-	.byte	0x3
-	.2byte	0x491
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF123
-	.byte	0x3
-	.2byte	0x492
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF124
-	.byte	0x3
-	.2byte	0x493
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF125
-	.byte	0x3
-	.2byte	0x494
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF126
-	.byte	0x3
-	.2byte	0x495
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF127
-	.byte	0x3
-	.2byte	0x496
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF128
-	.byte	0x3
-	.2byte	0x497
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF129
-	.byte	0x3
-	.2byte	0x498
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF130
-	.byte	0x3
-	.2byte	0x499
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF131
-	.byte	0x3
-	.2byte	0x49a
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF132
-	.byte	0x3
-	.2byte	0x49b
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF133
-	.byte	0x3
-	.2byte	0x49c
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF134
-	.byte	0x3
-	.2byte	0x49d
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF135
-	.byte	0x3
-	.2byte	0x49e
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF136
-	.byte	0x3
-	.2byte	0x49f
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF137
-	.byte	0x3
-	.2byte	0x4a0
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF138
-	.byte	0x3
-	.2byte	0x4a1
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x8
-	.4byte	.LASF139
-	.byte	0x3
-	.2byte	0x4a2
-	.byte	0x16
-	.4byte	0x7d
-	.uleb128 0x9
-	.4byte	0x82
-	.byte	0x4
 	.byte	0xc
-	.byte	0xf
+	.4byte	0x94
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_amstrad_cpc_extended_f
-	.uleb128 0x9
-	.4byte	0x8f
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0x6b
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xaa
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x2fb
+	.byte	0
+	.uleb128 0x7
+	.4byte	.LASF11
+	.byte	0x3
 	.byte	0x4c
-	.byte	0xf
+	.4byte	0xbb
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_amstrad_cpc_extended_r
+	.uleb128 0x8
+	.4byte	0x99
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xd0
 	.uleb128 0x9
-	.4byte	0x9c
-	.byte	0x4
+	.4byte	0x7c
+	.byte	0xdb
+	.byte	0
+	.uleb128 0x7
+	.4byte	.LASF12
+	.byte	0x3
 	.byte	0x6b
-	.byte	0xf
+	.4byte	0xe1
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_amstrad_cpc_extended_n
-	.uleb128 0x9
-	.4byte	0xa9
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0xc0
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xf7
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x204
+	.byte	0
+	.uleb128 0x7
+	.4byte	.LASF13
+	.byte	0x3
 	.byte	0x79
-	.byte	0xf
+	.4byte	0x108
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_amstrad_cpc_extended_u
-	.uleb128 0x9
-	.4byte	0xb6
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0xe6
+	.uleb128 0x7
+	.4byte	.LASF14
+	.byte	0x3
 	.byte	0x91
-	.byte	0xf
+	.4byte	0x11e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x7_f
-	.uleb128 0x9
-	.4byte	0xc3
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0x6b
+	.uleb128 0x7
+	.4byte	.LASF15
+	.byte	0x3
 	.byte	0xd1
-	.byte	0xf
+	.4byte	0x134
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x7_r
-	.uleb128 0x9
-	.4byte	0xd0
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0x99
+	.uleb128 0x7
+	.4byte	.LASF16
+	.byte	0x3
 	.byte	0xf0
-	.byte	0xf
+	.4byte	0x14a
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x7_n
-	.uleb128 0x9
-	.4byte	0xdd
-	.byte	0x4
+	.uleb128 0x8
+	.4byte	0xc0
+	.uleb128 0x7
+	.4byte	.LASF17
+	.byte	0x3
 	.byte	0xfe
-	.byte	0xf
+	.4byte	0x160
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x8_f
+	.uleb128 0x8
+	.4byte	0x6b
 	.uleb128 0xa
-	.4byte	0xea
-	.byte	0x4
+	.4byte	.LASF18
+	.byte	0x3
 	.2byte	0x13e
-	.byte	0xf
+	.4byte	0x177
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x8_r
+	.uleb128 0x8
+	.4byte	0x99
 	.uleb128 0xa
-	.4byte	0xf7
-	.byte	0x4
+	.4byte	.LASF19
+	.byte	0x3
 	.2byte	0x15d
-	.byte	0xf
+	.4byte	0x18e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_5x8_n
+	.uleb128 0x8
+	.4byte	0xc0
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x1a4
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xe03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x104
-	.byte	0x4
+	.4byte	.LASF20
+	.byte	0x3
 	.2byte	0x16b
-	.byte	0xf
+	.4byte	0x1b6
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13_1x2_f
+	.uleb128 0x8
+	.4byte	0x193
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x1cc
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x5f3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x111
-	.byte	0x4
+	.4byte	.LASF21
+	.byte	0x3
 	.2byte	0x1e3
-	.byte	0xf
+	.4byte	0x1de
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13_1x2_r
+	.uleb128 0x8
+	.4byte	0x1bb
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x1f4
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x1b3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x11e
-	.byte	0x4
+	.4byte	.LASF22
+	.byte	0x3
 	.2byte	0x21a
-	.byte	0xf
+	.4byte	0x206
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13_1x2_n
+	.uleb128 0x8
+	.4byte	0x1e3
 	.uleb128 0xa
-	.4byte	0x12b
-	.byte	0x4
+	.4byte	.LASF23
+	.byte	0x3
 	.2byte	0x22f
-	.byte	0xf
+	.4byte	0x21d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13B_1x2_f
+	.uleb128 0x8
+	.4byte	0x193
 	.uleb128 0xa
-	.4byte	0x138
-	.byte	0x4
+	.4byte	.LASF24
+	.byte	0x3
 	.2byte	0x2a7
-	.byte	0xf
+	.4byte	0x234
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13B_1x2_r
+	.uleb128 0x8
+	.4byte	0x1bb
 	.uleb128 0xa
-	.4byte	0x145
-	.byte	0x4
+	.4byte	.LASF25
+	.byte	0x3
 	.2byte	0x2de
-	.byte	0xf
+	.4byte	0x24b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_8x13B_1x2_n
+	.uleb128 0x8
+	.4byte	0x1e3
 	.uleb128 0xa
-	.4byte	0x152
-	.byte	0x4
+	.4byte	.LASF26
+	.byte	0x3
 	.2byte	0x2f3
-	.byte	0xf
+	.4byte	0x262
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14_1x2_f
+	.uleb128 0x8
+	.4byte	0x193
 	.uleb128 0xa
-	.4byte	0x15f
-	.byte	0x4
+	.4byte	.LASF27
+	.byte	0x3
 	.2byte	0x36b
-	.byte	0xf
+	.4byte	0x279
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14_1x2_r
+	.uleb128 0x8
+	.4byte	0x1bb
 	.uleb128 0xa
-	.4byte	0x16c
-	.byte	0x4
+	.4byte	.LASF28
+	.byte	0x3
 	.2byte	0x3a2
-	.byte	0xf
+	.4byte	0x290
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14_1x2_n
+	.uleb128 0x8
+	.4byte	0x1e3
 	.uleb128 0xa
-	.4byte	0x179
-	.byte	0x4
+	.4byte	.LASF29
+	.byte	0x3
 	.2byte	0x3b7
-	.byte	0xf
+	.4byte	0x2a7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14B_1x2_f
+	.uleb128 0x8
+	.4byte	0x193
 	.uleb128 0xa
-	.4byte	0x186
-	.byte	0x4
+	.4byte	.LASF30
+	.byte	0x3
 	.2byte	0x42f
-	.byte	0xf
+	.4byte	0x2be
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14B_1x2_r
+	.uleb128 0x8
+	.4byte	0x1bb
 	.uleb128 0xa
-	.4byte	0x193
-	.byte	0x4
+	.4byte	.LASF31
+	.byte	0x3
 	.2byte	0x466
-	.byte	0xf
+	.4byte	0x2d5
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_7x14B_1x2_n
+	.uleb128 0x8
+	.4byte	0x1e3
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x2ea
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0xe4
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1a0
-	.byte	0x4
+	.4byte	.LASF32
+	.byte	0x3
 	.2byte	0x47b
-	.byte	0xf
+	.4byte	0x2fc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_arrow_1x1
+	.uleb128 0x8
+	.4byte	0x2da
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x311
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0x2c
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1ad
-	.byte	0x4
+	.4byte	.LASF33
+	.byte	0x3
 	.2byte	0x48a
-	.byte	0xf
+	.4byte	0x323
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_check_1x1
+	.uleb128 0x8
+	.4byte	0x301
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x338
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0x8b
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1ba
-	.byte	0x4
+	.4byte	.LASF34
+	.byte	0x3
 	.2byte	0x493
-	.byte	0xf
+	.4byte	0x34a
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_embedded_1x1
+	.uleb128 0x8
+	.4byte	0x328
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x35f
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0x93
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1c7
-	.byte	0x4
+	.4byte	.LASF35
+	.byte	0x3
 	.2byte	0x49f
-	.byte	0xf
+	.4byte	0x371
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_play_1x1
+	.uleb128 0x8
+	.4byte	0x34f
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x386
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0x9b
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1d4
-	.byte	0x4
+	.4byte	.LASF36
+	.byte	0x3
 	.2byte	0x4ab
-	.byte	0xf
+	.4byte	0x398
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_thing_1x1
+	.uleb128 0x8
+	.4byte	0x376
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x3ad
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0x33
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1e1
-	.byte	0x4
+	.4byte	.LASF37
+	.byte	0x3
 	.2byte	0x4b7
-	.byte	0xf
+	.4byte	0x3bf
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_weather_1x1
+	.uleb128 0x8
+	.4byte	0x39d
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x3d5
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x383
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1ee
-	.byte	0x4
+	.4byte	.LASF38
+	.byte	0x3
 	.2byte	0x4c0
-	.byte	0xf
+	.4byte	0x3e7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_arrow_2x2
+	.uleb128 0x8
+	.4byte	0x3c4
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x3fc
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0xa3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x1fb
-	.byte	0x4
+	.4byte	.LASF39
+	.byte	0x3
 	.2byte	0x4e4
-	.byte	0xf
+	.4byte	0x40e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_check_2x2
+	.uleb128 0x8
+	.4byte	0x3ec
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x424
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x223
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x208
-	.byte	0x4
+	.4byte	.LASF40
+	.byte	0x3
 	.2byte	0x4f1
-	.byte	0xf
+	.4byte	0x436
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_embedded_2x2
+	.uleb128 0x8
+	.4byte	0x413
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x44c
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x243
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x215
-	.byte	0x4
+	.4byte	.LASF41
+	.byte	0x3
 	.2byte	0x50a
-	.byte	0xf
+	.4byte	0x45e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_play_2x2
+	.uleb128 0x8
+	.4byte	0x43b
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x474
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x263
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x222
-	.byte	0x4
+	.4byte	.LASF42
+	.byte	0x3
 	.2byte	0x524
-	.byte	0xf
+	.4byte	0x486
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_thing_2x2
+	.uleb128 0x8
+	.4byte	0x463
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x49b
+	.uleb128 0x9
+	.4byte	0x7c
+	.byte	0xc4
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x22f
-	.byte	0x4
+	.4byte	.LASF43
+	.byte	0x3
 	.2byte	0x53f
-	.byte	0xf
+	.4byte	0x4ad
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_weather_2x2
+	.uleb128 0x8
+	.4byte	0x48b
 	.uleb128 0xa
-	.4byte	0x23c
-	.byte	0x4
+	.4byte	.LASF44
+	.byte	0x3
 	.2byte	0x54d
-	.byte	0xf
+	.4byte	0x4c4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_arrow_4x4
+	.uleb128 0x8
+	.4byte	0x193
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x4da
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x283
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x249
-	.byte	0x4
+	.4byte	.LASF45
+	.byte	0x3
 	.2byte	0x5c5
-	.byte	0xf
+	.4byte	0x4ec
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_check_4x4
+	.uleb128 0x8
+	.4byte	0x4c9
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x502
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x883
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x256
-	.byte	0x4
+	.4byte	.LASF46
+	.byte	0x3
 	.2byte	0x5e1
-	.byte	0xf
+	.4byte	0x514
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_embedded_4x4
+	.uleb128 0x8
+	.4byte	0x4f1
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x52a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x903
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x263
-	.byte	0x4
+	.4byte	.LASF47
+	.byte	0x3
 	.2byte	0x62d
-	.byte	0xf
+	.4byte	0x53c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_play_4x4
+	.uleb128 0x8
+	.4byte	0x519
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x552
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x983
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x270
-	.byte	0x4
+	.4byte	.LASF48
+	.byte	0x3
 	.2byte	0x67d
-	.byte	0xf
+	.4byte	0x564
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_thing_4x4
+	.uleb128 0x8
+	.4byte	0x541
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x57a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x303
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x27d
-	.byte	0x4
+	.4byte	.LASF49
+	.byte	0x3
 	.2byte	0x6d1
-	.byte	0xf
+	.4byte	0x58c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_weather_4x4
+	.uleb128 0x8
+	.4byte	0x569
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x5a2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x3803
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x28a
-	.byte	0x4
+	.4byte	.LASF50
+	.byte	0x3
 	.2byte	0x6f1
-	.byte	0xf
+	.4byte	0x5b4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_arrow_8x8
+	.uleb128 0x8
+	.4byte	0x591
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x5ca
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xa03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x297
-	.byte	0x4
+	.4byte	.LASF51
+	.byte	0x3
 	.2byte	0x8b9
-	.byte	0xf
+	.4byte	0x5dc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_check_8x8
+	.uleb128 0x8
+	.4byte	0x5b9
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x5f2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x2203
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2a4
-	.byte	0x4
+	.4byte	.LASF52
+	.byte	0x3
 	.2byte	0x911
-	.byte	0xf
+	.4byte	0x604
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_embedded_8x8
+	.uleb128 0x8
+	.4byte	0x5e1
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x61a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x2403
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2b1
-	.byte	0x4
+	.4byte	.LASF53
+	.byte	0x3
 	.2byte	0xa29
-	.byte	0xf
+	.4byte	0x62c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_play_8x8
+	.uleb128 0x8
+	.4byte	0x609
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x642
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x2603
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2be
-	.byte	0x4
+	.4byte	.LASF54
+	.byte	0x3
 	.2byte	0xb51
-	.byte	0xf
+	.4byte	0x654
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_thing_8x8
+	.uleb128 0x8
+	.4byte	0x631
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x66a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xc03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2cb
-	.byte	0x4
+	.4byte	.LASF55
+	.byte	0x3
 	.2byte	0xc89
-	.byte	0xf
+	.4byte	0x67c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_open_iconic_weather_8x8
+	.uleb128 0x8
+	.4byte	0x659
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x692
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x2a03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2d8
-	.byte	0x4
+	.4byte	.LASF56
+	.byte	0x3
 	.2byte	0xcf1
-	.byte	0xf
+	.4byte	0x6a4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_profont29_2x3_f
+	.uleb128 0x8
+	.4byte	0x681
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x6ba
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x1203
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2e5
-	.byte	0x4
+	.4byte	.LASF57
+	.byte	0x3
 	.2byte	0xe49
-	.byte	0xf
+	.4byte	0x6cc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_profont29_2x3_r
+	.uleb128 0x8
+	.4byte	0x6a9
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x6e2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x513
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x2f2
-	.byte	0x4
+	.4byte	.LASF58
+	.byte	0x3
 	.2byte	0xee1
-	.byte	0xf
+	.4byte	0x6f4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_profont29_2x3_n
+	.uleb128 0x8
+	.4byte	0x6d1
 	.uleb128 0xa
-	.4byte	0x2ff
-	.byte	0x4
+	.4byte	.LASF59
+	.byte	0x3
 	.2byte	0xf11
-	.byte	0xf
+	.4byte	0x70b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artossans8_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x30c
-	.byte	0x4
+	.4byte	.LASF60
+	.byte	0x3
 	.2byte	0xf31
-	.byte	0xf
+	.4byte	0x722
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artossans8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x319
-	.byte	0x4
+	.4byte	.LASF61
+	.byte	0x3
 	.2byte	0xf3f
-	.byte	0xf
+	.4byte	0x739
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artossans8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x326
-	.byte	0x4
+	.4byte	.LASF62
+	.byte	0x3
 	.2byte	0xf57
-	.byte	0xf
+	.4byte	0x750
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artosserif8_r
+	.uleb128 0x8
+	.4byte	0x99
 	.uleb128 0xa
-	.4byte	0x333
-	.byte	0x4
+	.4byte	.LASF63
+	.byte	0x3
 	.2byte	0xf76
-	.byte	0xf
+	.4byte	0x767
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artosserif8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x340
-	.byte	0x4
+	.4byte	.LASF64
+	.byte	0x3
 	.2byte	0xf84
-	.byte	0xf
+	.4byte	0x77e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_artosserif8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x34d
-	.byte	0x4
+	.4byte	.LASF65
+	.byte	0x3
 	.2byte	0xf9c
-	.byte	0xf
+	.4byte	0x795
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_chroma48medium8_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x35a
-	.byte	0x4
+	.4byte	.LASF66
+	.byte	0x3
 	.2byte	0xfbc
-	.byte	0xf
+	.4byte	0x7ac
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_chroma48medium8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x367
-	.byte	0x4
+	.4byte	.LASF67
+	.byte	0x3
 	.2byte	0xfca
-	.byte	0xf
+	.4byte	0x7c3
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_chroma48medium8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x374
-	.byte	0x4
+	.4byte	.LASF68
+	.byte	0x3
 	.2byte	0xfe2
-	.byte	0xf
+	.4byte	0x7da
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_saikyosansbold8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x381
-	.byte	0x4
+	.4byte	.LASF69
+	.byte	0x3
 	.2byte	0xff0
-	.byte	0xf
+	.4byte	0x7f1
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_saikyosansbold8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x38e
-	.byte	0x4
+	.4byte	.LASF70
+	.byte	0x3
 	.2byte	0x1008
-	.byte	0xf
+	.4byte	0x808
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_torussansbold8_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x39b
-	.byte	0x4
+	.4byte	.LASF71
+	.byte	0x3
 	.2byte	0x1028
-	.byte	0xf
+	.4byte	0x81f
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_torussansbold8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x3a8
-	.byte	0x4
+	.4byte	.LASF72
+	.byte	0x3
 	.2byte	0x1036
-	.byte	0xf
+	.4byte	0x836
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_torussansbold8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x3b5
-	.byte	0x4
+	.4byte	.LASF73
+	.byte	0x3
 	.2byte	0x104e
-	.byte	0xf
+	.4byte	0x84d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriabold8_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x3c2
-	.byte	0x4
+	.4byte	.LASF74
+	.byte	0x3
 	.2byte	0x106e
-	.byte	0xf
+	.4byte	0x864
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriabold8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x3cf
-	.byte	0x4
+	.4byte	.LASF75
+	.byte	0x3
 	.2byte	0x107c
-	.byte	0xf
+	.4byte	0x87b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriabold8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x3dc
-	.byte	0x4
+	.4byte	.LASF76
+	.byte	0x3
 	.2byte	0x1094
-	.byte	0xf
+	.4byte	0x892
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriamedium8_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x3e9
-	.byte	0x4
+	.4byte	.LASF77
+	.byte	0x3
 	.2byte	0x10b4
-	.byte	0xf
+	.4byte	0x8a9
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriamedium8_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x3f6
-	.byte	0x4
+	.4byte	.LASF78
+	.byte	0x3
 	.2byte	0x10c2
-	.byte	0xf
+	.4byte	0x8c0
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_victoriamedium8_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x403
-	.byte	0x4
+	.4byte	.LASF79
+	.byte	0x3
 	.2byte	0x10da
-	.byte	0xf
+	.4byte	0x8d7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB18_2x3_f
+	.uleb128 0x8
+	.4byte	0x681
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x8ed
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x11d3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x410
-	.byte	0x4
+	.4byte	.LASF80
+	.byte	0x3
 	.2byte	0x1232
-	.byte	0xf
+	.4byte	0x8ff
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB18_2x3_r
+	.uleb128 0x8
+	.4byte	0x8dc
 	.uleb128 0xa
-	.4byte	0x41d
-	.byte	0x4
+	.4byte	.LASF81
+	.byte	0x3
 	.2byte	0x12c8
-	.byte	0xf
+	.4byte	0x916
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB18_2x3_n
+	.uleb128 0x8
+	.4byte	0x6d1
 	.uleb128 0xa
-	.4byte	0x42a
-	.byte	0x4
+	.4byte	.LASF82
+	.byte	0x3
 	.2byte	0x12f8
-	.byte	0xf
+	.4byte	0x92d
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR18_2x3_f
+	.uleb128 0x8
+	.4byte	0x681
 	.uleb128 0xa
-	.4byte	0x437
-	.byte	0x4
+	.4byte	.LASF83
+	.byte	0x3
 	.2byte	0x1450
-	.byte	0xf
+	.4byte	0x944
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR18_2x3_r
+	.uleb128 0x8
+	.4byte	0x8dc
 	.uleb128 0xa
-	.4byte	0x444
-	.byte	0x4
+	.4byte	.LASF84
+	.byte	0x3
 	.2byte	0x14e6
-	.byte	0xf
+	.4byte	0x95b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR18_2x3_n
+	.uleb128 0x8
+	.4byte	0x6d1
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x971
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x5403
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x451
-	.byte	0x4
+	.4byte	.LASF85
+	.byte	0x3
 	.2byte	0x1516
-	.byte	0xf
+	.4byte	0x983
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB24_3x4_f
+	.uleb128 0x8
+	.4byte	0x960
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x999
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x23a3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x45e
-	.byte	0x4
+	.4byte	.LASF86
+	.byte	0x3
 	.2byte	0x17be
-	.byte	0xf
+	.4byte	0x9ab
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB24_3x4_r
+	.uleb128 0x8
+	.4byte	0x988
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0x9c1
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xa23
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x46b
-	.byte	0x4
+	.4byte	.LASF87
+	.byte	0x3
 	.2byte	0x18e3
-	.byte	0xf
+	.4byte	0x9d3
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courB24_3x4_n
+	.uleb128 0x8
+	.4byte	0x9b0
 	.uleb128 0xa
-	.4byte	0x478
-	.byte	0x4
+	.4byte	.LASF88
+	.byte	0x3
 	.2byte	0x193c
-	.byte	0xf
+	.4byte	0x9ea
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR24_3x4_f
+	.uleb128 0x8
+	.4byte	0x960
 	.uleb128 0xa
-	.4byte	0x485
-	.byte	0x4
+	.4byte	.LASF89
+	.byte	0x3
 	.2byte	0x1be4
-	.byte	0xf
+	.4byte	0xa01
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR24_3x4_r
+	.uleb128 0x8
+	.4byte	0x988
 	.uleb128 0xa
-	.4byte	0x492
-	.byte	0x4
+	.4byte	.LASF90
+	.byte	0x3
 	.2byte	0x1d09
-	.byte	0xf
+	.4byte	0xa18
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_courR24_3x4_n
+	.uleb128 0x8
+	.4byte	0x9b0
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xa2e
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x1ba3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x49f
-	.byte	0x4
+	.4byte	.LASF91
+	.byte	0x3
 	.2byte	0x1d62
-	.byte	0xf
+	.4byte	0xa40
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_o_2x2_f
+	.uleb128 0x8
+	.4byte	0xa1d
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xa56
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xb63
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x4ac
-	.byte	0x4
+	.4byte	.LASF92
+	.byte	0x3
 	.2byte	0x1e47
-	.byte	0xf
+	.4byte	0xa68
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_o_2x2_r
+	.uleb128 0x8
+	.4byte	0xa45
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xa7e
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x363
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x4b9
-	.byte	0x4
+	.4byte	.LASF93
+	.byte	0x3
 	.2byte	0x1eaa
-	.byte	0xf
+	.4byte	0xa90
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_o_2x2_n
+	.uleb128 0x8
+	.4byte	0xa6d
 	.uleb128 0xa
-	.4byte	0x4c6
-	.byte	0x4
+	.4byte	.LASF94
+	.byte	0x3
 	.2byte	0x1ecd
-	.byte	0xf
+	.4byte	0xaa7
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_r_2x2_f
+	.uleb128 0x8
+	.4byte	0xa1d
 	.uleb128 0xa
-	.4byte	0x4d3
-	.byte	0x4
+	.4byte	.LASF95
+	.byte	0x3
 	.2byte	0x1fb2
-	.byte	0xf
+	.4byte	0xabe
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_r_2x2_r
+	.uleb128 0x8
+	.4byte	0xa45
 	.uleb128 0xa
-	.4byte	0x4e0
-	.byte	0x4
+	.4byte	.LASF96
+	.byte	0x3
 	.2byte	0x2015
-	.byte	0xf
+	.4byte	0xad5
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_lucasarts_scumm_subtitle_r_2x2_n
+	.uleb128 0x8
+	.4byte	0xa6d
 	.uleb128 0xa
-	.4byte	0x4ed
-	.byte	0x4
+	.4byte	.LASF97
+	.byte	0x3
 	.2byte	0x2038
-	.byte	0xf
+	.4byte	0xaec
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr21_2x4_f
+	.uleb128 0x8
+	.4byte	0x591
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xb02
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x17c3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x4fa
-	.byte	0x4
+	.4byte	.LASF98
+	.byte	0x3
 	.2byte	0x2200
-	.byte	0xf
+	.4byte	0xb14
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr21_2x4_r
+	.uleb128 0x8
+	.4byte	0xaf1
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xb2a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x6c3
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x507
-	.byte	0x4
+	.4byte	.LASF99
+	.byte	0x3
 	.2byte	0x22c6
-	.byte	0xf
+	.4byte	0xb3c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr21_2x4_n
+	.uleb128 0x8
+	.4byte	0xb19
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xb52
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x7e03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x514
-	.byte	0x4
+	.4byte	.LASF100
+	.byte	0x3
 	.2byte	0x2304
-	.byte	0xf
+	.4byte	0xb64
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr33_3x6_f
+	.uleb128 0x8
+	.4byte	0xb41
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xb7a
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x3573
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x521
-	.byte	0x4
+	.4byte	.LASF101
+	.byte	0x3
 	.2byte	0x26fc
-	.byte	0xf
+	.4byte	0xb8c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr33_3x6_r
+	.uleb128 0x8
+	.4byte	0xb69
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xba2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xf33
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x52e
-	.byte	0x4
+	.4byte	.LASF102
+	.byte	0x3
 	.2byte	0x28af
-	.byte	0xf
+	.4byte	0xbb4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr33_3x6_n
+	.uleb128 0x8
+	.4byte	0xb91
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xbca
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x5f03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x548
-	.byte	0x4
+	.4byte	.LASF103
+	.byte	0x3
 	.2byte	0x303a
-	.byte	0xf
+	.4byte	0xbdc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr46_4x8_r
+	.uleb128 0x8
+	.4byte	0xbb9
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xbf2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x1b03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x555
-	.byte	0x4
+	.4byte	.LASF104
+	.byte	0x3
 	.2byte	0x333a
-	.byte	0xf
+	.4byte	0xc04
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inr46_4x8_n
+	.uleb128 0x8
+	.4byte	0xbe1
 	.uleb128 0xa
-	.4byte	0x562
-	.byte	0x4
+	.4byte	.LASF105
+	.byte	0x3
 	.2byte	0x341a
-	.byte	0xf
+	.4byte	0xc1b
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb21_2x4_f
+	.uleb128 0x8
+	.4byte	0x591
 	.uleb128 0xa
-	.4byte	0x56f
-	.byte	0x4
+	.4byte	.LASF106
+	.byte	0x3
 	.2byte	0x35e2
-	.byte	0xf
+	.4byte	0xc32
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb21_2x4_r
+	.uleb128 0x8
+	.4byte	0xaf1
 	.uleb128 0xa
-	.4byte	0x57c
-	.byte	0x4
+	.4byte	.LASF107
+	.byte	0x3
 	.2byte	0x36a8
-	.byte	0xf
+	.4byte	0xc49
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb21_2x4_n
+	.uleb128 0x8
+	.4byte	0xb19
 	.uleb128 0xa
-	.4byte	0x589
-	.byte	0x4
+	.4byte	.LASF108
+	.byte	0x3
 	.2byte	0x36e6
-	.byte	0xf
+	.4byte	0xc60
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb33_3x6_f
+	.uleb128 0x8
+	.4byte	0xb41
 	.uleb128 0xa
-	.4byte	0x596
-	.byte	0x4
+	.4byte	.LASF109
+	.byte	0x3
 	.2byte	0x3ade
-	.byte	0xf
+	.4byte	0xc77
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb33_3x6_r
+	.uleb128 0x8
+	.4byte	0xb69
 	.uleb128 0xa
-	.4byte	0x5a3
-	.byte	0x4
+	.4byte	.LASF110
+	.byte	0x3
 	.2byte	0x3c91
-	.byte	0xf
+	.4byte	0xc8e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb33_3x6_n
+	.uleb128 0x8
+	.4byte	0xb91
 	.uleb128 0xa
-	.4byte	0x5bd
-	.byte	0x4
+	.4byte	.LASF111
+	.byte	0x3
 	.2byte	0x441c
-	.byte	0xf
+	.4byte	0xca5
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb46_4x8_r
+	.uleb128 0x8
+	.4byte	0xbb9
 	.uleb128 0xa
-	.4byte	0x5ca
-	.byte	0x4
+	.4byte	.LASF112
+	.byte	0x3
 	.2byte	0x471c
-	.byte	0xf
+	.4byte	0xcbc
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_inb46_4x8_n
+	.uleb128 0x8
+	.4byte	0xbe1
 	.uleb128 0xa
-	.4byte	0x5d7
-	.byte	0x4
+	.4byte	.LASF113
+	.byte	0x3
 	.2byte	0x47fc
-	.byte	0xf
+	.4byte	0xcd3
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pressstart2p_f
+	.uleb128 0x8
+	.4byte	0x6b
 	.uleb128 0xa
-	.4byte	0x5e4
-	.byte	0x4
+	.4byte	.LASF114
+	.byte	0x3
 	.2byte	0x483c
-	.byte	0xf
+	.4byte	0xcea
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pressstart2p_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x5f1
-	.byte	0x4
+	.4byte	.LASF115
+	.byte	0x3
 	.2byte	0x485c
-	.byte	0xf
+	.4byte	0xd01
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pressstart2p_n
+	.uleb128 0x8
+	.4byte	0xc0
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xd17
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x203
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x5fe
-	.byte	0x4
+	.4byte	.LASF116
+	.byte	0x3
 	.2byte	0x486a
-	.byte	0xf
+	.4byte	0xd29
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pressstart2p_u
+	.uleb128 0x8
+	.4byte	0xd06
 	.uleb128 0xa
-	.4byte	0x60b
-	.byte	0x4
+	.4byte	.LASF117
+	.byte	0x3
 	.2byte	0x4882
-	.byte	0xf
+	.4byte	0xd40
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pcsenior_f
+	.uleb128 0x8
+	.4byte	0x6b
 	.uleb128 0xa
-	.4byte	0x618
-	.byte	0x4
+	.4byte	.LASF118
+	.byte	0x3
 	.2byte	0x48c2
-	.byte	0xf
+	.4byte	0xd57
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pcsenior_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x625
-	.byte	0x4
+	.4byte	.LASF119
+	.byte	0x3
 	.2byte	0x48e2
-	.byte	0xf
+	.4byte	0xd6e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pcsenior_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x632
-	.byte	0x4
+	.4byte	.LASF120
+	.byte	0x3
 	.2byte	0x48f0
-	.byte	0xf
+	.4byte	0xd85
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pcsenior_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x63f
-	.byte	0x4
+	.4byte	.LASF121
+	.byte	0x3
 	.2byte	0x4908
-	.byte	0xf
+	.4byte	0xd9c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcgathin_f
+	.uleb128 0x8
+	.4byte	0x6b
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xdb2
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x304
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x64c
-	.byte	0x4
+	.4byte	.LASF122
+	.byte	0x3
 	.2byte	0x4948
-	.byte	0xf
+	.4byte	0xdc4
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcgathin_r
+	.uleb128 0x8
+	.4byte	0xda1
 	.uleb128 0xa
-	.4byte	0x659
-	.byte	0x4
+	.4byte	.LASF123
+	.byte	0x3
 	.2byte	0x4968
-	.byte	0xf
+	.4byte	0xddb
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcgathin_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x666
-	.byte	0x4
+	.4byte	.LASF124
+	.byte	0x3
 	.2byte	0x4976
-	.byte	0xf
+	.4byte	0xdf2
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcgathin_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x673
-	.byte	0x4
+	.4byte	.LASF125
+	.byte	0x3
 	.2byte	0x498e
-	.byte	0xf
+	.4byte	0xe09
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcga_f
+	.uleb128 0x8
+	.4byte	0x6b
 	.uleb128 0xa
-	.4byte	0x680
-	.byte	0x4
+	.4byte	.LASF126
+	.byte	0x3
 	.2byte	0x49ce
-	.byte	0xf
+	.4byte	0xe20
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcga_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x68d
-	.byte	0x4
+	.4byte	.LASF127
+	.byte	0x3
 	.2byte	0x49ee
-	.byte	0xf
+	.4byte	0xe37
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcga_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x69a
-	.byte	0x4
+	.4byte	.LASF128
+	.byte	0x3
 	.2byte	0x49fc
-	.byte	0xf
+	.4byte	0xe4e
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplusibmcga_u
+	.uleb128 0x8
+	.4byte	0xe6
 	.uleb128 0xa
-	.4byte	0x6a7
-	.byte	0x4
+	.4byte	.LASF129
+	.byte	0x3
 	.2byte	0x4a14
-	.byte	0xf
+	.4byte	0xe65
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplustandynewtv_f
+	.uleb128 0x8
+	.4byte	0x6b
 	.uleb128 0xa
-	.4byte	0x6b4
-	.byte	0x4
+	.4byte	.LASF130
+	.byte	0x3
 	.2byte	0x4a54
-	.byte	0xf
+	.4byte	0xe7c
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplustandynewtv_r
+	.uleb128 0x8
+	.4byte	0x569
 	.uleb128 0xa
-	.4byte	0x6c1
-	.byte	0x4
+	.4byte	.LASF131
+	.byte	0x3
 	.2byte	0x4a74
-	.byte	0xf
+	.4byte	0xe93
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplustandynewtv_n
+	.uleb128 0x8
+	.4byte	0xc0
 	.uleb128 0xa
-	.4byte	0x6ce
-	.byte	0x4
+	.4byte	.LASF132
+	.byte	0x3
 	.2byte	0x4a82
-	.byte	0xf
+	.4byte	0xeaa
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_pxplustandynewtv_u
+	.uleb128 0x8
+	.4byte	0xe6
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xec0
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0x1c03
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x6db
-	.byte	0x4
+	.4byte	.LASF133
+	.byte	0x3
 	.2byte	0x4a9a
-	.byte	0xf
+	.4byte	0xed2
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700a_2x2_f
+	.uleb128 0x8
+	.4byte	0xeaf
+	.uleb128 0x5
+	.4byte	0x60
+	.4byte	0xee8
+	.uleb128 0x6
+	.4byte	0x7c
+	.2byte	0xc04
+	.byte	0
 	.uleb128 0xa
-	.4byte	0x6e8
-	.byte	0x4
+	.4byte	.LASF134
+	.byte	0x3
 	.2byte	0x4b82
-	.byte	0xf
+	.4byte	0xefa
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700a_2x2_r
+	.uleb128 0x8
+	.4byte	0xed7
 	.uleb128 0xa
-	.4byte	0x6f5
-	.byte	0x4
+	.4byte	.LASF135
+	.byte	0x3
 	.2byte	0x4bea
-	.byte	0xf
+	.4byte	0xf11
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700a_2x2_n
+	.uleb128 0x8
+	.4byte	0xa6d
 	.uleb128 0xa
-	.4byte	0x702
-	.byte	0x4
+	.4byte	.LASF136
+	.byte	0x3
 	.2byte	0x4c0d
-	.byte	0xf
+	.4byte	0xf28
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700b_2x2_f
+	.uleb128 0x8
+	.4byte	0xeaf
 	.uleb128 0xa
-	.4byte	0x70f
-	.byte	0x4
+	.4byte	.LASF137
+	.byte	0x3
 	.2byte	0x4cf5
-	.byte	0xf
+	.4byte	0xf3f
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700b_2x2_r
+	.uleb128 0x8
+	.4byte	0xed7
 	.uleb128 0xa
-	.4byte	0x71c
-	.byte	0x4
+	.4byte	.LASF138
+	.byte	0x3
 	.2byte	0x4d5d
-	.byte	0xf
+	.4byte	0xf56
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	u8x8_font_px437wyse700b_2x2_n
+	.uleb128 0x8
+	.4byte	0xa6d
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -290456,8 +290277,6 @@ u8x8_font_amstrad_cpc_extended_f:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -290474,13 +290293,6 @@ u8x8_font_amstrad_cpc_extended_f:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x26
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6
 	.uleb128 0x1
 	.byte	0x1
 	.uleb128 0x49
@@ -290489,12 +290301,49 @@ u8x8_font_amstrad_cpc_extended_f:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x6
 	.uleb128 0x21
 	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0x5
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x8
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x9
+	.uleb128 0x21
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2f
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0xa
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -290503,42 +290352,10 @@ u8x8_font_amstrad_cpc_extended_f:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x2
 	.uleb128 0x18
 	.byte	0
@@ -290557,101 +290374,97 @@ u8x8_font_amstrad_cpc_extended_f:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF62:
-	.string	"u8x8_font_artosserif8_n"
-.LASF36:
-	.string	"u8x8_font_open_iconic_weather_1x1"
 .LASF63:
+	.string	"u8x8_font_artosserif8_n"
+.LASF37:
+	.string	"u8x8_font_open_iconic_weather_1x1"
+.LASF64:
 	.string	"u8x8_font_artosserif8_u"
-.LASF90:
+.LASF91:
 	.string	"u8x8_font_lucasarts_scumm_subtitle_o_2x2_f"
-.LASF76:
+.LASF77:
 	.string	"u8x8_font_victoriamedium8_n"
-.LASF142:
-	.string	"/home/dieter/Development/ProjektEi/build/u8g2"
 .LASF7:
 	.string	"__uint8_t"
-.LASF92:
+.LASF93:
 	.string	"u8x8_font_lucasarts_scumm_subtitle_o_2x2_n"
-.LASF32:
+.LASF33:
 	.string	"u8x8_font_open_iconic_check_1x1"
-.LASF139:
-	.string	"u8x8_font_px437wyse700b_2x2_n"
-.LASF91:
-	.string	"u8x8_font_lucasarts_scumm_subtitle_o_2x2_r"
 .LASF138:
+	.string	"u8x8_font_px437wyse700b_2x2_n"
+.LASF92:
+	.string	"u8x8_font_lucasarts_scumm_subtitle_o_2x2_r"
+.LASF137:
 	.string	"u8x8_font_px437wyse700b_2x2_r"
-.LASF130:
+.LASF129:
 	.string	"u8x8_font_pxplustandynewtv_f"
-.LASF74:
+.LASF75:
 	.string	"u8x8_font_victoriabold8_u"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF132:
-	.string	"u8x8_font_pxplustandynewtv_n"
-.LASF112:
-	.string	"u8x8_font_inb46_4x8_r"
 .LASF131:
-	.string	"u8x8_font_pxplustandynewtv_r"
-.LASF133:
-	.string	"u8x8_font_pxplustandynewtv_u"
+	.string	"u8x8_font_pxplustandynewtv_n"
 .LASF111:
-	.string	"u8x8_font_inb46_4x8_f"
-.LASF25:
-	.string	"u8x8_font_7x14_1x2_f"
-.LASF73:
-	.string	"u8x8_font_victoriabold8_n"
-.LASF113:
-	.string	"u8x8_font_inb46_4x8_n"
-.LASF72:
-	.string	"u8x8_font_victoriabold8_r"
-.LASF27:
-	.string	"u8x8_font_7x14_1x2_n"
-.LASF53:
-	.string	"u8x8_font_open_iconic_thing_8x8"
+	.string	"u8x8_font_inb46_4x8_r"
+.LASF130:
+	.string	"u8x8_font_pxplustandynewtv_r"
+.LASF132:
+	.string	"u8x8_font_pxplustandynewtv_u"
 .LASF26:
+	.string	"u8x8_font_7x14_1x2_f"
+.LASF74:
+	.string	"u8x8_font_victoriabold8_n"
+.LASF112:
+	.string	"u8x8_font_inb46_4x8_n"
+.LASF73:
+	.string	"u8x8_font_victoriabold8_r"
+.LASF28:
+	.string	"u8x8_font_7x14_1x2_n"
+.LASF54:
+	.string	"u8x8_font_open_iconic_thing_8x8"
+.LASF27:
 	.string	"u8x8_font_7x14_1x2_r"
 .LASF5:
 	.string	"long long int"
 .LASF0:
 	.string	"signed char"
-.LASF70:
-	.string	"u8x8_font_torussansbold8_n"
-.LASF69:
-	.string	"u8x8_font_torussansbold8_r"
 .LASF71:
+	.string	"u8x8_font_torussansbold8_n"
+.LASF70:
+	.string	"u8x8_font_torussansbold8_r"
+.LASF72:
 	.string	"u8x8_font_torussansbold8_u"
-.LASF75:
+.LASF76:
 	.string	"u8x8_font_victoriamedium8_r"
-.LASF77:
+.LASF78:
 	.string	"u8x8_font_victoriamedium8_u"
-.LASF41:
+.LASF42:
 	.string	"u8x8_font_open_iconic_thing_2x2"
-.LASF59:
-	.string	"u8x8_font_artossans8_n"
-.LASF58:
-	.string	"u8x8_font_artossans8_r"
 .LASF60:
+	.string	"u8x8_font_artossans8_n"
+.LASF59:
+	.string	"u8x8_font_artossans8_r"
+.LASF61:
 	.string	"u8x8_font_artossans8_u"
-.LASF81:
-	.string	"u8x8_font_courR18_2x3_f"
-.LASF118:
-	.string	"u8x8_font_pcsenior_f"
-.LASF83:
-	.string	"u8x8_font_courR18_2x3_n"
 .LASF82:
+	.string	"u8x8_font_courR18_2x3_f"
+.LASF117:
+	.string	"u8x8_font_pcsenior_f"
+.LASF84:
+	.string	"u8x8_font_courR18_2x3_n"
+.LASF83:
 	.string	"u8x8_font_courR18_2x3_r"
-.LASF120:
-	.string	"u8x8_font_pcsenior_n"
 .LASF119:
+	.string	"u8x8_font_pcsenior_n"
+.LASF118:
 	.string	"u8x8_font_pcsenior_r"
-.LASF121:
+.LASF120:
 	.string	"u8x8_font_pcsenior_u"
 .LASF108:
 	.string	"u8x8_font_inb33_3x6_f"
 .LASF105:
 	.string	"u8x8_font_inb21_2x4_f"
-.LASF87:
+.LASF88:
 	.string	"u8x8_font_courR24_3x4_f"
 .LASF107:
 	.string	"u8x8_font_inb21_2x4_n"
@@ -290659,188 +290472,190 @@ u8x8_font_amstrad_cpc_extended_f:
 	.string	"unsigned int"
 .LASF106:
 	.string	"u8x8_font_inb21_2x4_r"
-.LASF89:
+.LASF90:
 	.string	"u8x8_font_courR24_3x4_n"
-.LASF37:
+.LASF38:
 	.string	"u8x8_font_open_iconic_arrow_2x2"
-.LASF88:
+.LASF89:
 	.string	"u8x8_font_courR24_3x4_r"
-.LASF46:
+.LASF47:
 	.string	"u8x8_font_open_iconic_play_4x4"
-.LASF39:
-	.string	"u8x8_font_open_iconic_embedded_2x2"
-.LASF24:
+.LASF25:
 	.string	"u8x8_font_8x13B_1x2_n"
-.LASF141:
-	.string	"/home/dieter/Development/ProjektEi/components/u8g2/csrc/u8x8_fonts.c"
-.LASF122:
+.LASF139:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF121:
 	.string	"u8x8_font_pxplusibmcgathin_f"
-.LASF124:
+.LASF123:
 	.string	"u8x8_font_pxplusibmcgathin_n"
 .LASF3:
 	.string	"short unsigned int"
-.LASF123:
+.LASF122:
 	.string	"u8x8_font_pxplusibmcgathin_r"
-.LASF125:
+.LASF124:
 	.string	"u8x8_font_pxplusibmcgathin_u"
-.LASF43:
+.LASF44:
 	.string	"u8x8_font_open_iconic_arrow_4x4"
-.LASF35:
+.LASF36:
 	.string	"u8x8_font_open_iconic_thing_1x1"
-.LASF45:
+.LASF46:
 	.string	"u8x8_font_open_iconic_embedded_4x4"
-.LASF67:
+.LASF68:
 	.string	"u8x8_font_saikyosansbold8_n"
 .LASF109:
 	.string	"u8x8_font_inb33_3x6_r"
-.LASF68:
+.LASF69:
 	.string	"u8x8_font_saikyosansbold8_u"
-.LASF137:
+.LASF136:
 	.string	"u8x8_font_px437wyse700b_2x2_f"
-.LASF48:
+.LASF49:
 	.string	"u8x8_font_open_iconic_weather_4x4"
-.LASF102:
-	.string	"u8x8_font_inr46_4x8_f"
+.LASF9:
+	.string	"sizetype"
 .LASF104:
 	.string	"u8x8_font_inr46_4x8_n"
-.LASF44:
+.LASF45:
 	.string	"u8x8_font_open_iconic_check_4x4"
 .LASF103:
 	.string	"u8x8_font_inr46_4x8_r"
-.LASF134:
+.LASF133:
 	.string	"u8x8_font_px437wyse700a_2x2_f"
-.LASF86:
+.LASF87:
 	.string	"u8x8_font_courB24_3x4_n"
-.LASF126:
+.LASF125:
 	.string	"u8x8_font_pxplusibmcga_f"
-.LASF136:
-	.string	"u8x8_font_px437wyse700a_2x2_n"
 .LASF135:
+	.string	"u8x8_font_px437wyse700a_2x2_n"
+.LASF134:
 	.string	"u8x8_font_px437wyse700a_2x2_r"
-.LASF128:
+.LASF127:
 	.string	"u8x8_font_pxplusibmcga_n"
 .LASF110:
 	.string	"u8x8_font_inb33_3x6_n"
-.LASF93:
-	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_f"
-.LASF95:
-	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_n"
-.LASF19:
-	.string	"u8x8_font_8x13_1x2_f"
-.LASF55:
-	.string	"u8x8_font_profont29_2x3_f"
 .LASF94:
-	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_r"
-.LASF21:
-	.string	"u8x8_font_8x13_1x2_n"
-.LASF57:
-	.string	"u8x8_font_profont29_2x3_n"
+	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_f"
+.LASF96:
+	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_n"
 .LASF20:
-	.string	"u8x8_font_8x13_1x2_r"
+	.string	"u8x8_font_8x13_1x2_f"
 .LASF56:
+	.string	"u8x8_font_profont29_2x3_f"
+.LASF95:
+	.string	"u8x8_font_lucasarts_scumm_subtitle_r_2x2_r"
+.LASF22:
+	.string	"u8x8_font_8x13_1x2_n"
+.LASF58:
+	.string	"u8x8_font_profont29_2x3_n"
+.LASF21:
+	.string	"u8x8_font_8x13_1x2_r"
+.LASF57:
 	.string	"u8x8_font_profont29_2x3_r"
-.LASF52:
+.LASF53:
 	.string	"u8x8_font_open_iconic_play_8x8"
 .LASF1:
 	.string	"unsigned char"
 .LASF2:
 	.string	"short int"
-.LASF33:
-	.string	"u8x8_font_open_iconic_embedded_1x1"
-.LASF99:
-	.string	"u8x8_font_inr33_3x6_f"
-.LASF49:
-	.string	"u8x8_font_open_iconic_arrow_8x8"
-.LASF96:
-	.string	"u8x8_font_inr21_2x4_f"
-.LASF101:
-	.string	"u8x8_font_inr33_3x6_n"
-.LASF40:
-	.string	"u8x8_font_open_iconic_play_2x2"
-.LASF98:
-	.string	"u8x8_font_inr21_2x4_n"
-.LASF100:
-	.string	"u8x8_font_inr33_3x6_r"
-.LASF97:
-	.string	"u8x8_font_inr21_2x4_r"
-.LASF22:
-	.string	"u8x8_font_8x13B_1x2_f"
-.LASF51:
-	.string	"u8x8_font_open_iconic_embedded_8x8"
-.LASF9:
-	.string	"u8x8_font_amstrad_cpc_extended_f"
-.LASF16:
-	.string	"u8x8_font_5x8_f"
-.LASF23:
-	.string	"u8x8_font_8x13B_1x2_r"
-.LASF11:
-	.string	"u8x8_font_amstrad_cpc_extended_n"
-.LASF18:
-	.string	"u8x8_font_5x8_n"
-.LASF114:
-	.string	"u8x8_font_pressstart2p_f"
-.LASF10:
-	.string	"u8x8_font_amstrad_cpc_extended_r"
-.LASF17:
-	.string	"u8x8_font_5x8_r"
-.LASF12:
-	.string	"u8x8_font_amstrad_cpc_extended_u"
-.LASF127:
-	.string	"u8x8_font_pxplusibmcga_r"
-.LASF54:
-	.string	"u8x8_font_open_iconic_weather_8x8"
-.LASF116:
-	.string	"u8x8_font_pressstart2p_n"
-.LASF129:
-	.string	"u8x8_font_pxplusibmcga_u"
-.LASF115:
-	.string	"u8x8_font_pressstart2p_r"
-.LASF117:
-	.string	"u8x8_font_pressstart2p_u"
-.LASF50:
-	.string	"u8x8_font_open_iconic_check_8x8"
-.LASF140:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF61:
-	.string	"u8x8_font_artosserif8_r"
-.LASF78:
-	.string	"u8x8_font_courB18_2x3_f"
-.LASF42:
-	.string	"u8x8_font_open_iconic_weather_2x2"
-.LASF47:
-	.string	"u8x8_font_open_iconic_thing_4x4"
-.LASF80:
-	.string	"u8x8_font_courB18_2x3_n"
-.LASF79:
-	.string	"u8x8_font_courB18_2x3_r"
-.LASF38:
-	.string	"u8x8_font_open_iconic_check_2x2"
 .LASF34:
+	.string	"u8x8_font_open_iconic_embedded_1x1"
+.LASF100:
+	.string	"u8x8_font_inr33_3x6_f"
+.LASF50:
+	.string	"u8x8_font_open_iconic_arrow_8x8"
+.LASF97:
+	.string	"u8x8_font_inr21_2x4_f"
+.LASF102:
+	.string	"u8x8_font_inr33_3x6_n"
+.LASF41:
+	.string	"u8x8_font_open_iconic_play_2x2"
+.LASF99:
+	.string	"u8x8_font_inr21_2x4_n"
+.LASF101:
+	.string	"u8x8_font_inr33_3x6_r"
+.LASF98:
+	.string	"u8x8_font_inr21_2x4_r"
+.LASF23:
+	.string	"u8x8_font_8x13B_1x2_f"
+.LASF52:
+	.string	"u8x8_font_open_iconic_embedded_8x8"
+.LASF10:
+	.string	"u8x8_font_amstrad_cpc_extended_f"
+.LASF17:
+	.string	"u8x8_font_5x8_f"
+.LASF24:
+	.string	"u8x8_font_8x13B_1x2_r"
+.LASF12:
+	.string	"u8x8_font_amstrad_cpc_extended_n"
+.LASF19:
+	.string	"u8x8_font_5x8_n"
+.LASF113:
+	.string	"u8x8_font_pressstart2p_f"
+.LASF11:
+	.string	"u8x8_font_amstrad_cpc_extended_r"
+.LASF18:
+	.string	"u8x8_font_5x8_r"
+.LASF13:
+	.string	"u8x8_font_amstrad_cpc_extended_u"
+.LASF126:
+	.string	"u8x8_font_pxplusibmcga_r"
+.LASF55:
+	.string	"u8x8_font_open_iconic_weather_8x8"
+.LASF115:
+	.string	"u8x8_font_pressstart2p_n"
+.LASF128:
+	.string	"u8x8_font_pxplusibmcga_u"
+.LASF114:
+	.string	"u8x8_font_pressstart2p_r"
+.LASF116:
+	.string	"u8x8_font_pressstart2p_u"
+.LASF141:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/u8g2"
+.LASF51:
+	.string	"u8x8_font_open_iconic_check_8x8"
+.LASF40:
+	.string	"u8x8_font_open_iconic_embedded_2x2"
+.LASF62:
+	.string	"u8x8_font_artosserif8_r"
+.LASF79:
+	.string	"u8x8_font_courB18_2x3_f"
+.LASF43:
+	.string	"u8x8_font_open_iconic_weather_2x2"
+.LASF48:
+	.string	"u8x8_font_open_iconic_thing_4x4"
+.LASF81:
+	.string	"u8x8_font_courB18_2x3_n"
+.LASF140:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/u8g2/csrc/u8x8_fonts.c"
+.LASF80:
+	.string	"u8x8_font_courB18_2x3_r"
+.LASF39:
+	.string	"u8x8_font_open_iconic_check_2x2"
+.LASF35:
 	.string	"u8x8_font_open_iconic_play_1x1"
 .LASF8:
 	.string	"uint8_t"
-.LASF13:
-	.string	"u8x8_font_5x7_f"
-.LASF84:
-	.string	"u8x8_font_courB24_3x4_f"
-.LASF15:
-	.string	"u8x8_font_5x7_n"
-.LASF31:
-	.string	"u8x8_font_open_iconic_arrow_1x1"
 .LASF14:
-	.string	"u8x8_font_5x7_r"
+	.string	"u8x8_font_5x7_f"
 .LASF85:
+	.string	"u8x8_font_courB24_3x4_f"
+.LASF16:
+	.string	"u8x8_font_5x7_n"
+.LASF32:
+	.string	"u8x8_font_open_iconic_arrow_1x1"
+.LASF15:
+	.string	"u8x8_font_5x7_r"
+.LASF86:
 	.string	"u8x8_font_courB24_3x4_r"
-.LASF65:
-	.string	"u8x8_font_chroma48medium8_n"
-.LASF64:
-	.string	"u8x8_font_chroma48medium8_r"
 .LASF66:
+	.string	"u8x8_font_chroma48medium8_n"
+.LASF65:
+	.string	"u8x8_font_chroma48medium8_r"
+.LASF67:
 	.string	"u8x8_font_chroma48medium8_u"
-.LASF28:
-	.string	"u8x8_font_7x14B_1x2_f"
-.LASF30:
-	.string	"u8x8_font_7x14B_1x2_n"
 .LASF29:
+	.string	"u8x8_font_7x14B_1x2_f"
+.LASF31:
+	.string	"u8x8_font_7x14B_1x2_n"
+.LASF30:
 	.string	"u8x8_font_7x14B_1x2_r"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

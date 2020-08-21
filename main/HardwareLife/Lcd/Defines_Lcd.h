@@ -56,26 +56,16 @@
 #define deg_to_rad 0.01745329252 + 3.14159265359
 #define swapC(a, b) { int16_t t = a; a = b; b = t; }
 #define constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
-#if !defined(max)
-#define max(A,B) ( (A) > (B) ? (A):(B))
-#endif
-#if !defined(min)
-#define min(A,B) ( (A) < (B) ? (A):(B))
-#endif
+
 
 #define DEFAULT_FONT 0
-#define DEJAVU18_FONT 1
 #define DEJAVU24_FONT 2
-#define UBUNTU16_FONT 3
-#define COMIC24_FONT 4
-#define MINYA24_FONT 5
-#define TOONEY32_FONT 6
-#define SMALL_FONT  7
-#define DEF_SMALL_FONT 8
+#define BIGNUMBER_FONT 3
+#define SMALLNUMBER_FONT 4
+#define TEXT_FONT 5
 #define FONT_7SEG  9
 #define USER_FONT  10  // font will be read from file
 #define SPI_BUS TFT_HSPI_HOST
-
 
 #define PORTRAIT 0
 #define LANDSCAPE 1

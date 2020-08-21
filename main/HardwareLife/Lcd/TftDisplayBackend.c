@@ -8,10 +8,13 @@
 #include "driver/gpio.h"
 #include "esp_system.h"
 #include "esp_heap_caps.h"
-#include "../../../components/tft/tftspi.h"
-#include "../../../components/tft/tft.h"
-#include "../../../components/spiffs/spiffs_vfs.h"
-#include "../../../components/spidriver/spi_master_lobo.h"
+#include "tftspi.h"
+#include "tft.h"
+#include "spiffs_vfs.h"
+//#include "../../../components/tft/tftspi.h"
+//#include "../../../components/tft/tft.h"
+//#include "../../../components/spiffs/spiffs_vfs.h"
+//#include "../../../components/spidriver/spi_master_lobo.h"
 #include "driver/uart.h"
 #include "Defines_Lcd.h"
 
@@ -71,9 +74,9 @@ void TftDisplayBackend(void) {
 
     vfs_spiffs_register();
 
-    TFT_setFont(DEJAVU24_FONT, NULL);
+//    TFT_setFont(DEJAVU24_FONT, NULL);
     TFT_setRotation(1);
-    TFT_invertDisplay(true);
+    TFT_invertDisplay(false); //true);
     
      
 }

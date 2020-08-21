@@ -1,10 +1,10 @@
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-# 1 "/home/dieter/Development/ProjektEi/build/protocomm//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/protocomm//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-# 15 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 1
 
 
 
@@ -12,111 +12,207 @@
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 29 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 2 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/syslimits.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/syslimits.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/param.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 43 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
 
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
-
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
-
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
-
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+
+
+
+
+
+typedef __int8_t int8_t ;
+typedef __uint8_t uint8_t ;
+
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __uint_least8_t uint_least8_t;
+
+
+
+
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
+typedef __int_least16_t int_least16_t;
+typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
+
+
+
+
+typedef __int_least32_t int_least32_t;
+typedef __uint_least32_t uint_least32_t;
+
+
+
+
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
+typedef __int_least64_t int_least64_t;
+typedef __uint_least64_t uint_least64_t;
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast8_t;
+  typedef unsigned int uint_fast8_t;
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast16_t;
+  typedef unsigned int uint_fast16_t;
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef int int_fast32_t;
+  typedef unsigned int uint_fast32_t;
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int int_fast64_t;
+  typedef long long unsigned int uint_fast64_t;
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
+
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
+
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 2 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -127,32 +223,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -167,35 +241,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -204,21 +250,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -237,214 +282,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef __int_least64_t __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-typedef __builtin_va_list __va_list;
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/param.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 16 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
-typedef __int8_t int8_t ;
-
-
-
-typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
-
-
-
-
-typedef __int_least8_t int_least8_t;
-typedef __uint_least8_t uint_least8_t;
-
-
-
-
-typedef __int_least16_t int_least16_t;
-typedef __uint_least16_t uint_least16_t;
-
-
-
-
-typedef __int_least32_t int_least32_t;
-typedef __uint_least32_t uint_least32_t;
-
-
-
-
-typedef __int_least64_t int_least64_t;
-typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-  typedef int int_fast8_t;
-  typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-  typedef int int_fast16_t;
-  typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-  typedef int int_fast32_t;
-  typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-  typedef long long int int_fast64_t;
-  typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 99 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
-typedef __gnuc_va_list va_list;
-# 20 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
-
-
-
-
-       
-# 21 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -452,10 +290,8 @@ typedef __gnuc_va_list va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -506,12 +342,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -528,7 +364,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -545,13 +381,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -579,7 +415,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -590,7 +426,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -600,7 +436,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -646,12 +482,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -681,8 +517,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -691,25 +529,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -727,6 +561,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -737,18 +573,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -758,11 +589,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -791,21 +622,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -820,26 +642,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -854,54 +669,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -925,40 +728,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -970,36 +769,25 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
     ETS_FAILED = 1
@@ -1017,57 +805,57 @@ struct ETSEventTag {
 
 typedef void (*ETSTask)(ETSEvent *e);
 typedef void (* ets_idle_cb_t)(void *arg);
-# 88 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_run(void);
-# 99 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 114 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 128 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 142 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 extern const char *const exc_cause_table[40];
-# 152 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_user_start(uint32_t start);
-# 162 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_startup_callback(uint32_t callback);
-# 172 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_appcpu_boot_addr(uint32_t start);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                            _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                 jump, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                       _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                            config);
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                     _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                          jump, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                     sb_need_check, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                                    _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                                         config);
-# 231 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 int ets_printf(const char *fmt, ...);
-# 241 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_write_char_uart(char c);
-# 251 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc1(void (*p)(char c));
-# 261 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc2(void (*p)(char c));
-# 271 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_uart_printf(void);
-# 293 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void ETSTimerFunc(void *timer_arg);
 
 typedef struct _ETSTIMER_ {
@@ -1077,57 +865,57 @@ typedef struct _ETSTIMER_ {
     ETSTimerFunc *timer_func;
     void *timer_arg;
 } ETSTimer;
-# 311 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_init(void);
-# 320 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_deinit(void);
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                    _Bool 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                         repeat);
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                     _Bool 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                          repeat);
-# 358 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_disarm(ETSTimer *timer);
-# 372 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 382 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_done(ETSTimer *ptimer);
-# 392 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_delay_us(uint32_t us);
-# 402 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 414 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 424 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_cpu_frequency(void);
-# 433 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_xtal_scale(void);
-# 446 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_detected_xtal_freq(void);
-# 460 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void (* ets_isr_t)(void *);
-# 475 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 486 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_mask(uint32_t mask);
-# 497 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_unmask(uint32_t unmask);
-# 508 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_lock(void);
-# 519 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_unlock(void);
-# 530 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_waiti0(void);
-# 548 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 638 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     OK = 0,
     FAIL,
@@ -1135,8 +923,8 @@ typedef enum {
     BUSY,
     CANCEL,
 } STATUS;
-# 23 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 35 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 typedef enum {
     ESP_LOG_NONE,
     ESP_LOG_ERROR,
@@ -1147,145 +935,50 @@ typedef enum {
 } esp_log_level_t;
 
 typedef int (*vprintf_like_t)(const char *, va_list);
-# 64 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_level_set(const char* tag, esp_log_level_t level);
-# 77 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
-# 91 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_timestamp(void);
-# 106 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-char* esp_log_system_timestamp(void);
-# 116 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_early_timestamp(void);
-# 126 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 131 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 17 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_common_api.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_common_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
        
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
-# 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
 
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef __int_least64_t time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -1304,121 +997,109 @@ typedef unsigned long u_long;
 
 
 
-
-
 typedef unsigned short ushort;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 
 
 
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
 typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
 typedef long daddr_t;
 
 
 
 typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
 typedef __dev_t dev_t;
-
-
-
 typedef __uid_t uid_t;
-
-
-
 typedef __gid_t gid_t;
 
 
 
 
-typedef __pid_t pid_t;
+
+typedef int pid_t;
 
 
 
 
-typedef __key_t key_t;
 
 
 
+typedef long key_t;
 
 typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
 
 
 
 
 
-typedef __timer_t timer_t;
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
 
 
 
 
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
+typedef unsigned long timer_t;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -1427,19 +1108,20 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-
-
-
-
-
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
+
+
+
+
+
 } pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -1448,15 +1130,10 @@ typedef struct {
 
 
 
-
-
 typedef __uint32_t pthread_cond_t;
-
-
 
 typedef struct {
   int is_initialized;
-  clock_t clock;
 
 
 
@@ -1470,17 +1147,11 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
 typedef __FILE FILE;
-
-
 
 
 
@@ -1491,14 +1162,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stdio.h" 1 3 4
-# 80 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-char * ctermid (char *);
-
-
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -1509,22 +1175,22 @@ int fflush (FILE *);
 FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
 void setbuf (FILE *restrict, char *restrict);
 int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fscanf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int printf (const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int scanf (const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int sscanf (const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
 int fgetc (FILE *);
 char * fgets (char *restrict, int, FILE *restrict);
 int fputc (int, FILE *);
@@ -1536,8 +1202,8 @@ int putc (int, FILE *);
 int putchar (int);
 int puts (const char *);
 int ungetc (int, FILE *);
-size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
 
 
 
@@ -1557,104 +1223,90 @@ int ferror (FILE *);
 void perror (const char *);
 
 FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 257 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
-off_t ftello (FILE *);
+off_t ftello ( FILE *);
 
 
 
-int fcloseall (void);
 
 
 
-int snprintf (char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
 
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-int asprintf (char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int vasprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-
-int asiprintf (char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-char * asniprintf (char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-
-int diprintf (int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-int fiprintf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fiscanf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int iprintf (const char *, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int iscanf (const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int siprintf (char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int siscanf (const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int sniprintf (char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vasiprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vdiprintf (int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiprintf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiscanf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int viprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int viscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsiprintf (char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vsiscanf (const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-# 339 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
-
-
+int getw (FILE *);
 int pclose (FILE *);
 FILE * popen (const char *, const char *);
-
-
-
+int putw (int, FILE *);
 void setbuffer (FILE *, char *, int);
 int setlinebuf (FILE *);
-
-
-
-int getw (FILE *);
-int putw (int, FILE *);
-
-
 int getc_unlocked (FILE *);
 int getchar_unlocked (void);
 void flockfile (FILE *);
@@ -1662,33 +1314,38 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 374 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int dprintf (int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
 FILE * fmemopen (void *restrict, size_t, const char *restrict);
 
 
 FILE * open_memstream (char **, size_t *);
-int vdprintf (int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
 
 int renameat (int, const char *, int, const char *);
-# 396 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int _asiprintf_r (struct _reent *, char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _diprintf_r (struct _reent *, int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _dprintf_r (struct _reent *, int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fclose_r (struct _reent *, FILE *);
 int _fcloseall_r (struct _reent *);
 FILE * _fdopen_r (struct _reent *, int, const char *);
@@ -1704,110 +1361,110 @@ char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
 int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
 int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
 
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
 FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
 FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fpurge_r (struct _reent *, FILE *);
 int _fputc_r (struct _reent *, int, FILE *);
 int _fputc_unlocked_r (struct _reent *, int, FILE *);
 int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
 int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 int _fseek_r (struct _reent *, FILE *, long, int);
 int _fseeko_r (struct _reent *, FILE *, _off_t, int);
 long _ftell_r (struct _reent *, FILE *);
 _off_t _ftello_r (struct _reent *, FILE *);
 void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
 int _getc_r (struct _reent *, FILE *);
 int _getc_unlocked_r (struct _reent *, FILE *);
 int _getchar_r (struct _reent *);
 int _getchar_unlocked_r (struct _reent *);
 char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _iscanf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
 FILE * _open_memstream_r (struct _reent *, char **, size_t *);
 void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int _putc_r (struct _reent *, int, FILE *);
 int _putc_unlocked_r (struct _reent *, int, FILE *);
 int _putchar_unlocked_r (struct _reent *, int);
 int _putchar_r (struct _reent *, int);
 int _puts_r (struct _reent *, const char *);
 int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *,
-      const char *_old, const char *_new);
-int _scanf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int _siprintf_r (struct _reent *, char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _siscanf_r (struct _reent *, const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 char * _tempnam_r (struct _reent *, const char *, const char *);
 FILE * _tmpfile_r (struct _reent *);
 char * _tmpnam_r (struct _reent *, char *);
 int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
 
 
 
@@ -1823,32 +1480,33 @@ int fileno_unlocked (FILE *);
 int fflush_unlocked (FILE *);
 int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 577 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 601 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE *funopen (const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-FILE *_funopen_r (struct _reent *, const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-# 624 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
 typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
 typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
      size_t __n);
@@ -1868,67 +1526,23 @@ typedef struct
   cookie_seek_function_t *seek;
   cookie_close_function_t *close;
 } cookie_io_functions_t;
-FILE *fopencookie (void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-FILE *_fopencookie_r (struct _reent *, void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-# 687 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-
-
-
- if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
-  return (*_p->_p++ = _c);
- else
-  return (__swbuf_r(_ptr, _c, _p));
-}
-# 741 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline int
-_getchar_unlocked(void)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
-}
-
-static __inline int
-_putchar_unlocked(int _c)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
-}
-# 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
 
 
 
 
 
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
 typedef int32_t esp_err_t;
-# 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name(esp_err_t code);
-# 77 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
 
 
@@ -1936,9 +1550,9 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 22 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_common_api.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_defs.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_defs.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h"
 typedef enum {
     ESP_BT_STATUS_SUCCESS = 0,
     ESP_BT_STATUS_FAIL,
@@ -1960,8 +1574,7 @@ typedef enum {
     ESP_BT_STATUS_PEER_LE_DATA_LEN_UNSUPPORTED,
     ESP_BT_STATUS_CONTROL_LE_DATA_LEN_UNSUPPORTED,
     ESP_BT_STATUS_ERR_ILLEGAL_PARAMETER_FMT,
-    ESP_BT_STATUS_MEMORY_FULL = 20,
-    ESP_BT_STATUS_EIR_TOO_LARGE,
+    ESP_BT_STATUS_MEMORY_FULL,
 } esp_bt_status_t;
 
 
@@ -1973,7 +1586,7 @@ typedef uint8_t esp_bt_octet16_t[16];
 typedef uint8_t esp_bt_octet8_t[8];
 
 typedef uint8_t esp_link_key[16];
-# 83 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_defs.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h"
 typedef struct {
 
 
@@ -2006,444 +1619,21 @@ typedef enum {
     BLE_ADDR_TYPE_RPA_PUBLIC = 0x02,
     BLE_ADDR_TYPE_RPA_RANDOM = 0x03,
 } esp_ble_addr_type_t;
-
-
-typedef enum {
-    BLE_WL_ADDR_TYPE_PUBLIC = 0x00,
-    BLE_WL_ADDR_TYPE_RANDOM = 0x01,
-} esp_ble_wl_addr_type_t;
-# 130 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_bt_defs.h"
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_bt_defs.h"
 typedef uint8_t esp_ble_key_mask_t;
-# 23 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_common_api.h" 2
-# 45 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_common_api.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h" 2
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_common_api.h"
 extern esp_err_t esp_ble_gatt_set_local_mtu (uint16_t mtu);
-# 18 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-typedef struct {
-    uint32_t reserved_2: 2;
-    uint32_t minor: 6;
-    uint32_t major: 5;
-    uint32_t service: 11;
-    uint32_t reserved_8: 8;
-} esp_bt_cod_t;
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 
-
-typedef enum {
-    ESP_BT_SET_COD_MAJOR_MINOR = 0x01,
-    ESP_BT_SET_COD_SERVICE_CLASS = 0x02,
-    ESP_BT_CLR_COD_SERVICE_CLASS = 0x04,
-    ESP_BT_SET_COD_ALL = 0x08,
-    ESP_BT_INIT_COD = 0x0a,
-} esp_bt_cod_mode_t;
-
-
-typedef uint8_t esp_bt_gap_afh_channels[10];
-
-
-
-typedef enum {
-    ESP_BT_NON_CONNECTABLE,
-    ESP_BT_CONNECTABLE,
-} esp_bt_connection_mode_t;
-
-typedef enum {
-    ESP_BT_NON_DISCOVERABLE,
-    ESP_BT_LIMITED_DISCOVERABLE,
-    ESP_BT_GENERAL_DISCOVERABLE,
-} esp_bt_discovery_mode_t;
-
-
-typedef enum {
-    ESP_BT_GAP_DEV_PROP_BDNAME = 1,
-    ESP_BT_GAP_DEV_PROP_COD,
-    ESP_BT_GAP_DEV_PROP_RSSI,
-    ESP_BT_GAP_DEV_PROP_EIR,
-} esp_bt_gap_dev_prop_type_t;
-# 79 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-typedef struct {
-    esp_bt_gap_dev_prop_type_t type;
-    int len;
-    void *val;
-} esp_bt_gap_dev_prop_t;
-
-
-typedef enum {
-    ESP_BT_EIR_TYPE_FLAGS = 0x01,
-    ESP_BT_EIR_TYPE_INCMPL_16BITS_UUID = 0x02,
-    ESP_BT_EIR_TYPE_CMPL_16BITS_UUID = 0x03,
-    ESP_BT_EIR_TYPE_INCMPL_32BITS_UUID = 0x04,
-    ESP_BT_EIR_TYPE_CMPL_32BITS_UUID = 0x05,
-    ESP_BT_EIR_TYPE_INCMPL_128BITS_UUID = 0x06,
-    ESP_BT_EIR_TYPE_CMPL_128BITS_UUID = 0x07,
-    ESP_BT_EIR_TYPE_SHORT_LOCAL_NAME = 0x08,
-    ESP_BT_EIR_TYPE_CMPL_LOCAL_NAME = 0x09,
-    ESP_BT_EIR_TYPE_TX_POWER_LEVEL = 0x0a,
-    ESP_BT_EIR_TYPE_URL = 0x24,
-    ESP_BT_EIR_TYPE_MANU_SPECIFIC = 0xff,
-} esp_bt_eir_type_t;
-# 111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-typedef struct {
-    
-# 112 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-   _Bool 
-# 112 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                           fec_required;
-    
-# 113 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-   _Bool 
-# 113 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                           include_txpower;
-    
-# 114 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-   _Bool 
-# 114 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                           include_uuid;
-    uint8_t flag;
-    uint16_t manufacturer_len;
-    uint8_t *p_manufacturer_data;
-    uint16_t url_len;
-    uint8_t *p_url;
-} esp_bt_eir_data_t;
-
-
-typedef enum {
-    ESP_BT_COD_SRVC_NONE = 0,
-    ESP_BT_COD_SRVC_LMTD_DISCOVER = 0x1,
-    ESP_BT_COD_SRVC_POSITIONING = 0x8,
-    ESP_BT_COD_SRVC_NETWORKING = 0x10,
-    ESP_BT_COD_SRVC_RENDERING = 0x20,
-    ESP_BT_COD_SRVC_CAPTURING = 0x40,
-    ESP_BT_COD_SRVC_OBJ_TRANSFER = 0x80,
-    ESP_BT_COD_SRVC_AUDIO = 0x100,
-    ESP_BT_COD_SRVC_TELEPHONY = 0x200,
-    ESP_BT_COD_SRVC_INFORMATION = 0x400,
-} esp_bt_cod_srvc_t;
-
-typedef enum{
-    ESP_BT_PIN_TYPE_VARIABLE = 0,
-    ESP_BT_PIN_TYPE_FIXED = 1,
-} esp_bt_pin_type_t;
-
-
-typedef uint8_t esp_bt_pin_code_t[16];
-
-typedef enum {
-    ESP_BT_SP_IOCAP_MODE = 0,
-
-} esp_bt_sp_param_t;
-
-
-
-
-
-
-typedef uint8_t esp_bt_io_cap_t;
-
-
-
-
-
-
-typedef enum {
-    ESP_BT_COD_MAJOR_DEV_MISC = 0,
-    ESP_BT_COD_MAJOR_DEV_COMPUTER = 1,
-    ESP_BT_COD_MAJOR_DEV_PHONE = 2,
-    ESP_BT_COD_MAJOR_DEV_LAN_NAP = 3,
-    ESP_BT_COD_MAJOR_DEV_AV = 4,
-    ESP_BT_COD_MAJOR_DEV_PERIPHERAL = 5,
-    ESP_BT_COD_MAJOR_DEV_IMAGING = 6,
-    ESP_BT_COD_MAJOR_DEV_WEARABLE = 7,
-    ESP_BT_COD_MAJOR_DEV_TOY = 8,
-    ESP_BT_COD_MAJOR_DEV_HEALTH = 9,
-    ESP_BT_COD_MAJOR_DEV_UNCATEGORIZED = 31,
-} esp_bt_cod_major_dev_t;
-# 191 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-typedef enum {
-    ESP_BT_GAP_DISCOVERY_STOPPED,
-    ESP_BT_GAP_DISCOVERY_STARTED,
-} esp_bt_gap_discovery_state_t;
-
-
-typedef enum {
-    ESP_BT_GAP_DISC_RES_EVT = 0,
-    ESP_BT_GAP_DISC_STATE_CHANGED_EVT,
-    ESP_BT_GAP_RMT_SRVCS_EVT,
-    ESP_BT_GAP_RMT_SRVC_REC_EVT,
-    ESP_BT_GAP_AUTH_CMPL_EVT,
-    ESP_BT_GAP_PIN_REQ_EVT,
-    ESP_BT_GAP_CFM_REQ_EVT,
-    ESP_BT_GAP_KEY_NOTIF_EVT,
-    ESP_BT_GAP_KEY_REQ_EVT,
-    ESP_BT_GAP_READ_RSSI_DELTA_EVT,
-    ESP_BT_GAP_CONFIG_EIR_DATA_EVT,
-    ESP_BT_GAP_SET_AFH_CHANNELS_EVT,
-    ESP_BT_GAP_READ_REMOTE_NAME_EVT,
-    ESP_BT_GAP_EVT_MAX,
-} esp_bt_gap_cb_event_t;
-
-
-typedef enum {
-    ESP_BT_INQ_MODE_GENERAL_INQUIRY,
-    ESP_BT_INQ_MODE_LIMITED_INQUIRY,
-} esp_bt_inq_mode_t;
-
-
-
-
-
-
-typedef union {
-
-
-
-    struct disc_res_param {
-        esp_bd_addr_t bda;
-        int num_prop;
-        esp_bt_gap_dev_prop_t *prop;
-    } disc_res;
-
-
-
-
-    struct disc_state_changed_param {
-        esp_bt_gap_discovery_state_t state;
-    } disc_st_chg;
-
-
-
-
-    struct rmt_srvcs_param {
-        esp_bd_addr_t bda;
-        esp_bt_status_t stat;
-        int num_uuids;
-        esp_bt_uuid_t *uuid_list;
-    } rmt_srvcs;
-
-
-
-
-    struct rmt_srvc_rec_param {
-        esp_bd_addr_t bda;
-        esp_bt_status_t stat;
-    } rmt_srvc_rec;
-
-
-
-
-    struct read_rssi_delta_param {
-        esp_bd_addr_t bda;
-        esp_bt_status_t stat;
-        int8_t rssi_delta;
-    } read_rssi_delta;
-
-
-
-
-    struct config_eir_data_param {
-        esp_bt_status_t stat;
-
-
-
-
-        uint8_t eir_type_num;
-        esp_bt_eir_type_t eir_type[12];
-    } config_eir_data;
-
-
-
-
-    struct auth_cmpl_param {
-        esp_bd_addr_t bda;
-        esp_bt_status_t stat;
-        uint8_t device_name[(248) + 1];
-    } auth_cmpl;
-
-
-
-
-    struct pin_req_param {
-        esp_bd_addr_t bda;
-        
-# 296 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-       _Bool 
-# 296 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-            min_16_digit;
-    } pin_req;
-
-
-
-
-    struct cfm_req_param {
-        esp_bd_addr_t bda;
-        uint32_t num_val;
-    } cfm_req;
-
-
-
-
-    struct key_notif_param {
-        esp_bd_addr_t bda;
-        uint32_t passkey;
-    } key_notif;
-
-
-
-
-    struct key_req_param {
-        esp_bd_addr_t bda;
-    } key_req;
-
-
-
-
-    struct set_afh_channels_param {
-        esp_bt_status_t stat;
-    } set_afh_channels;
-
-
-
-
-    struct read_rmt_name_param {
-        esp_bt_status_t stat;
-        uint8_t rmt_name[(248) + 1];
-    } read_rmt_name;
-
-} esp_bt_gap_cb_param_t;
-
-
-
-
-
-
-typedef void (* esp_bt_gap_cb_t)(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *param);
-
-
-
-
-
-
-static inline uint32_t esp_bt_gap_get_cod_srvc(uint32_t cod)
-{
-    return (cod & (0xffe000)) >> (13);
-}
-
-
-
-
-
-
-static inline uint32_t esp_bt_gap_get_cod_major_dev(uint32_t cod)
-{
-    return (cod & (0x1f00)) >> (8);
-}
-
-
-
-
-
-
-static inline uint32_t esp_bt_gap_get_cod_minor_dev(uint32_t cod)
-{
-    return (cod & (0xfc)) >> (2);
-}
-
-
-
-
-
-
-static inline uint32_t esp_bt_gap_get_cod_format_type(uint32_t cod)
-{
-    return (cod & (0x03));
-}
-# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-static inline 
-# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-             _Bool 
-# 393 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                  esp_bt_gap_is_valid_cod(uint32_t cod)
-{
-    if (esp_bt_gap_get_cod_format_type(cod) == (0x00) &&
-            esp_bt_gap_get_cod_srvc(cod) != ESP_BT_COD_SRVC_NONE) {
-        return 
-# 397 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-              1
-# 397 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                  ;
-    }
-
-    return 
-# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-          0
-# 400 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-               ;
-}
-# 410 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_register_callback(esp_bt_gap_cb_t callback);
-# 425 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_set_scan_mode(esp_bt_connection_mode_t c_mode, esp_bt_discovery_mode_t d_mode);
-# 442 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_start_discovery(esp_bt_inq_mode_t mode, uint8_t inq_len, uint8_t num_rsps);
-# 453 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_cancel_discovery(void);
-# 464 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_get_remote_services(esp_bd_addr_t remote_bda);
-# 476 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_get_remote_service_record(esp_bd_addr_t remote_bda, esp_bt_uuid_t *uuid);
-# 488 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-uint8_t *esp_bt_gap_resolve_eir_data(uint8_t *eir, esp_bt_eir_type_t type, uint8_t *length);
-# 502 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_config_eir_data(esp_bt_eir_data_t *eir_data);
-# 519 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_set_cod(esp_bt_cod_t cod, esp_bt_cod_mode_t mode);
-# 530 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_get_cod(esp_bt_cod_t *cod);
-# 542 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_read_rssi_delta(esp_bd_addr_t remote_addr);
-# 554 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_remove_bond_device(esp_bd_addr_t bd_addr);
-# 564 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-int esp_bt_gap_get_bond_device_num(void);
-# 581 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_get_bond_device_list(int *dev_num, esp_bd_addr_t *dev_list);
-# 598 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_set_pin(esp_bt_pin_type_t pin_type, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
-# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_pin_reply(esp_bd_addr_t bd_addr, 
-# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-                                                     _Bool 
-# 613 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                                                          accept, uint8_t pin_code_len, esp_bt_pin_code_t pin_code);
-# 628 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_set_security_param(esp_bt_sp_param_t param_type,
-                                        void *value, uint8_t len);
-# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_ssp_passkey_reply(esp_bd_addr_t bd_addr, 
-# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-                                                             _Bool 
-# 644 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                                                                  accept, uint32_t passkey);
-# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_ssp_confirm_reply(esp_bd_addr_t bd_addr, 
-# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h" 3 4
-                                                             _Bool 
-# 658 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-                                                                  accept);
-# 676 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_set_afh_channels(esp_bt_gap_afh_channels channels);
-# 688 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_bt_api.h"
-esp_err_t esp_bt_gap_read_remote_name(esp_bd_addr_t remote_bda);
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
        
 
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/include/security/protocomm_security.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/protocomm/include/security/protocomm_security.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h"
        
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/include/security/protocomm_security.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h"
 typedef struct protocomm_security_pop {
 
 
@@ -2455,9 +1645,7 @@ typedef struct protocomm_security_pop {
 
     uint16_t len;
 } protocomm_security_pop_t;
-
-typedef void * protocomm_security_handle_t;
-# 49 "/home/dieter/Development/esp-idf/components/protocomm/include/security/protocomm_security.h"
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/security/protocomm_security.h"
 typedef struct protocomm_security {
 
 
@@ -2468,31 +1656,28 @@ typedef struct protocomm_security {
 
 
 
-    esp_err_t (*init)(protocomm_security_handle_t *handle);
+    esp_err_t (*init)();
 
 
 
 
-    esp_err_t (*cleanup)(protocomm_security_handle_t handle);
+    esp_err_t (*cleanup)();
 
 
 
 
-    esp_err_t (*new_transport_session)(protocomm_security_handle_t handle,
-                                       uint32_t session_id);
+    esp_err_t (*new_transport_session)(uint32_t session_id);
 
 
 
 
-    esp_err_t (*close_transport_session)(protocomm_security_handle_t handle,
-                                         uint32_t session_id);
+    esp_err_t (*close_transport_session)(uint32_t session_id);
 
 
 
 
 
-    esp_err_t (*security_req_handler)(protocomm_security_handle_t handle,
-                                      const protocomm_security_pop_t *pop,
+    esp_err_t (*security_req_handler)(const protocomm_security_pop_t *pop,
                                       uint32_t session_id,
                                       const uint8_t *inbuf, ssize_t inlen,
                                       uint8_t **outbuf, ssize_t *outlen,
@@ -2501,21 +1686,19 @@ typedef struct protocomm_security {
 
 
 
-    esp_err_t (*encrypt)(protocomm_security_handle_t handle,
-                         uint32_t session_id,
+    esp_err_t (*encrypt)(uint32_t session_id,
                          const uint8_t *inbuf, ssize_t inlen,
                          uint8_t *outbuf, ssize_t *outlen);
 
 
 
 
-    esp_err_t (*decrypt)(protocomm_security_handle_t handle,
-                         uint32_t session_id,
+    esp_err_t (*decrypt)(uint32_t session_id,
                          const uint8_t *inbuf, ssize_t inlen,
                          uint8_t *outbuf, ssize_t *outlen);
 } protocomm_security_t;
-# 18 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h" 2
-# 27 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h" 2
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 typedef esp_err_t (*protocomm_req_handler_t)(
     uint32_t session_id,
     const uint8_t *inbuf,
@@ -2524,41 +1707,37 @@ typedef esp_err_t (*protocomm_req_handler_t)(
     ssize_t *outlen,
     void *priv_data
 );
-# 43 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 typedef struct protocomm protocomm_t;
-# 55 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
-protocomm_t *protocomm_new(void);
-# 65 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
+protocomm_t *protocomm_new();
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 void protocomm_delete(protocomm_t *pc);
-# 94 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_add_endpoint(protocomm_t *pc, const char *ep_name,
                                  protocomm_req_handler_t h, void *priv_data);
-# 115 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_remove_endpoint(protocomm_t *pc, const char *ep_name);
-# 132 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
-esp_err_t protocomm_open_session(protocomm_t *pc, uint32_t session_id);
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
-esp_err_t protocomm_close_session(protocomm_t *pc, uint32_t session_id);
-# 177 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_req_handle(protocomm_t *pc, const char *ep_name, uint32_t session_id,
                                const uint8_t *inbuf, ssize_t inlen,
                                uint8_t **outbuf, ssize_t *outlen);
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_set_security(protocomm_t *pc, const char *ep_name,
                                  const protocomm_security_t *sec,
                                  const protocomm_security_pop_t *pop);
-# 224 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_unset_security(protocomm_t *pc, const char *ep_name);
-# 247 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_set_version(protocomm_t *pc, const char *ep_name,
                                 const char *version);
-# 264 "/home/dieter/Development/esp-idf/components/protocomm/include/common/protocomm.h"
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/common/protocomm.h"
 esp_err_t protocomm_unset_version(protocomm_t *pc, const char *ep_name);
-# 21 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/include/transports/protocomm_ble.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
        
-# 35 "/home/dieter/Development/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
 typedef struct name_uuid {
 
 
@@ -2575,20 +1754,12 @@ typedef struct name_uuid {
 
 
 
-typedef struct protocomm_ble_config {
+typedef struct {
 
 
 
-    char device_name[29];
-
-
-
-
+    char device_name[13];
     uint8_t service_uuid[16];
-
-
-
-
     ssize_t nu_lookup_count;
 
 
@@ -2596,19 +1767,19 @@ typedef struct protocomm_ble_config {
 
     protocomm_ble_name_uuid_t *nu_lookup;
 } protocomm_ble_config_t;
-# 89 "/home/dieter/Development/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
 esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *config);
-# 106 "/home/dieter/Development/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
+# 96 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/include/transports/protocomm_ble.h"
 esp_err_t protocomm_ble_stop(protocomm_t *pc);
-# 22 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
        
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/queue.h" 1 3 4
-# 18 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 2
-# 34 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h" 2
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
 typedef struct protocomm_ep {
     const char *ep_name;
     protocomm_req_handler_t req_handler;
@@ -2620,17 +1791,9 @@ typedef struct protocomm_ep {
     uint32_t flag;
 
 
-    
-# 45 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 3 4
-   struct { struct 
-# 45 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-   protocomm_ep 
-# 45 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 3 4
-   *sle_next; } 
-# 45 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-                             next;
+    struct { struct protocomm_ep *sle_next; } next;
 } protocomm_ep_t;
-# 55 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/common/protocomm_priv.h"
 struct protocomm {
 
 
@@ -2645,25 +1808,10 @@ struct protocomm {
     const protocomm_security_t *sec;
 
 
-    protocomm_security_handle_t sec_inst;
-
-
     protocomm_security_pop_t *pop;
 
 
-    
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 3 4
-   struct 
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-   eptable_t 
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 3 4
-   { struct 
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-   protocomm_ep 
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h" 3 4
-   *slh_first; } 
-# 75 "/home/dieter/Development/esp-idf/components/protocomm/src/common/protocomm_priv.h"
-                                       endpoints;
+    struct eptable_t { struct protocomm_ep *slh_first; } endpoints;
 
 
     void* priv;
@@ -2671,62 +1819,19 @@ struct protocomm {
 
     const char* ver;
 };
-# 24 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -2750,55 +1855,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -2807,7 +1926,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -2817,32 +1937,19 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
 
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 21 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
-
-# 51 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 1
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_key_type_t;
-# 62 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_auth_req_t;
-# 136 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef uint8_t esp_ble_io_cap_t;
 
 
@@ -2876,13 +1983,9 @@ typedef enum {
     ESP_GAP_BLE_READ_RSSI_COMPLETE_EVT,
     ESP_GAP_BLE_UPDATE_WHITELIST_COMPLETE_EVT,
     ESP_GAP_BLE_UPDATE_DUPLICATE_EXCEPTIONAL_LIST_COMPLETE_EVT,
-    ESP_GAP_BLE_SET_CHANNELS_EVT,
     ESP_GAP_BLE_EVT_MAX,
 } esp_gap_ble_cb_event_t;
-
-
-typedef uint8_t esp_gap_ble_channels[5];
-# 186 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 typedef enum {
     ESP_BLE_AD_TYPE_FLAG = 0x01,
     ESP_BLE_AD_TYPE_16SRV_PART = 0x02,
@@ -2972,26 +2075,14 @@ typedef enum {
 
 typedef enum {
     ESP_BLE_SM_PASSKEY = 0,
-
     ESP_BLE_SM_AUTHEN_REQ_MODE,
-
     ESP_BLE_SM_IOCAP_MODE,
-
     ESP_BLE_SM_SET_INIT_KEY,
-
     ESP_BLE_SM_SET_RSP_KEY,
-
     ESP_BLE_SM_MAX_KEY_SIZE,
-
-    ESP_BLE_SM_MIN_KEY_SIZE,
-
     ESP_BLE_SM_SET_STATIC_PASSKEY,
-
     ESP_BLE_SM_CLEAR_STATIC_PASSKEY,
-
     ESP_BLE_SM_ONLY_ACCEPT_SPECIFIED_SEC_AUTH,
-
-    ESP_BLE_SM_OOB_SUPPORT,
     ESP_BLE_SM_MAX_PARAM,
 } esp_ble_sm_param_t;
 
@@ -3016,19 +2107,19 @@ typedef struct {
 
 typedef struct {
     
-# 318 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 318 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            set_scan_rsp;
     
-# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 319 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            include_name;
     
-# 320 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 320 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                            include_txpower;
     int min_interval;
 
@@ -3104,15 +2195,6 @@ typedef struct {
 
 
 } esp_ble_scan_params_t;
-
-
-typedef struct {
-    uint16_t interval;
-    uint16_t latency;
-    uint16_t timeout;
-
-
-} esp_gap_conn_params_t;
 
 
 typedef struct {
@@ -3265,16 +2347,16 @@ typedef struct
 {
     esp_bd_addr_t bd_addr;
     
-# 555 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 555 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                          key_present;
     esp_link_key key;
     uint8_t key_type;
     
-# 558 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
    _Bool 
-# 558 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                          success;
     uint8_t fail_reason;
     esp_ble_addr_type_t addr_type;
@@ -3334,18 +2416,12 @@ typedef enum {
 typedef enum {
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_ADV_ADDR = 0,
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_LINK_ID,
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_BEACON_TYPE,
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_PROV_SRV_ADV,
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_INFO_MESH_PROXY_SRV_ADV,
 } esp_ble_duplicate_exceptional_info_type_t;
 
 typedef enum {
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ADDR_LIST = (1UL<<(0)),
     ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_LINK_ID_LIST = (1UL<<(1)),
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_BEACON_TYPE_LIST = (1UL<<(2)),
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_PROV_SRV_ADV_LIST = (1UL<<(3)),
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_MESH_PROXY_SRV_ADV_LIST = (1UL<<(4)),
-    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ALL_LIST = 0xFFFF,
+    ESP_BLE_DUPLICATE_SCAN_EXCEPTIONAL_ALL_LIST = ((1UL<<(0)) | (1UL<<(1))),
 } esp_duplicate_scan_exceptional_list_type_t;
 
 typedef uint8_t esp_duplicate_info_t[6];
@@ -3505,12 +2581,6 @@ typedef union {
         uint16_t length;
         esp_duplicate_info_t device_info;
     } update_duplicate_exceptional_list_cmpl;
-
-
-
-    struct ble_set_channels_evt_param {
-        esp_bt_status_t stat;
-    } ble_set_channels;
 } esp_ble_gap_cb_param_t;
 
 
@@ -3519,108 +2589,102 @@ typedef union {
 
 
 typedef void (* esp_gap_ble_cb_t)(esp_gap_ble_cb_event_t event, esp_ble_gap_cb_param_t *param);
-# 813 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_register_callback(esp_gap_ble_cb_t callback);
-# 828 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_adv_data (esp_ble_adv_data_t *adv_data);
-# 843 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_scan_params(esp_ble_scan_params_t *scan_params);
-# 856 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_start_scanning(uint32_t duration);
-# 866 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_stop_scanning(void);
-# 878 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 836 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_start_advertising (esp_ble_adv_params_t *adv_params);
-# 890 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_stop_advertising(void);
-# 904 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_update_conn_params(esp_ble_conn_update_params_t *params);
-# 915 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 873 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_pkt_data_len(esp_bd_addr_t remote_device, uint16_t tx_data_length);
-# 927 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_rand_addr(esp_bd_addr_t rand_addr);
-# 937 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_clear_rand_addr(void);
-# 951 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_local_privacy (
-# 951 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                            _Bool 
-# 951 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 909 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                 privacy_enable);
-# 965 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_local_icon (uint16_t icon);
-# 978 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_update_whitelist(
-# 978 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                       _Bool 
-# 978 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
-                                           add_remove, esp_bd_addr_t remote_bda, esp_ble_wl_addr_type_t wl_addr_type);
-# 989 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
+                                           add_remove, esp_bd_addr_t remote_bda);
+# 946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_get_whitelist_size(uint16_t *length);
-# 1007 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 964 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_prefer_conn_params(esp_bd_addr_t bd_addr,
                                                                  uint16_t min_conn_int, uint16_t max_conn_int,
                                                                  uint16_t slave_latency, uint16_t supervision_tout);
-# 1021 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 978 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_device_name(const char *name);
-# 1034 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 991 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_get_local_used_addr(esp_bd_addr_t local_used_addr, uint8_t * addr_type);
-# 1045 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1002 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 uint8_t *esp_ble_resolve_adv_data(uint8_t *adv_data, uint8_t type, uint8_t *length);
-# 1059 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_adv_data_raw(uint8_t *raw_data, uint32_t raw_data_len);
-# 1072 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1029 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_config_scan_rsp_data_raw(uint8_t *raw_data, uint32_t raw_data_len);
-# 1085 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1042 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_read_rssi(esp_bd_addr_t remote_addr);
-# 1098 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1054 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_add_duplicate_scan_exceptional_device(esp_ble_duplicate_exceptional_info_type_t type, esp_duplicate_info_t device_info);
-# 1111 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_remove_duplicate_scan_exceptional_device(esp_ble_duplicate_exceptional_info_type_t type, esp_duplicate_info_t device_info);
-# 1124 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_clean_duplicate_scan_exceptional_list(esp_duplicate_scan_exceptional_list_type_t list_type);
-# 1138 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_set_security_param(esp_ble_sm_param_t param_type,
                                          void *value, uint8_t len);
-# 1151 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_security_rsp(esp_bd_addr_t bd_addr, 
-# 1151 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                           _Bool 
-# 1151 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                                accept);
-# 1167 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_set_encryption(esp_bd_addr_t bd_addr, esp_ble_sec_act_t sec_act);
-# 1181 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_passkey_reply(esp_bd_addr_t bd_addr, 
-# 1181 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                       _Bool 
-# 1181 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                            accept, uint32_t passkey);
-# 1194 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_confirm_reply(esp_bd_addr_t bd_addr, 
-# 1194 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h" 3 4
                                                       _Bool 
-# 1194 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
                                                            accept);
-# 1206 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_remove_bond_device(esp_bd_addr_t bd_addr);
-# 1216 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 int esp_ble_get_bond_device_num(void);
-# 1232 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_get_bond_device_list(int *dev_num, esp_ble_bond_dev_t *dev_list);
-# 1246 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_oob_req_reply(esp_bd_addr_t bd_addr, uint8_t *TK, uint8_t len);
-# 1265 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
+# 1206 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gap_ble_api.h"
 esp_err_t esp_ble_gap_disconnect(esp_bd_addr_t remote_device);
-# 1278 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_ble_get_current_conn_params(esp_bd_addr_t bd_addr, esp_gap_conn_params_t *conn_params);
-# 1294 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h"
-esp_err_t esp_gap_ble_set_channels(esp_gap_ble_channels channels);
-# 23 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
-# 1 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h" 1
-# 164 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 1
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef enum {
     ESP_GATT_PREP_WRITE_CANCEL = 0x00,
     ESP_GATT_PREP_WRITE_EXEC = 0x01,
@@ -3711,9 +2775,9 @@ typedef struct {
 typedef struct {
     esp_gatt_id_t id;
     
-# 253 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
    _Bool 
-# 253 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h"
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
                    is_primary;
 } __attribute__((packed)) esp_gatt_srvc_id_t;
 
@@ -3728,9 +2792,9 @@ typedef enum {
     ESP_GATT_AUTH_REQ_SIGNED_NO_MITM = 3,
     ESP_GATT_AUTH_REQ_SIGNED_MITM = 4,
 } esp_gatt_auth_req_t;
-# 280 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h"
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef uint16_t esp_gatt_perm_t;
-# 292 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
 typedef uint8_t esp_gatt_char_prop_t;
 
 
@@ -3836,17 +2900,6 @@ typedef enum {
 
 
 
-
-typedef struct {
-    uint16_t interval;
-    uint16_t latency;
-    uint16_t timeout;
-
-
-} esp_gatt_conn_params_t;
-
-
-
 typedef uint8_t esp_gatt_if_t;
 
 
@@ -3886,9 +2939,9 @@ typedef struct {
 
 typedef struct {
     
-# 446 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
+# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h" 3 4
    _Bool 
-# 446 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatt_defs.h"
+# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatt_defs.h"
                                is_primary;
     uint16_t start_handle;
     uint16_t end_handle;
@@ -3921,7 +2974,7 @@ typedef struct {
     uint16_t incl_srvc_e_handle;
     esp_bt_uuid_t uuid;
 } esp_gattc_incl_svc_elem_t;
-# 20 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 2
 
 
 
@@ -3980,14 +3033,14 @@ typedef union {
         uint16_t handle;
         uint16_t offset;
         
-# 77 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
        _Bool 
-# 77 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
             is_long;
         
-# 78 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
        _Bool 
-# 78 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
             need_rsp;
     } read;
 
@@ -4002,14 +3055,14 @@ typedef union {
         uint16_t handle;
         uint16_t offset;
         
-# 91 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
        _Bool 
-# 91 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
             need_rsp;
         
-# 92 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
        _Bool 
-# 92 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 92 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
             is_prep;
         uint16_t len;
         uint8_t *value;
@@ -4045,7 +3098,7 @@ typedef union {
         uint16_t len;
         uint8_t *value;
     } conf;
-# 135 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
     struct gatts_create_evt_param {
         esp_gatt_status_t status;
         uint16_t service_handle;
@@ -4111,7 +3164,6 @@ typedef union {
     struct gatts_connect_evt_param {
         uint16_t conn_id;
         esp_bd_addr_t remote_bda;
-        esp_gatt_conn_params_t conn_params;
     } connect;
 
 
@@ -4154,9 +3206,9 @@ typedef union {
     struct gatts_congest_evt_param {
         uint16_t conn_id;
         
-# 242 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
        _Bool 
-# 242 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
             congested;
     } congest;
 
@@ -4174,7 +3226,6 @@ typedef union {
     struct gatts_add_attr_tab_evt_param{
         esp_gatt_status_t status;
         esp_bt_uuid_t svc_uuid;
-        uint8_t svc_inst_id;
         uint16_t num_handle;
         uint16_t *handles;
     } add_attr_tab;
@@ -4197,64 +3248,64 @@ typedef union {
     } service_change;
 
 } esp_ble_gatts_cb_param_t;
-# 290 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 typedef void (* esp_gatts_cb_t)(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param);
-# 301 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_register_callback(esp_gatts_cb_t callback);
-# 311 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 309 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_app_register(uint16_t app_id);
-# 324 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_app_unregister(esp_gatt_if_t gatts_if);
-# 343 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_create_service(esp_gatt_if_t gatts_if,
                                        esp_gatt_srvc_id_t *service_id, uint16_t num_handle);
-# 359 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_create_attr_tab(const esp_gatts_attr_db_t *gatts_attr_db,
                                             esp_gatt_if_t gatts_if,
                                             uint8_t max_nb_attr,
                                             uint8_t srvc_inst_id);
-# 378 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_add_included_service(uint16_t service_handle, uint16_t included_service_handle);
-# 398 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_add_char(uint16_t service_handle, esp_bt_uuid_t *char_uuid,
                                  esp_gatt_perm_t perm, esp_gatt_char_prop_t property, esp_attr_value_t *char_val,
                                  esp_attr_control_t *control);
-# 419 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_add_char_descr (uint16_t service_handle,
                                         esp_bt_uuid_t *descr_uuid,
                                         esp_gatt_perm_t perm, esp_attr_value_t *char_descr_val,
                                         esp_attr_control_t *control);
-# 437 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_delete_service(uint16_t service_handle);
-# 451 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_start_service(uint16_t service_handle);
-# 465 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_stop_service(uint16_t service_handle);
-# 486 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_send_indicate(esp_gatt_if_t gatts_if, uint16_t conn_id, uint16_t attr_handle,
                                       uint16_t value_len, uint8_t *value, 
-# 487 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
                                                                          _Bool 
-# 487 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
                                                                               need_confirm);
-# 504 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 502 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_send_response(esp_gatt_if_t gatts_if, uint16_t conn_id, uint32_t trans_id,
                                       esp_gatt_status_t status, esp_gatt_rsp_t *rsp);
-# 520 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_set_attr_value(uint16_t attr_handle, uint16_t length, const uint8_t *value);
-# 534 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_gatt_status_t esp_ble_gatts_get_attr_value(uint16_t attr_handle, uint16_t *length, const uint8_t **value);
-# 549 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_open(esp_gatt_if_t gatts_if, esp_bd_addr_t remote_bda, 
-# 549 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h" 3 4
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h" 3 4
                                                                               _Bool 
-# 549 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
                                                                                    is_direct);
-# 562 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_close(esp_gatt_if_t gatts_if, uint16_t conn_id);
-# 578 "/home/dieter/Development/esp-idf/components/bt/host/bluedroid/api/include/api/esp_gatts_api.h"
+# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/bt/bluedroid/api/include/api/esp_gatts_api.h"
 esp_err_t esp_ble_gatts_send_service_change_indication(esp_gatt_if_t gatts_if, esp_bd_addr_t remote_bda);
-# 24 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h" 2
 
 typedef void (simple_ble_cb_t)(esp_gatts_cb_event_t event, esp_gatt_if_t p_gatts_if, esp_ble_gatts_cb_param_t *param);
 
@@ -4267,14 +3318,9 @@ typedef struct {
 
     const char *device_name;
 
-    uint8_t *raw_adv_data_p;
-    uint8_t raw_adv_data_len;
-
-    uint8_t *raw_scan_rsp_data_p;
-    uint8_t raw_scan_rsp_data_len;
+    esp_ble_adv_data_t adv_data;
 
     esp_ble_adv_params_t adv_params;
-
 
     esp_gatts_attr_db_t *gatt_db;
 
@@ -4292,8 +3338,8 @@ typedef struct {
 
     simple_ble_cb_t *set_mtu_fn;
 } simple_ble_cfg_t;
-# 70 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-simple_ble_cfg_t *simple_ble_init(void);
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+simple_ble_cfg_t *simple_ble_init();
 
 
 
@@ -4301,14 +3347,14 @@ simple_ble_cfg_t *simple_ble_init(void);
 
 
 
-esp_err_t simple_ble_deinit(void);
-# 91 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+esp_err_t simple_ble_deinit();
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
 esp_err_t simple_ble_start(simple_ble_cfg_t *cfg);
-# 100 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-esp_err_t simple_ble_stop(void);
-# 111 "/home/dieter/Development/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
-const uint8_t *simple_ble_get_uuid128(uint16_t handle);
-# 25 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+esp_err_t simple_ble_stop();
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/simple_ble/simple_ble.h"
+uint16_t simple_ble_get_uuid(uint16_t handle);
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 2
 
 
 
@@ -4316,17 +3362,10 @@ const uint8_t *simple_ble_get_uuid128(uint16_t handle);
 static const char *TAG = "protocomm_ble";
 
 
-static const uint16_t primary_service_uuid = 0x2800;
-static const uint16_t character_declaration_uuid = 0x2803;
-static const uint16_t character_user_description = 0x2901;
-static const uint8_t character_prop_read_write = (1 << 1) | (1 << 3);
-static const uint8_t ble_advertisement_flags = (0x01 << 1) | (0x01 << 2);
-
-typedef struct {
-    uint8_t type;
-    uint8_t length;
-    uint8_t *data_p;
-} raw_data_info_t;
+const uint16_t GATTS_SERVICE_UUID_PROV = 0xFFFF;
+const uint16_t primary_service_uuid = 0x2800;
+const uint16_t character_declaration_uuid = 0x2803;
+const uint8_t char_prop_read_write = (1 << 1) | (1 << 3);
 
 typedef struct {
     uint8_t *prepare_buf;
@@ -4336,21 +3375,11 @@ typedef struct {
 
 static prepare_type_env_t prepare_write_env;
 
-typedef struct name_uuid128 {
-    const char *name;
-    uint8_t uuid128[16];
-} name_uuid128_t;
-
 typedef struct _protocomm_ble {
     protocomm_t *pc_ble;
-    name_uuid128_t *g_nu_lookup;
+    protocomm_ble_name_uuid_t *g_nu_lookup;
     ssize_t g_nu_lookup_count;
     uint16_t gatt_mtu;
-    uint8_t *service_uuid;
-    uint8_t *raw_adv_data_p;
-    uint8_t raw_adv_data_len;
-    uint8_t *raw_scan_rsp_data_p;
-    uint8_t raw_scan_rsp_data_len;
 } _protocomm_ble_internal_t;
 
 static _protocomm_ble_internal_t *protoble_internal;
@@ -4365,10 +3394,51 @@ static esp_ble_adv_params_t adv_params = {
 };
 
 static char* protocomm_ble_device_name = 
-# 80 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                         ((void *)0)
-# 80 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                             ;
+
+
+static esp_ble_adv_data_t adv_data = {
+    .set_scan_rsp = 
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          0
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                               ,
+    .include_name = 
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          1
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                              ,
+    .include_txpower = 
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          1
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                              ,
+    .min_interval = 0x100,
+    .max_interval = 0x100,
+    .appearance = 0x0000,
+    .manufacturer_len = 0,
+    .p_manufacturer_data = 
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          ((void *)0)
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                              ,
+    .service_data_len = 0,
+    .p_service_data = 
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          ((void *)0)
+# 75 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                              ,
+    .service_uuid_len = 0,
+    .p_service_uuid = 
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                          ((void *)0)
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                              ,
+    .flag = ((0x01 << 1) | (0x01 << 2)),
+};
 
 static void hexdump(const char *msg, uint8_t *buf, int len)
 {
@@ -4376,39 +3446,27 @@ static void hexdump(const char *msg, uint8_t *buf, int len)
     do { if ( 3 >= (ESP_LOG_DEBUG) ) { esp_log_buffer_hex_internal( TAG, buf, len, ESP_LOG_DEBUG ); } } while(0);
 }
 
-static const uint16_t *uuid128_to_16(const uint8_t *uuid128)
-{
-    return (const uint16_t *) &uuid128[12];
-}
-
 static const char *handle_to_handler(uint16_t handle)
 {
-    const uint8_t *uuid128 = simple_ble_get_uuid128(handle);
-    if (!uuid128) {
-        return 
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-              ((void *)0)
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                  ;
-    }
+    uint16_t uuid = simple_ble_get_uuid(handle);
     for (int i = 0; i < protoble_internal->g_nu_lookup_count; i++) {
-        if (*uuid128_to_16(protoble_internal->g_nu_lookup[i].uuid128) == *uuid128_to_16(uuid128)) {
+        if (protoble_internal->g_nu_lookup[i].uuid == uuid ) {
             return protoble_internal->g_nu_lookup[i].name;
         }
     }
     return 
-# 104 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
           ((void *)0)
-# 104 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
               ;
 }
 
 static void transport_simple_ble_read(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     static const uint8_t *read_buf = 
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                     ((void *)0)
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                         ;
     static uint16_t read_len = 0;
     esp_gatt_status_t status = 0;
@@ -4423,27 +3481,7 @@ static void transport_simple_ble_read(esp_gatts_cb_event_t event, esp_gatt_if_t 
     }
 
     esp_gatt_rsp_t gatt_rsp = {0};
-    gatt_rsp.attr_value.len = 
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                             ((
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                             read_len
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                             ) < (
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                             (protoble_internal->gatt_mtu - 1)
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                             ) ? (
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                             read_len
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                             ) : (
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                             (protoble_internal->gatt_mtu - 1)
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                             ))
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                                             ;
+    gatt_rsp.attr_value.len = ((read_len) < ((protoble_internal->gatt_mtu - 1)) ? (read_len) : ((protoble_internal->gatt_mtu - 1)));
     gatt_rsp.attr_value.handle = param->read.handle;
     gatt_rsp.attr_value.offset = param->read.offset;
     gatt_rsp.attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
@@ -4463,68 +3501,48 @@ static void transport_simple_ble_read(esp_gatts_cb_event_t event, esp_gatt_if_t 
 static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
                                          esp_ble_gatts_cb_param_t *param)
 {
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "prepare write, handle = %d, value len = %d, offset = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len, param->write.offset); } } while(0); } while(0)
-                                                                        ;
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "prepare write, handle = %d, value len = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.handle, param->write.len); } } while(0); } while(0)
+                                                   ;
     esp_gatt_status_t status = ESP_GATT_OK;
-
-
-    if (param->write.offset > (256 + 1)) {
-        status = ESP_GATT_INVALID_OFFSET;
-    } else if ((param->write.offset + param->write.len) > (256 + 1)) {
-        status = ESP_GATT_INVALID_ATTR_LEN;
-    } else {
-
+    if (prepare_write_env.prepare_buf == 
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                        ((void *)0)
+# 137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                            ) {
+        prepare_write_env.prepare_buf = (uint8_t *) malloc((256 + 1) * sizeof(uint8_t));
         if (prepare_write_env.prepare_buf == 
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                             ((void *)0)
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                 ) {
-            prepare_write_env.prepare_len = 0;
-            prepare_write_env.prepare_buf = (uint8_t *) malloc((256 + 1) * sizeof(uint8_t));
-            if (prepare_write_env.prepare_buf == 
-# 157 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                                ((void *)0)
-# 157 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                    ) {
-                do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s , failed to allocate prepare buf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
-                status = ESP_GATT_NO_RESOURCES;
-            }
+            do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "%s , failed tp allocate preparebuf" "\033[0m" "\n", esp_log_timestamp(), TAG, __func__); } } while(0); } while(0);
+            status = ESP_GATT_NO_RESOURCES;
+        }
+
+    } else {
+        if (param->write.offset > (256 + 1)) {
+            status = ESP_GATT_INVALID_OFFSET;
+        } else if ((param->write.offset + param->write.len) > (256 + 1)) {
+            status = ESP_GATT_INVALID_ATTR_LEN;
         }
     }
-
-
-    if (status == ESP_GATT_OK) {
-        memcpy(prepare_write_env.prepare_buf + param->write.offset,
-               param->write.value,
-               param->write.len);
-        prepare_write_env.prepare_len += param->write.len;
-        prepare_write_env.handle = param->write.handle;
-    }
-
-
+    memcpy(prepare_write_env.prepare_buf + param->write.offset,
+           param->write.value,
+           param->write.len);
+    prepare_write_env.prepare_len += param->write.len;
+    prepare_write_env.handle = param->write.handle;
     if (param->write.need_rsp) {
-        esp_err_t response_err;
-
-
-        if (status == ESP_GATT_OK) {
-            esp_gatt_rsp_t gatt_rsp = {0};
-            gatt_rsp.attr_value.len = param->write.len;
-            gatt_rsp.attr_value.handle = param->write.handle;
-            gatt_rsp.attr_value.offset = param->write.offset;
-            gatt_rsp.attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
-            if (gatt_rsp.attr_value.len && param->write.value) {
-                memcpy(gatt_rsp.attr_value.value, param->write.value, param->write.len);
-            }
-            response_err = esp_ble_gatts_send_response(gatts_if,
-                param->write.conn_id, param->write.trans_id, status, &gatt_rsp);
-        } else {
-            response_err = esp_ble_gatts_send_response(gatts_if,
-                param->write.conn_id, param->write.trans_id, status, 
-# 191 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                                                    ((void *)0)
-# 191 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                                        );
+        esp_gatt_rsp_t gatt_rsp = {0};
+        gatt_rsp.attr_value.len = param->write.len;
+        gatt_rsp.attr_value.handle = param->write.handle;
+        gatt_rsp.attr_value.offset = param->write.offset;
+        gatt_rsp.attr_value.auth_req = ESP_GATT_AUTH_REQ_NONE;
+        if (gatt_rsp.attr_value.len && param->write.value) {
+            memcpy(gatt_rsp.attr_value.value, param->write.value, param->write.len);
         }
+        esp_err_t response_err = esp_ble_gatts_send_response(gatts_if, param->write.conn_id,
+                param->write.trans_id, status,
+                &gatt_rsp);
         if (response_err != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in prep write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         }
@@ -4533,9 +3551,9 @@ static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
         if (prepare_write_env.prepare_buf) {
             free(prepare_write_env.prepare_buf);
             prepare_write_env.prepare_buf = 
-# 200 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                            ((void *)0)
-# 200 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                ;
             prepare_write_env.prepare_len = 0;
         }
@@ -4547,14 +3565,14 @@ static esp_err_t prepare_write_event_env(esp_gatt_if_t gatts_if,
 static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     uint8_t *outbuf = 
-# 210 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 210 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ;
     ssize_t outlen = 0;
     esp_err_t ret;
 
-    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside write with session - %d on attr handle = %d \nlen = %d, is_prep = %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } } while(0); } while(0)
+    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside write with session - %d on attr handle - %d \nLen -%d IS Prep - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->write.conn_id, param->write.handle, param->write.len, param->write.is_prep); } } while(0); } while(0)
                                                                                                ;
 
     if (param->write.is_prep) {
@@ -4569,7 +3587,7 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
 
     ret = protocomm_req_handle(protoble_internal->pc_ble,
                                handle_to_handler(param->write.handle),
-                               param->write.conn_id,
+                               param->exec_write.conn_id,
                                param->write.value,
                                param->write.len,
                                &outbuf, &outlen);
@@ -4580,9 +3598,9 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
         }
         ret = esp_ble_gatts_send_response(gatts_if, param->write.conn_id,
                                           param->write.trans_id, ESP_GATT_OK, 
-# 239 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                                              ((void *)0)
-# 239 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                                                  );
         if (ret != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
@@ -4598,13 +3616,14 @@ static void transport_simple_ble_write(esp_gatts_cb_event_t event, esp_gatt_if_t
     }
 }
 
+
 static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt_if_t gatts_if, esp_ble_gatts_cb_param_t *param)
 {
     esp_err_t err;
     uint8_t *outbuf = 
-# 257 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 257 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ;
     ssize_t outlen = 0;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside exec_write w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->exec_write.conn_id); } } while(0); } while(0);
@@ -4621,7 +3640,7 @@ static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt
 
         if (err != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Invalid content received, killing connection" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-            esp_ble_gatts_close(gatts_if, param->exec_write.conn_id);
+            esp_ble_gatts_close(gatts_if, param->write.conn_id);
         } else {
             hexdump("Response from exec write", outbuf, outlen);
             esp_ble_gatts_set_attr_value(prepare_write_env.handle, outlen, outbuf);
@@ -4630,17 +3649,17 @@ static void transport_simple_ble_exec_write(esp_gatts_cb_event_t event, esp_gatt
     if (prepare_write_env.prepare_buf) {
         free(prepare_write_env.prepare_buf);
         prepare_write_env.prepare_buf = 
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                        ((void *)0)
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                            ;
         prepare_write_env.prepare_len = 0;
     }
 
     err = esp_ble_gatts_send_response(gatts_if, param->exec_write.conn_id, param->exec_write.trans_id, ESP_GATT_OK, 
-# 285 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                                                                                    ((void *)0)
-# 285 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                                                                                        );
     if (err != 0) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Send response error in exec write" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
@@ -4656,8 +3675,7 @@ static void transport_simple_ble_disconnect(esp_gatts_cb_event_t event, esp_gatt
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside disconnect w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->disconnect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside disconnect w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->disconnect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside disconnect w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->disconnect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside disconnect w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->disconnect.conn_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside disconnect w/ session - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->disconnect.conn_id); } } while(0); } while(0);
     if (protoble_internal->pc_ble->sec &&
         protoble_internal->pc_ble->sec->close_transport_session) {
-        ret = protoble_internal->pc_ble->sec->close_transport_session(protoble_internal->pc_ble->sec_inst,
-                                                                      param->disconnect.conn_id);
+        ret = protoble_internal->pc_ble->sec->close_transport_session(param->disconnect.conn_id);
         if (ret != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "error closing the session after disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "error closing the session after disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "error closing the session after disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "error closing the session after disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "error closing the session after disconnect" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         }
@@ -4671,8 +3689,7 @@ static void transport_simple_ble_connect(esp_gatts_cb_event_t event, esp_gatt_if
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Inside BLE connect w/ conn_id - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->connect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Inside BLE connect w/ conn_id - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->connect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Inside BLE connect w/ conn_id - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->connect.conn_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Inside BLE connect w/ conn_id - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->connect.conn_id); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Inside BLE connect w/ conn_id - %d" "\033[0m" "\n", esp_log_timestamp(), TAG, param->connect.conn_id); } } while(0); } while(0);
     if (protoble_internal->pc_ble->sec &&
         protoble_internal->pc_ble->sec->new_transport_session) {
-        ret = protoble_internal->pc_ble->sec->new_transport_session(protoble_internal->pc_ble->sec_inst,
-                                                                    param->connect.conn_id);
+        ret = protoble_internal->pc_ble->sec->new_transport_session(param->connect.conn_id);
         if (ret != 0) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "error creating the session" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "error creating the session" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "error creating the session" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "error creating the session" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "error creating the session" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         }
@@ -4699,24 +3716,19 @@ static esp_err_t protocomm_ble_remove_endpoint(const char *ep_name)
     return 0;
 }
 
+
 static ssize_t populate_gatt_db(esp_gatts_attr_db_t **gatt_db_generated)
 {
     int i;
 
-
-
-
-
-
-
-    ssize_t gatt_db_generated_entries = 3 * protoble_internal->g_nu_lookup_count + 1;
+    ssize_t gatt_db_generated_entries = 2 * protoble_internal->g_nu_lookup_count + 1;
 
     *gatt_db_generated = (esp_gatts_attr_db_t *) malloc(sizeof(esp_gatts_attr_db_t) *
                                                         (gatt_db_generated_entries));
     if ((*gatt_db_generated) == 
-# 357 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                ((void *)0)
-# 357 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 326 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                    ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Failed to assign memory to gatt_db" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         return -1;
@@ -4727,42 +3739,32 @@ static ssize_t populate_gatt_db(esp_gatts_attr_db_t **gatt_db_generated)
     (*gatt_db_generated)[0].att_desc.uuid_length = 2;
     (*gatt_db_generated)[0].att_desc.uuid_p = (uint8_t *) &primary_service_uuid;
     (*gatt_db_generated)[0].att_desc.perm = (1 << 0);
-    (*gatt_db_generated)[0].att_desc.max_length = 16;
-    (*gatt_db_generated)[0].att_desc.length = 16;
-    (*gatt_db_generated)[0].att_desc.value = protoble_internal->service_uuid;
+    (*gatt_db_generated)[0].att_desc.max_length = sizeof(uint16_t);
+    (*gatt_db_generated)[0].att_desc.length = sizeof(GATTS_SERVICE_UUID_PROV);
+    (*gatt_db_generated)[0].att_desc.value = (uint8_t *) &GATTS_SERVICE_UUID_PROV;
 
 
     for (i = 1 ; i < gatt_db_generated_entries ; i++) {
         (*gatt_db_generated)[i].attr_control.auto_rsp = 0;
 
-        if (i % 3 == 1) {
+        (*gatt_db_generated)[i].att_desc.uuid_length = 2;
+        (*gatt_db_generated)[i].att_desc.perm = (1 << 0) |
+                                                          (1 << 4);
 
-            (*gatt_db_generated)[i].att_desc.perm = (1 << 0);
-            (*gatt_db_generated)[i].att_desc.uuid_length = 2;
+        if (i % 2 == 1) {
             (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *) &character_declaration_uuid;
             (*gatt_db_generated)[i].att_desc.max_length = sizeof(uint8_t);
             (*gatt_db_generated)[i].att_desc.length = sizeof(uint8_t);
-            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) &character_prop_read_write;
-        } else if (i % 3 == 2) {
-
-            (*gatt_db_generated)[i].att_desc.perm = (1 << 0) | (1 << 4);
-            (*gatt_db_generated)[i].att_desc.uuid_length = 16;
-            (*gatt_db_generated)[i].att_desc.uuid_p = protoble_internal->g_nu_lookup[i / 3].uuid128;
+            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) &char_prop_read_write;
+        } else {
+            (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *)&protoble_internal->g_nu_lookup[i / 2 - 1].uuid;
             (*gatt_db_generated)[i].att_desc.max_length = (256 + 1);
             (*gatt_db_generated)[i].att_desc.length = 0;
             (*gatt_db_generated)[i].att_desc.value = 
-# 390 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                                           ((void *)0)
-# 390 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                               ;
-        } else {
-
-            (*gatt_db_generated)[i].att_desc.perm = (1 << 0);
-            (*gatt_db_generated)[i].att_desc.uuid_length = 2;
-            (*gatt_db_generated)[i].att_desc.uuid_p = (uint8_t *) &character_user_description;
-            (*gatt_db_generated)[i].att_desc.max_length = strlen(protoble_internal->g_nu_lookup[i / 3 - 1].name);
-            (*gatt_db_generated)[i].att_desc.length = (*gatt_db_generated)[i].att_desc.max_length;
-            (*gatt_db_generated)[i].att_desc.value = (uint8_t *) protoble_internal->g_nu_lookup[i / 3 - 1].name;
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                                         ((void *)0)
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                                             ;
         }
     }
     return gatt_db_generated_entries;
@@ -4779,22 +3781,29 @@ static void protocomm_ble_cleanup(void)
             }
             free(protoble_internal->g_nu_lookup);
         }
-        free(protoble_internal->raw_adv_data_p);
-        free(protoble_internal->raw_scan_rsp_data_p);
         free(protoble_internal);
         protoble_internal = 
-# 418 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                            ((void *)0)
-# 418 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                ;
     }
     if (protocomm_ble_device_name) {
         free(protocomm_ble_device_name);
         protocomm_ble_device_name = 
-# 422 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                    ((void *)0)
-# 422 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                        ;
+    }
+    if (adv_data.p_service_uuid) {
+        free(adv_data.p_service_uuid);
+        adv_data.p_service_uuid = 
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                 ((void *)0)
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                     ;
+        adv_data.service_uuid_len = 0;
     }
 }
 
@@ -4810,11 +3819,25 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
 
+    adv_data.service_uuid_len = sizeof(config->service_uuid);
+    adv_data.p_service_uuid = malloc(sizeof(config->service_uuid));
+    if (adv_data.p_service_uuid == 
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+                                  ((void *)0)
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+                                      ) {
+        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for storing service UUID" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
+        protocomm_ble_cleanup();
+        return 0x101;
+    }
+    memcpy(adv_data.p_service_uuid, config->service_uuid, adv_data.service_uuid_len);
+
+
     protocomm_ble_device_name = strdup(config->device_name);
     if (protocomm_ble_device_name == 
-# 439 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                     ((void *)0)
-# 439 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                         ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for storing BLE device name" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -4823,9 +3846,9 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
 
     protoble_internal = (_protocomm_ble_internal_t *) calloc(1, sizeof(_protocomm_ble_internal_t));
     if (protoble_internal == 
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                             ((void *)0)
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                 ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal protocomm structure" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -4833,11 +3856,11 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     protoble_internal->g_nu_lookup_count = config->nu_lookup_count;
-    protoble_internal->g_nu_lookup = malloc(config->nu_lookup_count * sizeof(name_uuid128_t));
+    protoble_internal->g_nu_lookup = malloc(config->nu_lookup_count * sizeof(protocomm_ble_name_uuid_t));
     if (protoble_internal->g_nu_lookup == 
-# 454 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                          ((void *)0)
-# 454 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                              ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal name UUID table" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -4845,15 +3868,12 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     for (unsigned i = 0; i < protoble_internal->g_nu_lookup_count; i++) {
-        memcpy(protoble_internal->g_nu_lookup[i].uuid128, config->service_uuid, 16);
-        memcpy((uint8_t *)uuid128_to_16(protoble_internal->g_nu_lookup[i].uuid128),
-               &config->nu_lookup[i].uuid, 2);
-
+        protoble_internal->g_nu_lookup[i].uuid = config->nu_lookup[i].uuid;
         protoble_internal->g_nu_lookup[i].name = strdup(config->nu_lookup[i].name);
         if (protoble_internal->g_nu_lookup[i].name == 
-# 466 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                                      ((void *)0)
-# 466 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                                          ) {
             do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating internal name UUID entry" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
             protocomm_ble_cleanup();
@@ -4865,138 +3885,12 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     pc->remove_endpoint = protocomm_ble_remove_endpoint;
     protoble_internal->pc_ble = pc;
     protoble_internal->gatt_mtu = 23;
-# 487 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-    raw_data_info_t adv_data[] = {
-        {
-            .type = ESP_BLE_AD_TYPE_FLAG,
-            .length = sizeof(ble_advertisement_flags),
-            .data_p = (uint8_t *) &ble_advertisement_flags
-        },
-        {
-            .type = ESP_BLE_AD_TYPE_128SRV_CMPL,
-            .length = 16,
-            .data_p = (uint8_t *) config->service_uuid
-        },
-    };
-
-
-    uint8_t adv_data_len = 0;
-    for (uint8_t i = 0; i < (sizeof(adv_data)/sizeof(adv_data[0])); i++) {
-
-
-        adv_data_len += adv_data[i].length + 2;
-    }
-    if (adv_data_len > 31) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Advertisement data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, adv_data_len); } } while(0); } while(0);
-        protocomm_ble_cleanup();
-        return 0x101;
-    }
-
-
-    protoble_internal->raw_adv_data_len = adv_data_len;
-    protoble_internal->raw_adv_data_p = malloc(adv_data_len);
-    if (protoble_internal->raw_adv_data_p == 
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                            ((void *)0)
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                ) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for raw advertisement data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        protocomm_ble_cleanup();
-        return 0x101;
-    }
-
-
-    for (uint8_t i = 0, len = 0; i < (sizeof(adv_data)/sizeof(adv_data[0])); i++) {
-        protoble_internal->raw_adv_data_p[len++] = adv_data[i].length + 1;
-        protoble_internal->raw_adv_data_p[len++] = adv_data[i].type;
-        memcpy(&protoble_internal->raw_adv_data_p[len],
-               adv_data[i].data_p, adv_data[i].length);
-
-        if (adv_data[i].type == ESP_BLE_AD_TYPE_128SRV_CMPL) {
-
-
-
-
-            protoble_internal->service_uuid = &protoble_internal->raw_adv_data_p[len];
-        }
-
-        len += adv_data[i].length;
-    }
-
-    size_t ble_devname_len = strlen(protocomm_ble_device_name);
-# 549 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-    raw_data_info_t scan_resp_data[] = {
-        {
-
-
-
-            .type = (ble_devname_len > (31 - 2) ?
-                       ESP_BLE_AD_TYPE_NAME_SHORT : ESP_BLE_AD_TYPE_NAME_CMPL),
-            .length = 
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                     ((
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                     ble_devname_len
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                     ) < (
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                     (31 - 2)
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                     ) ? (
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                     ble_devname_len
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                     ) : (
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                     (31 - 2)
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                     ))
-# 556 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                                              ,
-            .data_p = (uint8_t *) protocomm_ble_device_name
-        },
-    };
-
-
-    uint8_t scan_resp_data_len = 0;
-    for (int i = 0; i < (sizeof(scan_resp_data)/sizeof(scan_resp_data[0])); i++) {
-
-
-        scan_resp_data_len += scan_resp_data[i].length + 2;
-    }
-    if (scan_resp_data_len > 31) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Scan response data too long = %d bytes" "\033[0m" "\n", esp_log_timestamp(), TAG, scan_resp_data_len); } } while(0); } while(0);
-        protocomm_ble_cleanup();
-        return 0x101;
-    }
-
-
-    protoble_internal->raw_scan_rsp_data_len = scan_resp_data_len;
-    protoble_internal->raw_scan_rsp_data_p = malloc(scan_resp_data_len);
-    if (protoble_internal->raw_scan_rsp_data_p == 
-# 577 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
-                                                 ((void *)0)
-# 577 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
-                                                     ) {
-        do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Error allocating memory for raw response data" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
-        protocomm_ble_cleanup();
-        return 0x101;
-    }
-
-
-    for (uint8_t i = 0, len = 0; i < (sizeof(scan_resp_data)/sizeof(scan_resp_data[0])); i++) {
-        protoble_internal->raw_scan_rsp_data_p[len++] = scan_resp_data[i].length + 1;
-        protoble_internal->raw_scan_rsp_data_p[len++] = scan_resp_data[i].type;
-        memcpy(&protoble_internal->raw_scan_rsp_data_p[len],
-               scan_resp_data[i].data_p, scan_resp_data[i].length);
-        len += scan_resp_data[i].length;
-    }
 
     simple_ble_cfg_t *ble_config = simple_ble_init();
     if (ble_config == 
-# 593 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                      ((void *)0)
-# 593 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                          ) {
         do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Ran out of memory for BLE config" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
         protocomm_ble_cleanup();
@@ -5012,12 +3906,8 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     ble_config->set_mtu_fn = transport_simple_ble_set_mtu;
 
 
+    ble_config->adv_data = adv_data;
     ble_config->adv_params = adv_params;
-
-    ble_config->raw_adv_data_p = protoble_internal->raw_adv_data_p;
-    ble_config->raw_adv_data_len = protoble_internal->raw_adv_data_len;
-    ble_config->raw_scan_rsp_data_p = protoble_internal->raw_scan_rsp_data_p;
-    ble_config->raw_scan_rsp_data_len = protoble_internal->raw_scan_rsp_data_len;
 
     ble_config->device_name = protocomm_ble_device_name;
     ble_config->gatt_db_count = populate_gatt_db(&ble_config->gatt_db);
@@ -5038,9 +3928,9 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
     }
 
     prepare_write_env.prepare_buf = 
-# 633 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                                    ((void *)0)
-# 633 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                        ;
     do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, TAG, "\033[0;" "31" "m" "E" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, TAG, "\033[0;" "33" "m" "W" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, TAG, "D" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, TAG, "V" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } else { esp_log_write(ESP_LOG_INFO, TAG, "\033[0;" "32" "m" "I" " (%d) %s: " "Waiting for client to connect ......" "\033[0m" "\n", esp_log_timestamp(), TAG); } } while(0); } while(0);
     return 0;
@@ -5049,14 +3939,14 @@ esp_err_t protocomm_ble_start(protocomm_t *pc, const protocomm_ble_config_t *con
 esp_err_t protocomm_ble_stop(protocomm_t *pc)
 {
     if ((pc != 
-# 640 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
               ((void *)0)
-# 640 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                   ) &&
         (protoble_internal != 
-# 641 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c" 3 4
                              ((void *)0) 
-# 641 "/home/dieter/Development/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
+# 492 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/src/transports/protocomm_ble.c"
                                   ) &&
         (pc == protoble_internal->pc_ble)) {
         esp_err_t ret = 0;

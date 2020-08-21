@@ -46,11 +46,16 @@ OLED::~OLED() {
 void OLED::print(const char* toprint, int x, int y, bool clear, bool show) {
     if (clear)
 	u8g2_ClearBuffer(&u8g2);
+        u8g2_SetPowerSave(&u8g2, 0); // wake up display
     u8g2_SetFont(&u8g2, u8g2_font_luBS24_te); //u8g2_font_ncenB14_tr);
     u8g2_DrawStr(&u8g2, x, y, toprint);
     if (show) u8g2_SendBuffer(&u8g2);
 }
 
+void OLED::clear() {
+	u8g2_ClearBuffer(&u8g2);
+         u8g2_SetPowerSave(&u8g2, 1);
+}
 
 #undef ESP_ERROR_CHECK
 #define ESP_ERROR_CHECK(x)   do { esp_err_t rc = (x); if (rc != ESP_OK) { ESP_LOGE("err", "esp_err_t = %d", rc); assert(0 && #x);} } while(0);
@@ -102,7 +107,7 @@ uint8_t u8g2_esp32_spi_byte_cb(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int, void 
 	    dev_config.duty_cycle_pos = 0;
 	    dev_config.cs_ena_posttrans = 0;
 	    dev_config.cs_ena_pretrans = 0;
-	    dev_config.clock_speed_hz = 10000;
+	    dev_config.clock_speed_hz = 20000;//10000;
 	    dev_config.spics_io_num = u8g2_esp32_hal.cs;
 	    dev_config.flags = 0;
 	    dev_config.queue_size = 200;
@@ -204,3 +209,58 @@ uint8_t u8g2_esp32_gpio_and_delay_cb(u8x8_t *u8x8, uint8_t msg, uint8_t arg_int,
     }
     return 0;
 } // u8g2_esp32_gpio_and_delay_cb
+
+void OLED::drawMpuCube(float roll, float pitch, float yaw) {
+ /* long posMappedPitch = map(pitch, 0, 90, 0, 32);
+  long absMappedPitch = map(abs(pitch), 0, 90, 0, 32);
+  long posMappedRoll = map(roll, 0, 180, 0, 28);
+  long absMappedRoll = map(abs(roll), 0, 180, 0, 28);
+  u8g2->drawLine(70, 32, 128, 32);
+  u8g2->drawLine(95, 64, 95, 0);
+  if (pitch >= 0 ) {
+    if (roll >= 0) {
+      u8g2->drawBox(95, 32 - absMappedPitch, 1 + absMappedRoll, 1 + absMappedPitch);
+    } else {
+      u8g2->drawBox(95 - absMappedRoll, 32 - absMappedPitch, 1 + absMappedRoll, 1 + absMappedPitch);
+    }
+  } else {
+    if (roll >= 0) {
+      u8g2->drawBox(95, 32, 1 + absMappedRoll, 1 + absMappedPitch);
+    } else {
+      u8g2->drawBox(95 - absMappedRoll, 32, 1 + absMappedRoll, 1 + absMappedPitch);
+    }
+  }*/
+}
+
+
+void OLED::printMpu() {
+/*  ui.printHello("MPU DEMO");
+  do {
+
+    float * ahrs;
+    ahrs = ui.getAHRS();
+    float roll = ahrs[1];
+    float yaw = ahrs[2];
+    float pitch = ahrs[0];
+
+    Serial.print("roll  (x-forward (north)) : ");
+    Serial.println(roll);
+    Serial.print("pitch (y-right (east))    : ");
+    Serial.println(pitch);
+    Serial.print("yaw   (z-down (down))     : ");
+    Serial.println(yaw);
+
+    u8g2->setFont(u8g2_font_ncenB14_tr);
+    u8g2->firstPage();
+    do {
+      u8g2->setCursor(0, 20);
+      u8g2->print(roll);
+      u8g2->setCursor(0, 40);
+      u8g2->print(pitch);
+      u8g2->setCursor(0, 60);
+      u8g2->print(yaw);
+      drawMpuCube(roll, pitch, yaw);
+    } while ( u8g2->nextPage() );
+  } while (ui.readButton() != SHORT_CLICK);
+  ui.clearScreen();*/
+}

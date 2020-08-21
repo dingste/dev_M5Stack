@@ -1,124 +1,106 @@
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-# 1 "/home/dieter/Development/ProjektEi/build/protobuf-c//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/protobuf-c//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-# 48 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -129,32 +111,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -169,35 +129,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -206,21 +138,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -239,44 +170,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -284,10 +178,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -338,12 +230,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -360,7 +252,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -377,13 +269,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -411,7 +303,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -422,7 +314,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -432,7 +324,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -478,12 +370,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -513,8 +405,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -523,29 +417,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -563,6 +449,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -573,18 +461,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -594,11 +477,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -627,21 +510,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -656,26 +530,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -690,54 +557,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -761,40 +616,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -806,84 +657,23 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
-
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 49 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -907,55 +697,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -964,7 +768,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -974,154 +779,49 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
 
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 50 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
-# 199 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 200 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 201 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 202 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -1132,8 +832,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -1144,29 +856,44 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 203 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 212 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 extern const char protobuf_c_empty_string[];
-# 255 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_PACKED = (1 << 0),
@@ -1177,7 +904,7 @@ typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_ONEOF = (1 << 2),
 } ProtobufCFieldFlag;
-# 274 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_LABEL_REQUIRED,
@@ -1201,7 +928,7 @@ typedef enum {
 
  PROTOBUF_C_LABEL_NONE,
 } ProtobufCLabel;
-# 306 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_TYPE_INT32,
  PROTOBUF_C_TYPE_SINT32,
@@ -1221,7 +948,7 @@ typedef enum {
  PROTOBUF_C_TYPE_BYTES,
  PROTOBUF_C_TYPE_MESSAGE,
 } ProtobufCType;
-# 334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_WIRE_TYPE_VARINT = 0,
  PROTOBUF_C_WIRE_TYPE_64BIT = 1,
@@ -1282,19 +1009,19 @@ struct ProtobufCAllocator {
 
  void *allocator_data;
 };
-# 402 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBinaryData {
  size_t len;
  uint8_t *data;
 };
-# 442 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBuffer {
 
  void (*append)(ProtobufCBuffer *buffer,
       size_t len,
       const uint8_t *data);
 };
-# 477 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBufferSimple {
 
  ProtobufCBuffer base;
@@ -1403,7 +1130,7 @@ struct ProtobufCFieldDescriptor {
 
 
  unsigned offset;
-# 597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
  const void *descriptor;
 
 
@@ -1422,7 +1149,7 @@ struct ProtobufCFieldDescriptor {
 
  void *reserved3;
 };
-# 624 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCIntRange {
  int start_value;
  unsigned orig_index;
@@ -1432,7 +1159,7 @@ struct ProtobufCIntRange {
 
 
 };
-# 649 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCMessage {
 
  const ProtobufCMessageDescriptor *descriptor;
@@ -1561,49 +1288,49 @@ struct ProtobufCServiceDescriptor {
 
 const char *
 protobuf_c_version(void);
-# 785 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 uint32_t
 protobuf_c_version_number(void);
-# 820 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 820 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value_by_name(
  const ProtobufCEnumDescriptor *desc,
  const char *name);
-# 841 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value(
  const ProtobufCEnumDescriptor *desc,
  int value);
-# 860 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field_by_name(
  const ProtobufCMessageDescriptor *desc,
  const char *name);
-# 879 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field(
  const ProtobufCMessageDescriptor *desc,
  unsigned value);
-# 893 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_get_packed_size(const ProtobufCMessage *message);
-# 913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out);
-# 930 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack_to_buffer(
  const ProtobufCMessage *message,
  ProtobufCBuffer *buffer);
-# 953 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 ProtobufCMessage *
 protobuf_c_message_unpack(
@@ -1611,17 +1338,17 @@ protobuf_c_message_unpack(
  ProtobufCAllocator *allocator,
  size_t len,
  const uint8_t *data);
-# 973 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_free_unpacked(
  ProtobufCMessage *message,
  ProtobufCAllocator *allocator);
-# 990 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 protobuf_c_boolean
 protobuf_c_message_check(const ProtobufCMessage *);
-# 1005 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_init(
@@ -1637,13 +1364,13 @@ protobuf_c_message_init(
 
 void
 protobuf_c_service_destroy(ProtobufCService *service);
-# 1034 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCMethodDescriptor *
 protobuf_c_service_descriptor_get_method_by_name(
  const ProtobufCServiceDescriptor *desc,
  const char *name);
-# 1079 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_buffer_simple_append(
@@ -1670,10 +1397,10 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 52 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
-# 87 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 2
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 const char protobuf_c_empty_string[] = "";
-# 134 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 const char *
 protobuf_c_version(void)
 {
@@ -1710,9 +1437,9 @@ static inline void
 do_free(ProtobufCAllocator *allocator, void *data)
 {
  if (data != 
-# 169 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0)
-# 169 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                 )
   allocator->free(allocator->allocator_data, data);
 }
@@ -1726,9 +1453,9 @@ static ProtobufCAllocator protobuf_c__allocator = {
  .alloc = &system_alloc,
  .free = &system_free,
  .allocator_data = 
-# 181 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                   ((void *)0)
-# 181 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                       ,
 };
 
@@ -1747,9 +1474,9 @@ protobuf_c_buffer_simple_append(ProtobufCBuffer *buffer,
   uint8_t *new_data;
 
   if (allocator == 
-# 198 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                   ((void *)0)
-# 198 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                       )
    allocator = &protobuf_c__allocator;
   while (new_alloced < new_len)
@@ -1768,7 +1495,7 @@ protobuf_c_buffer_simple_append(ProtobufCBuffer *buffer,
  memcpy(simp->data + simp->len, data, len);
  simp->len = new_len;
 }
-# 235 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 get_tag_size(uint32_t number)
 {
@@ -1784,7 +1511,7 @@ get_tag_size(uint32_t number)
   return 5;
  }
 }
-# 260 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 uint32_size(uint32_t v)
 {
@@ -1800,7 +1527,7 @@ uint32_size(uint32_t v)
   return 5;
  }
 }
-# 285 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 int32_size(int32_t v)
 {
@@ -1818,7 +1545,7 @@ int32_size(int32_t v)
   return 5;
  }
 }
-# 312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 312 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline uint32_t
 zigzag32(int32_t v)
 {
@@ -1827,13 +1554,13 @@ zigzag32(int32_t v)
  else
   return (uint32_t)(v) * 2;
 }
-# 331 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 sint32_size(int32_t v)
 {
  return uint32_size(zigzag32(v));
 }
-# 346 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 uint64_size(uint64_t v)
 {
@@ -1855,7 +1582,7 @@ uint64_size(uint64_t v)
   return 10;
  }
 }
-# 377 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline uint64_t
 zigzag64(int64_t v)
 {
@@ -1864,13 +1591,13 @@ zigzag64(int64_t v)
  else
   return (uint64_t)(v) * 2;
 }
-# 396 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 sint64_size(int64_t v)
 {
  return uint64_size(zigzag64(v));
 }
-# 413 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 required_field_get_packed_size(const ProtobufCFieldDescriptor *field,
           const void *member)
@@ -1917,22 +1644,10 @@ required_field_get_packed_size(const ProtobufCFieldDescriptor *field,
   return rv + uint32_size(subrv) + subrv;
  }
  }
- 
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-0
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 459, __func__, 
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"0"
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 459 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                ;
+ ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 459, __func__, "0"));
  return 0;
 }
-# 477 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 oneof_field_get_packed_size(const ProtobufCFieldDescriptor *field,
        uint32_t oneof_case,
@@ -1946,15 +1661,15 @@ oneof_field_get_packed_size(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void * const *) member;
   if (ptr == 
-# 489 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 489 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  }
  return required_field_get_packed_size(field, member);
 }
-# 509 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 optional_field_get_packed_size(const ProtobufCFieldDescriptor *field,
           const protobuf_c_boolean has,
@@ -1965,9 +1680,9 @@ optional_field_get_packed_size(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void * const *) member;
   if (ptr == 
-# 518 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 518 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 518 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  } else {
@@ -2010,18 +1725,18 @@ field_is_zeroish(const ProtobufCFieldDescriptor *field,
   break;
  case PROTOBUF_C_TYPE_STRING:
   ret = (
-# 559 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0) 
-# 559 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
              == *(const char * const *) member) ||
         ('\0' == **(const char * const *) member);
   break;
  case PROTOBUF_C_TYPE_BYTES:
  case PROTOBUF_C_TYPE_MESSAGE:
   ret = (
-# 564 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0) 
-# 564 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
              == *(const void * const *) member);
   break;
  default:
@@ -2031,7 +1746,7 @@ field_is_zeroish(const ProtobufCFieldDescriptor *field,
 
  return ret;
 }
-# 587 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 587 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 unlabeled_field_get_packed_size(const ProtobufCFieldDescriptor *field,
     const void *member)
@@ -2040,7 +1755,7 @@ unlabeled_field_get_packed_size(const ProtobufCFieldDescriptor *field,
   return 0;
  return required_field_get_packed_size(field, member);
 }
-# 610 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 repeated_field_get_packed_size(const ProtobufCFieldDescriptor *field,
           size_t count, const void *member)
@@ -2117,7 +1832,7 @@ repeated_field_get_packed_size(const ProtobufCFieldDescriptor *field,
   header_size += uint32_size(rv);
  return header_size + rv;
 }
-# 697 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 697 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 unknown_field_get_packed_size(const ProtobufCMessageUnknownField *field)
 {
@@ -2134,19 +1849,7 @@ size_t protobuf_c_message_get_packed_size(const ProtobufCMessage *message)
  unsigned i;
  size_t rv = 0;
 
- 
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-((message)->descriptor)->magic == 0x28aaeef9
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 713, __func__, 
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 713 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                          ;
+ ((((message)->descriptor)->magic == 0x28aaeef9) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 713, __func__, "((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"));
  for (i = 0; i < message->descriptor->n_fields; i++) {
   const ProtobufCFieldDescriptor *field =
    message->descriptor->fields + i;
@@ -2188,7 +1891,7 @@ size_t protobuf_c_message_get_packed_size(const ProtobufCMessage *message)
   rv += unknown_field_get_packed_size(&message->unknown_fields[i]);
  return rv;
 }
-# 776 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 776 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 uint32_pack(uint32_t value, uint8_t *out)
 {
@@ -2214,7 +1917,7 @@ uint32_pack(uint32_t value, uint8_t *out)
  out[rv++] = value;
  return rv;
 }
-# 813 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 813 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 int32_pack(int32_t value, uint8_t *out)
 {
@@ -2231,13 +1934,13 @@ int32_pack(int32_t value, uint8_t *out)
   return uint32_pack(value, out);
  }
 }
-# 841 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 sint32_pack(int32_t value, uint8_t *out)
 {
  return uint32_pack(zigzag32(value), out);
 }
-# 858 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 uint64_pack(uint64_t value, uint8_t *out)
 {
@@ -2266,22 +1969,22 @@ uint64_pack(uint64_t value, uint8_t *out)
  out[rv++] = hi;
  return rv;
 }
-# 898 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 sint64_pack(int64_t value, uint8_t *out)
 {
  return uint64_pack(zigzag64(value), out);
 }
-# 915 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 915 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 fixed32_pack(uint32_t value, void *out)
 {
 
  memcpy(out, &value, 4);
-# 928 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 928 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
  return 4;
 }
-# 946 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 946 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 fixed64_pack(uint64_t value, void *out)
 {
@@ -2293,21 +1996,21 @@ fixed64_pack(uint64_t value, void *out)
 
  return 8;
 }
-# 971 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 971 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 boolean_pack(protobuf_c_boolean value, uint8_t *out)
 {
  *out = value ? 1 : 0;
  return 1;
 }
-# 993 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 string_pack(const char *str, uint8_t *out)
 {
  if (str == 
-# 996 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
            ((void *)0)
-# 996 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 996 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                ) {
   out[0] = 0;
   return 1;
@@ -2318,7 +2021,7 @@ string_pack(const char *str, uint8_t *out)
   return rv + len;
  }
 }
-# 1018 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 binary_data_pack(const ProtobufCBinaryData *bd, uint8_t *out)
 {
@@ -2327,14 +2030,14 @@ binary_data_pack(const ProtobufCBinaryData *bd, uint8_t *out)
  memcpy(out + rv, bd->data, len);
  return rv + len;
 }
-# 1038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1038 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 prefixed_message_pack(const ProtobufCMessage *message, uint8_t *out)
 {
  if (message == 
-# 1041 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0)
-# 1041 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    ) {
   out[0] = 0;
   return 1;
@@ -2346,7 +2049,7 @@ prefixed_message_pack(const ProtobufCMessage *message, uint8_t *out)
   return uint32_pack(rv, out) + rv;
  }
 }
-# 1067 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 tag_pack(uint32_t id, uint8_t *out)
 {
@@ -2355,7 +2058,7 @@ tag_pack(uint32_t id, uint8_t *out)
  else
   return uint64_pack(((uint64_t) id) << 3, out);
 }
-# 1088 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 required_field_pack(const ProtobufCFieldDescriptor *field,
       const void *member, uint8_t *out)
@@ -2403,22 +2106,10 @@ required_field_pack(const ProtobufCFieldDescriptor *field,
   out[0] |= PROTOBUF_C_WIRE_TYPE_LENGTH_PREFIXED;
   return rv + prefixed_message_pack(*(ProtobufCMessage * const *) member, out + rv);
  }
- 
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-0
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1135, __func__, 
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"0"
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 1135 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                ;
+ ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1135, __func__, "0"));
  return 0;
 }
-# 1154 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 oneof_field_pack(const ProtobufCFieldDescriptor *field,
    uint32_t oneof_case,
@@ -2432,15 +2123,15 @@ oneof_field_pack(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void * const *) member;
   if (ptr == 
-# 1166 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 1166 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  }
  return required_field_pack(field, member, out);
 }
-# 1186 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 optional_field_pack(const ProtobufCFieldDescriptor *field,
       const protobuf_c_boolean has,
@@ -2451,9 +2142,9 @@ optional_field_pack(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void * const *) member;
   if (ptr == 
-# 1195 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 1195 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  } else {
@@ -2462,7 +2153,7 @@ optional_field_pack(const ProtobufCFieldDescriptor *field,
  }
  return required_field_pack(field, member, out);
 }
-# 1216 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 unlabeled_field_pack(const ProtobufCFieldDescriptor *field,
        const void *member, uint8_t *out)
@@ -2471,7 +2162,7 @@ unlabeled_field_pack(const ProtobufCFieldDescriptor *field,
   return 0;
  return required_field_pack(field, member, out);
 }
-# 1235 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline size_t
 sizeof_elt_in_repeated_array(ProtobufCType type)
 {
@@ -2499,22 +2190,10 @@ sizeof_elt_in_repeated_array(ProtobufCType type)
  case PROTOBUF_C_TYPE_BYTES:
   return sizeof(ProtobufCBinaryData);
  }
- 
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-0
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1262, __func__, 
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"0"
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 1262 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                ;
+ ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1262, __func__, "0"));
  return 0;
 }
-# 1276 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static void
 copy_to_little_endian_32(void *out, const void *in, const unsigned n)
 {
@@ -2527,7 +2206,7 @@ copy_to_little_endian_32(void *out, const void *in, const unsigned n)
 
 
 }
-# 1299 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static void
 copy_to_little_endian_64(void *out, const void *in, const unsigned n)
 {
@@ -2540,7 +2219,7 @@ copy_to_little_endian_64(void *out, const void *in, const unsigned n)
 
 
 }
-# 1321 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static unsigned
 get_type_min_size(ProtobufCType type)
 {
@@ -2558,7 +2237,7 @@ get_type_min_size(ProtobufCType type)
  }
  return 1;
 }
-# 1354 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1354 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 repeated_field_pack(const ProtobufCFieldDescriptor *field,
       size_t count, const void *member, uint8_t *out)
@@ -2637,37 +2316,13 @@ repeated_field_pack(const ProtobufCFieldDescriptor *field,
    break;
   }
   default:
-   
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ((
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-  0
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1432, __func__, 
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-  "0"
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ))
-# 1432 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                  ;
+   ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1432, __func__, "0"));
   }
 
   payload_len = payload_at - (out + header_len);
   actual_length_size = uint32_size(payload_len);
   if (length_size_min != actual_length_size) {
-   
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ((
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-  actual_length_size == length_size_min + 1
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1438, __func__, 
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-  "actual_length_size == length_size_min + 1"
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-  ))
-# 1438 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                                   ;
+   ((actual_length_size == length_size_min + 1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1438, __func__, "actual_length_size == length_size_min + 1"));
    memmove(out + header_len + 1, out + header_len,
     payload_len);
    header_len++;
@@ -2705,24 +2360,12 @@ protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out)
  unsigned i;
  size_t rv = 0;
 
- 
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-((message)->descriptor)->magic == 0x28aaeef9
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1476, __func__, 
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 1476 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                          ;
+ ((((message)->descriptor)->magic == 0x28aaeef9) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1476, __func__, "((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"));
  for (i = 0; i < message->descriptor->n_fields; i++) {
   const ProtobufCFieldDescriptor *field =
    message->descriptor->fields + i;
   const void *member = ((const char *) message) + field->offset;
-# 1491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1491 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
   const void *qmember =
    ((const char *) message) + field->quantifier_offset;
 
@@ -2755,7 +2398,7 @@ protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out)
   rv += unknown_field_pack(&message->unknown_fields[i], out + rv);
  return rv;
 }
-# 1545 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1545 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 required_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
          const void *member, ProtobufCBuffer *buffer)
@@ -2839,16 +2482,16 @@ required_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
   const ProtobufCMessage *msg = *(ProtobufCMessage * const *) member;
   ProtobufCBufferSimple simple_buffer =
    { { protobuf_c_buffer_simple_append }, sizeof(simple_buffer_scratch), 0, (simple_buffer_scratch), 0, 
-# 1627 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
   ((void *)0) 
-# 1627 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
   };
 
   scratch[0] |= PROTOBUF_C_WIRE_TYPE_LENGTH_PREFIXED;
   if (msg == 
-# 1630 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0)
-# 1630 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1630 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                 )
    sublen = 0;
   else
@@ -2858,30 +2501,18 @@ required_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
   buffer->append(buffer, sublen, simple_buffer.data);
   rv += sublen;
   do { if ((&simple_buffer)->must_free_data) { if ((&simple_buffer)->allocator != 
-# 1638 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
  ((void *)0)
-# 1638 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
  ) (&simple_buffer)->allocator->free( (&simple_buffer)->allocator, (&simple_buffer)->data); else free((&simple_buffer)->data); } } while (0);
   break;
  }
  default:
-  
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ((
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- 0
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1642, __func__, 
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- "0"
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ))
-# 1642 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                 ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1642, __func__, "0"));
  }
  return rv;
 }
-# 1661 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1661 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 oneof_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
       uint32_t oneof_case,
@@ -2895,15 +2526,15 @@ oneof_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void *const *) member;
   if (ptr == 
-# 1673 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 1673 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1673 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  }
  return required_field_pack_to_buffer(field, member, buffer);
 }
-# 1693 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 optional_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
          const protobuf_c_boolean has,
@@ -2914,9 +2545,9 @@ optional_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
  {
   const void *ptr = *(const void *const *) member;
   if (ptr == 
-# 1702 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 1702 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 1702 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1702 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || ptr == field->default_value)
    return 0;
  } else {
@@ -2925,7 +2556,7 @@ optional_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
  }
  return required_field_pack_to_buffer(field, member, buffer);
 }
-# 1723 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 unlabeled_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
           const void *member, ProtobufCBuffer *buffer)
@@ -2934,7 +2565,7 @@ unlabeled_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
   return 0;
  return required_field_pack_to_buffer(field, member, buffer);
 }
-# 1744 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 get_packed_payload_length(const ProtobufCFieldDescriptor *field,
      unsigned count, const void *array)
@@ -2986,23 +2617,11 @@ get_packed_payload_length(const ProtobufCFieldDescriptor *field,
  case PROTOBUF_C_TYPE_BOOL:
   return count;
  default:
-  
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ((
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- 0
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1795, __func__, 
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- "0"
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ))
-# 1795 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                 ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1795, __func__, "0"));
  }
  return rv;
 }
-# 1814 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static size_t
 pack_buffer_packed_payload(const ProtobufCFieldDescriptor *field,
       unsigned count, const void *array,
@@ -3019,14 +2638,14 @@ pack_buffer_packed_payload(const ProtobufCFieldDescriptor *field,
 
   rv = count * 4;
   goto no_packing_needed;
-# 1838 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
  case PROTOBUF_C_TYPE_SFIXED64:
  case PROTOBUF_C_TYPE_FIXED64:
  case PROTOBUF_C_TYPE_DOUBLE:
 
   rv = count * 8;
   goto no_packing_needed;
-# 1852 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 1852 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
  case PROTOBUF_C_TYPE_ENUM:
  case PROTOBUF_C_TYPE_INT32:
   for (i = 0; i < count; i++) {
@@ -3072,19 +2691,7 @@ pack_buffer_packed_payload(const ProtobufCFieldDescriptor *field,
   }
   return count;
  default:
-  
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ((
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- 0
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1897, __func__, 
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- "0"
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ))
-# 1897 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                 ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1897, __func__, "0"));
  }
  return rv;
 
@@ -3114,19 +2721,7 @@ repeated_field_pack_to_buffer(const ProtobufCFieldDescriptor *field,
   rv += uint32_pack(payload_len, scratch + rv);
   buffer->append(buffer, rv, scratch);
   tmp = pack_buffer_packed_payload(field, count, array, buffer);
-  
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ((
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- tmp == payload_len
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1927, __func__, 
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- "tmp == payload_len"
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ))
-# 1927 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                           ;
+  ((tmp == payload_len) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1927, __func__, "tmp == payload_len"));
   return rv + payload_len;
  } else {
   size_t siz;
@@ -3165,19 +2760,7 @@ protobuf_c_message_pack_to_buffer(const ProtobufCMessage *message,
  unsigned i;
  size_t rv = 0;
 
- 
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-((message)->descriptor)->magic == 0x28aaeef9
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1966, __func__, 
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 1966 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                          ;
+ ((((message)->descriptor)->magic == 0x28aaeef9) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 1966, __func__, "((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"));
  for (i = 0; i < message->descriptor->n_fields; i++) {
   const ProtobufCFieldDescriptor *field =
    message->descriptor->fields + i;
@@ -3224,7 +2807,7 @@ protobuf_c_message_pack_to_buffer(const ProtobufCMessage *message,
 
  return rv;
 }
-# 2023 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2023 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static inline int
 int_range_lookup(unsigned n_ranges, const ProtobufCIntRange *ranges, int value)
 {
@@ -3346,7 +2929,7 @@ max_b128_numbers(size_t len, const uint8_t *data)
    ++rv;
  return rv;
 }
-# 2161 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static protobuf_c_boolean
 merge_messages(ProtobufCMessage *earlier_msg,
         ProtobufCMessage *latter_msg,
@@ -3447,14 +3030,14 @@ merge_messages(ProtobufCMessage *earlier_msg,
     ProtobufCMessage *em = *(ProtobufCMessage **) earlier_elem;
     ProtobufCMessage *lm = *(ProtobufCMessage **) latter_elem;
     if (em != 
-# 2260 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
              ((void *)0)
-# 2260 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  ) {
      if (lm != 
-# 2261 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0)
-# 2261 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                   ) {
       if (!merge_messages(em, lm, allocator))
        return 0;
@@ -3477,25 +3060,25 @@ merge_messages(ProtobufCMessage *earlier_msg,
 
     need_to_merge =
      (e_data != 
-# 2282 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0) 
-# 2282 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                     &&
       (d_bd == 
-# 2283 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0) 
-# 2283 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    ||
        e_data != d_bd->data)) &&
      (l_data == 
-# 2285 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0) 
-# 2285 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                     ||
       (d_bd != 
-# 2286 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0) 
-# 2286 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    &&
        l_data == d_bd->data));
     break;
@@ -3542,7 +3125,7 @@ merge_messages(ProtobufCMessage *earlier_msg,
  }
  return 1;
 }
-# 2341 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static protobuf_c_boolean
 count_packed_elements(ProtobufCType type,
         size_t len, const uint8_t *data, size_t *count_out)
@@ -3750,23 +3333,23 @@ parse_required_member(ScannedMember *scanned_member,
    return 0;
 
   if (maybe_clear && *pstr != 
-# 2547 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                              ((void *)0)
-# 2547 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2547 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                  ) {
    const char *def = scanned_member->field->default_value;
    if (*pstr != 
-# 2549 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0) 
-# 2549 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                     && *pstr != def)
     do_free(allocator, *pstr);
   }
   *pstr = do_alloc(allocator, len - pref_len + 1);
   if (*pstr == 
-# 2553 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0)
-# 2553 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                   )
    return 0;
   memcpy(*pstr, data + pref_len, len - pref_len);
@@ -3784,14 +3367,14 @@ parse_required_member(ScannedMember *scanned_member,
   def_bd = scanned_member->field->default_value;
   if (maybe_clear &&
       bd->data != 
-# 2569 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                  ((void *)0) 
-# 2569 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2569 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                       &&
       (def_bd == 
-# 2570 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                 ((void *)0) 
-# 2570 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                      || bd->data != def_bd->data))
   {
    do_free(allocator, bd->data);
@@ -3799,17 +3382,17 @@ parse_required_member(ScannedMember *scanned_member,
   if (len - pref_len > 0) {
    bd->data = do_alloc(allocator, len - pref_len);
    if (bd->data == 
-# 2576 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                   ((void *)0)
-# 2576 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                       )
     return 0;
    memcpy(bd->data, data + pref_len, len - pref_len);
   } else {
    bd->data = 
-# 2580 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
              ((void *)0)
-# 2580 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2580 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  ;
   }
   bd->len = len - pref_len;
@@ -3833,16 +3416,16 @@ parse_required_member(ScannedMember *scanned_member,
 
   if (maybe_clear &&
       *pmessage != 
-# 2602 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                   ((void *)0) 
-# 2602 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                        &&
       *pmessage != def_mess)
   {
    if (subm != 
-# 2605 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0)
-# 2605 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                   )
     merge_successful = merge_messages(*pmessage, subm, allocator);
 
@@ -3850,9 +3433,9 @@ parse_required_member(ScannedMember *scanned_member,
   }
   *pmessage = subm;
   if (subm == 
-# 2611 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
              ((void *)0) 
-# 2611 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                   || !merge_successful)
    return 0;
   return 1;
@@ -3886,9 +3469,9 @@ parse_oneof_member (ScannedMember *scanned_member,
    char **pstr = member;
    const char *def = old_field->default_value;
    if (*pstr != 
-# 2643 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0) 
-# 2643 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2643 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                     && *pstr != def)
     do_free(allocator, *pstr);
    break;
@@ -3897,14 +3480,14 @@ parse_oneof_member (ScannedMember *scanned_member,
    ProtobufCBinaryData *bd = member;
    const ProtobufCBinaryData *def_bd = old_field->default_value;
    if (bd->data != 
-# 2650 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                   ((void *)0) 
-# 2650 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                        &&
       (def_bd == 
-# 2651 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                 ((void *)0) 
-# 2651 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                      || bd->data != def_bd->data))
    {
     do_free(allocator, bd->data);
@@ -3915,9 +3498,9 @@ parse_oneof_member (ScannedMember *scanned_member,
    ProtobufCMessage **pmessage = member;
    const ProtobufCMessage *def_mess = old_field->default_value;
    if (*pmessage != 
-# 2660 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                    ((void *)0) 
-# 2660 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                         && *pmessage != def_mess)
     protobuf_c_message_free_unpacked(*pmessage, allocator);
    break;
@@ -4100,19 +3683,7 @@ parse_packed_repeated_member(ScannedMember *scanned_member,
   }
   break;
  default:
-  
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ((
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- 0
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 2842, __func__, 
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
- "0"
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
- ))
-# 2842 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                 ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 2842, __func__, "0"));
  }
  *p_n += count;
  return 1;
@@ -4143,9 +3714,9 @@ parse_member(ScannedMember *scanned_member,
  void *member;
 
  if (field == 
-# 2872 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
              ((void *)0)
-# 2872 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2872 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  ) {
   ProtobufCMessageUnknownField *ufield =
    message->unknown_fields +
@@ -4155,9 +3726,9 @@ parse_member(ScannedMember *scanned_member,
   ufield->len = scanned_member->len;
   ufield->data = do_alloc(allocator, scanned_member->len);
   if (ufield->data == 
-# 2880 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                      ((void *)0)
-# 2880 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                          )
    return 0;
   memcpy(ufield->data, scanned_member->data, ufield->len);
@@ -4191,22 +3762,10 @@ parse_member(ScannedMember *scanned_member,
            allocator);
   }
  }
- 
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-0
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 2913, __func__, 
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"0"
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 2913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                ;
+ ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 2913, __func__, "0"));
  return 0;
 }
-# 2924 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2924 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 static void
 message_init_generic(const ProtobufCMessageDescriptor *desc,
        ProtobufCMessage *message)
@@ -4217,9 +3776,9 @@ message_init_generic(const ProtobufCMessageDescriptor *desc,
  message->descriptor = desc;
  for (i = 0; i < desc->n_fields; i++) {
   if (desc->fields[i].default_value != 
-# 2933 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 2933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                       ((void *)0) 
-# 2933 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 2933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                            &&
       desc->fields[i].label != PROTOBUF_C_LABEL_REPEATED)
   {
@@ -4264,7 +3823,7 @@ message_init_generic(const ProtobufCMessageDescriptor *desc,
   }
  }
 }
-# 3007 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
 ProtobufCMessage *
 protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
      ProtobufCAllocator *allocator,
@@ -4296,33 +3855,21 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
  unsigned char *required_fields_bitmap = required_fields_bitmap_stack;
  protobuf_c_boolean required_fields_bitmap_alloced = 0;
 
- 
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-(desc)->magic == 0x28aaeef9
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3038, __func__, 
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"(desc)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 3038 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                  ;
+ (((desc)->magic == 0x28aaeef9) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3038, __func__, "(desc)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"));
 
  if (allocator == 
-# 3040 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                  ((void *)0)
-# 3040 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                      )
   allocator = &protobuf_c__allocator;
 
  rv = do_alloc(allocator, desc->sizeof_message);
  if (!rv)
   return (
-# 3045 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
          ((void *)0)
-# 3045 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3045 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
              );
  scanned_member_slabs[0] = first_member_slab;
 
@@ -4332,9 +3879,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
   if (!required_fields_bitmap) {
    do_free(allocator, rv);
    return (
-# 3053 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
           ((void *)0)
-# 3053 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3053 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
               );
   }
   required_fields_bitmap_alloced = 1;
@@ -4348,9 +3895,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
 
 
  if (desc->message_init != 
-# 3065 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3065 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                           ((void *)0)
-# 3065 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3065 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                               )
   protobuf_c_message_init(desc, rv);
  else
@@ -4373,9 +3920,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
 
 
   if (last_field == 
-# 3086 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                    ((void *)0) 
-# 3086 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                         || last_field->id != tag) {
 
    int field_index =
@@ -4384,9 +3931,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
           tag);
    if (field_index < 0) {
     field = 
-# 3093 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
            ((void *)0)
-# 3093 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3093 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                ;
     n_unknown++;
    } else {
@@ -4399,9 +3946,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
   }
 
   if (field != 
-# 3104 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0) 
-# 3104 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    && field->label == PROTOBUF_C_LABEL_REQUIRED)
    (required_fields_bitmap[(last_field_index)/8] |= (1UL<<((last_field_index)%8)));
 
@@ -4477,18 +4024,18 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
     << (which_slab + 4);
    scanned_member_slabs[which_slab] = do_alloc(allocator, size);
    if (scanned_member_slabs[which_slab] == 
-# 3178 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                           ((void *)0)
-# 3178 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                               )
     goto error_cleanup_during_scan;
   }
   scanned_member_slabs[which_slab][in_slab_index++] = tmp;
 
   if (field != 
-# 3183 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0) 
-# 3183 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    && field->label == PROTOBUF_C_LABEL_REPEATED) {
    size_t *n = ((size_t *) ((void *) ((uint8_t *) ((rv)) + ((field->quantifier_offset)))))
                                      ;
@@ -4530,19 +4077,11 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
     unsigned n = *n_ptr;
     void *a;
     *n_ptr = 0;
-    
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-   ((
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-   rv->descriptor != 
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3224, __func__, 
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-   "rv->descriptor != NULL"
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-   ))
-# 3224 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                 ;
+    ((rv->descriptor != 
+# 3224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+   ((void *)0)
+# 3224 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3224, __func__, "rv->descriptor != NULL"));
 
 
 
@@ -4559,9 +4098,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
    }
   } else if (field->label == PROTOBUF_C_LABEL_REQUIRED) {
    if (field->default_value == 
-# 3240 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                               ((void *)0) 
-# 3240 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                    &&
        !(required_fields_bitmap[(f)/8] & (1UL<<((f)%8))))
    {
@@ -4579,9 +4118,9 @@ protobuf_c_message_unpack(const ProtobufCMessageDescriptor *desc,
   rv->unknown_fields = do_alloc(allocator,
            n_unknown * sizeof(ProtobufCMessageUnknownField));
   if (rv->unknown_fields == 
-# 3256 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                            ((void *)0)
-# 3256 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                )
    goto error_cleanup;
  }
@@ -4616,9 +4155,9 @@ error_cleanup:
  if (required_fields_bitmap_alloced)
   do_free(allocator, required_fields_bitmap);
  return 
-# 3289 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
        ((void *)0)
-# 3289 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
            ;
 
 error_cleanup_during_scan:
@@ -4628,9 +4167,9 @@ error_cleanup_during_scan:
  if (required_fields_bitmap_alloced)
   do_free(allocator, required_fields_bitmap);
  return 
-# 3297 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
        ((void *)0)
-# 3297 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
            ;
 }
 
@@ -4642,38 +4181,26 @@ protobuf_c_message_free_unpacked(ProtobufCMessage *message,
  unsigned f;
 
  if (message == 
-# 3307 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                ((void *)0)
-# 3307 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    )
   return;
 
  desc = message->descriptor;
 
- 
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-((message)->descriptor)->magic == 0x28aaeef9
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3312, __func__, 
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 3312 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                          ;
+ ((((message)->descriptor)->magic == 0x28aaeef9) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3312, __func__, "((message)->descriptor)->magic == PROTOBUF_C__MESSAGE_DESCRIPTOR_MAGIC"));
 
  if (allocator == 
-# 3314 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                  ((void *)0)
-# 3314 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                      )
   allocator = &protobuf_c__allocator;
  message->descriptor = 
-# 3316 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                       ((void *)0)
-# 3316 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                           ;
  for (f = 0; f < desc->n_fields; f++) {
   if (0 != (desc->fields[f].flags & PROTOBUF_C_FIELD_FLAG_ONEOF) &&
@@ -4693,9 +4220,9 @@ protobuf_c_message_free_unpacked(ProtobufCMessage *message,
                                ;
 
    if (arr != 
-# 3334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
              ((void *)0)
-# 3334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  ) {
     if (desc->fields[f].type == PROTOBUF_C_TYPE_STRING) {
      unsigned i;
@@ -4728,14 +4255,14 @@ protobuf_c_message_free_unpacked(ProtobufCMessage *message,
 
    default_bd = desc->fields[f].default_value;
    if (data != 
-# 3365 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
               ((void *)0) 
-# 3365 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                    &&
        (default_bd == 
-# 3366 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                      ((void *)0) 
-# 3366 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                           ||
         default_bd->data != data))
    {
@@ -4754,9 +4281,9 @@ protobuf_c_message_free_unpacked(ProtobufCMessage *message,
  for (f = 0; f < message->n_unknown_fields; f++)
   do_free(allocator, message->unknown_fields[f].data);
  if (message->unknown_fields != 
-# 3383 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                ((void *)0)
-# 3383 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                    )
   do_free(allocator, message->unknown_fields);
 
@@ -4792,9 +4319,9 @@ protobuf_c_message_check(const ProtobufCMessage *message)
    size_t *quantity = ((void *) ((uint8_t *) (message) + (f->quantifier_offset)));
 
    if (*quantity > 0 && *(void **) field == 
-# 3417 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                            ((void *)0)
-# 3417 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3417 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                ) {
     return 0;
    }
@@ -4818,9 +4345,9 @@ protobuf_c_message_check(const ProtobufCMessage *message)
     unsigned j;
     for (j = 0; j < *quantity; j++) {
      if (bd[j].len > 0 && bd[j].data == 
-# 3439 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                        ((void *)0)
-# 3439 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                            )
       return 0;
     }
@@ -4831,9 +4358,9 @@ protobuf_c_message_check(const ProtobufCMessage *message)
    if (type == PROTOBUF_C_TYPE_MESSAGE) {
     ProtobufCMessage *submessage = *(ProtobufCMessage **) field;
     if (label == PROTOBUF_C_LABEL_REQUIRED || submessage != 
-# 3448 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                                            ((void *)0)
-# 3448 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3448 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                                ) {
      if (!protobuf_c_message_check(submessage))
       return 0;
@@ -4841,9 +4368,9 @@ protobuf_c_message_check(const ProtobufCMessage *message)
    } else if (type == PROTOBUF_C_TYPE_STRING) {
     char *string = *(char **) field;
     if (label == PROTOBUF_C_LABEL_REQUIRED && string == 
-# 3454 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                                        ((void *)0)
-# 3454 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                            )
      return 0;
    } else if (type == PROTOBUF_C_TYPE_BYTES) {
@@ -4851,9 +4378,9 @@ protobuf_c_message_check(const ProtobufCMessage *message)
     ProtobufCBinaryData *bd = field;
     if (label == PROTOBUF_C_LABEL_REQUIRED || *has == 1) {
      if (bd->len > 0 && bd->data == 
-# 3460 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                    ((void *)0)
-# 3460 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                        )
       return 0;
     }
@@ -4885,19 +4412,7 @@ protobuf_c_service_invoke_internal(ProtobufCService *service,
 
 
 
- 
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-method_index < service->descriptor->n_methods
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3491, __func__, 
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"method_index < service->descriptor->n_methods"
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 3491 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                                     ;
+ ((method_index < service->descriptor->n_methods) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3491, __func__, "method_index < service->descriptor->n_methods"));
 
 
 
@@ -4918,19 +4433,7 @@ protobuf_c_service_generated_init(ProtobufCService *service,
       const ProtobufCServiceDescriptor *descriptor,
       ProtobufCServiceDestroy destroy)
 {
- 
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-((
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-(descriptor)->magic == 0x14159bc3
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3512, __func__, 
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-"(descriptor)->magic == PROTOBUF_C__SERVICE_DESCRIPTOR_MAGIC"
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
-))
-# 3512 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
-                                        ;
+ (((descriptor)->magic == 0x14159bc3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c", 3512, __func__, "(descriptor)->magic == PROTOBUF_C__SERVICE_DESCRIPTOR_MAGIC"));
  service->descriptor = descriptor;
  service->destroy = destroy;
  service->invoke = protobuf_c_service_invoke_internal;
@@ -4952,18 +4455,18 @@ protobuf_c_enum_descriptor_get_value_by_name(const ProtobufCEnumDescriptor *desc
  unsigned count;
 
  if (desc == 
-# 3533 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 3533 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || desc->values_by_name == 
-# 3533 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                             ((void *)0)
-# 3533 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                 )
   return 
-# 3534 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3534 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
 
  count = desc->n_value_names;
@@ -4981,16 +4484,16 @@ protobuf_c_enum_descriptor_get_value_by_name(const ProtobufCEnumDescriptor *desc
  }
  if (count == 0)
   return 
-# 3550 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3550 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
  if (strcmp(desc->values_by_name[start].name, name) == 0)
   return desc->values + desc->values_by_name[start].index;
  return 
-# 3553 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
        ((void *)0)
-# 3553 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
            ;
 }
 
@@ -5001,9 +4504,9 @@ protobuf_c_enum_descriptor_get_value(const ProtobufCEnumDescriptor *desc,
  int rv = int_range_lookup(desc->n_value_ranges, desc->value_ranges, value);
  if (rv < 0)
   return 
-# 3562 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3562 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
  return desc->values + rv;
 }
@@ -5017,18 +4520,18 @@ protobuf_c_message_descriptor_get_field_by_name(const ProtobufCMessageDescriptor
  const ProtobufCFieldDescriptor *field;
 
  if (desc == 
-# 3574 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 3574 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || desc->fields_sorted_by_name == 
-# 3574 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                                    ((void *)0)
-# 3574 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3574 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                        )
   return 
-# 3575 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3575 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3575 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
 
  count = desc->n_fields;
@@ -5048,17 +4551,17 @@ protobuf_c_message_descriptor_get_field_by_name(const ProtobufCMessageDescriptor
  }
  if (count == 0)
   return 
-# 3593 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3593 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3593 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
  field = desc->fields + desc->fields_sorted_by_name[start];
  if (strcmp(field->name, name) == 0)
   return field;
  return 
-# 3597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
        ((void *)0)
-# 3597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
            ;
 }
 
@@ -5069,9 +4572,9 @@ protobuf_c_message_descriptor_get_field(const ProtobufCMessageDescriptor *desc,
  int rv = int_range_lookup(desc->n_field_ranges,desc->field_ranges, value);
  if (rv < 0)
   return 
-# 3606 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3606 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
  return desc->fields + rv;
 }
@@ -5084,18 +4587,18 @@ protobuf_c_service_descriptor_get_method_by_name(const ProtobufCServiceDescripto
  unsigned count;
 
  if (desc == 
-# 3617 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
             ((void *)0) 
-# 3617 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                  || desc->method_indices_by_name == 
-# 3617 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
                                                     ((void *)0)
-# 3617 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
                                                         )
   return 
-# 3618 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3618 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3618 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3618 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
 
  count = desc->n_methods;
@@ -5117,15 +4620,15 @@ protobuf_c_service_descriptor_get_method_by_name(const ProtobufCServiceDescripto
  }
  if (count == 0)
   return 
-# 3638 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
         ((void *)0)
-# 3638 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
             ;
  if (strcmp(desc->methods[desc->method_indices_by_name[start]].name, name) == 0)
   return desc->methods + desc->method_indices_by_name[start];
  return 
-# 3641 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
+# 3641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c" 3 4
        ((void *)0)
-# 3641 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
+# 3641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.c"
            ;
 }

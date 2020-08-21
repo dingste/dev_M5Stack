@@ -4,5 +4,4 @@ COMPONENT_LDFLAGS += -L$(BUILD_DIR_BASE)/main -Wl,--whole-archive -lmain -Wl,--n
 COMPONENT_LINKER_DEPS += 
 COMPONENT_SUBMODULES += 
 COMPONENT_LIBRARIES += main
-COMPONENT_LDFRAGMENTS += 
 component-main-build: 

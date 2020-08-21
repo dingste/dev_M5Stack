@@ -1,60 +1,51 @@
 src/esp_efuse_fields.o: \
- /home/dieter/Development/esp-idf/components/efuse/src/esp_efuse_fields.c \
- /home/dieter/Development/esp-idf/components/efuse/include/esp_efuse.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h \
- /home/dieter/Development/esp-idf/components/log/include/esp_log.h \
- /home/dieter/Development/ProjektEi/build/bootloader/../include/sdkconfig.h \
- /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h \
- /home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h \
- /home/dieter/Development/esp-idf/components/efuse/include/esp32/esp_efuse.h \
- /home/dieter/Development/esp-idf/components/efuse/private_include/esp_efuse_utility.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h \
- /home/dieter/Development/esp-idf/components/efuse/private_include/esp32/esp_efuse_utility.h \
- /home/dieter/Development/esp-idf/components/efuse/esp32/include/esp_efuse_table.h \
- /home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h \
- /home/dieter/Development/esp-idf/components/soc/include/soc/efuse_periph.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h \
- /home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h \
- /home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_random.h \
- /home/dieter/Development/esp-idf/components/soc/esp32/include/soc/apb_ctrl_reg.h
+ /home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_fields.c \
+ /home/dieter/SoftwareDevelop/esp-idf/components/efuse/include/esp_efuse.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h \
+ /home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bootloader/../include/sdkconfig.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_assert.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log_internal.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_utility.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_types.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/efuse/esp32/include/esp_efuse_table.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/efuse_reg.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_random.h \
+ /home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/apb_ctrl_reg.h
 
-/home/dieter/Development/esp-idf/components/efuse/include/esp_efuse.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/efuse/include/esp_efuse.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h:
 
-/home/dieter/Development/esp-idf/components/log/include/esp_log.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h:
 
-/home/dieter/Development/ProjektEi/build/bootloader/../include/sdkconfig.h:
+/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bootloader/../include/sdkconfig.h:
 
-/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h:
 
-/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/dieter/Development/esp-idf/components/efuse/include/esp32/esp_efuse.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_assert.h:
 
-/home/dieter/Development/esp-idf/components/efuse/private_include/esp_efuse_utility.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log_internal.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_utility.h:
 
-/home/dieter/Development/esp-idf/components/efuse/private_include/esp32/esp_efuse_utility.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_types.h:
 
-/home/dieter/Development/esp-idf/components/efuse/esp32/include/esp_efuse_table.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/efuse/esp32/include/esp_efuse_table.h:
 
-/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h:
 
-/home/dieter/Development/esp-idf/components/soc/include/soc/efuse_periph.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h:
 
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_random.h:
 
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h:
-
-/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h:
-
-/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_random.h:
-
-/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/apb_ctrl_reg.h:
-/home/dieter/Development/esp-idf/components/efuse/src/esp_efuse_fields.c:
+/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/apb_ctrl_reg.h:
+/home/dieter/SoftwareDevelop/esp-idf/components/efuse/src/esp_efuse_fields.c:

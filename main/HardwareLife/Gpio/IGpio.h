@@ -21,6 +21,8 @@ public:
     virtual bool pending() =0;
     virtual bool connected()=0;
     virtual int duration()=0;
+    virtual int getNumber()=0;
+    virtual void setONOFF(bool)=0;
 };
 
 

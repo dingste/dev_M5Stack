@@ -1,143 +1,120 @@
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-# 1 "/home/dieter/Development/ProjektEi/build/protocomm//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/protocomm//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-# 9 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
-# 199 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -148,32 +125,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -188,35 +143,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -225,21 +152,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -258,44 +184,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -303,10 +192,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -357,12 +244,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -379,7 +266,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -396,13 +283,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -430,7 +317,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -441,7 +328,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -451,7 +338,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -497,12 +384,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -532,8 +419,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -542,29 +431,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -582,6 +463,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -592,18 +475,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -613,11 +491,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -646,21 +524,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -675,26 +544,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -709,54 +571,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -780,40 +630,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -825,150 +671,41 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 200 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 201 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 202 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -979,8 +716,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -991,29 +740,44 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 203 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 212 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 extern const char protobuf_c_empty_string[];
-# 255 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_PACKED = (1 << 0),
@@ -1024,7 +788,7 @@ typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_ONEOF = (1 << 2),
 } ProtobufCFieldFlag;
-# 274 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_LABEL_REQUIRED,
@@ -1048,7 +812,7 @@ typedef enum {
 
  PROTOBUF_C_LABEL_NONE,
 } ProtobufCLabel;
-# 306 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_TYPE_INT32,
  PROTOBUF_C_TYPE_SINT32,
@@ -1068,7 +832,7 @@ typedef enum {
  PROTOBUF_C_TYPE_BYTES,
  PROTOBUF_C_TYPE_MESSAGE,
 } ProtobufCType;
-# 334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_WIRE_TYPE_VARINT = 0,
  PROTOBUF_C_WIRE_TYPE_64BIT = 1,
@@ -1129,19 +893,19 @@ struct ProtobufCAllocator {
 
  void *allocator_data;
 };
-# 402 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBinaryData {
  size_t len;
  uint8_t *data;
 };
-# 442 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBuffer {
 
  void (*append)(ProtobufCBuffer *buffer,
       size_t len,
       const uint8_t *data);
 };
-# 477 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBufferSimple {
 
  ProtobufCBuffer base;
@@ -1250,7 +1014,7 @@ struct ProtobufCFieldDescriptor {
 
 
  unsigned offset;
-# 597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
  const void *descriptor;
 
 
@@ -1269,7 +1033,7 @@ struct ProtobufCFieldDescriptor {
 
  void *reserved3;
 };
-# 624 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCIntRange {
  int start_value;
  unsigned orig_index;
@@ -1279,7 +1043,7 @@ struct ProtobufCIntRange {
 
 
 };
-# 649 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCMessage {
 
  const ProtobufCMessageDescriptor *descriptor;
@@ -1408,49 +1172,49 @@ struct ProtobufCServiceDescriptor {
 
 const char *
 protobuf_c_version(void);
-# 785 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 uint32_t
 protobuf_c_version_number(void);
-# 820 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 820 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value_by_name(
  const ProtobufCEnumDescriptor *desc,
  const char *name);
-# 841 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value(
  const ProtobufCEnumDescriptor *desc,
  int value);
-# 860 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field_by_name(
  const ProtobufCMessageDescriptor *desc,
  const char *name);
-# 879 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field(
  const ProtobufCMessageDescriptor *desc,
  unsigned value);
-# 893 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_get_packed_size(const ProtobufCMessage *message);
-# 913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out);
-# 930 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack_to_buffer(
  const ProtobufCMessage *message,
  ProtobufCBuffer *buffer);
-# 953 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 ProtobufCMessage *
 protobuf_c_message_unpack(
@@ -1458,17 +1222,17 @@ protobuf_c_message_unpack(
  ProtobufCAllocator *allocator,
  size_t len,
  const uint8_t *data);
-# 973 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_free_unpacked(
  ProtobufCMessage *message,
  ProtobufCAllocator *allocator);
-# 990 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 protobuf_c_boolean
 protobuf_c_message_check(const ProtobufCMessage *);
-# 1005 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_init(
@@ -1484,13 +1248,13 @@ protobuf_c_message_init(
 
 void
 protobuf_c_service_destroy(ProtobufCService *service);
-# 1034 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCMethodDescriptor *
 protobuf_c_service_descriptor_get_method_by_name(
  const ProtobufCServiceDescriptor *desc,
  const char *name);
-# 1079 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_buffer_simple_append(
@@ -1517,7 +1281,7 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 8 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 2
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 2
 
 
 
@@ -1527,10 +1291,10 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 typedef enum _Status {
   STATUS__Success = 0,
   STATUS__InvalidSecScheme = 1,
@@ -1542,11 +1306,11 @@ typedef enum _Status {
   STATUS__InvalidSession = 7
     , _STATUS_IS_INT_SIZE = 0x7fffffff
 } Status;
-# 48 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 extern const ProtobufCEnumDescriptor status__descriptor;
 
 
-# 18 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h" 2
 
 typedef struct _SessionCmd1 SessionCmd1;
 typedef struct _SessionResp1 SessionResp1;
@@ -1578,20 +1342,20 @@ struct _SessionCmd1
   ProtobufCMessage base;
   ProtobufCBinaryData client_verify_data;
 };
-# 57 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
 struct _SessionResp1
 {
   ProtobufCMessage base;
   Status status;
   ProtobufCBinaryData device_verify_data;
 };
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
 struct _SessionCmd0
 {
   ProtobufCMessage base;
   ProtobufCBinaryData client_pubkey;
 };
-# 84 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.h"
 struct _SessionResp0
 {
   ProtobufCMessage base;
@@ -1774,75 +1538,39 @@ extern const ProtobufCMessageDescriptor session_resp0__descriptor;
 extern const ProtobufCMessageDescriptor sec1_payload__descriptor;
 
 
-# 10 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 2
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 2
 void session_cmd1__init
                      (SessionCmd1 *message)
 {
   static const SessionCmd1 init_value = { { &session_cmd1__descriptor, 0, 
-# 13 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                        ((void *)0) 
-# 13 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        } , {0,
-# 13 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                        ((void *)0)
-# 13 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        } };
   *message = init_value;
 }
 size_t session_cmd1__get_packed_size
                      (const SessionCmd1 *message)
 {
-  
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd1__descriptor
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 19, __func__, 
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd1__descriptor"
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 19 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 19, __func__, "message->base.descriptor == &session_cmd1__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t session_cmd1__pack
                      (const SessionCmd1 *message,
                       uint8_t *out)
 {
-  
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd1__descriptor
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 26, __func__, 
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd1__descriptor"
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 26, __func__, "message->base.descriptor == &session_cmd1__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t session_cmd1__pack_to_buffer
                      (const SessionCmd1 *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd1__descriptor
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 33, __func__, 
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd1__descriptor"
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 33 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 33, __func__, "message->base.descriptor == &session_cmd1__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 SessionCmd1 *
@@ -1861,89 +1589,41 @@ void session_cmd1__free_unpacked
 {
   if(!message)
     return;
-  
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd1__descriptor
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 52, __func__, 
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd1__descriptor"
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 52 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 52, __func__, "message->base.descriptor == &session_cmd1__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void session_resp1__init
                      (SessionResp1 *message)
 {
   static const SessionResp1 init_value = { { &session_resp1__descriptor, 0, 
-# 58 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                         ((void *)0) 
-# 58 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         } , STATUS__Success, {0,
-# 58 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                         ((void *)0)
-# 58 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         } };
   *message = init_value;
 }
 size_t session_resp1__get_packed_size
                      (const SessionResp1 *message)
 {
-  
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp1__descriptor
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 64, __func__, 
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp1__descriptor"
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 64 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 64, __func__, "message->base.descriptor == &session_resp1__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t session_resp1__pack
                      (const SessionResp1 *message,
                       uint8_t *out)
 {
-  
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp1__descriptor
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 71, __func__, 
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp1__descriptor"
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 71 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 71, __func__, "message->base.descriptor == &session_resp1__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t session_resp1__pack_to_buffer
                      (const SessionResp1 *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp1__descriptor
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 78, __func__, 
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp1__descriptor"
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 78 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 78, __func__, "message->base.descriptor == &session_resp1__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 SessionResp1 *
@@ -1962,89 +1642,41 @@ void session_resp1__free_unpacked
 {
   if(!message)
     return;
-  
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp1__descriptor
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 97, __func__, 
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp1__descriptor"
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 97 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp1__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 97, __func__, "message->base.descriptor == &session_resp1__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void session_cmd0__init
                      (SessionCmd0 *message)
 {
   static const SessionCmd0 init_value = { { &session_cmd0__descriptor, 0, 
-# 103 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                        ((void *)0) 
-# 103 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        } , {0,
-# 103 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                        ((void *)0)
-# 103 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        } };
   *message = init_value;
 }
 size_t session_cmd0__get_packed_size
                      (const SessionCmd0 *message)
 {
-  
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd0__descriptor
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 109, __func__, 
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd0__descriptor"
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 109 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 109, __func__, "message->base.descriptor == &session_cmd0__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t session_cmd0__pack
                      (const SessionCmd0 *message,
                       uint8_t *out)
 {
-  
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd0__descriptor
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 116, __func__, 
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd0__descriptor"
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 116 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 116, __func__, "message->base.descriptor == &session_cmd0__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t session_cmd0__pack_to_buffer
                      (const SessionCmd0 *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd0__descriptor
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 123, __func__, 
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd0__descriptor"
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 123 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 123, __func__, "message->base.descriptor == &session_cmd0__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 SessionCmd0 *
@@ -2063,93 +1695,45 @@ void session_cmd0__free_unpacked
 {
   if(!message)
     return;
-  
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_cmd0__descriptor
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 142, __func__, 
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_cmd0__descriptor"
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 142 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &session_cmd0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 142, __func__, "message->base.descriptor == &session_cmd0__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void session_resp0__init
                      (SessionResp0 *message)
 {
   static const SessionResp0 init_value = { { &session_resp0__descriptor, 0, 
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                         ((void *)0) 
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         } , STATUS__Success, {0,
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                         ((void *)0)
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         }, {0,
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                         ((void *)0)
-# 148 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         } };
   *message = init_value;
 }
 size_t session_resp0__get_packed_size
                      (const SessionResp0 *message)
 {
-  
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp0__descriptor
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 154, __func__, 
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp0__descriptor"
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 154 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 154, __func__, "message->base.descriptor == &session_resp0__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t session_resp0__pack
                      (const SessionResp0 *message,
                       uint8_t *out)
 {
-  
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp0__descriptor
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 161, __func__, 
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp0__descriptor"
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 161 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 161, __func__, "message->base.descriptor == &session_resp0__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t session_resp0__pack_to_buffer
                      (const SessionResp0 *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp0__descriptor
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 168, __func__, 
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp0__descriptor"
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 168 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 168, __func__, "message->base.descriptor == &session_resp0__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 SessionResp0 *
@@ -2168,85 +1752,37 @@ void session_resp0__free_unpacked
 {
   if(!message)
     return;
-  
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &session_resp0__descriptor
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 187, __func__, 
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &session_resp0__descriptor"
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 187 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                               ;
+  ((message->base.descriptor == &session_resp0__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 187, __func__, "message->base.descriptor == &session_resp0__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void sec1_payload__init
                      (Sec1Payload *message)
 {
   static const Sec1Payload init_value = { { &sec1_payload__descriptor, 0, 
-# 193 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                                        ((void *)0) 
-# 193 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        } , SEC1_MSG_TYPE__Session_Command0, SEC1_PAYLOAD__PAYLOAD__NOT_SET, {0} };
   *message = init_value;
 }
 size_t sec1_payload__get_packed_size
                      (const Sec1Payload *message)
 {
-  
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &sec1_payload__descriptor
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 199, __func__, 
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &sec1_payload__descriptor"
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 199 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &sec1_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 199, __func__, "message->base.descriptor == &sec1_payload__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t sec1_payload__pack
                      (const Sec1Payload *message,
                       uint8_t *out)
 {
-  
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &sec1_payload__descriptor
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 206, __func__, 
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &sec1_payload__descriptor"
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 206 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &sec1_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 206, __func__, "message->base.descriptor == &sec1_payload__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t sec1_payload__pack_to_buffer
                      (const Sec1Payload *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &sec1_payload__descriptor
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 213, __func__, 
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &sec1_payload__descriptor"
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 213 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &sec1_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 213, __func__, "message->base.descriptor == &sec1_payload__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 Sec1Payload *
@@ -2265,19 +1801,7 @@ void sec1_payload__free_unpacked
 {
   if(!message)
     return;
-  
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ((
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- message->base.descriptor == &sec1_payload__descriptor
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 232, __func__, 
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
- "message->base.descriptor == &sec1_payload__descriptor"
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
- ))
-# 232 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
-                                                              ;
+  ((message->base.descriptor == &sec1_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c", 232, __func__, "message->base.descriptor == &sec1_payload__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 static const ProtobufCFieldDescriptor session_cmd1__field_descriptors[1] =
@@ -2289,38 +1813,38 @@ static const ProtobufCFieldDescriptor session_cmd1__field_descriptors[1] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionCmd1
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    client_verify_data
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 243 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                             ,
     
-# 244 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 244 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     
-# 245 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 245 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 247 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 247 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 247 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 247 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 248 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
 };
 static const unsigned session_cmd1__field_indices_by_name[] = {
@@ -2345,18 +1869,18 @@ const ProtobufCMessageDescriptor session_cmd1__descriptor =
   1, session_cmd1__number_ranges,
   (ProtobufCMessageInit) session_cmd1__init,
   
-# 271 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 271 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 271 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 271 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 271 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
 
-# 272 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };
 static const ProtobufCFieldDescriptor session_resp1__field_descriptors[2] =
 {
@@ -2367,34 +1891,34 @@ static const ProtobufCFieldDescriptor session_resp1__field_descriptors[2] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionResp1
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    status
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 281 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                  ,
     &status__descriptor,
     
-# 283 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 283 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 285 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 285 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 285 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 286 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "device_verify_data",
@@ -2403,38 +1927,38 @@ static const ProtobufCFieldDescriptor session_resp1__field_descriptors[2] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionResp1
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    device_verify_data
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 293 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                              ,
     
-# 294 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 294 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     
-# 295 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 295 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 297 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 297 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 297 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 298 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
 };
 static const unsigned session_resp1__field_indices_by_name[] = {
@@ -2461,18 +1985,18 @@ const ProtobufCMessageDescriptor session_resp1__descriptor =
   2, session_resp1__number_ranges,
   (ProtobufCMessageInit) session_resp1__init,
   
-# 323 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 323 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 323 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 323 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 323 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
 
-# 324 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };
 static const ProtobufCFieldDescriptor session_cmd0__field_descriptors[1] =
 {
@@ -2483,38 +2007,38 @@ static const ProtobufCFieldDescriptor session_cmd0__field_descriptors[1] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionCmd0
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    client_pubkey
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 333 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                        ,
     
-# 334 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 334 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     
-# 335 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 335 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 337 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 337 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 337 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 338 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
 };
 static const unsigned session_cmd0__field_indices_by_name[] = {
@@ -2539,18 +2063,18 @@ const ProtobufCMessageDescriptor session_cmd0__descriptor =
   1, session_cmd0__number_ranges,
   (ProtobufCMessageInit) session_cmd0__init,
   
-# 361 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 361 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 361 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 361 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 361 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
 
-# 362 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };
 static const ProtobufCFieldDescriptor session_resp0__field_descriptors[3] =
 {
@@ -2561,34 +2085,34 @@ static const ProtobufCFieldDescriptor session_resp0__field_descriptors[3] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionResp0
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    status
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 371 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                  ,
     &status__descriptor,
     
-# 373 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 373 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 375 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 375 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 375 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 376 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "device_pubkey",
@@ -2597,38 +2121,38 @@ static const ProtobufCFieldDescriptor session_resp0__field_descriptors[3] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionResp0
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    device_pubkey
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 383 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         ,
     
-# 384 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 384 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     
-# 385 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 385 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 385 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 387 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 387 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 387 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 388 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "device_random",
@@ -2637,38 +2161,38 @@ static const ProtobufCFieldDescriptor session_resp0__field_descriptors[3] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    SessionResp0
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    device_random
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 395 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                         ,
     
-# 396 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 396 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     
-# 397 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 397 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 399 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 399 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 399 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 400 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
 };
 static const unsigned session_resp0__field_indices_by_name[] = {
@@ -2695,18 +2219,18 @@ const ProtobufCMessageDescriptor session_resp0__descriptor =
   1, session_resp0__number_ranges,
   (ProtobufCMessageInit) session_resp0__init,
   
-# 425 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 425 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 425 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 425 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 425 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
 
-# 426 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };
 static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
 {
@@ -2717,34 +2241,34 @@ static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    msg
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 435 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                              ,
     &sec1_msg_type__descriptor,
     
-# 437 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 437 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0,
     0,
-# 439 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 439 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 439 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 440 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "sc0",
@@ -2752,47 +2276,47 @@ static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    payload_case
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 446 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                       ,
     
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    sc0
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 447 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                              ,
     &session_cmd0__descriptor,
     
-# 449 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 449 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 451 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 451 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 451 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 452 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 452 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "sr0",
@@ -2800,47 +2324,47 @@ static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    payload_case
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 458 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                       ,
     
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    sr0
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 459 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                              ,
     &session_resp0__descriptor,
     
-# 461 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 461 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 461 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 463 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 463 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 463 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 464 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 464 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "sc1",
@@ -2848,47 +2372,47 @@ static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    payload_case
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 470 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                       ,
     
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    sc1
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 471 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                              ,
     &session_cmd1__descriptor,
     
-# 473 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 473 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 475 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 475 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 475 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 476 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
   {
     "sr1",
@@ -2896,47 +2420,47 @@ static const ProtobufCFieldDescriptor sec1_payload__field_descriptors[5] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    payload_case
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 482 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                                       ,
     
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    __builtin_offsetof (
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    Sec1Payload
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    , 
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
    sr1
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    )
-# 483 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 483 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                              ,
     &session_resp1__descriptor,
     
-# 485 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
    ((void *)0)
-# 485 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 487 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
      ((void *)0)
-# 487 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
          ,
-# 487 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 487 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
           ((void *)0)
   
-# 488 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
  },
 };
 static const unsigned sec1_payload__field_indices_by_name[] = {
@@ -2966,18 +2490,18 @@ const ProtobufCMessageDescriptor sec1_payload__descriptor =
   2, sec1_payload__number_ranges,
   (ProtobufCMessageInit) sec1_payload__init,
   
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 516 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
 
-# 517 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 517 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };
 static const ProtobufCEnumValue sec1_msg_type__enum_values_by_number[4] =
 {
@@ -3010,20 +2534,20 @@ const ProtobufCEnumDescriptor sec1_msg_type__descriptor =
   1,
   sec1_msg_type__value_ranges,
   
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
  ((void *)0)
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
      ,
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
       ((void *)0)
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
           ,
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
            ((void *)0)
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
                ,
-# 548 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c" 3 4
                 ((void *)0)
 
-# 549 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
+# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/sec1.pb-c.c"
 };

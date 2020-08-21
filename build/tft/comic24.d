@@ -1,2 +1,3 @@
-comic24.o: /home/dieter/Development/ProjektEi/components/tft/comic24.c
-/home/dieter/Development/ProjektEi/components/tft/./comic24.c:
+comic24.o: \
+ /home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/comic24.c
+/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/./comic24.c:

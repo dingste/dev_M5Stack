@@ -1,9 +1,9 @@
-# 1 "/home/dieter/Development/ProjektEi/components/tft/SmallFont.c"
-# 1 "/home/dieter/Development/ProjektEi/build/tft//"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/SmallFont.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/tft//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/ProjektEi/components/tft/SmallFont.c"
-# 17 "/home/dieter/Development/ProjektEi/components/tft/SmallFont.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/SmallFont.c"
+# 17 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/SmallFont.c"
 const unsigned char tft_SmallFont[1144] =
 {
 0x08,0x0C,0x20,0x5F,

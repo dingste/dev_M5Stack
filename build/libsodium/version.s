@@ -1,7 +1,7 @@
 	.file	"version.c"
 	.text
 .Ltext0:
-	.section	.rodata.sodium_version_string.str1.1,"aMS",@progbits,1
+	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC0:
 	.string	"1.0.12-idf"
 	.section	.text.sodium_version_string,"ax",@progbits
@@ -12,12 +12,11 @@
 	.type	sodium_version_string, @function
 sodium_version_string:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/version.c"
-	.loc 1 6 1 view -0
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/version.c"
+	.loc 1 6 0
 	entry	sp, 32
 .LCFI0:
-	.loc 1 7 5 view .LVU1
-	.loc 1 8 1 is_stmt 0 view .LVU2
+	.loc 1 8 0
 	l32r	a2, .LC1
 	retw.n
 .LFE0:
@@ -28,11 +27,10 @@ sodium_version_string:
 	.type	sodium_library_version_major, @function
 sodium_library_version_major:
 .LFB1:
-	.loc 1 12 1 is_stmt 1 view -0
+	.loc 1 12 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 13 5 view .LVU4
-	.loc 1 14 1 is_stmt 0 view .LVU5
+	.loc 1 14 0
 	movi.n	a2, 9
 	retw.n
 .LFE1:
@@ -43,11 +41,10 @@ sodium_library_version_major:
 	.type	sodium_library_version_minor, @function
 sodium_library_version_minor:
 .LFB2:
-	.loc 1 18 1 is_stmt 1 view -0
+	.loc 1 18 0
 	entry	sp, 32
 .LCFI2:
-	.loc 1 19 5 view .LVU7
-	.loc 1 20 1 is_stmt 0 view .LVU8
+	.loc 1 20 0
 	movi.n	a2, 4
 	retw.n
 .LFE2:
@@ -58,11 +55,10 @@ sodium_library_version_minor:
 	.type	sodium_library_minimal, @function
 sodium_library_minimal:
 .LFB3:
-	.loc 1 24 1 is_stmt 1 view -0
+	.loc 1 24 0
 	entry	sp, 32
 .LCFI3:
-	.loc 1 28 5 view .LVU10
-	.loc 1 30 1 is_stmt 0 view .LVU11
+	.loc 1 30 0
 	movi.n	a2, 0
 	retw.n
 .LFE3:
@@ -134,7 +130,7 @@ sodium_library_minimal:
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x93
+	.4byte	0x8b
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -142,63 +138,58 @@ sodium_library_minimal:
 	.4byte	.LASF5
 	.byte	0xc
 	.4byte	.LASF6
-	.4byte	.LASF7
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
 	.4byte	.LASF0
 	.byte	0x1
-	.byte	0x17
-	.byte	0x1
-	.4byte	0x3b
-	.4byte	.LFB3
-	.4byte	.LFE3-.LFB3
+	.byte	0x5
+	.4byte	0x36
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x3
 	.byte	0x4
-	.byte	0x5
-	.string	"int"
+	.4byte	0x43
+	.uleb128 0x4
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF2
+	.uleb128 0x5
+	.4byte	0x3c
 	.uleb128 0x2
 	.4byte	.LASF1
 	.byte	0x1
-	.byte	0x11
+	.byte	0xb
+	.4byte	0x5d
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
+	.uleb128 0x1
+	.byte	0x9c
+	.uleb128 0x6
+	.byte	0x4
+	.byte	0x5
+	.string	"int"
+	.uleb128 0x2
+	.4byte	.LASF3
 	.byte	0x1
-	.4byte	0x3b
+	.byte	0x11
+	.4byte	0x5d
 	.4byte	.LFB2
 	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x2
-	.4byte	.LASF2
-	.byte	0x1
-	.byte	0xb
-	.byte	0x1
-	.4byte	0x3b
-	.4byte	.LFB1
-	.4byte	.LFE1-.LFB1
-	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0x2
-	.4byte	.LASF3
-	.byte	0x1
-	.byte	0x5
-	.byte	0x1
-	.4byte	0x84
-	.4byte	.LFB0
-	.4byte	.LFE0-.LFB0
-	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0x4
-	.byte	0x4
-	.4byte	0x91
-	.uleb128 0x5
-	.byte	0x1
-	.byte	0x8
 	.4byte	.LASF4
-	.uleb128 0x6
-	.4byte	0x8a
+	.byte	0x1
+	.byte	0x17
+	.4byte	0x5d
+	.4byte	.LFB3
+	.4byte	.LFE3-.LFB3
+	.uleb128 0x1
+	.byte	0x9c
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -210,8 +201,6 @@ sodium_library_minimal:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -232,8 +221,6 @@ sodium_library_minimal:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
 	.uleb128 0x49
@@ -249,17 +236,6 @@ sodium_library_minimal:
 	.byte	0
 	.byte	0
 	.uleb128 0x3
-	.uleb128 0x24
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3e
-	.uleb128 0xb
-	.uleb128 0x3
-	.uleb128 0x8
-	.byte	0
-	.byte	0
-	.uleb128 0x4
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -268,7 +244,7 @@ sodium_library_minimal:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5
+	.uleb128 0x4
 	.uleb128 0x24
 	.byte	0
 	.uleb128 0xb
@@ -279,11 +255,22 @@ sodium_library_minimal:
 	.uleb128 0xe
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x5
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x24
+	.byte	0
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0x3
+	.uleb128 0x8
 	.byte	0
 	.byte	0
 	.byte	0
@@ -321,19 +308,17 @@ sodium_library_minimal:
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
 .LASF6:
-	.string	"/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/version.c"
-.LASF3:
-	.string	"sodium_version_string"
-.LASF2:
-	.string	"sodium_library_version_major"
-.LASF4:
-	.string	"char"
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/sodium/version.c"
 .LASF1:
-	.string	"sodium_library_version_minor"
+	.string	"sodium_library_version_major"
 .LASF0:
-	.string	"sodium_library_minimal"
+	.string	"sodium_version_string"
 .LASF5:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF7:
-	.string	"/home/dieter/Development/ProjektEi/build/libsodium"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF3:
+	.string	"sodium_library_version_minor"
+.LASF4:
+	.string	"sodium_library_minimal"
+.LASF2:
+	.string	"char"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

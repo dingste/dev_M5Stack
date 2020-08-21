@@ -9,50 +9,53 @@
 
 #include <stdlib.h>
 #include "tftspi.h"
+//#include "../spiffs/spiffs_vfs.h"
 
-typedef struct {
-	uint16_t        x1;
-	uint16_t        y1;
-	uint16_t        x2;
-	uint16_t        y2;
+typedef struct
+{
+    uint16_t x1;
+    uint16_t y1;
+    uint16_t x2;
+    uint16_t y2;
 } dispWin_t;
 
-typedef struct {
-	uint8_t 	*font;
-	uint8_t 	x_size;
-	uint8_t 	y_size;
-	uint8_t	    offset;
-	uint16_t	numchars;
-    uint16_t	size;
-	uint8_t 	max_x_size;
-    uint8_t     bitmap;
-	color_t     color;
+typedef struct
+{
+    uint8_t *font;
+    uint8_t x_size;
+    uint8_t y_size;
+    uint8_t offset;
+    uint16_t numchars;
+    uint16_t size;
+    uint8_t max_x_size;
+    uint8_t bitmap;
+    color_t color;
 } Font;
 
 
 //==========================================================================================
 // ==== Global variables ===================================================================
 //==========================================================================================
-extern uint8_t   orientation;		// current screen orientation
-extern uint16_t  font_rotate;   	// current font font_rotate angle (0~395)
-extern uint8_t   font_transparent;	// if not 0 draw fonts transparent
-extern uint8_t   font_forceFixed;   // if not zero force drawing proportional fonts with fixed width
-extern uint8_t   font_buffered_char;
-extern uint8_t   font_line_space;	// additional spacing between text lines; added to font height
-extern uint8_t   text_wrap;         // if not 0 wrap long text to the new line, else clip
-extern color_t   _fg;            	// current foreground color for fonts
-extern color_t   _bg;            	// current background for non transparent fonts
-extern dispWin_t dispWin;			// display clip window
-extern float	  _angleOffset;		// angle offset for arc, polygon and line by angle functions
-extern uint8_t	  image_debug;		// print debug messages during image decode if set to 1
+extern uint8_t orientation; // current screen orientation
+extern uint16_t font_rotate; // current font font_rotate angle (0~395)
+extern uint8_t font_transparent; // if not 0 draw fonts transparent
+extern uint8_t font_forceFixed; // if not zero force drawing proportional fonts with fixed width
+extern uint8_t font_buffered_char;
+extern uint8_t font_line_space; // additional spacing between text lines; added to font height
+extern uint8_t text_wrap; // if not 0 wrap long text to the new line, else clip
+extern color_t _fg; // current foreground color for fonts
+extern color_t _bg; // current background for non transparent fonts
+extern dispWin_t dispWin; // display clip window
+extern float _angleOffset; // angle offset for arc, polygon and line by angle functions
+extern uint8_t image_debug; // print debug messages during image decode if set to 1
 
-extern Font cfont;					// Current font structure
+extern Font cfont; // Current font structure
 
-extern int	TFT_X;					// X position of the next character after TFT_print() function
-extern int	TFT_Y;					// Y position of the next character after TFT_print() function
+extern int TFT_X; // X position of the next character after TFT_print() function
+extern int TFT_Y; // Y position of the next character after TFT_print() function
 
-extern uint32_t tp_calx;			// touch screen X calibration constant
-extern uint32_t tp_caly;			// touch screen Y calibration constant
+extern uint32_t tp_calx; // touch screen X calibration constant
+extern uint32_t tp_caly; // touch screen Y calibration constant
 // =========================================================================================
 
 
@@ -77,8 +80,8 @@ extern uint32_t tp_caly;			// touch screen Y calibration constant
 
 #define PI 3.14159265359
 
-#define MIN_POLIGON_SIDES	3
-#define MAX_POLIGON_SIDES	60
+#define MIN_POLIGON_SIDES 3
+#define MAX_POLIGON_SIDES 60
 
 // === Color names constants ===
 extern const color_t TFT_BLACK;
@@ -102,18 +105,18 @@ extern const color_t TFT_GREENYELLOW;
 extern const color_t TFT_PINK;
 
 // === Color invert constants ===
-#define INVERT_ON		1
-#define INVERT_OFF		0
+#define INVERT_ON  1
+#define INVERT_OFF  0
 
 // === Special coordinates constants ===
-#define CENTER	-9003
-#define RIGHT	-9004
-#define BOTTOM	-9004
+#define CENTER -9003
+#define RIGHT -9004
+#define BOTTOM -9004
 
-#define LASTX	7000
-#define LASTY	8000
+#define LASTX 7000
+#define LASTY 8000
 
-// === Embedded fonts constants ===
+/* / === Embedded fonts constants ===
 #define DEFAULT_FONT	0
 #define DEJAVU18_FONT	1
 #define DEJAVU24_FONT	2
@@ -125,11 +128,26 @@ extern const color_t TFT_PINK;
 #define DEF_SMALL_FONT	8
 #define FONT_7SEG		9
 #define USER_FONT		10  // font will be read from file
-
+ */
 
 
 // ===== PUBLIC FUNCTIONS =========================================================================
+// ================ JPG SUPPORT ================================================
+// User defined device identifier
 
+typedef struct
+{
+    FILE *fhndl; // File handler for input function
+    int x; // image top left point X position
+    int y; // image top left point Y position
+    int width;
+    int height;
+    uint8_t *membuff; // memory buffer containing the image
+    uint32_t bufsize; // size of the memory buffer
+    uint32_t bufptr; // memory buffer current position
+    color_t *linbuf[2]; // memory buffer used for display output
+    uint8_t linbuf_idx;
+} JPGIODEV;
 
 /*
  * Draw pixel at given x,y coordinates
@@ -141,7 +159,7 @@ extern const color_t TFT_PINK;
  *     sel: if not 0 activate CS before and deactivat after sending pixel data to display
  *          when sending multiple pixels it is faster to activate the CS first,
  *          send all pixels an deactivate CS after all pixela was sent
-*/
+ */
 //-------------------------------------------------------------------
 void TFT_drawPixel(int16_t x, int16_t y, color_t color, uint8_t sel);
 
@@ -154,7 +172,7 @@ void TFT_drawPixel(int16_t x, int16_t y, color_t color, uint8_t sel);
  * 
  * Returns:
  *      pixel color at x,y
-*/
+ */
 //------------------------------------------
 color_t TFT_readPixel(int16_t x, int16_t y);
 
@@ -166,7 +184,7 @@ color_t TFT_readPixel(int16_t x, int16_t y);
  *       y: vertical start position
  *       h: line height in pixels
  *   color: line color
-*/
+ */
 //---------------------------------------------------------------------
 void TFT_drawFastVLine(int16_t x, int16_t y, int16_t h, color_t color);
 
@@ -178,7 +196,7 @@ void TFT_drawFastVLine(int16_t x, int16_t y, int16_t h, color_t color);
  *       y: vertical start position
  *       w: line width in pixels
  *   color: line color
-*/
+ */
 //---------------------------------------------------------------------
 void TFT_drawFastHLine(int16_t x, int16_t y, int16_t w, color_t color);
 
@@ -191,7 +209,7 @@ void TFT_drawFastHLine(int16_t x, int16_t y, int16_t w, color_t color);
  *       x1: horizontal end position
  *       y1: vertical end position
  *   color: line color
-*/
+ */
 //-------------------------------------------------------------------------------
 void TFT_drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, color_t color);
 
@@ -208,7 +226,7 @@ void TFT_drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, color_t color)
  *     len: length of the line
  *   angle: line angle in degrees
  *   color: line color
-*/
+ */
 //-----------------------------------------------------------------------------------------------------------
 void TFT_drawLineByAngle(uint16_t x, uint16_t y, uint16_t start, uint16_t len, uint16_t angle, color_t color);
 
@@ -221,7 +239,7 @@ void TFT_drawLineByAngle(uint16_t x, uint16_t y, uint16_t start, uint16_t len, u
  *       w: rectangle width
  *       h: rectangle height
  *   color: fill color
-*/
+ */
 //---------------------------------------------------------------------------
 void TFT_fillRect(int16_t x, int16_t y, int16_t w, int16_t h, color_t color);
 
@@ -234,9 +252,9 @@ void TFT_fillRect(int16_t x, int16_t y, int16_t w, int16_t h, color_t color);
  *       w: rectangle width
  *       h: rectangle height
  *   color: rect line color
-*/
+ */
 //------------------------------------------------------------------------------
-void TFT_drawRect(uint16_t x1,uint16_t y1,uint16_t w,uint16_t h, color_t color);
+void TFT_drawRect(uint16_t x1, uint16_t y1, uint16_t w, uint16_t h, color_t color);
 
 /*
  * Draw rectangle with rounded corners on screen
@@ -248,7 +266,7 @@ void TFT_drawRect(uint16_t x1,uint16_t y1,uint16_t w,uint16_t h, color_t color);
  *       h: rectangle height
  *       r: corner radius
  *   color: rectangle color
-*/
+ */
 //----------------------------------------------------------------------------------------------
 void TFT_drawRoundRect(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t r, color_t color);
 
@@ -262,7 +280,7 @@ void TFT_drawRoundRect(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t r,
  *       h: rectangle height
  *       r: corner radius
  *   color: fill color
-*/
+ */
 //----------------------------------------------------------------------------------------------
 void TFT_fillRoundRect(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t r, color_t color);
 
@@ -271,7 +289,7 @@ void TFT_fillRoundRect(int16_t x, int16_t y, uint16_t w, uint16_t h, uint16_t r,
  * 
  * Params:
  *   color: fill color
-*/
+ */
 //--------------------------------
 void TFT_fillScreen(color_t color);
 
@@ -280,7 +298,7 @@ void TFT_fillScreen(color_t color);
  *
  * Params:
  *   color: fill color
-*/
+ */
 //---------------------------------
 void TFT_fillWindow(color_t color);
 
@@ -295,7 +313,7 @@ void TFT_fillWindow(color_t color);
  *       x0: third triangle point x position
  *       y0: third triangle point y position
  *   color: triangle color
-*/
+ */
 //-----------------------------------------------------------------------------------------------------------------
 void TFT_drawTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, color_t color);
 
@@ -310,7 +328,7 @@ void TFT_drawTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16
  *       x0: third triangle point x position
  *       y0: third triangle point y position
  *   color: fill color
-*/
+ */
 //-----------------------------------------------------------------------------------------------------------------
 void TFT_fillTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, color_t color);
 
@@ -322,7 +340,7 @@ void TFT_fillTriangle(uint16_t x0, uint16_t y0, uint16_t x1, uint16_t y1, uint16
  *       y: circle center x position
  *       r: circle radius
  *   color: circle color
-*/
+ */
 //-------------------------------------------------------------------
 void TFT_drawCircle(int16_t x, int16_t y, int radius, color_t color);
 
@@ -334,7 +352,7 @@ void TFT_drawCircle(int16_t x, int16_t y, int radius, color_t color);
  *       y: circle center x position
  *       r: circle radius
  *   color: circle fill color
-*/
+ */
 //-------------------------------------------------------------------
 void TFT_fillCircle(int16_t x, int16_t y, int radius, color_t color);
 
@@ -354,7 +372,7 @@ void TFT_fillCircle(int16_t x, int16_t y, int radius, color_t color);
              to draw the whole ellipse use option value 15 (1 | 2 | 4 | 8)
  * 
  *   color: circle color
-*/
+ */
 //------------------------------------------------------------------------------------------------------
 void TFT_drawEllipse(uint16_t x0, uint16_t y0, uint16_t rx, uint16_t ry, color_t color, uint8_t option);
 
@@ -374,7 +392,7 @@ void TFT_drawEllipse(uint16_t x0, uint16_t y0, uint16_t rx, uint16_t ry, color_t
              to fill the whole ellipse use option value 15 (1 | 2 | 4 | 8)
  * 
  *   color: fill color
-*/
+ */
 //------------------------------------------------------------------------------------------------------
 void TFT_fillEllipse(uint16_t x0, uint16_t y0, uint16_t rx, uint16_t ry, color_t color, uint8_t option);
 
@@ -393,7 +411,7 @@ void TFT_fillEllipse(uint16_t x0, uint16_t y0, uint16_t rx, uint16_t ry, color_t
  *       end: arc end angle in degrees
  *     color: arc outline color
  * fillcolor: arc fill color
-*/
+ */
 //----------------------------------------------------------------------------------------------------------------------------
 void TFT_drawArc(uint16_t cx, uint16_t cy, uint16_t r, uint16_t th, float start, float end, color_t color, color_t fillcolor);
 
@@ -410,7 +428,7 @@ void TFT_drawArc(uint16_t cx, uint16_t cy, uint16_t r, uint16_t th, float start,
  *      fill: polygon fill color; if same as color, polygon is not filled
  *       deg: polygon rotation angle; 0 ~ 360
  *        th: thickness of the polygon outline
-*/
+ */
 //--------------------------------------------------------------------------------------------------------------
 void TFT_drawPolygon(int cx, int cy, int sides, int diameter, color_t color, color_t fill, int deg, uint8_t th);
 
@@ -480,7 +498,7 @@ int TFT_getfontheight();
  *
  */
 //-------------------------------------
-void TFT_print(char *st, int x, int y);
+void TFT_print(const char *st, int x, int y);
 
 /*
  * Set atributes for 7 segment vector font
@@ -595,7 +613,7 @@ void TFT_clearStringRect(int x, int y, char *str);
  * 		   _sat:	float; 0 ~ 1.0
  *	_brightness:	float; 0 ~ 1.0
  *
-*/
+ */
 //----------------------------------------------------------
 color_t HSBtoRGB(float _hue, float _sat, float _brightness);
 
@@ -618,7 +636,7 @@ color_t HSBtoRGB(float _hue, float _sat, float _brightness);
  *
  */
 //-----------------------------------------------------------------------------------
-void TFT_jpg_image(int x, int y, uint8_t scale, char *fname, uint8_t *buf, int size);
+JPGIODEV TFT_jpg_image(int x, int y, uint8_t scale, const char *fname, uint8_t *buf, int size);
 
 /*
  * Decodes and displays BMP image
@@ -675,5 +693,5 @@ int compile_font_file(char *fontfile, uint8_t dbg);
  * Get all font's characters to buffer
  */
 void getFontCharacters(uint8_t *buf);
-
+//void listSpiff(char *path, char *match);
 #endif

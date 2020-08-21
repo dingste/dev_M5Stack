@@ -17,20 +17,23 @@
 #include "IGpio.h"
 #include "driver/gpio.h"
 
-class Gpio:public IGpio {
+class Gpio : public IGpio {
 public:
     Gpio(gpio_num_t pin, gpio_mode_t io);
     virtual ~Gpio();
-    
+
     int duration();
-      bool connected();
-     bool pending();
-     int atPin();
-     void ping();
+    bool connected();
+    bool pending();
+    int atPin();
+    void ping();
+    int getNumber();
+    void setONOFF(bool);
+
 private:
     gpio_num_t gpioNumber;
     int durationTime;
-        gpio_config_t pinconfig;
+    gpio_config_t pinconfig;
 };
 
 #endif /* GPIO_H */

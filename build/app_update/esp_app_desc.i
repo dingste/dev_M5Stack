@@ -1,134 +1,111 @@
-# 1 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-# 1 "/home/dieter/Development/ProjektEi/build/app_update//"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/app_update//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-# 15 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -139,32 +116,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -179,35 +134,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -216,21 +143,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -249,44 +175,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -294,10 +183,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -348,12 +235,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -370,7 +257,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -387,13 +274,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -421,7 +308,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -432,7 +319,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -442,7 +329,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -488,12 +375,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -523,8 +410,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -533,29 +422,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -573,6 +454,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -583,18 +466,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -604,11 +482,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -637,21 +515,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -666,26 +535,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -700,54 +562,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -771,40 +621,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -816,150 +662,45 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 1
+# 9 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/syslimits.h" 1
+# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/endian.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/param.h" 1
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/param.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
 
 
 
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 16 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/syslimits.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/param.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 17 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -970,8 +711,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -982,152 +735,75 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 19 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
+
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
        
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
-# 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
 
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
+# 40 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
 
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
 
-
-
-
-typedef __gnuc_va_list va_list;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef long time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -1146,121 +822,109 @@ typedef unsigned long u_long;
 
 
 
-
-
 typedef unsigned short ushort;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 
 
 
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
 typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
 typedef long daddr_t;
 
 
 
 typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
 typedef __dev_t dev_t;
-
-
-
 typedef __uid_t uid_t;
-
-
-
 typedef __gid_t gid_t;
 
 
 
 
-typedef __pid_t pid_t;
+
+typedef int pid_t;
 
 
 
 
-typedef __key_t key_t;
 
 
 
+typedef long key_t;
 
 typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
 
 
 
 
 
-typedef __timer_t timer_t;
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
 
 
 
 
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
+typedef unsigned long timer_t;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+# 59 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 300 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 341 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -1269,19 +933,20 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-
-
-
-
-
+# 357 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
+
+
+
+
+
 } pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 442 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 454 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -1290,15 +955,10 @@ typedef struct {
 
 
 
-
-
 typedef __uint32_t pthread_cond_t;
-
-
 
 typedef struct {
   int is_initialized;
-  clock_t clock;
 
 
 
@@ -1312,17 +972,11 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
+# 49 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
 typedef __FILE FILE;
-
-
 
 
 
@@ -1333,14 +987,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stdio.h" 1 3 4
-# 80 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-char * ctermid (char *);
-
-
-
-
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -1351,22 +1000,22 @@ int fflush (FILE *);
 FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
 void setbuf (FILE *restrict, char *restrict);
 int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fscanf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int printf (const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int scanf (const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int sscanf (const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
 int fgetc (FILE *);
 char * fgets (char *restrict, int, FILE *restrict);
 int fputc (int, FILE *);
@@ -1378,8 +1027,8 @@ int putc (int, FILE *);
 int putchar (int);
 int puts (const char *);
 int ungetc (int, FILE *);
-size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
 
 
 
@@ -1399,104 +1048,90 @@ int ferror (FILE *);
 void perror (const char *);
 
 FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 257 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 235 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
-off_t ftello (FILE *);
+off_t ftello ( FILE *);
 
 
 
-int fcloseall (void);
 
 
 
-int snprintf (char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
 
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-int asprintf (char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int vasprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-
-int asiprintf (char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-char * asniprintf (char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-
-int diprintf (int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-int fiprintf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fiscanf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int iprintf (const char *, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int iscanf (const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int siprintf (char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int siscanf (const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int sniprintf (char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vasiprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vdiprintf (int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiprintf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiscanf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int viprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int viscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsiprintf (char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vsiscanf (const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-# 339 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
-
-
+int getw (FILE *);
 int pclose (FILE *);
 FILE * popen (const char *, const char *);
-
-
-
+int putw (int, FILE *);
 void setbuffer (FILE *, char *, int);
 int setlinebuf (FILE *);
-
-
-
-int getw (FILE *);
-int putw (int, FILE *);
-
-
 int getc_unlocked (FILE *);
 int getchar_unlocked (void);
 void flockfile (FILE *);
@@ -1504,33 +1139,38 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 374 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int dprintf (int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+# 338 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
 FILE * fmemopen (void *restrict, size_t, const char *restrict);
 
 
 FILE * open_memstream (char **, size_t *);
-int vdprintf (int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
 
 int renameat (int, const char *, int, const char *);
-# 396 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int _asiprintf_r (struct _reent *, char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _diprintf_r (struct _reent *, int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _dprintf_r (struct _reent *, int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fclose_r (struct _reent *, FILE *);
 int _fcloseall_r (struct _reent *);
 FILE * _fdopen_r (struct _reent *, int, const char *);
@@ -1546,110 +1186,110 @@ char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
 int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
 int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
 
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
 FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
 FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fpurge_r (struct _reent *, FILE *);
 int _fputc_r (struct _reent *, int, FILE *);
 int _fputc_unlocked_r (struct _reent *, int, FILE *);
 int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
 int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 int _fseek_r (struct _reent *, FILE *, long, int);
 int _fseeko_r (struct _reent *, FILE *, _off_t, int);
 long _ftell_r (struct _reent *, FILE *);
 _off_t _ftello_r (struct _reent *, FILE *);
 void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
 int _getc_r (struct _reent *, FILE *);
 int _getc_unlocked_r (struct _reent *, FILE *);
 int _getchar_r (struct _reent *);
 int _getchar_unlocked_r (struct _reent *);
 char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _iscanf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
 FILE * _open_memstream_r (struct _reent *, char **, size_t *);
 void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int _putc_r (struct _reent *, int, FILE *);
 int _putc_unlocked_r (struct _reent *, int, FILE *);
 int _putchar_unlocked_r (struct _reent *, int);
 int _putchar_r (struct _reent *, int);
 int _puts_r (struct _reent *, const char *);
 int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *,
-      const char *_old, const char *_new);
-int _scanf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int _siprintf_r (struct _reent *, char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _siscanf_r (struct _reent *, const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 char * _tempnam_r (struct _reent *, const char *, const char *);
 FILE * _tmpfile_r (struct _reent *);
 char * _tmpnam_r (struct _reent *, char *);
 int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
 
 
 
@@ -1665,32 +1305,33 @@ int fileno_unlocked (FILE *);
 int fflush_unlocked (FILE *);
 int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 577 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 601 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE *funopen (const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-FILE *_funopen_r (struct _reent *, const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-# 624 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 562 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
 typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
 typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
      size_t __n);
@@ -1710,54 +1351,23 @@ typedef struct
   cookie_seek_function_t *seek;
   cookie_close_function_t *close;
 } cookie_io_functions_t;
-FILE *fopencookie (void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-FILE *_fopencookie_r (struct _reent *, void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-# 687 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 
-
-
-
- if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
-  return (*_p->_p++ = _c);
- else
-  return (__swbuf_r(_ptr, _c, _p));
-}
-# 741 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline int
-_getchar_unlocked(void)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
-}
-
-static __inline int
-_putchar_unlocked(int _c)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
-}
-# 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 2
 
 
 
 
 
 
-
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
 typedef int32_t esp_err_t;
-# 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name(esp_err_t code);
-# 77 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 76 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
 
 
@@ -1765,323 +1375,34 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 22 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-       
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-       
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/hal/esp_flash_err.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/hal/esp_flash_err.h"
-       
-# 31 "/home/dieter/Development/esp-idf/components/soc/include/hal/esp_flash_err.h"
-enum {
-
-
-
-
-    ESP_ERR_FLASH_SIZE_NOT_MATCH = 0x104,
-    ESP_ERR_FLASH_NO_RESPONSE = 0x108,
-};
-# 19 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 2
-
-
-
-
-
-
-typedef struct {
-    uint8_t command;
-    uint8_t mosi_len;
-    uint8_t miso_len;
-    uint32_t mosi_data;
-    uint32_t miso_data[2];
-} spi_flash_trans_t;
-# 41 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-typedef enum {
-    ESP_FLASH_5MHZ = 0,
-    ESP_FLASH_10MHZ,
-    ESP_FLASH_20MHZ,
-    ESP_FLASH_26MHZ,
-    ESP_FLASH_40MHZ,
-    ESP_FLASH_80MHZ,
-    ESP_FLASH_SPEED_MAX,
-} esp_flash_speed_t;
-
-
-
-
-
-typedef enum {
-    SPI_FLASH_SLOWRD = 0,
-    SPI_FLASH_FASTRD,
-    SPI_FLASH_DOUT,
-    SPI_FLASH_DIO,
-    SPI_FLASH_QOUT,
-    SPI_FLASH_QIO,
-
-    SPI_FLASH_READ_MODE_MAX,
-} esp_flash_io_mode_t;
-
-
-
-
-struct spi_flash_host_driver_t;
-typedef struct spi_flash_host_driver_t spi_flash_host_driver_t;
-
-
-struct spi_flash_host_driver_t {
-
-
-
-
-    void *driver_data;
-
-
-
-
-    esp_err_t (*dev_config)(spi_flash_host_driver_t *driver);
-
-
-
-    esp_err_t (*common_command)(spi_flash_host_driver_t *driver, spi_flash_trans_t *t);
-
-
-
-    esp_err_t (*read_id)(spi_flash_host_driver_t *driver, uint32_t *id);
-
-
-
-    void (*erase_chip)(spi_flash_host_driver_t *driver);
-
-
-
-    void (*erase_sector)(spi_flash_host_driver_t *driver, uint32_t start_address);
-
-
-
-    void (*erase_block)(spi_flash_host_driver_t *driver, uint32_t start_address);
-
-
-
-    esp_err_t (*read_status)(spi_flash_host_driver_t *driver, uint8_t *out_sr);
-
-
-
-    esp_err_t (*set_write_protect)(spi_flash_host_driver_t *driver, 
-# 111 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 3 4
-                                                                   _Bool 
-# 111 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-                                                                        wp);
-
-
-
-    void (*program_page)(spi_flash_host_driver_t *driver, const void *buffer, uint32_t address, uint32_t length);
-
-    
-# 117 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 3 4
-   _Bool 
-# 117 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-        (*supports_direct_write)(spi_flash_host_driver_t *driver, const void *p);
-
-    
-# 119 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 3 4
-   _Bool 
-# 119 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-        (*supports_direct_read)(spi_flash_host_driver_t *driver, const void *p);
-
-    int max_write_bytes;
-
-
-
-    esp_err_t (*read)(spi_flash_host_driver_t *driver, void *buffer, uint32_t address, uint32_t read_len);
-
-    int max_read_bytes;
-
-
-
-    
-# 131 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h" 3 4
-   _Bool 
-# 131 "/home/dieter/Development/esp-idf/components/soc/include/hal/spi_flash_types.h"
-        (*host_idle)(spi_flash_host_driver_t *driver);
-
-
-
-    esp_err_t (*configure_host_io_mode)(spi_flash_host_driver_t *driver, uint32_t command,
-                                        uint32_t addr_bitlen, int dummy_bitlen_base,
-                                        esp_flash_io_mode_t io_mode);
-
-
-
-    void (*poll_cmd_done)(spi_flash_host_driver_t *driver);
-
-
-
-
-    esp_err_t (*flush_cache)(spi_flash_host_driver_t* driver, uint32_t addr, uint32_t size);
-};
-# 21 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 2
-
-
-
-
-
-struct spi_flash_chip_t;
-typedef struct spi_flash_chip_t spi_flash_chip_t;
-
-typedef struct esp_flash_t esp_flash_t;
-
-
-typedef struct {
-    uint32_t offset;
-    uint32_t size;
-} esp_flash_region_t;
-
-
-typedef struct {
-
-
-
-
-    esp_err_t (*start)(void *arg);
-
-
-    esp_err_t (*end)(void *arg);
-
-
-    esp_err_t (*region_protected)(void* arg, size_t start_addr, size_t size);
-
-
-    esp_err_t (*delay_ms)(void *arg, unsigned ms);
-} esp_flash_os_functions_t;
-
-
-
-
-
-struct esp_flash_t {
-    spi_flash_host_driver_t *host;
-    const spi_flash_chip_t *chip_drv;
-
-    const esp_flash_os_functions_t *os_func;
-    void *os_func_data;
-
-    esp_flash_io_mode_t read_mode;
-    uint32_t size;
-    uint32_t chip_id;
-};
-# 87 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_init(esp_flash_t *chip);
-# 96 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-
-# 96 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-_Bool 
-# 96 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-    esp_flash_chip_driver_initialized(const esp_flash_t *chip);
-# 107 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_read_id(esp_flash_t *chip, uint32_t *out_id);
-# 119 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_get_size(esp_flash_t *chip, uint32_t *out_size);
-# 128 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_erase_chip(esp_flash_t *chip);
-# 145 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_erase_region(esp_flash_t *chip, uint32_t start, uint32_t len);
-# 157 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_get_chip_write_protect(esp_flash_t *chip, 
-# 157 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-                                                             _Bool 
-# 157 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-                                                                  *write_protected);
-# 172 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_set_chip_write_protect(esp_flash_t *chip, 
-# 172 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-                                                             _Bool 
-# 172 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-                                                                  write_protect);
-# 186 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_get_protectable_regions(const esp_flash_t *chip, const esp_flash_region_t **out_regions, uint32_t *out_num_regions);
-# 202 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_get_protected_region(esp_flash_t *chip, const esp_flash_region_t *region, 
-# 202 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-                                                                                             _Bool 
-# 202 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-                                                                                                  *out_protected);
-# 217 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_set_protected_region(esp_flash_t *chip, const esp_flash_region_t *region, 
-# 217 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-                                                                                             _Bool 
-# 217 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-                                                                                                  protect);
-# 237 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_read(esp_flash_t *chip, void *buffer, uint32_t address, uint32_t length);
-# 250 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_write(esp_flash_t *chip, const void *buffer, uint32_t address, uint32_t length);
-# 267 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_write_encrypted(esp_flash_t *chip, uint32_t address, const void *buffer, uint32_t length);
-# 281 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-esp_err_t esp_flash_read_encrypted(esp_flash_t *chip, uint32_t address, void *out_buffer, uint32_t length);
-
-
-
-
-
-extern esp_flash_t *esp_flash_default_chip;
-# 301 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-static inline 
-# 301 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h" 3 4
-             _Bool 
-# 301 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_flash.h"
-                  esp_flash_is_quad_mode(const esp_flash_t *chip)
-{
-    return (chip->read_mode == SPI_FLASH_QIO) || (chip->read_mode == SPI_FLASH_QOUT);
-}
-# 23 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
-# 35 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-typedef enum {
-    FLASH_WRAP_MODE_8B = 0,
-    FLASH_WRAP_MODE_16B = 2,
-    FLASH_WRAP_MODE_32B = 4,
-    FLASH_WRAP_MODE_64B = 6,
-    FLASH_WRAP_MODE_DISABLE = 1
-} spi_flash_wrap_mode_t;
-# 51 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-esp_err_t spi_flash_wrap_set(spi_flash_wrap_mode_t mode);
-# 62 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-void spi_flash_init(void);
-# 71 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-size_t spi_flash_get_chip_size(void);
-# 80 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 1
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 1
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 2
+# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+void spi_flash_init();
+# 54 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+size_t spi_flash_get_chip_size();
+# 63 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_erase_sector(size_t sector);
-# 91 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_erase_range(size_t start_address, size_t size);
-# 110 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_write(size_t dest_addr, const void *src, size_t size);
-# 133 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 116 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_write_encrypted(size_t dest_addr, const void *src, size_t size);
-# 156 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 139 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_read(size_t src_addr, void *dest, size_t size);
-# 173 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 156 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_read_encrypted(size_t src, void *dest, size_t size);
 
 
@@ -2096,21 +1417,21 @@ typedef enum {
 
 
 typedef uint32_t spi_flash_mmap_handle_t;
-# 210 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 193 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_mmap(size_t src_addr, size_t size, spi_flash_mmap_memory_t memory,
                          const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 236 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 219 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 esp_err_t spi_flash_mmap_pages(const int *pages, size_t page_count, spi_flash_mmap_memory_t memory,
                          const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 250 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 233 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_munmap(spi_flash_mmap_handle_t handle);
-# 259 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-void spi_flash_mmap_dump(void);
-# 272 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 242 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+void spi_flash_mmap_dump();
+# 255 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 uint32_t spi_flash_mmap_get_free_pages(spi_flash_mmap_memory_t memory);
-# 288 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 271 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 size_t spi_flash_cache2phys(const void *cached);
-# 308 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 const void *spi_flash_phys2cache(size_t phys_offs, spi_flash_mmap_memory_t memory);
 
 
@@ -2118,17 +1439,10 @@ const void *spi_flash_phys2cache(size_t phys_offs, spi_flash_mmap_memory_t memor
 
 
 
-# 314 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+# 297 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
 _Bool 
-# 314 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
-    spi_flash_cache_enabled(void);
-
-
-
-
-
-
-void spi_flash_enable_cache(uint32_t cpuid);
+# 297 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+    spi_flash_cache_enabled();
 
 
 
@@ -2151,11 +1465,11 @@ typedef void (*spi_flash_op_unlock_func_t)(void);
 
 
 typedef 
-# 343 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
+# 319 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h" 3 4
        _Bool 
-# 343 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 319 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
             (*spi_flash_is_safe_write_address_t)(size_t addr, size_t size);
-# 376 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 352 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 typedef struct {
     spi_flash_guard_start_func_t start;
     spi_flash_guard_end_func_t end;
@@ -2165,7 +1479,7 @@ typedef struct {
     spi_flash_is_safe_write_address_t is_safe_write_address;
 
 } spi_flash_guard_funcs_t;
-# 394 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_spi_flash.h"
+# 370 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_spi_flash.h"
 void spi_flash_guard_set(const spi_flash_guard_funcs_t* funcs);
 
 
@@ -2174,7 +1488,7 @@ void spi_flash_guard_set(const spi_flash_guard_funcs_t* funcs);
 
 
 
-const spi_flash_guard_funcs_t *spi_flash_guard_get(void);
+const spi_flash_guard_funcs_t *spi_flash_guard_get();
 
 
 
@@ -2188,8 +1502,8 @@ extern const spi_flash_guard_funcs_t g_flash_guard_default_ops;
 
 
 extern const spi_flash_guard_funcs_t g_flash_guard_no_os_ops;
-# 24 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 2
-# 40 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 2
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef enum {
     ESP_PARTITION_TYPE_APP = 0x00,
     ESP_PARTITION_TYPE_DATA = 0x01,
@@ -2234,29 +1548,28 @@ typedef enum {
 
     ESP_PARTITION_SUBTYPE_ANY = 0xff,
 } esp_partition_subtype_t;
-# 93 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 91 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef struct esp_partition_iterator_opaque_* esp_partition_iterator_t;
-# 102 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 100 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 typedef struct {
-    esp_flash_t* flash_chip;
     esp_partition_type_t type;
     esp_partition_subtype_t subtype;
     uint32_t address;
     uint32_t size;
     char label[17];
     
-# 109 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
+# 106 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
    _Bool 
-# 109 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 106 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
         encrypted;
 } esp_partition_t;
-# 127 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 124 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_partition_iterator_t esp_partition_find(esp_partition_type_t type, esp_partition_subtype_t subtype, const char* label);
-# 142 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 139 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t* esp_partition_find_first(esp_partition_type_t type, esp_partition_subtype_t subtype, const char* label);
-# 152 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 149 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t* esp_partition_get(esp_partition_iterator_t iterator);
-# 163 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 160 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_partition_iterator_t esp_partition_next(esp_partition_iterator_t iterator);
 
 
@@ -2266,46 +1579,40 @@ esp_partition_iterator_t esp_partition_next(esp_partition_iterator_t iterator);
 
 
 void esp_partition_iterator_release(esp_partition_iterator_t iterator);
-# 191 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 188 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 const esp_partition_t *esp_partition_verify(const esp_partition_t *partition);
-# 210 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 207 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_read(const esp_partition_t* partition,
                              size_t src_offset, void* dst, size_t size);
-# 243 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 240 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_write(const esp_partition_t* partition,
                              size_t dst_offset, const void* src, size_t size);
-# 262 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 259 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_erase_range(const esp_partition_t* partition,
-                                    size_t offset, size_t size);
-# 290 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
-esp_err_t esp_partition_mmap(const esp_partition_t* partition, size_t offset, size_t size,
+                                    uint32_t start_addr, uint32_t size);
+# 287 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
+esp_err_t esp_partition_mmap(const esp_partition_t* partition, uint32_t offset, uint32_t size,
                              spi_flash_mmap_memory_t memory,
                              const void** out_ptr, spi_flash_mmap_handle_t* out_handle);
-# 312 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 309 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 esp_err_t esp_partition_get_sha256(const esp_partition_t *partition, uint8_t *sha_256);
-# 324 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
 
-# 324 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
+# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h" 3 4
 _Bool 
-# 324 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
+# 321 "/home/dieter/SoftwareDevelop/esp-idf/components/spi_flash/include/esp_partition.h"
     esp_partition_check_identity(const esp_partition_t *partition_1, const esp_partition_t *partition_2);
-# 347 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
-esp_err_t esp_partition_register_external(esp_flash_t* flash_chip, size_t offset, size_t size,
-                                     const char* label, esp_partition_type_t type, esp_partition_subtype_t subtype,
-                                     const esp_partition_t** out_partition);
-# 361 "/home/dieter/Development/esp-idf/components/spi_flash/include/esp_partition.h"
-esp_err_t esp_partition_deregister_external(const esp_partition_t* partition);
-# 23 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
        
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-       
-# 54 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h"
 typedef enum {
     ESP_OTA_IMG_NEW = 0x0U,
     ESP_OTA_IMG_PENDING_VERIFY = 0x1U,
@@ -2334,46 +1641,36 @@ typedef struct {
 
 
 typedef struct {
-    uint16_t magic;
-    uint8_t type;
+ uint16_t magic;
+ uint8_t type;
     uint8_t subtype;
     esp_partition_pos_t pos;
-    uint8_t label[16];
+ uint8_t label[16];
     uint32_t flags;
 } esp_partition_info_t;
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
 esp_err_t esp_partition_table_verify(const esp_partition_info_t *partition_table, 
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
                                                                                  _Bool 
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
                                                                                       log_errors, int *num_partitions);
-# 109 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-
-# 109 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
-_Bool 
-# 109 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-    esp_partition_main_flash_region_safe(size_t addr, size_t size);
-# 19 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h"
-       
 
 
 
-
-
-typedef enum {
-    ESP_CHIP_ID_ESP32 = 0x0000,
-    ESP_CHIP_ID_INVALID = 0xFFFF
-} __attribute__((packed)) esp_chip_id_t;
-
-
-_Static_assert(sizeof(esp_chip_id_t) == 2, "esp_chip_id_t should be 16 bit");
-
-
-
-
-
+inline static __attribute__((deprecated)) esp_err_t esp_partition_table_basic_verify(const esp_partition_info_t *partition_table, 
+# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+                                                                                                                                 _Bool 
+# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+                                                                                                                                      log_errors, int *num_partitions)
+{
+    return esp_partition_table_verify(partition_table, log_errors, num_partitions);
+}
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
+# 29 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 typedef enum {
     ESP_IMAGE_SPI_MODE_QIO,
     ESP_IMAGE_SPI_MODE_QOUT,
@@ -2384,16 +1681,12 @@ typedef enum {
 } esp_image_spi_mode_t;
 
 
-
-
 typedef enum {
     ESP_IMAGE_SPI_SPEED_40M,
     ESP_IMAGE_SPI_SPEED_26M,
     ESP_IMAGE_SPI_SPEED_20M,
     ESP_IMAGE_SPI_SPEED_80M = 0xF
 } esp_image_spi_freq_t;
-
-
 
 
 typedef enum {
@@ -2410,31 +1703,42 @@ typedef enum {
 
 
 
+
+typedef enum {
+    ESP_CHIP_ID_ESP32 = 0x0000,
+    ESP_CHIP_ID_INVALID = 0xFFFF
+} __attribute__((packed)) esp_chip_id_t;
+
+
+_Static_assert(sizeof(esp_chip_id_t) == 2, "esp_chip_id_t should be 16 bit");
+
+
+
 typedef struct {
     uint8_t magic;
     uint8_t segment_count;
+
     uint8_t spi_mode;
+
     uint8_t spi_speed: 4;
+
     uint8_t spi_size: 4;
     uint32_t entry_addr;
-    uint8_t wp_pin;
 
+
+    uint8_t wp_pin;
 
     uint8_t spi_pin_drv[3];
     esp_chip_id_t chip_id;
     uint8_t min_chip_rev;
     uint8_t reserved[8];
+
+
+
     uint8_t hash_appended;
-
-
-
-
 } __attribute__((packed)) esp_image_header_t;
 
-
 _Static_assert(sizeof(esp_image_header_t) == 24, "binary image header should be 24 bytes");
-
-
 
 
 
@@ -2443,7 +1747,12 @@ typedef struct {
     uint32_t load_addr;
     uint32_t data_len;
 } esp_image_segment_header_t;
-# 109 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h"
+
+
+
+
+
+
 typedef struct {
     uint32_t magic_word;
     uint32_t secure_version;
@@ -2456,11 +1765,11 @@ typedef struct {
     uint8_t app_elf_sha256[32];
     uint32_t reserv2[20];
 } esp_app_desc_t;
-
-
 _Static_assert(sizeof(esp_app_desc_t) == 256, "esp_app_desc_t should be 256 bytes");
-# 20 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
-# 36 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+
+
+
+
 typedef struct {
   uint32_t start_addr;
   esp_image_header_t image;
@@ -2470,33 +1779,23 @@ typedef struct {
   uint8_t image_digest[32];
 } esp_image_metadata_t;
 
+
 typedef enum {
     ESP_IMAGE_VERIFY,
     ESP_IMAGE_VERIFY_SILENT,
 
 
 
-
 } esp_image_load_mode_t;
-
-typedef struct {
-    esp_partition_pos_t partition;
-    uint16_t reboot_counter;
-    uint16_t reserve;
-
-
-
-    uint32_t crc;
-} rtc_retain_mem_t;
-# 107 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 174 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
+esp_err_t esp_image_load(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data) __attribute__((deprecated));
+# 201 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 133 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 227 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t bootloader_load_image(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 151 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
-esp_err_t bootloader_load_image_no_verify(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 161 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader(uint32_t *length);
-# 170 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 246 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader_data(esp_image_metadata_t *data);
 
 
@@ -2508,8 +1807,8 @@ typedef struct {
     uint32_t irom_load_addr;
     uint32_t irom_size;
 } esp_image_flash_mapping_t;
-# 24 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 2
-# 48 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 2
+# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 typedef uint32_t esp_ota_handle_t;
 
 
@@ -2519,23 +1818,23 @@ typedef uint32_t esp_ota_handle_t;
 
 
 const esp_app_desc_t *esp_ota_get_app_description(void);
-# 66 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 66 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 int esp_ota_get_app_elf_sha256(char* dst, size_t size);
-# 98 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 98 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_begin(const esp_partition_t* partition, size_t image_size, esp_ota_handle_t* out_handle);
-# 118 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 118 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_write(esp_ota_handle_t handle, const void* data, size_t size);
-# 134 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 134 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_end(esp_ota_handle_t handle);
-# 150 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 150 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_set_boot_partition(const esp_partition_t* partition);
-# 169 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 169 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_boot_partition(void);
-# 185 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 185 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_running_partition(void);
-# 200 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 200 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 const esp_partition_t* esp_ota_get_next_update_partition(const esp_partition_t *start_from);
-# 216 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 216 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_get_partition_description(const esp_partition_t *partition, esp_app_desc_t *app_desc);
 
 
@@ -2544,30 +1843,34 @@ esp_err_t esp_ota_get_partition_description(const esp_partition_t *partition, es
 
 
 
-esp_err_t esp_ota_mark_app_valid_cancel_rollback(void);
-# 236 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
-esp_err_t esp_ota_mark_app_invalid_rollback_and_reboot(void);
+esp_err_t esp_ota_mark_app_valid_cancel_rollback();
+# 236 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
+esp_err_t esp_ota_mark_app_invalid_rollback_and_reboot();
 
 
 
 
 
 
-const esp_partition_t* esp_ota_get_last_invalid_partition(void);
-# 256 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+const esp_partition_t* esp_ota_get_last_invalid_partition();
+# 256 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_get_state_partition(const esp_partition_t *partition, esp_ota_img_states_t *ota_state);
-# 265 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 265 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 esp_err_t esp_ota_erase_last_boot_app_partition(void);
-# 277 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
 
-# 277 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h" 3 4
+# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h" 3 4
 _Bool 
-# 277 "/home/dieter/Development/esp-idf/components/app_update/include/esp_ota_ops.h"
+# 277 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/include/esp_ota_ops.h"
     esp_ota_check_rollback_is_possible(void);
-# 18 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 2
-
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 2
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/app_update/esp_app_desc.c" 2
 
 
 const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
@@ -2575,15 +1878,15 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .version = "1",
+    .version = "c435ef2-dirty",
 
 
 
 
 
-    .project_name = "projekt_ei",
+    .project_name = "dev_M5Stack",
 
-    .idf_ver = "v4.1-dev-1086-g93a8603c5-dirty",
+    .idf_ver = "v3.3.2-dirty",
 
 
 
@@ -2592,8 +1895,8 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-    .time = "18:34:38",
-    .date = "Mar 14 2020",
+    .time = "18:59:37",
+    .date = "Jun  9 2020",
 
 
 
@@ -2602,11 +1905,11 @@ const __attribute__((section(".rodata_desc"))) esp_app_desc_t esp_app_desc = {
 
 
 
-_Static_assert(sizeof("1") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
+_Static_assert(sizeof("c435ef2-dirty") <= sizeof(esp_app_desc.version), "PROJECT_VER is longer than version field in structure");
 
-_Static_assert(sizeof("v4.1-dev-1086-g93a8603c5-dirty") <= sizeof(esp_app_desc.idf_ver), "IDF_VER is longer than idf_ver field in structure");
+_Static_assert(sizeof("v3.3.2-dirty") <= sizeof(esp_app_desc.idf_ver), "IDF_VER is longer than idf_ver field in structure");
 
-_Static_assert(sizeof("projekt_ei") <= sizeof(esp_app_desc.project_name), "PROJECT_NAME is longer than project_name field in structure");
+_Static_assert(sizeof("dev_M5Stack") <= sizeof(esp_app_desc.project_name), "PROJECT_NAME is longer than project_name field in structure");
 
 
 const esp_app_desc_t *esp_ota_get_app_description(void)
@@ -2625,27 +1928,7 @@ static inline char __attribute__((section(".iram1" "." "0"))) to_hex_digit(unsig
 
 int __attribute__((section(".iram1" "." "1"))) esp_ota_get_app_elf_sha256(char* dst, size_t size)
 {
-    size_t n = 
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 3 4
-              ((
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-              (size - 1) / 2
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 3 4
-              ) < (
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-              sizeof(esp_app_desc.app_elf_sha256)
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 3 4
-              ) ? (
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-              (size - 1) / 2
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 3 4
-              ) : (
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-              sizeof(esp_app_desc.app_elf_sha256)
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c" 3 4
-              ))
-# 77 "/home/dieter/Development/esp-idf/components/app_update/esp_app_desc.c"
-                                                                      ;
+    size_t n = (((size - 1) / 2) < (sizeof(esp_app_desc.app_elf_sha256)) ? ((size - 1) / 2) : (sizeof(esp_app_desc.app_elf_sha256)));
     const uint8_t* src = esp_app_desc.app_elf_sha256;
     for (size_t i = 0; i < n; ++i) {
         dst[2*i] = to_hex_digit(src[i] >> 4);

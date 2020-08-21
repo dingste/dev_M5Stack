@@ -2,7 +2,7 @@
 	.text
 .Ltext0:
 	.global	tft_Dejavu18
-	.section	.rodata.tft_Dejavu18,"a"
+	.section	.rodata.tft_Dejavu18,"a",@progbits
 	.type	tft_Dejavu18, @object
 	.size	tft_Dejavu18, 1828
 tft_Dejavu18:
@@ -1836,10 +1836,10 @@ tft_Dejavu18:
 	.byte	-1
 	.text
 .Letext0:
-	.file 1 "/home/dieter/Development/ProjektEi/components/tft/DejaVuSans18.c"
+	.file 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans18.c"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x55
+	.4byte	0x4b
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -1847,36 +1847,32 @@ tft_Dejavu18:
 	.4byte	.LASF2
 	.byte	0xc
 	.4byte	.LASF3
-	.4byte	.LASF4
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
-	.4byte	0x41
-	.4byte	0x2e
+	.4byte	0x31
+	.4byte	0x2a
 	.uleb128 0x3
-	.4byte	0x33
+	.4byte	0x2a
 	.2byte	0x723
 	.byte	0
 	.uleb128 0x4
-	.4byte	0x1d
-	.uleb128 0x5
 	.byte	0x4
 	.byte	0x7
 	.4byte	.LASF0
-	.uleb128 0x5
+	.uleb128 0x4
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF1
-	.uleb128 0x4
-	.4byte	0x3a
-	.uleb128 0x6
-	.4byte	.LASF5
+	.uleb128 0x5
+	.4byte	.LASF4
 	.byte	0x1
 	.byte	0x1e
-	.byte	0x15
-	.4byte	0x2e
+	.4byte	0x49
 	.uleb128 0x5
 	.byte	0x3
 	.4byte	tft_Dejavu18
+	.uleb128 0x6
+	.4byte	0x19
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -1888,8 +1884,6 @@ tft_Dejavu18:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x10
 	.uleb128 0x17
@@ -1914,13 +1908,6 @@ tft_Dejavu18:
 	.byte	0
 	.byte	0
 	.uleb128 0x4
-	.uleb128 0x26
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x5
 	.uleb128 0x24
 	.byte	0
 	.uleb128 0xb
@@ -1931,7 +1918,7 @@ tft_Dejavu18:
 	.uleb128 0xe
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x5
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -1940,14 +1927,19 @@ tft_Dejavu18:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3f
 	.uleb128 0x19
 	.uleb128 0x2
 	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x6
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1966,14 +1958,12 @@ tft_Dejavu18:
 	.section	.debug_str,"MS",@progbits,1
 .LASF1:
 	.string	"unsigned char"
-.LASF3:
-	.string	"/home/dieter/Development/ProjektEi/components/tft/DejaVuSans18.c"
-.LASF4:
-	.string	"/home/dieter/Development/ProjektEi/build/tft"
-.LASF5:
-	.string	"tft_Dejavu18"
 .LASF0:
-	.string	"unsigned int"
+	.string	"sizetype"
 .LASF2:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF3:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans18.c"
+.LASF4:
+	.string	"tft_Dejavu18"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

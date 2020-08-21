@@ -1,6 +1,8 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.5)
+project(dev_M5Stack)
+
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-set(CMAKE_CXX_STANDARD 17)
+#set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCES main.cpp
         main.cpp

@@ -1,140 +1,121 @@
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-# 1 "/home/dieter/Development/ProjektEi/build/nghttp//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/nghttp//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-# 25 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 1
-# 29 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/private_include/config.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/nghttp/private_include/config.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
-# 29 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 1
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/config.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 30 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 43 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
 
 
-typedef __gnuc_va_list va_list;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
+
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -145,32 +126,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -185,35 +144,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -222,21 +153,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -255,42 +185,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-typedef __builtin_va_list __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -298,10 +193,8 @@ typedef __builtin_va_list __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -352,12 +245,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -374,7 +267,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -391,13 +284,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -425,7 +318,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -436,7 +329,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -446,7 +339,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -492,12 +385,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -527,8 +420,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -537,183 +432,19 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
-typedef __int8_t int8_t ;
-
-
-
-typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 65 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef long time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -732,121 +463,109 @@ typedef unsigned long u_long;
 
 
 
-
-
 typedef unsigned short ushort;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 
 
 
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
 typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
 typedef long daddr_t;
 
 
 
 typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
 typedef __dev_t dev_t;
-
-
-
 typedef __uid_t uid_t;
-
-
-
 typedef __gid_t gid_t;
 
 
 
 
-typedef __pid_t pid_t;
+
+typedef int pid_t;
 
 
 
 
-typedef __key_t key_t;
 
 
 
+typedef long key_t;
 
 typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
 
 
 
 
 
-typedef __timer_t timer_t;
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
 
 
 
 
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
+typedef unsigned long timer_t;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -855,19 +574,20 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-
-
-
-
-
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
+
+
+
+
+
 } pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -876,15 +596,10 @@ typedef struct {
 
 
 
-
-
 typedef __uint32_t pthread_cond_t;
-
-
 
 typedef struct {
   int is_initialized;
-  clock_t clock;
 
 
 
@@ -898,17 +613,11 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
 typedef __FILE FILE;
-
-
 
 
 
@@ -919,14 +628,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stdio.h" 1 3 4
-# 80 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-char * ctermid (char *);
-
-
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -937,22 +641,22 @@ int fflush (FILE *);
 FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
 void setbuf (FILE *restrict, char *restrict);
 int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fscanf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int printf (const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int scanf (const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int sscanf (const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
 int fgetc (FILE *);
 char * fgets (char *restrict, int, FILE *restrict);
 int fputc (int, FILE *);
@@ -964,8 +668,8 @@ int putc (int, FILE *);
 int putchar (int);
 int puts (const char *);
 int ungetc (int, FILE *);
-size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
 
 
 
@@ -985,104 +689,90 @@ int ferror (FILE *);
 void perror (const char *);
 
 FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 257 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
-off_t ftello (FILE *);
+off_t ftello ( FILE *);
 
 
 
-int fcloseall (void);
 
 
 
-int snprintf (char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
 
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-int asprintf (char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int vasprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-
-int asiprintf (char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-char * asniprintf (char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-
-int diprintf (int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-int fiprintf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fiscanf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int iprintf (const char *, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int iscanf (const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int siprintf (char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int siscanf (const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int sniprintf (char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vasiprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vdiprintf (int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiprintf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiscanf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int viprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int viscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsiprintf (char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vsiscanf (const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-# 339 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
-
-
+int getw (FILE *);
 int pclose (FILE *);
 FILE * popen (const char *, const char *);
-
-
-
+int putw (int, FILE *);
 void setbuffer (FILE *, char *, int);
 int setlinebuf (FILE *);
-
-
-
-int getw (FILE *);
-int putw (int, FILE *);
-
-
 int getc_unlocked (FILE *);
 int getchar_unlocked (void);
 void flockfile (FILE *);
@@ -1090,33 +780,38 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 374 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int dprintf (int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
 FILE * fmemopen (void *restrict, size_t, const char *restrict);
 
 
 FILE * open_memstream (char **, size_t *);
-int vdprintf (int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
 
 int renameat (int, const char *, int, const char *);
-# 396 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int _asiprintf_r (struct _reent *, char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _diprintf_r (struct _reent *, int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _dprintf_r (struct _reent *, int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fclose_r (struct _reent *, FILE *);
 int _fcloseall_r (struct _reent *);
 FILE * _fdopen_r (struct _reent *, int, const char *);
@@ -1132,110 +827,110 @@ char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
 int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
 int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
 
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
 FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
 FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fpurge_r (struct _reent *, FILE *);
 int _fputc_r (struct _reent *, int, FILE *);
 int _fputc_unlocked_r (struct _reent *, int, FILE *);
 int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
 int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 int _fseek_r (struct _reent *, FILE *, long, int);
 int _fseeko_r (struct _reent *, FILE *, _off_t, int);
 long _ftell_r (struct _reent *, FILE *);
 _off_t _ftello_r (struct _reent *, FILE *);
 void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
 int _getc_r (struct _reent *, FILE *);
 int _getc_unlocked_r (struct _reent *, FILE *);
 int _getchar_r (struct _reent *);
 int _getchar_unlocked_r (struct _reent *);
 char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _iscanf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
 FILE * _open_memstream_r (struct _reent *, char **, size_t *);
 void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int _putc_r (struct _reent *, int, FILE *);
 int _putc_unlocked_r (struct _reent *, int, FILE *);
 int _putchar_unlocked_r (struct _reent *, int);
 int _putchar_r (struct _reent *, int);
 int _puts_r (struct _reent *, const char *);
 int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *,
-      const char *_old, const char *_new);
-int _scanf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int _siprintf_r (struct _reent *, char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _siscanf_r (struct _reent *, const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 char * _tempnam_r (struct _reent *, const char *, const char *);
 FILE * _tmpfile_r (struct _reent *);
 char * _tmpnam_r (struct _reent *, char *);
 int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
 
 
 
@@ -1251,32 +946,33 @@ int fileno_unlocked (FILE *);
 int fflush_unlocked (FILE *);
 int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 577 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 601 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE *funopen (const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-FILE *_funopen_r (struct _reent *, const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-# 624 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
 typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
 typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
      size_t __n);
@@ -1296,73 +992,36 @@ typedef struct
   cookie_seek_function_t *seek;
   cookie_close_function_t *close;
 } cookie_io_functions_t;
-FILE *fopencookie (void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-FILE *_fopencookie_r (struct _reent *, void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-# 687 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-
-
-
- if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
-  return (*_p->_p++ = _c);
- else
-  return (__swbuf_r(_ptr, _c, _p));
-}
-# 741 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline int
-_getchar_unlocked(void)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
-}
-
-static __inline int
-_putchar_unlocked(int _c)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
-}
-# 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-
-# 10 "/home/dieter/Development/esp-idf/components/nghttp/private_include/config.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -1380,6 +1039,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -1390,18 +1051,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -1411,11 +1067,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -1444,21 +1100,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -1473,26 +1120,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -1507,54 +1147,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -1578,40 +1206,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -1623,84 +1247,23 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
-
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 11 "/home/dieter/Development/esp-idf/components/nghttp/private_include/config.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -1724,55 +1287,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -1781,7 +1358,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -1791,55 +1369,37 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+
+
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/config.h" 2
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+typedef __int8_t int8_t ;
+typedef __uint8_t uint8_t ;
 
 
 
 
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 12 "/home/dieter/Development/esp-idf/components/nghttp/private_include/config.h" 2
-# 30 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 1
-# 45 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
 typedef __int_least8_t int_least8_t;
 typedef __uint_least8_t uint_least8_t;
+
+
+
+
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
 
 
 
@@ -1850,38 +1410,59 @@ typedef __uint_least16_t uint_least16_t;
 
 
 
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
+
+
+
+
 typedef __int_least32_t int_least32_t;
 typedef __uint_least32_t uint_least32_t;
 
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 2 3 4
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 2 3 4
-# 312 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/inttypes.h" 3 4
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h" 2
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/inttypes.h"
 typedef struct {
   intmax_t quot;
   intmax_t rem;
 } imaxdiv_t;
-
-struct _reent;
 
 
 
@@ -1890,30 +1471,24 @@ struct _reent;
 extern intmax_t imaxabs(intmax_t j);
 extern imaxdiv_t imaxdiv(intmax_t numer, intmax_t denomer);
 extern intmax_t strtoimax(const char *restrict, char **restrict, int);
-extern intmax_t _strtoimax_r(struct _reent *, const char *restrict, char **restrict, int);
 extern uintmax_t strtoumax(const char *restrict, char **restrict, int);
-extern uintmax_t _strtoumax_r(struct _reent *, const char *restrict, char **restrict, int);
 extern intmax_t wcstoimax(const wchar_t *restrict, wchar_t **restrict, int);
-extern intmax_t _wcstoimax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
 extern uintmax_t wcstoumax(const wchar_t *restrict, wchar_t **restrict, int);
-extern uintmax_t _wcstoumax_r(struct _reent *, const wchar_t *restrict, wchar_t **restrict, int);
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
 
 
-extern intmax_t strtoimax_l(const char *restrict, char **_restrict, int, locale_t);
-extern uintmax_t strtoumax_l(const char *restrict, char **_restrict, int, locale_t);
-extern intmax_t wcstoimax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
-extern uintmax_t wcstoumax_l(const wchar_t *restrict, wchar_t **_restrict, int, locale_t);
-# 46 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 49 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h" 1
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/port/include/nghttp2/nghttp2ver.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h" 2
-# 116 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
-
-# 116 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 struct nghttp2_session;
 
 
@@ -1923,7 +1498,7 @@ struct nghttp2_session;
 
 
 typedef struct nghttp2_session nghttp2_session;
-# 139 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef struct {
 
 
@@ -1946,7 +1521,7 @@ typedef struct {
   const char *proto_str;
 
 } nghttp2_info;
-# 231 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef enum {
 
 
@@ -2106,7 +1681,7 @@ typedef enum {
 
 
   NGHTTP2_ERR_CANCEL = -535,
-# 398 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
   NGHTTP2_ERR_FATAL = -900,
 
 
@@ -2121,7 +1696,7 @@ typedef enum {
 
 
   NGHTTP2_ERR_BAD_CLIENT_MAGIC = -903,
-# 420 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
   NGHTTP2_ERR_FLOODED = -904
 } nghttp2_error;
 
@@ -2157,7 +1732,7 @@ typedef struct nghttp2_rcbuf nghttp2_rcbuf;
 
 
  void nghttp2_rcbuf_incref(nghttp2_rcbuf *rcbuf);
-# 463 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 463 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_rcbuf_decref(nghttp2_rcbuf *rcbuf);
 
 
@@ -2203,9 +1778,9 @@ typedef enum {
 
 
 typedef struct {
-# 520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 520 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
   uint8_t *name;
-# 533 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
   uint8_t *value;
 
 
@@ -2339,7 +1914,7 @@ typedef enum {
 
   NGHTTP2_SETTINGS_MAX_HEADER_LIST_SIZE = 0x06
 } nghttp2_settings_id;
-# 692 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef enum {
 
 
@@ -2472,7 +2047,7 @@ typedef enum {
 
   NGHTTP2_DATA_FLAG_NO_COPY = 0x04
 } nghttp2_data_flag;
-# 884 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 884 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_data_source_read_callback)(
     nghttp2_session *session, int32_t stream_id, uint8_t *buf, size_t length,
     uint32_t *data_flags, nghttp2_data_source *source, void *user_data);
@@ -2508,7 +2083,7 @@ typedef struct {
 
   size_t padlen;
 } nghttp2_data;
-# 929 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef enum {
 
 
@@ -2779,7 +2354,7 @@ typedef struct {
 
   void *payload;
 } nghttp2_extension;
-# 1207 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef union {
 
 
@@ -2826,106 +2401,106 @@ typedef union {
 
   nghttp2_extension ext;
 } nghttp2_frame;
-# 1284 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_send_callback)(nghttp2_session *session,
                                          const uint8_t *data, size_t length,
                                          int flags, void *user_data);
-# 1327 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_send_data_callback)(nghttp2_session *session,
                                           nghttp2_frame *frame,
                                           const uint8_t *framehd, size_t length,
                                           nghttp2_data_source *source,
                                           void *user_data);
-# 1357 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_recv_callback)(nghttp2_session *session, uint8_t *buf,
                                          size_t length, int flags,
                                          void *user_data);
-# 1395 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_frame_recv_callback)(nghttp2_session *session,
                                               const nghttp2_frame *frame,
                                               void *user_data);
-# 1423 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_invalid_frame_recv_callback)(
     nghttp2_session *session, const nghttp2_frame *frame, int lib_error_code,
     void *user_data);
-# 1457 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_data_chunk_recv_callback)(nghttp2_session *session,
                                                    uint8_t flags,
                                                    int32_t stream_id,
                                                    const uint8_t *data,
                                                    size_t len, void *user_data);
-# 1489 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_before_frame_send_callback)(nghttp2_session *session,
                                                   const nghttp2_frame *frame,
                                                   void *user_data);
-# 1508 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_frame_send_callback)(nghttp2_session *session,
                                               const nghttp2_frame *frame,
                                               void *user_data);
-# 1533 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_frame_not_send_callback)(nghttp2_session *session,
                                                   const nghttp2_frame *frame,
                                                   int lib_error_code,
                                                   void *user_data);
-# 1561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_stream_close_callback)(nghttp2_session *session,
                                                 int32_t stream_id,
                                                 uint32_t error_code,
                                                 void *user_data);
-# 1624 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_begin_headers_callback)(nghttp2_session *session,
                                                  const nghttp2_frame *frame,
                                                  void *user_data);
-# 1703 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1703 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_header_callback)(nghttp2_session *session,
                                           const nghttp2_frame *frame,
                                           const uint8_t *name, size_t namelen,
                                           const uint8_t *value, size_t valuelen,
                                           uint8_t flags, void *user_data);
-# 1729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1729 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_header_callback2)(nghttp2_session *session,
                                            const nghttp2_frame *frame,
                                            nghttp2_rcbuf *name,
                                            nghttp2_rcbuf *value, uint8_t flags,
                                            void *user_data);
-# 1766 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_invalid_header_callback)(
     nghttp2_session *session, const nghttp2_frame *frame, const uint8_t *name,
     size_t namelen, const uint8_t *value, size_t valuelen, uint8_t flags,
     void *user_data);
-# 1798 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1798 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_invalid_header_callback2)(
     nghttp2_session *session, const nghttp2_frame *frame, nghttp2_rcbuf *name,
     nghttp2_rcbuf *value, uint8_t flags, void *user_data);
-# 1819 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_select_padding_callback)(nghttp2_session *session,
                                                    const nghttp2_frame *frame,
                                                    size_t max_payloadlen,
                                                    void *user_data);
-# 1848 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_data_source_read_length_callback)(
     nghttp2_session *session, uint8_t frame_type, int32_t stream_id,
     int32_t session_remote_window_size, int32_t stream_remote_window_size,
     uint32_t remote_max_frame_size, void *user_data);
-# 1875 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_begin_frame_callback)(nghttp2_session *session,
                                                const nghttp2_frame_hd *hd,
                                                void *user_data);
-# 1898 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_on_extension_chunk_recv_callback)(
     nghttp2_session *session, const nghttp2_frame_hd *hd, const uint8_t *data,
     size_t len, void *user_data);
-# 1935 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1935 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_unpack_extension_callback)(nghttp2_session *session,
                                                  void **payload,
                                                  const nghttp2_frame_hd *hd,
                                                  void *user_data);
-# 1967 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1967 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef ssize_t (*nghttp2_pack_extension_callback)(nghttp2_session *session,
                                                    uint8_t *buf, size_t len,
                                                    const nghttp2_frame *frame,
                                                    void *user_data);
-# 1994 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 1994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef int (*nghttp2_error_callback)(nghttp2_session *session, const char *msg,
                                       size_t len, void *user_data);
 
@@ -2938,7 +2513,7 @@ struct nghttp2_session_callbacks;
 
 
 typedef struct nghttp2_session_callbacks nghttp2_session_callbacks;
-# 2024 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_callbacks_new(nghttp2_session_callbacks **callbacks_ptr);
 
@@ -2950,10 +2525,10 @@ nghttp2_session_callbacks_new(nghttp2_session_callbacks **callbacks_ptr);
 
  void
 nghttp2_session_callbacks_del(nghttp2_session_callbacks *callbacks);
-# 2044 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2044 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_send_callback(
     nghttp2_session_callbacks *cbs, nghttp2_send_callback send_callback);
-# 2055 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2055 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_recv_callback(
     nghttp2_session_callbacks *cbs, nghttp2_recv_callback recv_callback);
 
@@ -2966,7 +2541,7 @@ nghttp2_session_callbacks_del(nghttp2_session_callbacks *callbacks);
  void nghttp2_session_callbacks_set_on_frame_recv_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_frame_recv_callback on_frame_recv_callback);
-# 2075 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2075 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_session_callbacks_set_on_invalid_frame_recv_callback(
     nghttp2_session_callbacks *cbs,
@@ -3028,7 +2603,7 @@ nghttp2_session_callbacks_set_on_invalid_frame_recv_callback(
  void nghttp2_session_callbacks_set_on_begin_headers_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_begin_headers_callback on_begin_headers_callback);
-# 2146 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_on_header_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_header_callback on_header_callback);
@@ -3042,7 +2617,7 @@ nghttp2_session_callbacks_set_on_invalid_frame_recv_callback(
  void nghttp2_session_callbacks_set_on_header_callback2(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_header_callback2 on_header_callback2);
-# 2169 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_on_invalid_header_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_invalid_header_callback on_invalid_header_callback);
@@ -3056,7 +2631,7 @@ nghttp2_session_callbacks_set_on_invalid_frame_recv_callback(
  void nghttp2_session_callbacks_set_on_invalid_header_callback2(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_invalid_header_callback2 on_invalid_header_callback2);
-# 2190 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_select_padding_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_select_padding_callback select_padding_callback);
@@ -3080,7 +2655,7 @@ nghttp2_session_callbacks_set_data_source_read_length_callback(
  void nghttp2_session_callbacks_set_on_begin_frame_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_on_begin_frame_callback on_begin_frame_callback);
-# 2221 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_session_callbacks_set_send_data_callback(
     nghttp2_session_callbacks *cbs,
     nghttp2_send_data_callback send_data_callback);
@@ -3156,7 +2731,7 @@ typedef void *(*nghttp2_calloc)(size_t nmemb, size_t size, void *mem_user_data);
 
 
 typedef void *(*nghttp2_realloc)(void *ptr, size_t size, void *mem_user_data);
-# 2336 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef struct {
 
 
@@ -3190,7 +2765,7 @@ struct nghttp2_option;
 
 
 typedef struct nghttp2_option nghttp2_option;
-# 2384 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_option_new(nghttp2_option **option_ptr);
 
 
@@ -3200,70 +2775,70 @@ typedef struct nghttp2_option nghttp2_option;
 
 
  void nghttp2_option_del(nghttp2_option *option);
-# 2404 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2404 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_no_auto_window_update(nghttp2_option *option, int val);
-# 2422 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2422 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_peer_max_concurrent_streams(nghttp2_option *option,
                                                uint32_t val);
-# 2444 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_no_recv_client_magic(nghttp2_option *option, int val);
-# 2460 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_option_set_no_http_messaging(nghttp2_option *option,
                                                          int val);
-# 2478 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2478 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_max_reserved_remote_streams(nghttp2_option *option,
                                                uint32_t val);
-# 2495 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2495 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_user_recv_extension_type(nghttp2_option *option,
                                             uint8_t type);
-# 2515 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_builtin_recv_extension_type(nghttp2_option *option,
                                                uint8_t type);
-# 2530 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_option_set_no_auto_ping_ack(nghttp2_option *option,
                                                         int val);
-# 2544 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_max_send_header_block_length(nghttp2_option *option,
                                                 size_t val);
-# 2557 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_option_set_max_deflate_dynamic_table_size(nghttp2_option *option,
                                                   size_t val);
-# 2568 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2568 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_option_set_no_closed_streams(nghttp2_option *option,
                                                          int val);
-# 2592 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_client_new(nghttp2_session **session_ptr,
                            const nghttp2_session_callbacks *callbacks,
                            void *user_data);
-# 2618 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2618 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_server_new(nghttp2_session **session_ptr,
                            const nghttp2_session_callbacks *callbacks,
                            void *user_data);
-# 2644 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_client_new2(nghttp2_session **session_ptr,
                             const nghttp2_session_callbacks *callbacks,
                             void *user_data, const nghttp2_option *option);
-# 2670 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_server_new2(nghttp2_session **session_ptr,
                             const nghttp2_session_callbacks *callbacks,
                             void *user_data, const nghttp2_option *option);
-# 2696 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_client_new3(
     nghttp2_session **session_ptr, const nghttp2_session_callbacks *callbacks,
     void *user_data, const nghttp2_option *option, nghttp2_mem *mem);
-# 2721 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_server_new3(
     nghttp2_session **session_ptr, const nghttp2_session_callbacks *callbacks,
     void *user_data, const nghttp2_option *option, nghttp2_mem *mem);
@@ -3275,29 +2850,29 @@ nghttp2_session_server_new2(nghttp2_session **session_ptr,
 
 
  void nghttp2_session_del(nghttp2_session *session);
-# 2786 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_send(nghttp2_session *session);
-# 2827 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2827 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_session_mem_send(nghttp2_session *session,
                                                 const uint8_t **data_ptr);
-# 2898 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_recv(nghttp2_session *session);
-# 2937 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_session_mem_recv(nghttp2_session *session,
                                                 const uint8_t *in,
                                                 size_t inlen);
-# 2955 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_resume_data(nghttp2_session *session,
                                                int32_t stream_id);
-# 2968 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_want_read(nghttp2_session *session);
-# 2980 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_want_write(nghttp2_session *session);
-# 2994 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 2994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void *
 nghttp2_session_get_stream_user_data(nghttp2_session *session,
                                      int32_t stream_id);
-# 3016 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3016 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_set_stream_user_data(nghttp2_session *session,
                                      int32_t stream_id, void *stream_user_data);
@@ -3310,28 +2885,28 @@ nghttp2_session_set_stream_user_data(nghttp2_session *session,
 
  size_t
 nghttp2_session_get_outbound_queue_size(nghttp2_session *session);
-# 3043 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3043 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_session_get_stream_effective_recv_data_length(
     nghttp2_session *session, int32_t stream_id);
-# 3063 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3063 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_session_get_stream_effective_local_window_size(
     nghttp2_session *session, int32_t stream_id);
-# 3078 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3078 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_session_get_stream_local_window_size(
     nghttp2_session *session, int32_t stream_id);
-# 3095 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3095 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t
 nghttp2_session_get_effective_recv_data_length(nghttp2_session *session);
-# 3115 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t
 nghttp2_session_get_effective_local_window_size(nghttp2_session *session);
-# 3129 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t
 nghttp2_session_get_local_window_size(nghttp2_session *session);
-# 3146 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_session_get_stream_remote_window_size(
     nghttp2_session *session, int32_t stream_id);
-# 3156 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t
 nghttp2_session_get_remote_window_size(nghttp2_session *session);
 
@@ -3372,58 +2947,58 @@ nghttp2_session_get_hd_inflate_dynamic_table_size(nghttp2_session *session);
 
  size_t
 nghttp2_session_get_hd_deflate_dynamic_table_size(nghttp2_session *session);
-# 3223 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_terminate_session(nghttp2_session *session,
                                                      uint32_t error_code);
-# 3252 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_terminate_session2(nghttp2_session *session,
                                                       int32_t last_stream_id,
                                                       uint32_t error_code);
-# 3291 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_shutdown_notice(nghttp2_session *session);
-# 3300 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  uint32_t nghttp2_session_get_remote_settings(
     nghttp2_session *session, nghttp2_settings_id id);
-# 3310 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  uint32_t nghttp2_session_get_local_settings(
     nghttp2_session *session, nghttp2_settings_id id);
-# 3329 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_set_next_stream_id(nghttp2_session *session,
                                                       int32_t next_stream_id);
-# 3339 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  uint32_t
 nghttp2_session_get_next_stream_id(nghttp2_session *session);
-# 3365 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_consume(nghttp2_session *session,
                                            int32_t stream_id, size_t size);
-# 3384 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_consume_connection(nghttp2_session *session,
                                                       size_t size);
-# 3405 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_consume_stream(nghttp2_session *session,
                                                   int32_t stream_id,
                                                   size_t size);
-# 3438 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_change_stream_priority(nghttp2_session *session,
                                        int32_t stream_id,
                                        const nghttp2_priority_spec *pri_spec);
-# 3484 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3484 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_create_idle_stream(nghttp2_session *session, int32_t stream_id,
                                    const nghttp2_priority_spec *pri_spec);
-# 3535 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_upgrade(nghttp2_session *session,
                                            const uint8_t *settings_payload,
                                            size_t settings_payloadlen,
                                            void *stream_user_data);
-# 3579 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3579 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_session_upgrade2(nghttp2_session *session,
                                             const uint8_t *settings_payload,
                                             size_t settings_payloadlen,
                                             int head_request,
                                             void *stream_user_data);
-# 3606 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_pack_settings_payload(
     uint8_t *buf, size_t buflen, const nghttp2_settings_entry *iv, size_t niv);
 
@@ -3434,13 +3009,13 @@ nghttp2_session_create_idle_stream(nghttp2_session *session, int32_t stream_id,
 
 
  const char *nghttp2_strerror(int lib_error_code);
-# 3625 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3625 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  const char *nghttp2_http2_strerror(uint32_t error_code);
-# 3637 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3637 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_priority_spec_init(nghttp2_priority_spec *pri_spec,
                                                int32_t stream_id,
                                                int32_t weight, int exclusive);
-# 3648 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void
 nghttp2_priority_spec_default_init(nghttp2_priority_spec *pri_spec);
 
@@ -3451,60 +3026,60 @@ nghttp2_priority_spec_default_init(nghttp2_priority_spec *pri_spec);
 
  int
 nghttp2_priority_spec_check_default(const nghttp2_priority_spec *pri_spec);
-# 3732 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_submit_request(
     nghttp2_session *session, const nghttp2_priority_spec *pri_spec,
     const nghttp2_nv *nva, size_t nvlen, const nghttp2_data_provider *data_prd,
     void *stream_user_data);
-# 3801 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3801 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_submit_response(nghttp2_session *session, int32_t stream_id,
                         const nghttp2_nv *nva, size_t nvlen,
                         const nghttp2_data_provider *data_prd);
-# 3857 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3857 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_trailer(nghttp2_session *session,
                                           int32_t stream_id,
                                           const nghttp2_nv *nva, size_t nvlen);
-# 3949 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_submit_headers(
     nghttp2_session *session, uint8_t flags, int32_t stream_id,
     const nghttp2_priority_spec *pri_spec, const nghttp2_nv *nva, size_t nvlen,
     void *stream_user_data);
-# 3994 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 3994 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_data(nghttp2_session *session, uint8_t flags,
                                        int32_t stream_id,
                                        const nghttp2_data_provider *data_prd);
-# 4027 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4027 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_submit_priority(nghttp2_session *session, uint8_t flags,
                         int32_t stream_id,
                         const nghttp2_priority_spec *pri_spec);
-# 4051 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_rst_stream(nghttp2_session *session,
                                              uint8_t flags, int32_t stream_id,
                                              uint32_t error_code);
-# 4084 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4084 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_settings(nghttp2_session *session,
                                            uint8_t flags,
                                            const nghttp2_settings_entry *iv,
                                            size_t niv);
-# 4160 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4160 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t nghttp2_submit_push_promise(
     nghttp2_session *session, uint8_t flags, int32_t stream_id,
     const nghttp2_nv *nva, size_t nvlen, void *promised_stream_user_data);
-# 4189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_ping(nghttp2_session *session, uint8_t flags,
                                        const uint8_t *opaque_data);
-# 4237 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_goaway(nghttp2_session *session,
                                          uint8_t flags, int32_t last_stream_id,
                                          uint32_t error_code,
                                          const uint8_t *opaque_data,
                                          size_t opaque_data_len);
-# 4254 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4254 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int32_t
 nghttp2_session_get_last_proc_stream_id(nghttp2_session *session);
-# 4272 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_check_request_allowed(nghttp2_session *session);
 
@@ -3515,20 +3090,20 @@ nghttp2_session_check_request_allowed(nghttp2_session *session);
 
  int
 nghttp2_session_check_server_session(nghttp2_session *session);
-# 4321 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_window_update(nghttp2_session *session,
                                                 uint8_t flags,
                                                 int32_t stream_id,
                                                 int32_t window_size_increment);
-# 4360 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_session_set_local_window_size(nghttp2_session *session, uint8_t flags,
                                       int32_t stream_id, int32_t window_size);
-# 4402 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_extension(nghttp2_session *session,
                                             uint8_t type, uint8_t flags,
                                             int32_t stream_id, void *payload);
-# 4418 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4418 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef struct {
 
 
@@ -3549,22 +3124,22 @@ typedef struct {
 
   size_t field_value_len;
 } nghttp2_ext_altsvc;
-# 4473 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_submit_altsvc(nghttp2_session *session,
                                          uint8_t flags, int32_t stream_id,
                                          const uint8_t *origin,
                                          size_t origin_len,
                                          const uint8_t *field_value,
                                          size_t field_value_len);
-# 4489 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_nv_compare_name(const nghttp2_nv *lhs,
                                            const nghttp2_nv *rhs);
-# 4550 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_select_next_protocol(unsigned char **out,
                                                 unsigned char *outlen,
                                                 const unsigned char *in,
                                                 unsigned int inlen);
-# 4564 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  nghttp2_info *nghttp2_version(int least_version);
 
 
@@ -3574,9 +3149,9 @@ typedef struct {
 
 
  int nghttp2_is_fatal(int lib_error_code);
-# 4583 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4583 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_check_header_name(const uint8_t *name, size_t len);
-# 4592 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_check_header_value(const uint8_t *value, size_t len);
 
 
@@ -3589,11 +3164,11 @@ struct nghttp2_hd_deflater;
 
 
 typedef struct nghttp2_hd_deflater nghttp2_hd_deflater;
-# 4621 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4621 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_hd_deflate_new(nghttp2_hd_deflater **deflater_ptr,
                        size_t max_deflate_dynamic_table_size);
-# 4640 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_hd_deflate_new2(nghttp2_hd_deflater **deflater_ptr,
                         size_t max_deflate_dynamic_table_size,
@@ -3605,16 +3180,16 @@ nghttp2_hd_deflate_new2(nghttp2_hd_deflater **deflater_ptr,
 
 
  void nghttp2_hd_deflate_del(nghttp2_hd_deflater *deflater);
-# 4675 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_hd_deflate_change_table_size(nghttp2_hd_deflater *deflater,
                                      size_t settings_max_dynamic_table_size);
-# 4706 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_hd_deflate_hd(nghttp2_hd_deflater *deflater,
                                              uint8_t *buf, size_t buflen,
                                              const nghttp2_nv *nva,
                                              size_t nvlen);
-# 4738 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_hd_deflate_hd_vec(nghttp2_hd_deflater *deflater,
                                                  const nghttp2_vec *vec,
                                                  size_t veclen,
@@ -3630,10 +3205,10 @@ nghttp2_hd_deflate_change_table_size(nghttp2_hd_deflater *deflater,
  size_t nghttp2_hd_deflate_bound(nghttp2_hd_deflater *deflater,
                                                const nghttp2_nv *nva,
                                                size_t nvlen);
-# 4761 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 
 size_t nghttp2_hd_deflate_get_num_table_entries(nghttp2_hd_deflater *deflater);
-# 4774 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4774 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 
 const nghttp2_nv *
 nghttp2_hd_deflate_get_table_entry(nghttp2_hd_deflater *deflater, size_t idx);
@@ -3664,9 +3239,9 @@ struct nghttp2_hd_inflater;
 
 
 typedef struct nghttp2_hd_inflater nghttp2_hd_inflater;
-# 4818 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4818 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_hd_inflate_new(nghttp2_hd_inflater **inflater_ptr);
-# 4835 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int nghttp2_hd_inflate_new2(nghttp2_hd_inflater **inflater_ptr,
                                            nghttp2_mem *mem);
 
@@ -3676,7 +3251,7 @@ typedef struct nghttp2_hd_inflater nghttp2_hd_inflater;
 
 
  void nghttp2_hd_inflate_del(nghttp2_hd_inflater *inflater);
-# 4871 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4871 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_hd_inflate_change_table_size(nghttp2_hd_inflater *inflater,
                                      size_t settings_max_dynamic_table_size);
@@ -3700,24 +3275,24 @@ typedef enum {
 
   NGHTTP2_HD_INFLATE_EMIT = 0x02
 } nghttp2_hd_inflate_flag;
-# 4976 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 4976 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_hd_inflate_hd(nghttp2_hd_inflater *inflater,
                                              nghttp2_nv *nv_out,
                                              int *inflate_flags, uint8_t *in,
                                              size_t inlen, int in_final);
-# 5062 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5062 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  ssize_t nghttp2_hd_inflate_hd2(nghttp2_hd_inflater *inflater,
                                               nghttp2_nv *nv_out,
                                               int *inflate_flags,
                                               const uint8_t *in, size_t inlen,
                                               int in_final);
-# 5076 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5076 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  int
 nghttp2_hd_inflate_end_headers(nghttp2_hd_inflater *inflater);
-# 5086 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5086 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 
 size_t nghttp2_hd_inflate_get_num_table_entries(nghttp2_hd_inflater *inflater);
-# 5099 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5099 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 
 const nghttp2_nv *
 nghttp2_hd_inflate_get_table_entry(nghttp2_hd_inflater *inflater, size_t idx);
@@ -3749,7 +3324,7 @@ struct nghttp2_stream;
 
 
 typedef struct nghttp2_stream nghttp2_stream;
-# 5144 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  nghttp2_stream *
 nghttp2_session_find_stream(nghttp2_session *session, int32_t stream_id);
 
@@ -3788,10 +3363,10 @@ typedef enum {
 
   NGHTTP2_STREAM_STATE_CLOSED
 } nghttp2_stream_proto_state;
-# 5190 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  nghttp2_stream_proto_state
 nghttp2_stream_get_state(nghttp2_stream *stream);
-# 5200 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  nghttp2_stream *
 nghttp2_session_get_root_stream(nghttp2_session *session);
 
@@ -3847,17 +3422,17 @@ nghttp2_stream_get_first_child(nghttp2_stream *stream);
 
  int32_t
 nghttp2_stream_get_sum_dependency_weight(nghttp2_stream *stream);
-# 5265 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5265 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 typedef void (*nghttp2_debug_vprintf_callback)(const char *format,
                                                va_list args);
-# 5289 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+# 5289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
  void nghttp2_set_debug_vprintf_callback(
     nghttp2_debug_vprintf_callback debug_vprintf_callback);
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h"
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_int.h"
 typedef int (*nghttp2_less)(const void *lhs, const void *rhs);
 
 
@@ -3878,9 +3453,9 @@ typedef enum {
 
   NGHTTP2_ERR_REMOVE_HTTP_HEADER = -106
 } nghttp2_internal_error;
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h" 1
-# 35 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_mem.h"
 nghttp2_mem *nghttp2_mem_default(void);
 
 
@@ -3890,7 +3465,7 @@ void nghttp2_mem_free(nghttp2_mem *mem, void *ptr);
 void nghttp2_mem_free2(nghttp2_free free_func, void *ptr, void *mem_user_data);
 void *nghttp2_mem_calloc(nghttp2_mem *mem, size_t nmemb, size_t size);
 void *nghttp2_mem_realloc(nghttp2_mem *mem, void *ptr, size_t size);
-# 35 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 2
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h" 2
 
 
 
@@ -3911,7 +3486,7 @@ typedef struct {
   size_t size;
   uint32_t tablelen;
 } nghttp2_map;
-# 65 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
 int nghttp2_map_init(nghttp2_map *map, nghttp2_mem *mem);
 
 
@@ -3936,7 +3511,7 @@ void nghttp2_map_each_free(nghttp2_map *map,
 
 
 void nghttp2_map_entry_init(nghttp2_map_entry *entry, key_type key);
-# 101 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
 int nghttp2_map_insert(nghttp2_map *map, nghttp2_map_entry *entry);
 
 
@@ -3944,24 +3519,24 @@ int nghttp2_map_insert(nghttp2_map *map, nghttp2_map_entry *entry);
 
 
 nghttp2_map_entry *nghttp2_map_find(nghttp2_map *map, key_type key);
-# 119 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
 int nghttp2_map_remove(nghttp2_map *map, key_type key);
 
 
 
 
 size_t nghttp2_map_size(nghttp2_map *map);
-# 140 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_map.h"
 int nghttp2_map_each(nghttp2_map *map,
                      int (*func)(nghttp2_map_entry *entry, void *ptr),
                      void *ptr);
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd_huffman.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd_huffman.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd_huffman.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd_huffman.h"
 typedef enum {
 
 
@@ -4004,9 +3579,9 @@ typedef struct {
 
 extern const nghttp2_huff_sym huff_sym_table[];
 extern const nghttp2_huff_decode huff_decode_table[][16];
-# 35 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 typedef struct {
 
 
@@ -4023,16 +3598,16 @@ typedef struct {
 
   uint8_t *mark;
 } nghttp2_buf;
-# 78 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 void nghttp2_buf_init(nghttp2_buf *buf);
-# 90 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_buf_init2(nghttp2_buf *buf, size_t initial, nghttp2_mem *mem);
 
 
 
 
 void nghttp2_buf_free(nghttp2_buf *buf, nghttp2_mem *mem);
-# 108 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 108 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_buf_reserve(nghttp2_buf *buf, size_t new_cap, nghttp2_mem *mem);
 
 
@@ -4095,7 +3670,7 @@ int nghttp2_bufs_init(nghttp2_bufs *bufs, size_t chunk_length, size_t max_chunk,
 
 int nghttp2_bufs_init2(nghttp2_bufs *bufs, size_t chunk_length,
                        size_t max_chunk, size_t offset, nghttp2_mem *mem);
-# 190 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_init3(nghttp2_bufs *bufs, size_t chunk_length,
                        size_t max_chunk, size_t chunk_keep, size_t offset,
                        nghttp2_mem *mem);
@@ -4104,10 +3679,10 @@ int nghttp2_bufs_init3(nghttp2_bufs *bufs, size_t chunk_length,
 
 
 void nghttp2_bufs_free(nghttp2_bufs *bufs);
-# 215 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_wrap_init(nghttp2_bufs *bufs, uint8_t *begin, size_t len,
                            nghttp2_mem *mem);
-# 234 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 234 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_wrap_init2(nghttp2_bufs *bufs, const nghttp2_vec *vec,
                             size_t veclen, nghttp2_mem *mem);
 
@@ -4116,11 +3691,11 @@ int nghttp2_bufs_wrap_init2(nghttp2_bufs *bufs, const nghttp2_vec *vec,
 
 
 void nghttp2_bufs_wrap_free(nghttp2_bufs *bufs);
-# 257 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_realloc(nghttp2_bufs *bufs, size_t chunk_length);
-# 272 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 272 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_add(nghttp2_bufs *bufs, const void *data, size_t len);
-# 287 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_addb(nghttp2_bufs *bufs, uint8_t b);
 
 
@@ -4128,7 +3703,7 @@ int nghttp2_bufs_addb(nghttp2_bufs *bufs, uint8_t b);
 
 
 int nghttp2_bufs_addb_hold(nghttp2_bufs *bufs, uint8_t b);
-# 317 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_orb(nghttp2_bufs *bufs, uint8_t b);
 
 
@@ -4136,18 +3711,18 @@ int nghttp2_bufs_orb(nghttp2_bufs *bufs, uint8_t b);
 
 
 int nghttp2_bufs_orb_hold(nghttp2_bufs *bufs, uint8_t b);
-# 352 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 ssize_t nghttp2_bufs_remove(nghttp2_bufs *bufs, uint8_t **out);
-# 363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 size_t nghttp2_bufs_remove_copy(nghttp2_bufs *bufs, uint8_t *out);
 
 
 
 
 void nghttp2_bufs_reset(nghttp2_bufs *bufs);
-# 383 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 int nghttp2_bufs_advance(nghttp2_bufs *bufs);
-# 398 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
+# 398 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_buf.h"
 void nghttp2_bufs_seek_last_present(nghttp2_bufs *bufs);
 
 
@@ -4161,10 +3736,10 @@ int nghttp2_bufs_next_present(nghttp2_bufs *bufs);
 
 
 size_t nghttp2_bufs_len(nghttp2_bufs *bufs);
-# 36 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
 struct nghttp2_rcbuf {
 
 
@@ -4177,9 +3752,9 @@ struct nghttp2_rcbuf {
 
   int32_t ref;
 };
-# 57 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
+# 57 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
 int nghttp2_rcbuf_new(nghttp2_rcbuf **rcbuf_ptr, size_t size, nghttp2_mem *mem);
-# 72 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
+# 72 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_rcbuf.h"
 int nghttp2_rcbuf_new2(nghttp2_rcbuf **rcbuf_ptr, const uint8_t *src,
                        size_t srclen, nghttp2_mem *mem);
 
@@ -4187,8 +3762,8 @@ int nghttp2_rcbuf_new2(nghttp2_rcbuf **rcbuf_ptr, const uint8_t *src,
 
 
 void nghttp2_rcbuf_del(nghttp2_rcbuf *rcbuf);
-# 38 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
-# 56 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h" 2
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 typedef enum {
   NGHTTP2_TOKEN__AUTHORITY = 0,
   NGHTTP2_TOKEN__METHOD = 1,
@@ -4404,9 +3979,9 @@ void nghttp2_hd_entry_init(nghttp2_hd_entry *ent, nghttp2_hd_nv *nv);
 
 
 void nghttp2_hd_entry_free(nghttp2_hd_entry *ent);
-# 286 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 int nghttp2_hd_deflate_init(nghttp2_hd_deflater *deflater, nghttp2_mem *mem);
-# 301 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 int nghttp2_hd_deflate_init2(nghttp2_hd_deflater *deflater,
                              size_t max_deflate_dynamic_table_size,
                              nghttp2_mem *mem);
@@ -4415,11 +3990,11 @@ int nghttp2_hd_deflate_init2(nghttp2_hd_deflater *deflater,
 
 
 void nghttp2_hd_deflate_free(nghttp2_hd_deflater *deflater);
-# 330 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 330 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 int nghttp2_hd_deflate_hd_bufs(nghttp2_hd_deflater *deflater,
                                nghttp2_bufs *bufs, const nghttp2_nv *nva,
                                size_t nvlen);
-# 343 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 int nghttp2_hd_inflate_init(nghttp2_hd_inflater *inflater, nghttp2_mem *mem);
 
 
@@ -4455,19 +4030,19 @@ nghttp2_hd_nv nghttp2_hd_table_get(nghttp2_hd_context *context, size_t index);
 ssize_t nghttp2_hd_decode_length(uint32_t *res, size_t *shift_ptr, int *fin,
                                  uint32_t initial, size_t shift, uint8_t *in,
                                  uint8_t *last, size_t prefix);
-# 388 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 size_t nghttp2_hd_huff_encode_count(const uint8_t *src, size_t len);
-# 402 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 int nghttp2_hd_huff_encode(nghttp2_bufs *bufs, const uint8_t *src,
                            size_t srclen);
 
 void nghttp2_hd_huff_decode_context_init(nghttp2_hd_huff_decode_context *ctx);
-# 426 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_hd.h"
 ssize_t nghttp2_hd_huff_decode(nghttp2_hd_huff_decode_context *ctx,
                                nghttp2_buf *buf, const uint8_t *src,
                                size_t srclen, int fin);
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h" 2
-# 73 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h" 2
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 typedef union { nghttp2_ext_altsvc altsvc; } nghttp2_ext_frame_payload;
 
 void nghttp2_frame_pack_frame_hd(uint8_t *buf, const nghttp2_frame_hd *hd);
@@ -4510,13 +4085,13 @@ void nghttp2_frame_unpack_priority_spec(nghttp2_priority_spec *pri_spec,
 
 
 size_t nghttp2_frame_headers_payload_nv_offset(nghttp2_headers *frame);
-# 135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_headers(nghttp2_bufs *bufs, nghttp2_headers *frame,
                                nghttp2_hd_deflater *deflater);
-# 145 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_unpack_headers_payload(nghttp2_headers *frame,
                                          const uint8_t *payload);
-# 157 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_priority(nghttp2_bufs *bufs, nghttp2_priority *frame);
 
 
@@ -4524,7 +4099,7 @@ int nghttp2_frame_pack_priority(nghttp2_bufs *bufs, nghttp2_priority *frame);
 
 void nghttp2_frame_unpack_priority_payload(nghttp2_priority *frame,
                                            const uint8_t *payload);
-# 174 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_rst_stream(nghttp2_bufs *bufs,
                                   nghttp2_rst_stream *frame);
 
@@ -4533,7 +4108,7 @@ int nghttp2_frame_pack_rst_stream(nghttp2_bufs *bufs,
 
 void nghttp2_frame_unpack_rst_stream_payload(nghttp2_rst_stream *frame,
                                              const uint8_t *payload);
-# 196 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_settings(nghttp2_bufs *bufs, nghttp2_settings *frame);
 
 
@@ -4556,19 +4131,19 @@ void nghttp2_frame_unpack_settings_entry(nghttp2_settings_entry *iv,
 void nghttp2_frame_unpack_settings_payload(nghttp2_settings *frame,
                                            nghttp2_settings_entry *iv,
                                            size_t niv);
-# 231 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_unpack_settings_payload2(nghttp2_settings_entry **iv_ptr,
                                            size_t *niv_ptr,
                                            const uint8_t *payload,
                                            size_t payloadlen, nghttp2_mem *mem);
-# 256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_push_promise(nghttp2_bufs *bufs,
                                     nghttp2_push_promise *frame,
                                     nghttp2_hd_deflater *deflater);
-# 271 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_unpack_push_promise_payload(nghttp2_push_promise *frame,
                                               const uint8_t *payload);
-# 283 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_ping(nghttp2_bufs *bufs, nghttp2_ping *frame);
 
 
@@ -4576,18 +4151,18 @@ int nghttp2_frame_pack_ping(nghttp2_bufs *bufs, nghttp2_ping *frame);
 
 void nghttp2_frame_unpack_ping_payload(nghttp2_ping *frame,
                                        const uint8_t *payload);
-# 306 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_goaway(nghttp2_bufs *bufs, nghttp2_goaway *frame);
-# 316 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 void nghttp2_frame_unpack_goaway_payload(nghttp2_goaway *frame,
                                          const uint8_t *payload,
                                          uint8_t *var_gift_payload,
                                          size_t var_gift_payloadlen);
-# 332 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_unpack_goaway_payload2(nghttp2_goaway *frame,
                                          const uint8_t *payload,
                                          size_t payloadlen, nghttp2_mem *mem);
-# 345 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_window_update(nghttp2_bufs *bufs,
                                      nghttp2_window_update *frame);
 
@@ -4596,13 +4171,13 @@ int nghttp2_frame_pack_window_update(nghttp2_bufs *bufs,
 
 void nghttp2_frame_unpack_window_update_payload(nghttp2_window_update *frame,
                                                 const uint8_t *payload);
-# 363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_pack_altsvc(nghttp2_bufs *bufs, nghttp2_extension *ext);
-# 372 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 void nghttp2_frame_unpack_altsvc_payload(nghttp2_extension *frame,
                                          size_t origin_len, uint8_t *payload,
                                          size_t payloadlen);
-# 389 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_unpack_altsvc_payload2(nghttp2_extension *frame,
                                          const uint8_t *payload,
                                          size_t payloadlen, nghttp2_mem *mem);
@@ -4684,7 +4259,7 @@ void nghttp2_frame_extension_init(nghttp2_extension *frame, uint8_t type,
                                   void *payload);
 
 void nghttp2_frame_extension_free(nghttp2_extension *frame);
-# 478 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 478 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 void nghttp2_frame_altsvc_init(nghttp2_extension *frame, int32_t stream_id,
                                uint8_t *origin, size_t origin_len,
                                uint8_t *field_value, size_t field_value_len);
@@ -4723,7 +4298,7 @@ nghttp2_settings_entry *nghttp2_frame_iv_copy(const nghttp2_settings_entry *iv,
 
 
 void nghttp2_nv_array_sort(nghttp2_nv *nva, size_t nvlen);
-# 532 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_nv_array_copy(nghttp2_nv **nva_ptr, const nghttp2_nv *nva,
                           size_t nvlen, nghttp2_mem *mem);
 
@@ -4746,15 +4321,15 @@ void nghttp2_nv_array_del(nghttp2_nv *nva, nghttp2_mem *mem);
 
 
 int nghttp2_iv_check(const nghttp2_settings_entry *iv, size_t niv);
-# 570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
+# 570 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_frame.h"
 int nghttp2_frame_add_pad(nghttp2_bufs *bufs, nghttp2_frame_hd *hd,
                           size_t padlen, int framehd_only);
-# 35 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_outbound_item.h"
 typedef struct {
   nghttp2_data_provider data_prd;
   void *stream_user_data;
@@ -4877,10 +4452,10 @@ void nghttp2_outbound_queue_push(nghttp2_outbound_queue *q,
 
 
 void nghttp2_outbound_queue_pop(nghttp2_outbound_queue *q);
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 2
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h" 1
-# 38 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h" 1
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
 typedef struct { size_t index; } nghttp2_pq_entry;
 
 typedef struct {
@@ -4896,7 +4471,7 @@ typedef struct {
 
   nghttp2_less less;
 } nghttp2_pq;
-# 63 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
 int nghttp2_pq_init(nghttp2_pq *pq, nghttp2_less less, nghttp2_mem *mem);
 
 
@@ -4904,7 +4479,7 @@ int nghttp2_pq_init(nghttp2_pq *pq, nghttp2_less less, nghttp2_mem *mem);
 
 
 void nghttp2_pq_free(nghttp2_pq *pq);
-# 80 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
 int nghttp2_pq_push(nghttp2_pq *pq, nghttp2_pq_entry *item);
 
 
@@ -4938,15 +4513,15 @@ typedef int (*nghttp2_pq_item_cb)(nghttp2_pq_entry *item, void *arg);
 
 
 void nghttp2_pq_update(nghttp2_pq *pq, nghttp2_pq_item_cb fun, void *arg);
-# 121 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_pq.h"
 int nghttp2_pq_each(nghttp2_pq *pq, nghttp2_pq_item_cb fun, void *arg);
 
 
 
 
 void nghttp2_pq_remove(nghttp2_pq *pq, nghttp2_pq_entry *item);
-# 36 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 2
-# 49 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h" 2
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 typedef enum {
 
   NGHTTP2_STREAM_INITIAL,
@@ -5135,9 +4710,9 @@ void nghttp2_stream_free(nghttp2_stream *stream);
 
 
 void nghttp2_stream_shutdown(nghttp2_stream *stream, nghttp2_shut_flag flag);
-# 251 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_defer_item(nghttp2_stream *stream, uint8_t flags);
-# 267 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_resume_deferred_item(nghttp2_stream *stream, uint8_t flags);
 
 
@@ -5149,11 +4724,11 @@ int nghttp2_stream_check_deferred_item(nghttp2_stream *stream);
 
 
 int nghttp2_stream_check_deferred_by_flow_control(nghttp2_stream *stream);
-# 287 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_update_remote_initial_window_size(
     nghttp2_stream *stream, int32_t new_initial_window_size,
     int32_t old_initial_window_size);
-# 299 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_update_local_initial_window_size(
     nghttp2_stream *stream, int32_t new_initial_window_size,
     int32_t old_initial_window_size);
@@ -5177,7 +4752,7 @@ int nghttp2_stream_dep_find_ancestor(nghttp2_stream *stream,
 
 int32_t nghttp2_stream_dep_distributed_weight(nghttp2_stream *stream,
                                               int32_t weight);
-# 335 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_dep_insert(nghttp2_stream *dep_stream,
                               nghttp2_stream *stream);
 
@@ -5192,18 +4767,18 @@ void nghttp2_stream_dep_add(nghttp2_stream *dep_stream, nghttp2_stream *stream);
 
 
 int nghttp2_stream_dep_remove(nghttp2_stream *stream);
-# 359 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_attach_item(nghttp2_stream *stream,
                                nghttp2_outbound_item *item);
-# 372 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_detach_item(nghttp2_stream *stream);
-# 384 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_dep_insert_subtree(nghttp2_stream *dep_stream,
                                       nghttp2_stream *stream);
-# 397 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 int nghttp2_stream_dep_add_subtree(nghttp2_stream *dep_stream,
                                    nghttp2_stream *stream);
-# 410 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_stream.h"
 void nghttp2_stream_dep_remove_subtree(nghttp2_stream *stream);
 
 
@@ -5229,12 +4804,12 @@ void nghttp2_stream_change_weight(nghttp2_stream *stream, int32_t weight);
 
 nghttp2_outbound_item *
 nghttp2_stream_next_outbound_item(nghttp2_stream *stream);
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_callbacks.h"
 struct nghttp2_session_callbacks {
 
 
@@ -5321,7 +4896,7 @@ struct nghttp2_session_callbacks {
   nghttp2_on_extension_chunk_recv_callback on_extension_chunk_recv_callback;
   nghttp2_error_callback error_callback;
 };
-# 41 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h" 2
 
 
 
@@ -5360,7 +4935,7 @@ typedef struct {
   nghttp2_bufs framebufs;
   nghttp2_outbound_state state;
 } nghttp2_active_outbound_item;
-# 105 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 typedef enum {
 
   NGHTTP2_IB_READ_CLIENT_MAGIC,
@@ -5492,7 +5067,7 @@ struct nghttp2_session {
 
 
   size_t num_incoming_streams;
-# 244 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
   size_t num_incoming_reserved_streams;
 
 
@@ -5613,36 +5188,36 @@ typedef struct {
 
 int nghttp2_session_is_my_stream_id(nghttp2_session *session,
                                     int32_t stream_id);
-# 378 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_item(nghttp2_session *session,
                              nghttp2_outbound_item *item);
-# 396 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_rst_stream(nghttp2_session *session, int32_t stream_id,
                                    uint32_t error_code);
-# 416 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_ping(nghttp2_session *session, uint8_t flags,
                              const uint8_t *opaque_data);
-# 434 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_goaway(nghttp2_session *session, int32_t last_stream_id,
                                uint32_t error_code, const uint8_t *opaque_data,
                                size_t opaque_data_len, uint8_t aux_flags);
-# 450 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_window_update(nghttp2_session *session, uint8_t flags,
                                       int32_t stream_id,
                                       int32_t window_size_increment);
-# 466 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_add_settings(nghttp2_session *session, uint8_t flags,
                                  const nghttp2_settings_entry *iv, size_t niv);
-# 489 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 489 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
                                             int32_t stream_id, uint8_t flags,
                                             nghttp2_priority_spec *pri_spec,
                                             nghttp2_stream_state initial_state,
                                             void *stream_user_data);
-# 515 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_close_stream(nghttp2_session *session, int32_t stream_id,
                                  uint32_t error_code);
-# 528 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 528 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_destroy_stream(nghttp2_session *session,
                                    nghttp2_stream *stream);
 
@@ -5668,11 +5243,11 @@ void nghttp2_session_keep_idle_stream(nghttp2_session *session,
 
 void nghttp2_session_detach_idle_stream(nghttp2_session *session,
                                         nghttp2_stream *stream);
-# 565 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 565 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_adjust_closed_stream(nghttp2_session *session);
-# 577 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_adjust_idle_stream(nghttp2_session *session);
-# 589 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_close_stream_if_shut_rdwr(nghttp2_session *session,
                                               nghttp2_stream *stream);
 
@@ -5686,35 +5261,35 @@ int nghttp2_session_on_response_headers_received(nghttp2_session *session,
 int nghttp2_session_on_push_response_headers_received(nghttp2_session *session,
                                                       nghttp2_frame *frame,
                                                       nghttp2_stream *stream);
-# 619 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_headers_received(nghttp2_session *session,
                                         nghttp2_frame *frame,
                                         nghttp2_stream *stream);
-# 635 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_priority_received(nghttp2_session *session,
                                          nghttp2_frame *frame);
-# 650 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_rst_stream_received(nghttp2_session *session,
                                            nghttp2_frame *frame);
-# 670 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_settings_received(nghttp2_session *session,
                                          nghttp2_frame *frame, int noack);
-# 688 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_push_promise_received(nghttp2_session *session,
                                              nghttp2_frame *frame);
-# 706 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_ping_received(nghttp2_session *session,
                                      nghttp2_frame *frame);
-# 721 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 721 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_goaway_received(nghttp2_session *session,
                                        nghttp2_frame *frame);
-# 736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_window_update_received(nghttp2_session *session,
                                               nghttp2_frame *frame);
-# 749 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 749 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_altsvc_received(nghttp2_session *session,
                                        nghttp2_frame *frame);
-# 764 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 764 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_on_data_received(nghttp2_session *session,
                                      nghttp2_frame *frame);
 
@@ -5733,66 +5308,57 @@ nghttp2_stream *nghttp2_session_get_stream(nghttp2_session *session,
 
 nghttp2_stream *nghttp2_session_get_stream_raw(nghttp2_session *session,
                                                int32_t stream_id);
-# 800 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 800 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_pack_data(nghttp2_session *session, nghttp2_bufs *bufs,
                               size_t datamax, nghttp2_frame *frame,
                               nghttp2_data_aux_data *aux_data,
                               nghttp2_stream *stream);
-# 812 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 nghttp2_outbound_item *
 nghttp2_session_pop_next_ob_item(nghttp2_session *session);
-# 822 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 822 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 nghttp2_outbound_item *
 nghttp2_session_get_next_ob_item(nghttp2_session *session);
-# 841 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_update_local_settings(nghttp2_session *session,
                                           nghttp2_settings_entry *iv,
                                           size_t niv);
-# 859 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 859 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_reprioritize_stream(nghttp2_session *session,
                                         nghttp2_stream *stream,
                                         const nghttp2_priority_spec *pri_spec);
-# 875 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
+# 875 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.h"
 int nghttp2_session_terminate_session_with_reason(nghttp2_session *session,
                                                   uint32_t error_code,
                                                   const char *reason);
-# 26 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 29 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 31 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h" 2
-# 50 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
-
-# 50 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h" 2
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
 void nghttp2_put_uint16be(uint8_t *buf, uint16_t n);
 
 
@@ -5814,12 +5380,12 @@ uint16_t nghttp2_get_uint16(const uint8_t *data);
 uint32_t nghttp2_get_uint32(const uint8_t *data);
 
 void nghttp2_downcase(uint8_t *s, size_t len);
-# 87 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
 int nghttp2_adjust_local_window_size(int32_t *local_window_size_ptr,
                                      int32_t *recv_window_size_ptr,
                                      int32_t *recv_reduction_ptr,
                                      int32_t *delta_ptr);
-# 103 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_helper.h"
 int nghttp2_increase_local_window_size(int32_t *local_window_size_ptr,
                                        int32_t *recv_window_size_ptr,
                                        int32_t *recv_reduction_ptr,
@@ -5838,15 +5404,15 @@ int nghttp2_should_send_window_update(int32_t local_window_size,
 
 
 uint8_t *nghttp2_cpymem(uint8_t *dest, const void *src, size_t len);
-# 34 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_net.h" 1
-# 35 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_net.h" 1
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_priority_spec.h"
 void nghttp2_priority_spec_normalize_weight(nghttp2_priority_spec *pri_spec);
-# 36 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h"
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h"
 typedef enum {
 
 
@@ -5856,7 +5422,7 @@ typedef enum {
 
 
   NGHTTP2_OPT_NO_AUTO_WINDOW_UPDATE = 1,
-# 59 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h"
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_option.h"
   NGHTTP2_OPT_PEER_MAX_CONCURRENT_STREAMS = 1 << 1,
   NGHTTP2_OPT_NO_RECV_CLIENT_MAGIC = 1 << 2,
   NGHTTP2_OPT_NO_HTTP_MESSAGING = 1 << 3,
@@ -5923,9 +5489,9 @@ struct nghttp2_option {
 
   uint8_t user_recv_ext_types[32];
 };
-# 37 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_http.h" 1
-# 50 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_http.h"
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_http.h" 1
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_http.h"
 int nghttp2_http_on_header(nghttp2_session *session, nghttp2_stream *stream,
                            nghttp2_frame *frame, nghttp2_hd_nv *nv,
                            int trailer);
@@ -5972,10 +5538,10 @@ int nghttp2_http_on_data_chunk(nghttp2_stream *stream, size_t n);
 
 void nghttp2_http_record_request_method(nghttp2_stream *stream,
                                         nghttp2_frame *frame);
-# 38 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 2
 
 
 
@@ -6101,31 +5667,31 @@ static int session_call_error_callback(nghttp2_session *session,
   mem = &session->mem;
 
   
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  __builtin_va_start(
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  ap
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  ,
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  fmt
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  )
-# 164 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                   ;
   rv = vsnprintf(
-# 165 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                 ((void *)0)
-# 165 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     , 0, fmt, ap);
   
-# 166 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  __builtin_va_end(
-# 166 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  ap
-# 166 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  )
-# 166 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
            ;
 
   if (rv < 0) {
@@ -6136,35 +5702,35 @@ static int session_call_error_callback(nghttp2_session *session,
 
   buf = nghttp2_mem_malloc(mem, bufsize);
   if (buf == 
-# 175 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 175 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ) {
     return NGHTTP2_ERR_NOMEM;
   }
 
   
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  __builtin_va_start(
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  ap
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  ,
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  fmt
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  )
-# 179 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                   ;
   rv = vsnprintf(buf, bufsize, fmt, ap);
   
-# 181 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  __builtin_va_end(
-# 181 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
  ap
-# 181 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
  )
-# 181 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
            ;
 
   if (rv < 0) {
@@ -6200,14 +5766,14 @@ static int session_terminate_session(nghttp2_session *session,
   }
 
   if (reason == 
-# 215 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 215 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     debug_data = 
-# 216 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                 ((void *)0)
-# 216 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     ;
     debug_datalen = 0;
   } else {
@@ -6232,9 +5798,9 @@ int nghttp2_session_terminate_session(nghttp2_session *session,
                                       uint32_t error_code) {
   return session_terminate_session(session, session->last_proc_stream_id,
                                    error_code, 
-# 239 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                               ((void *)0)
-# 239 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 239 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                   );
 }
 
@@ -6242,9 +5808,9 @@ int nghttp2_session_terminate_session2(nghttp2_session *session,
                                        int32_t last_stream_id,
                                        uint32_t error_code) {
   return session_terminate_session(session, last_stream_id, error_code, 
-# 245 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                        ((void *)0)
-# 245 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                            );
 }
 
@@ -6275,15 +5841,15 @@ nghttp2_stream *nghttp2_session_get_stream(nghttp2_session *session,
   stream = (nghttp2_stream *)nghttp2_map_find(&session->streams, stream_id);
 
   if (stream == 
-# 274 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0) 
-# 274 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     || (stream->flags & NGHTTP2_STREAM_FLAG_CLOSED) ||
       stream->state == NGHTTP2_STREAM_IDLE) {
     return 
-# 276 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
           ((void *)0)
-# 276 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
               ;
   }
 
@@ -6319,9 +5885,9 @@ static void session_inbound_frame_reset(nghttp2_session *session) {
     nghttp2_mem_free(mem, iframe->iv);
 
     iframe->iv = 
-# 310 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                 ((void *)0)
-# 310 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     ;
     iframe->niv = 0;
     iframe->max_niv = 0;
@@ -6369,15 +5935,15 @@ static void session_inbound_frame_reset(nghttp2_session *session) {
 
   nghttp2_buf_free(&iframe->lbuf, mem);
   nghttp2_buf_wrap_init(&iframe->lbuf, 
-# 356 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                       ((void *)0)
-# 356 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                           , 0);
 
   iframe->raw_lbuf = 
-# 358 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                     ((void *)0)
-# 358 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 358 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                         ;
 
   iframe->payloadleft = 0;
@@ -6390,11 +5956,7 @@ static void init_settings(nghttp2_settings_storage *settings) {
   settings->max_concurrent_streams = 0xffffffffu;
   settings->initial_window_size = ((1 << 16) - 1);
   settings->max_frame_size = (1 << 14);
-  settings->max_header_list_size = 
-# 370 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-                                  (0xffffffffU)
-# 370 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                            ;
+  settings->max_header_list_size = 0xffffffffUL;
 }
 
 static void active_outbound_item_reset(nghttp2_active_outbound_item *aob,
@@ -6404,9 +5966,9 @@ static void active_outbound_item_reset(nghttp2_active_outbound_item *aob,
   nghttp2_outbound_item_free(aob->item, mem);
   nghttp2_mem_free(mem, aob->item);
   aob->item = 
-# 379 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 379 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ;
   nghttp2_bufs_reset(&aob->framebufs);
   aob->state = NGHTTP2_OB_POP_ITEM;
@@ -6424,18 +5986,18 @@ static int session_new(nghttp2_session **session_ptr,
       (1 << 12);
 
   if (mem == 
-# 395 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 395 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ) {
     mem = nghttp2_mem_default();
   }
 
   *session_ptr = nghttp2_mem_calloc(mem, 1, sizeof(nghttp2_session));
   if (*session_ptr == 
-# 400 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                      ((void *)0)
-# 400 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 400 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                          ) {
     rv = NGHTTP2_ERR_NOMEM;
     goto fail_session;
@@ -6449,9 +6011,9 @@ static int session_new(nghttp2_session **session_ptr,
 
   nghttp2_stream_init(&(*session_ptr)->root, 0, NGHTTP2_STREAM_FLAG_NONE,
                       NGHTTP2_STREAM_IDLE, 16, 0, 0, 
-# 412 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                         ((void *)0)
-# 412 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                             ,
                       mem);
 
@@ -6618,14 +6180,14 @@ int nghttp2_session_client_new(nghttp2_session **session_ptr,
                                const nghttp2_session_callbacks *callbacks,
                                void *user_data) {
   return nghttp2_session_client_new3(session_ptr, callbacks, user_data, 
-# 577 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                        ((void *)0)
-# 577 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 577 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                            ,
                                      
-# 578 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                     ((void *)0)
-# 578 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                         );
 }
 
@@ -6634,9 +6196,9 @@ int nghttp2_session_client_new2(nghttp2_session **session_ptr,
                                 void *user_data, const nghttp2_option *option) {
   return nghttp2_session_client_new3(session_ptr, callbacks, user_data, option,
                                      
-# 585 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                     ((void *)0)
-# 585 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 585 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                         );
 }
 
@@ -6664,14 +6226,14 @@ int nghttp2_session_server_new(nghttp2_session **session_ptr,
                                const nghttp2_session_callbacks *callbacks,
                                void *user_data) {
   return nghttp2_session_server_new3(session_ptr, callbacks, user_data, 
-# 611 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                        ((void *)0)
-# 611 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                            ,
                                      
-# 612 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                     ((void *)0)
-# 612 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                         );
 }
 
@@ -6680,9 +6242,9 @@ int nghttp2_session_server_new2(nghttp2_session **session_ptr,
                                 void *user_data, const nghttp2_option *option) {
   return nghttp2_session_server_new3(session_ptr, callbacks, user_data, option,
                                      
-# 619 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                     ((void *)0)
-# 619 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                         );
 }
 
@@ -6754,17 +6316,17 @@ static int inflight_settings_new(nghttp2_inflight_settings **settings_ptr,
     }
   } else {
     (*settings_ptr)->iv = 
-# 689 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                          ((void *)0)
-# 689 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 689 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                              ;
   }
 
   (*settings_ptr)->niv = niv;
   (*settings_ptr)->next = 
-# 693 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                          ((void *)0)
-# 693 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                              ;
 
   return 0;
@@ -6785,9 +6347,9 @@ void nghttp2_session_del(nghttp2_session *session) {
   nghttp2_inflight_settings *settings;
 
   if (session == 
-# 712 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                 ((void *)0)
-# 712 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 712 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     ) {
     return;
   }
@@ -6824,26 +6386,14 @@ int nghttp2_session_reprioritize_stream(
     const nghttp2_priority_spec *pri_spec_in) {
   int rv;
   nghttp2_stream *dep_stream = 
-# 747 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                               ((void *)0)
-# 747 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                   ;
   nghttp2_priority_spec pri_spec_default;
   const nghttp2_priority_spec *pri_spec = pri_spec_in;
 
-  
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- pri_spec->stream_id != stream->stream_id
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 751, __func__, 
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "pri_spec->stream_id != stream->stream_id"
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                 ;
+  ((pri_spec->stream_id != stream->stream_id) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 751, __func__, "pri_spec->stream_id != stream->stream_id"));
 
   if (!nghttp2_stream_in_dep_tree(stream)) {
     return 0;
@@ -6860,15 +6410,15 @@ int nghttp2_session_reprioritize_stream(
       dep_stream = nghttp2_session_open_stream(
           session, pri_spec->stream_id, NGHTTP2_FLAG_NONE, &pri_spec_default,
           NGHTTP2_STREAM_IDLE, 
-# 767 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                               ((void *)0)
-# 767 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 767 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                   );
 
       if (dep_stream == 
-# 769 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0)
-# 769 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 769 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                            ) {
         return NGHTTP2_ERR_NOMEM;
       }
@@ -6891,19 +6441,7 @@ int nghttp2_session_reprioritize_stream(
     }
   }
 
-  
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- dep_stream
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 791, __func__, 
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "dep_stream"
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 791 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                   ;
+  ((dep_stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 791, __func__, "dep_stream"));
 
   if (dep_stream == stream->dep_prev && !pri_spec->exclusive) {
 
@@ -7055,19 +6593,7 @@ int nghttp2_session_add_rst_stream(nghttp2_session *session, int32_t stream_id,
     nghttp2_frame *headers_frame;
 
     headers_frame = &((&session->ob_syn)->head)->frame;
-    
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   headers_frame->hd.type == NGHTTP2_HEADERS
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 943, __func__, 
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "headers_frame->hd.type == NGHTTP2_HEADERS"
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 943 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                    ;
+    ((headers_frame->hd.type == NGHTTP2_HEADERS) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 943, __func__, "headers_frame->hd.type == NGHTTP2_HEADERS"));
 
     if (headers_frame->hd.stream_id <= stream_id &&
         (uint32_t)stream_id < session->next_stream_id) {
@@ -7095,9 +6621,9 @@ int nghttp2_session_add_rst_stream(nghttp2_session *session, int32_t stream_id,
 
   item = nghttp2_mem_malloc(mem, sizeof(nghttp2_outbound_item));
   if (item == 
-# 970 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 970 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ) {
     return NGHTTP2_ERR_NOMEM;
   }
@@ -7124,9 +6650,9 @@ nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
   int rv;
   nghttp2_stream *stream;
   nghttp2_stream *dep_stream = 
-# 995 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                               ((void *)0)
-# 995 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                   ;
   int stream_alloc = 0;
   nghttp2_priority_spec pri_spec_default;
@@ -7137,52 +6663,28 @@ nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
   stream = nghttp2_session_get_stream_raw(session, stream_id);
 
   if (stream) {
-    
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   stream->state == NGHTTP2_STREAM_IDLE
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1005, __func__, 
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "stream->state == NGHTTP2_STREAM_IDLE"
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 1005 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                               ;
-    
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   nghttp2_stream_in_dep_tree(stream)
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1006, __func__, 
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "nghttp2_stream_in_dep_tree(stream)"
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 1006 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                             ;
+    ((stream->state == NGHTTP2_STREAM_IDLE) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1005, __func__, "stream->state == NGHTTP2_STREAM_IDLE"));
+    ((nghttp2_stream_in_dep_tree(stream)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1006, __func__, "nghttp2_stream_in_dep_tree(stream)"));
     nghttp2_session_detach_idle_stream(session, stream);
     rv = nghttp2_stream_dep_remove(stream);
     if (rv != 0) {
       return 
-# 1010 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 1010 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1010 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ;
     }
   } else {
     stream = nghttp2_mem_malloc(mem, sizeof(nghttp2_stream));
     if (stream == 
-# 1014 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                  ((void *)0)
-# 1014 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                      ) {
       return 
-# 1015 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 1015 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ;
     }
 
@@ -7201,28 +6703,28 @@ nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
       dep_stream = nghttp2_session_open_stream(
           session, pri_spec->stream_id, NGHTTP2_FLAG_NONE, &pri_spec_default,
           NGHTTP2_STREAM_IDLE, 
-# 1032 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                               ((void *)0)
-# 1032 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1032 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                   );
 
       if (dep_stream == 
-# 1034 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0)
-# 1034 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                            ) {
         if (stream_alloc) {
           nghttp2_mem_free(mem, stream);
         }
 
         return 
-# 1039 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
               ((void *)0)
-# 1039 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                   ;
       }
     } else if (!dep_stream || !nghttp2_stream_in_dep_tree(dep_stream)) {
-# 1051 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1051 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
       nghttp2_priority_spec_default_init(&pri_spec_default);
       pri_spec = &pri_spec_default;
     }
@@ -7244,9 +6746,9 @@ nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
       nghttp2_stream_free(stream);
       nghttp2_mem_free(mem, stream);
       return 
-# 1071 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 1071 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1071 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ;
     }
   } else {
@@ -7286,27 +6788,15 @@ nghttp2_stream *nghttp2_session_open_stream(nghttp2_session *session,
     dep_stream = &session->root;
   }
 
-  
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- dep_stream
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1110, __func__, 
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "dep_stream"
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1110 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                   ;
+  ((dep_stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1110, __func__, "dep_stream"));
 
   if (pri_spec->exclusive) {
     rv = nghttp2_stream_dep_insert(dep_stream, stream);
     if (rv != 0) {
       return 
-# 1115 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
             ((void *)0)
-# 1115 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                 ;
     }
   } else {
@@ -7352,7 +6842,7 @@ int nghttp2_session_close_stream(nghttp2_session *session, int32_t stream_id,
       nghttp2_mem_free(mem, item);
     }
   }
-# 1168 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1168 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
   if (session->callbacks.on_stream_close_callback) {
     if (session->callbacks.on_stream_close_callback(
             session, stream_id, error_code, session->user_data) != 0) {
@@ -7475,14 +6965,14 @@ void nghttp2_session_detach_idle_stream(nghttp2_session *session,
   }
 
   stream->closed_prev = 
-# 1289 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0)
-# 1289 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                            ;
   stream->closed_next = 
-# 1290 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0)
-# 1290 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                            ;
 
   --session->num_idle_streams;
@@ -7512,19 +7002,7 @@ int nghttp2_session_adjust_closed_stream(nghttp2_session *session) {
 
     head_stream = session->closed_stream_head;
 
-    
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   head_stream
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1319, __func__, 
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "head_stream"
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 1319 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                      ;
+    ((head_stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1319, __func__, "head_stream"));
 
     next = head_stream->closed_next;
 
@@ -7539,15 +7017,15 @@ int nghttp2_session_adjust_closed_stream(nghttp2_session *session) {
 
     if (session->closed_stream_head) {
       session->closed_stream_head->closed_prev = 
-# 1333 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                 ((void *)0)
-# 1333 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1333 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                     ;
     } else {
       session->closed_stream_tail = 
-# 1335 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                    ((void *)0)
-# 1335 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                        ;
     }
 
@@ -7576,19 +7054,7 @@ int nghttp2_session_adjust_idle_stream(nghttp2_session *session) {
     nghttp2_stream *next;
 
     head = session->idle_stream_head;
-    
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   head
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1363, __func__, 
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "head"
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 1363 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+    ((head) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1363, __func__, "head"));
 
     next = head->closed_next;
 
@@ -7603,15 +7069,15 @@ int nghttp2_session_adjust_idle_stream(nghttp2_session *session) {
 
     if (session->idle_stream_head) {
       session->idle_stream_head->closed_prev = 
-# 1377 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                               ((void *)0)
-# 1377 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                   ;
     } else {
       session->idle_stream_tail = 
-# 1379 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                  ((void *)0)
-# 1379 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                      ;
     }
 
@@ -7620,7 +7086,7 @@ int nghttp2_session_adjust_idle_stream(nghttp2_session *session) {
 
   return 0;
 }
-# 1401 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 int nghttp2_session_close_stream_if_shut_rdwr(nghttp2_session *session,
                                               nghttp2_stream *stream) {
   if ((stream->shut_flags & NGHTTP2_SHUT_RDWR) == NGHTTP2_SHUT_RDWR) {
@@ -7647,13 +7113,13 @@ static int session_is_closing(nghttp2_session *session) {
          (nghttp2_session_want_read(session) == 0 &&
           nghttp2_session_want_write(session) == 0);
 }
-# 1440 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_for_stream_send(nghttp2_session *session,
                                              nghttp2_stream *stream) {
   if (stream == 
-# 1442 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 1442 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return NGHTTP2_ERR_STREAM_CLOSED;
   }
@@ -7667,15 +7133,11 @@ static int session_predicate_for_stream_send(nghttp2_session *session,
 }
 
 int nghttp2_session_check_request_allowed(nghttp2_session *session) {
-  return !session->server && session->next_stream_id <= 
-# 1455 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-                                                       (0x7fffffff) 
-# 1455 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                                 &&
+  return !session->server && session->next_stream_id <= 0x7fffffffL &&
          (session->goaway_flags & NGHTTP2_GOAWAY_RECV) == 0 &&
          !session_is_closing(session);
 }
-# 1474 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_request_headers_send(nghttp2_session *session,
                                                   nghttp2_outbound_item *item) {
   if (item->aux_data.headers.canceled) {
@@ -7690,7 +7152,7 @@ static int session_predicate_request_headers_send(nghttp2_session *session,
   }
   return 0;
 }
-# 1513 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_response_headers_send(nghttp2_session *session,
                                                    nghttp2_stream *stream) {
   int rv;
@@ -7698,19 +7160,7 @@ static int session_predicate_response_headers_send(nghttp2_session *session,
   if (rv != 0) {
     return rv;
   }
-  
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1520, __func__, 
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1520 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1520, __func__, "stream"));
   if (!session->server) {
     return NGHTTP2_ERR_PROTO;
   }
@@ -7726,7 +7176,7 @@ static int session_predicate_response_headers_send(nghttp2_session *session,
     return NGHTTP2_ERR_INVALID_STREAM_STATE;
   }
 }
-# 1561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int
 session_predicate_push_response_headers_send(nghttp2_session *session,
                                              nghttp2_stream *stream) {
@@ -7736,19 +7186,7 @@ session_predicate_push_response_headers_send(nghttp2_session *session,
   if (rv != 0) {
     return rv;
   }
-  
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1570, __func__, 
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1570 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1570, __func__, "stream"));
   if (!session->server) {
     return NGHTTP2_ERR_PROTO;
   }
@@ -7760,7 +7198,7 @@ session_predicate_push_response_headers_send(nghttp2_session *session,
   }
   return 0;
 }
-# 1603 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1603 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_headers_send(nghttp2_session *session,
                                           nghttp2_stream *stream) {
   int rv;
@@ -7768,19 +7206,7 @@ static int session_predicate_headers_send(nghttp2_session *session,
   if (rv != 0) {
     return rv;
   }
-  
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1610, __func__, 
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1610 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1610, __func__, "stream"));
 
   switch (stream->state) {
   case NGHTTP2_STREAM_OPENED:
@@ -7794,7 +7220,7 @@ static int session_predicate_headers_send(nghttp2_session *session,
     return NGHTTP2_ERR_INVALID_STREAM_STATE;
   }
 }
-# 1650 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_push_promise_send(nghttp2_session *session,
                                                nghttp2_stream *stream) {
   int rv;
@@ -7808,19 +7234,7 @@ static int session_predicate_push_promise_send(nghttp2_session *session,
     return rv;
   }
 
-  
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1663, __func__, 
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1663 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1663, __func__, "stream"));
 
   if (session->remote_settings.enable_push == 0) {
     return NGHTTP2_ERR_PUSH_DISABLED;
@@ -7833,7 +7247,7 @@ static int session_predicate_push_promise_send(nghttp2_session *session,
   }
   return 0;
 }
-# 1694 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1694 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_predicate_window_update_send(nghttp2_session *session,
                                                 int32_t stream_id) {
   nghttp2_stream *stream;
@@ -7848,9 +7262,9 @@ static int session_predicate_window_update_send(nghttp2_session *session,
   }
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 1707 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 1707 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return NGHTTP2_ERR_STREAM_CLOSED;
   }
@@ -7877,9 +7291,9 @@ static int session_predicate_altsvc_send(nghttp2_session *session,
 
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 1732 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 1732 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1732 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return NGHTTP2_ERR_STREAM_CLOSED;
   }
@@ -7924,7 +7338,7 @@ static size_t nghttp2_session_next_data_read(nghttp2_session *session,
 
   return window_size > 0 ? (size_t)window_size : 0;
 }
-# 1796 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int nghttp2_session_predicate_data_send(nghttp2_session *session,
                                                nghttp2_stream *stream) {
   int rv;
@@ -7932,19 +7346,7 @@ static int nghttp2_session_predicate_data_send(nghttp2_session *session,
   if (rv != 0) {
     return rv;
   }
-  
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1803, __func__, 
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1803 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1803, __func__, "stream"));
   if (nghttp2_session_is_my_stream_id(session, stream->stream_id)) {
 
 
@@ -8049,19 +7451,7 @@ static int session_pack_extension(nghttp2_session *session, nghttp2_bufs *bufs,
   size_t buflen;
   size_t framelen;
 
-  
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- session->callbacks.pack_extension_callback
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1908, __func__, 
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "session->callbacks.pack_extension_callback"
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1908 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                   ;
+  ((session->callbacks.pack_extension_callback) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1908, __func__, "session->callbacks.pack_extension_callback"));
 
   buf = &bufs->head->buf;
   buflen = ((((size_t)((buf)->end - (buf)->last))) < (16384) ? (((size_t)((buf)->end - (buf)->last))) : (16384));
@@ -8080,19 +7470,7 @@ static int session_pack_extension(nghttp2_session *session, nghttp2_bufs *bufs,
 
   frame->hd.length = framelen;
 
-  
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- buf->pos == buf->last
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1927, __func__, 
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "buf->pos == buf->last"
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 1927 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                              ;
+  ((buf->pos == buf->last) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1927, __func__, "buf->pos == buf->last"));
   buf->last += framelen;
   buf->pos -= 9;
 
@@ -8124,19 +7502,7 @@ static int session_prep_frame(nghttp2_session *session,
     stream = nghttp2_session_get_stream(session, frame->hd.stream_id);
 
     if (stream) {
-      
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     stream->item == item
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1959, __func__, 
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "stream->item == item"
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 1959 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                 ;
+      ((stream->item == item) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1959, __func__, "stream->item == item"));
     }
 
     rv = nghttp2_session_predicate_data_send(session, stream);
@@ -8158,38 +7524,14 @@ static int session_prep_frame(nghttp2_session *session,
       return rv;
     }
 
-    
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   stream
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1981, __func__, 
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "stream"
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 1981 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                 ;
+    ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1981, __func__, "stream"));
     next_readmax = nghttp2_session_next_data_read(session, stream);
 
     if (next_readmax == 0) {
 
 
 
-      
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     session->remote_window_size > 0
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1988, __func__, 
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "session->remote_window_size > 0"
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 1988 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                            ;
+      ((session->remote_window_size > 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 1988, __func__, "session->remote_window_size > 0"));
 
       rv = nghttp2_stream_defer_item(stream,
                                      NGHTTP2_STREAM_FLAG_DEFERRED_FLOW_CONTROL);
@@ -8199,9 +7541,9 @@ static int session_prep_frame(nghttp2_session *session,
       }
 
       session->aob.item = 
-# 1997 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 1997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                          ((void *)0)
-# 1997 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 1997 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                              ;
       active_outbound_item_reset(&session->aob, mem);
       return NGHTTP2_ERR_DEFERRED;
@@ -8221,9 +7563,9 @@ static int session_prep_frame(nghttp2_session *session,
       }
 
       session->aob.item = 
-# 2015 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                          ((void *)0)
-# 2015 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2015 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                              ;
       active_outbound_item_reset(&session->aob, mem);
       return NGHTTP2_ERR_DEFERRED;
@@ -8271,9 +7613,9 @@ static int session_prep_frame(nghttp2_session *session,
           aux_data->stream_user_data);
 
       if (stream == 
-# 2061 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                    ((void *)0)
-# 2061 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2061 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                        ) {
         return NGHTTP2_ERR_NOMEM;
       }
@@ -8346,19 +7688,7 @@ static int session_prep_frame(nghttp2_session *session,
                                                      ;
 
     if (frame->headers.cat == NGHTTP2_HCAT_REQUEST) {
-      
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     session->last_sent_stream_id < frame->hd.stream_id
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2133, __func__, 
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "session->last_sent_stream_id < frame->hd.stream_id"
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 2133 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                               ;
+      ((session->last_sent_stream_id < frame->hd.stream_id) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2133, __func__, "session->last_sent_stream_id < frame->hd.stream_id"));
       session->last_sent_stream_id = frame->hd.stream_id;
     }
 
@@ -8386,19 +7716,7 @@ static int session_prep_frame(nghttp2_session *session,
     return 0;
   case NGHTTP2_SETTINGS: {
     if (frame->hd.flags & NGHTTP2_FLAG_ACK) {
-      
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     session->obq_flood_counter_ > 0
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2161, __func__, 
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "session->obq_flood_counter_ > 0"
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 2161 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                            ;
+      ((session->obq_flood_counter_ > 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2161, __func__, "session->obq_flood_counter_ > 0"));
       --session->obq_flood_counter_;
 
 
@@ -8429,19 +7747,7 @@ static int session_prep_frame(nghttp2_session *session,
       return rv;
     }
 
-    
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   stream
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2192, __func__, 
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "stream"
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 2192 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                 ;
+    ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2192, __func__, "stream"));
 
     estimated_payloadlen = session_estimate_headers_payload(
         session, frame->push_promise.nva, frame->push_promise.nvlen, 0);
@@ -8460,45 +7766,21 @@ static int session_prep_frame(nghttp2_session *session,
       return rv;
     }
 
-    
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func (
-                                                 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+    ((session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id) ? (void)0 : __assert_func (
+                                                 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
     ,
                                                  2212
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-    , __func__, 
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id"
-# 2211 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-                                                  
-# 2212 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                 ;
+# 2211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+    , __func__, "session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id"))
+                                                  ;
     session->last_sent_stream_id = frame->push_promise.promised_stream_id;
 
     return 0;
   }
   case NGHTTP2_PING:
     if (frame->hd.flags & NGHTTP2_FLAG_ACK) {
-      
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     session->obq_flood_counter_ > 0
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2219, __func__, 
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "session->obq_flood_counter_ > 0"
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 2219 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                            ;
+      ((session->obq_flood_counter_ > 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2219, __func__, "session->obq_flood_counter_ > 0"));
       --session->obq_flood_counter_;
     }
 
@@ -8525,19 +7807,7 @@ static int session_prep_frame(nghttp2_session *session,
     return 0;
   case NGHTTP2_CONTINUATION:
 
-    
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   0
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2246, __func__, 
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "0"
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 2246 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-            ;
+    ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2246, __func__, "0"));
     return 0;
   default: {
     nghttp2_ext_aux_data *aux_data;
@@ -8566,19 +7836,7 @@ static int session_prep_frame(nghttp2_session *session,
       return 0;
     default:
 
-      
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     0
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2275, __func__, 
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "0"
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 2275 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-              ;
+      ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2275, __func__, "0"));
       return 0;
     }
   }
@@ -8606,9 +7864,9 @@ nghttp2_session_get_next_ob_item(nghttp2_session *session) {
   }
 
   return 
-# 2302 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
         ((void *)0)
-# 2302 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
             ;
 }
 
@@ -8644,9 +7902,9 @@ nghttp2_session_pop_next_ob_item(nghttp2_session *session) {
   }
 
   return 
-# 2336 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
         ((void *)0)
-# 2336 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
             ;
 }
 
@@ -8701,32 +7959,16 @@ static int find_stream_on_goaway_func(nghttp2_map_entry *entry, void *ptr) {
 
 
 
-    
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   stream->closed_next == 
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2390, __func__, 
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "stream->closed_next == NULL"
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 2390 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                      ;
-    
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   stream->closed_prev == 
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((void *)0)) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2391, __func__, 
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "stream->closed_prev == NULL"
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 2391 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                      ;
+    ((stream->closed_next == 
+# 2390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+   ((void *)0)
+# 2390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2390, __func__, "stream->closed_next == NULL"));
+    ((stream->closed_prev == 
+# 2391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+   ((void *)0)
+# 2391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+   ) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2391, __func__, "stream->closed_prev == NULL"));
 
     if (arg->head) {
       stream->closed_next = arg->head;
@@ -8748,27 +7990,15 @@ static int session_close_stream_on_goaway(nghttp2_session *session,
   int rv;
   nghttp2_stream *stream, *next_stream;
   nghttp2_close_stream_on_goaway_arg arg = {session, 
-# 2412 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                     ((void *)0)
-# 2412 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                         , last_stream_id,
                                             incoming};
   uint32_t error_code;
 
   rv = nghttp2_map_each(&session->streams, find_stream_on_goaway_func, &arg);
-  
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- rv == 0
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2417, __func__, 
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "rv == 0"
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 2417 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                ;
+  ((rv == 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2417, __func__, "rv == 0"));
 
   error_code =
       session->server && incoming ? NGHTTP2_REFUSED_STREAM : NGHTTP2_CANCEL;
@@ -8777,9 +8007,9 @@ static int session_close_stream_on_goaway(nghttp2_session *session,
   while (stream) {
     next_stream = stream->closed_next;
     stream->closed_next = 
-# 2425 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                          ((void *)0)
-# 2425 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2425 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                              ;
     rv = nghttp2_session_close_stream(session, stream->stream_id, error_code);
 
@@ -8792,9 +8022,9 @@ static int session_close_stream_on_goaway(nghttp2_session *session,
       while (stream) {
         next_stream = stream->closed_next;
         stream->closed_next = 
-# 2436 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                              ((void *)0)
-# 2436 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                  ;
         stream = next_stream;
       }
@@ -8825,7 +8055,7 @@ static int session_update_recv_stream_window_size(nghttp2_session *session,
                                                   nghttp2_stream *stream,
                                                   size_t delta_size,
                                                   int send_window_update);
-# 2481 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_after_frame_sent1(nghttp2_session *session) {
   int rv;
   nghttp2_active_outbound_item *aob = &session->aob;
@@ -8881,9 +8111,9 @@ static int session_after_frame_sent1(nghttp2_session *session) {
 
         if (stream_closed) {
           stream = 
-# 2535 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                   ((void *)0)
-# 2535 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                       ;
         }
       }
@@ -8975,19 +8205,7 @@ static int session_after_frame_sent1(nghttp2_session *session) {
       return 0;
     default:
 
-      
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     0
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2626, __func__, 
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "0"
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 2626 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-              ;
+      ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 2626, __func__, "0"));
       return 0;
     }
   }
@@ -9007,9 +8225,9 @@ static int session_after_frame_sent1(nghttp2_session *session) {
       stream = nghttp2_session_open_stream(
           session, frame->hd.stream_id, NGHTTP2_FLAG_NONE,
           &frame->priority.pri_spec, NGHTTP2_STREAM_IDLE, 
-# 2645 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                          ((void *)0)
-# 2645 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2645 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                              );
       if (!stream) {
         return NGHTTP2_ERR_NOMEM;
@@ -9103,7 +8321,7 @@ static int session_after_frame_sent1(nghttp2_session *session) {
     return 0;
   }
 }
-# 2751 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_after_frame_sent2(nghttp2_session *session) {
   int rv;
   nghttp2_active_outbound_item *aob = &session->aob;
@@ -9173,9 +8391,9 @@ static int session_after_frame_sent2(nghttp2_session *session) {
   }
 
   aob->item = 
-# 2819 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 2819 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2819 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ;
   active_outbound_item_reset(&session->aob, mem);
 
@@ -9238,9 +8456,9 @@ static ssize_t nghttp2_session_mem_send_internal(nghttp2_session *session,
 
       item = nghttp2_session_pop_next_ob_item(session);
       if (item == 
-# 2880 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 2880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                  ((void *)0)
-# 2880 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 2880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                      ) {
         return 0;
       }
@@ -9419,38 +8637,14 @@ static ssize_t nghttp2_session_mem_send_internal(nghttp2_session *session,
           rv = session_after_frame_sent1(session);
           if (rv < 0) {
 
-            
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-           ((
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-           nghttp2_is_fatal(rv)
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-           ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3058, __func__, 
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-           "nghttp2_is_fatal(rv)"
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-           ))
-# 3058 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                       ;
+            ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3058, __func__, "nghttp2_is_fatal(rv)"));
             return rv;
           }
           rv = session_after_frame_sent2(session);
         }
         if (rv < 0) {
 
-          
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ((
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-         nghttp2_is_fatal(rv)
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3065, __func__, 
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-         "nghttp2_is_fatal(rv)"
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ))
-# 3065 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                     ;
+          ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3065, __func__, "nghttp2_is_fatal(rv)"));
           return rv;
         }
 
@@ -9477,9 +8671,9 @@ static ssize_t nghttp2_session_mem_send_internal(nghttp2_session *session,
 
       stream = nghttp2_session_get_stream(session, frame->hd.stream_id);
       if (stream == 
-# 3091 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 3091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                    ((void *)0)
-# 3091 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3091 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                        ) {
         do { } while (0);
 
@@ -9519,36 +8713,12 @@ static ssize_t nghttp2_session_mem_send_internal(nghttp2_session *session,
 
       rv = session_after_frame_sent1(session);
       if (rv < 0) {
-        
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       nghttp2_is_fatal(rv)
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3130, __func__, 
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "nghttp2_is_fatal(rv)"
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 3130 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                   ;
+        ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3130, __func__, "nghttp2_is_fatal(rv)"));
         return rv;
       }
       rv = session_after_frame_sent2(session);
       if (rv < 0) {
-        
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       nghttp2_is_fatal(rv)
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3135, __func__, 
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "nghttp2_is_fatal(rv)"
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 3135 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                   ;
+        ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3135, __func__, "nghttp2_is_fatal(rv)"));
         return rv;
       }
 
@@ -9589,9 +8759,9 @@ ssize_t nghttp2_session_mem_send(nghttp2_session *session,
   ssize_t len;
 
   *data_ptr = 
-# 3175 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 3175 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ;
 
   len = nghttp2_session_mem_send_internal(session, data_ptr, 1);
@@ -9606,19 +8776,7 @@ ssize_t nghttp2_session_mem_send(nghttp2_session *session,
 
     rv = session_after_frame_sent1(session);
     if (rv < 0) {
-      
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     nghttp2_is_fatal(rv)
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3189, __func__, 
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "nghttp2_is_fatal(rv)"
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 3189 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                 ;
+      ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3189, __func__, "nghttp2_is_fatal(rv)"));
       return (ssize_t)rv;
     }
   }
@@ -9628,9 +8786,9 @@ ssize_t nghttp2_session_mem_send(nghttp2_session *session,
 
 int nghttp2_session_send(nghttp2_session *session) {
   const uint8_t *data = 
-# 3198 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 3198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0)
-# 3198 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3198 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                            ;
   ssize_t datalen;
   ssize_t sentlen;
@@ -9796,9 +8954,9 @@ static int session_call_unpack_extension_callback(nghttp2_session *session) {
   nghttp2_inbound_frame *iframe = &session->iframe;
   nghttp2_frame *frame = &iframe->frame;
   void *payload = 
-# 3362 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 3362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                  ((void *)0)
-# 3362 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                      ;
 
   rv = session->callbacks.unpack_extension_callback(
@@ -9814,7 +8972,7 @@ static int session_call_unpack_extension_callback(nghttp2_session *session) {
 
   return 0;
 }
-# 3387 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_handle_frame_size_error(nghttp2_session *session) {
 
 
@@ -9841,7 +8999,7 @@ static uint32_t get_error_code_from_lib_error_code(int lib_error_code) {
     return NGHTTP2_INTERNAL_ERROR;
   }
 }
-# 3423 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_call_on_invalid_frame_recv_callback(nghttp2_session *session,
                                                        nghttp2_frame *frame,
                                                        int lib_error_code) {
@@ -9920,7 +9078,7 @@ static int session_inflate_handle_invalid_connection(nghttp2_session *session,
   }
   return NGHTTP2_ERR_IGN_HEADER_BLOCK;
 }
-# 3529 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3529 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int inflate_header_block(nghttp2_session *session, nghttp2_frame *frame,
                                 size_t *readlen_ptr, uint8_t *in, size_t inlen,
                                 int final, int call_header_cb) {
@@ -10058,7 +9216,7 @@ static int inflate_header_block(nghttp2_session *session, nghttp2_frame *frame,
   }
   return 0;
 }
-# 3678 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3678 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_end_stream_headers_received(nghttp2_session *session,
                                                nghttp2_frame *frame,
                                                nghttp2_stream *stream) {
@@ -10099,19 +9257,7 @@ static int session_after_header_block_received(nghttp2_session *session) {
         rv = nghttp2_http_on_request_headers(subject_stream, frame);
       }
     } else {
-      
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     frame->hd.type == NGHTTP2_HEADERS
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3718, __func__, 
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "frame->hd.type == NGHTTP2_HEADERS"
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 3718 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                              ;
+      ((frame->hd.type == NGHTTP2_HEADERS) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3718, __func__, "frame->hd.type == NGHTTP2_HEADERS"));
       switch (frame->headers.cat) {
       case NGHTTP2_HCAT_REQUEST:
         rv = nghttp2_http_on_request_headers(stream, frame);
@@ -10122,38 +9268,14 @@ static int session_after_header_block_received(nghttp2_session *session) {
         break;
       case NGHTTP2_HCAT_HEADERS:
         if (stream->http_flags & NGHTTP2_HTTP_FLAG_EXPECT_FINAL_RESPONSE) {
-          
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ((
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-         !session->server
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3729, __func__, 
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-         "!session->server"
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-         ))
-# 3729 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                 ;
+          ((!session->server) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3729, __func__, "!session->server"));
           rv = nghttp2_http_on_response_headers(stream);
         } else {
           rv = nghttp2_http_on_trailer_headers(stream, frame);
         }
         break;
       default:
-        
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       0
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3736, __func__, 
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "0"
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 3736 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                ;
+        ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3736, __func__, "0"));
       }
       if (rv == 0 && (frame->hd.flags & NGHTTP2_FLAG_END_STREAM)) {
         rv = nghttp2_http_on_remote_end_stream(stream);
@@ -10214,19 +9336,7 @@ int nghttp2_session_on_request_headers_received(nghttp2_session *session,
     return NGHTTP2_ERR_IGN_HEADER_BLOCK;
   }
 
-  
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- session->server
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3797, __func__, 
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "session->server"
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 3797 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                        ;
+  ((session->server) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3797, __func__, "session->server"));
 
   if (!session_is_new_peer_stream_id(session, frame->hd.stream_id)) {
     if (frame->hd.stream_id == 0 ||
@@ -10235,7 +9345,7 @@ int nghttp2_session_on_request_headers_received(nghttp2_session *session,
           session, frame, NGHTTP2_ERR_PROTO,
           "request HEADERS: invalid stream_id");
     }
-# 3827 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3827 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
     stream = nghttp2_session_get_stream_raw(session, frame->hd.stream_id);
     if (stream && (stream->shut_flags & NGHTTP2_SHUT_RD)) {
       return session_inflate_handle_invalid_connection(
@@ -10270,9 +9380,9 @@ int nghttp2_session_on_request_headers_received(nghttp2_session *session,
   stream = nghttp2_session_open_stream(
       session, frame->hd.stream_id, NGHTTP2_STREAM_FLAG_NONE,
       &frame->headers.pri_spec, NGHTTP2_STREAM_OPENING, 
-# 3860 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 3860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                        ((void *)0)
-# 3860 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                            );
   if (!stream) {
     return NGHTTP2_ERR_NOMEM;
@@ -10298,32 +9408,20 @@ int nghttp2_session_on_response_headers_received(nghttp2_session *session,
   int rv;
 
 
-  
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream->state == NGHTTP2_STREAM_OPENING && nghttp2_session_is_my_stream_id(session, frame->hd.stream_id)
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func (
-                                                                      "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+  ((stream->state == NGHTTP2_STREAM_OPENING && nghttp2_session_is_my_stream_id(session, frame->hd.stream_id)) ? (void)0 : __assert_func (
+                                                                      "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
   ,
                                                                       3886
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-  , __func__, 
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream->state == NGHTTP2_STREAM_OPENING && nghttp2_session_is_my_stream_id(session, frame->hd.stream_id)"
-# 3885 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-                                                                       
-# 3886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                                      ;
+# 3885 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+  , __func__, "stream->state == NGHTTP2_STREAM_OPENING && nghttp2_session_is_my_stream_id(session, frame->hd.stream_id)"))
+                                                                       ;
   if (frame->hd.stream_id == 0) {
     return session_inflate_handle_invalid_connection(
         session, frame, NGHTTP2_ERR_PROTO, "response HEADERS: stream_id == 0");
   }
   if (stream->shut_flags & NGHTTP2_SHUT_RD) {
-# 3900 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
     return session_inflate_handle_invalid_connection(
         session, frame, NGHTTP2_ERR_STREAM_CLOSED, "HEADERS: stream closed");
   }
@@ -10339,19 +9437,7 @@ int nghttp2_session_on_push_response_headers_received(nghttp2_session *session,
                                                       nghttp2_frame *frame,
                                                       nghttp2_stream *stream) {
   int rv = 0;
-  
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream->state == NGHTTP2_STREAM_RESERVED
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3915, __func__, 
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream->state == NGHTTP2_STREAM_RESERVED"
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 3915 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                 ;
+  ((stream->state == NGHTTP2_STREAM_RESERVED) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 3915, __func__, "stream->state == NGHTTP2_STREAM_RESERVED"));
   if (frame->hd.stream_id == 0) {
     return session_inflate_handle_invalid_connection(
         session, frame, NGHTTP2_ERR_PROTO,
@@ -10401,7 +9487,7 @@ int nghttp2_session_on_headers_received(nghttp2_session *session,
         session, frame, NGHTTP2_ERR_PROTO, "HEADERS: stream_id == 0");
   }
   if ((stream->shut_flags & NGHTTP2_SHUT_RD)) {
-# 3973 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 3973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
     return session_inflate_handle_invalid_connection(
         session, frame, NGHTTP2_ERR_STREAM_CLOSED, "HEADERS: stream closed");
   }
@@ -10496,15 +9582,15 @@ int nghttp2_session_on_priority_received(nghttp2_session *session,
     stream = nghttp2_session_open_stream(
         session, frame->hd.stream_id, NGHTTP2_STREAM_FLAG_NONE,
         &frame->priority.pri_spec, NGHTTP2_STREAM_IDLE, 
-# 4066 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                        ((void *)0)
-# 4066 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                            );
 
     if (stream == 
-# 4068 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                  ((void *)0)
-# 4068 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4068 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                      ) {
       return NGHTTP2_ERR_NOMEM;
     }
@@ -10610,7 +9696,7 @@ static int update_remote_initial_window_size_func(nghttp2_map_entry *entry,
   }
   return 0;
 }
-# 4184 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int
 session_update_remote_initial_window_size(nghttp2_session *session,
                                           int32_t new_initial_window_size) {
@@ -10653,7 +9739,7 @@ static int update_local_initial_window_size_func(nghttp2_map_entry *entry,
   }
   return 0;
 }
-# 4237 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int
 session_update_local_initial_window_size(nghttp2_session *session,
                                          int32_t new_initial_window_size,
@@ -10665,7 +9751,7 @@ session_update_local_initial_window_size(nghttp2_session *session,
   return nghttp2_map_each(&session->streams,
                           update_local_initial_window_size_func, &arg);
 }
-# 4262 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 int nghttp2_session_update_local_settings(nghttp2_session *session,
                                           nghttp2_settings_entry *iv,
                                           size_t niv) {
@@ -10673,11 +9759,7 @@ int nghttp2_session_update_local_settings(nghttp2_session *session,
   size_t i;
   int32_t new_initial_window_size = -1;
   uint32_t header_table_size = 0;
-  uint32_t min_header_table_size = 
-# 4269 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-                                  (0xffffffffU)
-# 4269 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                            ;
+  uint32_t min_header_table_size = 0xffffffffUL;
   uint8_t header_table_size_seen = 0;
 
 
@@ -10783,9 +9865,9 @@ int nghttp2_session_on_settings_received(nghttp2_session *session,
         return rv;
       }
       return session_handle_invalid_connection(session, frame, rv, 
-# 4374 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                   ((void *)0)
-# 4374 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                       );
     }
     return session_call_on_frame_received(session, frame);
@@ -10805,9 +9887,9 @@ int nghttp2_session_on_settings_received(nghttp2_session *session,
         } else {
           return session_handle_invalid_connection(
               session, frame, NGHTTP2_ERR_HEADER_COMP, 
-# 4392 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                       ((void *)0)
-# 4392 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                           );
         }
       }
@@ -10857,9 +9939,9 @@ int nghttp2_session_on_settings_received(nghttp2_session *session,
       if (rv != 0) {
         return session_handle_invalid_connection(
             session, frame, NGHTTP2_ERR_FLOW_CONTROL, 
-# 4440 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                      ((void *)0)
-# 4440 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                          );
       }
 
@@ -10888,9 +9970,9 @@ int nghttp2_session_on_settings_received(nghttp2_session *session,
 
   if (!noack && !session_is_closing(session)) {
     rv = nghttp2_session_add_settings(session, NGHTTP2_FLAG_ACK, 
-# 4467 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                 ((void *)0)
-# 4467 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                     , 0);
 
     if (rv != 0) {
@@ -10900,9 +9982,9 @@ int nghttp2_session_on_settings_received(nghttp2_session *session,
 
       return session_handle_invalid_connection(session, frame,
                                                NGHTTP2_ERR_INTERNAL, 
-# 4475 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                     ((void *)0)
-# 4475 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4475 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                         );
     }
   }
@@ -10919,11 +10001,7 @@ static int session_process_settings_frame(nghttp2_session *session) {
   if (iframe->max_niv) {
     min_header_size_entry = iframe->iv[iframe->max_niv - 1];
 
-    if (min_header_size_entry.value < 
-# 4491 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-                                     (0xffffffffU)
-# 4491 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                               ) {
+    if (min_header_size_entry.value < 0xffffffffUL) {
 
 
       for (i = 0; i < iframe->niv; ++i) {
@@ -10932,19 +10010,7 @@ static int session_process_settings_frame(nghttp2_session *session) {
         }
       }
 
-      
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     i < iframe->niv
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 4500, __func__, 
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "i < iframe->niv"
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 4500 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                            ;
+      ((i < iframe->niv) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 4500, __func__, "i < iframe->niv"));
 
       if (min_header_size_entry.value != iframe->iv[i].value) {
         iframe->iv[iframe->niv++] = iframe->iv[i];
@@ -10957,9 +10023,9 @@ static int session_process_settings_frame(nghttp2_session *session) {
                                         iframe->niv);
 
   iframe->iv = 
-# 4512 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4512 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
               ((void *)0)
-# 4512 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4512 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                   ;
   iframe->niv = 0;
   iframe->max_niv = 0;
@@ -11037,9 +10103,9 @@ int nghttp2_session_on_push_promise_received(nghttp2_session *session,
   promised_stream = nghttp2_session_open_stream(
       session, frame->push_promise.promised_stream_id, NGHTTP2_STREAM_FLAG_NONE,
       &pri_spec, NGHTTP2_STREAM_RESERVED, 
-# 4588 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                          ((void *)0)
-# 4588 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                              );
 
   if (!promised_stream) {
@@ -11143,9 +10209,9 @@ static int session_process_goaway_frame(nghttp2_session *session) {
                                       ((size_t)((&iframe->lbuf)->last - (&iframe->lbuf)->pos)));
 
   nghttp2_buf_wrap_init(&iframe->lbuf, 
-# 4690 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                       ((void *)0)
-# 4690 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4690 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                           , 0);
 
   return nghttp2_session_on_goaway_received(session, frame);
@@ -11165,9 +10231,9 @@ session_on_connection_window_update_received(nghttp2_session *session,
       session->remote_window_size) {
     return session_handle_invalid_connection(session, frame,
                                              NGHTTP2_ERR_FLOW_CONTROL, 
-# 4708 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                       ((void *)0)
-# 4708 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                           );
   }
   session->remote_window_size += frame->window_update.window_size_increment;
@@ -11286,9 +10352,9 @@ static int session_process_altsvc_frame(nghttp2_session *session) {
 
 
   nghttp2_buf_wrap_init(&iframe->lbuf, 
-# 4825 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 4825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                       ((void *)0)
-# 4825 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                           , 0);
 
   return nghttp2_session_on_altsvc_received(session, frame);
@@ -11367,7 +10433,7 @@ static int session_process_data_frame(nghttp2_session *session) {
   }
   return 0;
 }
-# 4914 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4914 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int adjust_recv_window_size(int32_t *recv_window_size_ptr, size_t delta,
                                    int32_t local_window_size) {
   if (*recv_window_size_ptr > local_window_size - (int32_t)delta ||
@@ -11377,7 +10443,7 @@ static int adjust_recv_window_size(int32_t *recv_window_size_ptr, size_t delta,
   *recv_window_size_ptr += (int32_t)delta;
   return 0;
 }
-# 4936 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4936 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_update_recv_stream_window_size(nghttp2_session *session,
                                                   nghttp2_stream *stream,
                                                   size_t delta_size,
@@ -11409,7 +10475,7 @@ static int session_update_recv_stream_window_size(nghttp2_session *session,
   }
   return 0;
 }
-# 4980 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 4980 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_update_recv_connection_window_size(nghttp2_session *session,
                                                       size_t delta_size) {
   int rv;
@@ -11489,7 +10555,7 @@ static int session_update_connection_consumed_size(nghttp2_session *session,
       session, &session->consumed_size, &session->recv_window_size,
       session->window_update_queued, 0, delta_size, session->local_window_size);
 }
-# 5077 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 5077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
 static int session_on_data_received_fail_fast(nghttp2_session *session) {
   int rv;
   nghttp2_stream *stream;
@@ -11962,7 +11028,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
         break;
       case NGHTTP2_RST_STREAM:
       case NGHTTP2_WINDOW_UPDATE:
-# 5560 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 5560 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
         iframe->frame.hd.flags = NGHTTP2_FLAG_NONE;
 
         if (iframe->payloadleft != 4) {
@@ -12009,11 +11075,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
           min_header_table_size_entry = &iframe->iv[iframe->max_niv - 1];
           min_header_table_size_entry->settings_id =
               NGHTTP2_SETTINGS_HEADER_TABLE_SIZE;
-          min_header_table_size_entry->value = 
-# 5606 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-                                              (0xffffffffU)
-# 5606 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                        ;
+          min_header_table_size_entry->value = 0xffffffffUL;
 
           inbound_frame_set_mark(iframe, 6);
           break;
@@ -12353,9 +11415,9 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
           iframe->raw_lbuf = nghttp2_mem_malloc(mem, debuglen);
 
           if (iframe->raw_lbuf == 
-# 5945 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 5945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                  ((void *)0)
-# 5945 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 5945 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                      ) {
             return NGHTTP2_ERR_NOMEM;
           }
@@ -12396,9 +11458,9 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
               nghttp2_mem_malloc(mem, iframe->frame.hd.length - 2);
 
           if (iframe->raw_lbuf == 
-# 5984 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 5984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                  ((void *)0)
-# 5984 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 5984 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                      ) {
             return NGHTTP2_ERR_NOMEM;
           }
@@ -12425,7 +11487,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
       ssize_t data_readlen;
       size_t trail_padlen;
       int final;
-# 6018 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
       readlen = inbound_frame_payload_readlen(iframe, in, last);
 
       do { } while (0)
@@ -12613,19 +11675,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
                                  ;
 
       if (iframe->payloadleft) {
-        
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       ((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6205, __func__, 
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "nghttp2_buf_avail(&iframe->lbuf) > 0"
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 6205 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                   ;
+        ((((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6205, __func__, "nghttp2_buf_avail(&iframe->lbuf) > 0"));
 
         break;
       }
@@ -12641,7 +11691,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
       break;
     case NGHTTP2_IB_EXPECT_CONTINUATION:
     case NGHTTP2_IB_IGN_CONTINUATION:
-# 6229 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
       readlen = inbound_frame_buf_read(iframe, in, last);
       in += readlen;
 
@@ -12951,19 +12001,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
                                  ;
 
       if (iframe->payloadleft) {
-        
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       ((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6538, __func__, 
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "nghttp2_buf_avail(&iframe->lbuf) > 0"
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 6538 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                                   ;
+        ((((size_t)((&iframe->lbuf)->end - (&iframe->lbuf)->last)) > 0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6538, __func__, "nghttp2_buf_avail(&iframe->lbuf) > 0"));
 
         break;
       }
@@ -12986,19 +12024,7 @@ ssize_t nghttp2_session_mem_recv(nghttp2_session *session, const uint8_t *in,
     busy = 0;
   }
 
-  
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- in == last
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6561, __func__, 
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "in == last"
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 6561 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                   ;
+  ((in == last) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6561, __func__, "in == last"));
 
   return in - first;
 }
@@ -13013,19 +12039,7 @@ int nghttp2_session_recv(nghttp2_session *session) {
       if (proclen < 0) {
         return (int)proclen;
       }
-      
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     proclen == readlen
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6576, __func__, 
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "proclen == readlen"
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 6576 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                               ;
+      ((proclen == readlen) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6576, __func__, "proclen == readlen"));
     } else if (readlen == 0 || readlen == NGHTTP2_ERR_WOULDBLOCK) {
       return 0;
     } else if (readlen == NGHTTP2_ERR_EOF) {
@@ -13106,9 +12120,9 @@ int nghttp2_session_add_ping(nghttp2_session *session, uint8_t flags,
 
   item = nghttp2_mem_malloc(mem, sizeof(nghttp2_outbound_item));
   if (item == 
-# 6656 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 6656 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ) {
     return NGHTTP2_ERR_NOMEM;
   }
@@ -13141,9 +12155,9 @@ int nghttp2_session_add_goaway(nghttp2_session *session, int32_t last_stream_id,
   nghttp2_outbound_item *item;
   nghttp2_frame *frame;
   uint8_t *opaque_data_copy = 
-# 6687 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                              ((void *)0)
-# 6687 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6687 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                  ;
   nghttp2_goaway_aux_data *aux_data;
   nghttp2_mem *mem;
@@ -13160,9 +12174,9 @@ int nghttp2_session_add_goaway(nghttp2_session *session, int32_t last_stream_id,
     }
     opaque_data_copy = nghttp2_mem_malloc(mem, opaque_data_len);
     if (opaque_data_copy == 
-# 6702 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6702 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                            ((void *)0)
-# 6702 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6702 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                ) {
       return NGHTTP2_ERR_NOMEM;
     }
@@ -13171,9 +12185,9 @@ int nghttp2_session_add_goaway(nghttp2_session *session, int32_t last_stream_id,
 
   item = nghttp2_mem_malloc(mem, sizeof(nghttp2_outbound_item));
   if (item == 
-# 6709 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 6709 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6709 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ) {
     nghttp2_mem_free(mem, opaque_data_copy);
     return NGHTTP2_ERR_NOMEM;
@@ -13213,9 +12227,9 @@ int nghttp2_session_add_window_update(nghttp2_session *session, uint8_t flags,
   mem = &session->mem;
   item = nghttp2_mem_malloc(mem, sizeof(nghttp2_outbound_item));
   if (item == 
-# 6747 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 6747 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6747 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ) {
     return NGHTTP2_ERR_NOMEM;
   }
@@ -13257,9 +12271,9 @@ int nghttp2_session_add_settings(nghttp2_session *session, uint8_t flags,
   int rv;
   nghttp2_mem *mem;
   nghttp2_inflight_settings *inflight_settings = 
-# 6787 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                 ((void *)0)
-# 6787 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                     ;
 
   mem = &session->mem;
@@ -13280,9 +12294,9 @@ int nghttp2_session_add_settings(nghttp2_session *session, uint8_t flags,
 
   item = nghttp2_mem_malloc(mem, sizeof(nghttp2_outbound_item));
   if (item == 
-# 6806 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 6806 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ) {
     return NGHTTP2_ERR_NOMEM;
   }
@@ -13290,37 +12304,25 @@ int nghttp2_session_add_settings(nghttp2_session *session, uint8_t flags,
   if (niv > 0) {
     iv_copy = nghttp2_frame_iv_copy(iv, niv, mem);
     if (iv_copy == 
-# 6812 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                   ((void *)0)
-# 6812 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6812 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                       ) {
       nghttp2_mem_free(mem, item);
       return NGHTTP2_ERR_NOMEM;
     }
   } else {
     iv_copy = 
-# 6817 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
              ((void *)0)
-# 6817 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6817 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                  ;
   }
 
   if ((flags & NGHTTP2_FLAG_ACK) == 0) {
     rv = inflight_settings_new(&inflight_settings, iv, niv, mem);
     if (rv != 0) {
-      
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ((
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     nghttp2_is_fatal(rv)
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6823, __func__, 
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-     "nghttp2_is_fatal(rv)"
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-     ))
-# 6823 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                 ;
+      ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6823, __func__, "nghttp2_is_fatal(rv)"));
       nghttp2_mem_free(mem, iv_copy);
       nghttp2_mem_free(mem, item);
       return rv;
@@ -13335,19 +12337,7 @@ int nghttp2_session_add_settings(nghttp2_session *session, uint8_t flags,
   rv = nghttp2_session_add_item(session, item);
   if (rv != 0) {
 
-    
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ((
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   nghttp2_is_fatal(rv)
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6838, __func__, 
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-   "nghttp2_is_fatal(rv)"
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-   ))
-# 6838 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                               ;
+    ((nghttp2_is_fatal(rv)) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6838, __func__, "nghttp2_is_fatal(rv)"));
 
     inflight_settings_del(inflight_settings, mem);
 
@@ -13395,19 +12385,7 @@ int nghttp2_session_pack_data(nghttp2_session *session, nghttp2_bufs *bufs,
   nghttp2_buf *buf;
   size_t max_payloadlen;
 
-  
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- bufs->head == bufs->cur
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6886, __func__, 
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "bufs->head == bufs->cur"
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 6886 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                ;
+  ((bufs->head == bufs->cur) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6886, __func__, "bufs->head == bufs->cur"));
 
   buf = &bufs->cur->buf;
 
@@ -13443,19 +12421,7 @@ int nghttp2_session_pack_data(nghttp2_session *session, nghttp2_bufs *bufs,
 
         do { } while (0);
       } else {
-        
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ((
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       &session->aob.framebufs == bufs
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6922, __func__, 
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-       "&session->aob.framebufs == bufs"
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
-       ))
-# 6922 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                              ;
+        ((&session->aob.framebufs == bufs) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6922, __func__, "&session->aob.framebufs == bufs"));
 
         buf = &bufs->cur->buf;
       }
@@ -13464,19 +12430,7 @@ int nghttp2_session_pack_data(nghttp2_session *session, nghttp2_bufs *bufs,
   }
 
 
-  
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- ((size_t)((buf)->end - (buf)->last)) >= datamax
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6931, __func__, 
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "nghttp2_buf_avail(buf) >= datamax"
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 6931 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-                                          ;
+  ((((size_t)((buf)->end - (buf)->last)) >= datamax) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 6931, __func__, "nghttp2_buf_avail(buf) >= datamax"));
 
   data_flags = NGHTTP2_DATA_FLAG_NONE;
   payloadlen = aux_data->data_prd.read_callback(
@@ -13516,9 +12470,9 @@ int nghttp2_session_pack_data(nghttp2_session *session, nghttp2_bufs *bufs,
 
   if (data_flags & NGHTTP2_DATA_FLAG_NO_COPY) {
     if (session->callbacks.send_data_callback == 
-# 6970 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 6970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                 ((void *)0)
-# 6970 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 6970 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                     ) {
       do { } while (0);
 
@@ -13570,9 +12524,9 @@ void *nghttp2_session_get_stream_user_data(nghttp2_session *session,
     return stream->stream_user_data;
   } else {
     return 
-# 7020 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
           ((void *)0)
-# 7020 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7020 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
               ;
   }
 }
@@ -13594,9 +12548,9 @@ int nghttp2_session_resume_data(nghttp2_session *session, int32_t stream_id) {
   nghttp2_stream *stream;
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 7040 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0) 
-# 7040 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                     || !nghttp2_stream_check_deferred_item(stream)) {
     return NGHTTP2_ERR_INVALID_ARGUMENT;
   }
@@ -13624,9 +12578,9 @@ nghttp2_session_get_stream_effective_recv_data_length(nghttp2_session *session,
   nghttp2_stream *stream;
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 7066 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 7066 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return -1;
   }
@@ -13639,9 +12593,9 @@ nghttp2_session_get_stream_effective_local_window_size(nghttp2_session *session,
   nghttp2_stream *stream;
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 7077 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 7077 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return -1;
   }
@@ -13654,9 +12608,9 @@ int32_t nghttp2_session_get_stream_local_window_size(nghttp2_session *session,
   int32_t size;
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 7088 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 7088 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7088 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return -1;
   }
@@ -13692,9 +12646,9 @@ int32_t nghttp2_session_get_stream_remote_window_size(nghttp2_session *session,
 
   stream = nghttp2_session_get_stream(session, stream_id);
   if (stream == 
-# 7122 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 7122 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return -1;
   }
@@ -13725,19 +12679,7 @@ uint32_t nghttp2_session_get_remote_settings(nghttp2_session *session,
     return session->remote_settings.max_header_list_size;
   }
 
-  
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- 0
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7152, __func__, 
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "0"
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 7152 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-          ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7152, __func__, "0"));
   abort();
 }
 
@@ -13758,19 +12700,7 @@ uint32_t nghttp2_session_get_local_settings(nghttp2_session *session,
     return session->local_settings.max_header_list_size;
   }
 
-  
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- 0
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7173, __func__, 
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "0"
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 7173 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-          ;
+  ((0) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7173, __func__, "0"));
   abort();
 }
 
@@ -13820,14 +12750,14 @@ static int nghttp2_session_upgrade_internal(nghttp2_session *session,
   stream = nghttp2_session_open_stream(
       session, 1, NGHTTP2_STREAM_FLAG_NONE, &pri_spec, NGHTTP2_STREAM_OPENING,
       session->server ? 
-# 7222 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                        ((void *)0) 
-# 7222 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                             : stream_user_data);
   if (stream == 
-# 7223 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                ((void *)0)
-# 7223 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                    ) {
     return NGHTTP2_ERR_NOMEM;
   }
@@ -13861,20 +12791,8 @@ int nghttp2_session_upgrade(nghttp2_session *session,
   }
 
   stream = nghttp2_session_get_stream(session, 1);
-  
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7256, __func__, 
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 7256 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
-# 7267 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7256, __func__, "stream"));
+# 7267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
   stream->http_flags |= NGHTTP2_HTTP_FLAG_METH_UPGRADE_WORKAROUND;
   return 0;
 }
@@ -13893,19 +12811,7 @@ int nghttp2_session_upgrade2(nghttp2_session *session,
   }
 
   stream = nghttp2_session_get_stream(session, 1);
-  
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ((
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- stream
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7285, __func__, 
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
- "stream"
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
- ))
-# 7285 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
-               ;
+  ((stream) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c", 7285, __func__, "stream"));
 
   if (head_request) {
     stream->http_flags |= NGHTTP2_HTTP_FLAG_METH_HEAD;
@@ -14117,9 +13023,9 @@ int nghttp2_session_create_idle_stream(nghttp2_session *session,
   stream =
       nghttp2_session_open_stream(session, stream_id, NGHTTP2_STREAM_FLAG_NONE,
                                   &pri_spec_copy, NGHTTP2_STREAM_IDLE, 
-# 7496 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
+# 7496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c" 3 4
                                                                       ((void *)0)
-# 7496 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
+# 7496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_session.c"
                                                                           );
   if (!stream) {
     return NGHTTP2_ERR_NOMEM;

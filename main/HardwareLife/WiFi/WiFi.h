@@ -5,38 +5,73 @@
  */
 
 /* 
- * File:   WiFi.h
- * Author: dieter
+ * File:   Wifi.h
+ * Author: Dieter Steuten at <d.steuten@elk.de>
  *
- * Created on 2. Januar 2020, 23:24
+ * Created on 10. Januar 2020, 14:53
  */
 
 #ifndef WIFI_H
 #define WIFI_H
+
 #include <stdio.h>
-//#include <string.h>
-//#include "freertos/FreeRTOS.h"
-//#include "freertos/task.h"
-//#include "esp_system.h"
-//#include "esp_log.h"
-#include "../../../components/esp32-wifi-manager/src/wifi_manager.h"
+#include <stdint.h>
+#include <stddef.h>
+#include <string.h>
 
-extern "C" {
-   void wifi_manager_start(void);
-    void cb_connection_ok(void *pvParameter);
-}
+#include "nvs_flash.h"
 
-class WiFi {
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "freertos/portmacro.h"
+#include "freertos/event_groups.h"
+#include "freertos/semphr.h"
+#include "freertos/queue.h"
+
+#include "esp_wifi.h"
+#include "esp_bt.h"
+#include "esp_system.h"
+#include "esp_event.h"
+#include "esp_event_loop.h"
+
+#include "esp_log.h"
+#include "esp_tls.h"
+
+#include "driver/gpio.h"
+#include "tcpip_adapter.h"
+
+
+#include "lwip/err.h"
+#include "lwip/sys.h"
+#include "lwip/netdb.h"
+#include "lwip/api.h"
+#include "lwip/sockets.h"
+#include "lwip/dns.h"
+
+#define WIFI_IF_STA ESP_IF_WIFI_STA
+
+static EventGroupHandle_t wifi_event_group;
+const static bool CONNECTED_BIT = BIT0;
+const static bool DISCONNECTED_BIT = BIT1;
+const static bool WIFI_CONNECTED_BIT = BIT0;
+const static bool WIFI_FAIL_BIT = BIT1;
+
+static int s_retry_num;
+
+
+class Wifi
+{
 public:
-    WiFi();
-    virtual ~WiFi();
-
-    static void listen(void *pvParameters) {
-        ((WiFi*) pvParameters)->monitoring_task();
+    Wifi();
+    virtual ~Wifi();
+    static void run(void *pvParameters) {
+        ((Wifi*) pvParameters)->classrun();
     };
-
-
-    void monitoring_task();
+    void classrun();
+    
+private:
+    bool running;
+static esp_err_t event_handler(void *ctx, system_event_t *event);
 };
 
 #endif /* WIFI_H */

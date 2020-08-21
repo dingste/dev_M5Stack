@@ -1,5 +1,5 @@
-# 1 "/home/dieter/Development/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c"
-# 1 "/home/dieter/Development/ProjektEi/build/freemodbus//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/freemodbus//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freemodbus/modbus/functions/mbfuncdiag.c"

@@ -1,143 +1,120 @@
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-# 1 "/home/dieter/Development/ProjektEi/build/wifi_provisioning//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wifi_provisioning//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-# 9 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
-# 199 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 1
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -148,32 +125,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -188,35 +143,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -225,21 +152,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -258,44 +184,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -303,10 +192,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -357,12 +244,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -379,7 +266,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -396,13 +283,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -430,7 +317,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -441,7 +328,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -451,7 +338,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -497,12 +384,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -532,8 +419,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -542,29 +431,21 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -582,6 +463,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -592,18 +475,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -613,11 +491,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -646,21 +524,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -675,26 +544,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -709,54 +571,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -780,40 +630,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -825,150 +671,41 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 200 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
+# 201 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 201 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 202 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -979,8 +716,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -991,29 +740,44 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 203 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
-# 212 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
-# 241 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h" 2
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 extern const char protobuf_c_empty_string[];
-# 255 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_PACKED = (1 << 0),
@@ -1024,7 +788,7 @@ typedef enum {
 
  PROTOBUF_C_FIELD_FLAG_ONEOF = (1 << 2),
 } ProtobufCFieldFlag;
-# 274 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
 
  PROTOBUF_C_LABEL_REQUIRED,
@@ -1048,7 +812,7 @@ typedef enum {
 
  PROTOBUF_C_LABEL_NONE,
 } ProtobufCLabel;
-# 306 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 306 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_TYPE_INT32,
  PROTOBUF_C_TYPE_SINT32,
@@ -1068,7 +832,7 @@ typedef enum {
  PROTOBUF_C_TYPE_BYTES,
  PROTOBUF_C_TYPE_MESSAGE,
 } ProtobufCType;
-# 334 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 typedef enum {
  PROTOBUF_C_WIRE_TYPE_VARINT = 0,
  PROTOBUF_C_WIRE_TYPE_64BIT = 1,
@@ -1129,19 +893,19 @@ struct ProtobufCAllocator {
 
  void *allocator_data;
 };
-# 402 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBinaryData {
  size_t len;
  uint8_t *data;
 };
-# 442 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBuffer {
 
  void (*append)(ProtobufCBuffer *buffer,
       size_t len,
       const uint8_t *data);
 };
-# 477 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCBufferSimple {
 
  ProtobufCBuffer base;
@@ -1250,7 +1014,7 @@ struct ProtobufCFieldDescriptor {
 
 
  unsigned offset;
-# 597 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
  const void *descriptor;
 
 
@@ -1269,7 +1033,7 @@ struct ProtobufCFieldDescriptor {
 
  void *reserved3;
 };
-# 624 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCIntRange {
  int start_value;
  unsigned orig_index;
@@ -1279,7 +1043,7 @@ struct ProtobufCIntRange {
 
 
 };
-# 649 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 struct ProtobufCMessage {
 
  const ProtobufCMessageDescriptor *descriptor;
@@ -1408,49 +1172,49 @@ struct ProtobufCServiceDescriptor {
 
 const char *
 protobuf_c_version(void);
-# 785 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 785 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 uint32_t
 protobuf_c_version_number(void);
-# 820 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 820 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value_by_name(
  const ProtobufCEnumDescriptor *desc,
  const char *name);
-# 841 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 841 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCEnumValue *
 protobuf_c_enum_descriptor_get_value(
  const ProtobufCEnumDescriptor *desc,
  int value);
-# 860 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 860 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field_by_name(
  const ProtobufCMessageDescriptor *desc,
  const char *name);
-# 879 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 879 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCFieldDescriptor *
 protobuf_c_message_descriptor_get_field(
  const ProtobufCMessageDescriptor *desc,
  unsigned value);
-# 893 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_get_packed_size(const ProtobufCMessage *message);
-# 913 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 913 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack(const ProtobufCMessage *message, uint8_t *out);
-# 930 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 size_t
 protobuf_c_message_pack_to_buffer(
  const ProtobufCMessage *message,
  ProtobufCBuffer *buffer);
-# 953 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 ProtobufCMessage *
 protobuf_c_message_unpack(
@@ -1458,17 +1222,17 @@ protobuf_c_message_unpack(
  ProtobufCAllocator *allocator,
  size_t len,
  const uint8_t *data);
-# 973 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 973 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_free_unpacked(
  ProtobufCMessage *message,
  ProtobufCAllocator *allocator);
-# 990 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 protobuf_c_boolean
 protobuf_c_message_check(const ProtobufCMessage *);
-# 1005 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_message_init(
@@ -1484,13 +1248,13 @@ protobuf_c_message_init(
 
 void
 protobuf_c_service_destroy(ProtobufCService *service);
-# 1034 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1034 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 const ProtobufCMethodDescriptor *
 protobuf_c_service_descriptor_get_method_by_name(
  const ProtobufCServiceDescriptor *desc,
  const char *name);
-# 1079 "/home/dieter/Development/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
+# 1079 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protobuf-c/protobuf-c/protobuf-c/protobuf-c.h"
 
 void
 protobuf_c_buffer_simple_append(
@@ -1517,7 +1281,7 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 8 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
 
 
 
@@ -1527,10 +1291,10 @@ protobuf_c_service_invoke_internal(
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 
-# 26 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 typedef enum _Status {
   STATUS__Success = 0,
   STATUS__InvalidSecScheme = 1,
@@ -1542,15 +1306,15 @@ typedef enum _Status {
   STATUS__InvalidSession = 7
     , _STATUS_IS_INT_SIZE = 0x7fffffff
 } Status;
-# 48 "/home/dieter/Development/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/protocomm/proto-c/constants.pb-c.h"
 extern const ProtobufCEnumDescriptor status__descriptor;
 
 
-# 18 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h" 1
-# 9 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
 
-# 18 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_constants.pb-c.h"
 typedef struct _WifiConnectedState WifiConnectedState;
 
 
@@ -1630,7 +1394,7 @@ extern const ProtobufCEnumDescriptor wifi_auth_mode__descriptor;
 extern const ProtobufCMessageDescriptor wifi_connected_state__descriptor;
 
 
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.h" 2
 
 typedef struct _CmdGetStatus CmdGetStatus;
 typedef struct _RespGetStatus RespGetStatus;
@@ -1931,71 +1695,35 @@ extern const ProtobufCMessageDescriptor resp_apply_config__descriptor;
 extern const ProtobufCMessageDescriptor wi_fi_config_payload__descriptor;
 
 
-# 10 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 2
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 2
 void cmd_get_status__init
                      (CmdGetStatus *message)
 {
   static const CmdGetStatus init_value = { { &cmd_get_status__descriptor, 0, 
-# 13 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                         ((void *)0) 
-# 13 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         } };
   *message = init_value;
 }
 size_t cmd_get_status__get_packed_size
                      (const CmdGetStatus *message)
 {
-  
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_get_status__descriptor
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 19, __func__, 
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_get_status__descriptor"
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 19 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 19, __func__, "message->base.descriptor == &cmd_get_status__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_get_status__pack
                      (const CmdGetStatus *message,
                       uint8_t *out)
 {
-  
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_get_status__descriptor
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 26, __func__, 
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_get_status__descriptor"
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 26 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 26, __func__, "message->base.descriptor == &cmd_get_status__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_get_status__pack_to_buffer
                      (const CmdGetStatus *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_get_status__descriptor
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 33, __func__, 
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_get_status__descriptor"
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 33 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 33, __func__, "message->base.descriptor == &cmd_get_status__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdGetStatus *
@@ -2014,85 +1742,37 @@ void cmd_get_status__free_unpacked
 {
   if(!message)
     return;
-  
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_get_status__descriptor
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 52, __func__, 
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_get_status__descriptor"
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 52 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 52, __func__, "message->base.descriptor == &cmd_get_status__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_get_status__init
                      (RespGetStatus *message)
 {
   static const RespGetStatus init_value = { { &resp_get_status__descriptor, 0, 
-# 58 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                          ((void *)0) 
-# 58 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                          } , STATUS__Success, WIFI_STATION_STATE__Connected, RESP_GET_STATUS__STATE__NOT_SET, {0} };
   *message = init_value;
 }
 size_t resp_get_status__get_packed_size
                      (const RespGetStatus *message)
 {
-  
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_get_status__descriptor
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 64, __func__, 
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_get_status__descriptor"
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 64 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 64, __func__, "message->base.descriptor == &resp_get_status__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_get_status__pack
                      (const RespGetStatus *message,
                       uint8_t *out)
 {
-  
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_get_status__descriptor
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 71, __func__, 
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_get_status__descriptor"
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 71 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 71, __func__, "message->base.descriptor == &resp_get_status__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_get_status__pack_to_buffer
                      (const RespGetStatus *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_get_status__descriptor
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 78, __func__, 
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_get_status__descriptor"
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 78 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 78, __func__, "message->base.descriptor == &resp_get_status__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespGetStatus *
@@ -2111,97 +1791,49 @@ void resp_get_status__free_unpacked
 {
   if(!message)
     return;
-  
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_get_status__descriptor
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 97, __func__, 
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_get_status__descriptor"
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 97 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_get_status__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 97, __func__, "message->base.descriptor == &resp_get_status__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void cmd_set_config__init
                      (CmdSetConfig *message)
 {
   static const CmdSetConfig init_value = { { &cmd_set_config__descriptor, 0, 
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                         ((void *)0) 
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         } , {0,
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                         ((void *)0)
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         }, {0,
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                         ((void *)0)
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         }, {0,
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                         ((void *)0)
-# 103 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         }, 0 };
   *message = init_value;
 }
 size_t cmd_set_config__get_packed_size
                      (const CmdSetConfig *message)
 {
-  
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_set_config__descriptor
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 109, __func__, 
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_set_config__descriptor"
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 109 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 109, __func__, "message->base.descriptor == &cmd_set_config__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_set_config__pack
                      (const CmdSetConfig *message,
                       uint8_t *out)
 {
-  
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_set_config__descriptor
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 116, __func__, 
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_set_config__descriptor"
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 116 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 116, __func__, "message->base.descriptor == &cmd_set_config__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_set_config__pack_to_buffer
                      (const CmdSetConfig *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_set_config__descriptor
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 123, __func__, 
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_set_config__descriptor"
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 123 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 123, __func__, "message->base.descriptor == &cmd_set_config__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdSetConfig *
@@ -2220,85 +1852,37 @@ void cmd_set_config__free_unpacked
 {
   if(!message)
     return;
-  
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_set_config__descriptor
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 142, __func__, 
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_set_config__descriptor"
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 142 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                ;
+  ((message->base.descriptor == &cmd_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 142, __func__, "message->base.descriptor == &cmd_set_config__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_set_config__init
                      (RespSetConfig *message)
 {
   static const RespSetConfig init_value = { { &resp_set_config__descriptor, 0, 
-# 148 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                          ((void *)0) 
-# 148 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                          } , STATUS__Success };
   *message = init_value;
 }
 size_t resp_set_config__get_packed_size
                      (const RespSetConfig *message)
 {
-  
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_set_config__descriptor
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 154, __func__, 
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_set_config__descriptor"
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 154 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 154, __func__, "message->base.descriptor == &resp_set_config__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_set_config__pack
                      (const RespSetConfig *message,
                       uint8_t *out)
 {
-  
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_set_config__descriptor
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 161, __func__, 
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_set_config__descriptor"
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 161 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 161, __func__, "message->base.descriptor == &resp_set_config__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_set_config__pack_to_buffer
                      (const RespSetConfig *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_set_config__descriptor
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 168, __func__, 
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_set_config__descriptor"
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 168 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 168, __func__, "message->base.descriptor == &resp_set_config__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespSetConfig *
@@ -2317,85 +1901,37 @@ void resp_set_config__free_unpacked
 {
   if(!message)
     return;
-  
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_set_config__descriptor
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 187, __func__, 
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_set_config__descriptor"
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 187 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                 ;
+  ((message->base.descriptor == &resp_set_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 187, __func__, "message->base.descriptor == &resp_set_config__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void cmd_apply_config__init
                      (CmdApplyConfig *message)
 {
   static const CmdApplyConfig init_value = { { &cmd_apply_config__descriptor, 0, 
-# 193 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                           ((void *)0) 
-# 193 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                           } };
   *message = init_value;
 }
 size_t cmd_apply_config__get_packed_size
                      (const CmdApplyConfig *message)
 {
-  
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_apply_config__descriptor
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 199, __func__, 
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_apply_config__descriptor"
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 199 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &cmd_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 199, __func__, "message->base.descriptor == &cmd_apply_config__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t cmd_apply_config__pack
                      (const CmdApplyConfig *message,
                       uint8_t *out)
 {
-  
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_apply_config__descriptor
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 206, __func__, 
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_apply_config__descriptor"
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 206 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &cmd_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 206, __func__, "message->base.descriptor == &cmd_apply_config__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t cmd_apply_config__pack_to_buffer
                      (const CmdApplyConfig *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_apply_config__descriptor
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 213, __func__, 
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_apply_config__descriptor"
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 213 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &cmd_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 213, __func__, "message->base.descriptor == &cmd_apply_config__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 CmdApplyConfig *
@@ -2414,85 +1950,37 @@ void cmd_apply_config__free_unpacked
 {
   if(!message)
     return;
-  
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &cmd_apply_config__descriptor
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 232, __func__, 
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &cmd_apply_config__descriptor"
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 232 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                  ;
+  ((message->base.descriptor == &cmd_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 232, __func__, "message->base.descriptor == &cmd_apply_config__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void resp_apply_config__init
                      (RespApplyConfig *message)
 {
   static const RespApplyConfig init_value = { { &resp_apply_config__descriptor, 0, 
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                            ((void *)0) 
-# 238 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                            } , STATUS__Success };
   *message = init_value;
 }
 size_t resp_apply_config__get_packed_size
                      (const RespApplyConfig *message)
 {
-  
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_apply_config__descriptor
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 244, __func__, 
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_apply_config__descriptor"
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 244 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &resp_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 244, __func__, "message->base.descriptor == &resp_apply_config__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t resp_apply_config__pack
                      (const RespApplyConfig *message,
                       uint8_t *out)
 {
-  
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_apply_config__descriptor
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 251, __func__, 
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_apply_config__descriptor"
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 251 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &resp_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 251, __func__, "message->base.descriptor == &resp_apply_config__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t resp_apply_config__pack_to_buffer
                      (const RespApplyConfig *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_apply_config__descriptor
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 258, __func__, 
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_apply_config__descriptor"
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 258 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &resp_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 258, __func__, "message->base.descriptor == &resp_apply_config__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 RespApplyConfig *
@@ -2511,85 +1999,37 @@ void resp_apply_config__free_unpacked
 {
   if(!message)
     return;
-  
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &resp_apply_config__descriptor
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 277, __func__, 
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &resp_apply_config__descriptor"
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 277 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                   ;
+  ((message->base.descriptor == &resp_apply_config__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 277, __func__, "message->base.descriptor == &resp_apply_config__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 void wi_fi_config_payload__init
                      (WiFiConfigPayload *message)
 {
   static const WiFiConfigPayload init_value = { { &wi_fi_config_payload__descriptor, 0, 
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                                              ((void *)0) 
-# 283 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                              } , WI_FI_CONFIG_MSG_TYPE__TypeCmdGetStatus, WI_FI_CONFIG_PAYLOAD__PAYLOAD__NOT_SET, {0} };
   *message = init_value;
 }
 size_t wi_fi_config_payload__get_packed_size
                      (const WiFiConfigPayload *message)
 {
-  
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &wi_fi_config_payload__descriptor
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 289, __func__, 
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &wi_fi_config_payload__descriptor"
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 289 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                      ;
+  ((message->base.descriptor == &wi_fi_config_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 289, __func__, "message->base.descriptor == &wi_fi_config_payload__descriptor"));
   return protobuf_c_message_get_packed_size ((const ProtobufCMessage*)(message));
 }
 size_t wi_fi_config_payload__pack
                      (const WiFiConfigPayload *message,
                       uint8_t *out)
 {
-  
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &wi_fi_config_payload__descriptor
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 296, __func__, 
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &wi_fi_config_payload__descriptor"
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 296 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                      ;
+  ((message->base.descriptor == &wi_fi_config_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 296, __func__, "message->base.descriptor == &wi_fi_config_payload__descriptor"));
   return protobuf_c_message_pack ((const ProtobufCMessage*)message, out);
 }
 size_t wi_fi_config_payload__pack_to_buffer
                      (const WiFiConfigPayload *message,
                       ProtobufCBuffer *buffer)
 {
-  
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &wi_fi_config_payload__descriptor
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 303, __func__, 
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &wi_fi_config_payload__descriptor"
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 303 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                      ;
+  ((message->base.descriptor == &wi_fi_config_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 303, __func__, "message->base.descriptor == &wi_fi_config_payload__descriptor"));
   return protobuf_c_message_pack_to_buffer ((const ProtobufCMessage*)message, buffer);
 }
 WiFiConfigPayload *
@@ -2608,19 +2048,7 @@ void wi_fi_config_payload__free_unpacked
 {
   if(!message)
     return;
-  
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ((
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- message->base.descriptor == &wi_fi_config_payload__descriptor
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 322, __func__, 
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
- "message->base.descriptor == &wi_fi_config_payload__descriptor"
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
- ))
-# 322 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
-                                                                      ;
+  ((message->base.descriptor == &wi_fi_config_payload__descriptor) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c", 322, __func__, "message->base.descriptor == &wi_fi_config_payload__descriptor"));
   protobuf_c_message_free_unpacked ((ProtobufCMessage*)message, allocator);
 }
 
@@ -2636,34 +2064,34 @@ const ProtobufCMessageDescriptor cmd_get_status__descriptor =
   sizeof(CmdGetStatus),
   0,
   
-# 337 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 337 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                   ,
   
-# 338 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 338 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                       ,
   0, 
-# 339 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 339 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                   ,
   (ProtobufCMessageInit) cmd_get_status__init,
   
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 341 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 342 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCFieldDescriptor resp_get_status__field_descriptors[4] =
 {
@@ -2674,34 +2102,34 @@ static const ProtobufCFieldDescriptor resp_get_status__field_descriptors[4] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    status
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 351 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 351 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                   ,
     &status__descriptor,
     
-# 353 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 353 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 355 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 355 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 355 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 355 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 356 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "sta_state",
@@ -2710,34 +2138,34 @@ static const ProtobufCFieldDescriptor resp_get_status__field_descriptors[4] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    sta_state
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 363 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                      ,
     &wifi_station_state__descriptor,
     
-# 365 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 365 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 365 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 367 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 368 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "fail_reason",
@@ -2745,47 +2173,47 @@ static const ProtobufCFieldDescriptor resp_get_status__field_descriptors[4] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_ENUM,
     
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    state_case
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 374 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                       ,
     
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    fail_reason
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 375 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                        ,
     &wifi_connect_failed_reason__descriptor,
     
-# 377 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 377 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 379 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 379 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 379 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 380 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "connected",
@@ -2793,47 +2221,47 @@ static const ProtobufCFieldDescriptor resp_get_status__field_descriptors[4] =
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    state_case
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 386 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                       ,
     
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespGetStatus
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    connected
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 387 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 387 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                      ,
     &wifi_connected_state__descriptor,
     
-# 389 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 389 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 389 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 391 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 391 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 391 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 392 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
 };
 static const unsigned resp_get_status__field_indices_by_name[] = {
@@ -2862,18 +2290,18 @@ const ProtobufCMessageDescriptor resp_get_status__descriptor =
   2, resp_get_status__number_ranges,
   (ProtobufCMessageInit) resp_get_status__init,
   
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 419 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 420 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCFieldDescriptor cmd_set_config__field_descriptors[4] =
 {
@@ -2884,38 +2312,38 @@ static const ProtobufCFieldDescriptor cmd_set_config__field_descriptors[4] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    CmdSetConfig
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    ssid
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 429 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                ,
     
-# 430 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 430 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     
-# 431 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 431 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 433 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 433 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 433 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 433 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 434 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 434 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "passphrase",
@@ -2924,38 +2352,38 @@ static const ProtobufCFieldDescriptor cmd_set_config__field_descriptors[4] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    CmdSetConfig
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    passphrase
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 441 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                      ,
     
-# 442 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 442 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     
-# 443 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 443 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 445 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 445 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 446 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 446 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "bssid",
@@ -2964,38 +2392,38 @@ static const ProtobufCFieldDescriptor cmd_set_config__field_descriptors[4] =
     PROTOBUF_C_TYPE_BYTES,
     0,
     
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    CmdSetConfig
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    bssid
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 453 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                 ,
     
-# 454 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 454 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     
-# 455 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 455 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 455 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 457 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 457 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 457 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 458 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "channel",
@@ -3004,38 +2432,38 @@ static const ProtobufCFieldDescriptor cmd_set_config__field_descriptors[4] =
     PROTOBUF_C_TYPE_INT32,
     0,
     
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    CmdSetConfig
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    channel
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 465 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                   ,
     
-# 466 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 466 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     
-# 467 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 467 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 469 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 469 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 469 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 469 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 470 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
 };
 static const unsigned cmd_set_config__field_indices_by_name[] = {
@@ -3063,18 +2491,18 @@ const ProtobufCMessageDescriptor cmd_set_config__descriptor =
   1, cmd_set_config__number_ranges,
   (ProtobufCMessageInit) cmd_set_config__init,
   
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 496 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 497 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCFieldDescriptor resp_set_config__field_descriptors[1] =
 {
@@ -3085,34 +2513,34 @@ static const ProtobufCFieldDescriptor resp_set_config__field_descriptors[1] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespSetConfig
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    status
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 506 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                   ,
     &status__descriptor,
     
-# 508 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 508 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 510 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 510 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 510 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 511 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 511 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
 };
 static const unsigned resp_set_config__field_indices_by_name[] = {
@@ -3137,18 +2565,18 @@ const ProtobufCMessageDescriptor resp_set_config__descriptor =
   1, resp_set_config__number_ranges,
   (ProtobufCMessageInit) resp_set_config__init,
   
-# 534 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 534 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 534 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 534 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 534 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 535 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 
 
@@ -3163,34 +2591,34 @@ const ProtobufCMessageDescriptor cmd_apply_config__descriptor =
   sizeof(CmdApplyConfig),
   0,
   
-# 548 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 548 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                     ,
   
-# 549 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 549 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                         ,
   0, 
-# 550 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 550 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                     ,
   (ProtobufCMessageInit) cmd_apply_config__init,
   
-# 552 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 552 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 552 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 552 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 552 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 553 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCFieldDescriptor resp_apply_config__field_descriptors[1] =
 {
@@ -3201,34 +2629,34 @@ static const ProtobufCFieldDescriptor resp_apply_config__field_descriptors[1] =
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    RespApplyConfig
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    status
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 562 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                     ,
     &status__descriptor,
     
-# 564 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 564 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 564 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 566 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 566 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 566 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 567 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 567 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
 };
 static const unsigned resp_apply_config__field_indices_by_name[] = {
@@ -3253,18 +2681,18 @@ const ProtobufCMessageDescriptor resp_apply_config__descriptor =
   1, resp_apply_config__number_ranges,
   (ProtobufCMessageInit) resp_apply_config__init,
   
-# 590 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 590 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 590 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 590 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 590 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 591 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7] =
 {
@@ -3275,34 +2703,34 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_TYPE_ENUM,
     0,
     
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    msg
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 600 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 600 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                    ,
     &wi_fi_config_msg_type__descriptor,
     
-# 602 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 602 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 602 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0,
     0,
-# 604 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 604 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 604 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 604 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 605 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 605 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "cmd_get_status",
@@ -3310,47 +2738,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 611 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    cmd_get_status
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 612 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 612 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                               ,
     &cmd_get_status__descriptor,
     
-# 614 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 614 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 616 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 616 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 616 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 616 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 617 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "resp_get_status",
@@ -3358,47 +2786,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 623 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 623 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    resp_get_status
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 624 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 624 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                                ,
     &resp_get_status__descriptor,
     
-# 626 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 626 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 626 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 628 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 628 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 628 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 629 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "cmd_set_config",
@@ -3406,47 +2834,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 635 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 635 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    cmd_set_config
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 636 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                               ,
     &cmd_set_config__descriptor,
     
-# 638 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 638 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 640 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 640 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 640 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 640 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 641 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "resp_set_config",
@@ -3454,47 +2882,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 647 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 647 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    resp_set_config
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 648 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                                ,
     &resp_set_config__descriptor,
     
-# 650 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 650 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 650 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 652 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 652 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 652 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 652 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 652 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 652 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 653 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "cmd_apply_config",
@@ -3502,47 +2930,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 659 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    cmd_apply_config
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 660 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                                 ,
     &cmd_apply_config__descriptor,
     
-# 662 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 662 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 662 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 664 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 664 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 664 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 665 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 665 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
   {
     "resp_apply_config",
@@ -3550,47 +2978,47 @@ static const ProtobufCFieldDescriptor wi_fi_config_payload__field_descriptors[7]
     PROTOBUF_C_LABEL_NONE,
     PROTOBUF_C_TYPE_MESSAGE,
     
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    payload_case
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 671 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 671 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                             ,
     
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    __builtin_offsetof (
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    WiFiConfigPayload
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    , 
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
    resp_apply_config
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    )
-# 672 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                                                  ,
     &resp_apply_config__descriptor,
     
-# 674 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
    ((void *)0)
-# 674 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 674 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
        ,
     0 | PROTOBUF_C_FIELD_FLAG_ONEOF,
     0,
-# 676 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
      ((void *)0)
-# 676 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
          ,
-# 676 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
           ((void *)0)
   
-# 677 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
  },
 };
 static const unsigned wi_fi_config_payload__field_indices_by_name[] = {
@@ -3622,18 +3050,18 @@ const ProtobufCMessageDescriptor wi_fi_config_payload__descriptor =
   2, wi_fi_config_payload__number_ranges,
   (ProtobufCMessageInit) wi_fi_config_payload__init,
   
-# 707 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 707 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 707 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 707 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 707 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 707 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
 
-# 708 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 708 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };
 static const ProtobufCEnumValue wi_fi_config_msg_type__enum_values_by_number[6] =
 {
@@ -3670,20 +3098,20 @@ const ProtobufCEnumDescriptor wi_fi_config_msg_type__descriptor =
   1,
   wi_fi_config_msg_type__value_ranges,
   
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
  ((void *)0)
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
      ,
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
       ((void *)0)
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
           ,
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
            ((void *)0)
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
                ,
-# 743 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
+# 743 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c" 3 4
                 ((void *)0)
 
-# 744 "/home/dieter/Development/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
+# 744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wifi_provisioning/proto-c/wifi_config.pb-c.c"
 };

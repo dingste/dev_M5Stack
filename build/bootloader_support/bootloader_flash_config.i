@@ -1,76 +1,71 @@
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-# 1 "/home/dieter/Development/ProjektEi/build/bootloader_support//"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/bootloader_support//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
-# 15 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h"
        
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-       
-# 21 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 1
-# 10 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 11 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/_ansi.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/newlib/include/_ansi.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/newlib.h" 1
-# 16 "/home/dieter/Development/esp-idf/components/newlib/include/_ansi.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/config.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/ieeefp.h" 1
-# 5 "/home/dieter/Development/esp-idf/components/newlib/include/sys/config.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/features.h" 1
-# 6 "/home/dieter/Development/esp-idf/components/newlib/include/sys/config.h" 2
-# 189 "/home/dieter/Development/esp-idf/components/newlib/include/sys/config.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/xtensa/config/core-isa.h" 1
-# 190 "/home/dieter/Development/esp-idf/components/newlib/include/sys/config.h" 2
-# 17 "/home/dieter/Development/esp-idf/components/newlib/include/_ansi.h" 2
-# 12 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
-
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h" 1
-# 13 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/_ansi.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/_types.h" 1
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/_default_types.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
 
-# 17 "/home/dieter/Development/esp-idf/components/newlib/include/machine/_default_types.h"
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_default_types.h"
 typedef signed char __int8_t ;
 typedef unsigned char __uint8_t ;
 
@@ -105,14 +100,14 @@ typedef __uint64_t __uint_least64_t;
 
 typedef int __intptr_t;
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/esp-idf/components/newlib/include/machine/_types.h" 2
-# 13 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/lock.h" 1
-# 11 "/home/dieter/Development/esp-idf/components/newlib/include/sys/lock.h"
+# 8 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/esp-idf/components/newlib/include/sys/lock.h"
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -123,7 +118,7 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 14 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h" 2
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
@@ -150,20 +145,20 @@ __extension__ typedef long long _off64_t;
 
 
 typedef long _fpos_t;
-# 55 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h"
+# 55 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 67 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 68 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h" 2
+# 68 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
 
-# 71 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_types.h"
+# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -182,7 +177,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-# 16 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h" 2
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -190,7 +185,7 @@ typedef void *_iconv_t;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
 
 
@@ -242,12 +237,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 115 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 115 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 151 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 151 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -264,7 +259,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 179 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -315,7 +310,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 285 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 285 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -326,7 +321,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 317 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 317 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -336,7 +331,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 342 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 342 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -417,9 +412,9 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 458 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 458 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 extern void esp_reent_init(struct _reent* reent);
-# 771 "/home/dieter/Development/esp-idf/components/newlib/include/sys/reent.h"
+# 771 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/reent.h"
 extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
@@ -429,17 +424,17 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/cdefs.h" 1
-# 45 "/home/dieter/Development/esp-idf/components/newlib/include/sys/cdefs.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/esp-idf/components/newlib/include/sys/cdefs.h" 2
-# 20 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/stdlib.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/alloca.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
@@ -473,7 +468,7 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 67 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h"
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
@@ -657,7 +652,7 @@ unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char 
 void cfree (void *);
 int unsetenv (const char *__string);
 int _unsetenv_r (struct _reent *, const char *__string);
-# 258 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h"
+# 258 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -669,34 +664,26 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-# 283 "/home/dieter/Development/esp-idf/components/newlib/include/stdlib.h"
-void qsort_r (void * __base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void * __thunk);
-
-
-
-
-
-
-
+# 291 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/assert.h" 1
-# 39 "/home/dieter/Development/esp-idf/components/newlib/include/assert.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/assert.h"
 void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
                                  ;
 void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
                                  ;
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 16 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/string.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/newlib/include/string.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/esp-idf/components/newlib/include/string.h" 2
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/platform_include/assert.h" 2
+# 16 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h" 2
 
 
 
@@ -739,12 +726,12 @@ char *index (const char *, int);
 void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
 
 void * memrchr (const void *, int, size_t);
 
-void * rawmemchr (const void *, int);
+
 
 
 char *rindex (const char *, int);
@@ -755,8 +742,8 @@ char *stpncpy (char *restrict, const char *restrict, size_t);
 int strcasecmp (const char *, const char *);
 
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
 
 
 char *strdup (const char *);
@@ -770,20 +757,16 @@ char *strndup (const char *, size_t);
 
 
 char *_strndup_r (struct _reent *, const char *, size_t);
-
-
-
-int ffsl (long);
-int ffsll (long long);
-
+# 106 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 115 "/home/dieter/Development/esp-idf/components/newlib/include/string.h"
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
@@ -812,21 +795,22 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
-# 163 "/home/dieter/Development/esp-idf/components/newlib/include/string.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/string.h" 1
-# 164 "/home/dieter/Development/esp-idf/components/newlib/include/string.h" 2
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/string.h" 2
 
 
-# 17 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
        
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h" 1
-# 13 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/_intsup.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
@@ -877,21 +861,21 @@ typedef __uint64_t uint64_t ;
 
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 74 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 74 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 84 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 84 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 94 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 94 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 104 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 104 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 153 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef long long int intmax_t;
-# 162 "/home/dieter/Development/esp-idf/components/newlib/include/stdint.h"
+# 162 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdint.h"
   typedef long long unsigned int uintmax_t;
 
 
@@ -901,34 +885,34 @@ typedef __uint_least64_t uint_least64_t;
 
 typedef __intptr_t intptr_t;
 typedef __uintptr_t uintptr_t;
-# 17 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h" 1
-# 36 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h" 2
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 40 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h" 2
-# 48 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h" 1
-# 69 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 70 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/machine/types.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/include/machine/types.h"
+# 40 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
 
-# 19 "/home/dieter/Development/esp-idf/components/newlib/include/machine/types.h"
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/machine/types.h"
 typedef long int __off_t;
 typedef int __pid_t;
 
 __extension__ typedef long long int __loff_t;
-# 71 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h" 2
-# 93 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 71 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -983,9 +967,9 @@ typedef long daddr_t;
 
 
 typedef char * caddr_t;
-# 155 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 155 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned short ino_t;
-# 184 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 184 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef _off_t off_t;
 typedef __dev_t dev_t;
 typedef __uid_t uid_t;
@@ -1006,14 +990,14 @@ typedef int pid_t;
 typedef long key_t;
 
 typedef _ssize_t ssize_t;
-# 217 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 217 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
 typedef unsigned short nlink_t;
-# 244 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 244 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef long fd_mask;
 
 
@@ -1025,7 +1009,7 @@ typedef long fd_mask;
 typedef struct _types_fd_set {
  fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
 } _types_fd_set;
-# 275 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 275 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned long clockid_t;
 
 
@@ -1037,19 +1021,19 @@ typedef unsigned long timer_t;
 
 typedef unsigned long useconds_t;
 typedef long suseconds_t;
-# 299 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/sched.h" 1
-# 46 "/home/dieter/Development/esp-idf/components/newlib/include/sys/sched.h"
+# 299 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 59 "/home/dieter/Development/esp-idf/components/newlib/include/sys/sched.h"
+# 59 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 300 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h" 2
-# 308 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 300 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 341 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 341 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -1058,7 +1042,7 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-# 357 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 357 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
 
 
@@ -1066,12 +1050,12 @@ typedef struct {
 
 
 } pthread_attr_t;
-# 442 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 442 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 454 "/home/dieter/Development/esp-idf/components/newlib/include/sys/types.h"
+# 454 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -1097,7 +1081,7 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 49 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h" 2
+# 49 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
 
 
 
@@ -1112,9 +1096,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/include/sys/stdio.h" 1
-# 64 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h" 2
-# 164 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -1177,13 +1161,13 @@ int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format
                                                             ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 235 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 235 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
 off_t ftello ( FILE *);
 
 
 
-int fcloseall (void);
+
 
 
 
@@ -1247,7 +1231,7 @@ int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __a
                                                             ;
 int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
                                                            ;
-# 313 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 313 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
@@ -1264,7 +1248,7 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 338 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 338 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
                                                             ;
 
@@ -1432,15 +1416,10 @@ int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
 size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
 size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 538 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 538 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 562 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 562 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
 
 
@@ -1485,9 +1464,9 @@ FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __f
                                                          ;
 FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
                                                          ;
-# 725 "/home/dieter/Development/esp-idf/components/newlib/include/stdio.h"
+# 725 "/home/dieter/SoftwareDevelop/esp-idf/components/newlib/include/stdio.h"
 
-# 18 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h" 2
 
 
 
@@ -1495,9 +1474,9 @@ FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cooki
 
 
 typedef int32_t esp_err_t;
-# 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name(esp_err_t code);
-# 77 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 76 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
 
 
@@ -1505,32 +1484,27 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 19 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
-# 98 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
-# 98 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __gnuc_va_list va_list;
-# 20 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_assert.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 24 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 59 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-
-# 59 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 54 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
     ETS_FAILED = 1
@@ -1548,57 +1522,57 @@ struct ETSEventTag {
 
 typedef void (*ETSTask)(ETSEvent *e);
 typedef void (* ets_idle_cb_t)(void *arg);
-# 84 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 79 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_run(void);
-# 95 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 90 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 110 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 105 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 124 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 119 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 138 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 133 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 extern const char *const exc_cause_table[40];
-# 148 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 143 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_user_start(uint32_t start);
-# 158 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_startup_callback(uint32_t callback);
-# 168 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_appcpu_boot_addr(uint32_t start);
-# 184 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 184 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                            _Bool 
-# 184 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                 jump, 
-# 184 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                       _Bool 
-# 184 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                            config);
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                     _Bool 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                          jump, 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                _Bool 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                     sb_need_check, 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                                    _Bool 
-# 202 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                                         config);
-# 227 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 222 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 int ets_printf(const char *fmt, ...);
-# 237 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 232 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_write_char_uart(char c);
-# 247 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 242 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc1(void (*p)(char c));
-# 257 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 252 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc2(void (*p)(char c));
-# 267 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 262 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_uart_printf(void);
-# 289 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 284 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void ETSTimerFunc(void *timer_arg);
 
 typedef struct _ETSTIMER_ {
@@ -1608,57 +1582,57 @@ typedef struct _ETSTIMER_ {
     ETSTimerFunc *timer_func;
     void *timer_arg;
 } ETSTimer;
-# 307 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 302 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_init(void);
-# 316 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 311 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_deinit(void);
-# 330 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 330 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 325 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                    _Bool 
-# 330 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                         repeat);
-# 344 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 344 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 339 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                     _Bool 
-# 344 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                          repeat);
-# 354 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 349 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_disarm(ETSTimer *timer);
-# 368 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 363 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 378 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 373 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_done(ETSTimer *ptimer);
-# 388 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 383 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_delay_us(uint32_t us);
-# 398 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 393 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 410 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 405 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 420 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 415 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_cpu_frequency(void);
-# 429 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 424 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_xtal_scale(void);
-# 442 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 437 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_detected_xtal_freq(void);
-# 456 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 451 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void (* ets_isr_t)(void *);
-# 471 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 466 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 482 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 477 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_mask(uint32_t mask);
-# 493 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 488 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_unmask(uint32_t unmask);
-# 504 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 499 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_lock(void);
-# 515 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 510 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_unlock(void);
-# 526 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 521 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_waiti0(void);
-# 544 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 539 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 634 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 629 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     OK = 0,
     FAIL,
@@ -1666,8 +1640,8 @@ typedef enum {
     BUSY,
     CANCEL,
 } STATUS;
-# 22 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 31 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h" 2
+# 31 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 typedef enum {
     ESP_LOG_NONE,
     ESP_LOG_ERROR,
@@ -1678,42 +1652,41 @@ typedef enum {
 } esp_log_level_t;
 
 typedef int (*vprintf_like_t)(const char *, va_list);
-# 60 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 60 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 void esp_log_level_set(const char* tag, esp_log_level_t level);
-# 73 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 73 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
-# 87 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 87 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_timestamp(void);
-# 97 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 97 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_early_timestamp(void);
-# 107 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 107 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
+# 118 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h"
+void esp_log_writev(esp_log_level_t level, const char* tag, const char* format, va_list args);
 
-
-
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log_internal.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 112 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 20 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp32/include/esp_attr.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 2
-# 56 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 121 "/home/dieter/SoftwareDevelop/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_attr.h" 2
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
+# 17 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_reg.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 2
+# 51 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 typedef enum {
     GPIO_PIN_INTR_DISABLE = 0,
     GPIO_PIN_INTR_POSEDGE = 1,
@@ -1722,70 +1695,70 @@ typedef enum {
     GPIO_PIN_INTR_LOLEVEL = 4,
     GPIO_PIN_INTR_HILEVEL = 5
 } GPIO_INT_TYPE;
-# 72 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 typedef void (* gpio_intr_handler_fn_t)(uint32_t intr_mask, 
-# 72 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 3 4
                                                            _Bool 
-# 72 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
                                                                 high, void *arg);
-# 83 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 78 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_init(void);
-# 100 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 95 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_output_set(uint32_t set_mask, uint32_t clear_mask, uint32_t enable_mask, uint32_t disable_mask);
-# 117 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 112 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_output_set_high(uint32_t set_mask, uint32_t clear_mask, uint32_t enable_mask, uint32_t disable_mask);
-# 126 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 121 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 uint32_t gpio_input_get(void);
-# 135 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 130 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 uint32_t gpio_input_get_high(void);
-# 148 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 143 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_intr_handler_register(gpio_intr_handler_fn_t fn, void *arg);
-# 158 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 153 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 uint32_t gpio_intr_pending(void);
-# 168 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 uint32_t gpio_intr_pending_high(void);
-# 178 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 173 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_intr_ack(uint32_t ack_mask);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 183 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_intr_ack_high(uint32_t ack_mask);
-# 200 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 195 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pin_wakeup_enable(uint32_t i, GPIO_INT_TYPE intr_state);
-# 210 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 205 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pin_wakeup_disable(void);
-# 226 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 221 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_matrix_in(uint32_t gpio, uint32_t signal_idx, 
-# 226 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 3 4
+# 221 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 3 4
                                                        _Bool 
-# 226 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 221 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
                                                             inv);
-# 242 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_matrix_out(uint32_t gpio, uint32_t signal_idx, 
-# 242 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 3 4
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 3 4
                                                         _Bool 
-# 242 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
                                                              out_inv, 
-# 242 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h" 3 4
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h" 3 4
                                                                       _Bool 
-# 242 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
                                                                            oen_inv);
-# 251 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 246 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_select_gpio(uint8_t gpio_num);
-# 262 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 257 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_set_drv(uint8_t gpio_num, uint8_t drv);
-# 271 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 266 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_pullup(uint8_t gpio_num);
-# 280 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 275 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_pulldown(uint8_t gpio_num);
-# 289 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 284 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_unhold(uint8_t gpio_num);
-# 298 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/gpio.h"
+# 293 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/gpio.h"
 void gpio_pad_hold(uint8_t gpio_num);
-# 21 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 1
-# 26 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 2
-# 132 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/spi_reg.h" 1
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h" 2
+# 128 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 typedef enum {
     ESP_ROM_SPIFLASH_QIO_MODE = 0,
     ESP_ROM_SPIFLASH_QOUT_MODE,
@@ -1818,113 +1791,110 @@ typedef struct {
     uint16_t data_mask;
     uint16_t data;
 } esp_rom_spiflash_common_cmd_t;
-# 175 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 171 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_fix_dummylen(uint8_t spi, uint8_t freqdiv);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 184 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qiomode(uint8_t wp_gpio_num, uint32_t ishspi);
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 202 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_set_drvs(uint8_t wp_gpio_num, uint32_t ishspi, uint8_t *drvs);
-# 217 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 213 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_padsfunc(uint32_t ishspi);
-# 230 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_attach(uint32_t ishspi, 
-# 230 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h" 3 4
+# 226 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h" 3 4
                                              _Bool 
-# 230 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 226 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
                                                   legacy);
-# 244 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 240 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_status(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 258 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 254 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_statushigh(esp_rom_spiflash_chip_t *spi, uint32_t *status);
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 268 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_status(esp_rom_spiflash_chip_t *spi, uint32_t status_value);
-# 286 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 282 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read_user_cmd(uint32_t *status, uint8_t cmd);
-# 300 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 296 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_readmode(esp_rom_spiflash_read_mode_t mode);
-# 314 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 310 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_clk(uint8_t freqdiv, uint8_t spi);
-# 326 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 322 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 uint16_t esp_rom_spiflash_common_cmd(esp_rom_spiflash_common_cmd_t *cmd);
-# 338 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 334 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_unlock(void);
-# 350 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 346 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_lock(void);
-# 372 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 368 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_config_param(uint32_t deviceId, uint32_t chip_size, uint32_t block_size,
                                                         uint32_t sector_size, uint32_t page_size, uint32_t status_mask);
-# 385 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 381 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_chip(void);
-# 398 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 394 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_block(uint32_t block_num);
-# 411 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 407 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_sector(uint32_t sector_num);
-# 425 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 421 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_erase_area(uint32_t start_addr, uint32_t area_len);
-# 441 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 437 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write(uint32_t dest_addr, const uint32_t *src, int32_t len);
-# 457 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 453 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_read(uint32_t src_addr, uint32_t *dest, int32_t len);
-# 467 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 463 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_enable(void);
-# 481 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 477 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_prepare_encrypted_data(uint32_t flash_addr, uint32_t *data);
-# 491 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 487 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_write_encrypted_disable(void);
-# 511 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 507 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_write_encrypted(uint32_t flash_addr, uint32_t *data, uint32_t len);
-# 524 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 520 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 esp_rom_spiflash_result_t esp_rom_spiflash_wait_idle(esp_rom_spiflash_chip_t *spi);
-# 543 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/spi_flash.h"
+# 539 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/spi_flash.h"
 void esp_rom_spiflash_select_qio_pins(uint8_t wp_gpio_num, uint32_t spiconfig);
 
 
 
 
 extern esp_rom_spiflash_chip_t g_rom_flashchip;
-# 22 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h" 1
-# 41 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h"
+# 22 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h" 1
+# 41 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h"
 void ets_efuse_read_op(void);
-# 50 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h"
+# 50 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h"
 void ets_efuse_program_op(void);
-# 60 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h"
+# 60 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h"
 uint32_t ets_efuse_get_8M_clock(void);
-# 72 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h"
+# 72 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h"
 uint32_t ets_efuse_get_spiconfig(void);
-# 107 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/efuse.h"
+# 107 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/rom/efuse.h"
 unsigned char esp_crc8(unsigned char const *p, unsigned int len);
-# 23 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h"
-       
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h" 1
-# 93 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h"
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/include/soc/gpio_periph.h" 1
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/include/soc/gpio_periph.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h" 1
+# 93 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h"
 static inline void __attribute__ ((deprecated)) PIN_PULLUP_DIS(uint32_t PIN_NAME)
 {
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)"); (("(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 95, __func__, "\"(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (8))))); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)"); (("(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 95, __func__, "\"(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (8))))); });
 }
 
 static inline void __attribute__ ((deprecated)) PIN_PULLUP_EN(uint32_t PIN_NAME)
 {
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)"); (("(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 100, __func__, "\"(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (8))))); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)"); (("(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 100, __func__, "\"(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (8))))); });
 }
 
 static inline void __attribute__ ((deprecated)) PIN_PULLDWN_DIS(uint32_t PIN_NAME)
 {
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)"); (("(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 105, __func__, "\"(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (7))))); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)"); (("(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 105, __func__, "\"(Cannot use REG_CLR_BIT for DPORT registers use DPORT_REG_CLR_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (7))))); });
 }
 
 static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME)
 {
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)"); (("(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 110, __func__, "\"(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (7))))); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)"); (("(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h", 110, __func__, "\"(Cannot use REG_SET_BIT for DPORT registers use DPORT_REG_SET_BIT)\" && (!((((PIN_NAME)) >= 0x3ff00000) && ((PIN_NAME)) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (7))))); });
 }
-# 19 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
-typedef volatile struct gpio_dev_s {
+# 20 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/include/soc/gpio_periph.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+typedef volatile struct {
     uint32_t bt_select;
     uint32_t out;
     uint32_t out_w1ts;
@@ -2112,10 +2082,10 @@ typedef volatile struct gpio_dev_s {
     } func_out_sel_cfg[40];
 } gpio_dev_t;
 extern gpio_dev_t GPIO;
-# 20 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/soc/include/soc/gpio_periph.h" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
+# 23 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/include/soc/gpio_periph.h" 2
 
 
 
@@ -2123,16 +2093,16 @@ extern gpio_dev_t GPIO;
 
 
 extern const uint32_t GPIO_PIN_MUX_REG[40];
-# 24 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/efuse_reg.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 24 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/efuse_reg.h" 1
+# 25 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/spi_caps.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/soc/esp32/include/soc/spi_pins.h" 1
+# 27 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h"
        
-# 25 "/home/dieter/Development/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h"
+# 25 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include_bootloader/flash_qio_mode.h"
 void bootloader_enable_qio_mode(void);
 
 
@@ -2141,29 +2111,22 @@ void bootloader_enable_qio_mode(void);
 
 
 
-uint32_t bootloader_read_flash_id(void);
-# 28 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+uint32_t bootloader_read_flash_id();
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h" 1
+# 15 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
        
 
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
-       
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 1
+# 14 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
        
 
 
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
-# 54 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 1
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 1 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h" 1
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/esp32/include/esp_flash_data_types.h"
 typedef enum {
     ESP_OTA_IMG_NEW = 0x0U,
     ESP_OTA_IMG_PENDING_VERIFY = 0x1U,
@@ -2192,44 +2155,36 @@ typedef struct {
 
 
 typedef struct {
-    uint16_t magic;
-    uint8_t type;
+ uint16_t magic;
+ uint8_t type;
     uint8_t subtype;
     esp_partition_pos_t pos;
-    uint8_t label[16];
+ uint8_t label[16];
     uint32_t flags;
 } esp_partition_info_t;
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 2
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
 esp_err_t esp_partition_table_verify(const esp_partition_info_t *partition_table, 
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
                                                                                  _Bool 
-# 98 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
                                                                                       log_errors, int *num_partitions);
 
 
 
 inline static __attribute__((deprecated)) esp_err_t esp_partition_table_basic_verify(const esp_partition_info_t *partition_table, 
-# 102 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
+# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
                                                                                                                                  _Bool 
-# 102 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
+# 42 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
                                                                                                                                       log_errors, int *num_partitions)
 {
     return esp_partition_table_verify(partition_table, log_errors, num_partitions);
 }
-# 115 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-
-# 115 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h" 3 4
-_Bool 
-# 115 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_flash_partitions.h"
-    esp_partition_main_flash_region_safe(size_t addr, size_t size);
-# 19 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h"
-       
-
-
-
-
+# 19 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
+# 29 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 typedef enum {
     ESP_IMAGE_SPI_MODE_QIO,
     ESP_IMAGE_SPI_MODE_QOUT,
@@ -2240,16 +2195,12 @@ typedef enum {
 } esp_image_spi_mode_t;
 
 
-
-
 typedef enum {
     ESP_IMAGE_SPI_SPEED_40M,
     ESP_IMAGE_SPI_SPEED_26M,
     ESP_IMAGE_SPI_SPEED_20M,
     ESP_IMAGE_SPI_SPEED_80M = 0xF
 } esp_image_spi_freq_t;
-
-
 
 
 typedef enum {
@@ -2266,29 +2217,42 @@ typedef enum {
 
 
 
+
+typedef enum {
+    ESP_CHIP_ID_ESP32 = 0x0000,
+    ESP_CHIP_ID_INVALID = 0xFFFF
+} __attribute__((packed)) esp_chip_id_t;
+
+
+_Static_assert(sizeof(esp_chip_id_t) == 2, "esp_chip_id_t should be 16 bit");
+
+
+
 typedef struct {
     uint8_t magic;
     uint8_t segment_count;
+
     uint8_t spi_mode;
+
     uint8_t spi_speed: 4;
+
     uint8_t spi_size: 4;
     uint32_t entry_addr;
+
+
     uint8_t wp_pin;
 
-
     uint8_t spi_pin_drv[3];
-    uint8_t reserved[11];
+    esp_chip_id_t chip_id;
+    uint8_t min_chip_rev;
+    uint8_t reserved[8];
+
+
+
     uint8_t hash_appended;
-
-
-
-
 } __attribute__((packed)) esp_image_header_t;
 
-
 _Static_assert(sizeof(esp_image_header_t) == 24, "binary image header should be 24 bytes");
-
-
 
 
 
@@ -2297,7 +2261,12 @@ typedef struct {
     uint32_t load_addr;
     uint32_t data_len;
 } esp_image_segment_header_t;
-# 94 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_app_format.h"
+
+
+
+
+
+
 typedef struct {
     uint32_t magic_word;
     uint32_t secure_version;
@@ -2310,11 +2279,11 @@ typedef struct {
     uint8_t app_elf_sha256[32];
     uint32_t reserv2[20];
 } esp_app_desc_t;
-
-
 _Static_assert(sizeof(esp_app_desc_t) == 256, "esp_app_desc_t should be 256 bytes");
-# 20 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h" 2
-# 36 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+
+
+
+
 typedef struct {
   uint32_t start_addr;
   esp_image_header_t image;
@@ -2332,15 +2301,15 @@ typedef enum {
 
 
 } esp_image_load_mode_t;
-# 82 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 174 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_load(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data) __attribute__((deprecated));
-# 109 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 201 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify(esp_image_load_mode_t mode, const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 135 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 227 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t bootloader_load_image(const esp_partition_pos_t *part, esp_image_metadata_t *data);
-# 145 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 237 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader(uint32_t *length);
-# 154 "/home/dieter/Development/esp-idf/components/bootloader_support/include/esp_image_format.h"
+# 246 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/esp_image_format.h"
 esp_err_t esp_image_verify_bootloader_data(esp_image_metadata_t *data);
 
 
@@ -2352,32 +2321,32 @@ typedef struct {
     uint32_t irom_load_addr;
     uint32_t irom_size;
 } esp_image_flash_mapping_t;
-# 18 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h" 2
-# 28 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
-void bootloader_flash_update_id(void);
-# 38 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
-void bootloader_flash_cs_timing_config(void);
-# 49 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+# 18 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h" 2
+# 28 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+void bootloader_flash_update_id();
+# 38 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+void bootloader_flash_cs_timing_config();
+# 49 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
 void bootloader_flash_clock_config(const esp_image_header_t* pfhdr);
-# 58 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+# 58 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
 void bootloader_flash_gpio_config(const esp_image_header_t* pfhdr);
-# 67 "/home/dieter/Development/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
+# 67 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/include/bootloader_flash_config.h"
 void bootloader_flash_dummy_config(const esp_image_header_t* pfhdr);
-# 29 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
+# 29 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c" 2
 
-void bootloader_flash_update_id(void)
+void bootloader_flash_update_id()
 {
     g_rom_flashchip.device_id = bootloader_read_flash_id();
 }
 
-void __attribute__((section(".iram1" "." "0"))) bootloader_flash_cs_timing_config(void)
+void __attribute__((section(".iram1" "." "0"))) bootloader_flash_cs_timing_config()
 {
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)"); (("(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))); })|(((1UL << (4))) | ((1UL << (5)))))); }); });
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(4))))|(((1) & 0xF)<<(4))); })); });
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(0))))|(((0) & 0xF)<<(0))); })); });
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)"); (("(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))); })|(((1UL << (4))) | ((1UL << (5)))))); }); });
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(4))))|(((1) & 0xF)<<(4))); })); });
-    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(0))))|(((0) & 0xF)<<(0))); })); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)"); (("(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 37, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x1C)))); })|(((1UL << (4))) | ((1UL << (5)))))); }); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 38, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(4))))|(((1) & 0xF)<<(4))); })); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 39, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(0))))|(((0) & 0xF)<<(0))); })); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)"); (("(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use SET_PERI_REG_MASK for DPORT registers use DPORT_SET_PERI_REG_MASK)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 40, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x1C)))); })|(((1UL << (4))) | ((1UL << (5)))))); }); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 41, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(4))))|(((1) & 0xF)<<(4))); })); });
+    ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) >= 0x3ff00000) && (((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 42, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) >= 0x3ff00000) && ((((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((1)>1) ? (((1)* 0x1000) + 0x20000) : (((~(1)) & 1)* 0x1000 ))) + 0x14)))); })&(~((0xF)<<(0))))|(((0) & 0xF)<<(0))); })); });
 }
 
 void __attribute__((section(".iram1" "." "1"))) bootloader_flash_clock_config(const esp_image_header_t* pfhdr)
@@ -2409,24 +2378,24 @@ void __attribute__((section(".iram1" "." "2"))) bootloader_flash_gpio_config(con
         drv = 3;
     }
 
-    uint32_t chip_ver = ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)"); (("(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 74, __func__, "\"(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)\" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))")); } while(0);; ((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 74, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff5A000 + 0x00c))); }) >> (9)) & (0x7)); });
+    uint32_t chip_ver = ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)"); (("(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 74, __func__, "\"(Cannot use REG_GET_FIELD for DPORT registers use DPORT_REG_GET_FIELD)\" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))")); } while(0);; ((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 74, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff5A000 + 0x00c))) >= 0x3ff00000) && (((0x3ff5A000 + 0x00c))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff5A000 + 0x00c))); }) >> (9)) & (0x7)); });
     uint32_t pkg_ver = chip_ver & 0x7;
 
     if (pkg_ver == 2) {
 
 
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 80, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 81, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
     } else if (pkg_ver == 4) {
 
 
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 85, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 86, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
     } else if (pkg_ver == 5) {
 
 
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
-        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 90, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
+        ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 91, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
     } else {
         const uint32_t spiconfig = ets_efuse_get_spiconfig();
         if (spiconfig == 0) {
@@ -2440,25 +2409,25 @@ void __attribute__((section(".iram1" "." "2"))) bootloader_flash_gpio_config(con
             gpio_matrix_out(9, 3, 0, 0);
             gpio_matrix_in(9, 3, 0);
 
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x64)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x64))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x68)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x68))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x54)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x54))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x58)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x58))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x5c)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x5c))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x64)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 105, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x64))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x68)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 106, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x68))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x54)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 107, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x54))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x58)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 108, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x58))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x5c)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 109, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x5c))); }) & ~((0x7) << (12)))|(((2) & (0x7))<<(12)))); })); });
 
 
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)"); (("(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_SET_FIELD for DPORT registers use DPORT_REG_SET_FIELD)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)"); (("(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_WRITE for DPORT registers use DPORT_REG_WRITE)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)(((0x3ff49000 +0x60)))) = (((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)"); (("(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 112, __func__, "\"(Cannot use REG_READ for DPORT registers use DPORT_REG_READ)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*(volatile uint32_t *)((0x3ff49000 +0x60))); }) & ~((0x7) << (12)))|(((1) & (0x7))<<(12)))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 113, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((drv) & 0x3)<<(10))); })); });
 
             uint32_t flash_id = g_rom_flashchip.device_id;
             if (flash_id == 0xC86016) {
 
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x64))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x64)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x68))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x68)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x54))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x54)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x58))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x58)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x5c))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x5c)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
-                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x64)))) >= 0x3ff00000) && ((((0x3ff49000 +0x64)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x64))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 118, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x64))) >= 0x3ff00000) && (((0x3ff49000 +0x64))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x64)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x68)))) >= 0x3ff00000) && ((((0x3ff49000 +0x68)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x68))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 119, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x68))) >= 0x3ff00000) && (((0x3ff49000 +0x68))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x68)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x54)))) >= 0x3ff00000) && ((((0x3ff49000 +0x54)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x54))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 120, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x54))) >= 0x3ff00000) && (((0x3ff49000 +0x54))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x54)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x58)))) >= 0x3ff00000) && ((((0x3ff49000 +0x58)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x58))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 121, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x58))) >= 0x3ff00000) && (((0x3ff49000 +0x58))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x58)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x5c)))) >= 0x3ff00000) && ((((0x3ff49000 +0x5c)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x5c))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 122, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x5c))) >= 0x3ff00000) && (((0x3ff49000 +0x5c))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x5c)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
+                ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!((((((0x3ff49000 +0x60)))) >= 0x3ff00000) && ((((0x3ff49000 +0x60)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff49000 +0x60))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 123, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!(((((0x3ff49000 +0x60))) >= 0x3ff00000) && (((0x3ff49000 +0x60))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((0x3ff49000 +0x60)))); })&(~((0x3)<<(10))))|(((3) & 0x3)<<(10))); })); });
             }
         }
     }
@@ -2467,13 +2436,13 @@ void __attribute__((section(".iram1" "." "2"))) bootloader_flash_gpio_config(con
 void __attribute__((section(".iram1" "." "3"))) bootloader_flash_dummy_config(const esp_image_header_t* pfhdr)
 {
     int spi_cache_dummy = 0;
-    uint32_t modebit = ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 132, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8)))); });
+    uint32_t modebit = ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 132, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x8)))); });
     if (modebit & ((1UL << (13)))) {
         if (modebit & ((1UL << (24)))) {
             spi_cache_dummy = 3;
         } else if (modebit & ((1UL << (23)))) {
             spi_cache_dummy = 1;
-            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))); })&(~((0x3F)<<(26))))|(((27) & 0x3F)<<(26))); })); });
+            ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 138, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))); })&(~((0x3F)<<(26))))|(((27) & 0x3F)<<(26))); })); });
         } else if(modebit & (((1UL << (20))) | ((1UL << (14))))) {
             spi_cache_dummy = 7;
         }
@@ -2499,17 +2468,17 @@ void __attribute__((section(".iram1" "." "3"))) bootloader_flash_dummy_config(co
     }
 
     ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)"); (("(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func (
- "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-# 163 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+ "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
     ,
  164
-# 163 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
     , __func__, "\"(Cannot use SET_PERI_REG_BITS for DPORT registers use DPORT_SET_PERI_REG_BITS)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC)), 1), "(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)"); (("(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))) ? (void)0 : __assert_func (
- "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-# 163 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+ "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
     ,
  164
-# 163 "/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
-    , __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 164, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))); })&(~((0xFF)<<(0))))|(((spi_cache_dummy + g_rom_spiflash_dummy_len_plus[0]) & 0xFF)<<(0))); })); })
+# 163 "/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c"
+    , __func__, "\"(Cannot use WRITE_PERI_REG for DPORT registers use DPORT_WRITE_PERI_REG)\" && (!(((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) >= 0x3ff00000) && (((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))))) = (uint32_t)((({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); (("(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/esp-idf/components/bootloader_support/src/bootloader_flash_config.c", 164, __func__, "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) >= 0x3ff00000) && ((((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20))) <= 0x3ff13FFC))")); } while(0);; (*((volatile uint32_t *)(((0x3ff42000 + (((0)>1) ? (((0)* 0x1000) + 0x20000) : (((~(0)) & 1)* 0x1000 ))) + 0x20)))); })&(~((0xFF)<<(0))))|(((spi_cache_dummy + g_rom_spiflash_dummy_len_plus[0]) & 0xFF)<<(0))); })); })
                                      ;
 }

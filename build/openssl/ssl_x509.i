@@ -1,22 +1,22 @@
-# 1 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
-# 1 "/home/dieter/Development/ProjektEi/build/openssl//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/openssl//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
-# 15 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_types.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_types.h"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl3.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/tls1.h" 1
-# 24 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/x509_vfy.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h" 2
-# 64 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_code.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_types.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl3.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/tls1.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/x509_vfy.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h" 2
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_code.h"
 typedef enum {
 
     MSG_FLOW_UNINITED,
@@ -72,7 +72,7 @@ typedef enum {
     TLS_ST_SW_CHANGE,
     TLS_ST_SW_FINISHED
 } OSSL_HANDSHAKE_STATE;
-# 23 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_types.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_types.h" 2
 
 typedef void SSL_CIPHER;
 
@@ -356,44 +356,44 @@ struct pkey_method_st {
 typedef int (*next_proto_cb)(SSL *ssl, unsigned char **out,
                              unsigned char *outlen, const unsigned char *in,
                              unsigned int inlen, void *arg);
-# 23 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_stack.h" 1
-# 28 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_stack.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_stack.h" 1
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_stack.h"
 OPENSSL_STACK* OPENSSL_sk_new(OPENSSL_sk_compfunc c);
-# 37 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_stack.h"
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_stack.h"
 OPENSSL_STACK *OPENSSL_sk_new_null(void);
-# 46 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_stack.h"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_stack.h"
 void OPENSSL_sk_free(OPENSSL_STACK *stack);
-# 24 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h" 2
 
 struct stack_st_X509_NAME; static inline struct stack_st_X509_NAME *sk_X509_NAME_new_null(void) { return (struct stack_st_X509_NAME *)OPENSSL_sk_new_null(); }
-# 34 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 X509* __X509_new(X509 *ix);
-# 43 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 X509* X509_new(void);
-# 55 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 X509* d2i_X509(X509 **cert, const unsigned char *buffer, long len);
-# 64 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 void X509_free(X509 *x);
-# 76 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 int SSL_CTX_add_client_CA(SSL_CTX *ctx, X509 *x);
-# 88 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 int SSL_add_client_CA(SSL *ssl, X509 *x);
-# 102 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 int SSL_use_certificate_ASN1(SSL *ssl, int len, const unsigned char *d);
-# 115 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 int X509_STORE_add_cert(X509_STORE *store, X509 *x);
-# 132 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 int BIO_write(BIO *b, const void *data, int dlen);
-# 148 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 X509 * PEM_read_bio_X509(BIO *bp, X509 **x, void *cb, void *u);
-# 157 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h"
 BIO *BIO_new(void * method);
 
 
 
 
-void *BIO_s_mem(void);
+void *BIO_s_mem();
 
 
 
@@ -401,200 +401,97 @@ void *BIO_s_mem(void);
 
 
 void BIO_free(BIO *b);
-# 16 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_methods.h" 1
-# 107 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_methods.h"
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_methods.h" 1
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_methods.h"
 const X509_METHOD* X509_method(void);
-# 116 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_methods.h"
+# 116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_methods.h"
 const PKEY_METHOD* EVP_PKEY_method(void);
-# 17 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_dbg.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_dbg.h"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_opt.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_opt.h"
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
-
-
-
-
-       
-# 19 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_opt.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_dbg.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 43 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_dbg.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_dbg.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_opt.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_opt.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_opt.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_dbg.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 2
 
 
 
 
 
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 29 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 2 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 2 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
 
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
-
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
-
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+
+
+
+
+
+
+
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -605,8 +502,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -617,81 +526,111 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 22 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 23 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
+
+
+
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 99 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __gnuc_va_list va_list;
-# 20 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
+
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -702,32 +641,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -742,35 +659,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -779,21 +668,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -812,42 +700,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-typedef __builtin_va_list __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -855,10 +708,8 @@ typedef __builtin_va_list __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -909,12 +760,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -931,7 +782,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -948,13 +799,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -982,7 +833,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -993,7 +844,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -1003,7 +854,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -1049,12 +900,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -1084,8 +935,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -1094,25 +947,17 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
 
 
@@ -1130,6 +975,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -1140,18 +987,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -1161,11 +1003,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -1194,21 +1036,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -1223,26 +1056,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -1257,54 +1083,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -1328,40 +1142,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -1373,36 +1183,25 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
-
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
     ETS_FAILED = 1
@@ -1420,57 +1219,57 @@ struct ETSEventTag {
 
 typedef void (*ETSTask)(ETSEvent *e);
 typedef void (* ets_idle_cb_t)(void *arg);
-# 88 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_run(void);
-# 99 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 114 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 128 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 142 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 extern const char *const exc_cause_table[40];
-# 152 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_user_start(uint32_t start);
-# 162 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_startup_callback(uint32_t callback);
-# 172 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_appcpu_boot_addr(uint32_t start);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                            _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                 jump, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                       _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                            config);
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                     _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                          jump, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                     sb_need_check, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                                    _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                                         config);
-# 231 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 int ets_printf(const char *fmt, ...);
-# 241 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_write_char_uart(char c);
-# 251 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc1(void (*p)(char c));
-# 261 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc2(void (*p)(char c));
-# 271 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_uart_printf(void);
-# 293 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void ETSTimerFunc(void *timer_arg);
 
 typedef struct _ETSTIMER_ {
@@ -1480,57 +1279,57 @@ typedef struct _ETSTIMER_ {
     ETSTimerFunc *timer_func;
     void *timer_arg;
 } ETSTimer;
-# 311 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_init(void);
-# 320 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_deinit(void);
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                    _Bool 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                         repeat);
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                     _Bool 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                          repeat);
-# 358 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_disarm(ETSTimer *timer);
-# 372 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 382 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_done(ETSTimer *ptimer);
-# 392 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_delay_us(uint32_t us);
-# 402 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 414 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 424 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_cpu_frequency(void);
-# 433 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_xtal_scale(void);
-# 446 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_detected_xtal_freq(void);
-# 460 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void (* ets_isr_t)(void *);
-# 475 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 486 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_mask(uint32_t mask);
-# 497 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_unmask(uint32_t unmask);
-# 508 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_lock(void);
-# 519 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_unlock(void);
-# 530 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_waiti0(void);
-# 548 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 638 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     OK = 0,
     FAIL,
@@ -1538,8 +1337,8 @@ typedef enum {
     BUSY,
     CANCEL,
 } STATUS;
-# 23 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 35 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 typedef enum {
     ESP_LOG_NONE,
     ESP_LOG_ERROR,
@@ -1550,81 +1349,36 @@ typedef enum {
 } esp_log_level_t;
 
 typedef int (*vprintf_like_t)(const char *, va_list);
-# 64 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_level_set(const char* tag, esp_log_level_t level);
-# 77 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
-# 91 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_timestamp(void);
-# 106 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-char* esp_log_system_timestamp(void);
-# 116 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_early_timestamp(void);
-# 126 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 131 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 24 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -1648,55 +1402,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -1705,7 +1473,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -1715,32 +1484,21 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h" 2
 
 
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 25 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/malloc.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 2 3 4
-# 22 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/malloc.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h"
 struct mallinfo {
   size_t arena;
   size_t ordblks;
@@ -1756,12 +1514,12 @@ struct mallinfo {
 
 
 
-extern void *malloc (size_t);
+extern void * malloc (size_t);
 
 
 
 
-extern void *_malloc_r (struct _reent *, size_t);
+extern void * _malloc_r (struct _reent *, size_t);
 
 
 extern void free (void *);
@@ -1772,28 +1530,28 @@ extern void free (void *);
 extern void _free_r (struct _reent *, void *);
 
 
-extern void *realloc (void *, size_t);
+extern void * realloc (void *, size_t);
 
 
 
 
-extern void *_realloc_r (struct _reent *, void *, size_t);
+extern void * _realloc_r (struct _reent *, void *, size_t);
 
 
-extern void *calloc (size_t, size_t);
-
-
-
-
-extern void *_calloc_r (struct _reent *, size_t, size_t);
-
-
-extern void *memalign (size_t, size_t);
+extern void * calloc (size_t, size_t);
 
 
 
 
-extern void *_memalign_r (struct _reent *, size_t, size_t);
+extern void * _calloc_r (struct _reent *, size_t, size_t);
+
+
+extern void * memalign (size_t, size_t);
+
+
+
+
+extern void * _memalign_r (struct _reent *, size_t, size_t);
 
 
 extern struct mallinfo mallinfo (void);
@@ -1831,20 +1589,20 @@ extern size_t _malloc_usable_size_r (struct _reent *, void *);
 
 
 
-extern void *valloc (size_t);
+extern void * valloc (size_t);
 
 
 
 
-extern void *_valloc_r (struct _reent *, size_t);
+extern void * _valloc_r (struct _reent *, size_t);
 
 
-extern void *pvalloc (size_t);
+extern void * pvalloc (size_t);
 
 
 
 
-extern void *_pvalloc_r (struct _reent *, size_t);
+extern void * _pvalloc_r (struct _reent *, size_t);
 
 
 extern int malloc_trim (size_t);
@@ -1855,10 +1613,6 @@ extern int malloc_trim (size_t);
 extern int _malloc_trim_r (struct _reent *, size_t);
 
 
-extern void __malloc_lock(struct _reent *);
-
-extern void __malloc_unlock(struct _reent *);
-
 
 
 extern void mstats (char *);
@@ -1867,89 +1621,87 @@ extern void mstats (char *);
 
 
 extern void _mstats_r (struct _reent *, char *);
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/malloc.h" 3 4
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/malloc.h"
 extern void cfree (void *);
-# 26 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 2
 
-
-# 27 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h"
 void *ssl_mem_zalloc(size_t size);
-# 20 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_dbg.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/platform/ssl_port.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_x509.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h"
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_dbg.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/platform/ssl_port.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_x509.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h" 1
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h"
 EVP_PKEY* __EVP_PKEY_new(EVP_PKEY *ipk);
-# 40 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h"
 EVP_PKEY* EVP_PKEY_new(void);
-# 53 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h"
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h"
 EVP_PKEY* d2i_PrivateKey(int type,
                          EVP_PKEY **a,
                          const unsigned char **pp,
                          long length);
-# 65 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h"
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h"
 void EVP_PKEY_free(EVP_PKEY *x);
-# 79 "/home/dieter/Development/esp-idf/components/openssl/include/internal/ssl_pkey.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/internal/ssl_pkey.h"
  int SSL_use_PrivateKey_ASN1(int type, SSL *ssl, const unsigned char *d, long len);
-# 24 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h" 2
-# 44 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h" 2
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 SSL_CTX* SSL_CTX_new(const SSL_METHOD *method);
-# 53 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_free(SSL_CTX *ctx);
-# 62 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 SSL* SSL_new(SSL_CTX *ctx);
-# 71 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_free(SSL *ssl);
-# 82 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_connect(SSL *ssl);
-# 93 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_accept(SSL *ssl);
-# 107 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_read(SSL *ssl, void *buffer, int len);
-# 121 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_write(SSL *ssl, const void *buffer, int len);
-# 130 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_get_verify_result(const SSL *ssl);
-# 142 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_shutdown(SSL *ssl);
-# 154 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_set_fd(SSL *ssl, int fd);
-# 166 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_set_tlsext_host_name(SSL* ssl, const char *hostname);
-# 178 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 178 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_PrivateKey(SSL_CTX *ctx, EVP_PKEY *pkey);
-# 190 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_certificate(SSL_CTX *ctx, X509 *x);
-# 199 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 199 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* SSLv23_client_method(void);
-# 208 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 208 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_client_method(void);
-# 217 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* SSLv3_client_method(void);
-# 226 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_1_client_method(void);
-# 235 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_2_client_method(void);
-# 244 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLS_client_method(void);
-# 253 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* SSLv23_server_method(void);
-# 262 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_1_server_method(void);
-# 271 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_2_server_method(void);
-# 280 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 280 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLSv1_server_method(void);
-# 289 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* SSLv3_server_method(void);
-# 298 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD* TLS_server_method(void);
-# 310 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_alpn_select_cb(SSL_CTX *ctx,
                                 int (*cb) (SSL *ssl,
                                            const unsigned char **out,
@@ -1958,9 +1710,9 @@ void SSL_CTX_set_alpn_select_cb(SSL_CTX *ctx,
                                            unsigned int inlen,
                                            void *arg),
                                 void *arg);
-# 331 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_alpn_protos(SSL_CTX *ctx, const unsigned char *protos, unsigned int protos_len);
-# 342 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_next_proto_select_cb(SSL_CTX *ctx,
                                       int (*cb) (SSL *ssl,
                                                  unsigned char **out,
@@ -1969,193 +1721,193 @@ void SSL_CTX_set_next_proto_select_cb(SSL_CTX *ctx,
                                                  unsigned int inlen,
                                                  void *arg),
                                       void *arg);
-# 359 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_error(const SSL *ssl, int ret_code);
-# 368 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void ERR_clear_error(void);
-# 377 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 377 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int ERR_get_error(void);
-# 386 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void ERR_load_SSL_strings(void);
-# 395 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_library_init(void);
-# 406 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *ERR_error_string(unsigned long e, char *ret);
-# 416 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 416 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_CTX_set_options(SSL_CTX *ctx, unsigned long opt);
-# 428 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 428 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_mode(SSL_CTX *ctx, int mod);
-# 444 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_do_handshake(SSL *ssl);
-# 453 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_get_version(const SSL *ssl);
-# 465 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_ssl_version(SSL_CTX *ctx, const SSL_METHOD *meth);
-# 474 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 474 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_pending(const SSL *ssl);
-# 485 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_want_nothing(const SSL *ssl);
-# 496 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_want_read(const SSL *ssl);
-# 507 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 507 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_want_write(const SSL *ssl);
-# 516 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 516 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD *SSL_CTX_get_ssl_method(SSL_CTX *ctx);
-# 525 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_METHOD *SSL_get_ssl_method(SSL *ssl);
-# 537 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_set_ssl_method(SSL *ssl, const SSL_METHOD *method);
-# 549 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 549 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_add_client_CA(SSL *ssl, X509 *x);
-# 561 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_add_client_CA(SSL_CTX *ctx, X509 *x);
-# 571 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 571 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_client_CA_list(SSL *ssl, struct stack_st_X509_NAME *name_list);
-# 581 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 581 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_client_CA_list(SSL_CTX *ctx, struct stack_st_X509_NAME *name_list);
-# 590 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 590 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 struct stack_st_X509_NAME *SSL_get_client_CA_list(const SSL *ssl);
-# 599 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 599 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 struct stack_st_X509_NAME *SSL_CTX_get_client_CA_list(const SSL_CTX *ctx);
-# 608 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 608 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 X509 *SSL_get_certificate(const SSL *ssl);
-# 617 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 617 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 EVP_PKEY *SSL_get_privatekey(const SSL *ssl);
-# 627 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_info_callback(SSL *ssl, void (*cb) (const SSL *ssl, int type, int val));
-# 636 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 636 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 OSSL_HANDSHAKE_STATE SSL_get_state(const SSL *ssl);
-# 646 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_default_read_buffer_len(SSL_CTX *ctx, size_t len);
-# 656 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 656 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_default_read_buffer_len(SSL *ssl, size_t len);
-# 666 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 666 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_security_level(SSL *ssl, int level);
-# 675 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 675 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_security_level(const SSL *ssl);
-# 684 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 684 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_get_verify_mode(const SSL_CTX *ctx);
-# 693 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_get_verify_depth(const SSL_CTX *ctx);
-# 704 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_verify(SSL_CTX *ctx, int mode, int (*verify_callback)(int, X509_STORE_CTX *));
-# 715 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_verify(SSL *s, int mode, int (*verify_callback)(int, X509_STORE_CTX *));
-# 725 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_verify_depth(SSL_CTX *ctx, int depth);
-# 735 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 735 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int verify_callback(int preverify_ok, X509_STORE_CTX *x509_ctx);
-# 745 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 745 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_set_timeout(SSL_CTX *ctx, long t);
-# 754 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 754 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_get_timeout(const SSL_CTX *ctx);
-# 766 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 766 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_cipher_list(SSL_CTX *ctx, const char *str);
-# 778 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_set_cipher_list(SSL *ssl, const char *str);
-# 787 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 787 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_get_cipher_list(const SSL *ssl, int n);
-# 796 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 796 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const SSL_CIPHER *SSL_get_current_cipher(const SSL *ssl);
-# 805 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 805 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_get_cipher(const SSL *ssl);
-# 814 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 X509_STORE *SSL_CTX_get_cert_store(const SSL_CTX *ctx);
-# 824 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 824 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_cert_store(SSL_CTX *ctx, X509_STORE *store);
-# 833 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 833 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_want(const SSL *ssl);
-# 844 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 844 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_want_x509_lookup(const SSL *ssl);
-# 855 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_clear(SSL *ssl);
-# 866 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 866 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_fd(const SSL *ssl);
-# 877 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_rfd(const SSL *ssl);
-# 888 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 888 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_wfd(const SSL *ssl);
-# 898 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_read_ahead(SSL *s, int yes);
-# 908 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 908 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_read_ahead(SSL_CTX *ctx, int yes);
-# 917 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_read_ahead(const SSL *ssl);
-# 926 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 926 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_get_read_ahead(SSL_CTX *ctx);
-# 937 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_has_pending(const SSL *ssl);
-# 949 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 949 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_certificate(SSL_CTX *ctx, X509 *x);
-# 962 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 962 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_certificate_ASN1(SSL_CTX *ctx, int len, const unsigned char *d);
-# 975 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_certificate_file(SSL_CTX *ctx, const char *file, int type);
-# 987 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 987 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_certificate_chain_file(SSL_CTX *ctx, const char *file);
-# 1001 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_PrivateKey_ASN1(int pk, SSL_CTX *ctx, const unsigned char *d, long len);
-# 1014 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1014 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_PrivateKey_file(SSL_CTX *ctx, const char *file, int type);
-# 1026 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1026 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_RSAPrivateKey(SSL_CTX *ctx, RSA *rsa);
-# 1039 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1039 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_RSAPrivateKey_ASN1(SSL_CTX *ctx, const unsigned char *d, long len);
-# 1052 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1052 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_RSAPrivateKey_file(SSL_CTX *ctx, const char *file, int type);
-# 1064 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1064 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_check_private_key(const SSL_CTX *ctx);
-# 1077 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1077 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_serverinfo(SSL_CTX *ctx, const unsigned char *serverinfo, size_t serverinfo_length);
-# 1089 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1089 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_serverinfo_file(SSL_CTX *ctx, const char *file);
-# 1106 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_select_next_proto(unsigned char **out, unsigned char *outlen,
                           const unsigned char *in, unsigned int inlen,
                           const unsigned char *client, unsigned int client_len);
-# 1120 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_add_extra_chain_cert(SSL_CTX *ctx, X509 *);
-# 1134 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_ctrl(SSL_CTX *ctx, int cmd, long larg, char *parg);
-# 1143 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 STACK *SSL_CTX_get_ciphers(const SSL_CTX *ctx);
-# 1154 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_CTX_get_default_read_ahead(SSL_CTX *ctx);
-# 1164 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_CTX_get_ex_data(const SSL_CTX *ctx, int idx);
-# 1173 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_get_quiet_shutdown(const SSL_CTX *ctx);
-# 1186 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1186 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_load_verify_locations(SSL_CTX *ctx, const char *CAfile, const char *CApath);
-# 1197 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_up_ref(SSL_CTX *ctx);
-# 1209 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_app_data(SSL_CTX *ctx, void *arg);
-# 1219 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1219 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_client_cert_cb(SSL_CTX *ctx, int (*cb)(SSL *ssl, X509 **x509, EVP_PKEY **pkey));
-# 1229 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_default_read_ahead(SSL_CTX *ctx, int m);
-# 1240 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_default_verify_paths(SSL_CTX *ctx);
-# 1251 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_default_verify_dir(SSL_CTX *ctx);
-# 1262 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_default_verify_file(SSL_CTX *ctx);
-# 1275 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_set_ex_data(SSL_CTX *s, int idx, char *arg);
-# 1285 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_CTX_clear_options(SSL_CTX *ctx, unsigned long op);
-# 1295 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_CTX_get_options(SSL_CTX *ctx);
-# 1305 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1305 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_quiet_shutdown(SSL_CTX *ctx, int mode);
-# 1314 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 X509 *SSL_CTX_get0_certificate(const SSL_CTX *ctx);
-# 1323 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 EVP_PKEY *SSL_CTX_get0_privatekey(const SSL_CTX *ctx);
-# 1335 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1335 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_CTX_use_psk_identity_hint(SSL_CTX *ctx, const char *hint);
-# 1345 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1345 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_CTX_set_psk_server_callback(SSL_CTX *ctx,
                                      unsigned int (*callback)(SSL *ssl,
                                                               const char *identity,
@@ -2169,104 +1921,104 @@ void SSL_CTX_set_psk_server_callback(SSL_CTX *ctx,
 
 
 const char *SSL_alert_desc_string(int value);
-# 1366 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1366 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_alert_desc_string_long(int value);
-# 1375 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1375 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_alert_type_string(int value);
-# 1384 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1384 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_alert_type_string_long(int value);
-# 1393 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 SSL_CTX *SSL_get_SSL_CTX(const SSL *ssl);
-# 1402 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_get_app_data(SSL *ssl);
-# 1412 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1412 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_cipher_bits(const SSL *ssl, int *alg_bits);
-# 1421 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1421 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_get_cipher_name(const SSL *ssl);
-# 1430 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1430 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_get_cipher_version(const SSL *ssl);
-# 1440 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1440 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_get_ex_data(const SSL *ssl, int idx);
-# 1449 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1449 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_ex_data_X509_STORE_CTX_idx(void);
-# 1458 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 STACK *SSL_get_peer_cert_chain(const SSL *ssl);
-# 1467 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1467 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 X509 *SSL_get_peer_certificate(const SSL *ssl);
-# 1476 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1476 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_quiet_shutdown(const SSL *ssl);
-# 1485 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 BIO *SSL_get_rbio(const SSL *ssl);
-# 1496 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1496 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_get_shared_ciphers(const SSL *ssl, char *buf, int len);
-# 1505 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1505 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_shutdown(const SSL *ssl);
-# 1514 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1514 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_get_time(const SSL *ssl);
-# 1523 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1523 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_get_timeout(const SSL *ssl);
-# 1532 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_get_verify_mode(const SSL *ssl);
-# 1541 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 X509_VERIFY_PARAM *SSL_get0_param(SSL *ssl);
-# 1554 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1554 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int X509_VERIFY_PARAM_set1_host(X509_VERIFY_PARAM *param,
                                 const char *name, size_t namelen);
-# 1566 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1566 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int X509_VERIFY_PARAM_set_hostflags(X509_VERIFY_PARAM *param,
                     unsigned long flags);
-# 1578 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int X509_VERIFY_PARAM_clear_hostflags(X509_VERIFY_PARAM *param,
                       unsigned long flags);
-# 1588 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 BIO *SSL_get_wbio(const SSL *ssl);
-# 1597 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1597 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 STACK *SSL_load_client_CA_file(const char *file);
-# 1608 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1608 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_up_ref(SSL *ssl);
-# 1622 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1622 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_peek(SSL *ssl, void *buf, int num);
-# 1633 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1633 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_renegotiate(SSL *ssl);
-# 1642 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1642 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_rstate_string(SSL *ssl);
-# 1651 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1651 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_rstate_string_long(SSL *ssl);
-# 1660 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1660 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_accept_state(SSL *ssl);
-# 1670 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_app_data(SSL *ssl, char *arg);
-# 1681 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1681 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_bio(SSL *ssl, BIO *rbio, BIO *wbio);
-# 1691 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1691 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_clear_options(SSL *ssl, unsigned long op);
-# 1700 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1700 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_get_options(SSL *ssl);
-# 1710 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1710 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 unsigned long SSL_set_options(SSL *ssl, unsigned long op);
-# 1720 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1720 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_quiet_shutdown(SSL *ssl, int mode);
-# 1730 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1730 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_shutdown(SSL *ssl, int mode);
-# 1740 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1740 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_time(SSL *ssl, long t);
-# 1750 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 void SSL_set_timeout(SSL *ssl, long t);
-# 1759 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1759 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_state_string(const SSL *ssl);
-# 1768 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1768 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 char *SSL_state_string_long(const SSL *ssl);
-# 1777 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1777 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 long SSL_total_renegotiations(SSL *ssl);
-# 1786 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1786 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_version(const SSL *ssl);
-# 1798 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1798 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 int SSL_use_psk_identity_hint(SSL *ssl, const char *hint);
-# 1807 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1807 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_get_psk_identity_hint(SSL *ssl);
-# 1816 "/home/dieter/Development/esp-idf/components/openssl/include/openssl/ssl.h"
+# 1816 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/include/openssl/ssl.h"
 const char *SSL_get_psk_identity(SSL *ssl);
-# 20 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 2
 
 
 
@@ -2309,9 +2061,9 @@ failed:
     free(x);
 no_mem:
     return 
-# 61 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
           ((void *)0)
-# 61 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
               ;
 }
 
@@ -2321,9 +2073,9 @@ no_mem:
 X509* X509_new(void)
 {
     return __X509_new(
-# 69 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
                      ((void *)0)
-# 69 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
                          );
 }
 
@@ -2380,9 +2132,9 @@ failed2:
         X509_free(x);
 failed1:
     return 
-# 124 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
           ((void *)0)
-# 124 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
               ;
 }
 
@@ -2509,9 +2261,9 @@ int SSL_CTX_use_certificate_ASN1(SSL_CTX *ctx, int len,
     X509 *x;
 
     x = d2i_X509(
-# 249 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
                 ((void *)0)
-# 249 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
                     , d, len);
     if (!x) {
         ;
@@ -2542,9 +2294,9 @@ int SSL_use_certificate_ASN1(SSL *ssl, int len,
     X509 *x;
 
     x = d2i_X509(
-# 278 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
                 ((void *)0)
-# 278 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
                     , d, len);
     if (!x) {
         ;
@@ -2607,9 +2359,9 @@ int X509_STORE_add_cert(X509_STORE *store, X509 *x) {
     }
 
     if (ctx->client_CA!=
-# 339 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
                        ((void *)0)
-# 339 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
                            ) {
         X509_free(ctx->client_CA);
     }
@@ -2625,7 +2377,7 @@ BIO *BIO_new(void *method) {
     BIO *b = (BIO *)malloc(sizeof(BIO));
     return b;
 }
-# 362 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
 int BIO_write(BIO *b, const void * data, int dlen) {
     b->data = data;
     b->dlen = dlen;
@@ -2671,20 +2423,20 @@ failed:
     }
 
     return 
-# 406 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
           ((void *)0)
-# 406 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 406 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
               ;
 }
 
 
 
 
-void *BIO_s_mem(void) {
+void *BIO_s_mem() {
     return 
-# 413 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c" 3 4
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c" 3 4
           ((void *)0)
-# 413 "/home/dieter/Development/esp-idf/components/openssl/library/ssl_x509.c"
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/openssl/library/ssl_x509.c"
               ;
 }
 

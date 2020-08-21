@@ -1,13 +1,13 @@
-# 1 "/home/dieter/Development/ProjektEi/components/tft/Ubuntu16.c"
-# 1 "/home/dieter/Development/ProjektEi/build/tft//"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/Ubuntu16.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/tft//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/ProjektEi/components/tft/Ubuntu16.c"
-# 24 "/home/dieter/Development/ProjektEi/components/tft/Ubuntu16.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/Ubuntu16.c"
+# 24 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/Ubuntu16.c"
 const unsigned char tft_Ubuntu16[] =
 {
 0x00, 0x10, 0x00, 0x00,
-# 44 "/home/dieter/Development/ProjektEi/components/tft/Ubuntu16.c"
+# 44 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/Ubuntu16.c"
 0x20,0x0D,0x00,0x00,0x00,0x04,
 
 

@@ -1,8 +1,8 @@
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
-# 1 "/home/dieter/Development/ProjektEi/build/wpa_supplicant//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/wpa_supplicant//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 
 
 
@@ -10,179 +10,149 @@
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h"
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/includes.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-
-
-       
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/supplicant_opt.h" 2
-# 23 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h" 2
-# 58 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef int ptrdiff_t;
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef unsigned int size_t;
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
+typedef short unsigned int wchar_t;
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h" 2
 
 
 
 
 
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h"
+struct dl_list {
+ struct dl_list *next;
+ struct dl_list *prev;
+};
+
+static inline void dl_list_init(struct dl_list *list)
+{
+ list->next = list;
+ list->prev = list;
+}
+
+static inline void dl_list_add(struct dl_list *list, struct dl_list *item)
+{
+ item->next = list->next;
+ item->prev = list;
+ list->next->prev = item;
+ list->next = item;
+}
+
+static inline void dl_list_add_tail(struct dl_list *list, struct dl_list *item)
+{
+ dl_list_add(list->prev, item);
+}
+
+static inline void dl_list_del(struct dl_list *item)
+{
+ item->next->prev = item->prev;
+ item->prev->next = item->next;
+ item->next = 
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h" 3 4
+             ((void *)0)
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h"
+                 ;
+ item->prev = 
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h" 3 4
+             ((void *)0)
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/list.h"
+                 ;
+}
+
+static inline int dl_list_empty(struct dl_list *list)
+{
+ return list->next == list;
+}
+
+static inline unsigned int dl_list_len(struct dl_list *list)
+{
+ struct dl_list *item;
+ int count = 0;
+ for (item = list->next; item != list; item = item->next)
+  count++;
+ return count;
+}
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 29 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 2 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 2 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
 
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
+
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
+
+
+
+
+
+
 typedef __int8_t int8_t ;
-
-
-
 typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
 
 
 
@@ -193,8 +163,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -205,72 +187,77 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 19 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef short unsigned int wchar_t;
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
-typedef int ptrdiff_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -281,32 +268,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -321,35 +286,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -358,21 +295,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -391,44 +327,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -436,10 +335,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -490,12 +387,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -512,7 +409,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -529,13 +426,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -563,7 +460,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -574,7 +471,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -584,7 +481,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -630,12 +527,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -665,8 +562,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -675,29 +574,735 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 19 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 31 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *restrict, const char *restrict);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *restrict, const char *restrict);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *restrict, const char *restrict, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *restrict, const char *restrict, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *restrict, const char *restrict);
+
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+
+
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
+
+
+void * memccpy (void * restrict, const void * restrict, int, size_t);
+
+
+
+
+
+void * memrchr (const void *, int, size_t);
+
+
+
+
+char *rindex (const char *, int);
+
+char *stpcpy (char *restrict, const char *restrict);
+char *stpncpy (char *restrict, const char *restrict, size_t);
+
+int strcasecmp (const char *, const char *);
+
+
+
+
+
+
+char *strdup (const char *);
+
+
+char *_strdup_r (struct _reent *, const char *);
+
+
+char *strndup (const char *, size_t);
+
+
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+
+
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+
+
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned char u_char;
+
+
+
+typedef unsigned short u_short;
+
+
+
+typedef unsigned int u_int;
+
+
+
+typedef unsigned long u_long;
+
+
+
+
+
+typedef unsigned short ushort;
+typedef unsigned int uint;
+typedef unsigned long ulong;
+
+
+
+typedef unsigned long clock_t;
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
+typedef long daddr_t;
+
+
+
+typedef char * caddr_t;
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
+typedef __dev_t dev_t;
+typedef __uid_t uid_t;
+typedef __gid_t gid_t;
+
+
+
+
+
+typedef int pid_t;
+
+
+
+
+
+
+
+typedef long key_t;
+
+typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
+
+
+
+
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
+
+
+
+
+
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
+
+
+
+
+typedef unsigned long timer_t;
+
+
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
+struct sched_param {
+  int sched_priority;
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
+};
+
+int sched_yield( void );
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef __uint32_t pthread_t;
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef struct {
+  int is_initialized;
+  void *stackaddr;
+  int stacksize;
+  int contentionscope;
+  int inheritsched;
+  int schedpolicy;
+  struct sched_param schedparam;
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+  int detachstate;
+
+
+
+
+
+} pthread_attr_t;
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef __uint32_t pthread_mutex_t;
+
+typedef struct {
+  int is_initialized;
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+  int type;
+
+  int recursive;
+} pthread_mutexattr_t;
+
+
+
+
+typedef __uint32_t pthread_cond_t;
+
+typedef struct {
+  int is_initialized;
+
+
+
+} pthread_condattr_t;
+
+
+
+typedef __uint32_t pthread_key_t;
+
+typedef struct {
+  int is_initialized;
+  int init_executed;
+} pthread_once_t;
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+
+
+
+typedef __FILE FILE;
+
+
+
+
+typedef _fpos_t fpos_t;
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE * tmpfile (void);
+char * tmpnam (char *);
+
+char * tempnam (const char *, const char *);
+
+int fclose (FILE *);
+int fflush (FILE *);
+FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
+void setbuf (FILE *restrict, char *restrict);
+int setvbuf (FILE *restrict, char *restrict, int, size_t);
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int fgetc (FILE *);
+char * fgets (char *restrict, int, FILE *restrict);
+int fputc (int, FILE *);
+int fputs (const char *restrict, FILE *restrict);
+int getc (FILE *);
+int getchar (void);
+char * gets (char *);
+int putc (int, FILE *);
+int putchar (int);
+int puts (const char *);
+int ungetc (int, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
+
+
+
+int fgetpos (FILE *restrict, fpos_t *restrict);
+
+int fseek (FILE *, long, int);
+
+
+
+int fsetpos (FILE *, const fpos_t *);
+
+long ftell ( FILE *);
+void rewind (FILE *);
+void clearerr (FILE *);
+int feof (FILE *);
+int ferror (FILE *);
+void perror (const char *);
+
+FILE * fopen (const char *restrict _name, const char *restrict _type);
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int remove (const char *);
+int rename (const char *, const char *);
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int fseeko (FILE *, off_t, int);
+off_t ftello ( FILE *);
+
+
+
+
+
+
+
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE * fdopen (int, const char *);
+
+int fileno (FILE *);
+int getw (FILE *);
+int pclose (FILE *);
+FILE * popen (const char *, const char *);
+int putw (int, FILE *);
+void setbuffer (FILE *, char *, int);
+int setlinebuf (FILE *);
+int getc_unlocked (FILE *);
+int getchar_unlocked (void);
+void flockfile (FILE *);
+int ftrylockfile (FILE *);
+void funlockfile (FILE *);
+int putc_unlocked (int, FILE *);
+int putchar_unlocked (int);
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+
+FILE * fmemopen (void *restrict, size_t, const char *restrict);
+
+
+FILE * open_memstream (char **, size_t *);
+
+int renameat (int, const char *, int, const char *);
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fclose_r (struct _reent *, FILE *);
+int _fcloseall_r (struct _reent *);
+FILE * _fdopen_r (struct _reent *, int, const char *);
+int _fflush_r (struct _reent *, FILE *);
+int _fgetc_r (struct _reent *, FILE *);
+int _fgetc_unlocked_r (struct _reent *, FILE *);
+char * _fgets_r (struct _reent *, char *restrict, int, FILE *restrict);
+char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
+
+
+
+
+int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
+int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
+
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
+FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
+FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fpurge_r (struct _reent *, FILE *);
+int _fputc_r (struct _reent *, int, FILE *);
+int _fputc_unlocked_r (struct _reent *, int, FILE *);
+int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
+int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _fseek_r (struct _reent *, FILE *, long, int);
+int _fseeko_r (struct _reent *, FILE *, _off_t, int);
+long _ftell_r (struct _reent *, FILE *);
+_off_t _ftello_r (struct _reent *, FILE *);
+void _rewind_r (struct _reent *, FILE *);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _getc_r (struct _reent *, FILE *);
+int _getc_unlocked_r (struct _reent *, FILE *);
+int _getchar_r (struct _reent *);
+int _getchar_unlocked_r (struct _reent *);
+char * _gets_r (struct _reent *, char *);
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+FILE * _open_memstream_r (struct _reent *, char **, size_t *);
+void _perror_r (struct _reent *, const char *);
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _putc_r (struct _reent *, int, FILE *);
+int _putc_unlocked_r (struct _reent *, int, FILE *);
+int _putchar_unlocked_r (struct _reent *, int);
+int _putchar_r (struct _reent *, int);
+int _puts_r (struct _reent *, const char *);
+int _remove_r (struct _reent *, const char *);
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+char * _tempnam_r (struct _reent *, const char *, const char *);
+FILE * _tmpfile_r (struct _reent *);
+char * _tmpnam_r (struct _reent *, char *);
+int _ungetc_r (struct _reent *, int, FILE *);
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+
+
+
+int fpurge (FILE *);
+ssize_t __getdelim (char **, size_t *, int, FILE *);
+ssize_t __getline (char **, size_t *, FILE *);
+
+
+void clearerr_unlocked (FILE *);
+int feof_unlocked (FILE *);
+int ferror_unlocked (FILE *);
+int fileno_unlocked (FILE *);
+int fflush_unlocked (FILE *);
+int fgetc_unlocked (FILE *);
+int fputc_unlocked (int, FILE *);
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int __srget_r (struct _reent *, FILE *);
+int __swbuf_r (struct _reent *, int, FILE *);
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
+typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
+typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
+     size_t __n);
+
+
+
+
+typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
+
+typedef int cookie_close_function_t(void *__cookie);
+typedef struct
+{
+
+
+  cookie_read_function_t *read;
+  cookie_write_function_t *write;
+  cookie_seek_function_t *seek;
+  cookie_close_function_t *close;
+} cookie_io_functions_t;
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
+
+
+
+
 
 
 
@@ -715,6 +1320,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -725,18 +1332,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -746,11 +1348,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -779,21 +1381,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -808,26 +1401,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -842,54 +1428,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -913,40 +1487,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -958,36 +1528,59 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+       
 
 
 
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 2
 
 
 
-# 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 2
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
 
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+
+typedef int32_t esp_err_t;
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+const char *esp_err_to_name(esp_err_t code);
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
+const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
+
+
+void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((noreturn));
+
+
+void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
     ETS_FAILED = 1
@@ -1005,57 +1598,57 @@ struct ETSEventTag {
 
 typedef void (*ETSTask)(ETSEvent *e);
 typedef void (* ets_idle_cb_t)(void *arg);
-# 88 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_run(void);
-# 99 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 114 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 128 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 142 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 extern const char *const exc_cause_table[40];
-# 152 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_user_start(uint32_t start);
-# 162 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_startup_callback(uint32_t callback);
-# 172 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_appcpu_boot_addr(uint32_t start);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                            _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                 jump, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                       _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                            config);
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                     _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                          jump, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                     sb_need_check, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                                    _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                                         config);
-# 231 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 int ets_printf(const char *fmt, ...);
-# 241 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_write_char_uart(char c);
-# 251 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc1(void (*p)(char c));
-# 261 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc2(void (*p)(char c));
-# 271 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_uart_printf(void);
-# 293 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void ETSTimerFunc(void *timer_arg);
 
 typedef struct _ETSTIMER_ {
@@ -1065,57 +1658,57 @@ typedef struct _ETSTIMER_ {
     ETSTimerFunc *timer_func;
     void *timer_arg;
 } ETSTimer;
-# 311 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_init(void);
-# 320 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_deinit(void);
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                    _Bool 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                         repeat);
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                     _Bool 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                          repeat);
-# 358 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_disarm(ETSTimer *timer);
-# 372 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 382 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_done(ETSTimer *ptimer);
-# 392 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_delay_us(uint32_t us);
-# 402 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 414 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 424 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_cpu_frequency(void);
-# 433 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_xtal_scale(void);
-# 446 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_detected_xtal_freq(void);
-# 460 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void (* ets_isr_t)(void *);
-# 475 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 486 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_mask(uint32_t mask);
-# 497 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_unmask(uint32_t unmask);
-# 508 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_lock(void);
-# 519 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_unlock(void);
-# 530 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_waiti0(void);
-# 548 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 638 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     OK = 0,
     FAIL,
@@ -1123,1027 +1716,7 @@ typedef enum {
     BUSY,
     CANCEL,
 } STATUS;
-# 59 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/includes.h" 2
-# 9 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h" 2
-
-
-
-
-struct dl_list {
- struct dl_list *next;
- struct dl_list *prev;
-};
-
-static inline void dl_list_init(struct dl_list *list)
-{
- list->next = list;
- list->prev = list;
-}
-
-static inline void dl_list_add(struct dl_list *list, struct dl_list *item)
-{
- item->next = list->next;
- item->prev = list;
- list->next->prev = item;
- list->next = item;
-}
-
-static inline void dl_list_add_tail(struct dl_list *list, struct dl_list *item)
-{
- dl_list_add(list->prev, item);
-}
-
-static inline void dl_list_del(struct dl_list *item)
-{
- item->next->prev = item->prev;
- item->prev->next = item->next;
- item->next = 
-# 51 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h" 3 4
-             ((void *)0)
-# 51 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h"
-                 ;
- item->prev = 
-# 52 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h" 3 4
-             ((void *)0)
-# 52 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/list.h"
-                 ;
-}
-
-static inline int dl_list_empty(struct dl_list *list)
-{
- return list->next == list;
-}
-
-static inline unsigned int dl_list_len(struct dl_list *list)
-{
- struct dl_list *item;
- int count = 0;
- for (item = list->next; item != list; item = item->next)
-  count++;
- return count;
-}
-# 10 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-
-void * memchr (const void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
-void * memmove (void *, const void *, size_t);
-void * memset (void *, int, size_t);
-char *strcat (char *restrict, const char *restrict);
-char *strchr (const char *, int);
-int strcmp (const char *, const char *);
-int strcoll (const char *, const char *);
-char *strcpy (char *restrict, const char *restrict);
-size_t strcspn (const char *, const char *);
-char *strerror (int);
-size_t strlen (const char *);
-char *strncat (char *restrict, const char *restrict, size_t);
-int strncmp (const char *, const char *, size_t);
-char *strncpy (char *restrict, const char *restrict, size_t);
-char *strpbrk (const char *, const char *);
-char *strrchr (const char *, int);
-size_t strspn (const char *, const char *);
-char *strstr (const char *, const char *);
-
-char *strtok (char *restrict, const char *restrict);
-
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-
-
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
-
-
-void * memccpy (void *restrict, const void *restrict, int, size_t);
-
-
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
-void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
-
-
-char *stpcpy (char *restrict, const char *restrict);
-char *stpncpy (char *restrict, const char *restrict, size_t);
-
-
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
-
-
-char *strdup (const char *);
-
-char *_strdup_r (struct _reent *, const char *);
-
-char *strndup (const char *, size_t);
-
-char *_strndup_r (struct _reent *, const char *, size_t);
-
-
-
-
-
-
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char * _strerror_r (struct _reent *, int, int, int *);
-
-
-size_t strlcat (char *, const char *, size_t);
-size_t strlcpy (char *, const char *, size_t);
-
-
-size_t strnlen (const char *, size_t);
-
-
-char *strsep (char **, const char *);
-
-
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-
-char *strlwr (char *);
-char *strupr (char *);
-
-
-
-char *strsignal (int __signo);
-
-
-
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
-# 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
-
-
-
-
-typedef __gnuc_va_list va_list;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef long time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef unsigned char u_char;
-
-
-
-typedef unsigned short u_short;
-
-
-
-typedef unsigned int u_int;
-
-
-
-typedef unsigned long u_long;
-
-
-
-
-
-
-
-typedef unsigned short ushort;
-typedef unsigned int uint;
-typedef unsigned long ulong;
-
-
-
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
-typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef long daddr_t;
-
-
-
-typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
-typedef __dev_t dev_t;
-
-
-
-typedef __uid_t uid_t;
-
-
-
-typedef __gid_t gid_t;
-
-
-
-
-typedef __pid_t pid_t;
-
-
-
-
-typedef __key_t key_t;
-
-
-
-
-typedef _ssize_t ssize_t;
-
-
-
-
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
-
-
-
-
-
-typedef __timer_t timer_t;
-
-
-
-
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
-struct sched_param {
-  int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
-};
-
-int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-typedef struct {
-  int is_initialized;
-  void *stackaddr;
-  int stacksize;
-  int contentionscope;
-  int inheritsched;
-  int schedpolicy;
-  struct sched_param schedparam;
-
-
-
-
-
-  int detachstate;
-} pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-typedef __uint32_t pthread_mutex_t;
-
-typedef struct {
-  int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-  int type;
-
-  int recursive;
-} pthread_mutexattr_t;
-
-
-
-
-
-
-typedef __uint32_t pthread_cond_t;
-
-
-
-typedef struct {
-  int is_initialized;
-  clock_t clock;
-
-
-
-} pthread_condattr_t;
-
-
-
-typedef __uint32_t pthread_key_t;
-
-typedef struct {
-  int is_initialized;
-  int init_executed;
-} pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-
-
-
-
-typedef __FILE FILE;
-
-
-
-
-
-
-typedef _fpos_t fpos_t;
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stdio.h" 1 3 4
-# 80 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-char * ctermid (char *);
-
-
-
-
-FILE * tmpfile (void);
-char * tmpnam (char *);
-
-char * tempnam (const char *, const char *);
-
-int fclose (FILE *);
-int fflush (FILE *);
-FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
-void setbuf (FILE *restrict, char *restrict);
-int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fscanf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int printf (const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int scanf (const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int sscanf (const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int fgetc (FILE *);
-char * fgets (char *restrict, int, FILE *restrict);
-int fputc (int, FILE *);
-int fputs (const char *restrict, FILE *restrict);
-int getc (FILE *);
-int getchar (void);
-char * gets (char *);
-int putc (int, FILE *);
-int putchar (int);
-int puts (const char *);
-int ungetc (int, FILE *);
-size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-int fgetpos (FILE *restrict, fpos_t *restrict);
-
-int fseek (FILE *, long, int);
-
-
-
-int fsetpos (FILE *, const fpos_t *);
-
-long ftell ( FILE *);
-void rewind (FILE *);
-void clearerr (FILE *);
-int feof (FILE *);
-int ferror (FILE *);
-void perror (const char *);
-
-FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int remove (const char *);
-int rename (const char *, const char *);
-# 257 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int fseeko (FILE *, off_t, int);
-off_t ftello (FILE *);
-
-
-
-int fcloseall (void);
-
-
-
-int snprintf (char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-
-
-int asprintf (char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int vasprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
-int asiprintf (char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-char * asniprintf (char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-
-int diprintf (int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-int fiprintf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fiscanf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int iprintf (const char *, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int iscanf (const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int siprintf (char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int siscanf (const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int sniprintf (char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vasiprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vdiprintf (int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiprintf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiscanf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int viprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int viscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsiprintf (char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vsiscanf (const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-# 339 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE * fdopen (int, const char *);
-
-int fileno (FILE *);
-
-
-int pclose (FILE *);
-FILE * popen (const char *, const char *);
-
-
-
-void setbuffer (FILE *, char *, int);
-int setlinebuf (FILE *);
-
-
-
-int getw (FILE *);
-int putw (int, FILE *);
-
-
-int getc_unlocked (FILE *);
-int getchar_unlocked (void);
-void flockfile (FILE *);
-int ftrylockfile (FILE *);
-void funlockfile (FILE *);
-int putc_unlocked (int, FILE *);
-int putchar_unlocked (int);
-# 374 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int dprintf (int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-FILE * fmemopen (void *restrict, size_t, const char *restrict);
-
-
-FILE * open_memstream (char **, size_t *);
-int vdprintf (int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
-
-int renameat (int, const char *, int, const char *);
-# 396 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int _asiprintf_r (struct _reent *, char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _diprintf_r (struct _reent *, int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _dprintf_r (struct _reent *, int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fclose_r (struct _reent *, FILE *);
-int _fcloseall_r (struct _reent *);
-FILE * _fdopen_r (struct _reent *, int, const char *);
-int _fflush_r (struct _reent *, FILE *);
-int _fgetc_r (struct _reent *, FILE *);
-int _fgetc_unlocked_r (struct _reent *, FILE *);
-char * _fgets_r (struct _reent *, char *restrict, int, FILE *restrict);
-char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
-
-
-
-
-int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
-int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
-
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
-FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
-FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fpurge_r (struct _reent *, FILE *);
-int _fputc_r (struct _reent *, int, FILE *);
-int _fputc_unlocked_r (struct _reent *, int, FILE *);
-int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
-int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _fseek_r (struct _reent *, FILE *, long, int);
-int _fseeko_r (struct _reent *, FILE *, _off_t, int);
-long _ftell_r (struct _reent *, FILE *);
-_off_t _ftello_r (struct _reent *, FILE *);
-void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _getc_r (struct _reent *, FILE *);
-int _getc_unlocked_r (struct _reent *, FILE *);
-int _getchar_r (struct _reent *);
-int _getchar_unlocked_r (struct _reent *);
-char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _iscanf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-FILE * _open_memstream_r (struct _reent *, char **, size_t *);
-void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _putc_r (struct _reent *, int, FILE *);
-int _putc_unlocked_r (struct _reent *, int, FILE *);
-int _putchar_unlocked_r (struct _reent *, int);
-int _putchar_r (struct _reent *, int);
-int _puts_r (struct _reent *, const char *);
-int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *,
-      const char *_old, const char *_new);
-int _scanf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int _siprintf_r (struct _reent *, char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _siscanf_r (struct _reent *, const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-char * _tempnam_r (struct _reent *, const char *, const char *);
-FILE * _tmpfile_r (struct _reent *);
-char * _tmpnam_r (struct _reent *, char *);
-int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-
-
-
-int fpurge (FILE *);
-ssize_t __getdelim (char **, size_t *, int, FILE *);
-ssize_t __getline (char **, size_t *, FILE *);
-
-
-void clearerr_unlocked (FILE *);
-int feof_unlocked (FILE *);
-int ferror_unlocked (FILE *);
-int fileno_unlocked (FILE *);
-int fflush_unlocked (FILE *);
-int fgetc_unlocked (FILE *);
-int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 577 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int __srget_r (struct _reent *, FILE *);
-int __swbuf_r (struct _reent *, int, FILE *);
-# 601 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE *funopen (const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-FILE *_funopen_r (struct _reent *, const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-# 624 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
-typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
-     size_t __n);
-
-
-
-
-typedef int cookie_seek_function_t(void *__cookie, off_t *__off, int __whence);
-
-typedef int cookie_close_function_t(void *__cookie);
-typedef struct
-{
-
-
-  cookie_read_function_t *read;
-  cookie_write_function_t *write;
-  cookie_seek_function_t *seek;
-  cookie_close_function_t *close;
-} cookie_io_functions_t;
-FILE *fopencookie (void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-FILE *_fopencookie_r (struct _reent *, void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-# 687 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
-
-
-
-
- if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
-  return (*_p->_p++ = _c);
- else
-  return (__swbuf_r(_ptr, _c, _p));
-}
-# 741 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline int
-_getchar_unlocked(void)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
-}
-
-static __inline int
-_putchar_unlocked(int _c)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
-}
-# 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-
-# 20 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
-       
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
-
-
-
-
-
-
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
-typedef int32_t esp_err_t;
-# 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
-const char *esp_err_to_name(esp_err_t code);
-# 77 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
-const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
-
-
-void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const char *function, const char *expression) __attribute__((noreturn));
-
-
-void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 22 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h" 2
-
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h" 2
 
 typedef long os_time_t;
 
@@ -2165,7 +1738,7 @@ struct os_time {
 
 
 int os_get_time(struct os_time *t);
-# 76 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 int os_mktime(int year, int month, int day, int hour, int min, int sec,
        os_time_t *t);
 
@@ -2196,32 +1769,23 @@ int os_get_random(unsigned char *buf, size_t len);
 
 
 unsigned long os_random(void);
-# 120 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 char * os_rel2abs_path(const char *rel_path);
-# 130 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 int os_program_init(void);
-# 140 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 void os_program_deinit(void);
-# 152 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 152 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 int os_setenv(const char *name, const char *value, int overwrite);
-# 162 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 int os_unsetenv(const char *name);
-# 174 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 174 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 char * os_readfile(const char *name, size_t *len);
-# 217 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 char * ets_strdup(const char *s);
-# 281 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
-static inline int os_snprintf_error(size_t size, int res)
-{
-        return res < 0 || (unsigned int) res >= size;
-}
-# 296 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/os.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/os.h"
 size_t os_strlcpy(char *dest, const char *src, size_t siz);
-# 15 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
-       
-# 16 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
 
 
 
@@ -2234,12 +1798,22 @@ typedef int64_t s64;
 typedef int32_t s32;
 typedef int16_t s16;
 typedef int8_t s8;
-# 38 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h" 1
-# 35 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h" 2
-# 120 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/endian.h"
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
+
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/endian.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/endian.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/byteswap.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/endian.h" 2
+# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/endian.h"
 static __inline__ uint16_t
 be16dec(const void *pp)
 {
@@ -2345,168 +1919,39 @@ le64enc(void *pp, uint64_t u)
  le32enc(p, (uint32_t)(u & 0xffffffffU));
  le32enc(p + 4, (uint32_t)(u >> 32));
 }
-# 39 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/port/include/byteswap.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 2
-# 123 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
-static inline u16 WPA_GET_BE16(const u8 *a)
-{
- return (a[0] << 8) | a[1];
-}
-
-static inline void WPA_PUT_BE16(u8 *a, u16 val)
-{
- a[0] = val >> 8;
- a[1] = val & 0xff;
-}
-
-static inline u16 WPA_GET_LE16(const u8 *a)
-{
- return (a[1] << 8) | a[0];
-}
-
-static inline void WPA_PUT_LE16(u8 *a, u16 val)
-{
- a[1] = val >> 8;
- a[0] = val & 0xff;
-}
-
-static inline u32 WPA_GET_BE24(const u8 *a)
-{
- return (a[0] << 16) | (a[1] << 8) | a[2];
-}
-
-static inline void WPA_PUT_BE24(u8 *a, u32 val)
-{
- a[0] = (val >> 16) & 0xff;
- a[1] = (val >> 8) & 0xff;
- a[2] = val & 0xff;
-}
-
-static inline u32 WPA_GET_BE32(const u8 *a)
-{
- return ((u32) a[0] << 24) | (a[1] << 16) | (a[2] << 8) | a[3];
-}
-
-static inline void WPA_PUT_BE32(u8 *a, u32 val)
-{
- a[0] = (val >> 24) & 0xff;
- a[1] = (val >> 16) & 0xff;
- a[2] = (val >> 8) & 0xff;
- a[3] = val & 0xff;
-}
-
-static inline u32 WPA_GET_LE32(const u8 *a)
-{
- return ((u32) a[3] << 24) | (a[2] << 16) | (a[1] << 8) | a[0];
-}
-
-static inline void WPA_PUT_LE32(u8 *a, u32 val)
-{
- a[3] = (val >> 24) & 0xff;
- a[2] = (val >> 16) & 0xff;
- a[1] = (val >> 8) & 0xff;
- a[0] = val & 0xff;
-}
-
-static inline u64 WPA_GET_BE64(const u8 *a)
-{
- return (((u64) a[0]) << 56) | (((u64) a[1]) << 48) |
-  (((u64) a[2]) << 40) | (((u64) a[3]) << 32) |
-  (((u64) a[4]) << 24) | (((u64) a[5]) << 16) |
-  (((u64) a[6]) << 8) | ((u64) a[7]);
-}
-
-static inline void WPA_PUT_BE64(u8 *a, u64 val)
-{
- a[0] = val >> 56;
- a[1] = val >> 48;
- a[2] = val >> 40;
- a[3] = val >> 32;
- a[4] = val >> 24;
- a[5] = val >> 16;
- a[6] = val >> 8;
- a[7] = val & 0xff;
-}
-
-static inline u64 WPA_GET_LE64(const u8 *a)
-{
- return (((u64) a[7]) << 56) | (((u64) a[6]) << 48) |
-  (((u64) a[5]) << 40) | (((u64) a[4]) << 32) |
-  (((u64) a[3]) << 24) | (((u64) a[2]) << 16) |
-  (((u64) a[1]) << 8) | ((u64) a[0]);
-}
-
-static inline void WPA_PUT_LE64(u8 *a, u64 val)
-{
- a[7] = val >> 56;
- a[6] = val >> 48;
- a[5] = val >> 40;
- a[4] = val >> 32;
- a[3] = val >> 24;
- a[2] = val >> 16;
- a[1] = val >> 8;
- a[0] = val & 0xff;
-}
-# 345 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/port/include/byteswap.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h"
 typedef u16 be16;
 typedef u16 le16;
 typedef u32 be32;
 typedef u32 le32;
 typedef u64 be64;
 typedef u64 le64;
-# 368 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h"
 int hwaddr_aton(const char *txt, u8 *addr);
-int hwaddr_masked_aton(const char *txt, u8 *addr, u8 *mask, u8 maskable);
-int hwaddr_compact_aton(const char *txt, u8 *addr);
 int hwaddr_aton2(const char *txt, u8 *addr);
-int hex2byte(const char *hex);
 int hexstr2bin(const char *hex, u8 *buf, size_t len);
 void inc_byte_array(u8 *counter, size_t len);
 void wpa_get_ntp_timestamp(u8 *buf);
-int wpa_scnprintf(char *buf, size_t size, const char *fmt, ...);
-int wpa_snprintf_hex_sep(char *buf, size_t buf_size, const u8 *data, size_t len,
-    char sep);
 int wpa_snprintf_hex(char *buf, size_t buf_size, const u8 *data, size_t len);
 int wpa_snprintf_hex_uppercase(char *buf, size_t buf_size, const u8 *data,
           size_t len);
-
-int hwaddr_mask_txt(char *buf, size_t len, const u8 *addr, const u8 *mask);
-# 393 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
-void printf_encode(char *txt, size_t maxlen, const u8 *data, size_t len);
-size_t printf_decode(u8 *buf, size_t maxlen, const char *str);
-
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h"
 const char * wpa_ssid_txt(const u8 *ssid, size_t ssid_len);
-
 char * wpa_config_parse_string(const char *value, size_t *len);
-int wpa_is_hex(const u8 *data, size_t len);
-size_t wpa_merge_byte_arrays(u8 *res, size_t res_len,
-    const u8 *src1, size_t src1_len,
-    const u8 *src2, size_t src2_len);
-char * dup_binstr(const void *src, size_t len);
 
 static inline int is_zero_ether_addr(const u8 *a)
 {
  return !(a[0] | a[1] | a[2] | a[3] | a[4] | a[5]);
 }
 
-static inline int is_broadcast_ether_addr(const u8 *a)
-{
- return (a[0] & a[1] & a[2] & a[3] & a[4] & a[5]) == 0xff;
-}
-
-static inline int is_multicast_ether_addr(const u8 *a)
-{
- return a[0] & 0x01;
-}
+extern const struct eth_addr ethbroadcast;
 
 
-
-
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpabuf.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpabuf.h"
 struct wpabuf {
  size_t size;
  size_t used;
@@ -2601,31 +2046,31 @@ static inline void wpabuf_put_u8(struct wpabuf *buf, u8 data)
 static inline void wpabuf_put_le16(struct wpabuf *buf, u16 data)
 {
  u8 *pos = wpabuf_put(buf, 2);
- WPA_PUT_LE16(pos, data);
+ do { (pos)[1] = ((u16) (data)) >> 8; (pos)[0] = ((u16) (data)) & 0xff; } while (0);
 }
 
 static inline void wpabuf_put_le32(struct wpabuf *buf, u32 data)
 {
  u8 *pos = wpabuf_put(buf, 4);
- WPA_PUT_LE32(pos, data);
+ do { (pos)[3] = (u8) ((((u32) (data)) >> 24) & 0xff); (pos)[2] = (u8) ((((u32) (data)) >> 16) & 0xff); (pos)[1] = (u8) ((((u32) (data)) >> 8) & 0xff); (pos)[0] = (u8) (((u32) (data)) & 0xff); } while (0);
 }
 
 static inline void wpabuf_put_be16(struct wpabuf *buf, u16 data)
 {
  u8 *pos = wpabuf_put(buf, 2);
- WPA_PUT_BE16(pos, data);
+ do { (pos)[0] = ((u16) (data)) >> 8; (pos)[1] = ((u16) (data)) & 0xff; } while (0);
 }
 
 static inline void wpabuf_put_be24(struct wpabuf *buf, u32 data)
 {
  u8 *pos = wpabuf_put(buf, 3);
- WPA_PUT_BE24(pos, data);
+ do { (pos)[0] = (u8) ((((u32) (data)) >> 16) & 0xff); (pos)[1] = (u8) ((((u32) (data)) >> 8) & 0xff); (pos)[2] = (u8) (((u32) (data)) & 0xff); } while (0);
 }
 
 static inline void wpabuf_put_be32(struct wpabuf *buf, u32 data)
 {
  u8 *pos = wpabuf_put(buf, 4);
- WPA_PUT_BE32(pos, data);
+ do { (pos)[0] = (u8) ((((u32) (data)) >> 24) & 0xff); (pos)[1] = (u8) ((((u32) (data)) >> 16) & 0xff); (pos)[2] = (u8) ((((u32) (data)) >> 8) & 0xff); (pos)[3] = (u8) (((u32) (data)) & 0xff); } while (0);
 }
 
 static inline void wpabuf_put_data(struct wpabuf *buf, const void *data,
@@ -2651,12 +2096,22 @@ static inline void wpabuf_put_str(struct wpabuf *dst, const char *str)
 {
  wpabuf_put_data(dst, str, strlen(str));
 }
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 35 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
+typedef __gnuc_va_list va_list;
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
+
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 typedef enum {
     ESP_LOG_NONE,
     ESP_LOG_ERROR,
@@ -2667,35 +2122,32 @@ typedef enum {
 } esp_log_level_t;
 
 typedef int (*vprintf_like_t)(const char *, va_list);
-# 64 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_level_set(const char* tag, esp_log_level_t level);
-# 77 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 vprintf_like_t esp_log_set_vprintf(vprintf_like_t func);
-# 91 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_timestamp(void);
-# 106 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
-char* esp_log_system_timestamp(void);
-# 116 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 97 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 uint32_t esp_log_early_timestamp(void);
-# 126 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h"
 void esp_log_write(esp_log_level_t level, const char* tag, const char* format, ...) __attribute__ ((format (printf, 3, 4)));
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/log/include/esp_log_internal.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log_internal.h"
 void esp_log_buffer_hex_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_char_internal(const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t level);
 void esp_log_buffer_hexdump_internal( const char *tag, const void *buffer, uint16_t buff_len, esp_log_level_t log_level);
-# 131 "/home/dieter/Development/esp-idf/components/log/include/esp_log.h" 2
-# 20 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h" 2
-# 38 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/log/include/esp_log.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h" 2
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 int wpa_debug_open_file(const char *path);
 void wpa_debug_close_file(void);
-# 48 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_debug_print_timestamp(void);
-# 78 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
-void wpa_dump_mem(char* desc, uint8_t *addr, uint16_t len);
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 static inline void wpa_hexdump_ascii(int level, const char *title, const u8 *buf, size_t len)
 {
 
@@ -2713,7 +2165,7 @@ static inline void wpa_hexdump_buf(int level, const char *title,
 {
  wpa_hexdump(level, title, wpabuf_head(buf), wpabuf_len(buf));
 }
-# 110 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_hexdump_key(int level, const char *title, const u8 *buf, size_t len);
 
 
@@ -2722,15 +2174,15 @@ static inline void wpa_hexdump_buf_key(int level, const char *title,
 {
  wpa_hexdump_key(level, title, wpabuf_head(buf), wpabuf_len(buf));
 }
-# 132 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_hexdump_ascii(int level, const char *title, const u8 *buf,
          size_t len);
-# 149 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_hexdump_ascii_key(int level, const char *title, const u8 *buf,
       size_t len);
-# 178 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_msg(void *ctx, int level, const char *fmt, ...) __attribute__ ((format (printf, (3), (4))));
-# 192 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/utils/wpa_debug.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/wpa_debug.h"
 void wpa_msg_ctrl(void *ctx, int level, const char *fmt, ...)
 __attribute__ ((format (printf, (3), (4))));
 
@@ -2745,51 +2197,45 @@ int eloop_cancel_timeout(eloop_timeout_handler handler,
 int eloop_register_timeout(unsigned int secs, unsigned int usecs,
       eloop_timeout_handler handler,
       void *eloop_data, void *user_data);
-# 424 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h" 2
-
-
-struct wpa_freq_range_list {
- struct wpa_freq_range {
-  unsigned int min;
-  unsigned int max;
- } *range;
- unsigned int num;
-};
-
-
-
-void wpa_bin_clear_free(void *bin, size_t len);
-# 447 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/common.h"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h" 2
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/common.h"
 void * __hide_aliasing_typecast(void *foo);
-# 11 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/base64.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/base64.h"
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/base64.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/base64.h"
 unsigned char * base64_encode(const unsigned char *src, size_t len,
          size_t *out_len);
 unsigned char * base64_decode(const unsigned char *src, size_t len,
          size_t *out_len);
-# 12 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/uuid.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/utils/uuid.h"
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/utils/uuid.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/utils/uuid.h"
 int uuid_str2bin(const char *str, u8 *bin);
 int uuid_bin2str(const u8 *bin, char *str, size_t max_len);
 int is_nil_uuid(const u8 *uuid);
-# 13 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h" 1
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/common.h" 1
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h" 2
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int md4_vector(size_t num_elem, const u8 *addr[], const size_t *len, u8 *mac);
-# 50 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int md5_vector(size_t num_elem, const u8 *addr[], const size_t *len, u8 *mac);
-# 76 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int sha1_vector(size_t num_elem, const u8 *addr[], const size_t *len,
   u8 *mac);
-# 91 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 91 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) fips186_2_prf(const u8 *seed, size_t seed_len, u8 *x,
           size_t xlen);
-# 102 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int sha256_vector(size_t num_elem, const u8 *addr[], const size_t *len,
     u8 *mac);
+# 113 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+int fast_sha256_vector(size_t num_elem, const uint8_t *addr[], const size_t *len,
+         uint8_t *mac);
 
 
 
@@ -2851,13 +2297,21 @@ enum crypto_hash_alg {
 };
 
 struct crypto_hash;
-# 178 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_hash * crypto_hash_init(enum crypto_hash_alg alg, const u8 *key,
           size_t key_len);
-# 191 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+struct crypto_hash * fast_crypto_hash_init(enum crypto_hash_alg alg, const uint8_t *key,
+                    size_t key_len);
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 void crypto_hash_update(struct crypto_hash *ctx, const u8 *data, size_t len);
-# 210 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+void fast_crypto_hash_update(struct crypto_hash *ctx, const uint8_t *data, size_t len);
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_hash_finish(struct crypto_hash *ctx, u8 *hash, size_t *len);
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+int fast_crypto_hash_finish(struct crypto_hash *ctx, uint8_t *hash, size_t *len);
+
 
 enum crypto_cipher_alg {
  CRYPTO_CIPHER_NULL = 0, CRYPTO_CIPHER_ALG_AES, CRYPTO_CIPHER_ALG_3DES,
@@ -2865,65 +2319,82 @@ enum crypto_cipher_alg {
 };
 
 struct crypto_cipher;
-# 232 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_cipher * crypto_cipher_init(enum crypto_cipher_alg alg,
        const u8 *iv, const u8 *key,
        size_t key_len);
-# 248 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+struct crypto_cipher * fast_crypto_cipher_init(enum crypto_cipher_alg alg,
+                 const uint8_t *iv, const uint8_t *key,
+                 size_t key_len);
+# 322 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_cipher_encrypt(struct crypto_cipher *ctx,
            const u8 *plain, u8 *crypt, size_t len);
-# 263 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+int __attribute__((__warn_unused_result__)) fast_crypto_cipher_encrypt(struct crypto_cipher *ctx,
+                const uint8_t *plain, uint8_t *crypt, size_t len);
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_cipher_decrypt(struct crypto_cipher *ctx,
            const u8 *crypt, u8 *plain, size_t len);
-# 274 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 367 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+int __attribute__((__warn_unused_result__)) fast_crypto_cipher_decrypt(struct crypto_cipher *ctx,
+                const uint8_t *crypt, uint8_t *plain, size_t len);
+# 378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 void crypto_cipher_deinit(struct crypto_cipher *ctx);
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+void fast_crypto_cipher_deinit(struct crypto_cipher *ctx);
 
 struct crypto_public_key;
 struct crypto_private_key;
-# 293 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 407 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_public_key * crypto_public_key_import(const u8 *key, size_t len);
-# 306 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_private_key * crypto_private_key_import(const u8 *key,
             size_t len,
             const char *passwd);
-# 324 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 438 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_public_key * crypto_public_key_from_cert(const u8 *buf,
              size_t len);
-# 340 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_public_key_encrypt_pkcs1_v15(
  struct crypto_public_key *key, const u8 *in, size_t inlen,
  u8 *out, size_t *outlen);
-# 357 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 471 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_private_key_decrypt_pkcs1_v15(
  struct crypto_private_key *key, const u8 *in, size_t inlen,
  u8 *out, size_t *outlen);
-# 374 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_private_key_sign_pkcs1(struct crypto_private_key *key,
             const u8 *in, size_t inlen,
             u8 *out, size_t *outlen);
-# 386 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 500 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 void crypto_public_key_free(struct crypto_public_key *key);
-# 396 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 void crypto_private_key_free(struct crypto_private_key *key);
-# 407 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_public_key_decrypt_pkcs1(
  struct crypto_public_key *key, const u8 *crypt, size_t crypt_len,
  u8 *plain, size_t *plain_len);
-# 418 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 532 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_global_init(void);
-# 427 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 541 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 void crypto_global_deinit(void);
-# 449 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 563 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int __attribute__((__warn_unused_result__)) crypto_mod_exp(const u8 *base, size_t base_len,
     const u8 *power, size_t power_len,
     const u8 *modulus, size_t modulus_len,
     u8 *result, size_t *result_len);
-# 467 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 588 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
+int __attribute__((__warn_unused_result__)) fast_crypto_mod_exp(const uint8_t *base, size_t base_len,
+         const uint8_t *power, size_t power_len,
+         const uint8_t *modulus, size_t modulus_len,
+         uint8_t *result, size_t *result_len);
+# 606 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int rc4_skip(const u8 *key, size_t keylen, size_t skip,
       u8 *data, size_t data_len);
-# 480 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 619 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_get_random(void *buf, size_t len);
-# 489 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_bignum;
 
 
@@ -2946,35 +2417,35 @@ struct crypto_bignum * crypto_bignum_init_set(const u8 *buf, size_t len);
 
 
 void crypto_bignum_deinit(struct crypto_bignum *n, int clear);
-# 520 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 659 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_to_bin(const struct crypto_bignum *a,
         u8 *buf, size_t buflen, size_t padlen);
-# 530 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 669 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_add(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         struct crypto_bignum *c);
-# 541 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 680 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_mod(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         struct crypto_bignum *c);
-# 553 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 692 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_exptmod(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         const struct crypto_bignum *c,
         struct crypto_bignum *d);
-# 565 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 704 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_inverse(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         struct crypto_bignum *c);
-# 576 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 715 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_sub(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         struct crypto_bignum *c);
-# 587 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 726 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_div(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         struct crypto_bignum *c);
-# 599 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 738 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_bignum_mulmod(const struct crypto_bignum *a,
         const struct crypto_bignum *b,
         const struct crypto_bignum *c,
@@ -3018,7 +2489,7 @@ int crypto_bignum_is_one(const struct crypto_bignum *a);
 
 int crypto_bignum_legendre(const struct crypto_bignum *a,
         const struct crypto_bignum *p);
-# 650 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_ec;
 
 
@@ -3084,17 +2555,17 @@ struct crypto_ec_point * crypto_ec_point_init(struct crypto_ec *e);
 
 
 void crypto_ec_point_deinit(struct crypto_ec_point *p, int clear);
-# 728 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_to_bin(struct crypto_ec *e,
         const struct crypto_ec_point *point, u8 *x, u8 *y);
-# 741 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 880 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 struct crypto_ec_point * crypto_ec_point_from_bin(struct crypto_ec *e,
         const u8 *val);
-# 752 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_add(struct crypto_ec *e, const struct crypto_ec_point *a,
         const struct crypto_ec_point *b,
         struct crypto_ec_point *c);
-# 764 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 903 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_mul(struct crypto_ec *e, const struct crypto_ec_point *p,
         const struct crypto_bignum *b,
         struct crypto_ec_point *res);
@@ -3106,7 +2577,7 @@ int crypto_ec_point_mul(struct crypto_ec *e, const struct crypto_ec_point *p,
 
 
 int crypto_ec_point_invert(struct crypto_ec *e, struct crypto_ec_point *p);
-# 784 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_solve_y_coord(struct crypto_ec *e,
         struct crypto_ec_point *p,
         const struct crypto_bignum *x, int y_bit);
@@ -3120,7 +2591,7 @@ int crypto_ec_point_solve_y_coord(struct crypto_ec *e,
 struct crypto_bignum *
 crypto_ec_point_compute_y_sqr(struct crypto_ec *e,
         const struct crypto_bignum *x);
-# 805 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 944 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_is_at_infinity(struct crypto_ec *e,
         const struct crypto_ec_point *p);
 
@@ -3132,24 +2603,31 @@ int crypto_ec_point_is_at_infinity(struct crypto_ec *e,
 
 int crypto_ec_point_is_on_curve(struct crypto_ec *e,
         const struct crypto_ec_point *p);
-# 824 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/crypto.h"
+# 963 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/crypto.h"
 int crypto_ec_point_cmp(const struct crypto_ec *e,
         const struct crypto_ec_point *a,
         const struct crypto_ec_point *b);
-# 15 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/sha256.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/sha256.h"
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/sha256.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/sha256.h"
 void hmac_sha256_vector(const u8 *key, size_t key_len, size_t num_elem,
         const u8 *addr[], const size_t *len, u8 *mac);
 void hmac_sha256(const u8 *key, size_t key_len, const u8 *data,
    size_t data_len, u8 *mac);
 void sha256_prf(const u8 *key, size_t key_len, const char *label,
        const u8 *data, size_t data_len, u8 *buf, size_t buf_len);
-# 16 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/crypto/random.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/common/ieee802_11_defs.h" 1
-# 240 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/common/ieee802_11_defs.h"
+
+void fast_hmac_sha256_vector(const uint8_t *key, size_t key_len, size_t num_elem,
+               const uint8_t *addr[], const size_t *len, uint8_t *mac);
+void fast_hmac_sha256(const uint8_t *key, size_t key_len, const uint8_t *data,
+        size_t data_len, uint8_t *mac);
+void fast_sha256_prf(const uint8_t *key, size_t key_len, const char *label,
+              const uint8_t *data, size_t data_len, uint8_t *buf, size_t buf_len);
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/crypto/random.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/ieee802_11_defs.h" 1
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/ieee802_11_defs.h"
 struct ieee80211_hdr {
  le16 frame_control;
  le16 duration_id;
@@ -3160,7 +2638,7 @@ struct ieee80211_hdr {
 
 
 } __attribute__ ((packed));
-# 259 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/common/ieee802_11_defs.h"
+# 259 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/ieee802_11_defs.h"
 struct ieee80211_mgmt {
  le16 frame_control;
  le16 duration;
@@ -3283,7 +2761,7 @@ struct ieee80211_ht_operation {
  le16 stbc_param;
  u8 basic_set[16];
 } __attribute__ ((packed));
-# 508 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/common/ieee802_11_defs.h"
+# 508 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/ieee802_11_defs.h"
 struct wmm_information_element {
 
 
@@ -3294,7 +2772,7 @@ struct wmm_information_element {
  u8 qos_info;
 
 } __attribute__ ((packed));
-# 530 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/common/ieee802_11_defs.h"
+# 530 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wpa/ieee802_11_defs.h"
 struct wmm_ac_parameter {
  u8 aci_aifsn;
  u8 cw;
@@ -3353,13 +2831,13 @@ enum {
  WMM_AC_VI = 2 ,
  WMM_AC_VO = 3
 };
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 1
-# 17 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h" 1
-# 51 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h"
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_defs.h" 1
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_defs.h"
 enum wps_attribute {
  ATTR_AP_CHANNEL = 0x1001,
  ATTR_ASSOC_STATE = 0x1002,
@@ -3496,7 +2974,7 @@ enum wps_msg_type {
  WPS_WSC_NACK = 0x0e,
  WPS_WSC_DONE = 0x0f
 };
-# 207 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h"
+# 207 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_defs.h"
 enum wps_config_error {
  WPS_CFG_NO_ERROR = 0,
  WPS_CFG_OOB_IFACE_READ_ERROR = 1,
@@ -3526,7 +3004,7 @@ enum wps_error_indication {
  WPS_EI_SECURITY_WEP_PROHIBITED,
  NUM_WPS_EI_VALUES
 };
-# 263 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_defs.h"
+# 263 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_defs.h"
 enum wps_state {
  WPS_STATE_NOT_CONFIGURED = 1,
  WPS_STATE_CONFIGURED = 2
@@ -3596,33 +3074,21 @@ enum wps_response_type {
  WPS_RESP_REGISTRAR = 2,
  WPS_RESP_AP = 3
 };
-# 18 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/queue.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h" 2
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/queue.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_interface.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_interface.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_interface.h"
 typedef enum {
     ESP_IF_WIFI_STA = 0,
     ESP_IF_WIFI_AP,
     ESP_IF_ETH,
     ESP_IF_MAX
 } esp_interface_t;
-# 23 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_event/include/esp_event_base.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_event/include/esp_event_base.h"
-typedef const char* esp_event_base_t;
-typedef void* esp_event_loop_handle_t;
-typedef void (*esp_event_handler_t)(void* event_handler_arg,
-                                        esp_event_base_t event_base,
-                                        int32_t event_id,
-                                        void* event_data);
-# 24 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_private/esp_wifi_types_private.h" 2
-# 20 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 2
 
 
 
@@ -3695,7 +3161,6 @@ typedef enum {
     WIFI_REASON_AUTH_FAIL = 202,
     WIFI_REASON_ASSOC_FAIL = 203,
     WIFI_REASON_HANDSHAKE_TIMEOUT = 204,
-    WIFI_REASON_CONNECTION_FAIL = 205,
 } wifi_err_reason_t;
 
 typedef enum {
@@ -3729,9 +3194,9 @@ typedef struct {
     uint8_t *bssid;
     uint8_t channel;
     
-# 125 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 125 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         show_hidden;
     wifi_scan_type_t scan_type;
     wifi_scan_time_t scan_time;
@@ -3791,19 +3256,16 @@ typedef enum {
 typedef struct {
     int8_t rssi;
     wifi_auth_mode_t authmode;
-}wifi_scan_threshold_t;
+}wifi_fast_scan_threshold_t;
+
+typedef wifi_fast_scan_threshold_t wifi_scan_threshold_t;
 
 typedef enum {
     WIFI_PS_NONE,
     WIFI_PS_MIN_MODEM,
     WIFI_PS_MAX_MODEM,
 } wifi_ps_type_t;
-
-
-
-
-
-
+# 204 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef enum {
     WIFI_BW_HT20 = 1,
     WIFI_BW_HT40,
@@ -3827,9 +3289,9 @@ typedef struct {
     uint8_t password[64];
     wifi_scan_method_t scan_method;
     
-# 219 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 219 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         bssid_set;
     uint8_t bssid[6];
     uint8_t channel;
@@ -3895,7 +3357,7 @@ typedef enum {
     WIFI_VND_IE_ID_0,
     WIFI_VND_IE_ID_1,
 } wifi_vendor_ie_id_t;
-# 292 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint8_t element_id;
     uint8_t length;
@@ -3921,11 +3383,7 @@ typedef struct {
     unsigned stbc:2;
     unsigned fec_coding:1;
     unsigned sgi:1;
-
     signed noise_floor:8;
-
-
-
     unsigned ampdu_cnt:8;
     unsigned channel:4;
     unsigned secondary_channel:4;
@@ -3934,10 +3392,6 @@ typedef struct {
     unsigned :32;
     unsigned :31;
     unsigned ant:1;
-
-
-
-
     unsigned sig_len:12;
     unsigned :12;
     unsigned rx_state:8;
@@ -3962,41 +3416,41 @@ typedef enum {
     WIFI_PKT_DATA,
     WIFI_PKT_MISC,
 } wifi_promiscuous_pkt_type_t;
-# 380 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     uint32_t filter_mask;
 } wifi_promiscuous_filter_t;
-# 392 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
 typedef struct {
     
-# 393 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 393 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 392 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         lltf_en;
     
-# 394 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 394 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         htltf_en;
     
-# 395 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 395 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 394 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         stbc_htltf2_en;
     
-# 396 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 396 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         ltf_merge_en;
     
-# 397 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 397 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 396 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         channel_filter_en;
     
-# 398 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 398 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 397 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         manu_scale;
     uint8_t shift;
 } wifi_csi_config_t;
@@ -4009,9 +3463,9 @@ typedef struct {
     wifi_pkt_rx_ctrl_t rx_ctrl;
     uint8_t mac[6];
     
-# 409 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h" 3 4
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h" 3 4
    _Bool 
-# 409 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_types.h"
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_types.h"
         first_word_invalid;
     int8_t *buf;
     uint16_t len;
@@ -4097,98 +3551,7 @@ typedef enum {
     WIFI_PHY_RATE_LORA_500K = 0x2A,
     WIFI_PHY_RATE_MAX,
 } wifi_phy_rate_t;
-
-
-
-typedef enum {
-    WIFI_EVENT_WIFI_READY = 0,
-    WIFI_EVENT_SCAN_DONE,
-    WIFI_EVENT_STA_START,
-    WIFI_EVENT_STA_STOP,
-    WIFI_EVENT_STA_CONNECTED,
-    WIFI_EVENT_STA_DISCONNECTED,
-    WIFI_EVENT_STA_AUTHMODE_CHANGE,
-
-    WIFI_EVENT_STA_WPS_ER_SUCCESS,
-    WIFI_EVENT_STA_WPS_ER_FAILED,
-    WIFI_EVENT_STA_WPS_ER_TIMEOUT,
-    WIFI_EVENT_STA_WPS_ER_PIN,
-    WIFI_EVENT_STA_WPS_ER_PBC_OVERLAP,
-
-    WIFI_EVENT_AP_START,
-    WIFI_EVENT_AP_STOP,
-    WIFI_EVENT_AP_STACONNECTED,
-    WIFI_EVENT_AP_STADISCONNECTED,
-    WIFI_EVENT_AP_PROBEREQRECVED,
-
-    WIFI_EVENT_MAX,
-} wifi_event_t;
-
-
-
-extern esp_event_base_t WIFI_EVENT;
-
-
-
-typedef struct {
-    uint32_t status;
-    uint8_t number;
-    uint8_t scan_id;
-} wifi_event_sta_scan_done_t;
-
-
-typedef struct {
-    uint8_t ssid[32];
-    uint8_t ssid_len;
-    uint8_t bssid[6];
-    uint8_t channel;
-    wifi_auth_mode_t authmode;
-} wifi_event_sta_connected_t;
-
-
-typedef struct {
-    uint8_t ssid[32];
-    uint8_t ssid_len;
-    uint8_t bssid[6];
-    uint8_t reason;
-} wifi_event_sta_disconnected_t;
-
-
-typedef struct {
-    wifi_auth_mode_t old_mode;
-    wifi_auth_mode_t new_mode;
-} wifi_event_sta_authmode_change_t;
-
-
-typedef struct {
-    uint8_t pin_code[8];
-} wifi_event_sta_wps_er_pin_t;
-
-
-typedef enum {
-    WPS_FAIL_REASON_NORMAL = 0,
-    WPS_FAIL_REASON_RECV_M2D,
-    WPS_FAIL_REASON_MAX
-} wifi_event_sta_wps_fail_reason_t;
-
-
-typedef struct {
-    uint8_t mac[6];
-    uint8_t aid;
-} wifi_event_ap_staconnected_t;
-
-
-typedef struct {
-    uint8_t mac[6];
-    uint8_t aid;
-} wifi_event_ap_stadisconnected_t;
-
-
-typedef struct {
-    int rssi;
-    uint8_t mac[6];
-} wifi_event_ap_probe_req_rx_t;
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 2
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 2
 
 
 
@@ -4204,9 +3567,10 @@ enum wsc_op_code {
 };
 
 struct wps_registrar;
+
 struct wps_er;
 struct wps_parse_attr;
-# 52 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 struct wps_credential {
  u8 ssid[32];
  size_t ssid_len;
@@ -4220,7 +3584,7 @@ struct wps_credential {
  size_t cred_attr_len;
  u16 ap_channel;
 };
-# 91 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 struct wps_device_data {
  u8 mac_addr[6];
  char *device_name;
@@ -4274,21 +3638,21 @@ struct wps_config {
 
 
  const struct wpabuf *assoc_wps_ie;
-# 153 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 150 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  const struct wps_credential *new_ap_settings;
 
 
 
 
  const u8 *peer_addr;
-# 167 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  int use_psk_key;
 
 
 
 
  u16 dev_pw_id;
-# 182 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  const u8 *p2p_dev_addr;
 
 
@@ -4305,7 +3669,9 @@ struct discard_ap_list_t{
  u8 bssid[6];
 };
 
+
 struct wps_data * wps_init(void);
+
 
 void wps_deinit(void);
 
@@ -4365,23 +3731,23 @@ struct wpabuf * wps_build_probe_req_ie(u16 pw_id, struct wps_device_data *dev,
 
 
 struct wps_registrar_config {
-# 268 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  int (*new_psk_cb)(void *ctx, const u8 *mac_addr, const u8 *psk,
      size_t psk_len);
-# 282 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  int (*set_ie_cb)(void *ctx, struct wpabuf *beacon_ie,
     struct wpabuf *probe_resp_ie);
-# 295 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  void (*pin_needed_cb)(void *ctx, const u8 *uuid_e,
          const struct wps_device_data *dev);
-# 309 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  void (*reg_success_cb)(void *ctx, const u8 *mac_addr,
           const u8 *uuid_e, const u8 *dev_pw,
           size_t dev_pw_len);
-# 328 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  void (*set_sel_reg_cb)(void *ctx, int sel_reg, u16 dev_passwd_id,
           u16 sel_reg_config_methods);
-# 342 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  void (*enrollee_seen_cb)(void *ctx, const u8 *addr, const u8 *uuid_e,
      const u8 *pri_dev_type, u16 config_methods,
      u16 dev_password_id, u8 request_type,
@@ -4391,16 +3757,16 @@ struct wps_registrar_config {
 
 
  void *cb_ctx;
-# 360 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  int skip_cred_build;
-# 370 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  const u8 *extra_cred;
 
 
 
 
  size_t extra_cred_len;
-# 387 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 386 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  int disable_auto_conf;
 
 
@@ -4571,7 +3937,7 @@ union wps_event_data {
   } state;
  } set_sel_reg;
 };
-# 579 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 struct wps_context {
 
 
@@ -4597,7 +3963,7 @@ struct wps_context {
 
 
  u8 uuid[16];
-# 612 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  u8 ssid[32];
 
 
@@ -4641,7 +4007,7 @@ struct wps_context {
 
 
  u16 auth_types;
-# 671 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
  u8 *network_key;
 
 
@@ -4721,7 +4087,7 @@ struct wps_context {
 
 
  void *cb_ctx;
-# 759 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 761 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 };
 
 struct wps_registrar *
@@ -4750,14 +4116,14 @@ int wps_registrar_get_info(struct wps_registrar *reg, const u8 *addr,
       char *buf, size_t buflen);
 int wps_registrar_config_ap(struct wps_registrar *reg,
        struct wps_credential *cred);
-# 796 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 798 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 int wps_build_credential_wrap(struct wpabuf *msg,
          const struct wps_credential *cred);
+
 
 unsigned int wps_pin_checksum(unsigned int pin);
 unsigned int wps_pin_valid(unsigned int pin);
 int wps_pin_str_valid(const char *pin);
-
 
 unsigned int wps_generate_pin(void);
 
@@ -4792,7 +4158,7 @@ char * wps_dev_type_bin2str(const u8 dev_type[8], char *buf,
        size_t buf_len);
 void uuid_gen_mac_addr(const u8 *mac_addr, u8 *uuid);
 u16 wps_config_methods_str2bin(const char *str);
-# 849 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 struct wpabuf * ndef_parse_wifi(const struct wpabuf *buf);
 struct wpabuf * ndef_build_wifi(const struct wpabuf *buf);
 struct wpabuf * ndef_build_wifi_hr(void);
@@ -4822,7 +4188,7 @@ int wps_validate_wsc_ack(const struct wpabuf *tlvs);
 int wps_validate_wsc_nack(const struct wpabuf *tlvs);
 int wps_validate_wsc_done(const struct wpabuf *tlvs);
 int wps_validate_upnp_set_selected_registrar(const struct wpabuf *tlvs);
-# 999 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 1001 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 enum wps_cb_status {
  WPS_CB_ST_SUCCESS = 0,
  WPS_CB_ST_FAILED,
@@ -4832,24 +4198,7 @@ enum wps_cb_status {
 };
 
 typedef void (*wps_st_cb_t)(int status);
-
-
-enum wps_sig_type {
-    SIG_WPS_ENABLE = 1,
-    SIG_WPS_DISABLE,
-    SIG_WPS_START,
-    SIG_WPS_RX,
-    SIG_WPS_TIMER_TIMEOUT,
-    SIG_WPS_TIMER_MSG_TIMEOUT,
-    SIG_WPS_TIMER_SUCCESS_CB,
-    SIG_WPS_TIMER_SCAN,
-    SIG_WPS_TIMER_EAPOL_START,
-    SIG_WPS_NUM,
-};
-
-
-
-
+# 1019 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
 struct wps_sm {
     struct wps_config *wps_cfg;
     struct wps_context *wps_ctx;
@@ -4873,20 +4222,20 @@ struct wps_sm {
     wps_st_cb_t st_cb;
     u8 current_identifier;
     
-# 1048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 3 4
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 3 4
    _Bool 
-# 1048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 1041 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
         is_wps_scan;
     u8 channel;
     u8 scan_cnt;
 
-    u8 wps_sig_cnt[SIG_WPS_NUM];
+    u8 wps_sig_cnt[2];
 
     u8 discover_ssid_cnt;
     
-# 1055 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 3 4
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 3 4
    _Bool 
-# 1055 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h"
+# 1048 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h"
         ignore_sel_reg;
     struct discard_ap_list_t dis_ap_list[10];
     u8 discard_ap_cnt;
@@ -4904,11 +4253,11 @@ int wps_start_pending(void);
 int wps_sm_rx_eapol(u8 *src_addr, u8 *buf, u32 len);
 
 int wps_dev_deinit(struct wps_device_data *dev);
-# 13 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h"
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps.h" 1
-# 13 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_attr_parse.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_attr_parse.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_attr_parse.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_attr_parse.h" 2
 
 struct wps_parse_attr {
 
@@ -5003,11 +4352,9 @@ struct wps_parse_attr {
 };
 
 int wps_parse_msg(const struct wpabuf *msg, struct wps_parse_attr *attr);
-# 14 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef enum {
     ESP_CRYPTO_HASH_ALG_MD5, ESP_CRYPTO_HASH_ALG_SHA1,
     ESP_CRYPTO_HASH_ALG_HMAC_MD5, ESP_CRYPTO_HASH_ALG_HMAC_SHA1,
@@ -5035,50 +4382,83 @@ typedef struct crypto_hash esp_crypto_hash_t;
 
 
 typedef struct crypto_cipher esp_crypto_cipher_t;
-# 73 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef esp_crypto_hash_t * (*esp_crypto_hash_init_t)(esp_crypto_hash_alg_t alg, const unsigned char *key, int key_len);
+# 85 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_crypto_hash_update_t)(esp_crypto_hash_t *ctx, const unsigned char *data, int len);
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_hash_finish_t)(esp_crypto_hash_t *ctx, unsigned char *hash, int *len);
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_aes_128_encrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
-# 84 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_aes_128_decrypt_t)(const unsigned char *key, const unsigned char *iv, unsigned char *data, int data_len);
-# 95 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_aes_wrap_t)(const unsigned char *kek, int n, const unsigned char *plain, unsigned char *cipher);
-# 106 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_aes_unwrap_t)(const unsigned char *kek, int n, const unsigned char *cipher, unsigned char *plain);
-# 119 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef esp_crypto_cipher_t * (*esp_crypto_cipher_init_t)(esp_crypto_cipher_alg_t alg, const unsigned char *iv, const unsigned char *key, int key_len);
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_cipher_encrypt_t)(esp_crypto_cipher_t *ctx,
+                 const unsigned char *plain, unsigned char *crypt, int len);
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_cipher_decrypt_t)(esp_crypto_cipher_t *ctx,
+                 const unsigned char *crypt, unsigned char *plain, int len);
+
+
+
+
+
+
+
+typedef void (*esp_crypto_cipher_deinit_t)(esp_crypto_cipher_t *ctx);
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_hmac_sha256_t)(const unsigned char *key, int key_len, const unsigned char *data,
+                      int data_len, unsigned char *mac);
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void (*esp_hmac_sha256_vector_t)(const unsigned char *key, int key_len, int num_elem,
                       const unsigned char *addr[], const int *len, unsigned char *mac);
-# 134 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void (*esp_sha256_prf_t)(const unsigned char *key, int key_len, const char *label,
                             const unsigned char *data, int data_len, unsigned char *buf, int buf_len);
-# 147 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 241 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_sha256_vector_t)(int num_elem, const unsigned char *addr[], const int *len,
+                       unsigned char *mac);
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_crypto_mod_exp_t)(const unsigned char *base, int base_len,
+                        const unsigned char *power, int power_len,
+                        const unsigned char *modulus, int modulus_len,
+                        unsigned char *result, unsigned int *result_len);
+# 273 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_hmac_md5_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
                               unsigned int data_len, unsigned char *mac);
-# 161 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_hmac_md5_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
                               const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
-# 174 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_hmac_sha1_t)(const unsigned char *key, unsigned int key_len, const unsigned char *data,
                               unsigned int data_len, unsigned char *mac);
-# 188 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_hmac_sha1_vector_t)(const unsigned char *key, unsigned int key_len, unsigned int num_elem,
                               const unsigned char *addr[], const unsigned int *len, unsigned char *mac);
-# 206 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 332 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_sha1_prf_t)(const unsigned char *key, unsigned int key_len, const char *label,
                               const unsigned char *data, unsigned int data_len, unsigned char *buf, unsigned int buf_len);
-# 218 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_sha1_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
                               unsigned char *mac);
-# 236 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 362 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_pbkdf2_sha1_t)(const char *passphrase, const char *ssid, unsigned int ssid_len,
                               int iterations, unsigned char *buf, unsigned int buflen);
-# 253 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 379 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_rc4_skip_t)(const unsigned char *key, unsigned int keylen, unsigned int skip,
                               unsigned char *data, unsigned int data_len);
-# 265 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 391 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef int (*esp_md5_vector_t)(unsigned int num_elem, const unsigned char *addr[], const unsigned int *len,
                               unsigned char *mac);
-# 275 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 401 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void (*esp_aes_encrypt_t)(void *ctx, const unsigned char *plain, unsigned char *crypt);
-# 284 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void * (*esp_aes_encrypt_init_t)(const unsigned char *key, unsigned int len);
 
 
@@ -5087,9 +4467,9 @@ typedef void * (*esp_aes_encrypt_init_t)(const unsigned char *key, unsigned int 
 
 
 typedef void (*esp_aes_encrypt_deinit_t)(void *ctx);
-# 300 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void (*esp_aes_decrypt_t)(void *ctx, const unsigned char *crypt, unsigned char *plain);
-# 309 "/home/dieter/Development/esp-idf/components/esp_wifi/include/esp_wifi_crypto_types.h"
+# 435 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef void * (*esp_aes_decrypt_init_t)(const unsigned char *key, unsigned int len);
 
 
@@ -5098,12 +4478,132 @@ typedef void * (*esp_aes_decrypt_init_t)(const unsigned char *key, unsigned int 
 
 
 typedef void (*esp_aes_decrypt_deinit_t)(void *ctx);
+# 457 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_tls_init_t)(void);
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_tls_deinit_t)(void *tls_ctx);
+# 479 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_eap_peer_blob_init_t)(void *sm);
 
 
 
 
 
 
+
+typedef void (*esp_eap_peer_blob_deinit_t)(void *sm);
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef int (*esp_eap_peer_config_init_t)(void *sm, unsigned char *private_key_passwd,int private_key_passwd_len);
+
+
+
+
+
+
+
+typedef void (*esp_eap_peer_config_deinit_t)(void *sm);
+
+
+
+
+
+
+
+typedef int (*esp_eap_peer_register_methods_t)(void);
+
+
+
+
+
+
+
+typedef void (*esp_eap_peer_unregister_methods_t)(void);
+
+
+
+
+
+
+
+typedef void (*esp_eap_deinit_prev_method_t)(void *sm, const char *txt);
+# 540 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef const void * (*esp_eap_peer_get_eap_method_t)(int vendor, int method);
+# 550 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void (*esp_eap_sm_abort_t)(void *sm);
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_sm_build_nak_t)(void *sm, int type, unsigned char id);
+# 576 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_sm_build_identity_resp_t)(void *sm, unsigned char id, int encrypted);
+# 595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_eap_msg_alloc_t)(int vendor, int type, unsigned int payload_len,
+                             unsigned char code, unsigned char identifier);
+
+
+
+
+
+
+
+typedef void (*esp_uuid_gen_mac_addr_t)(const unsigned char *mac_addr, unsigned char *uuid);
+
+
+
+
+
+typedef void (*esp_dh5_free_t)(void *ctx);
+# 620 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_assoc_req_ie_t)(int req_type);
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_assoc_resp_ie_t)(void);
+# 646 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
+typedef void * (*esp_wps_build_probe_req_ie_t)(uint16_t pw_id, void *dev, const unsigned char *uuid,
+                             int req_type, unsigned int num_req_dev_types, const unsigned char *req_dev_types);
+
+
+
+
+
+
+typedef int (*esp_wps_build_public_key_t)(void *wps, void *msg, int mode);
+
+
+
+
+
+
+
+typedef void * (*esp_wps_enrollee_get_msg_t)(void *wps, void *op_code);
+
+
+
+
+
+
+typedef int (*esp_wps_enrollee_process_msg_t)(void *wps, int op_code, const void *msg);
+
+
+
+
+
+
+typedef unsigned int (*esp_wps_generate_pin_t)(void);
+
+
+
+
+
+
+
+typedef int (*esp_wps_is_selected_pin_registrar_t)(const void *msg, unsigned char *bssid);
+
+
+
+
+
+
+
+typedef int (*esp_wps_is_selected_pbc_registrar_t)(const void *msg, unsigned char *bssid);
+# 701 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_wifi_crypto_types.h"
 typedef struct {
     uint32_t size;
     uint32_t version;
@@ -5134,42 +4634,72 @@ typedef struct {
 
 
 typedef struct{
+    uint32_t size;
+    uint32_t version;
+    esp_aes_128_encrypt_t aes_128_encrypt;
+    esp_aes_128_decrypt_t aes_128_decrypt;
+    esp_crypto_mod_exp_t crypto_mod_exp;
+    esp_hmac_sha256_t hmac_sha256;
+    esp_hmac_sha256_vector_t hmac_sha256_vector;
+    esp_sha256_vector_t sha256_vector;
+    esp_uuid_gen_mac_addr_t uuid_gen_mac_addr;
+    esp_dh5_free_t dh5_free;
+    esp_wps_build_assoc_req_ie_t wps_build_assoc_req_ie;
+    esp_wps_build_assoc_resp_ie_t wps_build_assoc_resp_ie;
+    esp_wps_build_probe_req_ie_t wps_build_probe_req_ie;
+    esp_wps_build_public_key_t wps_build_public_key;
+    esp_wps_enrollee_get_msg_t wps_enrollee_get_msg;
+    esp_wps_enrollee_process_msg_t wps_enrollee_process_msg;
+    esp_wps_generate_pin_t wps_generate_pin;
+    esp_wps_is_selected_pin_registrar_t wps_is_selected_pin_registrar;
+    esp_wps_is_selected_pbc_registrar_t wps_is_selected_pbc_registrar;
+    esp_eap_msg_alloc_t eap_msg_alloc;
+}wps_crypto_funcs_t;
+
+
+
+
+
+
+typedef struct {
+    uint32_t size;
+    uint32_t version;
+    esp_crypto_hash_init_t crypto_hash_init;
+    esp_crypto_hash_update_t crypto_hash_update;
+    esp_crypto_hash_finish_t crypto_hash_finish;
+    esp_crypto_cipher_init_t crypto_cipher_init;
+    esp_crypto_cipher_encrypt_t crypto_cipher_encrypt;
+    esp_crypto_cipher_decrypt_t crypto_cipher_decrypt;
+    esp_crypto_cipher_deinit_t crypto_cipher_deinit;
+    esp_crypto_mod_exp_t crypto_mod_exp;
+    esp_sha256_vector_t sha256_vector;
+    esp_tls_init_t tls_init;
+    esp_tls_deinit_t tls_deinit;
+    esp_eap_peer_blob_init_t eap_peer_blob_init;
+    esp_eap_peer_blob_deinit_t eap_peer_blob_deinit;
+    esp_eap_peer_config_init_t eap_peer_config_init;
+    esp_eap_peer_config_deinit_t eap_peer_config_deinit;
+    esp_eap_peer_register_methods_t eap_peer_register_methods;
+    esp_eap_peer_unregister_methods_t eap_peer_unregister_methods;
+    esp_eap_deinit_prev_method_t eap_deinit_prev_method;
+    esp_eap_peer_get_eap_method_t eap_peer_get_eap_method;
+    esp_eap_sm_abort_t eap_sm_abort;
+    esp_eap_sm_build_nak_t eap_sm_build_nak;
+    esp_eap_sm_build_identity_resp_t eap_sm_build_identity_resp;
+    esp_eap_msg_alloc_t eap_msg_alloc;
+} wpa2_crypto_funcs_t;
+
+
+
+
+
+
+typedef struct{
     esp_aes_128_encrypt_t aes_128_encrypt;
     esp_aes_128_decrypt_t aes_128_decrypt;
 } mesh_crypto_funcs_t;
-# 22 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h" 2
-# 50 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h"
-typedef enum wps_type {
-    WPS_TYPE_DISABLE = 0,
-    WPS_TYPE_PBC,
-    WPS_TYPE_PIN,
-    WPS_TYPE_MAX,
-} wps_type_t;
-
-
-
-
-
-
-typedef struct {
-    char manufacturer[65];
-    char model_number[33];
-    char model_name[33];
-    char device_name[33];
-} wps_factory_information_t;
-
-typedef struct {
-    wps_type_t wps_type;
-    wps_factory_information_t factory_info;
-} esp_wps_config_t;
-# 97 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h"
-esp_err_t esp_wifi_wps_enable(const esp_wps_config_t *config);
-# 108 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h"
-esp_err_t esp_wifi_wps_disable(void);
-# 126 "/home/dieter/Development/esp-idf/components/wpa_supplicant/include/esp_supplicant/esp_wps.h"
-esp_err_t esp_wifi_wps_start(int timeout_ms);
-# 15 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_i.h"
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h" 2
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_i.h"
 struct wps_data {
 
 
@@ -5272,6 +4802,8 @@ struct wps_data {
 
 };
 
+wps_crypto_funcs_t wps_crypto_funcs;
+
 
 void wps_kdf(const u8 *key, const u8 *label_prefix, size_t label_prefix_len,
       const char *label, u8 *res, size_t res_len);
@@ -5354,9 +4886,9 @@ void wps_registrar_selected_registrar_changed(struct wps_registrar *reg);
 const u8 * wps_authorized_macs(struct wps_registrar *reg, size_t *count);
 int wps_registrar_pbc_overlap(struct wps_registrar *reg,
          const u8 *addr, const u8 *uuid_e);
-# 19 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h" 1
-# 12 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_dev_attr.h"
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_dev_attr.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/include/wps/wps_dev_attr.h"
 struct wps_parse_attr;
 
 int wps_build_manufacturer(struct wps_device_data *dev, struct wpabuf *msg);
@@ -5383,8 +4915,8 @@ int wps_build_vendor_ext(struct wps_device_data *dev, struct wpabuf *msg);
 int wps_build_req_dev_type(struct wps_device_data *dev, struct wpabuf *msg,
       unsigned int num_req_dev_types,
       const u8 *req_dev_types);
-# 20 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
-# 73 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 2
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin {
  struct dl_list list;
  u8 uuid[16];
@@ -5417,41 +4949,41 @@ static void wps_free_pins(struct dl_list *pins)
 {
  struct wps_uuid_pin *pin, *prev;
  for (pin = ((struct wps_uuid_pin *) ((char *) (pins)->next - 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )), prev = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (pins); pin = prev, prev = ((struct wps_uuid_pin *) ((char *) prev->list.next - 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )));
  wps_remove_pin(pin);
 }
@@ -5536,7 +5068,11 @@ struct wps_registrar {
 
 
 static int wps_set_ie(struct wps_registrar *reg);
+
+
+
 static void wps_registrar_pbc_timeout(void *eloop_ctx);
+
 
 
 
@@ -5613,9 +5149,9 @@ static struct wps_registrar_device * wps_device_get(struct wps_registrar *reg,
    return dev;
  }
  return 
-# 264 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
        ((void *)0)
-# 264 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
            ;
 }
 
@@ -5631,29 +5167,29 @@ static void wps_device_clone_data(struct wps_device_data *dst,
 
 
  free((dst->device_name)); dst->device_name = src->device_name ? strdup(src->device_name) : 
-# 278 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 ((void *)0)
-# 278 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                        ;
  free((dst->manufacturer)); dst->manufacturer = src->manufacturer ? strdup(src->manufacturer) : 
-# 279 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 ((void *)0)
-# 279 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 286 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                         ;
  free((dst->model_name)); dst->model_name = src->model_name ? strdup(src->model_name) : 
-# 280 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 ((void *)0)
-# 280 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 287 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                       ;
  free((dst->model_number)); dst->model_number = src->model_number ? strdup(src->model_number) : 
-# 281 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 ((void *)0)
-# 281 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                         ;
  free((dst->serial_number)); dst->serial_number = src->serial_number ? strdup(src->serial_number) : 
-# 282 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 ((void *)0)
-# 282 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 289 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ;
 
 }
@@ -5666,15 +5202,15 @@ int wps_device_store(struct wps_registrar *reg,
 
  d = wps_device_get(reg, dev->mac_addr);
  if (d == 
-# 293 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
          ((void *)0)
-# 293 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
              ) {
   d = (struct wps_registrar_device *)calloc(1, (sizeof(*d)));
   if (d == 
-# 295 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
           ((void *)0)
-# 295 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
               )
    return -1;
   d->next = reg->devices;
@@ -5692,9 +5228,9 @@ static void wps_registrar_add_pbc_session(struct wps_registrar *reg,
        const u8 *addr, const u8 *uuid_e)
 {
  struct wps_pbc_session *pbc, *prev = 
-# 311 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                      ((void *)0)
-# 311 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 318 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                          ;
  struct os_time now;
 
@@ -5717,9 +5253,9 @@ static void wps_registrar_add_pbc_session(struct wps_registrar *reg,
  if (!pbc) {
   pbc = (struct wps_pbc_session *)calloc(1, (sizeof(*pbc)));
   if (pbc == 
-# 332 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 332 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
    return;
   memcpy((pbc->addr), (addr), (6));
@@ -5738,9 +5274,9 @@ static void wps_registrar_add_pbc_session(struct wps_registrar *reg,
  while (pbc) {
   if (now.sec > pbc->timestamp.sec + 120) {
    prev->next = 
-# 349 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 349 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 356 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ;
    wps_free_pbc_sessions(pbc);
    break;
@@ -5756,9 +5292,9 @@ static void wps_registrar_remove_pbc_session(struct wps_registrar *reg,
           const u8 *p2p_dev_addr)
 {
  struct wps_pbc_session *pbc, *prev = 
-# 363 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                      ((void *)0)
-# 363 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                          , *tmp;
 
  pbc = reg->pbc_sessions;
@@ -5792,9 +5328,9 @@ int wps_registrar_pbc_overlap(struct wps_registrar *reg,
  int count = 0;
  struct wps_pbc_session *pbc;
  struct wps_pbc_session *first = 
-# 395 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                 ((void *)0)
-# 395 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 402 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                     ;
  struct os_time now;
 
@@ -5825,18 +5361,18 @@ int wps_registrar_pbc_overlap(struct wps_registrar *reg,
    continue;
   }
   if (uuid_e == 
-# 424 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0) 
-# 424 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ||
       memcmp((uuid_e), (pbc->uuid_e), (16))) {
    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: New Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: New Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: New Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: New Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: New Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
    count++;
   }
   if (first == 
-# 429 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 429 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 436 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   )
    first = pbc;
  }
@@ -5856,7 +5392,7 @@ static int wps_build_wps_state(struct wps_context *wps, struct wpabuf *msg)
  wpabuf_put_u8(msg, wps->wps_state);
  return 0;
 }
-# 475 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 482 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 static int wps_build_ap_setup_locked(struct wps_context *wps,
          struct wpabuf *msg)
 {
@@ -6005,20 +5541,20 @@ const u8 * wps_authorized_macs(struct wps_registrar *reg, size_t *count)
 
  return (const u8 *) reg->authorized_macs_union;
 }
-# 637 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 644 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_registrar * wps_registrar_init(struct wps_context *wps,
      const struct wps_registrar_config *cfg)
 {
  struct wps_registrar *reg = (struct wps_registrar *)calloc(1, (sizeof(*reg)));
  if (reg == 
-# 641 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 641 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 642 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 642 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 649 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  dl_list_init(&reg->pins);
@@ -6041,15 +5577,15 @@ struct wps_registrar * wps_registrar_init(struct wps_context *wps,
   reg->extra_cred = wpabuf_alloc_copy(cfg->extra_cred,
           cfg->extra_cred_len);
   if (reg->extra_cred == 
-# 663 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                         ((void *)0)
-# 663 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 670 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                             ) {
    free((reg));
    return 
-# 665 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
          ((void *)0)
-# 665 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 672 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
              ;
   }
  }
@@ -6062,9 +5598,9 @@ struct wps_registrar * wps_registrar_init(struct wps_context *wps,
  if (wps_set_ie(reg)) {
   wps_registrar_deinit(reg);
   return 
-# 676 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 676 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 683 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -6079,13 +5615,12 @@ struct wps_registrar * wps_registrar_init(struct wps_context *wps,
 void wps_registrar_deinit(struct wps_registrar *reg)
 {
  if (reg == 
-# 689 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 689 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 696 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return;
-
-
+# 706 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  wps_free_pins(&reg->pins);
 
 
@@ -6104,29 +5639,29 @@ static void wps_registrar_invalidate_unused(struct wps_registrar *reg)
  struct wps_uuid_pin *pin;
 
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 ))) {
   if (pin->wildcard_uuid == 1 && !(pin->flags & (1UL << (0)))) {
    do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Invalidate previously " "configured wildcard PIN" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Invalidate previously " "configured wildcard PIN" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Invalidate previously " "configured wildcard PIN" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Invalidate previously " "configured wildcard PIN" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Invalidate previously " "configured wildcard PIN" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
@@ -6136,7 +5671,7 @@ list
   }
  }
 }
-# 731 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 744 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 int wps_registrar_add_pin(struct wps_registrar *reg, const u8 *addr,
      const u8 *uuid, const u8 *pin, size_t pin_len,
      int timeout)
@@ -6145,26 +5680,26 @@ int wps_registrar_add_pin(struct wps_registrar *reg, const u8 *addr,
 
  p = (struct wps_uuid_pin *)calloc(1, (sizeof(*p)));
  if (p == 
-# 738 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
          ((void *)0)
-# 738 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 751 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
              )
   return -1;
  if (addr)
   memcpy((p->enrollee_addr), (addr), (6));
  if (uuid == 
-# 742 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 742 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 755 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
   p->wildcard_uuid = 1;
  else
   memcpy((p->uuid), (uuid), (16));
  p->pin = (u8 *)malloc((pin_len));
  if (p->pin == 
-# 747 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 747 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 760 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   ) {
   free((p));
   return -1;
@@ -6196,6 +5731,10 @@ int wps_registrar_add_pin(struct wps_registrar *reg, const u8 *addr,
    reg, (u8 *) "\xff\xff\xff\xff\xff\xff");
  wps_registrar_selected_registrar_changed(reg);
 
+
+
+
+
  return 0;
 }
 
@@ -6223,41 +5762,41 @@ static void wps_registrar_expire_pins(struct wps_registrar *reg)
 
  os_get_time(&now);
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )), prev = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = prev, prev = ((struct wps_uuid_pin *) ((char *) prev->list.next - 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 804 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 821 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )))
  {
   if ((pin->flags & (1UL << (1))) &&
@@ -6268,7 +5807,7 @@ list
   }
  }
 }
-# 823 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 static int wps_registrar_invalidate_wildcard_pin(struct wps_registrar *reg,
        const u8 *dev_pw,
        size_t dev_pw_len)
@@ -6276,41 +5815,41 @@ static int wps_registrar_invalidate_wildcard_pin(struct wps_registrar *reg,
  struct wps_uuid_pin *pin, *prev;
 
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )), prev = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = prev, prev = ((struct wps_uuid_pin *) ((char *) prev->list.next - 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 829 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 846 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )))
  {
   if (dev_pw && pin->pin &&
@@ -6327,47 +5866,47 @@ list
 
  return -1;
 }
-# 853 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 870 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 int wps_registrar_invalidate_pin(struct wps_registrar *reg, const u8 *uuid)
 {
  struct wps_uuid_pin *pin, *prev;
 
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )), prev = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = prev, prev = ((struct wps_uuid_pin *) ((char *) prev->list.next - 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 857 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 874 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )))
  {
   if (memcmp((pin->uuid), (uuid), (16)) == 0) {
@@ -6386,37 +5925,37 @@ static const u8 * wps_registrar_get_pin(struct wps_registrar *reg,
      const u8 *uuid, size_t *pin_len)
 {
  struct wps_uuid_pin *pin, *found = 
-# 874 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                    ((void *)0)
-# 874 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                        ;
 
  wps_registrar_expire_pins(reg);
 
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 878 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 895 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 ))) {
   if (!pin->wildcard_uuid &&
       memcmp((pin->uuid), (uuid), (16)) == 0) {
@@ -6429,29 +5968,29 @@ list
 
 
   for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  __builtin_offsetof (
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  struct wps_uuid_pin
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  , 
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  list
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  )
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  )); &pin->list != (&reg->pins); pin = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  __builtin_offsetof (
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  struct wps_uuid_pin
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  , 
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  list
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
  )
-# 889 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  ))) {
    if (pin->wildcard_uuid == 1 ||
        pin->wildcard_uuid == 2) {
@@ -6467,9 +6006,9 @@ list
 
  if (!found)
   return 
-# 903 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 903 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 920 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
 
@@ -6480,44 +6019,44 @@ list
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Selected PIN locked - do not " "allow concurrent re-use" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Selected PIN locked - do not " "allow concurrent re-use" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Selected PIN locked - do not " "allow concurrent re-use" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Selected PIN locked - do not " "allow concurrent re-use" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Selected PIN locked - do not " "allow concurrent re-use" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                 ;
   return 
-# 912 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 912 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 929 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  *pin_len = found->pin_len;
  found->flags |= (1UL << (0));
  return found->pin;
 }
-# 930 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 947 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 int wps_registrar_unlock_pin(struct wps_registrar *reg, const u8 *uuid)
 {
  struct wps_uuid_pin *pin;
 
  for (pin = ((struct wps_uuid_pin *) ((char *) (&reg->pins)->next - 
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 )); &pin->list != (&reg->pins); pin = ((struct wps_uuid_pin *) ((char *) pin->list.next - 
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 __builtin_offsetof (
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 struct wps_uuid_pin
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 , 
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 list
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
 )
-# 934 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 951 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 ))) {
   if (memcmp((pin->uuid), (uuid), (16)) == 0) {
    if (pin->wildcard_uuid == 3) {
@@ -6545,6 +6084,7 @@ static void wps_registrar_stop_pbc(struct wps_registrar *reg)
 }
 
 
+
 static void wps_registrar_pbc_timeout(void *eloop_ctx)
 {
  struct wps_registrar *reg = eloop_ctx;
@@ -6553,23 +6093,23 @@ static void wps_registrar_pbc_timeout(void *eloop_ctx)
  wps_pbc_timeout_event(reg->wps);
  wps_registrar_stop_pbc(reg);
 }
-# 985 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1003 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 int wps_registrar_button_pushed(struct wps_registrar *reg,
     const u8 *p2p_dev_addr)
 {
  if (p2p_dev_addr == 
-# 988 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                     ((void *)0) 
-# 988 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1006 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          &&
      wps_registrar_pbc_overlap(reg, 
-# 989 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                    ((void *)0)
-# 989 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                        , 
-# 989 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                          ((void *)0)
-# 989 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1007 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                              )) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: PBC overlap - do not start PBC " "mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: PBC overlap - do not start PBC " "mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: PBC overlap - do not start PBC " "mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: PBC overlap - do not start PBC " "mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: PBC overlap - do not start PBC " "mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
              ;
@@ -6587,7 +6127,7 @@ int wps_registrar_button_pushed(struct wps_registrar *reg,
  wps_registrar_add_authorized_mac(reg,
       (u8 *) "\xff\xff\xff\xff\xff\xff");
  wps_registrar_selected_registrar_changed(reg);
-
+# 1036 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  return 0;
 }
 
@@ -6595,6 +6135,10 @@ int wps_registrar_button_pushed(struct wps_registrar *reg,
 static void wps_registrar_pbc_completed(struct wps_registrar *reg)
 {
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: PBC completed - stopping PBC mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: PBC completed - stopping PBC mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: PBC completed - stopping PBC mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: PBC completed - stopping PBC mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: PBC completed - stopping PBC mode" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
+
+
+
+
 
  wps_registrar_stop_pbc(reg);
 }
@@ -6604,6 +6148,7 @@ static void wps_registrar_pbc_completed(struct wps_registrar *reg)
 static void wps_registrar_pin_completed(struct wps_registrar *reg)
 {
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: PIN completed using internal Registrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: PIN completed using internal Registrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: PIN completed using internal Registrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: PIN completed using internal Registrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: PIN completed using internal Registrar" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
+
  reg->selected_registrar = 0;
  wps_registrar_selected_registrar_changed(reg);
 }
@@ -6615,9 +6160,9 @@ void wps_registrar_complete(struct wps_registrar *registrar, const u8 *uuid_e,
  if (registrar->pbc) {
   wps_registrar_remove_pbc_session(registrar,
        uuid_e, 
-# 1033 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 1033 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   );
   wps_registrar_pbc_completed(registrar);
   os_get_time(&registrar->pbc_ignore_start);
@@ -6642,7 +6187,12 @@ int wps_registrar_wps_cancel(struct wps_registrar *reg)
 {
  if (reg->pbc) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: PBC is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: PBC is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: PBC is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: PBC is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: PBC is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
+
+
   wps_registrar_pbc_timeout(reg);
+
+
+
 
   return 1;
  } else if (reg->selected_registrar) {
@@ -6652,16 +6202,16 @@ int wps_registrar_wps_cancel(struct wps_registrar *reg)
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: PIN is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: PIN is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: PIN is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: PIN is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: PIN is set - cancelling it" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   wps_registrar_pin_completed(reg);
   wps_registrar_invalidate_wildcard_pin(reg, 
-# 1066 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                             ((void *)0)
-# 1066 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                                 , 0);
   return 1;
 
  }
  return 0;
 }
-# 1084 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
     const struct wpabuf *wps_data,
     int p2p_wildcard)
@@ -6677,9 +6227,9 @@ void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
   return;
 
  if (attr.config_methods == 
-# 1098 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0)
-# 1098 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1137 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Config Methods attribute in " "Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Config Methods attribute in " "Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Config Methods attribute in " "Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Config Methods attribute in " "Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Config Methods attribute in " "Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                       ;
@@ -6687,9 +6237,9 @@ void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
  }
 
  if (attr.dev_password_id == 
-# 1104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0)
-# 1104 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Device Password Id attribute " "in Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Device Password Id attribute " "in Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Device Password Id attribute " "in Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Device Password Id attribute " "in Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Device Password Id attribute " "in Probe Request" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                          ;
@@ -6699,9 +6249,9 @@ void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
  if (reg->enrollee_seen_cb && attr.uuid_e &&
      attr.primary_dev_type && attr.request_type && !p2p_wildcard) {
   char *dev_name = 
-# 1112 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                   ((void *)0)
-# 1112 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                       ;
   if (attr.dev_name) {
    dev_name = (char *)calloc(1, (attr.dev_name_len + 1));
@@ -6712,21 +6262,21 @@ void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
   }
   reg->enrollee_seen_cb(reg->cb_ctx, addr, attr.uuid_e,
           attr.primary_dev_type,
-          WPA_GET_BE16(attr.config_methods),
-          WPA_GET_BE16(attr.dev_password_id),
+          ((u16) (((attr.config_methods)[0] << 8) | (attr.config_methods)[1])),
+          ((u16) (((attr.dev_password_id)[0] << 8) | (attr.dev_password_id)[1])),
           *attr.request_type, dev_name);
   free((dev_name));
  }
 
- if (WPA_GET_BE16(attr.dev_password_id) != DEV_PW_PUSHBUTTON)
+ if (((u16) (((attr.dev_password_id)[0] << 8) | (attr.dev_password_id)[1])) != DEV_PW_PUSHBUTTON)
   return;
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Probe Request for PBC received from " "%02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "wpa", (addr)[0], (addr)[1], (addr)[2], (addr)[3], (addr)[4], (addr)[5]); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Probe Request for PBC received from " "%02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "wpa", (addr)[0], (addr)[1], (addr)[2], (addr)[3], (addr)[4], (addr)[5]); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Probe Request for PBC received from " "%02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "wpa", (addr)[0], (addr)[1], (addr)[2], (addr)[3], (addr)[4], (addr)[5]); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Probe Request for PBC received from " "%02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "wpa", (addr)[0], (addr)[1], (addr)[2], (addr)[3], (addr)[4], (addr)[5]); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Probe Request for PBC received from " "%02x:%02x:%02x:%02x:%02x:%02x" "\033[0m" "\n", esp_log_timestamp(), "wpa", (addr)[0], (addr)[1], (addr)[2], (addr)[3], (addr)[4], (addr)[5]); } } while(0); } while(0)
                            ;
  if (attr.uuid_e == 
-# 1133 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                    ((void *)0)
-# 1133 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1172 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                        ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Invalid Probe Request WPS IE: No " "UUID-E included" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Invalid Probe Request WPS IE: No " "UUID-E included" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Invalid Probe Request WPS IE: No " "UUID-E included" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Invalid Probe Request WPS IE: No " "UUID-E included" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Invalid Probe Request WPS IE: No " "UUID-E included" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                         ;
@@ -6734,7 +6284,7 @@ void wps_registrar_probe_req_rx(struct wps_registrar *reg, const u8 *addr,
  }
  wpa_hexdump(ESP_LOG_DEBUG, "WPS: UUID-E from Probe Request", attr.uuid_e,
       16);
-# 1157 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (!skip_add)
   wps_registrar_add_pbc_session(reg, addr, attr.uuid_e);
  if (wps_registrar_pbc_overlap(reg, addr, attr.uuid_e)) {
@@ -6749,9 +6299,9 @@ static int wps_cb_new_psk(struct wps_registrar *reg, const u8 *mac_addr,
      const u8 *psk, size_t psk_len)
 {
  if (reg->new_psk_cb == 
-# 1170 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                        ((void *)0)
-# 1170 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                            )
   return 0;
 
@@ -6764,9 +6314,9 @@ static void wps_cb_pin_needed(struct wps_registrar *reg, const u8 *uuid_e,
          const struct wps_device_data *dev)
 {
  if (reg->pin_needed_cb == 
-# 1181 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                           ((void *)0)
-# 1181 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1220 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                               )
   return;
 
@@ -6779,9 +6329,9 @@ static void wps_cb_reg_success(struct wps_registrar *reg, const u8 *mac_addr,
           size_t dev_pw_len)
 {
  if (reg->reg_success_cb == 
-# 1192 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0)
-# 1192 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                )
   return;
 
@@ -6800,9 +6350,9 @@ static void wps_cb_set_sel_reg(struct wps_registrar *reg)
 {
  u16 methods = 0;
  if (reg->set_sel_reg_cb == 
-# 1209 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0)
-# 1209 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                )
   return;
 
@@ -6837,9 +6387,9 @@ static int wps_set_ie(struct wps_registrar *reg)
  int i;
 
  if (reg->set_ie_cb == 
-# 1242 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                       ((void *)0)
-# 1242 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1281 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                           )
   return 0;
 
@@ -6852,16 +6402,16 @@ static int wps_set_ie(struct wps_registrar *reg)
 
  beacon = wpabuf_alloc(400 + vendor_len);
  if (beacon == 
-# 1253 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 1253 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   )
   return -1;
  probe = wpabuf_alloc(500 + vendor_len);
  if (probe == 
-# 1256 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1256 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1295 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   wpabuf_free(beacon);
   return -1;
@@ -6885,7 +6435,7 @@ static int wps_set_ie(struct wps_registrar *reg)
   wpabuf_free(probe);
   return -1;
  }
-# 1289 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Build Probe Response IEs" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Build Probe Response IEs" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Build Probe Response IEs" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Build Probe Response IEs" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Build Probe Response IEs" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
 
  if (wps_build_version(probe) ||
@@ -6917,7 +6467,7 @@ static int wps_set_ie(struct wps_registrar *reg)
  }
 
  if (reg->static_wep_only) {
-# 1329 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1368 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   const u8 ms_wps[7] = {
    221, 5,
 
@@ -6941,9 +6491,9 @@ static int wps_get_dev_password(struct wps_data *wps)
 
  free((wps->dev_password));
  wps->dev_password = 
-# 1351 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                     ((void *)0)
-# 1351 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                         ;
 
  if (wps->pbc) {
@@ -6964,9 +6514,9 @@ static int wps_get_dev_password(struct wps_data *wps)
          &pin_len);
  }
  if (pin == 
-# 1370 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1370 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Device Password available for " "the Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Device Password available for " "the Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Device Password available for " "the Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Device Password available for " "the Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Device Password available for " "the Enrollee" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                      ;
@@ -6978,9 +6528,9 @@ static int wps_get_dev_password(struct wps_data *wps)
 
  wps->dev_password = (u8 *)malloc((pin_len));
  if (wps->dev_password == 
-# 1380 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                          ((void *)0)
-# 1380 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                              )
   return -1;
  memcpy((wps->dev_password), (pin), (pin_len));
@@ -7013,13 +6563,13 @@ static int wps_build_r_hash(struct wps_data *wps, struct wpabuf *msg)
       wps->snonce + 16, 16);
 
  if (wps->dh_pubkey_e == 
-# 1411 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                         ((void *)0) 
-# 1411 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                              || wps->dh_pubkey_r == 
-# 1411 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                                     ((void *)0)
-# 1411 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1450 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                                         ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: DH public keys not available for " "R-Hash derivation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: DH public keys not available for " "R-Hash derivation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: DH public keys not available for " "R-Hash derivation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: DH public keys not available for " "R-Hash derivation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: DH public keys not available for " "R-Hash derivation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                           ;
@@ -7039,7 +6589,12 @@ static int wps_build_r_hash(struct wps_data *wps, struct wpabuf *msg)
  len[2] = wpabuf_len(wps->dh_pubkey_e);
  addr[3] = wpabuf_head(wps->dh_pubkey_r);
  len[3] = wpabuf_len(wps->dh_pubkey_r);
- hmac_sha256_vector(wps->authkey, 32, 4, addr, len, hash);
+ if (wps_crypto_funcs.hmac_sha256_vector) {
+  wps_crypto_funcs.hmac_sha256_vector(wps->authkey, 32, 4, addr, (int *)len, hash);
+ } else {
+  do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } } while(0); } while(0);
+  return -1;
+ }
  wpa_hexdump(ESP_LOG_DEBUG, "WPS: R-Hash1", hash, 32);
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS:  * R-Hash2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS:  * R-Hash2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS:  * R-Hash2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS:  * R-Hash2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS:  * R-Hash2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -7049,7 +6604,12 @@ static int wps_build_r_hash(struct wps_data *wps, struct wpabuf *msg)
 
  addr[0] = wps->snonce + 16;
  addr[1] = wps->psk2;
- hmac_sha256_vector(wps->authkey, 32, 4, addr, len, hash);
+ if (wps_crypto_funcs.hmac_sha256_vector) {
+  wps_crypto_funcs.hmac_sha256_vector(wps->authkey, 32, 4, addr, (int *)len, hash);
+ } else {
+  do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } } while(0); } while(0);
+  return -1;
+ }
  wpa_hexdump(ESP_LOG_DEBUG, "WPS: R-Hash2", hash, 32);
 
  return 0;
@@ -7171,9 +6731,9 @@ int wps_build_credential_wrap(struct wpabuf *msg,
  struct wpabuf *wbuf;
  wbuf = wpabuf_alloc(200);
  if (wbuf == 
-# 1561 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 1561 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1610 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
   return -1;
  if (wps_build_credential(wbuf, cred)) {
@@ -7256,10 +6816,11 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
   if (os_get_random((r), (sizeof(r))) < 0)
    return -1;
   free((wps->new_psk));
+
   if (wps->new_psk == 
-# 1643 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 1643 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1693 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          )
    return -1;
   wps->new_psk_len--;
@@ -7273,6 +6834,7 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
  } else if (wps->use_psk_key && wps->wps->psk_set) {
   char hex[65];
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Use PSK format for Network Key" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Use PSK format for Network Key" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Use PSK format for Network Key" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Use PSK format for Network Key" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Use PSK format for Network Key" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
+
   memcpy((wps->cred.key), (hex), (32 * 2));
   wps->cred.key_len = 32 * 2;
  } else if (wps->wps->network_key) {
@@ -7286,33 +6848,35 @@ int wps_build_cred(struct wps_data *wps, struct wpabuf *msg)
   wps->new_psk_len = 32;
   wps->new_psk = (u8 *)malloc((wps->new_psk_len));
   if (wps->new_psk == 
-# 1668 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 1668 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1719 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          )
    return -1;
   if (os_get_random((wps->new_psk), (wps->new_psk_len)) < 0) {
    free((wps->new_psk));
    wps->new_psk = 
-# 1672 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 1672 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1723 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ;
    return -1;
   }
   wpa_hexdump_key(ESP_LOG_DEBUG, "WPS: Generated per-device PSK",
     wps->new_psk, wps->new_psk_len);
+
+
   memcpy((wps->cred.key), (hex), (wps->new_psk_len * 2));
   wps->cred.key_len = wps->new_psk_len * 2;
  }
 
 use_provided:
-# 1709 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  cred = wpabuf_alloc(200);
  if (cred == 
-# 1710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 1710 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
   return -1;
 
@@ -7353,27 +6917,27 @@ static struct wpabuf * wps_build_ap_cred(struct wps_data *wps)
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1749 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1749 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1802 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1750 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1750 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1803 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1753 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1753 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1806 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   wpabuf_free(msg);
   return 
-# 1755 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1755 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1808 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7381,9 +6945,9 @@ static struct wpabuf * wps_build_ap_cred(struct wps_data *wps)
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1761 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1761 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1814 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7402,9 +6966,9 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
 
  if (os_get_random((wps->nonce_r), (16)) < 0)
   return 
-# 1778 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1778 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1831 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  wpa_hexdump(ESP_LOG_DEBUG, "WPS: Registrar Nonce",
       wps->nonce_r, 16);
@@ -7413,14 +6977,14 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Building Message M2" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1785 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1785 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1786 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1786 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1839 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  if (wps_build_version(msg) ||
@@ -7441,16 +7005,16 @@ static struct wpabuf * wps_build_m2(struct wps_data *wps)
      wps_build_dev_password_id(msg, wps->dev_pw_id) ||
      wps_build_os_version(&wps->wps->dev, msg) ||
      wps_build_wfa_ext(msg, 0, 
-# 1805 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1805 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1858 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(msg);
   return 
-# 1808 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1808 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1861 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7468,14 +7032,14 @@ static struct wpabuf * wps_build_m2d(struct wps_data *wps)
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Building Message M2D" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1824 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1824 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1877 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                )
   return 
-# 1825 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1825 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1878 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  if (wps->wps->ap && wps->wps->ap_setup_locked &&
@@ -7497,15 +7061,15 @@ static struct wpabuf * wps_build_m2d(struct wps_data *wps)
      wps_build_config_error(msg, err) ||
      wps_build_os_version(&wps->wps->dev, msg) ||
      wps_build_wfa_ext(msg, 0, 
-# 1845 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1845 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1898 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0)) {
   wpabuf_free(msg);
   return 
-# 1847 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1847 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1900 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7524,27 +7088,27 @@ static struct wpabuf * wps_build_m4(struct wps_data *wps)
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1864 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1864 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1865 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1865 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1918 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1868 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1868 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1870 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1870 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1923 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7556,17 +7120,17 @@ static struct wpabuf * wps_build_m4(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 1880 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1880 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1933 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1884 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1884 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7584,27 +7148,27 @@ static struct wpabuf * wps_build_m6(struct wps_data *wps)
 
  plain = wpabuf_alloc(200);
  if (plain == 
-# 1900 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1900 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1953 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1901 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1901 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1954 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1904 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1904 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1957 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1906 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1906 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1959 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7615,17 +7179,17 @@ static struct wpabuf * wps_build_m6(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 1915 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1915 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1968 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1919 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1919 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1972 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7644,27 +7208,27 @@ static struct wpabuf * wps_build_m8(struct wps_data *wps)
 
  plain = wpabuf_alloc(500);
  if (plain == 
-# 1936 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 1936 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1989 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  )
   return 
-# 1937 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1937 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1990 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
 
  msg = wpabuf_alloc(1000);
  if (msg == 
-# 1940 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 1940 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1993 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   wpabuf_free(plain);
   return 
-# 1942 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1942 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 1995 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
 
@@ -7676,17 +7240,17 @@ static struct wpabuf * wps_build_m8(struct wps_data *wps)
      wps_build_key_wrap_auth(wps, plain) ||
      wps_build_encr_settings(wps, msg, plain) ||
      wps_build_wfa_ext(msg, 0, 
-# 1952 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                               ((void *)0)
-# 1952 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2005 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   , 0) ||
      wps_build_authenticator(wps, msg)) {
   wpabuf_free(plain);
   wpabuf_free(msg);
   return 
-# 1956 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
         ((void *)0)
-# 1956 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2009 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
             ;
  }
  wpabuf_free(plain);
@@ -7700,7 +7264,7 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
           enum wsc_op_code *op_code)
 {
  struct wpabuf *msg;
-# 2013 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2066 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  switch (wps->state) {
  case SEND_M2:
   if (wps_get_dev_password(wps) < 0)
@@ -7737,9 +7301,9 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Unsupported state %d for building " "a message" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } } while(0); } while(0)
                               ;
   msg = 
-# 2048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
        ((void *)0)
-# 2048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
            ;
   break;
  }
@@ -7758,9 +7322,9 @@ struct wpabuf * wps_registrar_get_msg(struct wps_data *wps,
 static int wps_process_enrollee_nonce(struct wps_data *wps, const u8 *e_nonce)
 {
  if (e_nonce == 
-# 2065 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2065 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Enrollee Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7777,9 +7341,9 @@ static int wps_process_enrollee_nonce(struct wps_data *wps, const u8 *e_nonce)
 static int wps_process_registrar_nonce(struct wps_data *wps, const u8 *r_nonce)
 {
  if (r_nonce == 
-# 2080 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2080 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Registrar Nonce received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7797,9 +7361,9 @@ static int wps_process_registrar_nonce(struct wps_data *wps, const u8 *r_nonce)
 static int wps_process_uuid_e(struct wps_data *wps, const u8 *uuid_e)
 {
  if (uuid_e == 
-# 2096 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
               ((void *)0)
-# 2096 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                   ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No UUID-E received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7815,15 +7379,15 @@ static int wps_process_uuid_e(struct wps_data *wps, const u8 *uuid_e)
 static int wps_process_dev_password_id(struct wps_data *wps, const u8 *pw_id)
 {
  if (pw_id == 
-# 2110 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2110 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Device Password ID received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
  }
 
- wps->dev_pw_id = WPA_GET_BE16(pw_id);
+ wps->dev_pw_id = ((u16) (((pw_id)[0] << 8) | (pw_id)[1]));
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Device Password ID %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->dev_pw_id); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Device Password ID %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->dev_pw_id); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Device Password ID %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->dev_pw_id); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Device Password ID %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->dev_pw_id); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Device Password ID %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->dev_pw_id); } } while(0); } while(0);
 
  return 0;
@@ -7833,9 +7397,9 @@ static int wps_process_dev_password_id(struct wps_data *wps, const u8 *pw_id)
 static int wps_process_e_hash1(struct wps_data *wps, const u8 *e_hash1)
 {
  if (e_hash1 == 
-# 2124 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2124 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-Hash1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7851,9 +7415,9 @@ static int wps_process_e_hash1(struct wps_data *wps, const u8 *e_hash1)
 static int wps_process_e_hash2(struct wps_data *wps, const u8 *e_hash2)
 {
  if (e_hash2 == 
-# 2138 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2138 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-Hash2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7873,9 +7437,9 @@ static int wps_process_e_snonce1(struct wps_data *wps, const u8 *e_snonce1)
  size_t len[4];
 
  if (e_snonce1 == 
-# 2156 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2156 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-SNonce1 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7893,7 +7457,12 @@ static int wps_process_e_snonce1(struct wps_data *wps, const u8 *e_snonce1)
  len[2] = wpabuf_len(wps->dh_pubkey_e);
  addr[3] = wpabuf_head(wps->dh_pubkey_r);
  len[3] = wpabuf_len(wps->dh_pubkey_r);
- hmac_sha256_vector(wps->authkey, 32, 4, addr, len, hash);
+ if (wps_crypto_funcs.hmac_sha256_vector) {
+  wps_crypto_funcs.hmac_sha256_vector(wps->authkey, 32, 4, addr, (int *)len, hash);
+ } else {
+  do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } } while(0); } while(0);
+  return -1;
+ }
  if (memcmp((wps->peer_hash1), (hash), (32)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: E-Hash1 derived from E-S1 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: E-Hash1 derived from E-S1 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: E-Hash1 derived from E-S1 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: E-Hash1 derived from E-S1 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: E-Hash1 derived from E-S1 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                                ;
@@ -7916,9 +7485,9 @@ static int wps_process_e_snonce2(struct wps_data *wps, const u8 *e_snonce2)
  size_t len[4];
 
  if (e_snonce2 == 
-# 2195 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2195 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No E-SNonce2 received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7937,7 +7506,12 @@ static int wps_process_e_snonce2(struct wps_data *wps, const u8 *e_snonce2)
  addr[3] = wpabuf_head(wps->dh_pubkey_r);
  len[3] = wpabuf_len(wps->dh_pubkey_r);
 
- hmac_sha256_vector(wps->authkey, 32, 4, addr, len, hash);
+ if (wps_crypto_funcs.hmac_sha256_vector) {
+  wps_crypto_funcs.hmac_sha256_vector(wps->authkey, 32, 4, addr, (int *)len, hash);
+ } else {
+  do { if ( 3 >= ESP_LOG_ERROR ) do { if (ESP_LOG_ERROR==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else if (ESP_LOG_ERROR==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "In function %s, fail to register hmac_sha256_vector function!\r\n" "\033[0m" "\n", esp_log_timestamp(), "wpa", __FUNCTION__); } } while(0); } while(0);
+  return -1;
+ }
  if (memcmp((wps->peer_hash2), (hash), (32)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: E-Hash2 derived from E-S2 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: E-Hash2 derived from E-S2 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: E-Hash2 derived from E-S2 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: E-Hash2 derived from E-S2 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: E-Hash2 derived from E-S2 does " "not match with the pre-committed value" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                                                ;
@@ -7969,9 +7543,9 @@ static int wps_process_e_snonce2(struct wps_data *wps, const u8 *e_snonce2)
 static int wps_process_mac_addr(struct wps_data *wps, const u8 *mac_addr)
 {
  if (mac_addr == 
-# 2244 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 2244 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No MAC Address received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -7990,9 +7564,9 @@ static int wps_process_pubkey(struct wps_data *wps, const u8 *pk,
          size_t pk_len)
 {
  if (pk == 
-# 2261 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
           ((void *)0) 
-# 2261 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2324 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                || pk_len == 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Public Key received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
@@ -8001,9 +7575,9 @@ static int wps_process_pubkey(struct wps_data *wps, const u8 *pk,
  wpabuf_free(wps->dh_pubkey_e);
  wps->dh_pubkey_e = wpabuf_alloc_copy(pk, pk_len);
  if (wps->dh_pubkey_e == 
-# 2268 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                         ((void *)0)
-# 2268 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2331 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                             )
   return -1;
 
@@ -8016,16 +7590,16 @@ static int wps_process_auth_type_flags(struct wps_data *wps, const u8 *auth)
  u16 auth_types;
 
  if (auth == 
-# 2279 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2279 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Authentication Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
   return -1;
  }
 
- auth_types = WPA_GET_BE16(auth);
+ auth_types = ((u16) (((auth)[0] << 8) | (auth)[1]));
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Authentication Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Authentication Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Authentication Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Authentication Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", auth_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Authentication Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", auth_types); } } while(0); } while(0)
                 ;
@@ -8034,7 +7608,7 @@ static int wps_process_auth_type_flags(struct wps_data *wps, const u8 *auth)
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No match in supported " "authentication types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->auth_types, auth_types); } } while(0); } while(0)
 
                                        ;
-# 2307 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   return -1;
 
  }
@@ -8048,16 +7622,16 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
  u16 encr_types;
 
  if (encr == 
-# 2319 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2319 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Encryption Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
   return -1;
  }
 
- encr_types = WPA_GET_BE16(encr);
+ encr_types = ((u16) (((encr)[0] << 8) | (encr)[1]));
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Encryption Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Encryption Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Encryption Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Encryption Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", encr_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Encryption Type flags 0x%x" "\033[0m" "\n", esp_log_timestamp(), "wpa", encr_types); } } while(0); } while(0)
                 ;
@@ -8066,7 +7640,7 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No match in supported " "encryption types (own 0x%x Enrollee 0x%x)" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->wps->encr_types, encr_types); } } while(0); } while(0)
 
                                        ;
-# 2347 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   return -1;
 
  }
@@ -8078,9 +7652,9 @@ static int wps_process_encr_type_flags(struct wps_data *wps, const u8 *encr)
 static int wps_process_conn_type_flags(struct wps_data *wps, const u8 *conn)
 {
  if (conn == 
-# 2357 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2357 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Connection Type flags " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -8099,18 +7673,18 @@ static int wps_process_config_methods(struct wps_data *wps, const u8 *methods)
  u16 m;
 
  if (methods == 
-# 2374 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                ((void *)0)
-# 2374 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                    ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Config Methods received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
  }
 
- m = WPA_GET_BE16(methods);
+ m = ((u16) (((methods)[0] << 8) | (methods)[1]));
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Config Methods 0x%x" "%s%s%s%s%s%s%s%s%s" "\033[0m" "\n", esp_log_timestamp(), "wpa", m, m & 0x0001 ? " [USBA]" : "", m & 0x0002 ? " [Ethernet]" : "", m & 0x0004 ? " [Label]" : "", m & 0x0008 ? " [Display]" : "", m & 0x0010 ? " [Ext NFC Token]" : "", m & 0x0020 ? " [Int NFC Token]" : "", m & 0x0040 ? " [NFC]" : "", m & 0x0080 ? " [PBC]" : "", m & 0x0100 ? " [Keypad]" : ""); } } while(0); } while(0)
-# 2391 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                               ;
 
  if (!(m & 0x0008) && !wps->use_psk_key) {
@@ -8131,9 +7705,9 @@ static int wps_process_config_methods(struct wps_data *wps, const u8 *methods)
 static int wps_process_wps_state(struct wps_data *wps, const u8 *state)
 {
  if (state == 
-# 2410 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2410 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2473 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Wi-Fi Protected Setup State " "received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                  ;
@@ -8152,15 +7726,15 @@ static int wps_process_assoc_state(struct wps_data *wps, const u8 *assoc)
  u16 a;
 
  if (assoc == 
-# 2427 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
              ((void *)0)
-# 2427 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2490 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                  ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Association State received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
  }
 
- a = WPA_GET_BE16(assoc);
+ a = ((u16) (((assoc)[0] << 8) | (assoc)[1]));
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Association State %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", a); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Association State %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", a); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Association State %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", a); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Association State %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", a); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Association State %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", a); } } while(0); } while(0);
 
  return 0;
@@ -8172,15 +7746,15 @@ static int wps_process_config_error(struct wps_data *wps, const u8 *err)
  u16 e;
 
  if (err == 
-# 2443 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
            ((void *)0)
-# 2443 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2506 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Configuration Error received" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return -1;
  }
 
- e = WPA_GET_BE16(err);
+ e = ((u16) (((err)[0] << 8) | (err)[1]));
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", e); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", e); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", e); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", e); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", e); } } while(0); } while(0);
 
  return 0;
@@ -8189,14 +7763,14 @@ static int wps_process_config_error(struct wps_data *wps, const u8 *err)
 
 static int wps_registrar_p2p_dev_addr_match(struct wps_data *wps)
 {
-# 2472 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2535 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  return 1;
 }
 
 
 static int wps_registrar_skip_overlap(struct wps_data *wps)
 {
-# 2490 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2553 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  return 0;
 }
 
@@ -8241,7 +7815,7 @@ static enum wps_process_res wps_process_m1(struct wps_data *wps,
   wps->state = SEND_M2D;
   return WPS_CONTINUE;
  }
-# 2561 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (wps->dev_pw_id == DEV_PW_PUSHBUTTON) {
   if ((wps->wps->registrar->force_pbc_overlap ||
        wps_registrar_pbc_overlap(wps->wps->registrar,
@@ -8263,7 +7837,7 @@ static enum wps_process_res wps_process_m1(struct wps_data *wps,
            wps->mac_addr_e, wps->uuid_e);
   wps->pbc = 1;
  }
-# 2600 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2668 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  wps->state = SEND_M2;
  return WPS_CONTINUE;
 }
@@ -8338,9 +7912,9 @@ static enum wps_process_res wps_process_m5(struct wps_data *wps,
  decrypted = wps_decrypt_encr_settings(wps, attr->encr_settings,
            attr->encr_settings_len);
  if (decrypted == 
-# 2673 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2673 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2741 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Failed to decrypted Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                            ;
@@ -8349,9 +7923,9 @@ static enum wps_process_res wps_process_m5(struct wps_data *wps,
  }
 
  if (wps_validate_m5_encr(decrypted, attr->version2 != 
-# 2680 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                                                       ((void *)0)
-# 2680 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2748 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                                           ) < 0) {
   wpabuf_free(decrypted);
   wps->state = SEND_WSC_NACK;
@@ -8429,14 +8003,14 @@ static int wps_process_ap_settings_r(struct wps_data *wps,
   wps_cred_update(&wps->cred, wps->new_ap_settings);
   return 0;
  } else {
-# 2767 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2835 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   wps_registrar_pin_completed(wps->wps->registrar);
 
   msg = wps_build_ap_cred(wps);
   if (msg == 
-# 2770 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
             ((void *)0)
-# 2770 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2838 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                 )
    return -1;
   wps->cred.cred_attr = wpabuf_head(msg);
@@ -8451,9 +8025,9 @@ static int wps_process_ap_settings_r(struct wps_data *wps,
   wps_sta_cred_cb(wps);
 
   wps->cred.cred_attr = 
-# 2783 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                        ((void *)0)
-# 2783 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2851 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                            ;
   wps->cred.cred_attr_len = 0;
   wpabuf_free(msg);
@@ -8497,9 +8071,9 @@ static enum wps_process_res wps_process_m7(struct wps_data *wps,
  decrypted = wps_decrypt_encr_settings(wps, attr->encr_settings,
            attr->encr_settings_len);
  if (decrypted == 
-# 2825 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                  ((void *)0)
-# 2825 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2893 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                      ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Failed to decrypt Encrypted " "Settings attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                            ;
@@ -8509,9 +8083,9 @@ static enum wps_process_res wps_process_m7(struct wps_data *wps,
 
  if (wps_validate_m7_encr(decrypted, wps->wps->ap || wps->er,
      attr->version2 != 
-# 2833 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                       ((void *)0)
-# 2833 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2901 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                           ) < 0) {
   wpabuf_free(decrypted);
   wps->state = SEND_WSC_NACK;
@@ -8548,9 +8122,9 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 2868 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2936 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 2868 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2936 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   wps->state = SEND_WSC_NACK;
@@ -8559,9 +8133,9 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
 
  if (*attr.msg_type != WPS_M1 &&
      (attr.registrar_nonce == 
-# 2875 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                              ((void *)0) 
-# 2875 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2943 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                   ||
       memcmp((wps->nonce_r), (attr.registrar_nonce), (16))
                         != 0)) {
@@ -8573,7 +8147,7 @@ static enum wps_process_res wps_process_wsc_msg(struct wps_data *wps,
  case WPS_M1:
   if (wps_validate_m1(msg) < 0)
    return WPS_FAILURE;
-# 2897 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 2965 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   ret = wps_process_m1(wps, &attr);
   break;
  case WPS_M3:
@@ -8628,9 +8202,9 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 2950 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 2950 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8641,11 +8215,11 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 2972 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 2972 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 2972 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3040 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8654,9 +8228,9 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 2979 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 2979 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3047 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8664,7 +8238,7 @@ static enum wps_process_res wps_process_wsc_ack(struct wps_data *wps,
  }
 
  if (wps->state == RECV_M2D_ACK) {
-# 2999 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3067 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No more registrars available - " "terminate negotiation" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                               ;
  }
@@ -8689,9 +8263,9 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 3022 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 3022 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3090 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8702,11 +8276,11 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 3041 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 3041 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 3041 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8715,9 +8289,9 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 3048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 3048 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3116 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8725,16 +8299,16 @@ static enum wps_process_res wps_process_wsc_nack(struct wps_data *wps,
  }
 
  if (attr.config_error == 
-# 3054 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                          ((void *)0)
-# 3054 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3122 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                              ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Configuration Error attribute " "in WSC_NACK" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0)
                     ;
   return WPS_FAILURE;
  }
 
- config_error = WPA_GET_BE16(attr.config_error);
+ config_error = ((u16) (((attr.config_error)[0] << 8) | (attr.config_error)[1]));
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Enrollee terminated negotiation with " "Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", config_error); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Enrollee terminated negotiation with " "Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", config_error); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Enrollee terminated negotiation with " "Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", config_error); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Enrollee terminated negotiation with " "Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", config_error); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Enrollee terminated negotiation with " "Configuration Error %d" "\033[0m" "\n", esp_log_timestamp(), "wpa", config_error); } } while(0); } while(0)
                                             ;
 
@@ -8770,6 +8344,8 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
 
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Received WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Received WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Received WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Received WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Received WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
 
+
+
  if (wps->state != RECV_DONE && (!wps->ext_reg)){
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Unexpected state (%d) for " "receiving WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Unexpected state (%d) for " "receiving WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Unexpected state (%d) for " "receiving WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Unexpected state (%d) for " "receiving WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Unexpected state (%d) for " "receiving WSC_Done" "\033[0m" "\n", esp_log_timestamp(), "wpa", wps->state); } } while(0); } while(0)
                                        ;
@@ -8780,9 +8356,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
   return WPS_FAILURE;
 
  if (attr.msg_type == 
-# 3105 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                      ((void *)0)
-# 3105 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3175 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                          ) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: No Message Type attribute" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
   return WPS_FAILURE;
@@ -8793,11 +8369,11 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
                      ;
   return WPS_FAILURE;
  }
-# 3126 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  if (attr.registrar_nonce == 
-# 3126 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                             ((void *)0) 
-# 3126 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                  ||
      memcmp((wps->nonce_r), (attr.registrar_nonce), (16)) != 0)
  {
@@ -8806,9 +8382,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
  }
 
  if (attr.enrollee_nonce == 
-# 3133 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                            ((void *)0) 
-# 3133 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                                 ||
      memcmp((wps->nonce_e), (attr.enrollee_nonce), (16)) != 0) {
   do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Mismatch in enrollee nonce" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8843,9 +8419,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
 
   free((wps->new_psk));
   wps->new_psk = 
-# 3166 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 3166 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ;
  }
 
@@ -8860,9 +8436,9 @@ static enum wps_process_res wps_process_wsc_done(struct wps_data *wps,
   }
   free((wps->new_psk));
   wps->new_psk = 
-# 3179 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
                 ((void *)0)
-# 3179 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
                     ;
  }
 
@@ -8900,7 +8476,7 @@ enum wps_process_res wps_registrar_process_msg(struct wps_data *wps,
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Processing received message (len=%lu " "op_code=%d)" "\033[0m" "\n", esp_log_timestamp(), "wpa", (unsigned long) wpabuf_len(msg), op_code); } } while(0); } while(0)
 
                                               ;
-# 3251 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3321 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
  switch (op_code) {
  case WSC_MSG:
   return wps_process_wsc_msg(wps, msg);
@@ -8934,12 +8510,12 @@ int wps_registrar_update_ie(struct wps_registrar *reg)
 {
  return wps_set_ie(reg);
 }
-# 3320 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 static void wps_registrar_sel_reg_union(struct wps_registrar *reg)
 {
-# 3344 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 }
-# 3354 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3439 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
 void wps_registrar_selected_registrar_changed(struct wps_registrar *reg)
 {
  do { if ( 3 >= ESP_LOG_DEBUG ) do { if (ESP_LOG_DEBUG==ESP_LOG_ERROR ) { esp_log_write(ESP_LOG_ERROR, "wpa", "\033[0;" "31" "m" "E" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_WARN ) { esp_log_write(ESP_LOG_WARN, "wpa", "\033[0;" "33" "m" "W" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_DEBUG ) { esp_log_write(ESP_LOG_DEBUG, "wpa", "D" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else if (ESP_LOG_DEBUG==ESP_LOG_VERBOSE ) { esp_log_write(ESP_LOG_VERBOSE, "wpa", "V" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } else { esp_log_write(ESP_LOG_INFO, "wpa", "\033[0;" "32" "m" "I" " (%d) %s: " "WPS: Selected registrar information changed" "\033[0m" "\n", esp_log_timestamp(), "wpa"); } } while(0); } while(0);
@@ -8990,9 +8566,9 @@ int wps_registrar_get_info(struct wps_registrar *reg, const u8 *addr,
 
  d = wps_device_get(reg, addr);
  if (d == 
-# 3403 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
+# 3488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c" 3 4
          ((void *)0)
-# 3403 "/home/dieter/Development/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
+# 3488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/wpa_supplicant/src/wps/wps_registrar.c"
              )
   return 0;
  if (uuid_bin2str(d->uuid, uuid, sizeof(uuid)))

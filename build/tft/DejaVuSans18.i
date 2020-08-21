@@ -1,9 +1,9 @@
-# 1 "/home/dieter/Development/ProjektEi/components/tft/DejaVuSans18.c"
-# 1 "/home/dieter/Development/ProjektEi/build/tft//"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans18.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/tft//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/ProjektEi/components/tft/DejaVuSans18.c"
-# 30 "/home/dieter/Development/ProjektEi/components/tft/DejaVuSans18.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans18.c"
+# 30 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans18.c"
 const unsigned char tft_Dejavu18[] =
 {
 0x00, 0x12, 0x00, 0x00,

@@ -8,7 +8,8 @@
 #define _TFTSPI_H_
 
 
-#include "spi_master_lobo.h"
+#include "tftspi.h"
+#include "../spidriver/spi_master_lobo.h"
 #include "sdkconfig.h"
 #include "stmpe610.h"
 

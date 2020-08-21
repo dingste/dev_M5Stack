@@ -20,7 +20,7 @@
 #include <stdio.h>
 #include <string>
 extern "C" {
-#include "../../../../../../components/tft/tft.h"
+#include "../../../../../components/tft/tft.h"
 }
     
 struct point {

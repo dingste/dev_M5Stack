@@ -1,24 +1,24 @@
-# 1 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
-# 1 "/home/dieter/Development/ProjektEi/build/jsmn//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/jsmn//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
-# 31 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
-# 1 "/home/dieter/Development/esp-idf/components/jsmn/include/jsmn.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/jsmn/include/jsmn.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/include/jsmn.h" 1
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/include/jsmn.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 35 "/home/dieter/Development/esp-idf/components/jsmn/include/jsmn.h" 2
-# 47 "/home/dieter/Development/esp-idf/components/jsmn/include/jsmn.h"
+# 35 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/include/jsmn.h" 2
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/include/jsmn.h"
 
-# 47 "/home/dieter/Development/esp-idf/components/jsmn/include/jsmn.h"
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/include/jsmn.h"
 typedef enum {
  JSMN_UNDEFINED = 0,
  JSMN_OBJECT = 1,
@@ -73,7 +73,7 @@ void jsmn_init(jsmn_parser *parser);
 
 int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
   jsmntok_t *tokens, unsigned int num_tokens);
-# 32 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 2
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 2
 
 
 
@@ -83,9 +83,9 @@ static jsmntok_t *jsmn_alloc_token(jsmn_parser *parser,
  jsmntok_t *tok;
  if (parser->toknext >= num_tokens) {
   return 
-# 40 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
         ((void *)0)
-# 40 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
             ;
  }
  tok = &tokens[parser->toknext++];
@@ -141,18 +141,18 @@ static int jsmn_parse_primitive(jsmn_parser *parser, const char *js,
 
 found:
  if (tokens == 
-# 94 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
               ((void *)0)
-# 94 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                   ) {
   parser->pos--;
   return 0;
  }
  token = jsmn_alloc_token(parser, tokens, num_tokens);
  if (token == 
-# 99 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 99 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
              ((void *)0)
-# 99 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 99 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                  ) {
   parser->pos = start;
   return JSMN_ERROR_NOMEM;
@@ -183,17 +183,17 @@ static int jsmn_parse_string(jsmn_parser *parser, const char *js,
 
   if (c == '\"') {
    if (tokens == 
-# 128 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                 ((void *)0)
-# 128 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 128 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                     ) {
     return 0;
    }
    token = jsmn_alloc_token(parser, tokens, num_tokens);
    if (token == 
-# 132 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                ((void *)0)
-# 132 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                    ) {
     parser->pos = start;
     return JSMN_ERROR_NOMEM;
@@ -259,17 +259,17 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
    case '{': case '[':
     count++;
     if (tokens == 
-# 196 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                  ((void *)0)
-# 196 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                      ) {
      break;
     }
     token = jsmn_alloc_token(parser, tokens, num_tokens);
     if (token == 
-# 200 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                 ((void *)0)
-# 200 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                     )
      return JSMN_ERROR_NOMEM;
     if (parser->toksuper != -1) {
@@ -284,13 +284,13 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
     break;
    case '}': case ']':
     if (tokens == 
-# 213 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                  ((void *)0)
-# 213 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                      )
      break;
     type = (c == '}' ? JSMN_OBJECT : JSMN_ARRAY);
-# 236 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 236 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
     for (i = parser->toknext - 1; i >= 0; i--) {
      token = &tokens[i];
      if (token->start != -1 && token->end == -1) {
@@ -318,9 +318,9 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
     if (r < 0) return r;
     count++;
     if (parser->toksuper != -1 && tokens != 
-# 262 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                                            ((void *)0)
-# 262 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                                                )
      tokens[parser->toksuper].size++;
     break;
@@ -331,9 +331,9 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
     break;
    case ',':
     if (tokens != 
-# 271 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                  ((void *)0) 
-# 271 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                       && parser->toksuper != -1 &&
       tokens[parser->toksuper].type != JSMN_ARRAY &&
       tokens[parser->toksuper].type != JSMN_OBJECT) {
@@ -351,16 +351,16 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
 
     }
     break;
-# 303 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 303 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
    default:
 
     r = jsmn_parse_primitive(parser, js, len, tokens, num_tokens);
     if (r < 0) return r;
     count++;
     if (parser->toksuper != -1 && tokens != 
-# 308 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
                                            ((void *)0)
-# 308 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                                                )
      tokens[parser->toksuper].size++;
     break;
@@ -374,9 +374,9 @@ int jsmn_parse(jsmn_parser *parser, const char *js, size_t len,
  }
 
  if (tokens != 
-# 320 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c" 3 4
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c" 3 4
               ((void *)0)
-# 320 "/home/dieter/Development/esp-idf/components/jsmn/src/jsmn.c"
+# 320 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/jsmn/src/jsmn.c"
                   ) {
   for (i = parser->toknext - 1; i >= 0; i--) {
 

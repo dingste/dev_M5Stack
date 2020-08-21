@@ -3,10 +3,14 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := projekt_ei
-IDF_PATH=/home/dieter/Development/esp-idf
+PROJECT_NAME := dev_M5Stack
+PROJECT_DIR = ${CURDIR}
+#/home/dieter/Develop/oxypoint-am/Microprocessors/MicroprocessorESP
+
 CFLAGS		?= -std=gnu99 -Os -Wall
-CXXFLAGS += -DDEBUG -Os -g -std=gnu++11 -Wall
+CXXFLAGS += -DDEBUG -O1 -g -std=gnu++11 -Wall
 EXTRA_CFLAGS += --save-temps
+
+# IDF_PATH=$(PROJECT_DIR)/../../esp-idf
 include $(IDF_PATH)/make/project.mk
 

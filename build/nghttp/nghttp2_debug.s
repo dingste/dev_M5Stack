@@ -6,17 +6,14 @@
 	.global	nghttp2_set_debug_vprintf_callback
 	.type	nghttp2_set_debug_vprintf_callback, @function
 nghttp2_set_debug_vprintf_callback:
+.LFB0:
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.c"
+	.loc 1 56 0
 .LVL0:
-.LFB3:
-	.file 1 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.c"
-	.loc 1 56 60 view -0
-	.loc 1 56 60 is_stmt 0 view .LVU1
 	entry	sp, 32
 .LCFI0:
-	.loc 1 57 3 is_stmt 1 view .LVU2
-	.loc 1 58 1 is_stmt 0 view .LVU3
 	retw.n
-.LFE3:
+.LFE0:
 	.size	nghttp2_set_debug_vprintf_callback, .-nghttp2_set_debug_vprintf_callback
 	.section	.debug_frame,"",@progbits
 .Lframe0:
@@ -37,10 +34,10 @@ nghttp2_set_debug_vprintf_callback:
 	.4byte	.LEFDE0-.LASFDE0
 .LASFDE0:
 	.4byte	.Lframe0
-	.4byte	.LFB3
-	.4byte	.LFE3-.LFB3
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.byte	0x4
-	.4byte	.LCFI0-.LFB3
+	.4byte	.LCFI0-.LFB0
 	.byte	0xe
 	.uleb128 0x20
 	.align	4
@@ -48,25 +45,19 @@ nghttp2_set_debug_vprintf_callback:
 	.text
 .Letext0:
 	.file 2 "<built-in>"
-	.file 3 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h"
-	.file 4 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h"
-	.file 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h"
-	.file 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h"
-	.file 7 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h"
-	.file 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h"
-	.file 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h"
-	.file 10 "/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/includes/nghttp2/nghttp2.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x9a1
+	.4byte	0x10b
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF127
+	.4byte	.LASF17
 	.byte	0xc
-	.4byte	.LASF128
-	.4byte	.LASF129
+	.4byte	.LASF18
+	.4byte	.LASF19
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -103,28 +94,27 @@ nghttp2_set_debug_vprintf_callback:
 	.byte	0x7
 	.4byte	.LASF6
 	.uleb128 0x4
-	.4byte	.LASF10
+	.4byte	.LASF14
 	.byte	0x3
 	.byte	0x28
-	.byte	0x1b
-	.4byte	0x69
+	.4byte	0x68
 	.uleb128 0x5
-	.4byte	.LASF130
+	.4byte	.LASF20
 	.byte	0xc
 	.byte	0x2
 	.byte	0
-	.4byte	0x9a
+	.4byte	0x99
 	.uleb128 0x6
 	.4byte	.LASF7
 	.byte	0x2
 	.byte	0
-	.4byte	0x9a
+	.4byte	0x99
 	.byte	0
 	.uleb128 0x6
 	.4byte	.LASF8
 	.byte	0x2
 	.byte	0
-	.4byte	0x9a
+	.4byte	0x99
 	.byte	0x4
 	.uleb128 0x6
 	.4byte	.LASF9
@@ -135,1182 +125,60 @@ nghttp2_set_debug_vprintf_callback:
 	.byte	0
 	.uleb128 0x7
 	.byte	0x4
-	.uleb128 0x4
-	.4byte	.LASF11
-	.byte	0x4
-	.byte	0x2e
-	.byte	0x18
-	.4byte	0x5d
-	.uleb128 0x4
-	.4byte	.LASF12
-	.byte	0x5
-	.byte	0xb
-	.byte	0xd
-	.4byte	0x41
-	.uleb128 0x4
-	.4byte	.LASF13
-	.byte	0x5
-	.byte	0xc
-	.byte	0x11
-	.4byte	0xa8
 	.uleb128 0x2
 	.byte	0x4
 	.byte	0x5
-	.4byte	.LASF14
+	.4byte	.LASF10
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF11
+	.uleb128 0x2
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF12
+	.uleb128 0x2
+	.byte	0x1
+	.byte	0x8
+	.4byte	.LASF13
+	.uleb128 0x8
+	.byte	0x4
+	.4byte	0xbd
+	.uleb128 0x9
+	.4byte	0xb0
 	.uleb128 0x4
 	.4byte	.LASF15
-	.byte	0x6
-	.byte	0x2c
-	.byte	0xe
-	.4byte	0xc0
-	.uleb128 0x4
+	.byte	0x3
+	.byte	0x62
+	.4byte	0x5d
+	.uleb128 0xa
 	.4byte	.LASF16
-	.byte	0x6
-	.byte	0x72
-	.byte	0xe
-	.4byte	0xc0
-	.uleb128 0x8
-	.4byte	.LASF17
-	.byte	0x7
-	.2byte	0x165
-	.byte	0x16
-	.4byte	0x48
-	.uleb128 0x9
 	.byte	0x4
-	.byte	0x6
-	.byte	0xa6
-	.byte	0x3
-	.4byte	0x10e
-	.uleb128 0xa
-	.4byte	.LASF18
-	.byte	0x6
-	.byte	0xa8
-	.byte	0xc
+	.2byte	0x1491
+	.4byte	0xd9
+	.uleb128 0x8
+	.byte	0x4
 	.4byte	0xdf
-	.uleb128 0xa
-	.4byte	.LASF19
-	.byte	0x6
-	.byte	0xa9
-	.byte	0x13
-	.4byte	0x10e
-	.byte	0
 	.uleb128 0xb
-	.4byte	0x2c
-	.4byte	0x11e
+	.4byte	0xef
 	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x3
+	.4byte	0xb7
+	.uleb128 0xc
+	.4byte	0xc2
 	.byte	0
 	.uleb128 0xd
-	.byte	0x8
-	.byte	0x6
-	.byte	0xa3
-	.byte	0x9
-	.4byte	0x142
-	.uleb128 0xe
-	.4byte	.LASF20
-	.byte	0x6
-	.byte	0xa5
-	.byte	0x7
-	.4byte	0x41
-	.byte	0
-	.uleb128 0xe
 	.4byte	.LASF21
-	.byte	0x6
-	.byte	0xaa
-	.byte	0x5
-	.4byte	0xec
-	.byte	0x4
-	.byte	0
-	.uleb128 0x4
-	.4byte	.LASF22
-	.byte	0x6
-	.byte	0xab
-	.byte	0x3
-	.4byte	0x11e
-	.uleb128 0x4
-	.4byte	.LASF23
-	.byte	0x6
-	.byte	0xaf
-	.byte	0x1b
-	.4byte	0xb4
-	.uleb128 0x2
-	.byte	0x4
-	.byte	0x7
-	.4byte	.LASF24
-	.uleb128 0x4
-	.4byte	.LASF25
-	.byte	0x8
-	.byte	0x16
-	.byte	0x17
-	.4byte	0x15a
-	.uleb128 0xf
-	.4byte	.LASF30
-	.byte	0x18
-	.byte	0x8
-	.byte	0x2f
-	.byte	0x8
-	.4byte	0x1c7
-	.uleb128 0xe
-	.4byte	.LASF26
-	.byte	0x8
-	.byte	0x31
-	.byte	0x13
-	.4byte	0x1c7
-	.byte	0
-	.uleb128 0x10
-	.string	"_k"
-	.byte	0x8
-	.byte	0x32
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0xe
-	.4byte	.LASF27
-	.byte	0x8
-	.byte	0x32
-	.byte	0xb
-	.4byte	0x41
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF28
-	.byte	0x8
-	.byte	0x32
-	.byte	0x14
-	.4byte	0x41
-	.byte	0xc
-	.uleb128 0xe
-	.4byte	.LASF29
-	.byte	0x8
-	.byte	0x32
-	.byte	0x1b
-	.4byte	0x41
-	.byte	0x10
-	.uleb128 0x10
-	.string	"_x"
-	.byte	0x8
-	.byte	0x33
-	.byte	0xb
-	.4byte	0x1cd
-	.byte	0x14
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x16d
-	.uleb128 0xb
-	.4byte	0x161
-	.4byte	0x1dd
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.4byte	.LASF31
-	.byte	0x24
-	.byte	0x8
-	.byte	0x37
-	.byte	0x8
-	.4byte	0x260
-	.uleb128 0xe
-	.4byte	.LASF32
-	.byte	0x8
-	.byte	0x39
-	.byte	0x7
-	.4byte	0x41
-	.byte	0
-	.uleb128 0xe
-	.4byte	.LASF33
-	.byte	0x8
-	.byte	0x3a
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0xe
-	.4byte	.LASF34
-	.byte	0x8
-	.byte	0x3b
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF35
-	.byte	0x8
-	.byte	0x3c
-	.byte	0x7
-	.4byte	0x41
-	.byte	0xc
-	.uleb128 0xe
-	.4byte	.LASF36
-	.byte	0x8
-	.byte	0x3d
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x10
-	.uleb128 0xe
-	.4byte	.LASF37
-	.byte	0x8
-	.byte	0x3e
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x14
-	.uleb128 0xe
-	.4byte	.LASF38
-	.byte	0x8
-	.byte	0x3f
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x18
-	.uleb128 0xe
-	.4byte	.LASF39
-	.byte	0x8
-	.byte	0x40
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x1c
-	.uleb128 0xe
-	.4byte	.LASF40
-	.byte	0x8
-	.byte	0x41
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x20
-	.byte	0
-	.uleb128 0x12
-	.4byte	.LASF41
-	.2byte	0x108
-	.byte	0x8
-	.byte	0x4a
-	.byte	0x8
-	.4byte	0x2a5
-	.uleb128 0xe
-	.4byte	.LASF42
-	.byte	0x8
-	.byte	0x4b
-	.byte	0x9
-	.4byte	0x2a5
-	.byte	0
-	.uleb128 0xe
-	.4byte	.LASF43
-	.byte	0x8
-	.byte	0x4c
-	.byte	0x9
-	.4byte	0x2a5
-	.byte	0x80
-	.uleb128 0x13
-	.4byte	.LASF44
-	.byte	0x8
-	.byte	0x4e
-	.byte	0xa
-	.4byte	0x161
-	.2byte	0x100
-	.uleb128 0x13
-	.4byte	.LASF45
-	.byte	0x8
-	.byte	0x51
-	.byte	0xa
-	.4byte	0x161
-	.2byte	0x104
-	.byte	0
-	.uleb128 0xb
-	.4byte	0x9a
-	.4byte	0x2b5
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x1f
-	.byte	0
-	.uleb128 0xf
-	.4byte	.LASF46
-	.byte	0x8c
-	.byte	0x8
-	.byte	0x55
-	.byte	0x8
-	.4byte	0x2f7
-	.uleb128 0xe
-	.4byte	.LASF26
-	.byte	0x8
-	.byte	0x56
-	.byte	0x12
-	.4byte	0x2f7
-	.byte	0
-	.uleb128 0xe
-	.4byte	.LASF47
-	.byte	0x8
-	.byte	0x57
-	.byte	0x6
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0xe
-	.4byte	.LASF48
-	.byte	0x8
-	.byte	0x58
-	.byte	0x9
-	.4byte	0x2fd
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF49
-	.byte	0x8
-	.byte	0x59
-	.byte	0x20
-	.4byte	0x314
-	.byte	0x88
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x2b5
-	.uleb128 0xb
-	.4byte	0x30d
-	.4byte	0x30d
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x1f
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x313
-	.uleb128 0x14
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x260
-	.uleb128 0xf
-	.4byte	.LASF50
-	.byte	0x8
-	.byte	0x8
-	.byte	0x75
-	.byte	0x8
-	.4byte	0x342
-	.uleb128 0xe
-	.4byte	.LASF51
-	.byte	0x8
-	.byte	0x76
-	.byte	0x11
-	.4byte	0x342
-	.byte	0
-	.uleb128 0xe
-	.4byte	.LASF52
-	.byte	0x8
-	.byte	0x77
-	.byte	0x6
-	.4byte	0x41
-	.byte	0x4
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x2c
-	.uleb128 0xf
-	.4byte	.LASF53
-	.byte	0x20
-	.byte	0x8
-	.byte	0x99
-	.byte	0x8
-	.4byte	0x3bb
-	.uleb128 0x10
-	.string	"_p"
-	.byte	0x8
-	.byte	0x9a
-	.byte	0x12
-	.4byte	0x342
-	.byte	0
-	.uleb128 0x10
-	.string	"_r"
-	.byte	0x8
-	.byte	0x9b
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0x10
-	.string	"_w"
-	.byte	0x8
-	.byte	0x9c
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF54
-	.byte	0x8
-	.byte	0x9d
-	.byte	0x9
-	.4byte	0x33
-	.byte	0xc
-	.uleb128 0xe
-	.4byte	.LASF55
-	.byte	0x8
-	.byte	0x9e
-	.byte	0x9
-	.4byte	0x33
-	.byte	0xe
-	.uleb128 0x10
-	.string	"_bf"
-	.byte	0x8
-	.byte	0x9f
-	.byte	0x11
-	.4byte	0x31a
-	.byte	0x10
-	.uleb128 0xe
-	.4byte	.LASF56
-	.byte	0x8
-	.byte	0xa0
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x18
-	.uleb128 0xe
-	.4byte	.LASF57
-	.byte	0x8
-	.byte	0xa2
-	.byte	0x12
-	.4byte	0x51f
-	.byte	0x1c
-	.byte	0
-	.uleb128 0x15
-	.4byte	0x348
-	.uleb128 0x16
-	.4byte	.LASF58
-	.byte	0xf0
-	.byte	0x8
-	.2byte	0x174
-	.byte	0x8
-	.4byte	0x51f
-	.uleb128 0x17
-	.4byte	.LASF59
-	.byte	0x8
-	.2byte	0x178
-	.byte	0x7
-	.4byte	0x41
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF60
-	.byte	0x8
-	.2byte	0x17d
-	.byte	0xb
-	.4byte	0x772
-	.byte	0x4
-	.uleb128 0x17
-	.4byte	.LASF61
-	.byte	0x8
-	.2byte	0x17d
-	.byte	0x14
-	.4byte	0x772
-	.byte	0x8
-	.uleb128 0x17
-	.4byte	.LASF62
-	.byte	0x8
-	.2byte	0x17d
-	.byte	0x1e
-	.4byte	0x772
-	.byte	0xc
-	.uleb128 0x17
-	.4byte	.LASF63
-	.byte	0x8
-	.2byte	0x17f
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x10
-	.uleb128 0x17
-	.4byte	.LASF64
-	.byte	0x8
-	.2byte	0x181
-	.byte	0x9
-	.4byte	0x686
-	.byte	0x14
-	.uleb128 0x17
-	.4byte	.LASF65
-	.byte	0x8
-	.2byte	0x183
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x18
-	.uleb128 0x17
-	.4byte	.LASF66
-	.byte	0x8
-	.2byte	0x185
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x1c
-	.uleb128 0x17
-	.4byte	.LASF67
-	.byte	0x8
-	.2byte	0x186
-	.byte	0x16
-	.4byte	0x8da
-	.byte	0x20
-	.uleb128 0x18
-	.string	"_mp"
-	.byte	0x8
-	.2byte	0x188
-	.byte	0x12
-	.4byte	0x8e0
-	.byte	0x24
-	.uleb128 0x17
-	.4byte	.LASF68
-	.byte	0x8
-	.2byte	0x18a
-	.byte	0xa
-	.4byte	0x8f1
-	.byte	0x28
-	.uleb128 0x17
-	.4byte	.LASF69
-	.byte	0x8
-	.2byte	0x18c
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x2c
-	.uleb128 0x17
-	.4byte	.LASF70
-	.byte	0x8
-	.2byte	0x18f
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x30
-	.uleb128 0x17
-	.4byte	.LASF71
-	.byte	0x8
-	.2byte	0x190
-	.byte	0x9
-	.4byte	0x686
-	.byte	0x34
-	.uleb128 0x17
-	.4byte	.LASF72
-	.byte	0x8
-	.2byte	0x192
-	.byte	0x13
-	.4byte	0x8f7
-	.byte	0x38
-	.uleb128 0x17
-	.4byte	.LASF73
-	.byte	0x8
-	.2byte	0x193
-	.byte	0x10
-	.4byte	0x8fd
-	.byte	0x3c
-	.uleb128 0x17
-	.4byte	.LASF74
-	.byte	0x8
-	.2byte	0x194
-	.byte	0x9
-	.4byte	0x686
-	.byte	0x40
-	.uleb128 0x17
-	.4byte	.LASF75
-	.byte	0x8
-	.2byte	0x197
-	.byte	0xb
-	.4byte	0x90e
-	.byte	0x44
-	.uleb128 0x17
-	.4byte	.LASF46
-	.byte	0x8
-	.2byte	0x19b
-	.byte	0x13
-	.4byte	0x2f7
-	.byte	0x48
-	.uleb128 0x17
-	.4byte	.LASF76
-	.byte	0x8
-	.2byte	0x19c
-	.byte	0x12
-	.4byte	0x2b5
-	.byte	0x4c
-	.uleb128 0x17
-	.4byte	.LASF77
-	.byte	0x8
-	.2byte	0x19f
-	.byte	0x10
-	.4byte	0x733
-	.byte	0xd8
-	.uleb128 0x17
-	.4byte	.LASF78
-	.byte	0x8
-	.2byte	0x1a0
-	.byte	0xb
-	.4byte	0x772
-	.byte	0xe4
-	.uleb128 0x17
-	.4byte	.LASF79
-	.byte	0x8
-	.2byte	0x1a1
-	.byte	0x17
-	.4byte	0x91a
-	.byte	0xe8
-	.uleb128 0x17
-	.4byte	.LASF80
-	.byte	0x8
-	.2byte	0x1a2
-	.byte	0x9
-	.4byte	0x686
-	.byte	0xec
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x3c0
-	.uleb128 0xf
-	.4byte	.LASF81
-	.byte	0x68
-	.byte	0x8
-	.byte	0xb5
-	.byte	0x8
-	.4byte	0x668
-	.uleb128 0x10
-	.string	"_p"
-	.byte	0x8
-	.byte	0xb6
-	.byte	0x12
-	.4byte	0x342
-	.byte	0
-	.uleb128 0x10
-	.string	"_r"
-	.byte	0x8
-	.byte	0xb7
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0x10
-	.string	"_w"
-	.byte	0x8
-	.byte	0xb8
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x8
-	.uleb128 0xe
-	.4byte	.LASF54
-	.byte	0x8
-	.byte	0xb9
-	.byte	0x9
-	.4byte	0x33
-	.byte	0xc
-	.uleb128 0xe
-	.4byte	.LASF55
-	.byte	0x8
-	.byte	0xba
-	.byte	0x9
-	.4byte	0x33
-	.byte	0xe
-	.uleb128 0x10
-	.string	"_bf"
-	.byte	0x8
-	.byte	0xbb
-	.byte	0x11
-	.4byte	0x31a
-	.byte	0x10
-	.uleb128 0xe
-	.4byte	.LASF56
-	.byte	0x8
-	.byte	0xbc
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x18
-	.uleb128 0xe
-	.4byte	.LASF57
-	.byte	0x8
-	.byte	0xbf
-	.byte	0x12
-	.4byte	0x51f
-	.byte	0x1c
-	.uleb128 0xe
-	.4byte	.LASF82
-	.byte	0x8
-	.byte	0xc3
-	.byte	0xa
-	.4byte	0x9a
-	.byte	0x20
-	.uleb128 0xe
-	.4byte	.LASF83
-	.byte	0x8
-	.byte	0xc5
-	.byte	0x9
-	.4byte	0x698
-	.byte	0x24
-	.uleb128 0xe
-	.4byte	.LASF84
-	.byte	0x8
-	.byte	0xc7
-	.byte	0x9
-	.4byte	0x6c2
-	.byte	0x28
-	.uleb128 0xe
-	.4byte	.LASF85
-	.byte	0x8
-	.byte	0xca
-	.byte	0xd
-	.4byte	0x6e6
-	.byte	0x2c
-	.uleb128 0xe
-	.4byte	.LASF86
-	.byte	0x8
-	.byte	0xcb
-	.byte	0x9
-	.4byte	0x700
-	.byte	0x30
-	.uleb128 0x10
-	.string	"_ub"
-	.byte	0x8
-	.byte	0xce
-	.byte	0x11
-	.4byte	0x31a
-	.byte	0x34
-	.uleb128 0x10
-	.string	"_up"
-	.byte	0x8
-	.byte	0xcf
-	.byte	0x12
-	.4byte	0x342
-	.byte	0x3c
-	.uleb128 0x10
-	.string	"_ur"
-	.byte	0x8
-	.byte	0xd0
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x40
-	.uleb128 0xe
-	.4byte	.LASF87
-	.byte	0x8
-	.byte	0xd3
-	.byte	0x11
-	.4byte	0x706
-	.byte	0x44
-	.uleb128 0xe
-	.4byte	.LASF88
-	.byte	0x8
-	.byte	0xd4
-	.byte	0x11
-	.4byte	0x716
-	.byte	0x47
-	.uleb128 0x10
-	.string	"_lb"
-	.byte	0x8
-	.byte	0xd7
-	.byte	0x11
-	.4byte	0x31a
-	.byte	0x48
-	.uleb128 0xe
-	.4byte	.LASF89
-	.byte	0x8
-	.byte	0xda
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x50
-	.uleb128 0xe
-	.4byte	.LASF90
-	.byte	0x8
-	.byte	0xdb
-	.byte	0xa
-	.4byte	0xc7
-	.byte	0x54
-	.uleb128 0xe
-	.4byte	.LASF91
-	.byte	0x8
-	.byte	0xe2
-	.byte	0xc
-	.4byte	0x14e
-	.byte	0x58
-	.uleb128 0xe
-	.4byte	.LASF92
-	.byte	0x8
-	.byte	0xe4
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x5c
-	.uleb128 0xe
-	.4byte	.LASF93
-	.byte	0x8
-	.byte	0xe5
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x64
-	.byte	0
-	.uleb128 0x19
-	.4byte	0x41
-	.4byte	0x686
-	.uleb128 0x1a
-	.4byte	0x51f
-	.uleb128 0x1a
-	.4byte	0x9a
-	.uleb128 0x1a
-	.4byte	0x686
-	.uleb128 0x1a
-	.4byte	0x41
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x68c
-	.uleb128 0x2
-	.byte	0x1
-	.byte	0x8
-	.4byte	.LASF94
-	.uleb128 0x15
-	.4byte	0x68c
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x668
-	.uleb128 0x19
-	.4byte	0x41
-	.4byte	0x6bc
-	.uleb128 0x1a
-	.4byte	0x51f
-	.uleb128 0x1a
-	.4byte	0x9a
-	.uleb128 0x1a
-	.4byte	0x6bc
-	.uleb128 0x1a
-	.4byte	0x41
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x693
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x69e
-	.uleb128 0x19
-	.4byte	0xd3
-	.4byte	0x6e6
-	.uleb128 0x1a
-	.4byte	0x51f
-	.uleb128 0x1a
-	.4byte	0x9a
-	.uleb128 0x1a
-	.4byte	0xd3
-	.uleb128 0x1a
-	.4byte	0x41
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x6c8
-	.uleb128 0x19
-	.4byte	0x41
-	.4byte	0x700
-	.uleb128 0x1a
-	.4byte	0x51f
-	.uleb128 0x1a
-	.4byte	0x9a
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x6ec
-	.uleb128 0xb
-	.4byte	0x2c
-	.4byte	0x716
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x2
-	.byte	0
-	.uleb128 0xb
-	.4byte	0x2c
-	.4byte	0x726
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.4byte	.LASF95
-	.byte	0x8
-	.2byte	0x11f
-	.byte	0x18
-	.4byte	0x525
-	.uleb128 0x16
-	.4byte	.LASF96
-	.byte	0xc
-	.byte	0x8
-	.2byte	0x123
-	.byte	0x8
-	.4byte	0x76c
-	.uleb128 0x17
-	.4byte	.LASF26
-	.byte	0x8
-	.2byte	0x125
-	.byte	0x11
-	.4byte	0x76c
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF97
-	.byte	0x8
-	.2byte	0x126
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0x17
-	.4byte	.LASF98
-	.byte	0x8
-	.2byte	0x127
-	.byte	0xb
-	.4byte	0x772
-	.byte	0x8
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x733
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x726
-	.uleb128 0x16
-	.4byte	.LASF99
-	.byte	0x18
-	.byte	0x8
-	.2byte	0x13f
-	.byte	0x8
-	.4byte	0x7bf
-	.uleb128 0x17
-	.4byte	.LASF100
-	.byte	0x8
-	.2byte	0x140
-	.byte	0x12
-	.4byte	0x7bf
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF101
-	.byte	0x8
-	.2byte	0x141
-	.byte	0x12
-	.4byte	0x7bf
-	.byte	0x6
-	.uleb128 0x17
-	.4byte	.LASF102
-	.byte	0x8
-	.2byte	0x142
-	.byte	0x12
-	.4byte	0x3a
-	.byte	0xc
-	.uleb128 0x17
-	.4byte	.LASF103
-	.byte	0x8
-	.2byte	0x145
-	.byte	0x24
-	.4byte	0x56
-	.byte	0x10
-	.byte	0
-	.uleb128 0xb
-	.4byte	0x3a
-	.4byte	0x7cf
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x2
-	.byte	0
-	.uleb128 0x16
-	.4byte	.LASF104
-	.byte	0x10
-	.byte	0x8
-	.2byte	0x158
-	.byte	0x8
-	.4byte	0x816
-	.uleb128 0x17
-	.4byte	.LASF105
-	.byte	0x8
-	.2byte	0x15b
-	.byte	0x13
-	.4byte	0x1c7
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF106
-	.byte	0x8
-	.2byte	0x15c
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x4
-	.uleb128 0x17
-	.4byte	.LASF107
-	.byte	0x8
-	.2byte	0x15d
-	.byte	0x13
-	.4byte	0x1c7
-	.byte	0x8
-	.uleb128 0x17
-	.4byte	.LASF108
-	.byte	0x8
-	.2byte	0x15e
-	.byte	0x14
-	.4byte	0x816
-	.byte	0xc
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x1c7
-	.uleb128 0x16
-	.4byte	.LASF109
-	.byte	0x50
-	.byte	0x8
-	.2byte	0x162
-	.byte	0x8
-	.4byte	0x8c5
-	.uleb128 0x17
-	.4byte	.LASF110
-	.byte	0x8
-	.2byte	0x165
-	.byte	0x9
-	.4byte	0x686
-	.byte	0
-	.uleb128 0x17
-	.4byte	.LASF111
-	.byte	0x8
-	.2byte	0x166
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x4
-	.uleb128 0x17
-	.4byte	.LASF112
-	.byte	0x8
-	.2byte	0x167
-	.byte	0xe
-	.4byte	0x142
-	.byte	0xc
-	.uleb128 0x17
-	.4byte	.LASF113
-	.byte	0x8
-	.2byte	0x168
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x14
-	.uleb128 0x17
-	.4byte	.LASF114
-	.byte	0x8
-	.2byte	0x169
-	.byte	0x8
-	.4byte	0x8c5
-	.byte	0x1c
-	.uleb128 0x17
-	.4byte	.LASF115
-	.byte	0x8
-	.2byte	0x16a
-	.byte	0x7
-	.4byte	0x41
-	.byte	0x24
-	.uleb128 0x17
-	.4byte	.LASF116
-	.byte	0x8
-	.2byte	0x16b
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x28
-	.uleb128 0x17
-	.4byte	.LASF117
-	.byte	0x8
-	.2byte	0x16c
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x30
-	.uleb128 0x17
-	.4byte	.LASF118
-	.byte	0x8
-	.2byte	0x16d
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x38
-	.uleb128 0x17
-	.4byte	.LASF119
-	.byte	0x8
-	.2byte	0x16e
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x40
-	.uleb128 0x17
-	.4byte	.LASF120
-	.byte	0x8
-	.2byte	0x16f
-	.byte	0xe
-	.4byte	0x142
-	.byte	0x48
-	.byte	0
-	.uleb128 0xb
-	.4byte	0x68c
-	.4byte	0x8d5
-	.uleb128 0xc
-	.4byte	0x48
-	.byte	0x7
-	.byte	0
-	.uleb128 0x1b
-	.4byte	.LASF131
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x8d5
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x7cf
-	.uleb128 0x1c
-	.4byte	0x8f1
-	.uleb128 0x1a
-	.4byte	0x51f
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x8e6
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x778
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x1dd
-	.uleb128 0x1c
-	.4byte	0x90e
-	.uleb128 0x1a
-	.4byte	0x41
-	.byte	0
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x914
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x903
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x81c
-	.uleb128 0x1d
-	.4byte	.LASF121
-	.byte	0x8
-	.2byte	0x1a5
-	.byte	0x22
-	.4byte	0x3bb
-	.uleb128 0x1d
-	.4byte	.LASF122
-	.byte	0x8
-	.2byte	0x1a6
-	.byte	0x22
-	.4byte	0x3bb
-	.uleb128 0x1d
-	.4byte	.LASF123
-	.byte	0x8
-	.2byte	0x1a7
-	.byte	0x22
-	.4byte	0x3bb
-	.uleb128 0x1d
-	.4byte	.LASF124
-	.byte	0x8
-	.2byte	0x30a
-	.byte	0x18
-	.4byte	0x51f
-	.uleb128 0x1e
-	.4byte	.LASF125
-	.byte	0x9
-	.byte	0x67
-	.byte	0xe
-	.4byte	0x686
-	.uleb128 0x8
-	.4byte	.LASF126
-	.byte	0xa
-	.2byte	0x1491
-	.byte	0x10
-	.4byte	0x96d
-	.uleb128 0x11
-	.byte	0x4
-	.4byte	0x973
-	.uleb128 0x1c
-	.4byte	0x983
-	.uleb128 0x1a
-	.4byte	0x6bc
-	.uleb128 0x1a
-	.4byte	0x9c
-	.byte	0
-	.uleb128 0x1f
-	.4byte	.LASF132
 	.byte	0x1
 	.byte	0x37
-	.byte	0x6
-	.4byte	.LFB3
-	.4byte	.LFE3-.LFB3
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x20
-	.4byte	.LASF133
+	.uleb128 0xe
+	.4byte	.LASF22
 	.byte	0x1
 	.byte	0x38
-	.byte	0x24
-	.4byte	0x960
+	.4byte	0xcd
 	.uleb128 0x1
 	.byte	0x52
 	.byte	0
@@ -1367,8 +235,6 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -1411,210 +277,23 @@ nghttp2_set_debug_vprintf_callback:
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.uleb128 0x16
+	.uleb128 0xf
 	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
 	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.uleb128 0x17
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0x1
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x21
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2f
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0xf
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x10
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x11
-	.uleb128 0xf
-	.byte	0
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x12
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0xb
-	.uleb128 0x5
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x13
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0x5
-	.byte	0
-	.byte	0
-	.uleb128 0x14
-	.uleb128 0x15
-	.byte	0
-	.uleb128 0x27
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x15
 	.uleb128 0x26
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0xa
 	.uleb128 0x16
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x17
-	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0xe
@@ -1622,59 +301,11 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x18
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x19
-	.uleb128 0x15
-	.byte	0x1
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x1a
-	.uleb128 0x5
-	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1b
-	.uleb128 0x13
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x1c
+	.uleb128 0xb
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x27
@@ -1683,45 +314,14 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x1d
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
+	.uleb128 0xc
 	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
+	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x1e
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x1f
+	.uleb128 0xd
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -1731,8 +331,6 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
@@ -1746,7 +344,7 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x20
+	.uleb128 0xe
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -1754,8 +352,6 @@ nghttp2_set_debug_vprintf_callback:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
@@ -1772,285 +368,63 @@ nghttp2_set_debug_vprintf_callback:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.4byte	.LFB3
-	.4byte	.LFE3-.LFB3
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.4byte	0
 	.4byte	0
 	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.4byte	.LFB3
-	.4byte	.LFE3
+	.4byte	.LFB0
+	.4byte	.LFE0
 	.4byte	0
 	.4byte	0
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF14:
-	.string	"long int"
-.LASF79:
-	.string	"_misc"
-.LASF12:
-	.string	"_lock_t"
-.LASF41:
-	.string	"_on_exit_args"
-.LASF84:
-	.string	"_write"
-.LASF112:
-	.string	"_wctomb_state"
-.LASF72:
-	.string	"_r48"
-.LASF80:
-	.string	"_signal_buf"
-.LASF4:
-	.string	"unsigned int"
-.LASF126:
-	.string	"nghttp2_debug_vprintf_callback"
-.LASF56:
-	.string	"_lbfsize"
-.LASF54:
-	.string	"_flags"
-.LASF59:
-	.string	"_errno"
-.LASF122:
-	.string	"__sf_fake_stdout"
-.LASF13:
-	.string	"_LOCK_RECURSIVE_T"
-.LASF83:
-	.string	"_read"
-.LASF116:
-	.string	"_mbrlen_state"
-.LASF61:
-	.string	"_stdout"
-.LASF16:
-	.string	"_fpos_t"
-.LASF48:
-	.string	"_fns"
-.LASF132:
-	.string	"nghttp2_set_debug_vprintf_callback"
-.LASF82:
-	.string	"_cookie"
-.LASF128:
-	.string	"/home/dieter/Development/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.c"
-.LASF38:
-	.string	"__tm_wday"
-.LASF105:
-	.string	"_result"
-.LASF34:
-	.string	"__tm_hour"
-.LASF20:
-	.string	"__count"
-.LASF133:
-	.string	"debug_vprintf_callback"
-.LASF33:
-	.string	"__tm_min"
-.LASF78:
-	.string	"__sf"
-.LASF99:
-	.string	"_rand48"
-.LASF106:
-	.string	"_result_k"
-.LASF6:
-	.string	"long long unsigned int"
-.LASF74:
-	.string	"_asctime_buf"
-.LASF81:
-	.string	"__sFILE"
-.LASF29:
-	.string	"_wds"
-.LASF95:
-	.string	"__FILE"
-.LASF90:
-	.string	"_offset"
-.LASF87:
-	.string	"_ubuf"
-.LASF8:
-	.string	"__va_reg"
-.LASF64:
-	.string	"_emergency"
-.LASF10:
-	.string	"__gnuc_va_list"
-.LASF32:
-	.string	"__tm_sec"
-.LASF125:
-	.string	"suboptarg"
-.LASF39:
-	.string	"__tm_yday"
-.LASF63:
-	.string	"_inc"
-.LASF47:
-	.string	"_ind"
-.LASF26:
-	.string	"_next"
-.LASF118:
-	.string	"_mbsrtowcs_state"
-.LASF21:
-	.string	"__value"
-.LASF107:
-	.string	"_p5s"
-.LASF120:
-	.string	"_wcsrtombs_state"
-.LASF111:
-	.string	"_mblen_state"
-.LASF94:
-	.string	"char"
-.LASF35:
-	.string	"__tm_mday"
-.LASF75:
-	.string	"_sig_func"
-.LASF117:
-	.string	"_mbrtowc_state"
-.LASF23:
-	.string	"_flock_t"
-.LASF18:
-	.string	"__wch"
-.LASF98:
-	.string	"_iobs"
-.LASF49:
-	.string	"_on_exit_args_ptr"
-.LASF86:
-	.string	"_close"
-.LASF65:
-	.string	"__sdidinit"
-.LASF53:
-	.string	"__sFILE_fake"
-.LASF11:
-	.string	"va_list"
-.LASF60:
-	.string	"_stdin"
-.LASF69:
-	.string	"_gamma_signgam"
 .LASF5:
 	.string	"long long int"
-.LASF51:
-	.string	"_base"
-.LASF108:
-	.string	"_freelist"
-.LASF101:
-	.string	"_mult"
-.LASF25:
-	.string	"__ULong"
-.LASF119:
-	.string	"_wcrtomb_state"
-.LASF55:
-	.string	"_file"
-.LASF68:
-	.string	"__cleanup"
+.LASF4:
+	.string	"unsigned int"
 .LASF22:
-	.string	"_mbstate_t"
-.LASF104:
-	.string	"_mprec"
-.LASF40:
-	.string	"__tm_isdst"
-.LASF36:
-	.string	"__tm_mon"
-.LASF76:
-	.string	"_atexit0"
-.LASF46:
-	.string	"_atexit"
-.LASF92:
-	.string	"_mbstate"
-.LASF9:
-	.string	"__va_ndx"
-.LASF2:
-	.string	"short int"
+	.string	"debug_vprintf_callback"
+.LASF8:
+	.string	"__va_reg"
 .LASF7:
 	.string	"__va_stk"
-.LASF30:
-	.string	"_Bigint"
-.LASF129:
-	.string	"/home/dieter/Development/ProjektEi/build/nghttp"
-.LASF28:
-	.string	"_sign"
-.LASF57:
-	.string	"_data"
-.LASF19:
-	.string	"__wchb"
-.LASF124:
-	.string	"_global_impure_ptr"
-.LASF37:
-	.string	"__tm_year"
-.LASF130:
-	.string	"__va_list_tag"
-.LASF109:
-	.string	"_misc_reent"
-.LASF73:
-	.string	"_localtime_buf"
-.LASF70:
-	.string	"_cvtlen"
-.LASF27:
-	.string	"_maxwds"
-.LASF114:
-	.string	"_l64a_buf"
-.LASF89:
-	.string	"_blksize"
-.LASF31:
-	.string	"__tm"
-.LASF91:
-	.string	"_lock"
-.LASF24:
+.LASF12:
 	.string	"long unsigned int"
-.LASF97:
-	.string	"_niobs"
-.LASF127:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF43:
-	.string	"_dso_handle"
-.LASF71:
-	.string	"_cvtbuf"
+.LASF6:
+	.string	"long long unsigned int"
+.LASF17:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF19:
+	.string	"/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/nghttp"
 .LASF1:
 	.string	"unsigned char"
-.LASF115:
-	.string	"_getdate_err"
-.LASF102:
-	.string	"_add"
-.LASF50:
-	.string	"__sbuf"
-.LASF96:
-	.string	"_glue"
-.LASF77:
-	.string	"__sglue"
-.LASF110:
-	.string	"_strtok_last"
-.LASF113:
-	.string	"_mbtowc_state"
-.LASF67:
-	.string	"_locale"
-.LASF42:
-	.string	"_fnargs"
-.LASF0:
-	.string	"signed char"
-.LASF58:
-	.string	"_reent"
+.LASF13:
+	.string	"char"
+.LASF9:
+	.string	"__va_ndx"
+.LASF10:
+	.string	"long int"
+.LASF16:
+	.string	"nghttp2_debug_vprintf_callback"
+.LASF20:
+	.string	"__va_list_tag"
+.LASF15:
+	.string	"va_list"
+.LASF18:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/nghttp/nghttp2/lib/nghttp2_debug.c"
 .LASF3:
 	.string	"short unsigned int"
-.LASF44:
-	.string	"_fntypes"
-.LASF52:
-	.string	"_size"
-.LASF15:
-	.string	"_off_t"
-.LASF88:
-	.string	"_nbuf"
-.LASF66:
-	.string	"_unspecified_locale_info"
-.LASF123:
-	.string	"__sf_fake_stderr"
-.LASF93:
-	.string	"_flags2"
-.LASF45:
-	.string	"_is_cxa"
-.LASF100:
-	.string	"_seed"
-.LASF103:
-	.string	"_rand_next"
-.LASF131:
-	.string	"__locale_t"
-.LASF85:
-	.string	"_seek"
-.LASF62:
-	.string	"_stderr"
-.LASF17:
-	.string	"wint_t"
-.LASF121:
-	.string	"__sf_fake_stdin"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+.LASF0:
+	.string	"signed char"
+.LASF14:
+	.string	"__gnuc_va_list"
+.LASF2:
+	.string	"short int"
+.LASF21:
+	.string	"nghttp2_set_debug_vprintf_callback"
+.LASF11:
+	.string	"sizetype"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

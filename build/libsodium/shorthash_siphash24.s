@@ -7,12 +7,11 @@
 	.type	crypto_shorthash_siphash24_bytes, @function
 crypto_shorthash_siphash24_bytes:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c"
-	.loc 1 4 40 view -0
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c"
+	.loc 1 4 0
 	entry	sp, 32
 .LCFI0:
-	.loc 1 5 5 view .LVU1
-	.loc 1 6 1 is_stmt 0 view .LVU2
+	.loc 1 6 0
 	movi.n	a2, 8
 	retw.n
 .LFE0:
@@ -23,11 +22,10 @@ crypto_shorthash_siphash24_bytes:
 	.type	crypto_shorthash_siphash24_keybytes, @function
 crypto_shorthash_siphash24_keybytes:
 .LFB1:
-	.loc 1 9 43 is_stmt 1 view -0
+	.loc 1 9 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 10 5 view .LVU4
-	.loc 1 11 1 is_stmt 0 view .LVU5
+	.loc 1 11 0
 	movi.n	a2, 0x10
 	retw.n
 .LFE1:
@@ -73,10 +71,10 @@ crypto_shorthash_siphash24_keybytes:
 .LEFDE2:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x6f
+	.4byte	0x68
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
@@ -84,7 +82,6 @@ crypto_shorthash_siphash24_keybytes:
 	.4byte	.LASF4
 	.byte	0xc
 	.4byte	.LASF5
-	.4byte	.LASF6
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
 	.4byte	.Ldebug_line0
@@ -93,11 +90,10 @@ crypto_shorthash_siphash24_keybytes:
 	.byte	0x5
 	.string	"int"
 	.uleb128 0x3
-	.4byte	.LASF7
+	.4byte	.LASF6
 	.byte	0x2
 	.byte	0xd8
-	.byte	0x16
-	.4byte	0x38
+	.4byte	0x33
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x7
@@ -109,21 +105,19 @@ crypto_shorthash_siphash24_keybytes:
 	.uleb128 0x5
 	.4byte	.LASF2
 	.byte	0x1
-	.byte	0x9
-	.byte	0x1
-	.4byte	0x2c
-	.4byte	.LFB1
-	.4byte	.LFE1-.LFB1
+	.byte	0x4
+	.4byte	0x28
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x5
 	.4byte	.LASF3
 	.byte	0x1
-	.byte	0x4
-	.byte	0x1
-	.4byte	0x2c
-	.4byte	.LFB0
-	.4byte	.LFE0-.LFB0
+	.byte	0x9
+	.4byte	0x28
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
 	.byte	0x9c
 	.byte	0
@@ -137,8 +131,6 @@ crypto_shorthash_siphash24_keybytes:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -168,8 +160,6 @@ crypto_shorthash_siphash24_keybytes:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -195,8 +185,6 @@ crypto_shorthash_siphash24_keybytes:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
@@ -240,18 +228,16 @@ crypto_shorthash_siphash24_keybytes:
 	.section	.debug_str,"MS",@progbits,1
 .LASF0:
 	.string	"unsigned int"
+.LASF6:
+	.string	"size_t"
 .LASF4:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF5:
-	.string	"/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c"
-.LASF2:
-	.string	"crypto_shorthash_siphash24_keybytes"
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
 .LASF3:
+	.string	"crypto_shorthash_siphash24_keybytes"
+.LASF5:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/siphash24/shorthash_siphash24.c"
+.LASF2:
 	.string	"crypto_shorthash_siphash24_bytes"
 .LASF1:
 	.string	"short unsigned int"
-.LASF7:
-	.string	"size_t"
-.LASF6:
-	.string	"/home/dieter/Development/ProjektEi/build/libsodium"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"

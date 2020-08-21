@@ -1,48 +1,48 @@
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
-# 1 "/home/dieter/Development/ProjektEi/build/expat//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/expat//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
-# 33 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 34 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/port/include/expat_config.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/port/include/expat_config.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
-# 141 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h" 1
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 
-# 141 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef char XML_Char;
 typedef char XML_LChar;
-# 154 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/expat_external.h"
+# 154 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/expat_external.h"
 typedef long XML_Index;
 typedef unsigned long XML_Size;
-# 44 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/internal.h" 1
-# 118 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/internal.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h" 1
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/internal.h"
 void
 _INTERNAL_trim_to_complete_utf8_characters(const char * from, const char ** fromLimRef);
-# 45 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 1
-# 42 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.h"
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
-# 140 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 1
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h" 1
+# 140 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct position {
 
   XML_Size lineNumber;
@@ -109,7 +109,7 @@ struct encoding {
   char isUtf8;
   char isUtf16;
 };
-# 290 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmltok.h"
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmltok.h"
 typedef struct {
   ENCODING initEnc;
   const ENCODING **encPtr;
@@ -161,7 +161,7 @@ XmlInitUnknownEncodingNS(void *mem,
                          int *table,
                          CONVERTER convert,
                          void *userData);
-# 43 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 2
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.h" 2
 
 
 
@@ -252,10 +252,10 @@ typedef struct prolog_state {
 void XmlPrologStateInit(PROLOG_STATE *);
 
 void XmlPrologStateInitExternalEntity(PROLOG_STATE *);
-# 46 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
-# 47 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
-# 55 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/ascii.h" 1
+# 47 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c" 2
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
 static const char KW_ANY[] = {
     0x41, 0x4E, 0x59, '\0' };
 static const char KW_ATTLIST[] = {
@@ -310,7 +310,7 @@ static const char KW_REQUIRED[] = {
     '\0' };
 static const char KW_SYSTEM[] = {
     0x53, 0x59, 0x53, 0x54, 0x45, 0x4D, '\0' };
-# 123 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
 typedef int PROLOG_HANDLER(PROLOG_STATE *state,
                                    int tok,
                                    const char *ptr,
@@ -1510,7 +1510,7 @@ declClose(PROLOG_STATE *state,
   }
   return common(state, tok);
 }
-# 1343 "/home/dieter/Development/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
+# 1343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/expat/expat/expat/lib/xmlrole.c"
 static int
 error(PROLOG_STATE *UNUSED_state __attribute__((__unused__)),
       int UNUSED_tok __attribute__((__unused__)),

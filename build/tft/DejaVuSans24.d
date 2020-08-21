@@ -1,3 +1,3 @@
 DejaVuSans24.o: \
- /home/dieter/Development/ProjektEi/components/tft/DejaVuSans24.c
-/home/dieter/Development/ProjektEi/components/tft/./DejaVuSans24.c:
+ /home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/DejaVuSans24.c
+/home/dieter/SoftwareDevelop/others/dev_M5Stack/components/tft/./DejaVuSans24.c:

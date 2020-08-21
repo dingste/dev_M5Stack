@@ -1,115 +1,97 @@
-# 1 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-# 1 "/home/dieter/Development/ProjektEi/build/vfs//"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/vfs//"
 # 1 "<built-in>"
 # 1 "<command-line>"
-# 1 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-# 15 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_newlib_version.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/newlib.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/newlib.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 1
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/features.h" 1 3 4
-# 6 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 193 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-isa.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/config.h" 2 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 2 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/_ansi.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/features.h" 1
+# 6 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-isa.h" 1
+# 190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/config.h" 2
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 2
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/_ansi.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-# 149 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 149 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef int ptrdiff_t;
-# 216 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 216 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int size_t;
-# 328 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef short unsigned int wchar_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 1 3 4
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 1
 
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int8_t;
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
 
-typedef unsigned char __uint8_t;
-# 55 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int16_t;
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_default_types.h"
+typedef signed char __int8_t ;
+typedef unsigned char __uint8_t ;
 
-typedef short unsigned int __uint16_t;
-# 77 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int32_t;
 
+typedef signed short __int16_t;
+typedef unsigned short __uint16_t;
+
+
+typedef signed int __int32_t;
 typedef unsigned int __uint32_t;
-# 103 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int64_t;
-
-typedef long long unsigned int __uint64_t;
-# 134 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef signed char __int_least8_t;
-
-typedef unsigned char __uint_least8_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef short int __int_least16_t;
-
-typedef short unsigned int __uint_least16_t;
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef int __int_least32_t;
-
-typedef unsigned int __uint_least32_t;
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __int_least64_t;
-
-typedef long long unsigned int __uint_least64_t;
-# 214 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_default_types.h" 3 4
-typedef long long int __intmax_t;
 
 
+typedef signed long long __int64_t;
+typedef unsigned long long __uint64_t;
 
 
+typedef __int8_t __int_least8_t;
+typedef __uint8_t __uint_least8_t;
 
 
-
-typedef long long unsigned int __uintmax_t;
-
-
+typedef __int16_t __int_least16_t;
+typedef __uint16_t __uint_least16_t;
 
 
+typedef __int32_t __int_least32_t;
+typedef __uint32_t __uint_least32_t;
 
+
+typedef __int64_t __int_least64_t;
+typedef __uint64_t __uint_least64_t;
 
 
 typedef int __intptr_t;
-
 typedef unsigned int __uintptr_t;
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_types.h" 2 3 4
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 8 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/_types.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 typedef int _lock_t;
 typedef _lock_t _LOCK_RECURSIVE_T;
 typedef _lock_t _LOCK_T;
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/lock.h" 3 4
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/lock.h"
 void _lock_init(_lock_t *lock);
 void _lock_init_recursive(_lock_t *lock);
 void _lock_close(_lock_t *lock);
@@ -120,32 +102,10 @@ int _lock_try_acquire(_lock_t *lock);
 int _lock_try_acquire_recursive(_lock_t *lock);
 void _lock_release(_lock_t *lock);
 void _lock_release_recursive(_lock_t *lock);
-# 26 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
-
-
-typedef long __blkcnt_t;
-
-
-
-typedef long __blksize_t;
-
-
-
-typedef __uint64_t __fsblkcnt_t;
-
-
-
-typedef __uint32_t __fsfilcnt_t;
-
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 typedef long _off_t;
-
-
-
-
-
-typedef int __pid_t;
 
 
 
@@ -160,35 +120,7 @@ typedef unsigned short __gid_t;
 
 
 
-typedef __uint32_t __id_t;
-
-
-
-
-
-
-
-typedef unsigned short __ino_t;
-# 88 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef __uint32_t __mode_t;
-
-
-
-
-
 __extension__ typedef long long _off64_t;
-
-
-
-
-
-typedef _off_t __off_t;
-
-
-typedef _off64_t __loff_t;
-
-
-typedef long __key_t;
 
 
 
@@ -197,21 +129,20 @@ typedef long __key_t;
 
 
 typedef long _fpos_t;
-# 129 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef unsigned int __size_t;
-# 145 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef signed int _ssize_t;
-# 156 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 3 4
-typedef _ssize_t __ssize_t;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 357 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 3 4
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 3 4
 typedef unsigned int wint_t;
-# 160 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_types.h" 2 3 4
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h" 2
 
 
 
+
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_types.h"
 typedef struct
 {
   int __count;
@@ -230,44 +161,7 @@ typedef _LOCK_RECURSIVE_T _flock_t;
 
 
 typedef void *_iconv_t;
-
-
-
-
-
-
-typedef unsigned long __clock_t;
-
-
-
-
-
-
-typedef long __time_t;
-
-
-typedef unsigned long __clockid_t;
-
-
-typedef unsigned long __timer_t;
-
-
-typedef __uint8_t __sa_family_t;
-
-
-
-typedef __uint32_t __socklen_t;
-
-
-typedef unsigned short __nlink_t;
-typedef long __suseconds_t;
-typedef unsigned long __useconds_t;
-
-
-
-
-typedef char * __va_list;
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 2 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h" 2
 
 
 
@@ -275,10 +169,8 @@ typedef char * __va_list;
 
 
 typedef unsigned long __ULong;
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 38 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _reent;
-
-struct __locale_t;
 
 
 
@@ -329,12 +221,12 @@ struct _atexit {
  void (*_fns[32])(void);
         struct _on_exit_args * _on_exit_args_ptr;
 };
-# 117 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sbuf {
  unsigned char *_base;
  int _size;
 };
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE_fake {
   unsigned char *_p;
   int _r;
@@ -351,7 +243,7 @@ struct __sFILE_fake {
 
 
 extern void __sinit (struct _reent *);
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct __sFILE {
   unsigned char *_p;
   int _r;
@@ -368,13 +260,13 @@ struct __sFILE {
 
   void * _cookie;
 
-  int (*_read) (struct _reent *, void *,
-        char *, int);
-  int (*_write) (struct _reent *, void *,
-         const char *,
-         int);
-  _fpos_t (*_seek) (struct _reent *, void *, _fpos_t, int);
-  int (*_close) (struct _reent *, void *);
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
 
 
   struct __sbuf _ub;
@@ -402,7 +294,7 @@ struct __sFILE {
   _mbstate_t _mbstate;
   int _flags2;
 };
-# 287 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 285 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 typedef struct __sFILE __FILE;
 
 
@@ -413,7 +305,7 @@ struct _glue
   int _niobs;
   __FILE *_iobs;
 };
-# 319 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 317 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _rand48 {
   unsigned short _seed[3];
   unsigned short _mult[3];
@@ -423,7 +315,7 @@ struct _rand48 {
   __extension__ unsigned long long _rand_next;
 
 };
-# 344 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
 struct _mprec
 {
 
@@ -469,12 +361,12 @@ struct _reent
 
   int __sdidinit;
 
-  int _unspecified_locale_info;
-  struct __locale_t *_locale;
+  int _current_category;
+  const char *_current_locale;
 
   struct _mprec *_mp;
 
-  void (*__cleanup) (struct _reent *);
+  void (* __cleanup) (struct _reent *);
 
   int _gamma_signgam;
 
@@ -504,8 +396,10 @@ struct _reent
 extern const struct __sFILE_fake __sf_fake_stdin;
 extern const struct __sFILE_fake __sf_fake_stdout;
 extern const struct __sFILE_fake __sf_fake_stderr;
-# 778 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/reent.h" 3 4
-extern struct _reent * _global_impure_ptr ;
+# 458 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern void esp_reent_init(struct _reent* reent);
+# 771 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/reent.h"
+extern struct _reent *_global_impure_ptr ;
 
 void _reclaim_reent (struct _reent *);
 
@@ -514,69 +408,24 @@ void _reclaim_reent (struct _reent *);
 
 
   struct _reent * __getreent (void);
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 46 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/cdefs.h" 2 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/cdefs.h" 2
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/xlocale.h" 3 4
-struct __locale_t;
-typedef struct __locale_t *locale_t;
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 1 3 4
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/strings.h" 3 4
-
-
-int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
-void bcopy(const void *, void *, size_t);
-void bzero(void *, size_t);
-
-
-void explicit_bzero(void *, size_t);
-
-
-int ffs(int) __attribute__((__const__));
-
-
-int ffsl(long) __attribute__((__const__));
-int ffsll(long long) __attribute__((__const__));
-int fls(int) __attribute__((__const__));
-int flsl(long) __attribute__((__const__));
-int flsll(long long) __attribute__((__const__));
-
-
-char *index(const char *, int) __attribute__((__pure__));
-char *rindex(const char *, int) __attribute__((__pure__));
-
-int strcasecmp(const char *, const char *) __attribute__((__pure__));
-int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
-
-
-int strcasecmp_l (const char *, const char *, locale_t);
-int strncasecmp_l (const char *, const char *, size_t, locale_t);
-
-
-# 25 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
 
 void * memchr (const void *, int, size_t);
 int memcmp (const void *, const void *, size_t);
-void * memcpy (void *restrict, const void *restrict, size_t);
+void * memcpy (void * restrict, const void * restrict, size_t);
 void * memmove (void *, const void *, size_t);
 void * memset (void *, int, size_t);
 char *strcat (char *restrict, const char *restrict);
@@ -600,55 +449,69 @@ char *strtok (char *restrict, const char *restrict);
 size_t strxfrm (char *restrict, const char *restrict, size_t);
 
 
-int strcoll_l (const char *, const char *, locale_t);
-char *strerror_l (int, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
 char *strtok_r (char *restrict, const char *restrict, char **restrict);
 
 
-int timingsafe_bcmp (const void *, const void *, size_t);
-int timingsafe_memcmp (const void *, const void *, size_t);
+int bcmp (const void *, const void *, size_t);
+void bcopy (const void *, void *, size_t);
+void bzero (void *, size_t);
+int ffs (int);
+char *index (const char *, int);
 
 
-void * memccpy (void *restrict, const void *restrict, int, size_t);
+void * memccpy (void * restrict, const void * restrict, int, size_t);
 
 
-void * mempcpy (void *, const void *, size_t);
-void * memmem (const void *, size_t, const void *, size_t);
+
+
+
 void * memrchr (const void *, int, size_t);
-void * rawmemchr (const void *, int);
 
+
+
+
+char *rindex (const char *, int);
 
 char *stpcpy (char *restrict, const char *restrict);
 char *stpncpy (char *restrict, const char *restrict, size_t);
 
+int strcasecmp (const char *, const char *);
 
-char *strcasestr (const char *, const char *);
-char *strchrnul (const char *, int);
+
+
+
 
 
 char *strdup (const char *);
 
+
 char *_strdup_r (struct _reent *, const char *);
+
 
 char *strndup (const char *, size_t);
 
+
+
 char *_strndup_r (struct _reent *, const char *, size_t);
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+int strerror_r (int, char *, size_t)
+             __asm__ ("" "__xpg_strerror_r");
 
 
 
 
 
 
-char *strerror_r (int, char *, size_t);
-# 112 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
+
 char * _strerror_r (struct _reent *, int, int, int *);
 
 
 size_t strlcat (char *, const char *, size_t);
 size_t strlcpy (char *, const char *, size_t);
+
+
+int strncasecmp (const char *, const char *, size_t);
+
 
 
 size_t strnlen (const char *, size_t);
@@ -657,7 +520,8 @@ size_t strnlen (const char *, size_t);
 char *strsep (char **, const char *);
 
 
-char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
 
 
 
@@ -667,33 +531,26 @@ char *strupr (char *);
 
 
 char *strsignal (int __signo);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/string.h" 1
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/string.h" 2
 
 
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdbool.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 1 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 
-
-
-
-
-int strverscmp (const char *, const char *);
-# 172 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 3 4
-char *__attribute__((__nonnull__ (1))) basename (const char *) __asm__("" "__gnu_basename");
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/string.h" 1 3 4
-# 176 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/string.h" 2 3 4
-
-
-# 16 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdbool.h" 1 3 4
-# 17 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 1 3 4
-# 40 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __builtin_va_list __gnuc_va_list;
-# 99 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdarg.h" 3 4
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stdarg.h" 3 4
 typedef __gnuc_va_list va_list;
-# 18 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/errno.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/errno.h" 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/errno.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/errno.h"
+
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/errno.h"
 extern int *__errno (void);
 
 
@@ -701,13 +558,13 @@ extern int *__errno (void);
 
 extern const char * const _sys_errlist[];
 extern int _sys_nerr;
-# 19 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/fcntl.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/fcntl.h" 1
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 1 3 4
-# 175 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_default_fcntl.h" 1
+# 159 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_default_fcntl.h"
 struct flock {
  short l_type;
  short l_whence;
@@ -732,182 +589,18 @@ struct eflock {
 };
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 28 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __uint8_t u_int8_t;
-
-
-typedef __uint16_t u_int16_t;
-
-
-typedef __uint32_t u_int32_t;
-
-
-typedef __uint64_t u_int64_t;
-
-typedef int register_t;
-# 62 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_stdint.h" 3 4
-typedef __int8_t int8_t ;
-
-
-
-typedef __uint8_t uint8_t ;
-
-
-
-
-
-
-
-typedef __int16_t int16_t ;
-
-
-
-typedef __uint16_t uint16_t ;
-
-
-
-
-
-
-
-typedef __int32_t int32_t ;
-
-
-
-typedef __uint32_t uint32_t ;
-
-
-
-
-
-
-
-typedef __int64_t int64_t ;
-
-
-
-typedef __uint64_t uint64_t ;
-
-
-
-
-
-
-typedef __intmax_t intmax_t;
-
-
-
-
-typedef __uintmax_t uintmax_t;
-
-
-
-
-typedef __intptr_t intptr_t;
-
-
-
-
-typedef __uintptr_t uintptr_t;
-# 65 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_endian.h" 1 3 4
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/endian.h" 2 3 4
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 1 3 4
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 1 3 4
-# 41 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_sigset.h" 3 4
-typedef unsigned long __sigset_t;
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-typedef __suseconds_t suseconds_t;
-
-
-
-
-typedef long time_t;
-# 52 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timeval.h" 3 4
-struct timeval {
- time_t tv_sec;
- suseconds_t tv_usec;
-};
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 1 3 4
-# 38 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 1 3 4
-# 45 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_timespec.h" 3 4
-struct timespec {
- time_t tv_sec;
- long tv_nsec;
-};
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 2 3 4
-# 58 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/timespec.h" 3 4
-struct itimerspec {
- struct timespec it_interval;
- struct timespec it_value;
-};
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 2 3 4
-
-
-
-typedef __sigset_t sigset_t;
-# 34 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-typedef unsigned long fd_mask;
-
-
-
-
-
-
-
-typedef struct _types_fd_set {
- fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
-} _types_fd_set;
-# 60 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/select.h" 3 4
-
-
-int select (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, struct timeval *__timeout)
-                                                   ;
-
-int pselect (int __n, _types_fd_set *__readfds, _types_fd_set *__writefds, _types_fd_set *__exceptfds, const struct timespec *__timeout, const sigset_t *__set)
-
-                           ;
-
-
-
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/select.h" 2 3 4
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-
-
-
-
-typedef __uint32_t in_addr_t;
-
-
-
-
-typedef __uint16_t in_port_t;
-# 87 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 1
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/types.h"
+typedef long int __off_t;
+typedef int __pid_t;
+
+__extension__ typedef long long int __loff_t;
+# 71 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef unsigned char u_char;
 
 
@@ -926,121 +619,109 @@ typedef unsigned long u_long;
 
 
 
-
-
 typedef unsigned short ushort;
 typedef unsigned int uint;
 typedef unsigned long ulong;
 
 
 
-typedef __blkcnt_t blkcnt_t;
-
-
-
-
-typedef __blksize_t blksize_t;
-
-
-
-
 typedef unsigned long clock_t;
-# 135 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
+
+
+
+
+typedef long time_t;
+
+
+
+
+
+
+
+struct timespec {
+  time_t tv_sec;
+  long tv_nsec;
+};
+
+
+struct itimerspec {
+  struct timespec it_interval;
+  struct timespec it_value;
+};
+
+
 typedef long daddr_t;
 
 
 
 typedef char * caddr_t;
-
-
-
-
-typedef __fsblkcnt_t fsblkcnt_t;
-typedef __fsfilcnt_t fsfilcnt_t;
-
-
-
-
-typedef __id_t id_t;
-
-
-
-
-typedef __ino_t ino_t;
-# 173 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __off_t off_t;
-
-
-
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned short ino_t;
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef _off_t off_t;
 typedef __dev_t dev_t;
-
-
-
 typedef __uid_t uid_t;
-
-
-
 typedef __gid_t gid_t;
 
 
 
 
-typedef __pid_t pid_t;
+
+typedef int pid_t;
 
 
 
 
-typedef __key_t key_t;
 
 
 
+typedef long key_t;
 
 typedef _ssize_t ssize_t;
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned int mode_t __attribute__ ((__mode__ (__SI__)));
 
 
 
 
-typedef __mode_t mode_t;
-
-
-
-
-typedef __nlink_t nlink_t;
-
-
-
-
-typedef __clockid_t clockid_t;
+typedef unsigned short nlink_t;
+# 244 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef long fd_mask;
 
 
 
 
 
-typedef __timer_t timer_t;
+
+
+typedef struct _types_fd_set {
+ fd_mask fds_bits[(((64)+(((sizeof (fd_mask) * 8))-1))/((sizeof (fd_mask) * 8)))];
+} _types_fd_set;
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+typedef unsigned long clockid_t;
 
 
 
 
-
-typedef __useconds_t useconds_t;
-# 236 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 3 4
-typedef __int64_t sbintime_t;
+typedef unsigned long timer_t;
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 1 3 4
-# 48 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+
+typedef unsigned long useconds_t;
+typedef long suseconds_t;
+# 299 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 struct sched_param {
   int sched_priority;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/sched.h" 3 4
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/sched.h"
 };
 
 int sched_yield( void );
-# 24 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 2 3 4
-# 32 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 300 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h" 2
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 341 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef struct {
   int is_initialized;
   void *stackaddr;
@@ -1049,19 +730,20 @@ typedef struct {
   int inheritsched;
   int schedpolicy;
   struct sched_param schedparam;
-
-
-
-
-
+# 357 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int detachstate;
+
+
+
+
+
 } pthread_attr_t;
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
 typedef __uint32_t pthread_mutex_t;
 
 typedef struct {
   int is_initialized;
-# 166 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_pthreadtypes.h" 3 4
+# 454 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/types.h"
   int type;
 
   int recursive;
@@ -1070,15 +752,10 @@ typedef struct {
 
 
 
-
-
 typedef __uint32_t pthread_cond_t;
-
-
 
 typedef struct {
   int is_initialized;
-  clock_t clock;
 
 
 
@@ -1092,23 +769,20 @@ typedef struct {
   int is_initialized;
   int init_executed;
 } pthread_once_t;
-# 240 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/types.h" 1 3 4
-# 241 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/types.h" 2 3 4
-# 200 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 2 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h" 1 3 4
-# 22 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 1 3 4
-# 16 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
+# 184 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_default_fcntl.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/time.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/time.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h" 2
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/time.h" 1 3 4
-# 20 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/time.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h" 2
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h"
 
 
 struct tm
@@ -1140,23 +814,17 @@ char *ctime (const time_t *_time);
 struct tm *gmtime (const time_t *_timer);
 struct tm *localtime (const time_t *_timer);
 
-size_t strftime (char *restrict _s,
-        size_t _maxsize, const char *restrict _fmt,
-        const struct tm *restrict _t);
+size_t strftime (char *restrict _s, size_t _maxsize, const char *restrict _fmt, const struct tm *restrict _t)
 
+                                        ;
 
-extern size_t strftime_l (char *restrict _s, size_t _maxsize,
-     const char *restrict _fmt,
-     const struct tm *restrict _t, locale_t _l);
-
-
-char *asctime_r (const struct tm *restrict,
-     char *restrict);
+char *asctime_r (const struct tm *restrict, char *restrict)
+                       ;
 char *ctime_r (const time_t *, char *);
-struct tm *gmtime_r (const time_t *restrict,
-     struct tm *restrict);
-struct tm *localtime_r (const time_t *restrict,
-     struct tm *restrict);
+struct tm *gmtime_r (const time_t *restrict, struct tm *restrict)
+                            ;
+struct tm *localtime_r (const time_t *restrict, struct tm *restrict)
+                            ;
 
 
 
@@ -1165,18 +833,10 @@ struct tm *localtime_r (const time_t *restrict,
 
 
 
-char *strptime (const char *restrict,
-     const char *restrict,
-     struct tm *restrict);
+char *strptime (const char *restrict, const char *restrict, struct tm *restrict)
 
-
-char *strptime_l (const char *restrict, const char *restrict,
-    struct tm *restrict, locale_t);
-
-
-
+                            ;
 void tzset (void);
-
 void _tzset_r (struct _reent *);
 
 typedef struct __tzrule_struct
@@ -1198,143 +858,11 @@ typedef struct __tzinfo_struct
 } __tzinfo_type;
 
 __tzinfo_type *__gettzinfo (void);
-# 154 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
+# 129 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/time.h"
 extern long _timezone;
 extern int _daylight;
-
-
 extern char *_tzname[2];
-# 178 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/signal.h" 1 3 4
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 1 3 4
-# 42 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-union sigval {
-  int sival_int;
-  void *sival_ptr;
-};
-
-struct sigevent {
-  int sigev_notify;
-  int sigev_signo;
-  union sigval sigev_value;
-
-
-  void (*sigev_notify_function)( union sigval );
-
-  pthread_attr_t *sigev_notify_attributes;
-
-};
-# 68 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef struct {
-  int si_signo;
-  int si_code;
-  union sigval si_value;
-} siginfo_t;
-# 119 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef void (*_sig_func_ptr)(int);
-
-struct sigaction
-{
- _sig_func_ptr sa_handler;
- sigset_t sa_mask;
- int sa_flags;
-};
-# 153 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-typedef struct sigaltstack {
-  void *ss_sp;
-  int ss_flags;
-  size_t ss_size;
-} stack_t;
-
-
-
-
-
-
-int sigprocmask (int how, const sigset_t *set, sigset_t *oset);
-
-
-
-int pthread_sigmask (int how, const sigset_t *set, sigset_t *oset);
-
-
-
-
-
-
-
-int kill (pid_t, int);
-
-
-
-int killpg (pid_t, int);
-
-
-int sigaction (int, const struct sigaction *, struct sigaction *);
-int sigaddset (sigset_t *, const int);
-int sigdelset (sigset_t *, const int);
-int sigismember (const sigset_t *, int);
-int sigfillset (sigset_t *);
-int sigemptyset (sigset_t *);
-int sigpending (sigset_t *);
-int sigsuspend (const sigset_t *);
-int sigwait (const sigset_t *set, int *sig);
-# 212 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-int sigpause (int) __asm__ ("" "__xpg_sigpause");
-# 222 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/signal.h" 3 4
-int sigaltstack (const stack_t *restrict, stack_t *restrict);
-
-
-
-int pthread_kill (pthread_t thread, int sig);
-
-
-
-
-
-
-
-int sigwaitinfo (const sigset_t *set, siginfo_t *info);
-int sigtimedwait (const sigset_t *set, siginfo_t *info,
-    const struct timespec *timeout);
-
-int sigqueue (pid_t pid, int signo, const union sigval value);
-# 7 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/signal.h" 2 3 4
-
-
-
-typedef int sig_atomic_t;
-
-typedef _sig_func_ptr sig_t;
-
-
-typedef _sig_func_ptr sighandler_t;
-
-
-
-
-
-
-struct _reent;
-
-_sig_func_ptr _signal_r (struct _reent *, int, _sig_func_ptr);
-int _raise_r (struct _reent *, int);
-
-
-_sig_func_ptr signal (int, _sig_func_ptr);
-int raise (int);
-void psignal (int, const char *);
-
-
-
-# 179 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 2 3 4
-
-
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/time.h" 2
 
 
 
@@ -1343,42 +871,8 @@ void psignal (int, const char *);
 int clock_settime (clockid_t clock_id, const struct timespec *tp);
 int clock_gettime (clockid_t clock_id, struct timespec *tp);
 int clock_getres (clockid_t clock_id, struct timespec *res);
-
-
-
-int timer_create (clockid_t clock_id,
-  struct sigevent *restrict evp,
- timer_t *restrict timerid);
-
-
-
-int timer_delete (timer_t timerid);
-
-
-
-int timer_settime (timer_t timerid, int flags,
- const struct itimerspec *restrict value,
- struct itimerspec *restrict ovalue);
-int timer_gettime (timer_t timerid, struct itimerspec *value);
-int timer_getoverrun (timer_t timerid);
-
-
-
-int nanosleep (const struct timespec *rqtp, struct timespec *rmtp);
-# 223 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/time.h" 3 4
-int clock_nanosleep (clockid_t clock_id, int flags,
- const struct timespec *rqtp, struct timespec *rmtp);
-# 23 "/home/dieter/Development/esp-idf/components/newlib/platform_include/time.h" 2 3 4
-
-
-
-
-
-int clock_settime(clockid_t clock_id, const struct timespec *tp);
-int clock_gettime(clockid_t clock_id, struct timespec *tp);
-int clock_getres(clockid_t clock_id, struct timespec *res);
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 2 3 4
-# 27 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h"
 struct stat
 {
   dev_t st_dev;
@@ -1389,27 +883,27 @@ struct stat
   gid_t st_gid;
   dev_t st_rdev;
   off_t st_size;
-# 50 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h"
   time_t st_atime;
   long st_spare1;
   time_t st_mtime;
   long st_spare2;
   time_t st_ctime;
   long st_spare3;
-  blksize_t st_blksize;
-  blkcnt_t st_blocks;
+  long st_blksize;
+  long st_blocks;
   long st_spare4[2];
 
 
 };
-# 147 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stat.h" 3 4
-int chmod (const char *__path, mode_t __mode );
+# 146 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stat.h"
+int chmod ( const char *__path, mode_t __mode );
 int fchmod (int __fd, mode_t __mode);
-int fstat (int __fd, struct stat *__sbuf );
-int mkdir (const char *_path, mode_t __mode );
-int mkfifo (const char *__path, mode_t __mode );
-int stat (const char *restrict __path, struct stat *restrict __sbuf );
-mode_t umask (mode_t __mask );
+int fstat ( int __fd, struct stat *__sbuf );
+int mkdir ( const char *_path, mode_t __mode );
+int mkfifo ( const char *__path, mode_t __mode );
+int stat ( const char *restrict __path, struct stat *restrict __sbuf );
+mode_t umask ( mode_t __mask );
 
 
 
@@ -1418,15 +912,19 @@ mode_t umask (mode_t __mask );
 
 
 int fchmodat (int, const char *, mode_t, int);
+
+
 int fstatat (int, const char *restrict , struct stat *restrict, int);
 int mkdirat (int, const char *, mode_t);
 int mkfifoat (int, const char *, mode_t);
+
+
 int mknodat (int, const char *, mode_t, dev_t);
+
+
 int utimensat (int, const char *, const struct timespec *, int);
-
-
 int futimens (int, const struct timespec *);
-# 201 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 2 3 4
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_default_fcntl.h" 2
 
 extern int open (const char *, int, ...);
 
@@ -1436,260 +934,31 @@ extern int creat (const char *, mode_t);
 extern int fcntl (int, int, ...);
 
 extern int flock (int, int);
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h" 1 3 4
-       
-# 16 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 1 3 4
-# 50 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct timezone {
- int tz_minuteswest;
- int tz_dsttime;
-};
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct bintime {
- time_t sec;
- uint64_t frac;
-};
-
-static __inline void
-bintime_addx(struct bintime *_bt, uint64_t _x)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac += _x;
- if (_u > _bt->frac)
-  _bt->sec++;
-}
-
-static __inline void
-bintime_add(struct bintime *_bt, const struct bintime *_bt2)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac += _bt2->frac;
- if (_u > _bt->frac)
-  _bt->sec++;
- _bt->sec += _bt2->sec;
-}
-
-static __inline void
-bintime_sub(struct bintime *_bt, const struct bintime *_bt2)
-{
- uint64_t _u;
-
- _u = _bt->frac;
- _bt->frac -= _bt2->frac;
- if (_u < _bt->frac)
-  _bt->sec--;
- _bt->sec -= _bt2->sec;
-}
-
-static __inline void
-bintime_mul(struct bintime *_bt, u_int _x)
-{
- uint64_t _p1, _p2;
-
- _p1 = (_bt->frac & 0xffffffffull) * _x;
- _p2 = (_bt->frac >> 32) * _x + (_p1 >> 32);
- _bt->sec *= _x;
- _bt->sec += (_p2 >> 32);
- _bt->frac = (_p2 << 32) | (_p1 & 0xffffffffull);
-}
-
-static __inline void
-bintime_shift(struct bintime *_bt, int _exp)
-{
-
- if (_exp > 0) {
-  _bt->sec <<= _exp;
-  _bt->sec |= _bt->frac >> (64 - _exp);
-  _bt->frac <<= _exp;
- } else if (_exp < 0) {
-  _bt->frac >>= -_exp;
-  _bt->frac |= (uint64_t)_bt->sec << (64 + _exp);
-  _bt->sec >>= -_exp;
- }
-}
-# 144 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-static __inline int
-sbintime_getsec(sbintime_t _sbt)
-{
-
- return (_sbt >> 32);
-}
-
-static __inline sbintime_t
-bttosbt(const struct bintime _bt)
-{
-
- return (((sbintime_t)_bt.sec << 32) + (_bt.frac >> 32));
-}
-
-static __inline struct bintime
-sbttobt(sbintime_t _sbt)
-{
- struct bintime _bt;
-
- _bt.sec = _sbt >> 32;
- _bt.frac = _sbt << 32;
- return (_bt);
-}
-# 182 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-static __inline void
-bintime2timespec(const struct bintime *_bt, struct timespec *_ts)
-{
-
- _ts->tv_sec = _bt->sec;
- _ts->tv_nsec = ((uint64_t)1000000000 *
-     (uint32_t)(_bt->frac >> 32)) >> 32;
-}
-
-static __inline void
-timespec2bintime(const struct timespec *_ts, struct bintime *_bt)
-{
-
- _bt->sec = _ts->tv_sec;
-
- _bt->frac = _ts->tv_nsec * (uint64_t)18446744073LL;
-}
-
-static __inline void
-bintime2timeval(const struct bintime *_bt, struct timeval *_tv)
-{
-
- _tv->tv_sec = _bt->sec;
- _tv->tv_usec = ((uint64_t)1000000 * (uint32_t)(_bt->frac >> 32)) >> 32;
-}
-
-static __inline void
-timeval2bintime(const struct timeval *_tv, struct bintime *_bt)
-{
-
- _bt->sec = _tv->tv_sec;
-
- _bt->frac = _tv->tv_usec * (uint64_t)18446744073709LL;
-}
-
-static __inline struct timespec
-sbttots(sbintime_t _sbt)
-{
- struct timespec _ts;
-
- _ts.tv_sec = _sbt >> 32;
- _ts.tv_nsec = ((uint64_t)1000000000 * (uint32_t)_sbt) >> 32;
- return (_ts);
-}
-
-static __inline sbintime_t
-tstosbt(struct timespec _ts)
-{
-
- return (((sbintime_t)_ts.tv_sec << 32) +
-     (_ts.tv_nsec * (((uint64_t)1 << 63) / 500000000) >> 32));
-}
-
-static __inline struct timeval
-sbttotv(sbintime_t _sbt)
-{
- struct timeval _tv;
-
- _tv.tv_sec = _sbt >> 32;
- _tv.tv_usec = ((uint64_t)1000000 * (uint32_t)_sbt) >> 32;
- return (_tv);
-}
-
-static __inline sbintime_t
-tvtosbt(struct timeval _tv)
-{
-
- return (((sbintime_t)_tv.tv_sec << 32) +
-     (_tv.tv_usec * (((uint64_t)1 << 63) / 500000) >> 32));
-}
-# 262 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 3 4
-struct itimerval {
- struct timeval it_interval;
- struct timeval it_value;
-};
-
-
-
-
-
-int utimes (const char *__path, const struct timeval *__tvp);
-
-
-int adjtime (const struct timeval *, struct timeval *);
-int futimes (int, const struct timeval *);
-int lutimes (const char *, const struct timeval *);
-int settimeofday (const struct timeval *, const struct timezone *);
-
-
-
-int getitimer (int __which, struct itimerval *__value);
-int setitimer (int __which, const struct itimerval *restrict __value,
-     struct itimerval *restrict __ovalue);
-
-
-int gettimeofday (struct timeval *restrict __p,
-     void *restrict __tz);
-
-
-int futimesat (int, const char *, const struct timeval [2]);
+# 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/fcntl.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 1
+# 9 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/syslimits.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/endian.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/param.h" 1
+# 12 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/param.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 1
+# 13 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/_intsup.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h" 2
 
 
 
 
 
 
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/_time.h" 1 3 4
-# 301 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/time.h" 2 3 4
-# 17 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/time.h" 2 3 4
-# 213 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_default_fcntl.h" 2 3 4
-extern int futimesat (int, const char *, const struct timeval *);
-# 4 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/fcntl.h" 2 3 4
-# 21 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/syslimits.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/param.h" 1 3 4
-# 12 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/param.h" 2 3 4
-# 22 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 1 3 4
-# 9 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 1 3 4
-# 13 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 1 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 187 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/_intsup.h" 3 4
-       
-       
-       
-       
-       
-       
-       
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 2 3 4
-
-
-
+typedef __int8_t int8_t ;
+typedef __uint8_t uint8_t ;
 
 
 
@@ -1700,8 +969,20 @@ typedef __uint_least8_t uint_least8_t;
 
 
 
+typedef __int16_t int16_t ;
+typedef __uint16_t uint16_t ;
+
+
+
+
 typedef __int_least16_t int_least16_t;
 typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int32_t int32_t ;
+typedef __uint32_t uint32_t ;
 
 
 
@@ -1712,133 +993,133 @@ typedef __uint_least32_t uint_least32_t;
 
 
 
+typedef __int64_t int64_t ;
+typedef __uint64_t uint64_t ;
+
+
+
+
 typedef __int_least64_t int_least64_t;
 typedef __uint_least64_t uint_least64_t;
-# 51 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast8_t;
   typedef unsigned int uint_fast8_t;
-# 61 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast16_t;
   typedef unsigned int uint_fast16_t;
-# 71 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef int int_fast32_t;
   typedef unsigned int uint_fast32_t;
-# 81 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdint.h" 3 4
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
   typedef long long int int_fast64_t;
   typedef long long unsigned int uint_fast64_t;
-# 10 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stdint.h" 2 3 4
-# 19 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 20 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/unistd.h" 1 3 4
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long int intmax_t;
+# 162 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdint.h"
+  typedef long long unsigned int uintmax_t;
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 1 3 4
-# 23 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 1 3 4
-# 14 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 15 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 2 3 4
+
+
+
+typedef __intptr_t intptr_t;
+typedef __uintptr_t uintptr_t;
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/unistd.h" 1
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/unistd.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/unistd.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/unistd.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/unistd.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/unistd.h" 2
 
 extern char **environ;
 
-void _exit (int __status) __attribute__ ((__noreturn__));
+void _exit (int __status ) __attribute__ ((__noreturn__));
 
-int access (const char *__path, int __amode);
-unsigned alarm (unsigned __secs);
-int chdir (const char *__path);
-int chmod (const char *__path, mode_t __mode);
+int access (const char *__path, int __amode );
+unsigned alarm (unsigned __secs );
+int chdir (const char *__path );
+int chmod (const char *__path, mode_t __mode );
 
-int chown (const char *__path, uid_t __owner, gid_t __group);
-
-
-int chroot (const char *__path);
-
-int close (int __fildes);
-
-size_t confstr (int __name, char *__buf, size_t __len);
+int chown (const char *__path, uid_t __owner, gid_t __group );
 
 
-char * crypt (const char *__key, const char *__salt);
-# 44 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-int daemon (int nochdir, int noclose);
-
-int dup (int __fildes);
-int dup2 (int __fildes, int __fildes2);
-
-int dup3 (int __fildes, int __fildes2, int flags);
-int eaccess (const char *__path, int __mode);
 
 
-void encrypt (char *__block, int __edflag);
+int close (int __fildes );
 
 
-void endusershell (void);
+
+char * ctermid (char *__s );
+char * cuserid (char *__s );
 
 
-int euidaccess (const char *__path, int __mode);
 
-int execl (const char *__path, const char *, ...);
-int execle (const char *__path, const char *, ...);
-int execlp (const char *__file, const char *, ...);
+int dup (int __fildes );
+int dup2 (int __fildes, int __fildes2 );
 
-int execlpe (const char *__file, const char *, ...);
 
-int execv (const char *__path, char * const __argv[]);
-int execve (const char *__path, char * const __argv[], char * const __envp[]);
-int execvp (const char *__file, char * const __argv[]);
 
-int execvpe (const char *__file, char * const __argv[], char * const __envp[]);
+
+
+
+int execl (const char *__path, const char *, ... );
+int execle (const char *__path, const char *, ... );
+int execlp (const char *__file, const char *, ... );
+
+
+
+int execv (const char *__path, char * const __argv[] );
+int execve (const char *__path, char * const __argv[], char * const __envp[] );
+int execvp (const char *__file, char * const __argv[] );
+
+
 
 
 int faccessat (int __dirfd, const char *__path, int __mode, int __flags);
 
 
-int fchdir (int __fildes);
 
 
-int fchmod (int __fildes, mode_t __mode);
+int fchmod (int __fildes, mode_t __mode );
 
-
-
-int fchown (int __fildes, uid_t __owner, gid_t __group);
-
+int fchown (int __fildes, uid_t __owner, gid_t __group );
 
 
 int fchownat (int __dirfd, const char *__path, uid_t __owner, gid_t __group, int __flags);
 
 
-int fexecve (int __fd, char * const __argv[], char * const __envp[]);
 
-pid_t fork (void);
-long fpathconf (int __fd, int __name);
+
+pid_t fork (void );
+long fpathconf (int __fd, int __name );
 int fsync (int __fd);
-
 int fdatasync (int __fd);
 
 
-char * get_current_dir_name (void);
 
-char * getcwd (char *__buf, size_t __size);
-
-int getdomainname (char *__name, size_t __len);
+char * getcwd (char *__buf, size_t __size );
 
 
-int getentropy (void *, size_t);
 
 
-gid_t getegid (void);
-uid_t geteuid (void);
-gid_t getgid (void);
+gid_t getegid (void );
+uid_t geteuid (void );
+gid_t getgid (void );
 
-int getgroups (int __gidsetsize, gid_t __grouplist[]);
+int getgroups (int __gidsetsize, gid_t __grouplist[] );
 
-long gethostid (void);
 
-char * getlogin (void);
 
+char * getlogin (void );
 
 
 
@@ -1846,125 +1127,94 @@ char * getpass (const char *__prompt);
 int getpagesize (void);
 
 
-int getpeereid (int, uid_t *, gid_t *);
-
 
 pid_t getpgid (pid_t);
-
-pid_t getpgrp (void);
-pid_t getpid (void);
-pid_t getppid (void);
-
-pid_t getsid (pid_t);
-
-
-uid_t getuid (void);
-
-
-char * getusershell (void);
-
-
-char * getwd (char *__buf);
-
-
-int iruserok (unsigned long raddr, int superuser, const char *ruser, const char *luser);
-
-int isatty (int __fildes);
-
-int issetugid (void);
+pid_t getpgrp (void );
+pid_t getpid (void );
+pid_t getppid (void );
 
 
 
-int lchown (const char *__path, uid_t __owner, gid_t __group);
 
-
-int link (const char *__path1, const char *__path2);
-
-int linkat (int __dirfd1, const char *__path1, int __dirfd2, const char *__path2, int __flags);
-
-
-int nice (int __nice_value);
-
-
-off_t lseek (int __fildes, off_t __offset, int __whence);
+uid_t getuid (void );
 
 
 
 
 
 
-int lockf (int __fd, int __cmd, off_t __len);
+int isatty (int __fildes );
 
-long pathconf (const char *__path, int __name);
-int pause (void);
+int lchown (const char *__path, uid_t __owner, gid_t __group );
 
-int pthread_atfork (void (*)(void), void (*)(void), void (*)(void));
+int link (const char *__path1, const char *__path2 );
 
-int pipe (int __fildes[2]);
+int linkat (int __dirfd1, const char *__path1, int __dirfd2, const char *__path2, int __flags );
 
-int pipe2 (int __fildes[2], int flags);
+int nice (int __nice_value );
+
+off_t lseek (int __fildes, off_t __offset, int __whence );
+# 138 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/unistd.h"
+long pathconf (const char *__path, int __name );
+int pause (void );
+
+
+
+int pipe (int __fildes[2] );
+
 
 
 ssize_t pread (int __fd, void *__buf, size_t __nbytes, off_t __offset);
 ssize_t pwrite (int __fd, const void *__buf, size_t __nbytes, off_t __offset);
+int read (int __fd, void *__buf, size_t __nbyte );
 
-int read (int __fd, void *__buf, size_t __nbyte);
 
-int rresvport (int *__alport);
-int revoke (char *__path);
 
-int rmdir (const char *__path);
 
-int ruserok (const char *rhost, int superuser, const char *ruser, const char *luser);
+int rmdir (const char *__path );
+
 
 
 void * sbrk (ptrdiff_t __incr);
 
 
 
-int setegid (gid_t __gid);
-int seteuid (uid_t __uid);
-
-int setgid (gid_t __gid);
 
 
-int setgroups (int ngroups, const gid_t *grouplist);
+int setgid (gid_t __gid );
+
+
+
 
 
 int sethostname (const char *, size_t);
 
-int setpgid (pid_t __pid, pid_t __pgid);
-
-int setpgrp (void);
-
-
-int setregid (gid_t __rgid, gid_t __egid);
-int setreuid (uid_t __ruid, uid_t __euid);
-
-pid_t setsid (void);
-
-int setuid (uid_t __uid);
+int setpgid (pid_t __pid, pid_t __pgid );
+int setpgrp (void );
 
 
-void setusershell (void);
 
-unsigned sleep (unsigned int __seconds);
 
+pid_t setsid (void );
+
+int setuid (uid_t __uid );
+
+
+
+
+unsigned sleep (unsigned int __seconds );
 void swab (const void *restrict, void *restrict, ssize_t);
+long sysconf (int __name );
+pid_t tcgetpgrp (int __fildes );
+int tcsetpgrp (int __fildes, pid_t __pgrp_id );
+char * ttyname (int __fildes );
 
-long sysconf (int __name);
-pid_t tcgetpgrp (int __fildes);
-int tcsetpgrp (int __fildes, pid_t __pgrp_id);
-char * ttyname (int __fildes);
-int ttyname_r (int, char *, size_t);
-int unlink (const char *__path);
 
+
+int unlink (const char *__path );
 int usleep (useconds_t __useconds);
-
-
-int vhangup (void);
-
-int write (int __fd, const void *__buf, size_t __nbyte);
+int vhangup (void );
+int write (int __fd, const void *__buf, size_t __nbyte );
 
 
 
@@ -1978,88 +1228,34 @@ extern int optreset;
 
 
 
-pid_t vfork (void);
-# 283 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/unistd.h" 3 4
-int ftruncate (int __fd, off_t __length);
+pid_t vfork (void );
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/unistd.h"
+ssize_t readlink (const char *restrict __path, char *restrict __buf, size_t __buflen)
+                                                                   ;
 
+ssize_t readlinkat (int __dirfd1, const char *restrict __path, char *restrict __buf, size_t __buflen)
+                                                                     ;
 
-int truncate (const char *, off_t __length);
-
-
-
-
-int getdtablesize (void);
-
-
-useconds_t ualarm (useconds_t __useconds, useconds_t __interval);
-
-
-
-
-
- int gethostname (char *__name, size_t __len);
-
-
-
-
-int setdtablesize (int);
-
-
-
-void sync (void);
-
-
-
-ssize_t readlink (const char *restrict __path,
-                          char *restrict __buf, size_t __buflen);
 int symlink (const char *__name1, const char *__name2);
 
-
-ssize_t readlinkat (int __dirfd1, const char *restrict __path,
-                            char *restrict __buf, size_t __buflen);
 int symlinkat (const char *, int, const char *);
 int unlinkat (int, const char *, int);
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/unistd.h" 2 3 4
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/unistd.h" 2
 
-int truncate(const char *, off_t __length);
-int gethostname(char *__name, size_t __len);
-# 5 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/unistd.h" 2 3 4
-# 22 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/utime.h" 1 3 4
-
-
-
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/utime.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/utime.h" 3 4
-struct utimbuf {
-    time_t actime;
-    time_t modtime;
-};
-
-int utime(const char *path, const struct utimbuf *times);
-# 9 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/utime.h" 2 3 4
-# 23 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
-# 76 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
-# 99 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
-# 73 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
-# 1 "/home/dieter/Development/ProjektEi/build/include/sdkconfig.h" 1
-
-
-
-
-       
-# 74 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
-# 106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
-
-# 106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
+int truncate (const char *, off_t __length);
+int gethostname (char *__name, size_t __len);
+# 5 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/unistd.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 1
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+# 99 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 1
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h"
 int xt_clock_freq(void) __attribute__((deprecated));
 
 
@@ -2068,10 +1264,10 @@ int xt_clock_freq(void) __attribute__((deprecated));
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 1
-# 40 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h" 1
-# 148 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 1
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h" 1
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern const unsigned int Xthal_rev_no;
 
 
@@ -2143,7 +1339,7 @@ extern const unsigned char Xthal_cp_max;
 
 
 extern const unsigned int Xthal_cp_mask;
-# 237 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern const unsigned int Xthal_num_aregs;
 extern const unsigned char Xthal_num_aregs_log2;
 
@@ -2203,17 +1399,17 @@ extern void xthal_cache_coherence_off( void );
 
 extern void xthal_cache_coherence_optin( void );
 extern void xthal_cache_coherence_optout( void );
-# 339 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern int xthal_get_cache_prefetch( void );
 extern int xthal_set_cache_prefetch( int );
 extern int xthal_set_cache_prefetch_long( unsigned long long );
-# 352 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 352 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern const int Xthal_debug_configured;
 
 
 extern unsigned int xthal_set_soft_break(void *addr);
 extern void xthal_remove_soft_break(void *addr, unsigned int);
-# 374 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern int xthal_disassemble( unsigned char *instr_buf, void *tgt_addr,
          char *buffer, unsigned buflen, unsigned options );
 
@@ -2235,7 +1431,7 @@ extern void* xthal_bcopy(const void *src, void *dst, unsigned len);
 
 
 extern int xthal_compare_and_set( int *addr, int test_val, int compare_val );
-# 403 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 403 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern const unsigned int Xthal_release_major;
 extern const unsigned int Xthal_release_minor;
 extern const char * const Xthal_release_name;
@@ -2270,7 +1466,7 @@ extern const char * const Xthal_hw_release_internal;
 
 
 extern void xthal_clear_regcached_code( void );
-# 653 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 653 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern void xthal_window_spill( void );
 
 
@@ -2398,7 +1594,7 @@ typedef void (XtHalVoidFunc)(void);
 
 
 extern unsigned Xthal_tram_pending;
-# 789 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 789 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern unsigned Xthal_tram_enabled;
 
 
@@ -2464,7 +1660,7 @@ extern void xthal_set_dcacheattr( unsigned );
 
 extern int xthal_set_region_attribute( void *addr, unsigned size,
          unsigned cattr, unsigned flags );
-# 862 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 862 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern void xthal_icache_enable( void );
 extern void xthal_dcache_enable( void );
 
@@ -2493,7 +1689,7 @@ extern void xthal_dcache_region_unlock( void *addr, unsigned size );
 
 extern void xthal_icache_line_unlock(void *addr);
 extern void xthal_dcache_line_unlock(void *addr);
-# 899 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 899 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern void xthal_memep_inject_error(void *addr, int size, int flags);
 
 
@@ -2529,22 +1725,22 @@ extern const unsigned char Xthal_dtlb_arf_ways;
 
 extern int xthal_static_v2p( unsigned vaddr, unsigned *paddrp );
 extern int xthal_static_p2v( unsigned paddr, unsigned *vaddrp, unsigned cached );
-# 948 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/hal.h"
+# 948 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/hal.h"
 extern int xthal_set_region_translation(void* vaddr, void* paddr, unsigned size, unsigned cache_atr, unsigned flags);
 extern int xthal_v2p(void*, void**, unsigned*, unsigned*);
 extern int xthal_invalidate_region(void* addr);
 extern int xthal_set_region_translation_raw(void *vaddr, void *paddr, unsigned cattr);
-# 41 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 1
-# 42 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtensa-versions.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 51 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core-matmap.h" 1
-# 52 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/tie.h" 1
-# 53 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h" 2
-# 1279 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/core.h"
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h" 1
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtensa-versions.h" 1
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h" 2
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core-matmap.h" 1
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/tie.h" 1
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h" 2
+# 1279 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/core.h"
 extern const unsigned char Xthal_cp_id_FPU;
 extern const unsigned int Xthal_cp_mask_FPU;
 
@@ -2575,17 +1771,17 @@ extern const unsigned int Xthal_cp_mask_XCHAL_CP6_IDENT;
 
 extern const unsigned char Xthal_cp_id_XCHAL_CP7_IDENT;
 extern const unsigned int Xthal_cp_mask_XCHAL_CP7_IDENT;
-# 42 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/system.h" 1
-# 43 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
+# 42 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/system.h" 1
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 1
-# 45 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/corebits.h" 1
-# 46 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h" 1
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/corebits.h" 1
+# 46 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
 
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 1
-# 56 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h" 1
+# 56 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h"
 typedef struct {
 long pc;
 long ps;
@@ -2602,7 +1798,7 @@ long acchi;
 long mr[4];
 
 } KernelFrame;
-# 80 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h"
 typedef struct {
 long pc;
 long ps;
@@ -2615,7 +1811,7 @@ long a2;
 long a3;
 long a4;
 long a5;
-# 104 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h"
 long exccause;
 
 long lcount;
@@ -2626,21 +1822,13 @@ long lend;
 long acclo;
 long acchi;
 long mr[4];
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-long pad[((3 + 
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
-1
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-*1 + 
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h" 3 4
-1
-# 123 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-frames.h"
-*2 + 0*1) & 3)];
+# 123 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-frames.h"
+long pad[((3 + 1*1 + 1*2 + 0*1) & 3)];
 
 
 } UserFrame;
-# 48 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
-# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 48 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h" 2
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 typedef struct {
 long exit;
 long pc;
@@ -2674,11 +1862,11 @@ long lcount;
 long tmp0;
 long tmp1;
 long tmp2;
-# 145 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 } XtExcFrame;
-# 202 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 typedef struct {
-# 213 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_context.h"
+# 213 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_context.h"
 long exit;
 long pc;
 long ps;
@@ -2689,36 +1877,39 @@ long a2;
 long a3;
 
 } XtSolFrame;
-# 45 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
-# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_config.h" 2
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 1 3 4
-# 10 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/ieeefp.h" 1 3 4
-# 11 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 1
+# 10 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/ieeefp.h" 1
+# 11 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 17 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/machine/stdlib.h" 1 3 4
-# 21 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/machine/stdlib.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/alloca.h" 1 3 4
-# 23 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 2 3 4
-# 33 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/alloca.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h" 2
 
 
-# 35 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+
+
+
+
+
 typedef struct
 {
   int quot;
@@ -2732,6 +1923,8 @@ typedef struct
 } ldiv_t;
 
 
+
+
 typedef struct
 {
   long long int quot;
@@ -2742,18 +1935,13 @@ typedef struct
 
 
 typedef int (*__compar_fn_t) (const void *, const void *);
-# 69 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 int __locale_mb_cur_max (void);
 
 
 
 void abort (void) __attribute__ ((__noreturn__));
 int abs (int);
-
-__uint32_t arc4random (void);
-__uint32_t arc4random_uniform (__uint32_t);
-void arc4random_buf (void *, size_t);
-
 int atexit (void (*__func)(void));
 double atof (const char *__nptr);
 
@@ -2763,11 +1951,11 @@ int atoi (const char *__nptr);
 int _atoi_r (struct _reent *, const char *__nptr);
 long atol (const char *__nptr);
 long _atol_r (struct _reent *, const char *__nptr);
-void * bsearch (const void *__key,
-         const void *__base,
-         size_t __nmemb,
-         size_t __size,
-         __compar_fn_t _compar);
+void * bsearch (const void * __key, const void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar)
+
+
+
+                                ;
 void * calloc (size_t __nmemb, size_t __size) ;
 div_t div (int __numer, int __denom);
 void exit (int __status) __attribute__ ((__noreturn__));
@@ -2796,21 +1984,12 @@ size_t _wcstombs_r (struct _reent *, char *restrict, const wchar_t *restrict, si
 
 
 char * mkdtemp (char *);
-
-
 int mkostemp (char *, int);
 int mkostemps (char *, int, int);
-
-
 int mkstemp (char *);
-
-
 int mkstemps (char *, int);
 
-
 char * mktemp (char *);
-
-
 
 
 
@@ -2825,26 +2004,19 @@ char * _mktemp_r (struct _reent *, char *);
 
 
 
-void qsort (void *__base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
+
+void qsort (void * __base, size_t __nmemb, size_t __size, __compar_fn_t _compar);
 int rand (void);
-void * realloc (void *__r, size_t __size) ;
+void * realloc (void * __r, size_t __size) ;
 
-void *reallocarray(void *, size_t, size_t) __attribute__((__warn_unused_result__)) __attribute__((__alloc_size__(2)))
-     __attribute__((__alloc_size__(3)));
-void * reallocf (void *__r, size_t __size);
-
-
+void * reallocf (void * __r, size_t __size);
 char * realpath (const char *restrict path, char *restrict resolved_path);
-
-
-int rpmatch (const char *response);
-
-
-void setkey (const char *__key);
 
 void srand (unsigned __seed);
 double strtod (const char *restrict __n, char **restrict __end_PTR);
 double _strtod_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR);
+
+
 
 float strtof (const char *restrict __n, char **restrict __end_PTR);
 
@@ -2859,54 +2031,42 @@ long _strtol_r (struct _reent *,const char *restrict __n, char **restrict __end_
 unsigned long strtoul (const char *restrict __n, char **restrict __end_PTR, int __base);
 unsigned long _strtoul_r (struct _reent *,const char *restrict __n, char **restrict __end_PTR, int __base);
 
-
-double strtod_l (const char *restrict, char **restrict, locale_t);
-float strtof_l (const char *restrict, char **restrict, locale_t);
-
-extern long double strtold_l (const char *restrict, char **restrict,
-         locale_t);
-
-long strtol_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long strtoul_l (const char *restrict, char **restrict, int,
-    locale_t __loc);
-long long strtoll_l (const char *restrict, char **restrict, int, locale_t);
-unsigned long long strtoull_l (const char *restrict, char **restrict, int,
-          locale_t __loc);
-
-
 int system (const char *__string);
 
 
 long a64l (const char *__input);
 char * l64a (long __input);
 char * _l64a_r (struct _reent *,long __input);
+int on_exit (void (*__func)(int, void *),void * __arg);
 
 
-int on_exit (void (*__func)(int, void *),void *__arg);
 
 
 void _Exit (int __status) __attribute__ ((__noreturn__));
 
 
 int putenv (char *__string);
-
 int _putenv_r (struct _reent *, char *__string);
 void * _reallocf_r (struct _reent *, void *, size_t);
-
 int setenv (const char *__string, const char *__value, int __overwrite);
-
 int _setenv_r (struct _reent *, const char *__string, const char *__value, int __overwrite);
-# 233 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
+
+char * gcvt (double,int,char *);
+char * gcvtf (float,int,char *);
+char * fcvt (double,int,int *,int *);
+char * fcvtf (float,int,int *,int *);
+char * ecvt (double,int,int *,int *);
+char * ecvtbuf (double, int, int*, int*, char *);
+char * fcvtbuf (double, int, int*, int*, char *);
+char * ecvtf (float,int,int *,int *);
+char * dtoa (double, int, int, int *, int*, char**);
+
 char * __itoa (int, char *, int);
 char * __utoa (unsigned, char *, int);
 
 char * itoa (int, char *, int);
 char * utoa (unsigned, char *, int);
-
-
 int rand_r (unsigned *__seed);
-
-
 
 double drand48 (void);
 double _drand48_r (struct _reent *);
@@ -2930,40 +2090,36 @@ void srand48 (long);
 void _srand48_r (struct _reent *, long);
 
 
-char * initstate (unsigned, char *, size_t);
-long random (void);
-char * setstate (char *);
-void srandom (unsigned);
 
 
 long long atoll (const char *__nptr);
 
+
 long long _atoll_r (struct _reent *, const char *__nptr);
+
+
+
 
 long long llabs (long long);
 lldiv_t lldiv (long long __numer, long long __denom);
 long long strtoll (const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
 long long _strtoll_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
+
+
+
 unsigned long long strtoull (const char *restrict __n, char **restrict __end_PTR, int __base);
+
 
 unsigned long long _strtoull_r (struct _reent *, const char *restrict __n, char **restrict __end_PTR, int __base);
 
 
-
 void cfree (void *);
-
-
 int unsetenv (const char *__string);
-
 int _unsetenv_r (struct _reent *, const char *__string);
-
-
-
-int __attribute__((__nonnull__ (1))) posix_memalign (void **, size_t, size_t);
-
-
+# 258 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 char * _dtoa_r (struct _reent *, double, int, int, int *, int*, char**);
 
 void * _malloc_r (struct _reent *, size_t) ;
@@ -2975,38 +2131,37 @@ void _mstats_r (struct _reent *, char *);
 int _system_r (struct _reent *, const char *);
 
 void __eprintf (const char *, const char *, unsigned int, const char *);
-
-
-
-
-
-
-void qsort_r (void *__base, size_t __nmemb, size_t __size, int (*_compar)(const void *, const void *, void *), void *__thunk);
-# 330 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdlib.h" 3 4
-extern long double _strtold_r (struct _reent *, const char *restrict, char **restrict);
-
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdlib.h"
 extern long double strtold (const char *restrict, char **restrict);
 
 
 
 
+# 120 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h"
+       
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
 
 
-
-void * aligned_alloc(size_t, size_t) __attribute__((__malloc__)) __attribute__((__alloc_align__(1)))
-     __attribute__((__alloc_size__(2)));
-int at_quick_exit(void (*)(void));
-__attribute__((__noreturn__)) void
- quick_exit(int);
-
-
-
-# 120 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
-
-# 63 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h" 1
+# 39 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/assert.h"
+void __assert (const char *, int, const char *) __attribute__ ((__noreturn__))
+                                 ;
+void __assert_func (const char *, int, const char *, const char *) __attribute__ ((__noreturn__))
+                                 ;
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/assert.h" 2
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_assert.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 2
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 2
+# 54 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     ETS_OK = 0,
     ETS_FAILED = 1
@@ -3024,57 +2179,57 @@ struct ETSEventTag {
 
 typedef void (*ETSTask)(ETSEvent *e);
 typedef void (* ets_idle_cb_t)(void *arg);
-# 88 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_run(void);
-# 99 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 90 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_idle_cb(ets_idle_cb_t func, void *arg);
-# 114 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 105 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_task(ETSTask task, uint8_t prio, ETSEvent *queue, uint8_t qlen);
-# 128 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_post(uint8_t prio, ETSSignal sig, ETSParam par);
-# 142 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 133 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 extern const char *const exc_cause_table[40];
-# 152 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_user_start(uint32_t start);
-# 162 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_startup_callback(uint32_t callback);
-# 172 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_set_appcpu_boot_addr(uint32_t start);
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code_legacy(uint32_t pos, uint32_t *entry_addr, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                            _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                 jump, 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                       _Bool 
-# 188 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                            config);
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 ETS_STATUS ets_unpack_flash_code(uint32_t pos, uint32_t *entry_addr, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                     _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                          jump, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                     sb_need_check, 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                                                                    _Bool 
-# 206 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 197 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                                                                         config);
-# 231 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 int ets_printf(const char *fmt, ...);
-# 241 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_write_char_uart(char c);
-# 251 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc1(void (*p)(char c));
-# 261 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_putc2(void (*p)(char c));
-# 271 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_install_uart_printf(void);
-# 293 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void ETSTimerFunc(void *timer_arg);
 
 typedef struct _ETSTIMER_ {
@@ -3084,57 +2239,57 @@ typedef struct _ETSTIMER_ {
     ETSTimerFunc *timer_func;
     void *timer_arg;
 } ETSTimer;
-# 311 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_init(void);
-# 320 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_deinit(void);
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm(ETSTimer *timer, uint32_t tmout, 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                    _Bool 
-# 334 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 325 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                         repeat);
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_arm_us(ETSTimer *ptimer, uint32_t us, 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 3 4
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 3 4
                                                     _Bool 
-# 348 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 339 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
                                                          repeat);
-# 358 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_disarm(ETSTimer *timer);
-# 372 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 363 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_setfn(ETSTimer *ptimer, ETSTimerFunc *pfunction, void *parg);
-# 382 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 373 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_timer_done(ETSTimer *ptimer);
-# 392 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_delay_us(uint32_t us);
-# 402 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency(uint32_t ticks_per_us);
-# 414 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 405 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_update_cpu_frequency_rom(uint32_t ticks_per_us);
-# 424 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_cpu_frequency(void);
-# 433 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_xtal_scale(void);
-# 446 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 437 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 uint32_t ets_get_detected_xtal_freq(void);
-# 460 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef void (* ets_isr_t)(void *);
-# 475 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 466 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_attach(int i, ets_isr_t func, void *arg);
-# 486 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 477 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_mask(uint32_t mask);
-# 497 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_isr_unmask(uint32_t unmask);
-# 508 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 499 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_lock(void);
-# 519 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 510 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_intr_unlock(void);
-# 530 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 521 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void ets_waiti0(void);
-# 548 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 539 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 void intr_matrix_set(int cpu_no, uint32_t model_num, uint32_t intr_num);
-# 638 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h"
+# 629 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h"
 typedef enum {
     OK = 0,
     FAIL,
@@ -3142,124 +2297,39 @@ typedef enum {
     BUSY,
     CANCEL,
 } STATUS;
-# 122 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
-# 100 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOSConfig.h" 2
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h" 1
-# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/projdefs.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/projdefs.h" 1
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/projdefs.h"
 typedef void (*TaskFunction_t)( void * );
-# 103 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 1
-# 87 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
-# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void *get_sp(void)
-{
-    void *sp;
-    asm volatile ("mov %0, sp;" : "=r" (sp));
-    return sp;
-}
-
-
-
-
-
-static inline void cpu_write_dtlb(uint32_t vpn, unsigned attr)
-{
-    asm volatile ("wdtlb  %1, %0; dsync\n" :: "r" (vpn), "r" (attr));
-}
-
-
-static inline void cpu_write_itlb(unsigned vpn, unsigned attr)
-{
-    asm volatile ("witlb  %1, %0; isync\n" :: "r" (vpn), "r" (attr));
-}
-
-static inline void cpu_init_memctl(void)
-{
-
-    uint32_t memctl = 0x00000000;
-    asm volatile ("wsr %0, " "MEMCTL" : : "r" (memctl));;
-
-}
-# 74 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline void cpu_configure_region_protection(void)
-{
-    const uint32_t pages_to_protect[] = {0x00000000, 0x80000000, 0xa0000000, 0xc0000000, 0xe0000000};
-    for (int i = 0; i < sizeof(pages_to_protect)/sizeof(pages_to_protect[0]); ++i) {
-        cpu_write_dtlb(pages_to_protect[i], 0xf);
-        cpu_write_itlb(pages_to_protect[i], 0xf);
-    }
-    cpu_write_dtlb(0x20000000, 0);
-    cpu_write_itlb(0x20000000, 0);
-}
-
-
-
-
-
-void esp_cpu_stall(int cpu_id);
-
-
-
-
-
-void esp_cpu_unstall(int cpu_id);
-
-
-
-
-
-void esp_cpu_reset(int cpu_id);
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h" 3 4
-_Bool 
-# 111 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-    esp_cpu_in_ocd_debug_mode(void);
-# 124 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/cpu.h"
-static inline uint32_t esp_cpu_process_stack_pc(uint32_t pc)
-{
-    if (pc & 0x80000000) {
-
-        pc = (pc & 0x3fffffff) | 0x40000000;
-    }
-
-    return pc - 3;
-}
-# 90 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 1
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/deprecated_definitions.h" 1
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
 
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 1
-# 82 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 1
-# 30 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/esp32/include/xtensa/config/specreg.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 1
-# 44 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 1
+# 80 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h" 1
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/config/specreg.h" 1
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h" 1
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h"
 typedef struct {
 long signature;
 long restore_label;
 long aftersave_label;
-long areg[
-# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-64
-# 48 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
+long areg[64];
 
 long caller_regs[16];
 long caller_regs_saved;
@@ -3281,33 +2351,9 @@ long depc;
 
 
 
-long epc[
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 70 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
-long eps[
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 71 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
-long excsave[
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-6 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-+ 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-1 
-# 72 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-- 1];
+long epc[6 + 1 - 1];
+long eps[6 + 1 - 1];
+long excsave[6 + 1 - 1];
 
 
 long lcount;
@@ -3331,11 +2377,7 @@ long memctl;
 
 
 long ccount;
-long ccompare[
-# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-3
-# 96 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
+long ccompare[3];
 
 
 long intenable;
@@ -3347,40 +2389,24 @@ long icountlevel;
 long debugcause;
 
 
-long dbreakc[
-# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 108 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-long dbreaka[
-# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 109 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
+long dbreakc[2];
+long dbreaka[2];
 
 
-long ibreaka[
-# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-2
-# 112 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
+long ibreaka[2];
 long ibreakenable;
 
 
 
-long misc[
-# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h" 3 4
-4
-# 117 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
-];
-# 131 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+long misc[4];
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h"
 long cpenable;
 
 
 
 
 long tlbs[8*2];
-# 163 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h"
 char ncp[48] __attribute__((aligned(4)));
 
 char cp0[72] __attribute__((aligned(4)));
@@ -3391,14 +2417,14 @@ char cp4[0] __attribute__((aligned(1)));
 char cp5[0] __attribute__((aligned(1)));
 char cp6[0] __attribute__((aligned(1)));
 char cp7[0] __attribute__((aligned(1)));
-# 183 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime-core-state.h"
+# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime-core-state.h"
 } XtosCoreState;
-# 32 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h" 2
-# 61 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
-typedef void (_xtos_handler_func)(void);
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h" 2
+# 61 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h"
+typedef void (_xtos_handler_func)();
 
 typedef _xtos_handler_func *_xtos_handler;
-# 151 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+# 151 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h"
 extern unsigned int _xtos_ints_off( unsigned int mask );
 extern unsigned int _xtos_ints_on( unsigned int mask );
 extern unsigned _xtos_set_intlevel( int intlevel );
@@ -3441,7 +2467,7 @@ extern void _xtos_clear_ints( unsigned int mask );
 extern int _xtos_core_shutoff(unsigned flags);
 extern int _xtos_core_save(unsigned flags, XtosCoreState *savearea, void *code);
 extern void _xtos_core_restore(unsigned retvalue, XtosCoreState *savearea);
-# 202 "/home/dieter/Development/esp-idf/components/xtensa/include/xtensa/xtruntime.h"
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/xtensa/xtruntime.h"
 extern void _xtos_timer_0_delta( int cycles );
 
 
@@ -3449,32 +2475,27 @@ extern void _xtos_timer_1_delta( int cycles );
 
 
 extern void _xtos_timer_2_delta( int cycles );
-# 83 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h" 1
-# 27 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
-void esp_crosscore_int_init(void);
-# 40 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_crosscore_int.h" 1
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_crosscore_int.h"
+void esp_crosscore_int_init();
+# 40 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_crosscore_int.h"
 void esp_crosscore_int_send_yield(int core_id);
-# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_private/crosscore_int.h"
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_crosscore_int.h"
 void esp_crosscore_int_send_freq_switch(int core_id);
-# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
        
-# 43 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 1 3 4
-# 36 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 37 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 63 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
 
-
-
-# 66 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
 typedef __FILE FILE;
-
-
 
 
 
@@ -3485,14 +2506,9 @@ typedef _fpos_t fpos_t;
 
 
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/sys/stdio.h" 1 3 4
-# 80 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 2 3 4
-# 181 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-char * ctermid (char *);
-
-
-
-
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/stdio.h" 1
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h" 2
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * tmpfile (void);
 char * tmpnam (char *);
 
@@ -3503,22 +2519,22 @@ int fflush (FILE *);
 FILE * freopen (const char *restrict, const char *restrict, FILE *restrict);
 void setbuf (FILE *restrict, char *restrict);
 int setvbuf (FILE *restrict, char *restrict, int, size_t);
-int fprintf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fscanf (FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int printf (const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int scanf (const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int sscanf (const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int vsprintf (char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int fprintf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fscanf (FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int printf (const char *restrict, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int scanf (const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int sscanf (const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int vfprintf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int vsprintf (char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
 int fgetc (FILE *);
 char * fgets (char *restrict, int, FILE *restrict);
 int fputc (int, FILE *);
@@ -3530,8 +2546,8 @@ int putc (int, FILE *);
 int putchar (int);
 int puts (const char *);
 int ungetc (int, FILE *);
-size_t fread (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite (const void *restrict , size_t _size, size_t _n, FILE *);
+size_t fread (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite (const void * restrict , size_t _size, size_t _n, FILE *);
 
 
 
@@ -3551,104 +2567,90 @@ int ferror (FILE *);
 void perror (const char *);
 
 FILE * fopen (const char *restrict _name, const char *restrict _type);
-int sprintf (char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int sprintf (char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int remove (const char *);
 int rename (const char *, const char *);
-# 257 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 235 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int fseeko (FILE *, off_t, int);
-off_t ftello (FILE *);
+off_t ftello ( FILE *);
 
 
 
-int fcloseall (void);
 
 
 
-int snprintf (char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
 
+int asiprintf (char **, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+char * asniprintf (char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int asprintf (char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-int asprintf (char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int vasprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
+int diprintf (int, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
-
-int asiprintf (char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-char * asniprintf (char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * asnprintf (char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-
-int diprintf (int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-
-int fiprintf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int fiscanf (FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int iprintf (const char *, ...)
-               __attribute__ ((__format__ (__printf__, 1, 2)));
-int iscanf (const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 1, 2)));
-int siprintf (char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int siscanf (const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int sniprintf (char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int vasiprintf (char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int vdiprintf (int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiprintf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vfiscanf (FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int viprintf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 1, 0)));
-int viscanf (const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 1, 0)));
-int vsiprintf (char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int vsiscanf (const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int vsniprintf (char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-# 339 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+int fiprintf (FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int fiscanf (FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int iprintf (const char *, ...) __attribute__ ((__format__ (__printf__, 1, 2)))
+                                                            ;
+int iscanf (const char *, ...) __attribute__ ((__format__ (__scanf__, 1, 2)))
+                                                           ;
+int siprintf (char *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int siscanf (const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int snprintf (char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int sniprintf (char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int vasiprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+char * vasniprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * vasnprintf (char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vasprintf (char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vdiprintf (int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiprintf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vfiscanf (FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vfscanf (FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int viprintf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 1, 0)))
+                                                            ;
+int viscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vscanf (const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 1, 0)))
+                                                           ;
+int vsiprintf (char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int vsiscanf (const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int vsniprintf (char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsnprintf (char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int vsscanf (const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+# 313 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 FILE * fdopen (int, const char *);
 
 int fileno (FILE *);
-
-
+int getw (FILE *);
 int pclose (FILE *);
 FILE * popen (const char *, const char *);
-
-
-
+int putw (int, FILE *);
 void setbuffer (FILE *, char *, int);
 int setlinebuf (FILE *);
-
-
-
-int getw (FILE *);
-int putw (int, FILE *);
-
-
 int getc_unlocked (FILE *);
 int getchar_unlocked (void);
 void flockfile (FILE *);
@@ -3656,33 +2658,38 @@ int ftrylockfile (FILE *);
 void funlockfile (FILE *);
 int putc_unlocked (int, FILE *);
 int putchar_unlocked (int);
-# 374 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int dprintf (int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+# 338 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+int dprintf (int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 
 FILE * fmemopen (void *restrict, size_t, const char *restrict);
 
 
 FILE * open_memstream (char **, size_t *);
-int vdprintf (int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-
-
 
 int renameat (int, const char *, int, const char *);
-# 396 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-int _asiprintf_r (struct _reent *, char **, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _diprintf_r (struct _reent *, int, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _dprintf_r (struct _reent *, int, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+
+int vdprintf (int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+
+
+
+
+
+
+
+int _asiprintf_r (struct _reent *, char **, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+char * _asniprintf_r (struct _reent *, char *, size_t *, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+char * _asnprintf_r (struct _reent *, char *restrict, size_t *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _asprintf_r (struct _reent *, char **restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _diprintf_r (struct _reent *, int, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _dprintf_r (struct _reent *, int, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fclose_r (struct _reent *, FILE *);
 int _fcloseall_r (struct _reent *);
 FILE * _fdopen_r (struct _reent *, int, const char *);
@@ -3698,110 +2705,110 @@ char * _fgets_unlocked_r (struct _reent *, char *restrict, int, FILE *restrict);
 int _fgetpos_r (struct _reent *, FILE *, fpos_t *);
 int _fsetpos_r (struct _reent *, FILE *, const fpos_t *);
 
-int _fiprintf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _fiscanf_r (struct _reent *, FILE *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _fiprintf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _fiscanf_r (struct _reent *, FILE *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 FILE * _fmemopen_r (struct _reent *, void *restrict, size_t, const char *restrict);
 FILE * _fopen_r (struct _reent *, const char *restrict, const char *restrict);
 FILE * _freopen_r (struct _reent *, const char *restrict, const char *restrict, FILE *restrict);
-int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
+int _fprintf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
 int _fpurge_r (struct _reent *, FILE *);
 int _fputc_r (struct _reent *, int, FILE *);
 int _fputc_unlocked_r (struct _reent *, int, FILE *);
 int _fputs_r (struct _reent *, const char *restrict, FILE *restrict);
 int _fputs_unlocked_r (struct _reent *, const char *restrict, FILE *restrict);
-size_t _fread_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fread_unlocked_r (struct _reent *, void *restrict, size_t _size, size_t _n, FILE *restrict);
-int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+size_t _fread_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fread_unlocked_r (struct _reent *, void * restrict, size_t _size, size_t _n, FILE *restrict);
+int _fscanf_r (struct _reent *, FILE *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 int _fseek_r (struct _reent *, FILE *, long, int);
 int _fseeko_r (struct _reent *, FILE *, _off_t, int);
 long _ftell_r (struct _reent *, FILE *);
 _off_t _ftello_r (struct _reent *, FILE *);
 void _rewind_r (struct _reent *, FILE *);
-size_t _fwrite_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t _fwrite_unlocked_r (struct _reent *, const void *restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t _fwrite_unlocked_r (struct _reent *, const void * restrict, size_t _size, size_t _n, FILE *restrict);
 int _getc_r (struct _reent *, FILE *);
 int _getc_unlocked_r (struct _reent *, FILE *);
 int _getchar_r (struct _reent *);
 int _getchar_unlocked_r (struct _reent *);
 char * _gets_r (struct _reent *, char *);
-int _iprintf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
-int _iscanf_r (struct _reent *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
+int _iprintf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
+int _iscanf_r (struct _reent *, const char *, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
 FILE * _open_memstream_r (struct _reent *, char **, size_t *);
 void _perror_r (struct _reent *, const char *);
-int _printf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 2, 3)));
+int _printf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 2, 3)))
+                                                            ;
 int _putc_r (struct _reent *, int, FILE *);
 int _putc_unlocked_r (struct _reent *, int, FILE *);
 int _putchar_unlocked_r (struct _reent *, int);
 int _putchar_r (struct _reent *, int);
 int _puts_r (struct _reent *, const char *);
 int _remove_r (struct _reent *, const char *);
-int _rename_r (struct _reent *,
-      const char *_old, const char *_new);
-int _scanf_r (struct _reent *, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 2, 3)));
-int _siprintf_r (struct _reent *, char *, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _siscanf_r (struct _reent *, const char *, const char *, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
-int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 4, 5)));
-int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__printf__, 3, 4)));
-int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...)
-               __attribute__ ((__format__ (__scanf__, 3, 4)));
+int _rename_r (struct _reent *, const char *_old, const char *_new)
+                                          ;
+int _scanf_r (struct _reent *, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 2, 3)))
+                                                           ;
+int _siprintf_r (struct _reent *, char *, const char *, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _siscanf_r (struct _reent *, const char *, const char *, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
+int _sniprintf_r (struct _reent *, char *, size_t, const char *, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _snprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 4, 5)))
+                                                            ;
+int _sprintf_r (struct _reent *, char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__printf__, 3, 4)))
+                                                            ;
+int _sscanf_r (struct _reent *, const char *restrict, const char *restrict, ...) __attribute__ ((__format__ (__scanf__, 3, 4)))
+                                                           ;
 char * _tempnam_r (struct _reent *, const char *, const char *);
 FILE * _tmpfile_r (struct _reent *);
 char * _tmpnam_r (struct _reent *, char *);
 int _ungetc_r (struct _reent *, int, FILE *);
-int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _viprintf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _viscanf_r (struct _reent *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 2, 0)));
-int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 2, 0)));
-int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
-int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 4, 0)));
-int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__printf__, 3, 0)));
-int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list)
-               __attribute__ ((__format__ (__scanf__, 3, 0)));
+int _vasiprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+char * _vasniprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+char * _vasnprintf_r (struct _reent*, char *, size_t *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vasprintf_r (struct _reent *, char **, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdiprintf_r (struct _reent *, int, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vdprintf_r (struct _reent *, int, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiprintf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfiscanf_r (struct _reent *, FILE *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vfprintf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vfscanf_r (struct _reent *, FILE *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _viprintf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _viscanf_r (struct _reent *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vprintf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 2, 0)))
+                                                            ;
+int _vscanf_r (struct _reent *, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 2, 0)))
+                                                           ;
+int _vsiprintf_r (struct _reent *, char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsiscanf_r (struct _reent *, const char *, const char *, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
+int _vsniprintf_r (struct _reent *, char *, size_t, const char *, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsnprintf_r (struct _reent *, char *restrict, size_t, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 4, 0)))
+                                                            ;
+int _vsprintf_r (struct _reent *, char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__printf__, 3, 0)))
+                                                            ;
+int _vsscanf_r (struct _reent *, const char *restrict, const char *restrict, __gnuc_va_list) __attribute__ ((__format__ (__scanf__, 3, 0)))
+                                                           ;
 
 
 
@@ -3817,32 +2824,33 @@ int fileno_unlocked (FILE *);
 int fflush_unlocked (FILE *);
 int fgetc_unlocked (FILE *);
 int fputc_unlocked (int, FILE *);
-size_t fread_unlocked (void *restrict, size_t _size, size_t _n, FILE *restrict);
-size_t fwrite_unlocked (const void *restrict , size_t _size, size_t _n, FILE *);
-
-
-
-char * fgets_unlocked (char *restrict, int, FILE *restrict);
-int fputs_unlocked (const char *restrict, FILE *restrict);
-# 577 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+size_t fread_unlocked (void * restrict, size_t _size, size_t _n, FILE *restrict);
+size_t fwrite_unlocked (const void * restrict , size_t _size, size_t _n, FILE *);
+# 538 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 int __srget_r (struct _reent *, FILE *);
 int __swbuf_r (struct _reent *, int, FILE *);
-# 601 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-FILE *funopen (const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-FILE *_funopen_r (struct _reent *, const void *__cookie,
-  int (*__readfn)(void *__cookie, char *__buf,
-    int __n),
-  int (*__writefn)(void *__cookie, const char *__buf,
-     int __n),
-  fpos_t (*__seekfn)(void *__cookie, fpos_t __off, int __whence),
-  int (*__closefn)(void *__cookie));
-# 624 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
+# 562 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
+FILE *funopen (const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+FILE *_funopen_r (struct _reent *, const void * __cookie, int (*__readfn)(void * __cookie, char *__buf, int __n), int (*__writefn)(void * __cookie, const char *__buf, int __n), fpos_t (*__seekfn)(void * __cookie, fpos_t __off, int __whence), int (*__closefn)(void * __cookie))
+
+
+
+
+
+                                   ;
+
+
+
+
+
+
+
 typedef ssize_t cookie_read_function_t(void *__cookie, char *__buf, size_t __n);
 typedef ssize_t cookie_write_function_t(void *__cookie, const char *__buf,
      size_t __n);
@@ -3862,73 +2870,21 @@ typedef struct
   cookie_seek_function_t *seek;
   cookie_close_function_t *close;
 } cookie_io_functions_t;
-FILE *fopencookie (void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-FILE *_fopencookie_r (struct _reent *, void *__cookie,
-  const char *__mode, cookie_io_functions_t __functions);
-# 687 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline__ int __sputc_r(struct _reent *_ptr, int _c, FILE *_p) {
+FILE *fopencookie (void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+FILE *_fopencookie_r (struct _reent *, void *__cookie, const char *__mode, cookie_io_functions_t __functions)
+                                                         ;
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/stdio.h"
 
-
-
-
- if (--_p->_w >= 0 || (_p->_w >= _p->_lbfsize && (char)_c != '\n'))
-  return (*_p->_p++ = _c);
- else
-  return (__swbuf_r(_ptr, _c, _p));
-}
-# 741 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-static __inline int
-_getchar_unlocked(void)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return ((--(((_ptr)->_stdin))->_r < 0 ? __srget_r(_ptr, ((_ptr)->_stdin)) : (int)(*(((_ptr)->_stdin))->_p++)));
-}
-
-static __inline int
-_putchar_unlocked(int _c)
-{
- struct _reent *_ptr;
-
- _ptr = (__getreent());
- return (__sputc_r(_ptr, _c, ((_ptr)->_stdout)));
-}
-# 797 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/stdio.h" 3 4
-
-# 44 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 44 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
        
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 1
-# 19 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h"
-       
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 1 3 4
-# 39 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/assert.h" 3 4
-void __assert (const char *, int, const char *)
-     __attribute__ ((__noreturn__));
-void __assert_func (const char *, int, const char *, const char *)
-     __attribute__ ((__noreturn__));
-# 24 "/home/dieter/Development/esp-idf/components/newlib/platform_include/assert.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h" 2
-
-
-
-
-
-
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 typedef int32_t esp_err_t;
-# 59 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 58 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name(esp_err_t code);
-# 77 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_err.h"
+# 76 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_err.h"
 const char *esp_err_to_name_r(esp_err_t code, char *buf, size_t buflen);
 
 
@@ -3936,8 +2892,8 @@ void _esp_error_check_failed(esp_err_t rc, const char *file, int line, const cha
 
 
 void _esp_error_check_failed_without_abort(esp_err_t rc, const char *file, int line, const char *function, const char *expression);
-# 45 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h" 2
-# 53 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 45 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h" 2
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 typedef struct esp_timer* esp_timer_handle_t;
 
 
@@ -3970,20 +2926,20 @@ typedef struct {
     esp_timer_dispatch_t dispatch_method;
     const char* name;
 } esp_timer_create_args_t;
-# 98 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
-esp_err_t esp_timer_init(void);
-# 109 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
-esp_err_t esp_timer_deinit(void);
-# 127 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 98 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
+esp_err_t esp_timer_init();
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
+esp_err_t esp_timer_deinit();
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_create(const esp_timer_create_args_t* create_args,
                            esp_timer_handle_t* out_handle);
-# 142 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_start_once(esp_timer_handle_t timer, uint64_t timeout_us);
-# 157 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_start_periodic(esp_timer_handle_t timer, uint64_t period);
-# 170 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 170 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_stop(esp_timer_handle_t timer);
-# 183 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_delete(esp_timer_handle_t timer);
 
 
@@ -3991,41 +2947,41 @@ esp_err_t esp_timer_delete(esp_timer_handle_t timer);
 
 
 
-int64_t esp_timer_get_time(void);
+int64_t esp_timer_get_time();
 
 
 
 
 
 
-int64_t esp_timer_get_next_alarm(void);
-# 227 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_timer.h"
+int64_t esp_timer_get_next_alarm();
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_timer.h"
 esp_err_t esp_timer_dump(FILE* stream);
-# 85 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 83 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
-# 1 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
        
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h" 1
-# 14 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
        
-# 30 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 typedef struct multi_heap_info *multi_heap_handle_t;
-# 41 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 41 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 void *multi_heap_malloc(multi_heap_handle_t heap, size_t size);
-# 50 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 50 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 void multi_heap_free(multi_heap_handle_t heap, void *p);
-# 62 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 void *multi_heap_realloc(multi_heap_handle_t heap, void *p, size_t size);
-# 73 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 size_t multi_heap_get_allocated_size(multi_heap_handle_t heap, void *p);
-# 87 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 multi_heap_handle_t multi_heap_register(void *start, size_t size);
-# 101 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 101 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 void multi_heap_set_lock(multi_heap_handle_t heap, void* lock);
 
 
@@ -4035,19 +2991,19 @@ void multi_heap_set_lock(multi_heap_handle_t heap, void* lock);
 
 
 void multi_heap_dump(multi_heap_handle_t heap);
-# 121 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 
-# 121 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h" 3 4
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h" 3 4
 _Bool 
-# 121 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
     multi_heap_check(multi_heap_handle_t heap, 
-# 121 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h" 3 4
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h" 3 4
                                                _Bool 
-# 121 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
                                                     print_errors);
-# 135 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 size_t multi_heap_free_size(multi_heap_handle_t heap);
-# 147 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 size_t multi_heap_minimum_free_size(multi_heap_handle_t heap);
 
 
@@ -4060,75 +3016,224 @@ typedef struct {
     size_t free_blocks;
     size_t total_blocks;
 } multi_heap_info_t;
-# 167 "/home/dieter/Development/esp-idf/components/heap/include/multi_heap.h"
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/multi_heap.h"
 void multi_heap_get_info(multi_heap_handle_t heap, multi_heap_info_t *info);
-# 19 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 2
-# 55 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 2
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_malloc(size_t size, uint32_t caps);
-# 67 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_free( void *ptr);
-# 86 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_realloc( void *ptr, size_t size, int caps);
-# 102 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 102 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_calloc(size_t n, size_t size, uint32_t caps);
-# 116 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
-size_t heap_caps_get_total_size(uint32_t caps);
-# 132 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_free_size( uint32_t caps );
-# 150 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 136 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_minimum_free_size( uint32_t caps );
-# 162 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 148 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 size_t heap_caps_get_largest_free_block( uint32_t caps );
-# 178 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 164 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_get_info( multi_heap_info_t *info, uint32_t caps );
-# 191 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_print_heap_info( uint32_t caps );
-# 205 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 
-# 205 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
 _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
     heap_caps_check_integrity_all(
-# 205 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
                                   _Bool 
-# 205 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
                                        print_errors);
-# 223 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 
-# 223 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
 _Bool 
-# 223 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
     heap_caps_check_integrity(uint32_t caps, 
-# 223 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
                                              _Bool 
-# 223 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 209 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
                                                   print_errors);
-# 246 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 
-# 246 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
 _Bool 
-# 246 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
     heap_caps_check_integrity_addr(intptr_t addr, 
-# 246 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h" 3 4
                                                   _Bool 
-# 246 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 232 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
                                                        print_errors);
-# 259 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 245 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_malloc_extmem_enable(size_t limit);
-# 274 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 260 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_malloc_prefer( size_t size, size_t num, ... );
-# 285 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 271 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_realloc_prefer( void *ptr, size_t size, size_t num, ... );
-# 296 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void *heap_caps_calloc_prefer( size_t n, size_t size, size_t num, ... );
-# 315 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
+# 301 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
 void heap_caps_dump(uint32_t caps);
-# 325 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
-void heap_caps_dump_all(void);
-# 338 "/home/dieter/Development/esp-idf/components/heap/include/esp_heap_caps.h"
-size_t heap_caps_get_allocated_size( void *ptr );
-# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
-# 117 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 311 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/heap/include/esp_heap_caps.h"
+void heap_caps_dump_all();
+# 86 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 1
+# 14 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+       
+
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_attr.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 2
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+typedef struct {
+    const char *name;
+    uint32_t caps[3];
+    
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+   _Bool 
+# 62 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+        aliased_iram;
+    
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+   _Bool 
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+        startup_stack;
+} soc_memory_type_desc_t;
+
+
+extern const soc_memory_type_desc_t soc_memory_types[];
+extern const size_t soc_memory_type_count;
+
+
+
+typedef struct
+{
+    intptr_t start;
+    size_t size;
+    size_t type;
+    intptr_t iram_address;
+} soc_memory_region_t;
+
+extern const soc_memory_region_t soc_memory_regions[];
+extern const size_t soc_memory_region_count;
+
+
+
+
+typedef struct
+{
+    intptr_t start;
+    intptr_t end;
+} soc_reserved_region_t;
+# 134 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+size_t soc_get_available_memory_regions(soc_memory_region_t *regions);
+
+
+
+
+
+size_t soc_get_available_memory_region_max_count();
+
+inline static 
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 142 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_dma_capable(const void *p)
+{
+    return (intptr_t)p >= 0x3FFAE000 && (intptr_t)p < 0x40000000;
+}
+
+inline static 
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 147 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_executable(const void *p)
+{
+    intptr_t ip = (intptr_t) p;
+    return (ip >= 0x400D0000 && ip < 0x40400000)
+        || (ip >= 0x40080000 && ip < 0x400A0000)
+        || (ip >= 0x400C0000 && ip < 0x400C2000);
+}
+
+inline static 
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 155 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_byte_accessible(const void *p)
+{
+    
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+   _Bool 
+# 157 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+        r;
+    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x40000000);
+
+
+
+    return r;
+}
+
+inline static 
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_internal(const void *p) {
+    
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+   _Bool 
+# 166 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+        r;
+    r = ((intptr_t)p >= 0x3FF90000 && (intptr_t)p < 0x400C2000);
+    r |= ((intptr_t)p >= 0x50000000 && (intptr_t)p < 0x50002000);
+    return r;
+}
+
+
+inline static 
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_external_ram(const void *p) {
+    return ((intptr_t)p >= 0x3F800000 && (intptr_t)p < 0x3FC00000);
+}
+
+inline static 
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_in_iram(const void *p) {
+
+
+
+    return ((intptr_t)p >= 0x40078000 && (intptr_t)p < 0x400A0000);
+
+}
+
+inline static 
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 185 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_in_drom(const void *p) {
+    return ((intptr_t)p >= 0x3F400000 && (intptr_t)p < 0x3F800000);
+}
+
+inline static 
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h" 3 4
+             _Bool 
+# 189 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/soc_memory_layout.h"
+                  __attribute__((section(".iram1"))) esp_ptr_in_dram(const void *p) {
+    return ((intptr_t)p >= 0x3FAE0000 && (intptr_t)p < 0x40000000);
+}
+# 87 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef uint8_t StackType_t;
 typedef int BaseType_t;
 typedef unsigned int UBaseType_t;
@@ -4143,17 +3248,22 @@ typedef unsigned int UBaseType_t;
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portbenchmark.h" 1
-# 132 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portbenchmark.h" 1
+# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
-
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 135 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 2
 
 
 
 typedef struct {
-# 150 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+
+
+
+
+
+
+
  uint32_t owner;
 
 
@@ -4165,52 +3275,50 @@ typedef struct {
 
 
 } portMUX_TYPE;
-# 185 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
-void vPortAssertIfInISR(void);
-# 215 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+void vPortAssertIfInISR();
+# 203 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortCPUInitializeMutex(portMUX_TYPE *mux);
-# 255 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vTaskExitCritical( portMUX_TYPE *mux );
 void vTaskEnterCritical( portMUX_TYPE *mux );
 void vPortCPUAcquireMutex(portMUX_TYPE *mux);
-# 267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 
-# 267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h" 3 4
 _Bool 
-# 267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 229 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
     vPortCPUAcquireMutexTimeout(portMUX_TYPE *mux, int timeout_cycles);
 void vPortCPUReleaseMutex(portMUX_TYPE *mux);
-# 328 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
-static inline unsigned portENTER_CRITICAL_NESTED(void) {
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
+static inline unsigned portENTER_CRITICAL_NESTED() {
  unsigned state = ({ unsigned __tmp; __asm__ __volatile__( "rsil	%0, " "3" "\n" : "=a" (__tmp) : : "memory" ); __tmp;});
  ;
  return state;
 }
-# 356 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 static inline void uxPortCompareSet(volatile uint32_t *addr, uint32_t compare, uint32_t *set) {
-
     __asm__ __volatile__ (
         "WSR 	    %2,SCOMPARE1 \n"
         "S32C1I     %0, %1, 0	 \n"
         :"=r"(*set)
         :"r"(addr), "r"(compare), "0"(*set)
         );
-# 381 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
 }
-# 406 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 void vPortYield( void );
 void _frxt_setup_switch( void );
 
 
 
-static inline uint32_t xPortGetCoreID(void);
-# 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+static inline uint32_t xPortGetCoreID();
+# 342 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 typedef struct {
 
  volatile StackType_t* coproc_area;
-# 449 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 } xMPU_SETTINGS;
-# 460 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portmacro.h"
+# 370 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portmacro.h"
 extern void esp_vApplicationIdleHook( void );
 extern void esp_vApplicationTickHook( void );
 
@@ -4221,24 +3329,917 @@ extern void esp_vApplicationTickHook( void );
 
 void _xt_coproc_release(volatile void * coproc_sa_base);
 void vApplicationSleep( TickType_t xExpectedIdleTime );
-# 97 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 127 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
-# 128 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_bit_defs.h"
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 125 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/mpu_wrappers.h" 1
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
        
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
-       
-# 54 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_idf_version.h"
-const char* esp_get_idf_version(void);
-# 25 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h" 2
 
 
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_types.h" 2
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/soc.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_reg.h" 2
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_struct.h"
+typedef volatile struct {
+    uint32_t bt_select;
+    uint32_t out;
+    uint32_t out_w1ts;
+    uint32_t out_w1tc;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } out1;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } out1_w1ts;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } out1_w1tc;
+    union {
+        struct {
+            uint32_t sel: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } sdio_select;
+    uint32_t enable;
+    uint32_t enable_w1ts;
+    uint32_t enable_w1tc;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } enable1;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } enable1_w1ts;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } enable1_w1tc;
+    union {
+        struct {
+            uint32_t strapping: 16;
+            uint32_t reserved16:16;
+        };
+        uint32_t val;
+    } strap;
+    uint32_t in;
+    union {
+        struct {
+            uint32_t data: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } in1;
+    uint32_t status;
+    uint32_t status_w1ts;
+    uint32_t status_w1tc;
+    union {
+        struct {
+            uint32_t intr_st: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } status1;
+    union {
+        struct {
+            uint32_t intr_st: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } status1_w1ts;
+    union {
+        struct {
+            uint32_t intr_st: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } status1_w1tc;
+    uint32_t reserved_5c;
+    uint32_t acpu_int;
+    uint32_t acpu_nmi_int;
+    uint32_t pcpu_int;
+    uint32_t pcpu_nmi_int;
+    uint32_t cpusdio_int;
+    union {
+        struct {
+            uint32_t intr: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } acpu_int1;
+    union {
+        struct {
+            uint32_t intr: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } acpu_nmi_int1;
+    union {
+        struct {
+            uint32_t intr: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } pcpu_int1;
+    union {
+        struct {
+            uint32_t intr: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } pcpu_nmi_int1;
+    union {
+        struct {
+            uint32_t intr: 8;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } cpusdio_int1;
+    union {
+        struct {
+            uint32_t reserved0: 2;
+            uint32_t pad_driver: 1;
+            uint32_t reserved3: 4;
+            uint32_t int_type: 3;
+            uint32_t wakeup_enable: 1;
+            uint32_t config: 2;
+            uint32_t int_ena: 5;
+            uint32_t reserved18: 14;
+        };
+        uint32_t val;
+    } pin[40];
+    union {
+        struct {
+            uint32_t rtc_max: 10;
+            uint32_t reserved10: 21;
+            uint32_t start: 1;
+        };
+        uint32_t val;
+    } cali_conf;
+    union {
+        struct {
+            uint32_t value_sync2: 20;
+            uint32_t reserved20: 10;
+            uint32_t rdy_real: 1;
+            uint32_t rdy_sync2: 1;
+        };
+        uint32_t val;
+    } cali_data;
+    union {
+        struct {
+            uint32_t func_sel: 6;
+            uint32_t sig_in_inv: 1;
+            uint32_t sig_in_sel: 1;
+            uint32_t reserved8: 24;
+        };
+        uint32_t val;
+    } func_in_sel_cfg[256];
+    union {
+        struct {
+            uint32_t func_sel: 9;
+            uint32_t inv_sel: 1;
+            uint32_t oen_sel: 1;
+            uint32_t oen_inv_sel: 1;
+            uint32_t reserved12: 20;
+        };
+        uint32_t val;
+    } func_out_sel_cfg[40];
+} gpio_dev_t;
+extern gpio_dev_t GPIO;
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/rtc_io_reg.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h" 1
+# 93 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/io_mux_reg.h"
+static inline void __attribute__ ((deprecated)) PIN_PULLUP_DIS(uint32_t PIN_NAME)
+{
+    ({ ; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (8))))); });
+}
+
+static inline void __attribute__ ((deprecated)) PIN_PULLUP_EN(uint32_t PIN_NAME)
+{
+    ({ ; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (8))))); });
+}
+
+static inline void __attribute__ ((deprecated)) PIN_PULLDWN_DIS(uint32_t PIN_NAME)
+{
+    ({ ; (*(volatile uint32_t*)(PIN_NAME) &= ~(((1UL << (7))))); });
+}
+
+static inline void __attribute__ ((deprecated)) PIN_PULLDWN_EN(uint32_t PIN_NAME)
+{
+    ({ ; (*(volatile uint32_t*)(PIN_NAME) |= (((1UL << (7))))); });
+}
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_sig_map.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/gpio_pins.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 2
+# 51 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+typedef enum {
+    GPIO_PIN_INTR_DISABLE = 0,
+    GPIO_PIN_INTR_POSEDGE = 1,
+    GPIO_PIN_INTR_NEGEDGE = 2,
+    GPIO_PIN_INTR_ANYEDGE = 3,
+    GPIO_PIN_INTR_LOLEVEL = 4,
+    GPIO_PIN_INTR_HILEVEL = 5
+} GPIO_INT_TYPE;
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+typedef void (* gpio_intr_handler_fn_t)(uint32_t intr_mask, 
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 3 4
+                                                           _Bool 
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+                                                                high, void *arg);
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_init(void);
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_output_set(uint32_t set_mask, uint32_t clear_mask, uint32_t enable_mask, uint32_t disable_mask);
+# 112 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_output_set_high(uint32_t set_mask, uint32_t clear_mask, uint32_t enable_mask, uint32_t disable_mask);
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+uint32_t gpio_input_get(void);
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+uint32_t gpio_input_get_high(void);
+# 143 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_intr_handler_register(gpio_intr_handler_fn_t fn, void *arg);
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+uint32_t gpio_intr_pending(void);
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+uint32_t gpio_intr_pending_high(void);
+# 173 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_intr_ack(uint32_t ack_mask);
+# 183 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_intr_ack_high(uint32_t ack_mask);
+# 195 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pin_wakeup_enable(uint32_t i, GPIO_INT_TYPE intr_state);
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pin_wakeup_disable(void);
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_matrix_in(uint32_t gpio, uint32_t signal_idx, 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 3 4
+                                                       _Bool 
+# 221 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+                                                            inv);
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_matrix_out(uint32_t gpio, uint32_t signal_idx, 
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 3 4
+                                                        _Bool 
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+                                                             out_inv, 
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h" 3 4
+                                                                      _Bool 
+# 237 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+                                                                           oen_inv);
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_select_gpio(uint8_t gpio_num);
+# 257 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_set_drv(uint8_t gpio_num, uint8_t drv);
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_pullup(uint8_t gpio_num);
+# 275 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_pulldown(uint8_t gpio_num);
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_unhold(uint8_t gpio_num);
+# 293 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/gpio.h"
+void gpio_pad_hold(uint8_t gpio_num);
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h" 1
+# 83 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+typedef void (*intr_handler_t)(void *arg);
+
+
+typedef struct intr_handle_data_t intr_handle_data_t;
+typedef intr_handle_data_t* intr_handle_t ;
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_mark_shared(int intno, int cpu, 
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h" 3 4
+                                                  _Bool 
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+                                                       is_in_iram);
+# 118 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_reserve(int intno, int cpu);
+# 153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_alloc(int source, int flags, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
+# 191 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_alloc_intrstatus(int source, int flags, uint32_t intrstatusreg, uint32_t intrstatusmask, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_free(intr_handle_t handle);
+# 222 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+int esp_intr_get_cpu(intr_handle_t handle);
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+int esp_intr_get_intno(intr_handle_t handle);
+# 249 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_disable(intr_handle_t handle);
+# 262 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_enable(intr_handle_t handle);
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+esp_err_t esp_intr_set_in_iram(intr_handle_t handle, 
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h" 3 4
+                                                    _Bool 
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr_alloc.h"
+                                                         is_in_iram);
+
+
+
+
+void esp_intr_noniram_disable();
+
+
+
+
+
+void esp_intr_noniram_enable();
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/include/soc/gpio_periph.h"
+extern const uint32_t GPIO_PIN_MUX_REG[40];
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 2
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+typedef enum {
+    GPIO_NUM_0 = 0,
+    GPIO_NUM_1 = 1,
+    GPIO_NUM_2 = 2,
+
+
+
+
+
+    GPIO_NUM_3 = 3,
+    GPIO_NUM_4 = 4,
+    GPIO_NUM_5 = 5,
+    GPIO_NUM_6 = 6,
+    GPIO_NUM_7 = 7,
+    GPIO_NUM_8 = 8,
+    GPIO_NUM_9 = 9,
+    GPIO_NUM_10 = 10,
+    GPIO_NUM_11 = 11,
+    GPIO_NUM_12 = 12,
+    GPIO_NUM_13 = 13,
+    GPIO_NUM_14 = 14,
+    GPIO_NUM_15 = 15,
+    GPIO_NUM_16 = 16,
+    GPIO_NUM_17 = 17,
+    GPIO_NUM_18 = 18,
+    GPIO_NUM_19 = 19,
+
+    GPIO_NUM_21 = 21,
+    GPIO_NUM_22 = 22,
+    GPIO_NUM_23 = 23,
+
+    GPIO_NUM_25 = 25,
+    GPIO_NUM_26 = 26,
+    GPIO_NUM_27 = 27,
+
+    GPIO_NUM_32 = 32,
+    GPIO_NUM_33 = 33,
+    GPIO_NUM_34 = 34,
+    GPIO_NUM_35 = 35,
+    GPIO_NUM_36 = 36,
+    GPIO_NUM_37 = 37,
+    GPIO_NUM_38 = 38,
+    GPIO_NUM_39 = 39,
+    GPIO_NUM_MAX = 40,
+
+} gpio_num_t;
+
+typedef enum {
+    GPIO_INTR_DISABLE = 0,
+    GPIO_INTR_POSEDGE = 1,
+    GPIO_INTR_NEGEDGE = 2,
+    GPIO_INTR_ANYEDGE = 3,
+    GPIO_INTR_LOW_LEVEL = 4,
+    GPIO_INTR_HIGH_LEVEL = 5,
+    GPIO_INTR_MAX,
+} gpio_int_type_t;
+
+typedef enum {
+    GPIO_MODE_DISABLE = (0),
+    GPIO_MODE_INPUT = (0x00000001),
+    GPIO_MODE_OUTPUT = (0x00000002),
+    GPIO_MODE_OUTPUT_OD = (((0x00000002))|((0x00000004))),
+    GPIO_MODE_INPUT_OUTPUT_OD = (((0x00000001))|((0x00000002))|((0x00000004))),
+    GPIO_MODE_INPUT_OUTPUT = (((0x00000001))|((0x00000002))),
+} gpio_mode_t;
+
+typedef enum {
+    GPIO_PULLUP_DISABLE = 0x0,
+    GPIO_PULLUP_ENABLE = 0x1,
+} gpio_pullup_t;
+
+typedef enum {
+    GPIO_PULLDOWN_DISABLE = 0x0,
+    GPIO_PULLDOWN_ENABLE = 0x1,
+} gpio_pulldown_t;
+
+
+
+
+typedef struct {
+    uint64_t pin_bit_mask;
+    gpio_mode_t mode;
+    gpio_pullup_t pull_up_en;
+    gpio_pulldown_t pull_down_en;
+    gpio_int_type_t intr_type;
+} gpio_config_t;
+
+typedef enum {
+    GPIO_PULLUP_ONLY,
+    GPIO_PULLDOWN_ONLY,
+    GPIO_PULLUP_PULLDOWN,
+    GPIO_FLOATING,
+} gpio_pull_mode_t;
+
+typedef enum {
+    GPIO_DRIVE_CAP_0 = 0,
+    GPIO_DRIVE_CAP_1 = 1,
+    GPIO_DRIVE_CAP_2 = 2,
+    GPIO_DRIVE_CAP_DEFAULT = 2,
+    GPIO_DRIVE_CAP_3 = 3,
+    GPIO_DRIVE_CAP_MAX,
+} gpio_drive_cap_t;
+
+typedef void (*gpio_isr_t)(void*);
+typedef intr_handle_t gpio_isr_handle_t;
+# 248 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_config(const gpio_config_t *pGPIOConfig);
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_reset_pin(gpio_num_t gpio_num);
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_set_intr_type(gpio_num_t gpio_num, gpio_int_type_t intr_type);
+# 290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_intr_enable(gpio_num_t gpio_num);
+# 302 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_intr_disable(gpio_num_t gpio_num);
+# 315 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_set_level(gpio_num_t gpio_num, uint32_t level);
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+int gpio_get_level(gpio_num_t gpio_num);
+# 344 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_set_direction(gpio_num_t gpio_num, gpio_mode_t mode);
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_set_pull_mode(gpio_num_t gpio_num, gpio_pull_mode_t pull);
+# 372 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_wakeup_enable(gpio_num_t gpio_num, gpio_int_type_t intr_type);
+# 383 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_wakeup_disable(gpio_num_t gpio_num);
+# 409 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_isr_register(void (*fn)(void*), void * arg, int intr_alloc_flags, gpio_isr_handle_t *handle);
+# 420 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_pullup_en(gpio_num_t gpio_num);
+# 431 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_pullup_dis(gpio_num_t gpio_num);
+# 442 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_pulldown_en(gpio_num_t gpio_num);
+# 453 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_pulldown_dis(gpio_num_t gpio_num);
+# 470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_install_isr_service(int intr_alloc_flags);
+
+
+
+
+void gpio_uninstall_isr_service();
+# 501 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_isr_handler_add(gpio_num_t gpio_num, gpio_isr_t isr_handler, void* args);
+# 513 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_isr_handler_remove(gpio_num_t gpio_num);
+# 525 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_set_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t strength);
+# 537 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_get_drive_capability(gpio_num_t gpio_num, gpio_drive_cap_t* strength);
+# 559 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_hold_en(gpio_num_t gpio_num);
+# 578 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+esp_err_t gpio_hold_dis(gpio_num_t gpio_num);
+# 589 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+void gpio_deep_sleep_hold_en(void);
+
+
+
+
+
+void gpio_deep_sleep_hold_dis(void);
+
+
+
+
+
+
+void gpio_iomux_in(uint32_t gpio_num, uint32_t signal_idx);
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+void gpio_iomux_out(uint8_t gpio_num, int func, 
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h" 3 4
+                                               _Bool 
+# 611 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/gpio.h"
+                                                    oen_inv);
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/rom/ets_sys.h" 1
+# 19 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h" 1
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+typedef void (*xt_handler)(void *);
+
+
+typedef void (*xt_exc_handler)(XtExcFrame *);
+# 60 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern xt_exc_handler xt_set_exception_handler(int n, xt_exc_handler f);
+# 73 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern xt_handler xt_set_interrupt_handler(int n, xt_handler f, void * arg);
+# 84 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void xt_ints_on(unsigned int mask);
+# 95 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void xt_ints_off(unsigned int mask);
+
+
+
+
+
+
+
+static inline void xt_set_intset(unsigned int arg)
+{
+    xthal_set_intset(arg);
+}
+# 115 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+static inline void xt_set_intclear(unsigned int arg)
+{
+    xthal_set_intclear(arg);
+}
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/xtensa_api.h"
+extern void * xt_get_interrupt_handler_arg(int n);
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_intr.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h" 2
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/touch_channel.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h" 2
+
+typedef enum {
+    TOUCH_PAD_NUM0 = 0,
+    TOUCH_PAD_NUM1,
+    TOUCH_PAD_NUM2,
+    TOUCH_PAD_NUM3,
+    TOUCH_PAD_NUM4,
+    TOUCH_PAD_NUM5,
+    TOUCH_PAD_NUM6,
+    TOUCH_PAD_NUM7,
+    TOUCH_PAD_NUM8,
+    TOUCH_PAD_NUM9,
+    TOUCH_PAD_MAX,
+} touch_pad_t;
+
+typedef enum {
+    TOUCH_HVOLT_KEEP = -1,
+    TOUCH_HVOLT_2V4 = 0,
+    TOUCH_HVOLT_2V5,
+    TOUCH_HVOLT_2V6,
+    TOUCH_HVOLT_2V7,
+    TOUCH_HVOLT_MAX,
+} touch_high_volt_t;
+
+typedef enum {
+    TOUCH_LVOLT_KEEP = -1,
+    TOUCH_LVOLT_0V5 = 0,
+    TOUCH_LVOLT_0V6,
+    TOUCH_LVOLT_0V7,
+    TOUCH_LVOLT_0V8,
+    TOUCH_LVOLT_MAX,
+} touch_low_volt_t;
+
+typedef enum {
+    TOUCH_HVOLT_ATTEN_KEEP = -1,
+    TOUCH_HVOLT_ATTEN_1V5 = 0,
+    TOUCH_HVOLT_ATTEN_1V,
+    TOUCH_HVOLT_ATTEN_0V5,
+    TOUCH_HVOLT_ATTEN_0V,
+    TOUCH_HVOLT_ATTEN_MAX,
+} touch_volt_atten_t;
+
+typedef enum {
+    TOUCH_PAD_SLOPE_0 = 0,
+    TOUCH_PAD_SLOPE_1 = 1,
+    TOUCH_PAD_SLOPE_2 = 2,
+    TOUCH_PAD_SLOPE_3 = 3,
+    TOUCH_PAD_SLOPE_4 = 4,
+    TOUCH_PAD_SLOPE_5 = 5,
+    TOUCH_PAD_SLOPE_6 = 6,
+    TOUCH_PAD_SLOPE_7 = 7,
+    TOUCH_PAD_SLOPE_MAX,
+} touch_cnt_slope_t;
+
+typedef enum {
+    TOUCH_TRIGGER_BELOW = 0,
+    TOUCH_TRIGGER_ABOVE = 1,
+    TOUCH_TRIGGER_MAX,
+} touch_trigger_mode_t;
+
+typedef enum {
+    TOUCH_TRIGGER_SOURCE_BOTH = 0,
+    TOUCH_TRIGGER_SOURCE_SET1 = 1,
+    TOUCH_TRIGGER_SOURCE_MAX,
+} touch_trigger_src_t;
+
+typedef enum {
+    TOUCH_PAD_TIE_OPT_LOW = 0,
+    TOUCH_PAD_TIE_OPT_HIGH = 1,
+    TOUCH_PAD_TIE_OPT_MAX,
+} touch_tie_opt_t;
+
+typedef enum {
+    TOUCH_FSM_MODE_TIMER = 0,
+    TOUCH_FSM_MODE_SW,
+    TOUCH_FSM_MODE_MAX,
+} touch_fsm_mode_t;
+
+
+typedef intr_handle_t touch_isr_handle_t;
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_init();
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_deinit();
+# 145 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_config(touch_pad_t touch_num, uint16_t threshold);
+# 165 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_read(touch_pad_t touch_num, uint16_t * touch_value);
+# 182 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_read_filtered(touch_pad_t touch_num, uint16_t *touch_value);
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_read_raw_data(touch_pad_t touch_num, uint16_t *touch_value);
+# 212 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+typedef void (* filter_cb_t)(uint16_t *raw_value, uint16_t *filtered_value);
+# 223 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_filter_read_cb(filter_cb_t read_cb);
+# 238 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_isr_handler_register(void(*fn)(void *), void *arg, int unused, intr_handle_t *handle_unused) __attribute__ ((deprecated));
+# 250 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_isr_register(intr_handler_t fn, void* arg);
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_isr_deregister(void(*fn)(void *), void *arg);
+# 274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_meas_time(uint16_t sleep_cycle, uint16_t meas_cycle);
+# 283 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_meas_time(uint16_t *sleep_cycle, uint16_t *meas_cycle);
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_voltage(touch_high_volt_t refh, touch_low_volt_t refl, touch_volt_atten_t atten);
+# 308 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_voltage(touch_high_volt_t *refh, touch_low_volt_t *refl, touch_volt_atten_t *atten);
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_cnt_mode(touch_pad_t touch_num, touch_cnt_slope_t slope, touch_tie_opt_t opt);
+# 334 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_cnt_mode(touch_pad_t touch_num, touch_cnt_slope_t *slope, touch_tie_opt_t *opt);
+# 343 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_io_init(touch_pad_t touch_num);
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_fsm_mode(touch_fsm_mode_t mode);
+
+
+
+
+
+
+
+esp_err_t touch_pad_get_fsm_mode(touch_fsm_mode_t *mode);
+
+
+
+
+
+
+esp_err_t touch_pad_sw_start();
+# 378 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_thresh(touch_pad_t touch_num, uint16_t threshold);
+# 388 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_thresh(touch_pad_t touch_num, uint16_t *threshold);
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_trigger_mode(touch_trigger_mode_t mode);
+
+
+
+
+
+
+
+esp_err_t touch_pad_get_trigger_mode(touch_trigger_mode_t *mode);
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_trigger_source(touch_trigger_src_t src);
+
+
+
+
+
+
+
+esp_err_t touch_pad_get_trigger_source(touch_trigger_src_t *src);
+# 441 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_group_mask(uint16_t set1_mask, uint16_t set2_mask, uint16_t en_mask);
+# 451 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_group_mask(uint16_t *set1_mask, uint16_t *set2_mask, uint16_t *en_mask);
+# 465 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_clear_group_mask(uint16_t set1_mask, uint16_t set2_mask, uint16_t en_mask);
+
+
+
+
+
+
+esp_err_t touch_pad_clear_status();
+
+
+
+
+
+
+uint32_t touch_pad_get_status();
+
+
+
+
+
+
+esp_err_t touch_pad_intr_enable();
+
+
+
+
+
+
+esp_err_t touch_pad_intr_disable();
+# 504 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_set_filter_period(uint32_t new_period_ms);
+# 515 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_filter_period(uint32_t* p_period_ms);
+# 534 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_filter_start(uint32_t filter_period_ms);
+# 543 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_filter_stop();
+# 552 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_filter_delete();
+# 561 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/touch_pad.h"
+esp_err_t touch_pad_get_wakeup_status(touch_pad_t *pad_num);
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h" 2
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+typedef enum {
+    ESP_EXT1_WAKEUP_ALL_LOW = 0,
+    ESP_EXT1_WAKEUP_ANY_HIGH = 1
+} esp_sleep_ext1_wakeup_mode_t;
+
+
+
+
+typedef enum {
+    ESP_PD_DOMAIN_RTC_PERIPH,
+    ESP_PD_DOMAIN_RTC_SLOW_MEM,
+    ESP_PD_DOMAIN_RTC_FAST_MEM,
+    ESP_PD_DOMAIN_XTAL,
+    ESP_PD_DOMAIN_MAX
+} esp_sleep_pd_domain_t;
+
+
+
+
+typedef enum {
+    ESP_PD_OPTION_OFF,
+    ESP_PD_OPTION_ON,
+    ESP_PD_OPTION_AUTO
+} esp_sleep_pd_option_t;
+
+
+
+
+typedef enum {
+    ESP_SLEEP_WAKEUP_UNDEFINED,
+    ESP_SLEEP_WAKEUP_ALL,
+    ESP_SLEEP_WAKEUP_EXT0,
+    ESP_SLEEP_WAKEUP_EXT1,
+    ESP_SLEEP_WAKEUP_TIMER,
+    ESP_SLEEP_WAKEUP_TOUCHPAD,
+    ESP_SLEEP_WAKEUP_ULP,
+    ESP_SLEEP_WAKEUP_GPIO,
+    ESP_SLEEP_WAKEUP_UART,
+} esp_sleep_source_t;
+
+
+typedef esp_sleep_source_t esp_sleep_wakeup_cause_t;
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_disable_wakeup_source(esp_sleep_source_t source);
+# 100 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_ulp_wakeup();
+# 109 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_timer_wakeup(uint64_t time_in_us);
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_touchpad_wakeup();
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+touch_pad_t esp_sleep_get_touchpad_wakeup_status();
+# 161 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_ext0_wakeup(gpio_num_t gpio_num, int level);
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_ext1_wakeup(uint64_t mask, esp_sleep_ext1_wakeup_mode_t mode);
+# 214 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_gpio_wakeup();
+# 231 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_enable_uart_wakeup(int uart_num);
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+uint64_t esp_sleep_get_ext1_wakeup_status();
+# 253 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_sleep_pd_config(esp_sleep_pd_domain_t domain,
+                                   esp_sleep_pd_option_t option);
+
+
+
+
+
+
+void esp_deep_sleep_start() __attribute__((noreturn));
+# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+esp_err_t esp_light_sleep_start();
+# 294 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+void esp_deep_sleep(uint64_t time_in_us) __attribute__((noreturn));
+# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+void system_deep_sleep(uint64_t time_in_us) __attribute__((noreturn, deprecated));
+
+
+
+
+
+
+
+esp_sleep_wakeup_cause_t esp_sleep_get_wakeup_cause();
+# 327 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+void esp_wake_deep_sleep(void);
+
+
+
+
+
+typedef void (*esp_deep_sleep_wake_stub_fn_t)(void);
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_sleep.h"
+void esp_set_deep_sleep_wake_stub(esp_deep_sleep_wake_stub_fn_t new_stub);
+
+
+
+
+
+
+esp_deep_sleep_wake_stub_fn_t esp_get_deep_sleep_wake_stub(void);
+
+
+
+
+
+
+void esp_default_wake_deep_sleep(void);
+
+
+
+
+
+
+void esp_deep_sleep_disable_rom_logging(void);
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h" 2
 
 
 
@@ -4250,7 +4251,7 @@ typedef enum {
     ESP_MAC_BT,
     ESP_MAC_ETH,
 } esp_mac_type_t;
-# 52 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 43 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef enum {
     ESP_RST_UNKNOWN,
     ESP_RST_POWERON,
@@ -4268,21 +4269,49 @@ typedef enum {
 
 
 
+
+
+void system_init(void) __attribute__ ((deprecated));
+
+
+
+
+
+
+
+void system_restore(void) __attribute__ ((deprecated));
+
+
+
+
+
 typedef void (*shutdown_handler_t)(void);
-# 82 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+
+
+
+
+
+
+
 esp_err_t esp_register_shutdown_handler(shutdown_handler_t handle);
-# 92 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_unregister_shutdown_handler(shutdown_handler_t handle);
-# 103 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 94 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_restart(void) __attribute__ ((noreturn));
+# 103 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+void system_restart(void) __attribute__ ((deprecated, noreturn));
+
 
 
 
 
 
 esp_reset_reason_t esp_reset_reason(void);
-# 119 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 119 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+uint32_t system_get_time(void) __attribute__ ((deprecated));
+# 130 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_get_free_heap_size(void);
+# 141 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+uint32_t system_get_free_heap_size(void) __attribute__ ((deprecated));
+
 
 
 
@@ -4290,31 +4319,45 @@ uint32_t esp_get_free_heap_size(void);
 
 
 uint32_t esp_get_minimum_free_heap_size( void );
-# 144 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 uint32_t esp_random(void);
-# 154 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 void esp_fill_random(void *buf, size_t len);
-# 175 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
-esp_err_t esp_base_mac_addr_set(const uint8_t *mac);
-# 185 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 192 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+esp_err_t esp_base_mac_addr_set(uint8_t *mac);
+# 202 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_base_mac_addr_get(uint8_t *mac);
-# 201 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 218 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_custom(uint8_t *mac);
-# 210 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_efuse_mac_get_default(uint8_t *mac);
-# 224 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 240 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+esp_err_t esp_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
+# 251 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+esp_err_t system_efuse_read_mac(uint8_t *mac) __attribute__ ((deprecated));
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_read_mac(uint8_t* mac, esp_mac_type_t type);
-# 240 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 esp_err_t esp_derive_local_mac(uint8_t* local_mac, const uint8_t* universal_mac);
+# 292 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
+const char* system_get_sdk_version(void) __attribute__ ((deprecated));
+
+
+
+
+
+
+
+const char* esp_get_idf_version(void);
+
 
 
 
 
 typedef enum {
     CHIP_ESP32 = 1,
-    CHIP_ESP32S2BETA = 2,
 } esp_chip_model_t;
-# 259 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_system.h"
+# 319 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_system.h"
 typedef struct {
     esp_chip_model_t model;
     uint32_t features;
@@ -4327,10 +4370,10 @@ typedef struct {
 
 
 void esp_chip_info(esp_chip_info_t* out_info);
-# 129 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 2
-# 137 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
+# 127 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h" 2
+# 135 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters, BaseType_t xRunPrivileged ) ;
-# 158 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
+# 156 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
 BaseType_t xPortStartScheduler( void ) ;
 
 
@@ -4359,22 +4402,22 @@ void vPortSetStackWatchpoint( void* pxStackStart );
 
 
 
-BaseType_t xPortInIsrContext(void);
+BaseType_t xPortInIsrContext();
 
 
 
 
 
-BaseType_t xPortInterruptedFromISRContext(void);
-# 202 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
+BaseType_t xPortInterruptedFromISRContext();
+# 200 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/portable.h"
  struct xMEMORY_REGION;
  void vPortStoreTaskMPUSettings( xMPU_SETTINGS *xMPUSettings, const struct xMEMORY_REGION * const xRegions, StackType_t *pxBottomOfStack, uint32_t usStackDepth ) ;
  void vPortReleaseTaskMPUSettings( xMPU_SETTINGS *xMPUSettings );
 
 
 
-static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID(void) {
-    uint32_t id;
+static inline uint32_t __attribute__((section(".iram1"))) xPortGetCoreID() {
+    int id;
     __asm__ __volatile__ (
         "rsr.prid %0\n"
         " extui %0,%0,13,1"
@@ -4386,27 +4429,12 @@ static inline uint32_t __attribute__((section(".iram1" "." "0"))) xPortGetCoreID
 uint32_t xPortGetTickRateHz(void);
 
 
-static inline 
-# 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h" 3 4
-             _Bool 
-# 221 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-                  __attribute__((section(".iram1" "." "1"))) xPortCanYield(void)
-{
-    uint32_t ps_reg = 0;
-
-
-    asm volatile ("rsr %0, " "PS" : "=r" (ps_reg));;
-# 235 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/portable.h"
-    return ((ps_reg & 0x0000000F) == 0);
-}
-
-
 
 
 
 void uxPortCompareSetExtram(volatile uint32_t *addr, uint32_t compare, uint32_t *set);
-# 106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
-# 863 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h" 2
+# 855 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 struct xSTATIC_LIST_ITEM
 {
  TickType_t xDummy1;
@@ -4429,7 +4457,7 @@ typedef struct xSTATIC_LIST
  void *pvDummy2;
  StaticMiniListItem_t xDummy3;
 } StaticList_t;
-# 899 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 891 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 typedef struct xSTATIC_TCB
 {
  void *pxDummy1;
@@ -4479,7 +4507,7 @@ typedef struct xSTATIC_TCB
 
 
 } StaticTask_t;
-# 963 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 955 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 typedef struct xSTATIC_QUEUE
 {
  void *pvDummy1[ 3 ];
@@ -4510,16 +4538,16 @@ typedef struct xSTATIC_QUEUE
 
 } StaticQueue_t;
 typedef StaticQueue_t StaticSemaphore_t;
-# 1008 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1000 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 typedef struct xSTATIC_EVENT_GROUP
 {
  TickType_t xDummy1;
  StaticList_t xDummy2;
-# 1021 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1013 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
  portMUX_TYPE muxDummy;
 
 } StaticEventGroup_t;
-# 1039 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1031 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 typedef struct xSTATIC_TIMER
 {
  void *pvDummy1;
@@ -4527,13 +4555,13 @@ typedef struct xSTATIC_TIMER
  TickType_t xDummy3;
  UBaseType_t uxDummy4;
  void *pvDummy5[ 2 ];
-# 1054 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
+# 1046 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/FreeRTOS.h"
 } StaticTimer_t;
-# 24 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h" 1
-# 77 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h" 1
-# 88 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 1
+# 77 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 typedef void * QueueHandle_t;
 
 
@@ -4549,22 +4577,22 @@ typedef void * QueueSetHandle_t;
 
 
 typedef void * QueueSetMemberHandle_t;
-# 613 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 613 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, const BaseType_t xCopyPosition ) ;
-# 725 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 725 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueuePeekFromISR( QueueHandle_t xQueue, void * const pvBuffer ) ;
-# 906 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 906 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, const BaseType_t xJustPeek ) ;
-# 917 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 917 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 UBaseType_t uxQueueMessagesWaiting( const QueueHandle_t xQueue ) ;
-# 930 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 930 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 UBaseType_t uxQueueSpacesAvailable( const QueueHandle_t xQueue ) ;
-# 940 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 940 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 void vQueueDelete( QueueHandle_t xQueue ) ;
-# 1267 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1267 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueGenericSendFromISR( QueueHandle_t xQueue, const void * const pvItemToQueue, BaseType_t * const pxHigherPriorityTaskWoken, const BaseType_t xCopyPosition ) ;
 BaseType_t xQueueGiveFromISR( QueueHandle_t xQueue, BaseType_t * const pxHigherPriorityTaskWoken ) ;
-# 1347 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, BaseType_t * const pxHigherPriorityTaskWoken ) ;
 
 
@@ -4575,10 +4603,10 @@ BaseType_t xQueueReceiveFromISR( QueueHandle_t xQueue, void * const pvBuffer, Ba
 BaseType_t xQueueIsQueueEmptyFromISR( const QueueHandle_t xQueue ) ;
 BaseType_t xQueueIsQueueFullFromISR( const QueueHandle_t xQueue ) ;
 UBaseType_t uxQueueMessagesWaitingFromISR( const QueueHandle_t xQueue ) ;
-# 1374 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1374 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueAltGenericSend( QueueHandle_t xQueue, const void * const pvItemToQueue, TickType_t xTicksToWait, BaseType_t xCopyPosition );
 BaseType_t xQueueAltGenericReceive( QueueHandle_t xQueue, void * const pvBuffer, TickType_t xTicksToWait, BaseType_t xJustPeeking );
-# 1390 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1390 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueCRSendFromISR( QueueHandle_t xQueue, const void *pvItemToQueue, BaseType_t xCoRoutinePreviouslyWoken );
 BaseType_t xQueueCRReceiveFromISR( QueueHandle_t xQueue, void *pvBuffer, BaseType_t *pxTaskWoken );
 BaseType_t xQueueCRSend( QueueHandle_t xQueue, const void *pvItemToQueue, TickType_t xTicksToWait );
@@ -4601,15 +4629,15 @@ void* xQueueGetMutexHolder( QueueHandle_t xSemaphore ) ;
 
 BaseType_t xQueueTakeMutexRecursive( QueueHandle_t xMutex, TickType_t xTicksToWait ) ;
 BaseType_t xQueueGiveMutexRecursive( QueueHandle_t pxMutex ) ;
-# 1488 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1488 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
  QueueHandle_t xQueueGenericCreate( const UBaseType_t uxQueueLength, const UBaseType_t uxItemSize, const uint8_t ucQueueType ) ;
-# 1548 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1548 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 QueueSetHandle_t xQueueCreateSet( const UBaseType_t uxEventQueueLength ) ;
-# 1572 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1572 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueAddToSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1591 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1591 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 BaseType_t xQueueRemoveFromSet( QueueSetMemberHandle_t xQueueOrSemaphore, QueueSetHandle_t xQueueSet ) ;
-# 1627 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h"
+# 1627 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h"
 QueueSetMemberHandle_t xQueueSelectFromSet( QueueSetHandle_t xQueueSet, const TickType_t xTicksToWait ) ;
 
 
@@ -4624,17 +4652,51 @@ BaseType_t xQueueGenericReset( QueueHandle_t xQueue, BaseType_t xNewQueue ) ;
 void vQueueSetQueueNumber( QueueHandle_t xQueue, UBaseType_t uxQueueNumber ) ;
 UBaseType_t uxQueueGetQueueNumber( QueueHandle_t xQueue ) ;
 uint8_t ucQueueGetQueueType( QueueHandle_t xQueue ) ;
-# 78 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/semphr.h" 2
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/semphr.h" 2
 
 typedef QueueHandle_t SemaphoreHandle_t;
-# 25 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+
+
+
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/time.h" 1
+# 17 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/time.h"
+struct timeval {
+  time_t tv_sec;
+  suseconds_t tv_usec;
+};
+# 55 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/time.h"
+struct timezone {
+  int tz_minuteswest;
+  int tz_dsttime;
+};
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/sys/time.h"
+struct itimerval {
+  struct timeval it_interval;
+  struct timeval it_value;
+};
 
 
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h" 1
-# 171 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+int gettimeofday (struct timeval *restrict __p, void *restrict __tz)
+                            ;
+
+int settimeofday (const struct timeval *, const struct timezone *);
+int adjtime (const struct timeval *, struct timeval *);
+
+int utimes (const char *__path, const struct timeval *__tvp);
+int getitimer (int __which, struct itimerval *__value);
+int setitimer (int __which, const struct itimerval *restrict __value, struct itimerval *restrict __ovalue)
+                                            ;
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h" 1
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h" 2
+# 171 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 typedef uint8_t cc_t;
 typedef uint32_t speed_t;
 typedef uint16_t tcflag_t;
@@ -4649,7 +4711,7 @@ struct termios
     speed_t c_ispeed;
     speed_t c_ospeed;
 };
-# 196 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 196 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 speed_t cfgetispeed(const struct termios *p);
 
 
@@ -4659,9 +4721,9 @@ speed_t cfgetispeed(const struct termios *p);
 
 
 speed_t cfgetospeed(const struct termios *p);
-# 215 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 215 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int cfsetispeed(struct termios *p, speed_t sp);
-# 226 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 226 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int cfsetospeed(struct termios *p, speed_t sp);
 
 
@@ -4671,11 +4733,11 @@ int cfsetospeed(struct termios *p, speed_t sp);
 
 
 int tcdrain(int fd);
-# 243 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 243 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int tcflow(int fd, int action);
-# 252 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 252 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int tcflush(int fd, int select);
-# 261 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 261 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int tcgetattr(int fd, struct termios *p);
 
 
@@ -4685,39 +4747,24 @@ int tcgetattr(int fd, struct termios *p);
 
 
 pid_t tcgetsid(int fd);
-# 278 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int tcsendbreak(int fd, int duration);
-# 288 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/termios.h"
+# 288 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/platform_include/sys/termios.h"
 int tcsetattr(int fd, int optional_actions, const struct termios *p);
-# 31 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/poll.h" 1
-# 34 "/home/dieter/Development/esp-idf/components/newlib/platform_include/sys/poll.h"
-struct pollfd {
-    int fd;
-    short events;
-    short revents;
-};
-
-typedef unsigned int nfds_t;
-
-int poll(struct pollfd *fds, nfds_t nfds, int timeout);
-# 32 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/dirent.h" 1 3 4
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/dirent.h" 1
 
 
 
 
 
-
-# 1 "/home/dieter/Development/esp-idf/components/vfs/include/sys/dirent.h" 1 3 4
-# 15 "/home/dieter/Development/esp-idf/components/vfs/include/sys/dirent.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/sys/dirent.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/sys/dirent.h"
        
 
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 18 "/home/dieter/Development/esp-idf/components/vfs/include/sys/dirent.h" 2 3 4
-# 30 "/home/dieter/Development/esp-idf/components/vfs/include/sys/dirent.h" 3 4
-
-# 30 "/home/dieter/Development/esp-idf/components/vfs/include/sys/dirent.h" 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h" 1 3 4
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/sys/dirent.h" 2
+# 30 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/sys/dirent.h"
 typedef struct {
     uint16_t dd_vfs_idx;
     uint16_t dd_rsv;
@@ -4743,27 +4790,14 @@ void seekdir(DIR* pdir, long loc);
 void rewinddir(DIR* pdir);
 int closedir(DIR* pdir);
 int readdir_r(DIR* pdir, struct dirent* entry, struct dirent** out_dirent);
-# 8 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/dirent.h" 2 3 4
-# 33 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 2
-# 67 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 7 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/dirent.h" 2
+# 31 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
 
-# 67 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 2
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 typedef int esp_vfs_id_t;
-
-
-
-
-
-typedef struct
-{
-    
-# 75 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-   _Bool 
-# 75 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-        is_sem_local;
-    void *sem;
-} esp_vfs_select_sem_t;
-# 100 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 88 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 typedef struct
 {
     int flags;
@@ -4778,14 +4812,6 @@ typedef struct
     union {
         ssize_t (*read_p)(void* ctx, int fd, void * dst, size_t size);
         ssize_t (*read)(int fd, void * dst, size_t size);
-    };
-    union {
-        ssize_t (*pread_p)(void *ctx, int fd, void * dst, size_t size, off_t offset);
-        ssize_t (*pread)(int fd, void * dst, size_t size, off_t offset);
-    };
-    union {
-        ssize_t (*pwrite_p)(void *ctx, int fd, const void *src, size_t size, off_t offset);
-        ssize_t (*pwrite)(int fd, const void *src, size_t size, off_t offset);
     };
     union {
         int (*open_p)(void* ctx, const char * path, int flags, int mode);
@@ -4848,8 +4874,8 @@ typedef struct
         int (*rmdir)(const char* name);
     };
     union {
-        int (*fcntl_p)(void* ctx, int fd, int cmd, int arg);
-        int (*fcntl)(int fd, int cmd, int arg);
+        int (*fcntl_p)(void* ctx, int fd, int cmd, va_list args);
+        int (*fcntl)(int fd, int cmd, va_list args);
     };
     union {
         int (*ioctl_p)(void* ctx, int fd, int cmd, va_list args);
@@ -4866,10 +4892,6 @@ typedef struct
     union {
         int (*truncate_p)(void* ctx, const char *path, off_t length);
         int (*truncate)(const char *path, off_t length);
-    };
-    union {
-        int (*utime_p)(void* ctx, const char *path, const struct utimbuf *times);
-        int (*utime)(const char *path, const struct utimbuf *times);
     };
 
     union {
@@ -4903,53 +4925,27 @@ typedef struct
 
 
 
-    esp_err_t (*start_select)(int nfds, 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                       _types_fd_set 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                              *readfds, 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                                        _types_fd_set 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                               *writefds, 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                                                          _types_fd_set 
-# 239 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                                                 *exceptfds, esp_vfs_select_sem_t sem, void **end_select_args);
+    esp_err_t (*start_select)(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_set *exceptfds, SemaphoreHandle_t *signal_sem);
 
-    int (*socket_select)(int nfds, 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                  _types_fd_set 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                         *readfds, 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                                   _types_fd_set 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                          *writefds, 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                                                     _types_fd_set 
-# 241 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                                            *errorfds, struct timeval *timeout);
+    int (*socket_select)(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_set *errorfds, struct timeval *timeout);
 
-    void (*stop_socket_select)(void *sem);
+    void (*stop_socket_select)();
 
-    void (*stop_socket_select_isr)(void *sem, BaseType_t *woken);
+    void (*stop_socket_select_isr)(BaseType_t *woken);
 
-    void* (*get_socket_select_semaphore)(void);
-
-    esp_err_t (*end_select)(void *end_select_args);
+    void (*end_select)();
 } esp_vfs_t;
-# 272 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 246 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_register(const char* base_path, const esp_vfs_t* vfs, void* ctx);
-# 290 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 264 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_register_fd_range(const esp_vfs_t *vfs, void *ctx, int min_fd, int max_fd);
-# 308 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 282 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_register_with_id(const esp_vfs_t *vfs, void *ctx, esp_vfs_id_t *vfs_id);
-# 317 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 291 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_unregister(const char* base_path);
-# 330 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_register_fd(esp_vfs_id_t vfs_id, int *fd);
-# 342 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
+# 316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
 esp_err_t esp_vfs_unregister_fd(esp_vfs_id_t vfs_id, int fd);
 
 
@@ -4967,39 +4963,20 @@ int esp_vfs_stat(struct _reent *r, const char * path, struct stat * st);
 int esp_vfs_link(struct _reent *r, const char* n1, const char* n2);
 int esp_vfs_unlink(struct _reent *r, const char *path);
 int esp_vfs_rename(struct _reent *r, const char *src, const char *dst);
-int esp_vfs_utime(const char *path, const struct utimbuf *times);
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-int esp_vfs_select(int nfds, 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                            _types_fd_set 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                   *readfds, 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                             _types_fd_set 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                    *writefds, 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 3 4
-                                                               _types_fd_set 
-# 386 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-                                                                      *errorfds, struct timeval *timeout);
-# 396 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-void esp_vfs_select_triggered(esp_vfs_select_sem_t sem);
-# 407 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-void esp_vfs_select_triggered_isr(esp_vfs_select_sem_t sem, BaseType_t *woken);
-# 423 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-int esp_vfs_poll(struct pollfd *fds, nfds_t nfds, int timeout);
-# 438 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-ssize_t esp_vfs_pread(int fd, void *dst, size_t size, off_t offset);
-# 452 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h"
-ssize_t esp_vfs_pwrite(int fd, const void *src, size_t size, off_t offset);
-# 23 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h"
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
+int esp_vfs_select(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_set *errorfds, struct timeval *timeout);
+# 369 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
+void esp_vfs_select_triggered(SemaphoreHandle_t *signal_sem);
+# 380 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h"
+void esp_vfs_select_triggered_isr(SemaphoreHandle_t *signal_sem, BaseType_t *woken);
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h"
        
 
-# 1 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h" 2
-# 26 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs.h" 1
+# 18 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h" 2
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h"
 typedef enum {
     ESP_LINE_ENDINGS_CRLF,
     ESP_LINE_ENDINGS_CR,
@@ -5011,10 +4988,10 @@ typedef enum {
 
 
 
-void esp_vfs_dev_uart_register(void);
-# 53 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h"
+void esp_vfs_dev_uart_register();
+# 53 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h"
 void esp_vfs_dev_uart_set_rx_line_endings(esp_line_endings_t mode);
-# 69 "/home/dieter/Development/esp-idf/components/vfs/include/esp_vfs_dev.h"
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/include/esp_vfs_dev.h"
 void esp_vfs_dev_uart_set_tx_line_endings(esp_line_endings_t mode);
 
 
@@ -5032,36 +5009,11 @@ void esp_vfs_dev_uart_use_nonblocking(int uart_num);
 
 
 void esp_vfs_dev_uart_use_driver(int uart_num);
-# 24 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/xtensa/include/esp_attr.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 1 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
-       
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
 
-
-
-
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h"
-       
-
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_caps.h" 1
-# 15 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_caps.h"
-       
-# 18 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_assert.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 2
-# 19 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_struct.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_struct.h"
-typedef volatile struct uart_dev_s {
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_struct.h" 1
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_struct.h"
+typedef volatile struct {
     union {
         struct {
             uint8_t rw_byte;
@@ -5416,97 +5368,71 @@ typedef volatile struct uart_dev_s {
 extern uart_dev_t UART0;
 extern uart_dev_t UART1;
 extern uart_dev_t UART2;
-# 20 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/uart_channel.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/soc/include/soc/uart_periph.h" 2
-# 22 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-
-
-# 1 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h" 1
-# 37 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-typedef void (*xt_handler)(void *);
-
-
-typedef void (*xt_exc_handler)(XtExcFrame *);
-# 60 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern xt_exc_handler xt_set_exception_handler(int n, xt_exc_handler f);
-# 73 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern xt_handler xt_set_interrupt_handler(int n, xt_handler f, void * arg);
-# 84 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void xt_ints_on(unsigned int mask);
-# 95 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void xt_ints_off(unsigned int mask);
+# 26 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
 
 
 
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 1
+# 20 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h" 1
+# 15 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h"
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 16 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h" 2
+# 24 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp32/include/esp_dport_access.h"
+void esp_dport_access_stall_other_cpu_start(void);
+void esp_dport_access_stall_other_cpu_end(void);
+void esp_dport_access_int_init(void);
+void esp_dport_access_int_pause(void);
+void esp_dport_access_int_resume(void);
+void esp_dport_access_read_buffer(uint32_t *buff_out, uint32_t address, uint32_t num_words);
+uint32_t esp_dport_access_reg_read(uint32_t reg);
+uint32_t esp_dport_access_sequence_reg_read(uint32_t reg);
 
 
+void esp_dport_access_int_abort(void);
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
 
-
-static inline void xt_set_intset(unsigned int arg)
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_reg.h" 1
+# 23 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h" 2
+# 74 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
+static inline uint32_t __attribute__((section(".iram1"))) DPORT_REG_READ(uint32_t reg)
 {
-    xthal_set_intset(arg);
+
+    return (*(volatile uint32_t *)(reg));
+
+
+
 }
-# 115 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-static inline void xt_set_intclear(unsigned int arg)
+# 107 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
+static inline uint32_t __attribute__((section(".iram1"))) DPORT_SEQUENCE_REG_READ(uint32_t reg)
 {
-    xthal_set_intclear(arg);
+
+    return (*(volatile uint32_t *)(reg));
+
+
+
 }
-# 127 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/xtensa_api.h"
-extern void * xt_get_interrupt_handler_arg(int n);
-# 22 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h" 2
-# 87 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-typedef void (*intr_handler_t)(void *arg);
+# 167 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_access.h"
+static inline uint32_t __attribute__((section(".iram1"))) DPORT_READ_PERI_REG(uint32_t reg)
+{
 
-
-typedef struct intr_handle_data_t intr_handle_data_t;
-typedef intr_handle_data_t* intr_handle_t ;
-# 108 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_mark_shared(int intno, int cpu, 
-# 108 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h" 3 4
-                                                  _Bool 
-# 108 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-                                                       is_in_iram);
-# 122 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_reserve(int intno, int cpu);
-# 157 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_alloc(int source, int flags, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
-# 195 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_alloc_intrstatus(int source, int flags, uint32_t intrstatusreg, uint32_t intrstatusmask, intr_handler_t handler, void *arg, intr_handle_t *ret_handle);
-# 216 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_free(intr_handle_t handle);
-# 226 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-int esp_intr_get_cpu(intr_handle_t handle);
-# 235 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-int esp_intr_get_intno(intr_handle_t handle);
-# 253 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_disable(intr_handle_t handle);
-# 266 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_enable(intr_handle_t handle);
-# 280 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-esp_err_t esp_intr_set_in_iram(intr_handle_t handle, 
-# 280 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h" 3 4
-                                                    _Bool 
-# 280 "/home/dieter/Development/esp-idf/components/esp32/include/esp_intr_alloc.h"
-                                                         is_in_iram);
+    return (*(volatile uint32_t *)(reg));
 
 
 
-
-void esp_intr_noniram_disable(void);
-
-
-
-
-
-void esp_intr_noniram_enable(void);
-# 25 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h" 1
-# 18 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h"
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/periph_defs.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/periph_defs.h"
+}
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/dport_reg.h" 2
+# 21 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/periph_defs.h" 1
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/periph_defs.h"
 typedef enum {
     PERIPH_LEDC_MODULE = 0,
     PERIPH_UART0_MODULE,
@@ -5544,38 +5470,27 @@ typedef enum {
     PERIPH_SHA_MODULE,
     PERIPH_RSA_MODULE,
 } periph_module_t;
-# 19 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h" 2
-# 34 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h"
+# 22 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h" 2
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h"
 void periph_module_enable(periph_module_t periph);
-# 46 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h"
+# 49 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h"
 void periph_module_disable(periph_module_t periph);
-# 60 "/home/dieter/Development/esp-idf/components/driver/include/driver/periph_ctrl.h"
+# 63 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/periph_ctrl.h"
 void periph_module_reset(periph_module_t periph);
-# 26 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
 
 
 
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h" 1
-# 78 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 34 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 1 3 4
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 1
+# 78 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 1
+# 131 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed/limits.h" 1 3 4
+# 132 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/newlib/include/limits.h" 2
+# 79 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 2
 
-
-
-
-
-
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 1 3 4
-# 194 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 3 4
-# 1 "/home/dieter/Development/xtensa-esp32-elf/xtensa-esp32-elf/sys-include/limits.h" 1 3 4
-# 195 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 8 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/syslimits.h" 2 3 4
-# 35 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include-fixed/limits.h" 2 3 4
-# 79 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h" 1
-# 181 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h" 1
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 struct xLIST_ITEM
 {
 
@@ -5620,18 +5535,18 @@ typedef struct xLIST
 
 
 _Static_assert(sizeof(StaticList_t) == sizeof(List_t), "StaticList_t != List_t");
-# 399 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 399 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 void vListInitialise( List_t * const pxList );
-# 410 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 410 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 void vListInitialiseItem( ListItem_t * const pxItem );
-# 423 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 423 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem );
-# 444 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 444 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem );
-# 459 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/list.h"
+# 459 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/list.h"
 UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove );
-# 81 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h" 2
-# 110 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 81 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h" 2
+# 110 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 typedef void * TaskHandle_t;
 
 
@@ -5735,7 +5650,7 @@ typedef enum
  eStandardSleep,
  eNoTasksWaitingTimeout
 } eSleepModeStatus;
-# 337 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 337 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
  BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pvTaskCode,
           const char * const pcName,
           const uint32_t usStackDepth,
@@ -5743,8 +5658,8 @@ typedef enum
           UBaseType_t uxPriority,
           TaskHandle_t * const pvCreatedTask,
           const BaseType_t xCoreID);
-# 432 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
- static inline __attribute__((section(".iram1" "." "2"))) BaseType_t xTaskCreate(
+# 432 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
+ static inline __attribute__((section(".iram1"))) BaseType_t xTaskCreate(
    TaskFunction_t pvTaskCode,
    const char * const pcName,
    const uint32_t usStackDepth,
@@ -5754,53 +5669,53 @@ typedef enum
  {
   return xTaskCreatePinnedToCore( pvTaskCode, pcName, usStackDepth, pvParameters, uxPriority, pvCreatedTask, 0x7fffffff );
  }
-# 676 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 676 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
  BaseType_t xTaskCreateRestricted( const TaskParameters_t * const pxTaskDefinition, TaskHandle_t *pxCreatedTask ) ;
-# 722 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 722 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskAllocateMPURegions( TaskHandle_t xTask, const MemoryRegion_t * const pxRegions ) ;
-# 763 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 763 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskDelete( TaskHandle_t xTaskToDelete ) ;
-# 811 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 811 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskDelay( const TickType_t xTicksToDelay ) ;
-# 867 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 867 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskDelayUntil( TickType_t * const pxPreviousWakeTime, const TickType_t xTimeIncrement ) ;
-# 910 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 910 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskPriorityGet( TaskHandle_t xTask ) ;
-# 921 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskPriorityGetFromISR( TaskHandle_t xTask ) ;
-# 937 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 937 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 eTaskState eTaskGetState( TaskHandle_t xTask ) ;
-# 975 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 975 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskPrioritySet( TaskHandle_t xTask, UBaseType_t uxNewPriority ) ;
-# 1024 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1024 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskSuspend( TaskHandle_t xTaskToSuspend ) ;
-# 1069 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1069 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskResume( TaskHandle_t xTaskToResume ) ;
-# 1094 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1094 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) ;
-# 1124 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1124 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskStartScheduler( void ) ;
-# 1177 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1177 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskEndScheduler( void ) ;
-# 1227 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1227 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskSuspendAll( void ) ;
-# 1277 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1277 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskResumeAll( void ) ;
-# 1290 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 TickType_t xTaskGetTickCount( void ) ;
-# 1304 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1304 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 TickType_t xTaskGetTickCountFromISR( void ) ;
-# 1316 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1316 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetNumberOfTasks( void ) ;
-# 1328 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1328 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 char *pcTaskGetTaskName( TaskHandle_t xTaskToQuery ) ;
-# 1347 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) ;
-# 1364 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1364 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 uint8_t* pxTaskGetStackStart( TaskHandle_t xTask) ;
-# 1408 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
  void vTaskSetThreadLocalStoragePointer( TaskHandle_t xTaskToSet, BaseType_t xIndex, void *pvValue ) ;
-# 1424 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
  void *pvTaskGetThreadLocalStoragePointer( TaskHandle_t xTaskToQuery, BaseType_t xIndex ) ;
 
 
@@ -5809,41 +5724,41 @@ uint8_t* pxTaskGetStackStart( TaskHandle_t xTask) ;
 
 
   typedef void (*TlsDeleteCallbackFunction_t)( int, void * );
-# 1456 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1456 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
   void vTaskSetThreadLocalStoragePointerAndDelCallback( TaskHandle_t xTaskToSet, BaseType_t xIndex, void *pvValue, TlsDeleteCallbackFunction_t pvDelCallback);
-# 1470 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1470 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask, void *pvParameter ) ;
-# 1481 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1481 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 TaskHandle_t xTaskGetIdleTaskHandle( void );
-# 1494 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1494 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 TaskHandle_t xTaskGetIdleTaskHandleForCPU( UBaseType_t cpuid );
-# 1595 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1595 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray, const UBaseType_t uxArraySize, uint32_t * const pulTotalRunTime );
-# 1638 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1638 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskList( char * pcWriteBuffer ) ;
-# 1688 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1688 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskGetRunTimeStats( char *pcWriteBuffer ) ;
-# 1762 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskNotify( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction );
-# 1848 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1848 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskNotifyFromISR( TaskHandle_t xTaskToNotify, uint32_t ulValue, eNotifyAction eAction, BaseType_t *pxHigherPriorityTaskWoken );
-# 1921 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 1921 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskNotifyWait( uint32_t ulBitsToClearOnEntry, uint32_t ulBitsToClearOnExit, uint32_t *pulNotificationValue, TickType_t xTicksToWait );
-# 2018 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2018 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskNotifyGiveFromISR( TaskHandle_t xTaskToNotify, BaseType_t *pxHigherPriorityTaskWoken );
-# 2085 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2085 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 uint32_t ulTaskNotifyTake( BaseType_t xClearCountOnExit, TickType_t xTicksToWait );
-# 2106 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2106 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskIncrementTick( void ) ;
-# 2139 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2139 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskPlaceOnEventList( List_t * const pxEventList, const TickType_t xTicksToWait ) ;
 void vTaskPlaceOnUnorderedEventList( List_t * pxEventList, const TickType_t xItemValue, const TickType_t xTicksToWait ) ;
-# 2153 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2153 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskPlaceOnEventListRestricted( List_t * const pxEventList, const TickType_t xTicksToWait ) ;
-# 2179 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2179 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) ;
 BaseType_t xTaskRemoveFromUnorderedEventList( ListItem_t * pxEventListItem, const TickType_t xItemValue ) ;
-# 2190 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2190 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskSwitchContext( void ) ;
 
 
@@ -5856,7 +5771,7 @@ TickType_t uxTaskResetEventItemValue( void ) ;
 
 
 TaskHandle_t xTaskGetCurrentTaskHandle( void ) ;
-# 2211 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2211 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 TaskHandle_t xTaskGetCurrentTaskHandleForCPU( BaseType_t cpuid );
 
 
@@ -5911,9 +5826,9 @@ BaseType_t xTaskGetAffinity( TaskHandle_t xTask ) ;
 
 
 void vTaskSetTaskNumber( TaskHandle_t xTask, const UBaseType_t uxHandle ) ;
-# 2274 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2274 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 void vTaskStepTick( const TickType_t xTicksToJump ) ;
-# 2290 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2290 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
 
 
@@ -5921,13 +5836,13 @@ eSleepModeStatus eTaskConfirmSleepModeStatus( void ) ;
 
 
 void *pvTaskIncrementMutexHeldCount( void );
-# 2307 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/task.h"
+# 2307 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/task.h"
 UBaseType_t uxTaskGetSnapshotAll( TaskSnapshot_t * const pxTaskSnapshotArray, const UBaseType_t uxArraySize, UBaseType_t * const pxTcbSz );
-# 30 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/freertos/include/freertos/queue.h" 1
-# 31 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h" 1
-# 33 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 32 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/freertos/include/freertos/queue.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h" 1
+# 33 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 typedef void * RingbufHandle_t;
 
 typedef enum {
@@ -5936,88 +5851,65 @@ typedef enum {
 
 
 
-    RINGBUF_TYPE_NOSPLIT = 0,
+ RINGBUF_TYPE_NOSPLIT = 0,
 
 
 
 
 
 
-    RINGBUF_TYPE_ALLOWSPLIT,
+ RINGBUF_TYPE_ALLOWSPLIT,
 
 
 
 
 
 
-    RINGBUF_TYPE_BYTEBUF,
-    RINGBUF_TYPE_MAX,
-} RingbufferType_t;
-# 94 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-RingbufHandle_t xRingbufferCreate(size_t xBufferSize, RingbufferType_t xBufferType);
-# 107 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+ RINGBUF_TYPE_BYTEBUF
+} ringbuf_type_t;
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+RingbufHandle_t xRingbufferCreate(size_t xBufferSize, ringbuf_type_t xBufferType);
+# 82 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 RingbufHandle_t xRingbufferCreateNoSplit(size_t xItemSize, size_t xItemNum);
-# 154 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferSend(RingbufHandle_t xRingbuffer,
-                           const void *pvItem,
-                           size_t xItemSize,
-                           TickType_t xTicksToWait);
-# 179 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferSendFromISR(RingbufHandle_t xRingbuffer,
-                                  const void *pvItem,
-                                  size_t xItemSize,
-                                  BaseType_t *pxHigherPriorityTaskWoken);
-# 210 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferSendAcquire(RingbufHandle_t xRingbuffer, void **ppvItem, size_t xItemSize, TickType_t xTicksToWait);
-# 226 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferSendComplete(RingbufHandle_t xRingbuffer, void *pvItem);
-# 244 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 104 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+BaseType_t xRingbufferSend(RingbufHandle_t xRingbuffer, const void *pvItem, size_t xItemSize, TickType_t xTicksToWait);
+# 126 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+BaseType_t xRingbufferSendFromISR(RingbufHandle_t xRingbuffer, const void *pvItem, size_t xItemSize, BaseType_t *pxHigherPriorityTaskWoken);
+# 144 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 void *xRingbufferReceive(RingbufHandle_t xRingbuffer, size_t *pxItemSize, TickType_t xTicksToWait);
-# 263 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 163 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 void *xRingbufferReceiveFromISR(RingbufHandle_t xRingbuffer, size_t *pxItemSize);
-# 287 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferReceiveSplit(RingbufHandle_t xRingbuffer,
-                                   void **ppvHeadItem,
-                                   void **ppvTailItem,
-                                   size_t *pxHeadItemSize,
-                                   size_t *pxTailItemSize,
-                                   TickType_t xTicksToWait);
-# 315 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-BaseType_t xRingbufferReceiveSplitFromISR(RingbufHandle_t xRingbuffer,
-                                          void **ppvHeadItem,
-                                          void **ppvTailItem,
-                                          size_t *pxHeadItemSize,
-                                          size_t *pxTailItemSize);
-# 342 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-void *xRingbufferReceiveUpTo(RingbufHandle_t xRingbuffer,
-                             size_t *pxItemSize,
-                             TickType_t xTicksToWait,
-                             size_t xMaxSize);
-# 368 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 187 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+BaseType_t xRingbufferReceiveSplit(RingbufHandle_t xRingbuffer, void **ppvHeadItem, void **ppvTailItem, size_t *pxHeadItemSize, size_t *pxTailItemSize, TickType_t xTicksToWait);
+# 210 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+BaseType_t xRingbufferReceiveSplitFromISR(RingbufHandle_t xRingbuffer, void **ppvHeadItem, void **ppvTailItem, size_t *pxHeadItemSize, size_t *pxTailItemSize);
+# 233 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+void *xRingbufferReceiveUpTo(RingbufHandle_t xRingbuffer, size_t *pxItemSize, TickType_t xTicksToWait, size_t xMaxSize);
+# 256 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 void *xRingbufferReceiveUpToFromISR(RingbufHandle_t xRingbuffer, size_t *pxItemSize, size_t xMaxSize);
-# 378 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 266 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 void vRingbufferReturnItem(RingbufHandle_t xRingbuffer, void *pvItem);
-# 390 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 278 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 void vRingbufferReturnItemFromISR(RingbufHandle_t xRingbuffer, void *pvItem, BaseType_t *pxHigherPriorityTaskWoken);
-# 401 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+
+
+
+
+
+
 void vRingbufferDelete(RingbufHandle_t xRingbuffer);
-# 419 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 297 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 size_t xRingbufferGetMaxItemSize(RingbufHandle_t xRingbuffer);
-# 440 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 314 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 size_t xRingbufferGetCurFreeSize(RingbufHandle_t xRingbuffer);
-# 455 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 329 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 BaseType_t xRingbufferAddToQueueSetRead(RingbufHandle_t xRingbuffer, QueueSetHandle_t xQueueSet);
-# 472 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 346 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 BaseType_t xRingbufferCanRead(RingbufHandle_t xRingbuffer, QueueSetMemberHandle_t xMember);
-# 487 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+# 361 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
 BaseType_t xRingbufferRemoveFromQueueSetRead(RingbufHandle_t xRingbuffer, QueueSetHandle_t xQueueSet);
-# 503 "/home/dieter/Development/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
-void vRingbufferGetInfo(RingbufHandle_t xRingbuffer,
-                        UBaseType_t *uxFree,
-                        UBaseType_t *uxRead,
-                        UBaseType_t *uxWrite,
-                        UBaseType_t *uxAcquire,
-                        UBaseType_t *uxItemsWaiting);
+# 376 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+void vRingbufferGetInfo(RingbufHandle_t xRingbuffer, UBaseType_t *uxFree, UBaseType_t *uxRead, UBaseType_t *uxWrite, UBaseType_t *uxItemsWaiting);
 
 
 
@@ -6025,13 +5917,31 @@ void vRingbufferGetInfo(RingbufHandle_t xRingbuffer,
 
 
 void xRingbufferPrintInfo(RingbufHandle_t xRingbuffer);
-# 32 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 1
-# 23 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h"
-# 1 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h" 1 3 4
-# 24 "/home/dieter/Development/esp-idf/components/esp_common/include/esp_types.h" 2
-# 33 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 2
-# 49 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h" 3 4
+_Bool 
+# 393 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/esp_ringbuf/include/freertos/ringbuf.h"
+    xRingbufferIsNextItemWrapped(RingbufHandle_t xRingbuffer) __attribute__((deprecated));
+
+
+
+
+
+
+
+BaseType_t xRingbufferAddToQueueSetWrite(RingbufHandle_t xRingbuffer, QueueSetHandle_t xQueueSet) __attribute__((deprecated));
+
+
+
+
+
+BaseType_t xRingbufferRemoveFromQueueSetWrite(RingbufHandle_t xRingbuffer, QueueSetHandle_t xQueueSet) __attribute__((deprecated));
+# 34 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
+
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/soc/esp32/include/soc/uart_channel.h" 1
+# 36 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 2
+# 52 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 typedef enum {
     UART_MODE_UART = 0x00,
     UART_MODE_RS485_HALF_DUPLEX = 0x01,
@@ -6067,9 +5977,7 @@ typedef enum {
 typedef enum {
     UART_NUM_0 = 0x0,
     UART_NUM_1 = 0x1,
-
     UART_NUM_2 = 0x2,
-
     UART_NUM_MAX,
 } uart_port_t;
 
@@ -6104,9 +6012,9 @@ typedef struct {
     uart_hw_flowcontrol_t flow_ctrl;
     uint8_t rx_flow_ctrl_thresh;
     
-# 120 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 3 4
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 3 4
    _Bool 
-# 120 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 121 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
         use_ref_tick;
 } uart_config_t;
 
@@ -6144,122 +6052,113 @@ typedef struct {
 } uart_event_t;
 
 typedef intr_handle_t uart_isr_handle_t;
-# 168 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 169 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_word_length(uart_port_t uart_num, uart_word_length_t data_bit);
-# 180 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 181 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_word_length(uart_port_t uart_num, uart_word_length_t* data_bit);
-# 192 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 193 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_stop_bits(uart_port_t uart_num, uart_stop_bits_t stop_bits);
-# 204 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 205 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_stop_bits(uart_port_t uart_num, uart_stop_bits_t* stop_bits);
-# 216 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 217 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_parity(uart_port_t uart_num, uart_parity_t parity_mode);
-# 229 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 230 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_parity(uart_port_t uart_num, uart_parity_t* parity_mode);
-# 241 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 242 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_baudrate(uart_port_t uart_num, uint32_t baudrate);
-# 254 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 255 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_baudrate(uart_port_t uart_num, uint32_t* baudrate);
-# 269 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 270 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_line_inverse(uart_port_t uart_num, uint32_t inverse_mask);
-# 283 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 284 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_hw_flow_ctrl(uart_port_t uart_num, uart_hw_flowcontrol_t flow_ctrl, uint8_t rx_thresh);
-# 297 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
  esp_err_t uart_set_sw_flow_ctrl(uart_port_t uart_num, 
-# 297 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 3 4
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 3 4
                                                       _Bool 
-# 297 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 298 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
                                                            enable, uint8_t rx_thresh_xon, uint8_t rx_thresh_xoff);
-# 309 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 310 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_hw_flow_ctrl(uart_port_t uart_num, uart_hw_flowcontrol_t* flow_ctrl);
-# 322 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 323 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_clear_intr_status(uart_port_t uart_num, uint32_t clr_mask);
-# 335 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 336 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_enable_intr_mask(uart_port_t uart_num, uint32_t enable_mask);
-# 348 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 349 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_disable_intr_mask(uart_port_t uart_num, uint32_t disable_mask);
-# 359 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 360 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_enable_rx_intr(uart_port_t uart_num);
-# 370 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 371 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_disable_rx_intr(uart_port_t uart_num);
-# 381 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 382 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_disable_tx_intr(uart_port_t uart_num);
-# 394 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 395 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_enable_tx_intr(uart_port_t uart_num, int enable, int thresh);
-# 413 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_isr_register(uart_port_t uart_num, void (*fn)(void*), void * arg, int intr_alloc_flags, uart_isr_handle_t *handle);
-# 425 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 426 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_isr_free(uart_port_t uart_num);
-# 446 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 447 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_pin(uart_port_t uart_num, int tx_io_num, int rx_io_num, int rts_io_num, int cts_io_num);
-# 459 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 460 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_rts(uart_port_t uart_num, int level);
-# 471 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 472 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_dtr(uart_port_t uart_num, int level);
-# 484 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 485 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_tx_idle_num(uart_port_t uart_num, uint16_t idle_num);
-# 496 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 497 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_param_config(uart_port_t uart_num, const uart_config_t *uart_config);
-# 508 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 509 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_intr_config(uart_port_t uart_num, const uart_intr_config_t *intr_conf);
-# 532 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 533 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_driver_install(uart_port_t uart_num, int rx_buffer_size, int tx_buffer_size, int queue_size, QueueHandle_t* uart_queue, int intr_alloc_flags);
-# 543 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 544 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_driver_delete(uart_port_t uart_num);
-# 556 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 557 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_wait_tx_done(uart_port_t uart_num, TickType_t ticks_to_wait);
-# 572 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 573 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_tx_chars(uart_port_t uart_num, const char* buffer, uint32_t len);
-# 591 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 592 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_write_bytes(uart_port_t uart_num, const char* src, size_t size);
-# 613 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 614 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_write_bytes_with_break(uart_port_t uart_num, const char* src, size_t size, int brk_len);
-# 627 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 628 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_read_bytes(uart_port_t uart_num, uint8_t* buf, uint32_t length, TickType_t ticks_to_wait);
-# 640 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 641 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_flush(uart_port_t uart_num);
-# 651 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 652 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_flush_input(uart_port_t uart_num);
-# 663 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 664 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_buffered_data_len(uart_port_t uart_num, size_t* size);
-# 676 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 677 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_disable_pattern_det_intr(uart_port_t uart_num);
-# 700 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
-esp_err_t uart_enable_pattern_det_intr(uart_port_t uart_num, char pattern_chr, uint8_t chr_num, int chr_tout, int post_idle, int pre_idle) __attribute__((deprecated));
-# 722 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
-esp_err_t uart_enable_pattern_det_baud_intr(uart_port_t uart_num, char pattern_chr, uint8_t chr_num, int chr_tout, int post_idle, int pre_idle);
-# 741 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 698 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
+esp_err_t uart_enable_pattern_det_intr(uart_port_t uart_num, char pattern_chr, uint8_t chr_num, int chr_tout, int post_idle, int pre_idle);
+# 717 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_pattern_pop_pos(uart_port_t uart_num);
-# 760 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 736 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 int uart_pattern_get_pos(uart_port_t uart_num);
-# 774 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 750 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_pattern_queue_reset(uart_port_t uart_num, int queue_length);
-# 786 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 762 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_mode(uart_port_t uart_num, uart_mode_t mode);
-# 802 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 778 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_rx_timeout(uart_port_t uart_num, const uint8_t tout_thresh);
-# 817 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_collision_flag(uart_port_t uart_num, 
-# 817 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h" 3 4
+# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h" 3 4
                                                        _Bool
-# 817 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 793 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
                                                            * collision_flag);
-# 852 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 825 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_set_wakeup_threshold(uart_port_t uart_num, int wakeup_threshold);
-# 867 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart.h"
+# 840 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart.h"
 esp_err_t uart_get_wakeup_threshold(uart_port_t uart_num, int* out_wakeup_threshold);
-
-
-
-
-
-
-
-void uart_wait_tx_idle_polling(uart_port_t uart_num);
-# 26 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart_select.h" 1
-# 25 "/home/dieter/Development/esp-idf/components/driver/include/driver/uart_select.h"
+# 27 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/others/dev_M5Stack/build/include/sdkconfig.h" 1
+# 28 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart_select.h" 1
+# 25 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/driver/include/driver/uart_select.h"
 typedef enum {
     UART_SELECT_READ_NOTIF,
     UART_SELECT_WRITE_NOTIF,
@@ -6278,177 +6177,9 @@ void uart_set_select_notif_callback(uart_port_t uart_num, uart_select_notif_call
 
 
 
-portMUX_TYPE *uart_get_selectlock(void);
-# 28 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 1
-# 20 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-# 1 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/ets_sys.h" 1
-# 21 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 2
-# 1 "/home/dieter/Development/esp-idf/components/soc/esp32/include/soc/soc.h" 1
-# 22 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 2
-# 68 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-typedef enum {
-    UART_LINE_STATUS_INT_FLAG = 0x06,
-    UART_RCV_FIFO_INT_FLAG = 0x04,
-    UART_RCV_TMOUT_INT_FLAG = 0x0C,
-    UART_TXBUFF_EMPTY_INT_FLAG = 0x02
-} UartIntType;
-
-typedef enum {
-    RCV_ONE_BYTE = 0x0,
-    RCV_FOUR_BYTE = 0x1,
-    RCV_EIGHT_BYTE = 0x2,
-    RCV_FOURTEEN_BYTE = 0x3
-} UartRcvFifoTrgLvl;
-
-typedef enum {
-    FIVE_BITS = 0x0,
-    SIX_BITS = 0x1,
-    SEVEN_BITS = 0x2,
-    EIGHT_BITS = 0x3
-} UartBitsNum4Char;
-
-typedef enum {
-    ONE_STOP_BIT = 1,
-    ONE_HALF_STOP_BIT = 2,
-    TWO_STOP_BIT = 3
-} UartStopBitsNum;
-
-typedef enum {
-    NONE_BITS = 0,
-    ODD_BITS = 2,
-    EVEN_BITS = 3
-
-} UartParityMode;
-
-typedef enum {
-    STICK_PARITY_DIS = 0,
-    STICK_PARITY_EN = 2
-} UartExistParity;
-
-typedef enum {
-    BIT_RATE_9600 = 9600,
-    BIT_RATE_19200 = 19200,
-    BIT_RATE_38400 = 38400,
-    BIT_RATE_57600 = 57600,
-    BIT_RATE_115200 = 115200,
-    BIT_RATE_230400 = 230400,
-    BIT_RATE_460800 = 460800,
-    BIT_RATE_921600 = 921600
-} UartBautRate;
-
-typedef enum {
-    NONE_CTRL,
-    HARDWARE_CTRL,
-    XON_XOFF_CTRL
-} UartFlowCtrl;
-
-typedef enum {
-    EMPTY,
-    UNDER_WRITE,
-    WRITE_OVER
-} RcvMsgBuffState;
-
-typedef struct {
-    uint8_t *pRcvMsgBuff;
-    uint8_t *pWritePos;
-    uint8_t *pReadPos;
-    uint8_t TrigLvl;
-    RcvMsgBuffState BuffState;
-} RcvMsgBuff;
-
-typedef struct {
-    uint32_t TrxBuffSize;
-    uint8_t *pTrxBuff;
-} TrxMsgBuff;
-
-typedef enum {
-    BAUD_RATE_DET,
-    WAIT_SYNC_FRM,
-    SRCH_MSG_HEAD,
-    RCV_MSG_BODY,
-    RCV_ESC_CHAR,
-} RcvMsgState;
-
-typedef struct {
-    UartBautRate baut_rate;
-    UartBitsNum4Char data_bits;
-    UartExistParity exist_parity;
-    UartParityMode parity;
-    UartStopBitsNum stop_bits;
-    UartFlowCtrl flow_ctrl;
-    uint8_t buff_uart_no;
-    uint8_t tx_uart_no;
-    RcvMsgBuff rcv_buff;
-
-    RcvMsgState rcv_state;
-    int received;
-} UartDevice;
-# 174 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uartAttach(void);
-# 186 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void Uart_Init(uint8_t uart_no, uint32_t clock);
-# 198 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uart_div_modify(uint8_t uart_no, uint32_t DivLatchValue);
-# 211 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-int uart_baudrate_detect(uint8_t uart_no, uint8_t is_sync);
-# 221 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uart_tx_switch(uint8_t uart_no);
-# 231 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uart_buff_switch(uint8_t uart_no);
-# 240 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS uart_tx_one_char(uint8_t TxChar);
-# 250 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS uart_tx_one_char2(uint8_t TxChar);
-# 259 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uart_tx_flush(uint8_t uart_no);
-# 269 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-static inline void __attribute__((section(".iram1" "." "3"))) uart_tx_wait_idle(uint8_t uart_no) {
-    uint32_t status;
-    do {
-        status = ({ do { _Static_assert(__builtin_choose_expr(__builtin_constant_p(!((((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) >= 0x3ff00000) && ((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) <= 0x3ff13FFC)), (!((((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) >= 0x3ff00000) && ((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) <= 0x3ff13FFC)), 1), "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)"); 
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 3 4
-                ((
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-                "(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)" && (!((((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) >= 0x3ff00000) && ((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) <= 0x3ff13FFC))
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 3 4
-                ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h", 272, __func__, 
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-                "\"(Cannot use READ_PERI_REG for DPORT registers use DPORT_READ_PERI_REG)\" && (!((((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) >= 0x3ff00000) && ((((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C))) <= 0x3ff13FFC))"
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h" 3 4
-                ))
-# 272 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-                ; } while(0);; (*((volatile uint32_t *)(((0x3ff40000 + (uart_no) * 0x10000 + ( (uart_no) > 1 ? 0xe000 : 0 ) ) + 0x1C)))); });
-
-    } while ((status & (((0xF)<<(24)) | ((0xFF)<<(16)))) != 0);
-}
-# 286 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS uart_rx_one_char(uint8_t *pRxChar);
-# 296 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-char uart_rx_one_char_block(void);
-# 308 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS UartRxString(uint8_t *pString, uint8_t MaxStrlen);
-# 318 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void uart_rx_intr_handler(void *para);
-# 331 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS uart_rx_readbuff( RcvMsgBuff *pRxBuff, uint8_t *pRxByte);
-# 342 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS UartGetCmdLn(uint8_t *pCmdLn);
-# 352 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-UartDevice *GetUartDevice(void);
-# 364 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-void send_packet(uint8_t *p, int len);
-# 379 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-int recv_packet(uint8_t *p, int len, uint8_t is_sync);
-# 392 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS SendMsg(uint8_t *pData, uint16_t DataLen);
-# 408 "/home/dieter/Development/esp-idf/components/esp_rom/include/esp32/rom/uart.h"
-STATUS RcvMsg(uint8_t *pData, uint16_t MaxDataLen, uint8_t is_sync);
-
-extern UartDevice UartDev;
-# 30 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 2
-# 57 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
+portMUX_TYPE *uart_get_selectlock();
+# 29 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 2
+# 37 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
 typedef void (*tx_func_t)(int, int);
 
 typedef int (*rx_func_t)(int);
@@ -6461,91 +6192,94 @@ static int uart_rx_char(int fd);
 static void uart_tx_char_via_driver(int fd, int c);
 static int uart_rx_char_via_driver(int fd);
 
-typedef struct {
 
-    uart_dev_t* uart;
+static uart_dev_t* s_uarts[3] = {&UART0, &UART1, &UART2};
 
-    int peek_char;
+static _lock_t s_uart_read_locks[3];
+static _lock_t s_uart_write_locks[3];
 
-    _lock_t read_lock;
-    _lock_t write_lock;
-
+static int s_peek_char[3] = { -1, -1, -1 };
 
 
-    
-# 80 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _Bool 
-# 80 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-        non_blocking;
 
-    esp_line_endings_t tx_mode;
+static 
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+      _Bool 
+# 59 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+           s_non_blocking[3];
 
-    esp_line_endings_t rx_mode;
 
-    tx_func_t tx_func;
+static _lock_t s_one_select_lock;
 
-    rx_func_t rx_func;
-} vfs_uart_context_t;
-# 102 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-static vfs_uart_context_t s_context[3] = {
-    (vfs_uart_context_t) { .uart = (&UART0), .peek_char = -1, .tx_mode = ESP_LINE_ENDINGS_CRLF, .rx_mode = ESP_LINE_ENDINGS_CR, .tx_func = uart_tx_char, .rx_func = uart_rx_char,},
-    (vfs_uart_context_t) { .uart = (&UART1), .peek_char = -1, .tx_mode = ESP_LINE_ENDINGS_CRLF, .rx_mode = ESP_LINE_ENDINGS_CR, .tx_func = uart_tx_char, .rx_func = uart_rx_char,},
+static SemaphoreHandle_t *_signal_sem = 
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                                       ((void *)0)
+# 64 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                           ;
+static _types_fd_set *_readfds = 
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                         ((void *)0)
+# 65 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                             ;
+static _types_fd_set *_writefds = 
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                          ((void *)0)
+# 66 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                              ;
+static _types_fd_set *_errorfds = 
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                          ((void *)0)
+# 67 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                              ;
+static _types_fd_set *_readfds_orig = 
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                              ((void *)0)
+# 68 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                  ;
+static _types_fd_set *_writefds_orig = 
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                               ((void *)0)
+# 69 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                   ;
+static _types_fd_set *_errorfds_orig = 
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                               ((void *)0)
+# 70 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                   ;
 
-    (vfs_uart_context_t) { .uart = (&UART2), .peek_char = -1, .tx_mode = ESP_LINE_ENDINGS_CRLF, .rx_mode = ESP_LINE_ENDINGS_CR, .tx_func = uart_tx_char, .rx_func = uart_rx_char,},
+
+static esp_line_endings_t s_tx_mode =
+
+        ESP_LINE_ENDINGS_CRLF;
+
+
+
+
+
+
+
+static esp_line_endings_t s_rx_mode[3] = { [0 ... 3 -1] =
+
+
+
+        ESP_LINE_ENDINGS_CR
+
+
 
 };
 
-static vfs_uart_context_t* s_ctx[3] = {
-    &s_context[0],
-    &s_context[1],
+static void uart_end_select();
 
-    &s_context[2],
 
+static tx_func_t s_uart_tx_func[3] = {
+        &uart_tx_char, &uart_tx_char, &uart_tx_char
 };
 
-typedef struct {
-    esp_vfs_select_sem_t select_sem;
-    
-# 120 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 120 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          *readfds;
-    
-# 121 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 121 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          *writefds;
-    
-# 122 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 122 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          *errorfds;
-    
-# 123 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 123 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          readfds_orig;
-    
-# 124 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 124 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          writefds_orig;
-    
-# 125 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   _types_fd_set 
-# 125 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-          errorfds_orig;
-} uart_select_args_t;
 
-static uart_select_args_t **s_registered_selects = 
-# 128 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                  ((void *)0)
-# 128 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                      ;
-static int s_registered_select_num = 0;
-static portMUX_TYPE s_registered_select_lock = { .owner = 0xB33FFFFF, .count = 0, };
+static rx_func_t s_uart_rx_func[3] = {
+        &uart_rx_char, &uart_rx_char, &uart_rx_char
+};
 
-static esp_err_t uart_end_select(void *end_select_args);
 
 static int uart_open(const char * path, int flags, int mode)
 {
@@ -6560,42 +6294,22 @@ static int uart_open(const char * path, int flags, int mode)
     } else if (strcmp(path, "/2") == 0) {
         fd = 2;
     } else {
-        
-# 147 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 147 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 147 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               2
-# 147 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 2;
         return fd;
     }
 
-    s_ctx[fd]->non_blocking = ((flags & 
-# 151 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                       0x4000
-# 151 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                 ) == 
-# 151 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                      0x4000
-# 151 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                );
+    s_non_blocking[fd] = ((flags & 0x4000) == 0x4000);
 
     return fd;
 }
 
 static void uart_tx_char(int fd, int c)
 {
-    uart_dev_t* uart = s_ctx[fd]->uart;
+    uart_dev_t* uart = s_uarts[fd];
     while (uart->status.txfifo_cnt >= 127) {
         ;
     }
-
     uart->fifo.rw_byte = c;
-
-
-
 }
 
 static void uart_tx_char_via_driver(int fd, int c)
@@ -6606,21 +6320,17 @@ static void uart_tx_char_via_driver(int fd, int c)
 
 static int uart_rx_char(int fd)
 {
-    uart_dev_t* uart = s_ctx[fd]->uart;
+    uart_dev_t* uart = s_uarts[fd];
     if (uart->status.rxfifo_cnt == 0) {
         return -1;
     }
-
     return uart->fifo.rw_byte;
-
-
-
 }
 
 static int uart_rx_char_via_driver(int fd)
 {
     uint8_t c;
-    int timeout = s_ctx[fd]->non_blocking ? 0 : ( TickType_t ) 0xffffffffUL;
+    int timeout = s_non_blocking[fd] ? 0 : ( TickType_t ) 0xffffffffUL;
     int n = uart_read_bytes(fd, &c, 1, timeout);
     if (n <= 0) {
         return -1;
@@ -6630,36 +6340,24 @@ static int uart_rx_char_via_driver(int fd)
 
 static ssize_t uart_write(int fd, const void * data, size_t size)
 {
-    
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >=0 && fd < 3
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 201, __func__, 
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >=0 && fd < 3"
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 201 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                           ;
+    ((fd >=0 && fd < 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 165, __func__, "fd >=0 && fd < 3"));
     const char *data_c = (const char *)data;
 
 
 
 
-    _lock_acquire_recursive(&s_ctx[fd]->write_lock);
+    _lock_acquire_recursive(&s_uart_write_locks[fd]);
     for (size_t i = 0; i < size; i++) {
         int c = data_c[i];
-        if (c == '\n' && s_ctx[fd]->tx_mode != ESP_LINE_ENDINGS_LF) {
-            s_ctx[fd]->tx_func(fd, '\r');
-            if (s_ctx[fd]->tx_mode == ESP_LINE_ENDINGS_CR) {
+        if (c == '\n' && s_tx_mode != ESP_LINE_ENDINGS_LF) {
+            s_uart_tx_func[fd](fd, '\r');
+            if (s_tx_mode == ESP_LINE_ENDINGS_CR) {
                 continue;
             }
         }
-        s_ctx[fd]->tx_func(fd, c);
+        s_uart_tx_func[fd](fd, c);
     }
-    _lock_release_recursive(&s_ctx[fd]->write_lock);
+    _lock_release_recursive(&s_uart_write_locks[fd]);
     return size;
 }
 
@@ -6670,57 +6368,33 @@ static ssize_t uart_write(int fd, const void * data, size_t size)
 static int uart_read_char(int fd)
 {
 
-    if (s_ctx[fd]->peek_char != -1) {
-        int c = s_ctx[fd]->peek_char;
-        s_ctx[fd]->peek_char = -1;
+    if (s_peek_char[fd] != -1) {
+        int c = s_peek_char[fd];
+        s_peek_char[fd] = -1;
         return c;
     }
-    return s_ctx[fd]->rx_func(fd);
+    return s_uart_rx_func[fd](fd);
 }
 
 
 static void uart_return_char(int fd, int c)
 {
-    
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   s_ctx[fd]->peek_char == -1
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 240, __func__, 
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "s_ctx[fd]->peek_char == NONE"
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 240 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                       ;
-    s_ctx[fd]->peek_char = c;
+    ((s_peek_char[fd] == -1) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 204, __func__, "s_peek_char[fd] == NONE"));
+    s_peek_char[fd] = c;
 }
 
 static ssize_t uart_read(int fd, void* data, size_t size)
 {
-    
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >=0 && fd < 3
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 246, __func__, 
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >=0 && fd < 3"
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 246 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                           ;
+    ((fd >=0 && fd < 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 210, __func__, "fd >=0 && fd < 3"));
     char *data_c = (char *) data;
     size_t received = 0;
-    _lock_acquire_recursive(&s_ctx[fd]->read_lock);
+    _lock_acquire_recursive(&s_uart_read_locks[fd]);
     while (received < size) {
         int c = uart_read_char(fd);
         if (c == '\r') {
-            if (s_ctx[fd]->rx_mode == ESP_LINE_ENDINGS_CR) {
+            if (s_rx_mode[fd] == ESP_LINE_ENDINGS_CR) {
                 c = '\n';
-            } else if (s_ctx[fd]->rx_mode == ESP_LINE_ENDINGS_CRLF) {
+            } else if (s_rx_mode[fd] == ESP_LINE_ENDINGS_CRLF) {
 
                 int c2 = uart_read_char(fd);
                 if (c2 == -1) {
@@ -6747,113 +6421,54 @@ static ssize_t uart_read(int fd, void* data, size_t size)
             break;
         }
     }
-    _lock_release_recursive(&s_ctx[fd]->read_lock);
+    _lock_release_recursive(&s_uart_read_locks[fd]);
     if (received > 0) {
         return received;
     }
-    
-# 286 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   (*__errno()) 
-# 286 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-         = 
-# 286 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           11
-# 286 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                      ;
+    (*__errno()) = 11;
     return -1;
 }
 
 static int uart_fstat(int fd, struct stat * st)
 {
-    
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >=0 && fd < 3
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 292, __func__, 
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >=0 && fd < 3"
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 292 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                           ;
-    st->st_mode = 
-# 293 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                 0020000
-# 293 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                        ;
+    ((fd >=0 && fd < 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 256, __func__, "fd >=0 && fd < 3"));
+    st->st_mode = 0020000;
     return 0;
 }
 
 static int uart_close(int fd)
 {
-    
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >=0 && fd < 3
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 299, __func__, 
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >=0 && fd < 3"
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 299 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                           ;
+    ((fd >=0 && fd < 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 263, __func__, "fd >=0 && fd < 3"));
     return 0;
 }
 
-static int uart_fcntl(int fd, int cmd, int arg)
+static int uart_fcntl(int fd, int cmd, va_list args)
 {
-    
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >=0 && fd < 3
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 305, __func__, 
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >=0 && fd < 3"
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 305 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                           ;
+    ((fd >=0 && fd < 3) ? (void)0 : __assert_func ("/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 269, __func__, "fd >=0 && fd < 3"));
     int result = 0;
-    if (cmd == 
-# 307 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-              3
-# 307 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ) {
-        if (s_ctx[fd]->non_blocking) {
-            result |= 
-# 309 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                     0x4000
-# 309 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                               ;
+    if (cmd == 3) {
+        if (s_non_blocking[fd]) {
+            result |= 0x4000;
         }
-    } else if (cmd == 
-# 311 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                     4
-# 311 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                            ) {
-        s_ctx[fd]->non_blocking = (arg & 
-# 312 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                        0x4000
-# 312 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                  ) != 0;
+    } else if (cmd == 4) {
+        int arg = 
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                 __builtin_va_arg(
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                 args
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                 ,
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                 int
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                 )
+# 276 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                  ;
+        s_non_blocking[fd] = (arg & 0x4000) != 0;
     } else {
 
         result = -1;
-        
-# 316 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 316 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 316 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               88
-# 316 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 88;
     }
     return result;
 }
@@ -6863,529 +6478,208 @@ static int uart_access(const char *path, int amode)
     int ret = -1;
 
     if (strcmp(path, "/0") == 0 || strcmp(path, "/1") == 0 || strcmp(path, "/2") == 0) {
-        if (
-# 326 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           0 
-# 326 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                == amode) {
+        if (0 == amode) {
             ret = 0;
         } else {
-            if ((((amode & 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                          4
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                              ) == 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                   4
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                       ) || ((amode & 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                      2
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                          ) == 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                               2
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                   )) && ((amode & 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                   1
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                       ) != 
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                            1
-# 329 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                                )) {
+            if ((((amode & 4) == 4) || ((amode & 2) == 2)) && ((amode & 1) != 1)) {
                 ret = 0;
             } else {
-                
-# 332 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 332 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 332 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       13
-# 332 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 13;
             }
         }
     } else {
-        
-# 336 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 336 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 336 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               2
-# 336 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 2;
     }
 
     return ret;
 }
 
-static int uart_fsync(int fd)
+static void select_notif_callback(uart_port_t uart_num, uart_select_notif_t uart_select_notif, BaseType_t *task_woken)
 {
-    
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ((
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   fd >= 0 && fd < 3
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ) ? (void)0 : __assert_func ("/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 344, __func__, 
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   "fd >= 0 && fd < 3"
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ))
-# 344 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                            ;
-    _lock_acquire_recursive(&s_ctx[fd]->write_lock);
-    uart_tx_wait_idle((uint8_t) fd);
-    _lock_release_recursive(&s_ctx[fd]->write_lock);
-    return 0;
-}
-
-static esp_err_t register_select(uart_select_args_t *args)
-{
-    esp_err_t ret = 0x102;
-
-    if (args) {
-        vTaskEnterCritical(&s_registered_select_lock);
-        const int new_size = s_registered_select_num + 1;
-        if ((s_registered_selects = realloc(s_registered_selects, new_size * sizeof(uart_select_args_t *))) == 
-# 358 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                                              ((void *)0)
-# 358 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                                                  ) {
-            ret = 0x101;
-        } else {
-            s_registered_selects[s_registered_select_num] = args;
-            s_registered_select_num = new_size;
-            ret = 0;
-        }
-        vTaskExitCritical(&s_registered_select_lock);
-    }
-
-    return ret;
-}
-
-static esp_err_t unregister_select(uart_select_args_t *args)
-{
-    esp_err_t ret = 0;
-    if (args) {
-        ret = 0x103;
-        vTaskEnterCritical(&s_registered_select_lock);
-        for (int i = 0; i < s_registered_select_num; ++i) {
-            if (s_registered_selects[i] == args) {
-                const int new_size = s_registered_select_num - 1;
-
-
-                s_registered_selects[i] = s_registered_selects[new_size];
-                s_registered_selects = realloc(s_registered_selects, new_size * sizeof(uart_select_args_t *));
-                if (s_registered_selects || new_size == 0) {
-                    s_registered_select_num = new_size;
-                    ret = 0;
-                } else {
-                    ret = 0x101;
-                }
-                break;
+    switch (uart_select_notif) {
+        case UART_SELECT_READ_NOTIF:
+            if (((_readfds_orig)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] & (1L << ((uart_num) % (sizeof (fd_mask) * 8))))) {
+                ((_readfds)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] |= (1L << ((uart_num) % (sizeof (fd_mask) * 8))));
+                esp_vfs_select_triggered_isr(_signal_sem, task_woken);
             }
-        }
-        vTaskExitCritical(&s_registered_select_lock);
-    }
-    return ret;
-}
-
-static void select_notif_callback_isr(uart_port_t uart_num, uart_select_notif_t uart_select_notif, BaseType_t *task_woken)
-{
-    vTaskEnterCritical(&s_registered_select_lock);
-    for (int i = 0; i < s_registered_select_num; ++i) {
-        uart_select_args_t *args = s_registered_selects[i];
-        if (args) {
-            switch (uart_select_notif) {
-                case UART_SELECT_READ_NOTIF:
-                    if (
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       &args->readfds_orig
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 406 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                              ) {
-                        
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       args->readfds
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] |= (1L << ((
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 407 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                      ;
-                        esp_vfs_select_triggered_isr(args->select_sem, task_woken);
-                    }
-                    break;
-                case UART_SELECT_WRITE_NOTIF:
-                    if (
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       &args->writefds_orig
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 412 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                               ) {
-                        
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       args->writefds
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] |= (1L << ((
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 413 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                       ;
-                        esp_vfs_select_triggered_isr(args->select_sem, task_woken);
-                    }
-                    break;
-                case UART_SELECT_ERROR_NOTIF:
-                    if (
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       &args->errorfds_orig
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 418 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                               ) {
-                        
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       args->errorfds
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )->fds_bits[(
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       )/(sizeof (fd_mask) * 8)] |= (1L << ((
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       uart_num
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) % (sizeof (fd_mask) * 8))))
-# 419 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                       ;
-                        esp_vfs_select_triggered_isr(args->select_sem, task_woken);
-                    }
-                    break;
+            break;
+        case UART_SELECT_WRITE_NOTIF:
+            if (((_writefds_orig)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] & (1L << ((uart_num) % (sizeof (fd_mask) * 8))))) {
+                ((_writefds)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] |= (1L << ((uart_num) % (sizeof (fd_mask) * 8))));
+                esp_vfs_select_triggered_isr(_signal_sem, task_woken);
             }
-        }
+            break;
+        case UART_SELECT_ERROR_NOTIF:
+            if (((_errorfds_orig)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] & (1L << ((uart_num) % (sizeof (fd_mask) * 8))))) {
+                ((_errorfds)->fds_bits[(uart_num)/(sizeof (fd_mask) * 8)] |= (1L << ((uart_num) % (sizeof (fd_mask) * 8))));
+                esp_vfs_select_triggered_isr(_signal_sem, task_woken);
+            }
+            break;
     }
-    vTaskExitCritical(&s_registered_select_lock);
 }
 
-static esp_err_t uart_start_select(int nfds, 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                            _types_fd_set 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                   *readfds, 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                             _types_fd_set 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                    *writefds, 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                               _types_fd_set 
-# 429 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                      *exceptfds,
-        esp_vfs_select_sem_t select_sem, void **end_select_args)
+static esp_err_t uart_start_select(int nfds, _types_fd_set *readfds, _types_fd_set *writefds, _types_fd_set *exceptfds, SemaphoreHandle_t *signal_sem)
 {
-    const int max_fds = 
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ((
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       nfds
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) < (
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       3
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) ? (
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       nfds
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ) : (
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                       3
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       ))
-# 432 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                          ;
-    *end_select_args = 
-# 433 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                      ((void *)0)
-# 433 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                          ;
+    if (_lock_try_acquire(&s_one_select_lock)) {
+        return 0x103;
+    }
 
-    uart_select_args_t *args = malloc(sizeof(uart_select_args_t));
+    const int max_fds = ((nfds) < (3) ? (nfds) : (3));
 
-    if (args == 
-# 437 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               ((void *)0)
-# 437 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                   ) {
+    vTaskEnterCritical(uart_get_selectlock());
+
+    if (_readfds || _writefds || _errorfds || _readfds_orig || _writefds_orig || _errorfds_orig || _signal_sem) {
+        vTaskExitCritical(uart_get_selectlock());
+        uart_end_select();
+        return 0x103;
+    }
+
+    if ((_readfds_orig = malloc(sizeof(_types_fd_set))) == 
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                                                   ((void *)0)
+# 347 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                                       ) {
+        vTaskExitCritical(uart_get_selectlock());
+        uart_end_select();
         return 0x101;
     }
 
-    args->select_sem = select_sem;
-    args->readfds = readfds;
-    args->writefds = writefds;
-    args->errorfds = exceptfds;
-    args->readfds_orig = *readfds;
-    args->writefds_orig = *writefds;
-    args->errorfds_orig = *exceptfds;
-    
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   (__extension__ (void)({ size_t __i; char *__tmp = (char *)
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   readfds
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ; for (__i = 0; __i < sizeof (*(
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   readfds
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   )); ++__i) *__tmp++ = 0; }))
-# 448 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                   ;
-    
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   (__extension__ (void)({ size_t __i; char *__tmp = (char *)
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   writefds
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ; for (__i = 0; __i < sizeof (*(
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   writefds
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   )); ++__i) *__tmp++ = 0; }))
-# 449 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                    ;
-    
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   (__extension__ (void)({ size_t __i; char *__tmp = (char *)
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   exceptfds
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   ; for (__i = 0; __i < sizeof (*(
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   exceptfds
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   )); ++__i) *__tmp++ = 0; }))
-# 450 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+    if ((_writefds_orig = malloc(sizeof(_types_fd_set))) == 
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                                                    ((void *)0)
+# 353 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                                        ) {
+        vTaskExitCritical(uart_get_selectlock());
+        uart_end_select();
+        return 0x101;
+    }
 
-    vTaskEnterCritical(uart_get_selectlock());
+    if ((_errorfds_orig = malloc(sizeof(_types_fd_set))) == 
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                                                    ((void *)0)
+# 359 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                                                        ) {
+        vTaskExitCritical(uart_get_selectlock());
+        uart_end_select();
+        return 0x101;
+    }
 
 
     for (int i = 0; i < max_fds; ++i) {
-        if (
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           &args->readfds_orig
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           )->fds_bits[(
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           ) % (sizeof (fd_mask) * 8)))) 
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                            || 
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                               ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                               &args->writefds_orig
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                               )->fds_bits[(
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                               i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                               )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                               i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                               ) % (sizeof (fd_mask) * 8)))) 
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                 || 
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                    ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                    &args->errorfds_orig
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                    )->fds_bits[(
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                    i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                    )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                    i
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                                                                                    ) % (sizeof (fd_mask) * 8))))
-# 456 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                                                                                                     ) {
-            uart_set_select_notif_callback(i, select_notif_callback_isr);
+        if (((readfds)->fds_bits[(i)/(sizeof (fd_mask) * 8)] & (1L << ((i) % (sizeof (fd_mask) * 8)))) || ((writefds)->fds_bits[(i)/(sizeof (fd_mask) * 8)] & (1L << ((i) % (sizeof (fd_mask) * 8)))) || ((exceptfds)->fds_bits[(i)/(sizeof (fd_mask) * 8)] & (1L << ((i) % (sizeof (fd_mask) * 8))))) {
+            uart_set_select_notif_callback(i, select_notif_callback);
         }
     }
 
+    _signal_sem = signal_sem;
+
+    _readfds = readfds;
+    _writefds = writefds;
+    _errorfds = exceptfds;
+
+    *_readfds_orig = *readfds;
+    *_writefds_orig = *writefds;
+    *_errorfds_orig = *exceptfds;
+
+    (__extension__ (void)({ size_t __i; char *__tmp = (char *)readfds; for (__i = 0; __i < sizeof (*(readfds)); ++__i) *__tmp++ = 0; }));
+    (__extension__ (void)({ size_t __i; char *__tmp = (char *)writefds; for (__i = 0; __i < sizeof (*(writefds)); ++__i) *__tmp++ = 0; }));
+    (__extension__ (void)({ size_t __i; char *__tmp = (char *)exceptfds; for (__i = 0; __i < sizeof (*(exceptfds)); ++__i) *__tmp++ = 0; }));
+
     for (int i = 0; i < max_fds; ++i) {
-        if (
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           ((
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           &args->readfds_orig
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           )->fds_bits[(
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           i
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           )/(sizeof (fd_mask) * 8)] & (1L << ((
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-           i
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           ) % (sizeof (fd_mask) * 8))))
-# 462 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                           ) {
+        if (((_readfds_orig)->fds_bits[(i)/(sizeof (fd_mask) * 8)] & (1L << ((i) % (sizeof (fd_mask) * 8))))) {
             size_t buffered_size;
             if (uart_get_buffered_data_len(i, &buffered_size) == 0 && buffered_size > 0) {
 
-                
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               ((
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-               readfds
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               )->fds_bits[(
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-               i
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               )/(sizeof (fd_mask) * 8)] |= (1L << ((
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-               i
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               ) % (sizeof (fd_mask) * 8))))
-# 466 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                 ;
-                esp_vfs_select_triggered(args->select_sem);
+                ((_readfds)->fds_bits[(i)/(sizeof (fd_mask) * 8)] |= (1L << ((i) % (sizeof (fd_mask) * 8))));
+                esp_vfs_select_triggered(_signal_sem);
             }
         }
     }
 
-    esp_err_t ret = register_select(args);
-    if (ret != 0) {
-        vTaskExitCritical(uart_get_selectlock());
-        free(args);
-        return ret;
-    }
-
     vTaskExitCritical(uart_get_selectlock());
 
-    *end_select_args = args;
+
+
     return 0;
 }
 
-static esp_err_t uart_end_select(void *end_select_args)
+static void uart_end_select()
 {
-    uart_select_args_t *args = end_select_args;
-
     vTaskEnterCritical(uart_get_selectlock());
-    esp_err_t ret = unregister_select(args);
     for (int i = 0; i < 3; ++i) {
         uart_set_select_notif_callback(i, 
-# 492 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
                                          ((void *)0)
-# 492 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
+# 408 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
                                              );
     }
-    vTaskExitCritical(uart_get_selectlock());
 
-    if (args) {
-        free(args);
+    _signal_sem = 
+# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                 ((void *)0)
+# 411 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                     ;
+
+    _readfds = 
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+              ((void *)0)
+# 413 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                  ;
+    _writefds = 
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+               ((void *)0)
+# 414 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                   ;
+    _errorfds = 
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+               ((void *)0)
+# 415 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                   ;
+
+    if (_readfds_orig) {
+        free(_readfds_orig);
+        _readfds_orig = 
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                       ((void *)0)
+# 419 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                           ;
     }
 
-    return ret;
+    if (_writefds_orig) {
+        free(_writefds_orig);
+        _writefds_orig = 
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                        ((void *)0)
+# 424 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                            ;
+    }
+
+    if (_errorfds_orig) {
+        free(_errorfds_orig);
+        _errorfds_orig = 
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
+                        ((void *)0)
+# 429 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+                            ;
+    }
+    vTaskExitCritical(uart_get_selectlock());
+    _lock_release(&s_one_select_lock);
 }
 
 
 static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
 {
     if (fd < 0 || fd >= 3) {
-        
-# 507 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 507 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 507 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               9
-# 507 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                    ;
+        (*__errno()) = 9;
         return -1;
     }
 
     if (p == 
-# 511 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
             ((void *)0)
-# 511 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
+# 443 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
                 ) {
-        
-# 512 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 512 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 512 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 512 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
@@ -7395,15 +6689,7 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
             break;
         case 1:
             if (uart_wait_tx_done(fd, ( TickType_t ) 0xffffffffUL) != 0) {
-                
-# 522 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 522 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 522 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       22
-# 522 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 22;
                 return -1;
             }
 
@@ -7411,37 +6697,21 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
 
         case 2:
             if (uart_flush_input(fd) != 0) {
-                
-# 530 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 530 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 530 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       22
-# 530 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 22;
                 return -1;
             }
             break;
         default:
-            
-# 535 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 535 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 535 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 535 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
     }
 
     if (p->c_iflag & (1u << 3)) {
-        s_ctx[fd]->rx_mode = ESP_LINE_ENDINGS_CRLF;
+        s_rx_mode[fd] = ESP_LINE_ENDINGS_CRLF;
     } else if (p->c_iflag & (1u << 1)) {
-        s_ctx[fd]->rx_mode = ESP_LINE_ENDINGS_CR;
+        s_rx_mode[fd] = ESP_LINE_ENDINGS_CR;
     } else {
-        s_ctx[fd]->rx_mode = ESP_LINE_ENDINGS_LF;
+        s_rx_mode[fd] = ESP_LINE_ENDINGS_LF;
     }
 
 
@@ -7464,42 +6734,18 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
                 data_bits = UART_DATA_8_BITS;
                 break;
             default:
-                
-# 567 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 567 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 567 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       22
-# 567 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 22;
                 return -1;
         }
 
         if (uart_set_word_length(fd, data_bits) != 0) {
-            
-# 572 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 572 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 572 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 572 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
     }
 
     if (uart_set_stop_bits(fd, (p->c_cflag & (1u << 2)) ? UART_STOP_BITS_2 : UART_STOP_BITS_1) != 0) {
-        
-# 578 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 578 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 578 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 578 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
@@ -7507,29 +6753,13 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
                 ((p->c_cflag & (1u << 5)) ? UART_PARITY_ODD : UART_PARITY_EVEN)
                 :
                 UART_PARITY_DISABLE) != 0) {
-        
-# 586 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 586 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 586 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 586 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
     if (p->c_cflag & ((1u << 8) | (1u << 9))) {
         if (p->c_ispeed != p->c_ospeed) {
-            
-# 592 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 592 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 592 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 592 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         } else {
             uint32_t b;
@@ -7631,29 +6861,13 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
                         b = 4000000;
                         break;
                     default:
-                        
-# 694 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       (*__errno()) 
-# 694 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             = 
-# 694 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                               22
-# 694 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                                     ;
+                        (*__errno()) = 22;
                         return -1;
                 }
             }
 
             if (uart_set_baudrate(fd, b) != 0) {
-                
-# 700 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 700 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 700 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       22
-# 700 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 22;
                 return -1;
             }
         }
@@ -7665,40 +6879,24 @@ static int uart_tcsetattr(int fd, int optional_actions, const struct termios *p)
 static int uart_tcgetattr(int fd, struct termios *p)
 {
     if (fd < 0 || fd >= 3) {
-        
-# 712 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 712 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 712 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               9
-# 712 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                    ;
+        (*__errno()) = 9;
         return -1;
     }
 
     if (p == 
-# 716 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
             ((void *)0)
-# 716 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
+# 648 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
                 ) {
-        
-# 717 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 717 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 717 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 717 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
     memset(p, 0, sizeof(struct termios));
 
-    if (s_ctx[fd]->rx_mode == ESP_LINE_ENDINGS_CRLF) {
+    if (s_rx_mode[fd] == ESP_LINE_ENDINGS_CRLF) {
         p->c_iflag |= (1u << 3);
-    } else if (s_ctx[fd]->rx_mode == ESP_LINE_ENDINGS_CR) {
+    } else if (s_rx_mode[fd] == ESP_LINE_ENDINGS_CR) {
         p->c_iflag |= (1u << 1);
     }
 
@@ -7706,15 +6904,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
         uart_word_length_t data_bits;
 
         if (uart_get_word_length(fd, &data_bits) != 0) {
-            
-# 733 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 733 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 733 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 733 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
 
@@ -7734,15 +6924,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
                 p->c_cflag |= (3u << 0);
                 break;
             default:
-                
-# 753 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 753 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 753 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       88
-# 753 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 88;
                 return -1;
         }
     }
@@ -7750,15 +6932,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
     {
         uart_stop_bits_t stop_bits;
         if (uart_get_stop_bits(fd, &stop_bits) != 0) {
-            
-# 761 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 761 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 761 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 761 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
 
@@ -7771,15 +6945,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
                 break;
             default:
 
-                
-# 774 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 774 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 774 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       88
-# 774 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 88;
                 return -1;
         }
     }
@@ -7787,15 +6953,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
     {
         uart_parity_t parity_mode;
         if (uart_get_parity(fd, &parity_mode) != 0) {
-            
-# 782 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 782 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 782 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 782 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
 
@@ -7810,15 +6968,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
 
                 break;
             default:
-                
-# 797 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               (*__errno()) 
-# 797 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     = 
-# 797 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                       88
-# 797 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                             ;
+                (*__errno()) = 88;
                 return -1;
         }
     }
@@ -7826,15 +6976,7 @@ static int uart_tcgetattr(int fd, struct termios *p)
     {
         uint32_t baudrate;
         if (uart_get_baudrate(fd, &baudrate) != 0) {
-            
-# 805 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 805 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 805 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 805 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
 
@@ -7950,28 +7092,12 @@ static int uart_tcgetattr(int fd, struct termios *p)
 static int uart_tcdrain(int fd)
 {
     if (fd < 0 || fd >= 3) {
-        
-# 921 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 921 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 921 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               9
-# 921 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                    ;
+        (*__errno()) = 9;
         return -1;
     }
 
     if (uart_wait_tx_done(fd, ( TickType_t ) 0xffffffffUL) != 0) {
-        
-# 926 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 926 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 926 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 926 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
@@ -7981,42 +7107,18 @@ static int uart_tcdrain(int fd)
 static int uart_tcflush(int fd, int select)
 {
     if (fd < 0 || fd >= 3) {
-        
-# 936 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 936 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 936 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               9
-# 936 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                    ;
+        (*__errno()) = 9;
         return -1;
     }
 
     if (select == 0) {
         if (uart_flush_input(fd) != 0) {
-            
-# 942 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-           (*__errno()) 
-# 942 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                 = 
-# 942 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-                   22
-# 942 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                         ;
+            (*__errno()) = 22;
             return -1;
         }
     } else {
 
-        
-# 947 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-       (*__errno()) 
-# 947 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-             = 
-# 947 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-               22
-# 947 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-                     ;
+        (*__errno()) = 22;
         return -1;
     }
 
@@ -8024,7 +7126,7 @@ static int uart_tcflush(int fd, int select)
 }
 
 
-void esp_vfs_dev_uart_register(void)
+void esp_vfs_dev_uart_register()
 {
     esp_vfs_t vfs = {
         .flags = 0,
@@ -8034,7 +7136,6 @@ void esp_vfs_dev_uart_register(void)
         .close = &uart_close,
         .read = &uart_read,
         .fcntl = &uart_fcntl,
-        .fsync = &uart_fsync,
         .access = &uart_access,
         .start_select = &uart_start_select,
         .end_select = &uart_end_select,
@@ -8046,46 +7147,40 @@ void esp_vfs_dev_uart_register(void)
 
     };
     do { esp_err_t __err_rc = (esp_vfs_register("/dev/uart", &vfs, 
-# 976 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
+# 907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c" 3 4
    ((void *)0)
-# 976 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   )); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c", 976, 
-# 976 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c" 3 4
-   __func__
-# 976 "/home/dieter/Development/esp-idf/components/vfs/vfs_uart.c"
-   , "esp_vfs_register(\"/dev/uart\", &vfs, NULL)"); } } while(0);
+# 907 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c"
+   )); if (__err_rc != 0) { _esp_error_check_failed(__err_rc, "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/vfs/vfs_uart.c", 907, __func__, "esp_vfs_register(\"/dev/uart\", &vfs, NULL)"); } } while(0);;
 }
 
 void esp_vfs_dev_uart_set_rx_line_endings(esp_line_endings_t mode)
 {
     for (int i = 0; i < 3; ++i) {
-        s_ctx[i]->rx_mode = mode;
+        s_rx_mode[i] = mode;
     }
 }
 
 void esp_vfs_dev_uart_set_tx_line_endings(esp_line_endings_t mode)
 {
-    for (int i = 0; i < 3; ++i) {
-        s_ctx[i]->tx_mode = mode;
-    }
+    s_tx_mode = mode;
 }
 
 void esp_vfs_dev_uart_use_nonblocking(int uart_num)
 {
-    _lock_acquire_recursive(&s_ctx[uart_num]->read_lock);
-    _lock_acquire_recursive(&s_ctx[uart_num]->write_lock);
-    s_ctx[uart_num]->tx_func = uart_tx_char;
-    s_ctx[uart_num]->rx_func = uart_rx_char;
-    _lock_release_recursive(&s_ctx[uart_num]->write_lock);
-    _lock_release_recursive(&s_ctx[uart_num]->read_lock);
+    _lock_acquire_recursive(&s_uart_read_locks[uart_num]);
+    _lock_acquire_recursive(&s_uart_write_locks[uart_num]);
+    s_uart_tx_func[uart_num] = uart_tx_char;
+    s_uart_rx_func[uart_num] = uart_rx_char;
+    _lock_release_recursive(&s_uart_write_locks[uart_num]);
+    _lock_release_recursive(&s_uart_read_locks[uart_num]);
 }
 
 void esp_vfs_dev_uart_use_driver(int uart_num)
 {
-    _lock_acquire_recursive(&s_ctx[uart_num]->read_lock);
-    _lock_acquire_recursive(&s_ctx[uart_num]->write_lock);
-    s_ctx[uart_num]->tx_func = uart_tx_char_via_driver;
-    s_ctx[uart_num]->rx_func = uart_rx_char_via_driver;
-    _lock_release_recursive(&s_ctx[uart_num]->write_lock);
-    _lock_release_recursive(&s_ctx[uart_num]->read_lock);
+    _lock_acquire_recursive(&s_uart_read_locks[uart_num]);
+    _lock_acquire_recursive(&s_uart_write_locks[uart_num]);
+    s_uart_tx_func[uart_num] = uart_tx_char_via_driver;
+    s_uart_rx_func[uart_num] = uart_rx_char_via_driver;
+    _lock_release_recursive(&s_uart_write_locks[uart_num]);
+    _lock_release_recursive(&s_uart_read_locks[uart_num]);
 }

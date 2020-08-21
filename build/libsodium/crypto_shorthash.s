@@ -7,12 +7,11 @@
 	.type	crypto_shorthash_bytes, @function
 crypto_shorthash_bytes:
 .LFB0:
-	.file 1 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.c"
-	.loc 1 7 1 view -0
+	.file 1 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.c"
+	.loc 1 7 0
 	entry	sp, 32
 .LCFI0:
-	.loc 1 8 5 view .LVU1
-	.loc 1 9 1 is_stmt 0 view .LVU2
+	.loc 1 9 0
 	movi.n	a2, 8
 	retw.n
 .LFE0:
@@ -23,16 +22,15 @@ crypto_shorthash_bytes:
 	.type	crypto_shorthash_keybytes, @function
 crypto_shorthash_keybytes:
 .LFB1:
-	.loc 1 13 1 is_stmt 1 view -0
+	.loc 1 13 0
 	entry	sp, 32
 .LCFI1:
-	.loc 1 14 5 view .LVU4
-	.loc 1 15 1 is_stmt 0 view .LVU5
+	.loc 1 15 0
 	movi.n	a2, 0x10
 	retw.n
 .LFE1:
 	.size	crypto_shorthash_keybytes, .-crypto_shorthash_keybytes
-	.section	.rodata.crypto_shorthash_primitive.str1.1,"aMS",@progbits,1
+	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC0:
 	.string	"siphash24"
 	.section	.text.crypto_shorthash_primitive,"ax",@progbits
@@ -43,11 +41,10 @@ crypto_shorthash_keybytes:
 	.type	crypto_shorthash_primitive, @function
 crypto_shorthash_primitive:
 .LFB2:
-	.loc 1 19 1 is_stmt 1 view -0
+	.loc 1 19 0
 	entry	sp, 32
 .LCFI2:
-	.loc 1 20 5 view .LVU7
-	.loc 1 21 1 is_stmt 0 view .LVU8
+	.loc 1 21 0
 	l32r	a2, .LC1
 	retw.n
 .LFE2:
@@ -57,14 +54,12 @@ crypto_shorthash_primitive:
 	.global	crypto_shorthash
 	.type	crypto_shorthash, @function
 crypto_shorthash:
-.LVL0:
 .LFB3:
-	.loc 1 26 1 is_stmt 1 view -0
-	.loc 1 26 1 is_stmt 0 view .LVU10
+	.loc 1 26 0
+.LVL0:
 	entry	sp, 32
 .LCFI3:
-	.loc 1 27 5 is_stmt 1 view .LVU11
-	.loc 1 27 12 is_stmt 0 view .LVU12
+	.loc 1 27 0
 	mov.n	a14, a6
 	mov.n	a12, a4
 	mov.n	a13, a5
@@ -72,10 +67,9 @@ crypto_shorthash:
 	mov.n	a10, a2
 	call8	crypto_shorthash_siphash24
 .LVL1:
-	.loc 1 28 1 view .LVU13
+	.loc 1 28 0
 	mov.n	a2, a10
 .LVL2:
-	.loc 1 28 1 view .LVU14
 	retw.n
 .LFE3:
 	.size	crypto_shorthash, .-crypto_shorthash
@@ -84,18 +78,16 @@ crypto_shorthash:
 	.global	crypto_shorthash_keygen
 	.type	crypto_shorthash_keygen, @function
 crypto_shorthash_keygen:
-.LVL3:
 .LFB4:
-	.loc 1 32 1 is_stmt 1 view -0
-	.loc 1 32 1 is_stmt 0 view .LVU16
+	.loc 1 32 0
+.LVL3:
 	entry	sp, 32
 .LCFI4:
-	.loc 1 33 5 is_stmt 1 view .LVU17
+	.loc 1 33 0
 	movi.n	a11, 0x10
 	mov.n	a10, a2
 	call8	randombytes_buf
 .LVL4:
-	.loc 1 34 1 is_stmt 0 view .LVU18
 	retw.n
 .LFE4:
 	.size	crypto_shorthash_keygen, .-crypto_shorthash_keygen
@@ -176,19 +168,18 @@ crypto_shorthash_keygen:
 .LEFDE8:
 	.text
 .Letext0:
-	.file 2 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h"
-	.file 3 "/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h"
-	.file 4 "/home/dieter/Development/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.2.0/include/stddef.h"
+	.file 2 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/crypto_shorthash_siphash24.h"
+	.file 3 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/include/sodium/randombytes.h"
+	.file 4 "/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/xtensa/lib/gcc/xtensa-esp32-elf/5.2.0/include/stddef.h"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x1a0
+	.4byte	0x192
 	.2byte	0x4
 	.4byte	.Ldebug_abbrev0
 	.byte	0x4
 	.uleb128 0x1
-	.4byte	.LASF16
-	.byte	0xc
 	.4byte	.LASF17
+	.byte	0xc
 	.4byte	.LASF18
 	.4byte	.Ldebug_ranges0+0
 	.4byte	0
@@ -201,8 +192,7 @@ crypto_shorthash_keygen:
 	.4byte	.LASF19
 	.byte	0x4
 	.byte	0xd8
-	.byte	0x16
-	.4byte	0x38
+	.4byte	0x33
 	.uleb128 0x4
 	.byte	0x4
 	.byte	0x7
@@ -219,8 +209,6 @@ crypto_shorthash_keygen:
 	.byte	0x1
 	.byte	0x8
 	.4byte	.LASF3
-	.uleb128 0x5
-	.4byte	0x4d
 	.uleb128 0x4
 	.byte	0x2
 	.byte	0x5
@@ -242,84 +230,73 @@ crypto_shorthash_keygen:
 	.byte	0x7
 	.4byte	.LASF8
 	.uleb128 0x4
+	.byte	0x4
+	.byte	0x7
+	.4byte	.LASF9
+	.uleb128 0x4
 	.byte	0x1
 	.byte	0x8
-	.4byte	.LASF9
+	.4byte	.LASF10
 	.uleb128 0x5
-	.4byte	0x7c
-	.uleb128 0x6
 	.byte	0x4
-	.4byte	0x83
+	.4byte	0x86
+	.uleb128 0x6
+	.4byte	0x79
 	.uleb128 0x7
-	.4byte	.LASF20
+	.4byte	.LASF11
 	.byte	0x1
-	.byte	0x1f
-	.byte	0x1
-	.4byte	.LFB4
-	.4byte	.LFE4-.LFB4
+	.byte	0x6
+	.4byte	0x28
+	.4byte	.LFB0
+	.4byte	.LFE0-.LFB0
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0xc6
-	.uleb128 0x8
-	.string	"k"
+	.uleb128 0x7
+	.4byte	.LASF12
 	.byte	0x1
-	.byte	0x1f
-	.byte	0x27
-	.4byte	0xc6
+	.byte	0xc
+	.4byte	0x28
+	.4byte	.LFB1
+	.4byte	.LFE1-.LFB1
 	.uleb128 0x1
-	.byte	0x52
-	.uleb128 0x9
-	.4byte	.LVL4
-	.4byte	0x18b
-	.uleb128 0xa
+	.byte	0x9c
+	.uleb128 0x7
+	.4byte	.LASF13
+	.byte	0x1
+	.byte	0x12
+	.4byte	0x80
+	.4byte	.LFB2
+	.4byte	.LFE2-.LFB2
 	.uleb128 0x1
-	.byte	0x5a
-	.uleb128 0x2
-	.byte	0x72
-	.sleb128 0
-	.uleb128 0xa
-	.uleb128 0x1
-	.byte	0x5b
-	.uleb128 0x1
-	.byte	0x40
-	.byte	0
-	.byte	0
-	.uleb128 0x6
-	.byte	0x4
-	.4byte	0x4d
-	.uleb128 0xb
-	.4byte	.LASF21
+	.byte	0x9c
+	.uleb128 0x8
+	.4byte	.LASF20
 	.byte	0x1
 	.byte	0x18
-	.byte	0x1
-	.4byte	0x25
+	.4byte	0x21
 	.4byte	.LFB3
 	.4byte	.LFE3-.LFB3
 	.uleb128 0x1
 	.byte	0x9c
-	.4byte	0x143
-	.uleb128 0xc
+	.4byte	0x138
+	.uleb128 0x9
 	.string	"out"
 	.byte	0x1
 	.byte	0x18
-	.byte	0x21
-	.4byte	0xc6
+	.4byte	0x138
 	.4byte	.LLST0
-	.4byte	.LVUS0
-	.uleb128 0x8
+	.uleb128 0xa
 	.string	"in"
 	.byte	0x1
 	.byte	0x18
-	.byte	0x3b
-	.4byte	0x143
+	.4byte	0x13e
 	.uleb128 0x1
 	.byte	0x53
-	.uleb128 0xd
-	.4byte	.LASF10
+	.uleb128 0xb
+	.4byte	.LASF14
 	.byte	0x1
 	.byte	0x19
-	.byte	0x25
-	.4byte	0x67
+	.4byte	0x5d
 	.uleb128 0x6
 	.byte	0x54
 	.byte	0x93
@@ -327,30 +304,29 @@ crypto_shorthash_keygen:
 	.byte	0x55
 	.byte	0x93
 	.uleb128 0x4
-	.uleb128 0x8
+	.uleb128 0xa
 	.string	"k"
 	.byte	0x1
 	.byte	0x19
-	.byte	0x41
-	.4byte	0x143
+	.4byte	0x13e
 	.uleb128 0x1
 	.byte	0x56
-	.uleb128 0x9
+	.uleb128 0xc
 	.4byte	.LVL1
-	.4byte	0x197
-	.uleb128 0xa
+	.4byte	0x17f
+	.uleb128 0xd
 	.uleb128 0x1
 	.byte	0x5a
 	.uleb128 0x2
 	.byte	0x72
 	.sleb128 0
-	.uleb128 0xa
+	.uleb128 0xd
 	.uleb128 0x1
 	.byte	0x5b
 	.uleb128 0x2
 	.byte	0x73
 	.sleb128 0
-	.uleb128 0xa
+	.uleb128 0xd
 	.uleb128 0x1
 	.byte	0x5e
 	.uleb128 0x2
@@ -358,51 +334,56 @@ crypto_shorthash_keygen:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x5
 	.byte	0x4
-	.4byte	0x54
+	.4byte	0x48
+	.uleb128 0x5
+	.byte	0x4
+	.4byte	0x144
+	.uleb128 0x6
+	.4byte	0x48
 	.uleb128 0xe
-	.4byte	.LASF11
+	.4byte	.LASF21
 	.byte	0x1
-	.byte	0x12
-	.byte	0x1
-	.4byte	0x88
-	.4byte	.LFB2
-	.4byte	.LFE2-.LFB2
+	.byte	0x1f
+	.4byte	.LFB4
+	.4byte	.LFE4-.LFB4
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0xe
-	.4byte	.LASF12
+	.4byte	0x17f
+	.uleb128 0xa
+	.string	"k"
 	.byte	0x1
-	.byte	0xc
-	.byte	0x1
-	.4byte	0x2c
-	.4byte	.LFB1
-	.4byte	.LFE1-.LFB1
+	.byte	0x1f
+	.4byte	0x138
 	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0xe
-	.4byte	.LASF13
-	.byte	0x1
-	.byte	0x6
-	.byte	0x1
-	.4byte	0x2c
-	.4byte	.LFB0
-	.4byte	.LFE0-.LFB0
+	.byte	0x52
+	.uleb128 0xc
+	.4byte	.LVL4
+	.4byte	0x18a
+	.uleb128 0xd
 	.uleb128 0x1
-	.byte	0x9c
+	.byte	0x5a
+	.uleb128 0x2
+	.byte	0x72
+	.sleb128 0
+	.uleb128 0xd
+	.uleb128 0x1
+	.byte	0x5b
+	.uleb128 0x1
+	.byte	0x40
+	.byte	0
+	.byte	0
 	.uleb128 0xf
-	.4byte	.LASF14
-	.4byte	.LASF14
+	.4byte	.LASF15
+	.4byte	.LASF15
 	.byte	0x2
-	.byte	0x21
-	.byte	0x6
-	.uleb128 0xf
-	.4byte	.LASF15
-	.4byte	.LASF15
-	.byte	0x3
 	.byte	0x19
-	.byte	0x5
+	.uleb128 0xf
+	.4byte	.LASF16
+	.4byte	.LASF16
+	.byte	0x3
+	.byte	0x21
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -414,8 +395,6 @@ crypto_shorthash_keygen:
 	.uleb128 0x13
 	.uleb128 0xb
 	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1b
 	.uleb128 0xe
 	.uleb128 0x55
 	.uleb128 0x17
@@ -445,8 +424,6 @@ crypto_shorthash_keygen:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
@@ -463,13 +440,6 @@ crypto_shorthash_keygen:
 	.byte	0
 	.byte	0
 	.uleb128 0x5
-	.uleb128 0x26
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -478,7 +448,39 @@ crypto_shorthash_keygen:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
+	.uleb128 0x6
+	.uleb128 0x26
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
 	.uleb128 0x7
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x27
+	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x6
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x8
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -489,10 +491,10 @@ crypto_shorthash_keygen:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
@@ -505,7 +507,7 @@ crypto_shorthash_keygen:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x9
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -514,7 +516,20 @@ crypto_shorthash_keygen:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x17
+	.byte	0
+	.byte	0
+	.uleb128 0xa
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
@@ -522,7 +537,22 @@ crypto_shorthash_keygen:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x9
+	.uleb128 0xb
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0xc
 	.uleb128 0x4109
 	.byte	0x1
 	.uleb128 0x11
@@ -531,7 +561,7 @@ crypto_shorthash_keygen:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa
+	.uleb128 0xd
 	.uleb128 0x410a
 	.byte	0
 	.uleb128 0x2
@@ -540,7 +570,7 @@ crypto_shorthash_keygen:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0xb
+	.uleb128 0xe
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -551,12 +581,8 @@ crypto_shorthash_keygen:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.uleb128 0x27
 	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x11
 	.uleb128 0x1
 	.uleb128 0x12
@@ -567,69 +593,6 @@ crypto_shorthash_keygen:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0xc
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x17
-	.uleb128 0x2137
-	.uleb128 0x17
-	.byte	0
-	.byte	0
-	.uleb128 0xd
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0xe
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x27
-	.uleb128 0x19
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x6
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0xf
@@ -647,18 +610,11 @@ crypto_shorthash_keygen:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.byte	0
 	.section	.debug_loc,"",@progbits
 .Ldebug_loc0:
-.LVUS0:
-	.uleb128 0
-	.uleb128 .LVU14
-	.uleb128 .LVU14
-	.uleb128 0
 .LLST0:
 	.4byte	.LVL0
 	.4byte	.LVL2
@@ -716,42 +672,42 @@ crypto_shorthash_keygen:
 	.string	"crypto_shorthash_keybytes"
 .LASF19:
 	.string	"size_t"
-.LASF21:
+.LASF20:
 	.string	"crypto_shorthash"
-.LASF10:
+.LASF14:
 	.string	"inlen"
-.LASF8:
+.LASF9:
 	.string	"long unsigned int"
 .LASF6:
 	.string	"long long unsigned int"
-.LASF14:
+.LASF17:
+	.string	"GNU C99 5.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
+.LASF16:
 	.string	"randombytes_buf"
-.LASF20:
+.LASF21:
 	.string	"crypto_shorthash_keygen"
 .LASF3:
 	.string	"unsigned char"
-.LASF9:
+.LASF10:
 	.string	"char"
-.LASF18:
-	.string	"/home/dieter/Development/ProjektEi/build/libsodium"
 .LASF7:
 	.string	"long int"
 .LASF15:
 	.string	"crypto_shorthash_siphash24"
+.LASF18:
+	.string	"/home/dieter/SoftwareDevelop/oxypoint-am/Prerequisites/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.c"
 .LASF1:
 	.string	"short unsigned int"
 .LASF2:
 	.string	"signed char"
-.LASF16:
-	.string	"GNU C99 8.2.0 -mlongcalls -ggdb -Og -Os -std=gnu99 -std=gnu99 -ffunction-sections -fdata-sections -fstrict-volatile-bitfields"
-.LASF11:
+.LASF13:
 	.string	"crypto_shorthash_primitive"
 .LASF4:
 	.string	"short int"
 .LASF0:
 	.string	"unsigned int"
-.LASF13:
+.LASF11:
 	.string	"crypto_shorthash_bytes"
-.LASF17:
-	.string	"/home/dieter/Development/esp-idf/components/libsodium/libsodium/src/libsodium/crypto_shorthash/crypto_shorthash.c"
-	.ident	"GCC: (crosstool-NG esp-2019r2) 8.2.0"
+.LASF8:
+	.string	"sizetype"
+	.ident	"GCC: (crosstool-NG crosstool-ng-1.22.0-80-g6c4433a) 5.2.0"
